@@ -1,0 +1,2 @@
+# Optional: needed only for live monitoring, not offline analysis or tests.
+websocket-client
