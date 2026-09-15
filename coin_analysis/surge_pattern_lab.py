@@ -267,6 +267,10 @@ def main():
     parser.add_argument('--horizons', nargs='+', type=int, default=[360, 1440, 4320])
     parser.add_argument('--thresholds', nargs='+', type=float, default=[20, 50, 100])
     args = parser.parse_args()
+    if not args.db.is_file():
+        parser.error(f'Historical database not found: {args.db.resolve()}. '
+                     'Use --db to select an existing database, or download data first: '
+                     'python -m coin_analysis.historical_breakout_lab_v1 download --markets BTC,ETH --days 30')
     if any(h <= 0 for h in args.horizons) or any(not math.isfinite(t) or t <= 0 for t in args.thresholds):
         parser.error('Horizons and thresholds must be positive finite numbers')
     report = analyze(args.db, sorted(set(args.horizons)), sorted(set(args.thresholds)))

@@ -187,6 +187,10 @@ def main():
     parser.add_argument('--output', type=Path, default=REPORTS_DIR / 'backtest_v16_result')
     parser.add_argument('--cost-pct', type=float, default=0.20, help='Assumed round-trip fee plus slippage, percentage points')
     args = parser.parse_args()
+    if not args.db.is_file():
+        parser.error(f'Historical database not found: {args.db.resolve()}. '
+                     'Use --db to select an existing database, or download data first: '
+                     'python -m coin_analysis.historical_breakout_lab_v1 download --markets BTC,ETH --days 30')
     if not math.isfinite(args.cost_pct) or args.cost_pct < 0:
         parser.error('Cost must be nonnegative and finite')
     report = run_backtest(args.db, ProxyConfig(round_trip_cost_pct=args.cost_pct), (30, 60, 360, 1440, 4320))

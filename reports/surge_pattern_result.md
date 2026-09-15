@@ -2,8 +2,8 @@
 
 Status: EXPLORATORY, NOT VALIDATED.
 
-UTC: 2026-08-12T06:30:00+00:00 to 2026-09-11T06:30:00+00:00
-70/30 split: 2026-09-02T06:30:00+00:00
+UTC: 2026-08-16T13:43:00+00:00 to 2026-09-15T13:43:00+00:00
+70/30 split: 2026-09-06T13:43:00+00:00
 
 ## Method and Limits
 
@@ -27,116 +27,41 @@ UTC: 2026-08-12T06:30:00+00:00 to 2026-09-11T06:30:00+00:00
 
 | Horizon min | Threshold % | Eligible anchors | Events | Matched | Unmatched |
 |---|---|---|---|---|---|
-| 360 | 20 | 27351 | 5 | 3 | 2 |
-| 360 | 50 | 27351 | 1 | 1 | 0 |
-| 360 | 100 | 27351 | 0 | 0 | 0 |
-| 1440 | 20 | 14654 | 0 | 0 | 0 |
-| 1440 | 50 | 14654 | 0 | 0 | 0 |
-| 1440 | 100 | 14654 | 0 | 0 | 0 |
-| 4320 | 20 | 6336 | 0 | 0 | 0 |
-| 4320 | 50 | 6336 | 0 | 0 | 0 |
-| 4320 | 100 | 6336 | 0 | 0 | 0 |
+| 360 | 20 | 72081 | 0 | 0 | 0 |
+| 360 | 50 | 72081 | 0 | 0 | 0 |
+| 360 | 100 | 72081 | 0 | 0 | 0 |
+| 1440 | 20 | 49911 | 0 | 0 | 0 |
+| 1440 | 50 | 49911 | 0 | 0 | 0 |
+| 1440 | 100 | 49911 | 0 | 0 | 0 |
+| 4320 | 20 | 27347 | 2 | 1 | 1 |
+| 4320 | 50 | 27347 | 0 | 0 | 0 |
+| 4320 | 100 | 27347 | 0 | 0 | 0 |
 
-## 360m_20pct
+## 4320m_20pct
 
 | Market | Anchor UTC | Phase | Max future rise % | First hit min |
 |---|---|---|---|---|
-| KRW-0G | 2026-08-31T03:36:00+00:00 | discovery | 21.34 | 360 |
-| KRW-0G | 2026-08-31T21:04:00+00:00 | discovery | 20.13 | 323 |
-| KRW-SOPH | 2026-09-07T21:36:00+00:00 | validation | 41.37 | 174 |
-| KRW-SOPH | 2026-09-08T03:37:00+00:00 | validation | 45.28 | 62 |
-| KRW-SOPH | 2026-09-09T00:38:00+00:00 | validation | 20.73 | 59 |
+| KRW-BTC | 2026-08-18T20:56:00+00:00 | discovery | 20.56 | 3603 |
+| KRW-ETH | 2026-08-18T22:56:00+00:00 | discovery | 29.46 | 2507 |
 
 ### Discovery
 
 | Minutes before anchor | Feature | Pairs | Surge % | Control % | Difference pp |
 |---|---|---|---|---|---|
-| 0 | ma_up | 1 | 100.0 | 0.0 | +100.0 |
-| 0 | ma_flat | 1 | 0.0 | 100.0 | -100.0 |
-| 0 | ma5_above_ma20 | 1 | 100.0 | 0.0 | +100.0 |
-| 0 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
+| 0 | ma_up | 1 | 0.0 | 0.0 | +0.0 |
+| 0 | ma_flat | 1 | 100.0 | 100.0 | +0.0 |
+| 0 | ma5_above_ma20 | 1 | 0.0 | 100.0 | -100.0 |
+| 0 | tight_box | 1 | 100.0 | 100.0 | +0.0 |
 | 0 | value_burst | 1 | 0.0 | 0.0 | +0.0 |
-| 0 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 0 | repeated_value_bursts | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | ma_up | 1 | 100.0 | 0.0 | +100.0 |
-| 5 | ma_flat | 1 | 0.0 | 100.0 | -100.0 |
-| 5 | ma5_above_ma20 | 1 | 100.0 | 0.0 | +100.0 |
-| 5 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | value_burst | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | repeated_value_bursts | 1 | 0.0 | 0.0 | +0.0 |
+| 0 | quiet_price_value_rise | 1 | 100.0 | 0.0 | +100.0 |
+| 0 | repeated_value_bursts | 1 | 100.0 | 0.0 | +100.0 |
 
 ### Validation
-
-| Minutes before anchor | Feature | Pairs | Surge % | Control % | Difference pp |
-|---|---|---|---|---|---|
-| 0 | ma_up | 2 | 100.0 | 0.0 | +100.0 |
-| 0 | ma_flat | 2 | 0.0 | 0.0 | +0.0 |
-| 0 | ma5_above_ma20 | 2 | 100.0 | 0.0 | +100.0 |
-| 0 | tight_box | 2 | 0.0 | 0.0 | +0.0 |
-| 0 | value_burst | 2 | 0.0 | 0.0 | +0.0 |
-| 0 | quiet_price_value_rise | 2 | 50.0 | 0.0 | +50.0 |
-| 0 | repeated_value_bursts | 2 | 50.0 | 0.0 | +50.0 |
-| 5 | ma_up | 1 | 100.0 | 0.0 | +100.0 |
-| 5 | ma_flat | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | ma5_above_ma20 | 1 | 100.0 | 0.0 | +100.0 |
-| 5 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | value_burst | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | repeated_value_bursts | 1 | 100.0 | 100.0 | +0.0 |
-| 15 | ma_up | 1 | 100.0 | 0.0 | +100.0 |
-| 15 | ma_flat | 1 | 0.0 | 0.0 | +0.0 |
-| 15 | ma5_above_ma20 | 1 | 100.0 | 0.0 | +100.0 |
-| 15 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
-| 15 | value_burst | 1 | 0.0 | 100.0 | -100.0 |
-| 15 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 15 | repeated_value_bursts | 1 | 100.0 | 100.0 | +0.0 |
-| 60 | ma_up | 1 | 100.0 | 0.0 | +100.0 |
-| 60 | ma_flat | 1 | 0.0 | 0.0 | +0.0 |
-| 60 | ma5_above_ma20 | 1 | 100.0 | 0.0 | +100.0 |
-| 60 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
-| 60 | value_burst | 1 | 0.0 | 0.0 | +0.0 |
-| 60 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 60 | repeated_value_bursts | 1 | 0.0 | 100.0 | -100.0 |
-| 360 | ma_up | 1 | 100.0 | 100.0 | +0.0 |
-| 360 | ma_flat | 1 | 0.0 | 0.0 | +0.0 |
-| 360 | ma5_above_ma20 | 1 | 100.0 | 100.0 | +0.0 |
-| 360 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
-| 360 | value_burst | 1 | 0.0 | 0.0 | +0.0 |
-| 360 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 360 | repeated_value_bursts | 1 | 100.0 | 0.0 | +100.0 |
-
-## 360m_50pct
-
-| Market | Anchor UTC | Phase | Max future rise % | First hit min |
-|---|---|---|---|---|
-| KRW-SOPH | 2026-09-07T21:51:00+00:00 | validation | 55.91 | 360 |
-
-### Discovery
 
 | Minutes before anchor | Feature | Pairs | Surge % | Control % | Difference pp |
 |---|---|---|---|---|---|
 
 No matched pairs: no common-pattern inference is possible.
-
-### Validation
-
-| Minutes before anchor | Feature | Pairs | Surge % | Control % | Difference pp |
-|---|---|---|---|---|---|
-| 0 | ma_up | 1 | 100.0 | 0.0 | +100.0 |
-| 0 | ma_flat | 1 | 0.0 | 0.0 | +0.0 |
-| 0 | ma5_above_ma20 | 1 | 100.0 | 0.0 | +100.0 |
-| 0 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
-| 0 | value_burst | 1 | 0.0 | 0.0 | +0.0 |
-| 0 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 0 | repeated_value_bursts | 1 | 100.0 | 100.0 | +0.0 |
-| 5 | ma_up | 1 | 100.0 | 0.0 | +100.0 |
-| 5 | ma_flat | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | ma5_above_ma20 | 1 | 100.0 | 0.0 | +100.0 |
-| 5 | tight_box | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | value_burst | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | quiet_price_value_rise | 1 | 0.0 | 0.0 | +0.0 |
-| 5 | repeated_value_bursts | 1 | 100.0 | 100.0 | +0.0 |
 
 ## Feature Definitions
 
@@ -151,18 +76,8 @@ No matched pairs: no common-pattern inference is possible.
 
 | Market | Candles | Runs | Longest continuous minutes |
 |---|---|---|---|
-| KRW-0G | 21029 | 7630 | 1367 |
-| KRW-1INCH | 4660 | 3198 | 19 |
-| KRW-2Z | 13277 | 6105 | 660 |
-| KRW-A | 8681 | 5374 | 26 |
-| KRW-AAVE | 20641 | 7617 | 199 |
-| KRW-ADA | 14000 | 2081 | 180 |
-| KRW-BTC | 10078 | 3 | 5134 |
-| KRW-DOGE | 8887 | 884 | 246 |
-| KRW-ETH | 10063 | 17 | 1386 |
-| KRW-SOL | 9908 | 157 | 953 |
-| KRW-SOPH | 8482 | 709 | 1370 |
-| KRW-XRP | 10080 | 1 | 10080 |
+| KRW-BTC | 43192 | 9 | 15804 |
+| KRW-ETH | 43136 | 63 | 8500 |
 
 Detailed past feature values, matched controls, and missing snapshots are in the JSON output.
 Few or zero matches require better data; they do not establish the absence of useful patterns.

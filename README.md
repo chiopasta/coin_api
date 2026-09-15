@@ -2,6 +2,32 @@
 
 과거 데이터로 급등 사례의 특징을 찾고 백테스트로 검증합니다. 실시간 검사는 검증 이후로 보류 중입니다.
 
+## 알트코인 급등 사전 신호 연구
+
+최근 30일 원화 알트코인의 급등 사례를 찾고, 급등 전 특징을 비급등 대조군과 비교합니다. 별도 모듈 `altcoin_research`는 과거 봉만으로 생성한 초기 신호 가설의 적중률·오탐 수·급등 포착률도 평가합니다.
+
+```powershell
+# 현재 상장된 업비트 원화 종목 중 제외 목록을 뺀 종목 수집
+# 종목 수에 따라 오래 걸립니다. 기존 BTC·ETH DB와 별도로 저장합니다.
+python -m coin_analysis.altcoin_research download --days 30
+
+# 1시간 내 +10% 급등 연구
+python -m coin_analysis.altcoin_research analyze
+
+# 6시간 내 +20% 급등을 별도 보고서로 비교
+python -m coin_analysis.altcoin_research analyze --horizon 360 --threshold 20 --output reports/altcoin_6h
+```
+
+기본 제외 목록은 `BTC,ETH,XRP,SOL,DOGE,ADA,TRX,BNB,USDT,USDC`이며 `--exclude`로 교체할 수 있습니다. 이 목록은 시가총액 순위에 따른 소형주 분류가 아닙니다. `--markets SYMBOL1,SYMBOL2`로 수집·분석 종목을 직접 지정할 수도 있습니다. 다운로드 재개 시 같은 기간을 유지하려면 `--end 2026-09-15T00:00:00Z`처럼 종료 시각을 고정하세요.
+
+입력 DB는 `data/altcoin_market.db`, 기본 결과는 `reports/altcoin_research.md`와 `.json`입니다. 분석 기간은 DB 내 대상 종목의 마지막 봉을 기준으로 합니다. 기존 보고서는 그대로 보존됩니다.
+
+초기 신호 가설은 조용한 가격 움직임 속 거래대금 증가, 반복 거래대금 급증, 좁은 가격 범위와 거래대금 증가입니다. 아직 학습·검증된 매매 조건이 아닙니다. JSON에는 사건별 이전 특징, 전체 알림, 신호 뒤 최대 상승과 고가 봉 이후 하락을 기록합니다.
+
+선행 시간은 **목표 상승률 도달 봉 시작까지의 시간**이며, 실제 상승 시작 전 예측 성공을 의미하지 않습니다. 신호는 완성된 과거 1분봉만 사용합니다. 현재 단계는 오프라인 연구이며 실시간 알림 연결은 포함하지 않습니다.
+
+업비트는 체결이 없는 분의 캔들을 생성하지 않습니다([공식 문서](https://docs.upbit.com/kr/reference/list-candles-minutes)). 이 연구는 공백을 채우지 않으므로 거래가 드문 종목의 사건을 놓칠 수 있습니다. 보고서의 누락 분·평가 가능 기준점 수와 함께 결과를 읽어야 합니다. 현재 상장 목록만으로는 상장폐지 종목도 분석할 수 없습니다.
+
 ## 폴더 구조
 
 ```text
@@ -20,7 +46,21 @@ Coin_api/
 
 ## 실행
 
-아래 명령은 프로젝트 루트인 `C:\dev\Coin_api`에서 실행합니다. 오프라인 분석과 테스트에는 Python 표준 라이브러리만 필요합니다.
+아래 명령은 현재 저장소의 프로젝트 루트에서 실행합니다. 오프라인 분석과 테스트에는 Python 표준 라이브러리만 필요합니다.
+
+### 최초 실행: 과거 DB 준비
+
+새로 복제한 저장소에는 DB가 포함되어 있지 않습니다. 기존 `historical_market.db`를 `data/`에 복사하거나, 아래 명령으로 최근 30일의 BTC·ETH 1분봉을 다운로드합니다. 다운로드에는 네트워크 연결이 필요하며 시간이 걸릴 수 있습니다. `data/` 폴더는 자동 생성됩니다.
+
+```powershell
+python -m coin_analysis.historical_breakout_lab_v1 download --markets BTC,ETH --days 30
+```
+
+BTC·ETH는 초기 실행 예시이며, 기존 보고서의 분석 종목·기간과 다릅니다.
+다른 위치에 DB가 있다면 분석 명령에 `--db "C:\경로\historical_market.db"`를 지정합니다.
+`unable to open database file` 오류가 나면 DB 파일의 존재 여부와 경로를 먼저 확인하세요.
+
+### 분석 및 테스트
 
 ```powershell
 # 실제 급등 사건의 특징 비교
