@@ -1,0 +1,111 @@
+{
+  "smoke_period_kst": [
+    "2026-09-24T21:15:00+09:00",
+    "2026-09-24T23:15:00+09:00"
+  ],
+  "http_requests": 3,
+  "retries": 0,
+  "received_rows": 600,
+  "stored_rows": 360,
+  "states": [
+    {
+      "market": "KRW-BTC",
+      "requested_start": 1790252100,
+      "requested_end": 1790259300,
+      "next_cursor": 1790247300,
+      "status": "COMPLETE",
+      "pages_completed": 1,
+      "rows_saved": 120,
+      "last_success_at": "2026-09-24T15:15:14+00:00",
+      "last_error": null
+    },
+    {
+      "market": "KRW-ETH",
+      "requested_start": 1790252100,
+      "requested_end": 1790259300,
+      "next_cursor": 1790247300,
+      "status": "COMPLETE",
+      "pages_completed": 1,
+      "rows_saved": 120,
+      "last_success_at": "2026-09-24T15:15:19+00:00",
+      "last_error": null
+    },
+    {
+      "market": "KRW-XRP",
+      "requested_start": 1790252100,
+      "requested_end": 1790259300,
+      "next_cursor": 1790247300,
+      "status": "COMPLETE",
+      "pages_completed": 1,
+      "rows_saved": 120,
+      "last_success_at": "2026-09-24T15:15:19+00:00",
+      "last_error": null
+    }
+  ],
+  "quality_daily": [
+    {
+      "market": "KRW-BTC",
+      "date": "2026-09-24",
+      "expected_minutes": 120,
+      "observed_candles": 120,
+      "coverage": 1.0,
+      "longest_gap": 0,
+      "gap_count": 0,
+      "verified_minutes": 120,
+      "api_absent_minutes": 0,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ETH",
+      "date": "2026-09-24",
+      "expected_minutes": 120,
+      "observed_candles": 120,
+      "coverage": 1.0,
+      "longest_gap": 0,
+      "gap_count": 0,
+      "verified_minutes": 120,
+      "api_absent_minutes": 0,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-XRP",
+      "date": "2026-09-24",
+      "expected_minutes": 120,
+      "observed_candles": 120,
+      "coverage": 1.0,
+      "longest_gap": 0,
+      "gap_count": 0,
+      "verified_minutes": 120,
+      "api_absent_minutes": 0,
+      "unverified_minutes": 0
+    }
+  ],
+  "v2_read_counts": {
+    "KRW-BTC": 120,
+    "KRW-ETH": 120,
+    "KRW-XRP": 120
+  },
+  "duplicates": 0,
+  "complete_skip_requests": 0,
+  "original_db_unchanged": true,
+  "full_download_executed": false,
+  "selection_live_executed": false,
+  "full_plan": {
+    "db": "data\\research_market_v1.db",
+    "markets": "UNSELECTED: 50 alts + BTC; no API in dry-run",
+    "research_start_utc": "2026-08-31T15:00:00+00:00",
+    "research_end_utc": "2026-09-14T15:00:00+00:00",
+    "start_utc": "2026-08-31T09:00:00+00:00",
+    "end_utc": "2026-09-14T21:00:00+00:00",
+    "start_kst": "2026-08-31T18:00:00+09:00",
+    "end_kst": "2026-09-15T06:00:00+09:00",
+    "expected_candles": 1064880,
+    "batch_calls": 5355,
+    "sequential_minutes_assuming_02_to_05s_latency": [
+      31.2,
+      58.0
+    ],
+    "selection_calls": "Additional: 1 + C daily queries + about 8*K minute queries; C candidates, K checked.",
+    "note": "Full-range estimate, excludes retries and optional crosscheck; resume may require fewer requests."
+  }
+}

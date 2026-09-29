@@ -1,0 +1,1909 @@
+{
+  "sample": {
+    "markets": [
+      "KRW-ARX",
+      "KRW-AVAX",
+      "KRW-CAP",
+      "KRW-CFG",
+      "KRW-CHIP",
+      "KRW-DATA",
+      "KRW-DOS",
+      "KRW-ENSO",
+      "KRW-ETC",
+      "KRW-EUL",
+      "KRW-FIL",
+      "KRW-GRVT",
+      "KRW-HBAR",
+      "KRW-HOLO",
+      "KRW-HOME",
+      "KRW-KAITO",
+      "KRW-LA",
+      "KRW-LINK",
+      "KRW-ME",
+      "KRW-MMT",
+      "KRW-NEAR",
+      "KRW-ONDO",
+      "KRW-ONG",
+      "KRW-ONT",
+      "KRW-PENGU",
+      "KRW-PIEVERSE",
+      "KRW-PROM",
+      "KRW-PUMP",
+      "KRW-RVN",
+      "KRW-SAHARA",
+      "KRW-SAND",
+      "KRW-SHIB",
+      "KRW-SUI",
+      "KRW-TAO",
+      "KRW-UNI",
+      "KRW-VIRTUAL",
+      "KRW-WLD",
+      "KRW-XLM",
+      "KRW-ZBT",
+      "KRW-ZRO"
+    ],
+    "start": 1787065200,
+    "end": 1787497200,
+    "selection": "5 KST days; average coverage>=50%, each day>=30%; best mean coverage among up to top80 eligible; 40 systematic coverage-rank samples; no return screening",
+    "bias": "Quality-selected, favors active assets; not a random or historically complete market sample",
+    "pool_size": 48,
+    "pool_mean_coverage": 0.7172945601851852,
+    "market_quality": [
+      {
+        "market": "KRW-ONDO",
+        "coverage": 0.9625,
+        "min_daily_coverage": 0.8840277777777777
+      },
+      {
+        "market": "KRW-ONG",
+        "coverage": 0.9495833333333333,
+        "min_daily_coverage": 0.89375
+      },
+      {
+        "market": "KRW-XLM",
+        "coverage": 0.9376388888888889,
+        "min_daily_coverage": 0.7958333333333333
+      },
+      {
+        "market": "KRW-SHIB",
+        "coverage": 0.9158333333333334,
+        "min_daily_coverage": 0.75
+      },
+      {
+        "market": "KRW-WLD",
+        "coverage": 0.9101388888888889,
+        "min_daily_coverage": 0.7534722222222222
+      },
+      {
+        "market": "KRW-GRVT",
+        "coverage": 0.8922222222222222,
+        "min_daily_coverage": 0.6298611111111111
+      },
+      {
+        "market": "KRW-SUI",
+        "coverage": 0.87875,
+        "min_daily_coverage": 0.625
+      },
+      {
+        "market": "KRW-CAP",
+        "coverage": 0.8775,
+        "min_daily_coverage": 0.7256944444444444
+      },
+      {
+        "market": "KRW-LINK",
+        "coverage": 0.8629166666666667,
+        "min_daily_coverage": 0.6659722222222222
+      },
+      {
+        "market": "KRW-DOS",
+        "coverage": 0.85375,
+        "min_daily_coverage": 0.6263888888888889
+      },
+      {
+        "market": "KRW-KAITO",
+        "coverage": 0.8523611111111111,
+        "min_daily_coverage": 0.7680555555555556
+      },
+      {
+        "market": "KRW-HOME",
+        "coverage": 0.8522222222222222,
+        "min_daily_coverage": 0.7347222222222223
+      },
+      {
+        "market": "KRW-LA",
+        "coverage": 0.8484722222222222,
+        "min_daily_coverage": 0.6777777777777778
+      },
+      {
+        "market": "KRW-PROM",
+        "coverage": 0.8091666666666667,
+        "min_daily_coverage": 0.6631944444444444
+      },
+      {
+        "market": "KRW-NEAR",
+        "coverage": 0.8076388888888889,
+        "min_daily_coverage": 0.5555555555555556
+      },
+      {
+        "market": "KRW-PUMP",
+        "coverage": 0.8063888888888889,
+        "min_daily_coverage": 0.4583333333333333
+      },
+      {
+        "market": "KRW-EUL",
+        "coverage": 0.7708333333333334,
+        "min_daily_coverage": 0.6923611111111111
+      },
+      {
+        "market": "KRW-ETC",
+        "coverage": 0.7519444444444444,
+        "min_daily_coverage": 0.38958333333333334
+      },
+      {
+        "market": "KRW-AVAX",
+        "coverage": 0.7315277777777778,
+        "min_daily_coverage": 0.4548611111111111
+      },
+      {
+        "market": "KRW-PENGU",
+        "coverage": 0.6877777777777778,
+        "min_daily_coverage": 0.43194444444444446
+      },
+      {
+        "market": "KRW-HBAR",
+        "coverage": 0.6870833333333334,
+        "min_daily_coverage": 0.40069444444444446
+      },
+      {
+        "market": "KRW-ONT",
+        "coverage": 0.68375,
+        "min_daily_coverage": 0.4666666666666667
+      },
+      {
+        "market": "KRW-VIRTUAL",
+        "coverage": 0.6695833333333333,
+        "min_daily_coverage": 0.4479166666666667
+      },
+      {
+        "market": "KRW-CHIP",
+        "coverage": 0.6675,
+        "min_daily_coverage": 0.6111111111111112
+      },
+      {
+        "market": "KRW-SAND",
+        "coverage": 0.65375,
+        "min_daily_coverage": 0.30069444444444443
+      },
+      {
+        "market": "KRW-UNI",
+        "coverage": 0.6461111111111111,
+        "min_daily_coverage": 0.34652777777777777
+      },
+      {
+        "market": "KRW-PIEVERSE",
+        "coverage": 0.6219444444444444,
+        "min_daily_coverage": 0.48819444444444443
+      },
+      {
+        "market": "KRW-MMT",
+        "coverage": 0.6023611111111111,
+        "min_daily_coverage": 0.4375
+      },
+      {
+        "market": "KRW-HOLO",
+        "coverage": 0.5947222222222223,
+        "min_daily_coverage": 0.41041666666666665
+      },
+      {
+        "market": "KRW-ZRO",
+        "coverage": 0.5818055555555556,
+        "min_daily_coverage": 0.3347222222222222
+      },
+      {
+        "market": "KRW-DATA",
+        "coverage": 0.5686111111111111,
+        "min_daily_coverage": 0.3736111111111111
+      },
+      {
+        "market": "KRW-RVN",
+        "coverage": 0.5527777777777778,
+        "min_daily_coverage": 0.46458333333333335
+      },
+      {
+        "market": "KRW-TAO",
+        "coverage": 0.5505555555555556,
+        "min_daily_coverage": 0.3215277777777778
+      },
+      {
+        "market": "KRW-SAHARA",
+        "coverage": 0.5504166666666667,
+        "min_daily_coverage": 0.3458333333333333
+      },
+      {
+        "market": "KRW-FIL",
+        "coverage": 0.53,
+        "min_daily_coverage": 0.3263888888888889
+      },
+      {
+        "market": "KRW-ARX",
+        "coverage": 0.5277777777777778,
+        "min_daily_coverage": 0.3993055555555556
+      },
+      {
+        "market": "KRW-CFG",
+        "coverage": 0.5270833333333333,
+        "min_daily_coverage": 0.3111111111111111
+      },
+      {
+        "market": "KRW-ZBT",
+        "coverage": 0.5213888888888889,
+        "min_daily_coverage": 0.39861111111111114
+      },
+      {
+        "market": "KRW-ENSO",
+        "coverage": 0.5140277777777778,
+        "min_daily_coverage": 0.42569444444444443
+      },
+      {
+        "market": "KRW-ME",
+        "coverage": 0.5065277777777778,
+        "min_daily_coverage": 0.31527777777777777
+      }
+    ],
+    "windows_considered": [
+      {
+        "start": "2026-08-17T15:00:00+00:00",
+        "pool_size": 43,
+        "score": 0.7057784237726099
+      },
+      {
+        "start": "2026-08-18T15:00:00+00:00",
+        "pool_size": 48,
+        "score": 0.7172945601851852
+      },
+      {
+        "start": "2026-08-19T15:00:00+00:00",
+        "pool_size": 74,
+        "score": 0.7088269519519519
+      },
+      {
+        "start": "2026-08-20T15:00:00+00:00",
+        "pool_size": 78,
+        "score": 0.7017752849002848
+      },
+      {
+        "start": "2026-08-21T15:00:00+00:00",
+        "pool_size": 66,
+        "score": 0.7128998316498316
+      },
+      {
+        "start": "2026-08-22T15:00:00+00:00",
+        "pool_size": 59,
+        "score": 0.7034651600753296
+      },
+      {
+        "start": "2026-08-23T15:00:00+00:00",
+        "pool_size": 57,
+        "score": 0.7017836257309942
+      },
+      {
+        "start": "2026-08-24T15:00:00+00:00",
+        "pool_size": 52,
+        "score": 0.6982905982905983
+      },
+      {
+        "start": "2026-08-25T15:00:00+00:00",
+        "pool_size": 46,
+        "score": 0.6895229468599033
+      },
+      {
+        "start": "2026-08-26T15:00:00+00:00",
+        "pool_size": 48,
+        "score": 0.6843894675925926
+      },
+      {
+        "start": "2026-08-27T15:00:00+00:00",
+        "pool_size": 49,
+        "score": 0.6876303854875284
+      },
+      {
+        "start": "2026-08-28T15:00:00+00:00",
+        "pool_size": 48,
+        "score": 0.6943084490740742
+      },
+      {
+        "start": "2026-08-29T15:00:00+00:00",
+        "pool_size": 46,
+        "score": 0.7023852657004831
+      },
+      {
+        "start": "2026-08-30T15:00:00+00:00",
+        "pool_size": 56,
+        "score": 0.6901934523809523
+      },
+      {
+        "start": "2026-08-31T15:00:00+00:00",
+        "pool_size": 49,
+        "score": 0.6970266439909296
+      },
+      {
+        "start": "2026-09-01T15:00:00+00:00",
+        "pool_size": 52,
+        "score": 0.6834695512820512
+      },
+      {
+        "start": "2026-09-02T15:00:00+00:00",
+        "pool_size": 52,
+        "score": 0.6820699786324786
+      },
+      {
+        "start": "2026-09-03T15:00:00+00:00",
+        "pool_size": 54,
+        "score": 0.6815612139917696
+      },
+      {
+        "start": "2026-09-04T15:00:00+00:00",
+        "pool_size": 50,
+        "score": 0.6868444444444445
+      },
+      {
+        "start": "2026-09-05T15:00:00+00:00",
+        "pool_size": 58,
+        "score": 0.695969827586207
+      },
+      {
+        "start": "2026-09-06T15:00:00+00:00",
+        "pool_size": 59,
+        "score": 0.6899105461393598
+      },
+      {
+        "start": "2026-09-07T15:00:00+00:00",
+        "pool_size": 61,
+        "score": 0.6802071948998178
+      },
+      {
+        "start": "2026-09-08T15:00:00+00:00",
+        "pool_size": 60,
+        "score": 0.6837592592592593
+      },
+      {
+        "start": "2026-09-09T15:00:00+00:00",
+        "pool_size": 63,
+        "score": 0.6853505291005292
+      },
+      {
+        "start": "2026-09-10T15:00:00+00:00",
+        "pool_size": 60,
+        "score": 0.6754930555555556
+      },
+      {
+        "start": "2026-09-11T15:00:00+00:00",
+        "pool_size": 62,
+        "score": 0.6805085125448029
+      }
+    ]
+  },
+  "source_hashes_before": {
+    "C:\\dev\\coin_api-1\\data\\altcoin_market.db": "11779bc0f043cb7256c9a15c04a83a1e400a4eb5552c54eb1bba716515e2f0dd",
+    "C:\\dev\\coin_api-1\\data\\historical_market.db": "001e79d2e4250722168bea63d8dd802820804ee42944aec18a97e2c418d88c03"
+  },
+  "source_hashes_after": {
+    "C:\\dev\\coin_api-1\\data\\altcoin_market.db": "11779bc0f043cb7256c9a15c04a83a1e400a4eb5552c54eb1bba716515e2f0dd",
+    "C:\\dev\\coin_api-1\\data\\historical_market.db": "001e79d2e4250722168bea63d8dd802820804ee42944aec18a97e2c418d88c03"
+  },
+  "min_valid": 20,
+  "verified_raw_events": 59,
+  "real_feature_truncation_checks": 50,
+  "previous_episode_count": 37,
+  "previous_representatives": {
+    "A": 36,
+    "B": 10
+  },
+  "target_identity": {
+    "common": 50,
+    "old_only": 3,
+    "new_only": 9
+  },
+  "ong_episode_mapping": [
+    {
+      "old_episode_id": "0e2d9c054d00e338372d",
+      "definition": "A",
+      "target_time": 1787232360,
+      "new_episode_id": "af7eccdd36fd447dbff6",
+      "new_start": 1787224560,
+      "new_end": 1787232900,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 104.0,
+      "drawdown_pct": -7.0192307692307665
+    },
+    {
+      "old_episode_id": "0e2d9c054d00e338372d",
+      "definition": "A",
+      "target_time": 1787233560,
+      "new_episode_id": null,
+      "new_start": null,
+      "new_end": null,
+      "reason": "no surviving first-hit event in this segment",
+      "reference_high": null,
+      "drawdown_pct": null
+    },
+    {
+      "old_episode_id": "70fae5fea685f99ed2aa",
+      "definition": "A",
+      "target_time": 1787270460,
+      "new_episode_id": "55c5c9ca492e308dfc90",
+      "new_start": 1787267280,
+      "new_end": 1787273580,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 135.0,
+      "drawdown_pct": -5.925925925925924
+    },
+    {
+      "old_episode_id": "70fae5fea685f99ed2aa",
+      "definition": "A",
+      "target_time": 1787275680,
+      "new_episode_id": "765626b806e95bb4d588",
+      "new_start": 1787273580,
+      "new_end": 1787277420,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 143.0,
+      "drawdown_pct": -5.594405594405593
+    },
+    {
+      "old_episode_id": "70fae5fea685f99ed2aa",
+      "definition": "A",
+      "target_time": 1787279760,
+      "new_episode_id": "843b2a78b4c6ca31de92",
+      "new_start": 1787277840,
+      "new_end": 1787283420,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 152.0,
+      "drawdown_pct": -5.921052631578949
+    },
+    {
+      "old_episode_id": "70fae5fea685f99ed2aa",
+      "definition": "A",
+      "target_time": 1787288580,
+      "new_episode_id": "a1e39fffd26fce993c5a",
+      "new_start": 1787287740,
+      "new_end": 1787292840,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 144.0,
+      "drawdown_pct": -5.555555555555558
+    },
+    {
+      "old_episode_id": "dc50d98d259637cd1ff9",
+      "definition": "A",
+      "target_time": 1787302380,
+      "new_episode_id": "bf955154ee4877364639",
+      "new_start": 1787301060,
+      "new_end": 1787303160,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 130.0,
+      "drawdown_pct": -6.923076923076921
+    },
+    {
+      "old_episode_id": "12c596c7e10d98e2a05a",
+      "definition": "A",
+      "target_time": 1787375580,
+      "new_episode_id": "794caa870a46c9e78bd0",
+      "new_start": 1787375460,
+      "new_end": 1787375820,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 116.0,
+      "drawdown_pct": -6.896551724137934
+    },
+    {
+      "old_episode_id": "0e2d9c054d00e338372d",
+      "definition": "B",
+      "target_time": 1787232660,
+      "new_episode_id": "af7eccdd36fd447dbff6",
+      "new_start": 1787224560,
+      "new_end": 1787232900,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 104.0,
+      "drawdown_pct": -7.0192307692307665
+    },
+    {
+      "old_episode_id": "70fae5fea685f99ed2aa",
+      "definition": "B",
+      "target_time": 1787271840,
+      "new_episode_id": "55c5c9ca492e308dfc90",
+      "new_start": 1787267280,
+      "new_end": 1787273580,
+      "reason": "close_drawdown_5pct_from_prior_high",
+      "reference_high": 135.0,
+      "drawdown_pct": -5.925925925925924
+    }
+  ],
+  "fixed_case_feature_null_comparison": {
+    "before": {
+      "return_5m_pct": 13,
+      "return_15m_pct": 14,
+      "return_30m_pct": 15,
+      "return_60m_pct": 13,
+      "trade_value_5m": 20,
+      "prior_mean_trade_value_5m": 37,
+      "trade_value_ratio": 37,
+      "trade_value_change_pct": 24,
+      "trade_value_acceleration": 29,
+      "ma5": 20,
+      "ma20": 32,
+      "ma5_ma20_ratio": 32,
+      "ma20_slope_5m_pct": 33,
+      "range_30m_pct": 34,
+      "range_change_pct": 37,
+      "distance_to_prior_high_pct": 37,
+      "alt_relative_60m_pct": 13,
+      "btc_relative_60m_pct": 13
+    },
+    "after": {
+      "return_5m_pct": 13,
+      "return_15m_pct": 14,
+      "return_30m_pct": 15,
+      "return_60m_pct": 13,
+      "trade_value_5m": 20,
+      "prior_mean_trade_value_5m": 37,
+      "trade_value_ratio": 37,
+      "trade_value_change_pct": 24,
+      "trade_value_acceleration": 29,
+      "ma5": 20,
+      "ma20": 32,
+      "ma5_ma20_ratio": 32,
+      "ma20_slope_5m_pct": 33,
+      "range_30m_pct": 34,
+      "range_change_pct": 37,
+      "distance_to_prior_high_pct": 37,
+      "alt_relative_60m_pct": 13,
+      "btc_relative_60m_pct": 13
+    }
+  },
+  "previous": {
+    "A": {
+      "events": 43,
+      "primary": {
+        "matched": 5,
+        "rate_pct": 11.627906976744185,
+        "funnel": {
+          "candidates": 1677,
+          "case_liquidity": 429,
+          "not_reused": 426,
+          "candidate_liquidity": 73,
+          "liquidity_ratio": 65,
+          "time_bounds": 65,
+          "price_at_t0": 64,
+          "past_complete": 38,
+          "future_complete": 36,
+          "no_event_overlap": 18,
+          "no_future_surge": 18,
+          "no_control_overlap": 8,
+          "selected": 5
+        },
+        "first_failures": {
+          "case_liquidity": 1248,
+          "candidate_liquidity": 353,
+          "past_complete": 26,
+          "liquidity_ratio": 8,
+          "no_event_overlap": 18,
+          "no_control_overlap": 10,
+          "future_complete": 2,
+          "price_at_t0": 1,
+          "not_reused": 3
+        },
+        "unmatched_events": {
+          "case_preperiod_liquidity_unavailable": 32,
+          "no_eligible_liquidity_matched_control": 6
+        }
+      },
+      "auxiliary": {
+        "matched": 9,
+        "rate_pct": 20.930232558139537,
+        "funnel": {
+          "candidates": 5160,
+          "case_liquidity": 1320,
+          "not_reused": 1316,
+          "candidate_liquidity": 317,
+          "liquidity_ratio": 220,
+          "time_bounds": 220,
+          "price_at_t0": 217,
+          "past_complete": 100,
+          "future_complete": 82,
+          "no_event_overlap": 65,
+          "no_future_surge": 65,
+          "no_control_overlap": 65,
+          "selected": 9
+        },
+        "first_failures": {
+          "case_liquidity": 3840,
+          "candidate_liquidity": 999,
+          "liquidity_ratio": 97,
+          "past_complete": 117,
+          "future_complete": 18,
+          "no_event_overlap": 17,
+          "not_reused": 4,
+          "price_at_t0": 3
+        },
+        "unmatched_events": {
+          "case_preperiod_liquidity_unavailable": 32,
+          "no_eligible_liquidity_matched_control": 2
+        }
+      }
+    },
+    "B": {
+      "events": 10,
+      "primary": {
+        "matched": 0,
+        "rate_pct": 0.0,
+        "funnel": {
+          "candidates": 390,
+          "case_liquidity": 0,
+          "not_reused": 0,
+          "candidate_liquidity": 0,
+          "liquidity_ratio": 0,
+          "time_bounds": 0,
+          "price_at_t0": 0,
+          "past_complete": 0,
+          "future_complete": 0,
+          "no_event_overlap": 0,
+          "no_future_surge": 0,
+          "no_control_overlap": 0,
+          "selected": 0
+        },
+        "first_failures": {
+          "case_liquidity": 390
+        },
+        "unmatched_events": {
+          "case_preperiod_liquidity_unavailable": 10
+        }
+      },
+      "auxiliary": {
+        "matched": 0,
+        "rate_pct": 0.0,
+        "funnel": {
+          "candidates": 1200,
+          "case_liquidity": 0,
+          "not_reused": 0,
+          "candidate_liquidity": 0,
+          "liquidity_ratio": 0,
+          "time_bounds": 0,
+          "price_at_t0": 0,
+          "past_complete": 0,
+          "future_complete": 0,
+          "no_event_overlap": 0,
+          "no_future_surge": 0,
+          "no_control_overlap": 0,
+          "selected": 0
+        },
+        "first_failures": {
+          "case_liquidity": 1200
+        },
+        "unmatched_events": {
+          "case_preperiod_liquidity_unavailable": 10
+        }
+      }
+    }
+  },
+  "t0_comparisons": [
+    {
+      "old_event_id": "ebb372da900ae6c57b64",
+      "market": "KRW-ARX",
+      "definition": "B",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 162.0,
+      "new_price": 162.0,
+      "target_time": 1787386380,
+      "target_high": 195.0,
+      "new_target_return_pct": 20.370370370370374,
+      "new_elapsed_minutes": 181.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "1c5d9e407f326cf7fd3f",
+      "market": "KRW-CAP",
+      "definition": "A",
+      "old_t0": 1787301960,
+      "new_t0": 1787301960,
+      "delta_minutes": 0.0,
+      "old_price": 91.8,
+      "new_price": 91.8,
+      "target_time": 1787305260,
+      "target_high": 101.0,
+      "new_target_return_pct": 10.02178649237473,
+      "new_elapsed_minutes": 55.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "f11f0681fcc5777957d9",
+      "market": "KRW-CFG",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 182.0,
+      "new_price": 182.0,
+      "target_time": 1787376540,
+      "target_high": 201.0,
+      "new_target_return_pct": 10.439560439560447,
+      "new_elapsed_minutes": 17.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "2c6ed4b2ea285aa7973a",
+      "market": "KRW-CHIP",
+      "definition": "A",
+      "old_t0": 1787223180,
+      "new_t0": 1787223180,
+      "delta_minutes": 0.0,
+      "old_price": 38.5,
+      "new_price": 38.5,
+      "target_time": 1787226360,
+      "target_high": 42.4,
+      "new_target_return_pct": 10.129870129870122,
+      "new_elapsed_minutes": 53.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "e7906bbf6dd465334717",
+      "market": "KRW-DOS",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 290.0,
+      "new_price": 290.0,
+      "target_time": 1787375520,
+      "target_high": 322.0,
+      "new_target_return_pct": 11.03448275862069,
+      "new_elapsed_minutes": 1.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "76eff17ce79a94883b13",
+      "market": "KRW-ENSO",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 1064.0,
+      "new_price": 1064.0,
+      "target_time": 1787375640,
+      "target_high": 1208.0,
+      "new_target_return_pct": 13.533834586466176,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "1e3061be311d4b77b71b",
+      "market": "KRW-ETC",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 10350.0,
+      "new_price": 10350.0,
+      "target_time": 1787375640,
+      "target_high": 11390.0,
+      "new_target_return_pct": 10.048309178743953,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "e443a8d2c405f65d446d",
+      "market": "KRW-EUL",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 1630.0,
+      "new_price": 1630.0,
+      "target_time": 1787375580,
+      "target_high": 1810.0,
+      "new_target_return_pct": 11.042944785276077,
+      "new_elapsed_minutes": 1.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "1cc2774dad88c874600b",
+      "market": "KRW-EUL",
+      "definition": "A",
+      "old_t0": 1787444040,
+      "new_t0": 1787444040,
+      "delta_minutes": 0.0,
+      "old_price": 1743.0,
+      "new_price": 1743.0,
+      "target_time": 1787445780,
+      "target_high": 1942.0,
+      "new_target_return_pct": 11.417096959265628,
+      "new_elapsed_minutes": 29.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "a03f2f3ca831620d5fb1",
+      "market": "KRW-GRVT",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 326.0,
+      "new_price": 326.0,
+      "target_time": 1787375640,
+      "target_high": 367.0,
+      "new_target_return_pct": 12.576687116564411,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "c576b4e8e531a7476295",
+      "market": "KRW-HOLO",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 83.6,
+      "new_price": 83.6,
+      "target_time": 1787375760,
+      "target_high": 92.0,
+      "new_target_return_pct": 10.047846889952151,
+      "new_elapsed_minutes": 4.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "d114bd9767bbcccde083",
+      "market": "KRW-KAITO",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 458.0,
+      "new_price": 458.0,
+      "target_time": 1787375760,
+      "target_high": 512.0,
+      "new_target_return_pct": 11.79039301310043,
+      "new_elapsed_minutes": 4.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "d12cd306d2dcc856f171",
+      "market": "KRW-LA",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 73.9,
+      "new_price": 73.9,
+      "target_time": 1787375580,
+      "target_high": 87.0,
+      "new_target_return_pct": 17.726657645466837,
+      "new_elapsed_minutes": 1.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "929b7a3d14762c3237a2",
+      "market": "KRW-ME",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 84.8,
+      "new_price": 84.8,
+      "target_time": 1787377680,
+      "target_high": 93.4,
+      "new_target_return_pct": 10.14150943396228,
+      "new_elapsed_minutes": 36.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "336142ec506c6169fcf7",
+      "market": "KRW-MMT",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 228.0,
+      "new_price": 228.0,
+      "target_time": 1787375580,
+      "target_high": 251.0,
+      "new_target_return_pct": 10.087719298245613,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "228966ce12f94ec59581",
+      "market": "KRW-NEAR",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 2388.0,
+      "new_price": 2388.0,
+      "target_time": 1787375760,
+      "target_high": 2638.0,
+      "new_target_return_pct": 10.469011725293132,
+      "new_elapsed_minutes": 4.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "6fed056b217e35805b0c",
+      "market": "KRW-ONDO",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 475.0,
+      "new_price": 475.0,
+      "target_time": 1787375580,
+      "target_high": 532.0,
+      "new_target_return_pct": 12.00000000000001,
+      "new_elapsed_minutes": 1.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "e8d92a376806b364aad2",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787229000,
+      "new_t0": 1787229000,
+      "delta_minutes": 0.0,
+      "old_price": 82.3,
+      "new_price": 82.3,
+      "target_time": 1787232360,
+      "target_high": 91.6,
+      "new_target_return_pct": 11.30012150668287,
+      "new_elapsed_minutes": 56.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "cc5e67ecc357ab6997ed",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787232900,
+      "new_t0": 1787231160,
+      "delta_minutes": -29.0,
+      "old_price": 96.7,
+      "new_price": 82.7,
+      "target_time": 1787233560,
+      "target_high": 107.0,
+      "new_target_return_pct": 29.38331318016929,
+      "new_elapsed_minutes": 40.0,
+      "changed": true,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "85caa7318f88cb000a8c",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787268120,
+      "new_t0": 1787268120,
+      "delta_minutes": 0.0,
+      "old_price": 99.9,
+      "new_price": 99.9,
+      "target_time": 1787270460,
+      "target_high": 110.0,
+      "new_target_return_pct": 10.110110110110092,
+      "new_elapsed_minutes": 39.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "8606e957133b3b190bd9",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787273760,
+      "new_t0": 1787273760,
+      "delta_minutes": 0.0,
+      "old_price": 125.0,
+      "new_price": 125.0,
+      "target_time": 1787275680,
+      "target_high": 138.0,
+      "new_target_return_pct": 10.40000000000001,
+      "new_elapsed_minutes": 32.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "0184ff420cd9fe6684d4",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787277900,
+      "new_t0": 1787277900,
+      "delta_minutes": 0.0,
+      "old_price": 128.0,
+      "new_price": 128.0,
+      "target_time": 1787279760,
+      "target_high": 143.0,
+      "new_target_return_pct": 11.71875,
+      "new_elapsed_minutes": 31.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "ece977b26baff9e9421b",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787287740,
+      "new_t0": 1787287740,
+      "delta_minutes": 0.0,
+      "old_price": 130.0,
+      "new_price": 130.0,
+      "target_time": 1787288580,
+      "target_high": 143.0,
+      "new_target_return_pct": 10.000000000000009,
+      "new_elapsed_minutes": 14.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "b8f9e9ff8a5ceed00b3a",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787301240,
+      "new_t0": 1787301240,
+      "delta_minutes": 0.0,
+      "old_price": 111.0,
+      "new_price": 111.0,
+      "target_time": 1787302380,
+      "target_high": 123.0,
+      "new_target_return_pct": 10.81081081081081,
+      "new_elapsed_minutes": 19.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "626dd7bfca41678f7864",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 100.0,
+      "new_price": 100.0,
+      "target_time": 1787375580,
+      "target_high": 110.0,
+      "new_target_return_pct": 10.000000000000009,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "a6efa6b5ea1f46b45e5d",
+      "market": "KRW-ONG",
+      "definition": "B",
+      "old_t0": 1787228340,
+      "new_t0": 1787228340,
+      "delta_minutes": 0.0,
+      "old_price": 81.8,
+      "new_price": 81.8,
+      "target_time": 1787232660,
+      "target_high": 101.0,
+      "new_target_return_pct": 23.471882640586795,
+      "new_elapsed_minutes": 72.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "b71f88f64e8cc78e4d80",
+      "market": "KRW-ONG",
+      "definition": "B",
+      "old_t0": 1787268120,
+      "new_t0": 1787268120,
+      "delta_minutes": 0.0,
+      "old_price": 99.9,
+      "new_price": 99.9,
+      "target_time": 1787271840,
+      "target_high": 125.0,
+      "new_target_return_pct": 25.125125125125123,
+      "new_elapsed_minutes": 62.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "159db6de3ed487c3c7ac",
+      "market": "KRW-ONT",
+      "definition": "A",
+      "old_t0": 1787254380,
+      "new_t0": 1787254380,
+      "delta_minutes": 0.0,
+      "old_price": 60.1,
+      "new_price": 60.1,
+      "target_time": 1787257500,
+      "target_high": 68.0,
+      "new_target_return_pct": 13.14475873544092,
+      "new_elapsed_minutes": 52.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "c564cf9885243c698a25",
+      "market": "KRW-ONT",
+      "definition": "A",
+      "old_t0": 1787269200,
+      "new_t0": 1787269200,
+      "delta_minutes": 0.0,
+      "old_price": 65.3,
+      "new_price": 65.3,
+      "target_time": 1787271960,
+      "target_high": 72.3,
+      "new_target_return_pct": 10.719754977029105,
+      "new_elapsed_minutes": 46.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "e05dc95eb534e5875723",
+      "market": "KRW-ONT",
+      "definition": "A",
+      "old_t0": 1787277900,
+      "new_t0": 1787277900,
+      "delta_minutes": 0.0,
+      "old_price": 70.9,
+      "new_price": 70.9,
+      "target_time": 1787280540,
+      "target_high": 78.1,
+      "new_target_return_pct": 10.155148095909716,
+      "new_elapsed_minutes": 44.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "09b2607b331585512797",
+      "market": "KRW-ONT",
+      "definition": "A",
+      "old_t0": 1787454960,
+      "new_t0": 1787454960,
+      "delta_minutes": 0.0,
+      "old_price": 66.2,
+      "new_price": 66.2,
+      "target_time": 1787457780,
+      "target_high": 75.1,
+      "new_target_return_pct": 13.444108761329288,
+      "new_elapsed_minutes": 47.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "3aacb62209c621f583d2",
+      "market": "KRW-ONT",
+      "definition": "B",
+      "old_t0": 1787239920,
+      "new_t0": 1787239920,
+      "delta_minutes": 0.0,
+      "old_price": 57.9,
+      "new_price": 57.9,
+      "target_time": 1787257560,
+      "target_high": 69.5,
+      "new_target_return_pct": 20.034542314335056,
+      "new_elapsed_minutes": 294.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "c16d429c90f9f5f24aed",
+      "market": "KRW-ONT",
+      "definition": "B",
+      "old_t0": 1787267520,
+      "new_t0": 1787267520,
+      "delta_minutes": 0.0,
+      "old_price": 64.8,
+      "new_price": 64.8,
+      "target_time": 1787280540,
+      "target_high": 78.1,
+      "new_target_return_pct": 20.524691358024683,
+      "new_elapsed_minutes": 217.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "9a84a491d26589e82a14",
+      "market": "KRW-PENGU",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 10.5,
+      "new_price": 10.5,
+      "target_time": 1787375640,
+      "target_high": 11.6,
+      "new_target_return_pct": 10.476190476190483,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "8618faa88380c4dc9c73",
+      "market": "KRW-PIEVERSE",
+      "definition": "A",
+      "old_t0": 1787301240,
+      "new_t0": 1787301240,
+      "delta_minutes": 0.0,
+      "old_price": 1347.0,
+      "new_price": 1347.0,
+      "target_time": 1787304660,
+      "target_high": 1489.0,
+      "new_target_return_pct": 10.541945063103197,
+      "new_elapsed_minutes": 57.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "7ef1ef7a599971e679ce",
+      "market": "KRW-PIEVERSE",
+      "definition": "A",
+      "old_t0": 1787311320,
+      "new_t0": 1787311320,
+      "delta_minutes": 0.0,
+      "old_price": 1369.0,
+      "new_price": 1369.0,
+      "target_time": 1787313780,
+      "target_high": 1516.0,
+      "new_target_return_pct": 10.737764791818849,
+      "new_elapsed_minutes": 41.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "d7798c974928b3044c0b",
+      "market": "KRW-PIEVERSE",
+      "definition": "B",
+      "old_t0": 1787297520,
+      "new_t0": 1787297520,
+      "delta_minutes": 0.0,
+      "old_price": 1338.0,
+      "new_price": 1338.0,
+      "target_time": 1787314560,
+      "target_high": 1630.0,
+      "new_target_return_pct": 21.823617339312396,
+      "new_elapsed_minutes": 284.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "69acf5f4d11b32a263f6",
+      "market": "KRW-PROM",
+      "definition": "A",
+      "old_t0": 1787293860,
+      "new_t0": 1787293860,
+      "delta_minutes": 0.0,
+      "old_price": 3027.0,
+      "new_price": 3027.0,
+      "target_time": 1787297460,
+      "target_high": 3340.0,
+      "new_target_return_pct": 10.34027089527585,
+      "new_elapsed_minutes": 60.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "3d29e4e6b947c63d3bd2",
+      "market": "KRW-PROM",
+      "definition": "A",
+      "old_t0": 1787328180,
+      "new_t0": 1787328180,
+      "delta_minutes": 0.0,
+      "old_price": 3560.0,
+      "new_price": 3560.0,
+      "target_time": 1787330400,
+      "target_high": 3929.0,
+      "new_target_return_pct": 10.365168539325854,
+      "new_elapsed_minutes": 37.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "64486992c0dc5821b840",
+      "market": "KRW-PROM",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 3240.0,
+      "new_price": 3240.0,
+      "target_time": 1787375640,
+      "target_high": 3603.0,
+      "new_target_return_pct": 11.203703703703694,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "b0ae463e11b83cbd4441",
+      "market": "KRW-PROM",
+      "definition": "A",
+      "old_t0": 1787488920,
+      "new_t0": 1787488920,
+      "delta_minutes": 0.0,
+      "old_price": 3592.0,
+      "new_price": 3592.0,
+      "target_time": 1787490180,
+      "target_high": 4150.0,
+      "new_target_return_pct": 15.534521158129166,
+      "new_elapsed_minutes": 21.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "13bc1f63a314436236bb",
+      "market": "KRW-PROM",
+      "definition": "B",
+      "old_t0": 1787312100,
+      "new_t0": 1787312100,
+      "delta_minutes": 0.0,
+      "old_price": 3245.0,
+      "new_price": 3245.0,
+      "target_time": 1787330400,
+      "target_high": 3929.0,
+      "new_target_return_pct": 21.078582434514637,
+      "new_elapsed_minutes": 305.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "4203a19c3db638e6a6cb",
+      "market": "KRW-PROM",
+      "definition": "B",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 3240.0,
+      "new_price": 3240.0,
+      "target_time": 1787378220,
+      "target_high": 3899.0,
+      "new_target_return_pct": 20.339506172839506,
+      "new_elapsed_minutes": 45.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "068e2a53366cecba5a15",
+      "market": "KRW-PUMP",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 4.94,
+      "new_price": 4.94,
+      "target_time": 1787375580,
+      "target_high": 5.52,
+      "new_target_return_pct": 11.740890688259098,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "dd645f2f18493895f7f8",
+      "market": "KRW-PUMP",
+      "definition": "A",
+      "old_t0": 1787465640,
+      "new_t0": 1787465640,
+      "delta_minutes": 0.0,
+      "old_price": 6.59,
+      "new_price": 6.59,
+      "target_time": 1787468820,
+      "target_high": 7.25,
+      "new_target_return_pct": 10.01517450682854,
+      "new_elapsed_minutes": 53.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "41bd0e47787f73da48ba",
+      "market": "KRW-PUMP",
+      "definition": "B",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 4.94,
+      "new_price": 4.94,
+      "target_time": 1787376600,
+      "target_high": 5.94,
+      "new_target_return_pct": 20.242914979757074,
+      "new_elapsed_minutes": 19.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "cfbed93c269d4b7f4644",
+      "market": "KRW-RVN",
+      "definition": "A",
+      "old_t0": 1787360340,
+      "new_t0": 1787360340,
+      "delta_minutes": 0.0,
+      "old_price": 3.6,
+      "new_price": 3.6,
+      "target_time": 1787362140,
+      "target_high": 3.98,
+      "new_target_return_pct": 10.555555555555562,
+      "new_elapsed_minutes": 30.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "fb6ada1f3a14207871a2",
+      "market": "KRW-RVN",
+      "definition": "A",
+      "old_t0": 1787385540,
+      "new_t0": 1787385540,
+      "delta_minutes": 0.0,
+      "old_price": 3.66,
+      "new_price": 3.66,
+      "target_time": 1787387460,
+      "target_high": 4.04,
+      "new_target_return_pct": 10.382513661202175,
+      "new_elapsed_minutes": 32.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "2ce09cc9fdfecedaa8cf",
+      "market": "KRW-RVN",
+      "definition": "A",
+      "old_t0": 1787392980,
+      "new_t0": 1787392980,
+      "delta_minutes": 0.0,
+      "old_price": 3.86,
+      "new_price": 3.86,
+      "target_time": 1787394300,
+      "target_high": 4.4,
+      "new_target_return_pct": 13.989637305699487,
+      "new_elapsed_minutes": 22.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "05206208f32569955cb5",
+      "market": "KRW-RVN",
+      "definition": "B",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 3.54,
+      "new_price": 3.54,
+      "target_time": 1787387820,
+      "target_high": 4.28,
+      "new_target_return_pct": 20.903954802259882,
+      "new_elapsed_minutes": 205.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "d3207dabf133551675ed",
+      "market": "KRW-SUI",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 1085.0,
+      "new_price": 1085.0,
+      "target_time": 1787375760,
+      "target_high": 1198.0,
+      "new_target_return_pct": 10.414746543778808,
+      "new_elapsed_minutes": 5.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "918c613eca8163046b6f",
+      "market": "KRW-UNI",
+      "definition": "A",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 5165.0,
+      "new_price": 5165.0,
+      "target_time": 1787376120,
+      "target_high": 5685.0,
+      "new_target_return_pct": 10.0677637947725,
+      "new_elapsed_minutes": 10.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "6dff81e4f195c0c0b650",
+      "market": "KRW-WLD",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 516.0,
+      "new_price": 516.0,
+      "target_time": 1787375700,
+      "target_high": 572.0,
+      "new_target_return_pct": 10.852713178294572,
+      "new_elapsed_minutes": 4.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    }
+  ],
+  "representative_10": [
+    {
+      "old_event_id": "85caa7318f88cb000a8c",
+      "market": "KRW-ONG",
+      "definition": "A",
+      "old_t0": 1787268120,
+      "new_t0": 1787268120,
+      "delta_minutes": 0.0,
+      "old_price": 99.9,
+      "new_price": 99.9,
+      "target_time": 1787270460,
+      "target_high": 110.0,
+      "new_target_return_pct": 10.110110110110092,
+      "new_elapsed_minutes": 39.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "c16d429c90f9f5f24aed",
+      "market": "KRW-ONT",
+      "definition": "B",
+      "old_t0": 1787267520,
+      "new_t0": 1787267520,
+      "delta_minutes": 0.0,
+      "old_price": 64.8,
+      "new_price": 64.8,
+      "target_time": 1787280540,
+      "target_high": 78.1,
+      "new_target_return_pct": 20.524691358024683,
+      "new_elapsed_minutes": 217.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "d7798c974928b3044c0b",
+      "market": "KRW-PIEVERSE",
+      "definition": "B",
+      "old_t0": 1787297520,
+      "new_t0": 1787297520,
+      "delta_minutes": 0.0,
+      "old_price": 1338.0,
+      "new_price": 1338.0,
+      "target_time": 1787314560,
+      "target_high": 1630.0,
+      "new_target_return_pct": 21.823617339312396,
+      "new_elapsed_minutes": 284.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "05206208f32569955cb5",
+      "market": "KRW-RVN",
+      "definition": "B",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 3.54,
+      "new_price": 3.54,
+      "target_time": 1787387820,
+      "target_high": 4.28,
+      "new_target_return_pct": 20.903954802259882,
+      "new_elapsed_minutes": 205.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "13bc1f63a314436236bb",
+      "market": "KRW-PROM",
+      "definition": "B",
+      "old_t0": 1787312100,
+      "new_t0": 1787312100,
+      "delta_minutes": 0.0,
+      "old_price": 3245.0,
+      "new_price": 3245.0,
+      "target_time": 1787330400,
+      "target_high": 3929.0,
+      "new_target_return_pct": 21.078582434514637,
+      "new_elapsed_minutes": 305.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "068e2a53366cecba5a15",
+      "market": "KRW-PUMP",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 4.94,
+      "new_price": 4.94,
+      "target_time": 1787375580,
+      "target_high": 5.52,
+      "new_target_return_pct": 11.740890688259098,
+      "new_elapsed_minutes": 2.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "ebb372da900ae6c57b64",
+      "market": "KRW-ARX",
+      "definition": "B",
+      "old_t0": 1787375520,
+      "new_t0": 1787375520,
+      "delta_minutes": 0.0,
+      "old_price": 162.0,
+      "new_price": 162.0,
+      "target_time": 1787386380,
+      "target_high": 195.0,
+      "new_target_return_pct": 20.370370370370374,
+      "new_elapsed_minutes": 181.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "2c6ed4b2ea285aa7973a",
+      "market": "KRW-CHIP",
+      "definition": "A",
+      "old_t0": 1787223180,
+      "new_t0": 1787223180,
+      "delta_minutes": 0.0,
+      "old_price": 38.5,
+      "new_price": 38.5,
+      "target_time": 1787226360,
+      "target_high": 42.4,
+      "new_target_return_pct": 10.129870129870122,
+      "new_elapsed_minutes": 53.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "1c5d9e407f326cf7fd3f",
+      "market": "KRW-CAP",
+      "definition": "A",
+      "old_t0": 1787301960,
+      "new_t0": 1787301960,
+      "delta_minutes": 0.0,
+      "old_price": 91.8,
+      "new_price": 91.8,
+      "target_time": 1787305260,
+      "target_high": 101.0,
+      "new_target_return_pct": 10.02178649237473,
+      "new_elapsed_minutes": 55.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    },
+    {
+      "old_event_id": "e7906bbf6dd465334717",
+      "market": "KRW-DOS",
+      "definition": "A",
+      "old_t0": 1787375460,
+      "new_t0": 1787375460,
+      "delta_minutes": 0.0,
+      "old_price": 290.0,
+      "new_price": 290.0,
+      "target_time": 1787375520,
+      "target_high": 322.0,
+      "new_target_return_pct": 11.03448275862069,
+      "new_elapsed_minutes": 1.0,
+      "changed": false,
+      "comparison": "same frozen old target candle, independent of new event enumeration"
+    }
+  ],
+  "ong_regression": {
+    "old_event_id": "cc5e67ecc357ab6997ed",
+    "market": "KRW-ONG",
+    "definition": "A",
+    "old_t0": 1787232900,
+    "new_t0": 1787231160,
+    "delta_minutes": -29.0,
+    "old_price": 96.7,
+    "new_price": 82.7,
+    "target_time": 1787233560,
+    "target_high": 107.0,
+    "new_target_return_pct": 29.38331318016929,
+    "new_elapsed_minutes": 40.0,
+    "changed": true,
+    "comparison": "same frozen old target candle, independent of new event enumeration"
+  },
+  "changed_t0_count": 1,
+  "thresholds": {
+    "0.8": {
+      "summary": {
+        "A": {
+          "raw_events": 47,
+          "quality_eligible_raw_events": 35,
+          "representative_events": 44,
+          "eligible_representative_events": 32,
+          "quality_exclusions": {
+            "low_coverage_past_360m": 10,
+            "low_coverage_liquidity_baseline": 11,
+            "low_coverage_future": 1
+          },
+          "primary": {
+            "matched": 29,
+            "rate_pct": 90.625,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {
+              "no_eligible_liquidity_matched_control": 3
+            }
+          },
+          "auxiliary": {
+            "matched": 31,
+            "rate_pct": 96.875,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {
+              "no_eligible_liquidity_matched_control": 1
+            }
+          }
+        },
+        "B": {
+          "raw_events": 12,
+          "quality_eligible_raw_events": 6,
+          "representative_events": 12,
+          "eligible_representative_events": 6,
+          "quality_exclusions": {
+            "low_coverage_past_360m": 5,
+            "low_coverage_liquidity_baseline": 6,
+            "low_coverage_future": 3
+          },
+          "primary": {
+            "matched": 6,
+            "rate_pct": 100.0,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {}
+          },
+          "auxiliary": {
+            "matched": 6,
+            "rate_pct": 100.0,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {}
+          }
+        }
+      },
+      "episodes": 46,
+      "insufficient_rows": 189,
+      "feature_valid": {
+        "return_5m_pct": 172,
+        "return_15m_pct": 174,
+        "return_30m_pct": 174,
+        "return_60m_pct": 175,
+        "trade_value_5m": 156,
+        "prior_mean_trade_value_5m": 87,
+        "trade_value_ratio": 87,
+        "trade_value_change_pct": 143,
+        "trade_value_acceleration": 132,
+        "ma5": 156,
+        "ma20": 123,
+        "ma5_ma20_ratio": 123,
+        "ma20_slope_5m_pct": 116,
+        "range_30m_pct": 113,
+        "range_change_pct": 88,
+        "distance_to_prior_high_pct": 87,
+        "alt_relative_60m_pct": 175,
+        "btc_relative_60m_pct": 175
+      },
+      "feature_null": {
+        "return_5m_pct": 18,
+        "return_15m_pct": 16,
+        "return_30m_pct": 16,
+        "return_60m_pct": 15,
+        "trade_value_5m": 34,
+        "prior_mean_trade_value_5m": 103,
+        "trade_value_ratio": 103,
+        "trade_value_change_pct": 47,
+        "trade_value_acceleration": 58,
+        "ma5": 34,
+        "ma20": 67,
+        "ma5_ma20_ratio": 67,
+        "ma20_slope_5m_pct": 74,
+        "range_30m_pct": 77,
+        "range_change_pct": 102,
+        "distance_to_prior_high_pct": 103,
+        "alt_relative_60m_pct": 15,
+        "btc_relative_60m_pct": 15
+      },
+      "t0_before_episode": 4
+    },
+    "1.0": {
+      "summary": {
+        "A": {
+          "raw_events": 47,
+          "quality_eligible_raw_events": 6,
+          "representative_events": 44,
+          "eligible_representative_events": 6,
+          "quality_exclusions": {
+            "low_coverage_past_360m": 38,
+            "low_coverage_liquidity_baseline": 33,
+            "low_coverage_future": 17
+          },
+          "primary": {
+            "matched": 5,
+            "rate_pct": 83.33333333333333,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {
+              "no_eligible_liquidity_matched_control": 1
+            }
+          },
+          "auxiliary": {
+            "matched": 6,
+            "rate_pct": 100.0,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {}
+          }
+        },
+        "B": {
+          "raw_events": 12,
+          "quality_eligible_raw_events": 0,
+          "representative_events": 12,
+          "eligible_representative_events": 0,
+          "quality_exclusions": {
+            "low_coverage_past_360m": 12,
+            "low_coverage_liquidity_baseline": 12,
+            "low_coverage_future": 9
+          },
+          "primary": {
+            "matched": 0,
+            "rate_pct": null,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {}
+          },
+          "auxiliary": {
+            "matched": 0,
+            "rate_pct": null,
+            "denominator": "quality-eligible representatives",
+            "unmatched_reasons": {}
+          }
+        }
+      },
+      "episodes": 46,
+      "insufficient_rows": 240,
+      "feature_valid": {
+        "return_5m_pct": 30,
+        "return_15m_pct": 30,
+        "return_30m_pct": 30,
+        "return_60m_pct": 30,
+        "trade_value_5m": 30,
+        "prior_mean_trade_value_5m": 30,
+        "trade_value_ratio": 30,
+        "trade_value_change_pct": 30,
+        "trade_value_acceleration": 30,
+        "ma5": 30,
+        "ma20": 30,
+        "ma5_ma20_ratio": 30,
+        "ma20_slope_5m_pct": 30,
+        "range_30m_pct": 30,
+        "range_change_pct": 30,
+        "distance_to_prior_high_pct": 30,
+        "alt_relative_60m_pct": 30,
+        "btc_relative_60m_pct": 30
+      },
+      "feature_null": {
+        "return_5m_pct": 0,
+        "return_15m_pct": 0,
+        "return_30m_pct": 0,
+        "return_60m_pct": 0,
+        "trade_value_5m": 0,
+        "prior_mean_trade_value_5m": 0,
+        "trade_value_ratio": 0,
+        "trade_value_change_pct": 0,
+        "trade_value_acceleration": 0,
+        "ma5": 0,
+        "ma20": 0,
+        "ma5_ma20_ratio": 0,
+        "ma20_slope_5m_pct": 0,
+        "range_30m_pct": 0,
+        "range_change_pct": 0,
+        "distance_to_prior_high_pct": 0,
+        "alt_relative_60m_pct": 0,
+        "btc_relative_60m_pct": 0
+      },
+      "t0_before_episode": 4
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "markets": [
+    "KRW-BTC",
+    "KRW-ETH",
+    "KRW-XRP"
+  ],
+  "db": "C:\\dev\\coin_api-1\\data\\forward_scanner_v4_smoke_1790696252.db",
+  "max_requests": 20,
+  "hard_wall_limit_seconds": 180,
+  "started_utc": "2026-09-29T15:37:32+00:00",
+  "api_attempts": [
+    {
+      "market": "KRW-BTC",
+      "to": "2026-09-29T15:37:00+00:00",
+      "count": 200,
+      "started_monotonic": 8167.9161628,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=9",
+      "candles": 200,
+      "elapsed_seconds": 0.1250873999997566
+    },
+    {
+      "market": "KRW-BTC",
+      "to": "2026-09-29T12:17:00+00:00",
+      "count": 200,
+      "started_monotonic": 8168.0779327,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=8",
+      "candles": 200,
+      "elapsed_seconds": 0.05194870000013907
+    },
+    {
+      "market": "KRW-ETH",
+      "to": "2026-09-29T15:37:00+00:00",
+      "count": 200,
+      "started_monotonic": 8168.2288886,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=7",
+      "candles": 200,
+      "elapsed_seconds": 0.031391200000143726
+    },
+    {
+      "market": "KRW-ETH",
+      "to": "2026-09-29T12:17:00+00:00",
+      "count": 200,
+      "started_monotonic": 8168.3799748,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=6",
+      "candles": 200,
+      "elapsed_seconds": 0.054301699999996345
+    },
+    {
+      "market": "KRW-XRP",
+      "to": "2026-09-29T15:37:00+00:00",
+      "count": 200,
+      "started_monotonic": 8168.5309907,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=5",
+      "candles": 200,
+      "elapsed_seconds": 0.02990219999992405
+    },
+    {
+      "market": "KRW-XRP",
+      "to": "2026-09-29T12:17:00+00:00",
+      "count": 200,
+      "started_monotonic": 8168.6810305,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=4",
+      "candles": 200,
+      "elapsed_seconds": 0.04614190000029339
+    },
+    {
+      "market": "KRW-BTC",
+      "to": "2026-09-29T15:38:00+00:00",
+      "count": 200,
+      "started_monotonic": 8200.8186843,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=9",
+      "candles": 200,
+      "elapsed_seconds": 0.030496199999106466
+    },
+    {
+      "market": "KRW-ETH",
+      "to": "2026-09-29T15:38:00+00:00",
+      "count": 200,
+      "started_monotonic": 8200.9687621,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=8",
+      "candles": 200,
+      "elapsed_seconds": 0.032966400000077556
+    },
+    {
+      "market": "KRW-XRP",
+      "to": "2026-09-29T15:38:00+00:00",
+      "count": 200,
+      "started_monotonic": 8201.1187978,
+      "status": 200,
+      "remaining_req": "group=candles; min=600; sec=7",
+      "candles": 200,
+      "elapsed_seconds": 0.0337734000004275
+    }
+  ],
+  "passed": true,
+  "restart_cursor": 1790684220,
+  "resume_from_saved_cursor": true,
+  "same_cutoff_idempotent": true,
+  "stats": {
+    "signals": 0,
+    "signal_markets": 0,
+    "L1": {
+      "statuses": {},
+      "valid": 0,
+      "success": 0,
+      "rate_pct": null
+    },
+    "L2": {
+      "statuses": {},
+      "valid": 0,
+      "success": 0,
+      "rate_pct": null
+    },
+    "collection_errors": []
+  },
+  "rows": 1074,
+  "new_rows_after_next_minute": 3,
+  "duplicates": 0,
+  "timestamp_errors": 0,
+  "per_market": [
+    {
+      "market": "KRW-BTC",
+      "candles": 358,
+      "first_ts": 1790674800,
+      "last_ts": 1790696220
+    },
+    {
+      "market": "KRW-ETH",
+      "candles": 358,
+      "first_ts": 1790674800,
+      "last_ts": 1790696220
+    },
+    {
+      "market": "KRW-XRP",
+      "candles": 358,
+      "first_ts": 1790674800,
+      "last_ts": 1790696220
+    }
+  ],
+  "states": [
+    {
+      "market": "KRW-BTC",
+      "verified_until": 1790696280,
+      "last_observation": 1790674500,
+      "active": null,
+      "cluster_id": null,
+      "last_error": null
+    },
+    {
+      "market": "KRW-ETH",
+      "verified_until": 1790696280,
+      "last_observation": 1790696100,
+      "active": 0,
+      "cluster_id": null,
+      "last_error": null
+    },
+    {
+      "market": "KRW-XRP",
+      "verified_until": 1790696280,
+      "last_observation": 1790696100,
+      "active": 0,
+      "cluster_id": null,
+      "last_error": null
+    }
+  ],
+  "integrity": "ok",
+  "unfinished_collection_jobs": 0,
+  "pending_note": "Natural live signals only; if none, PENDING path covered by synthetic restart tests, not claimed live-tested. Less than 10m cannot complete L1/L2.",
+  "retries": 0,
+  "elapsed_seconds": 33.36711980000018,
+  "actual_api_requests": 9,
+  "finished_utc": "2026-09-29T15:38:06+00:00",
+  "scanner_closed": true,
+  "research_db_hashes_unchanged": true,
+  "messages": [
+    "{\"signals\": 0, \"signal_markets\": 0, \"L1\": {\"statuses\": {}, \"valid\": 0, \"success\": 0, \"rate_pct\": null}, \"L2\": {\"statuses\": {}, \"valid\": 0, \"success\": 0, \"rate_pct\": null}, \"collection_errors\": []}",
+    "{\"signals\": 0, \"signal_markets\": 0, \"L1\": {\"statuses\": {}, \"valid\": 0, \"success\": 0, \"rate_pct\": null}, \"L2\": {\"statuses\": {}, \"valid\": 0, \"success\": 0, \"rate_pct\": null}, \"collection_errors\": []}",
+    "{\"signals\": 0, \"signal_markets\": 0, \"L1\": {\"statuses\": {}, \"valid\": 0, \"success\": 0, \"rate_pct\": null}, \"L2\": {\"statuses\": {}, \"valid\": 0, \"success\": 0, \"rate_pct\": null}, \"collection_errors\": []}"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "source": "C:\\dev\\coin_api-1\\data\\research_market_validation_v1.db",
+  "source_hash_before": "741e03592849630dbe7b7a2bb82ae9b31587afee66f4f351c9e8e0ed652a8248",
+  "source_hash_after": "741e03592849630dbe7b7a2bb82ae9b31587afee66f4f351c9e8e0ed652a8248",
+  "markets": [
+    "KRW-BTC",
+    "KRW-CPOOL",
+    "KRW-FLOCK",
+    "KRW-NEAR",
+    "KRW-ENA"
+  ],
+  "period_kst": [
+    "2026-09-15T00:00:00+09:00",
+    "2026-09-16T00:00:00+09:00"
+  ],
+  "warmup_hours": 6,
+  "label_buffer_hours": 1,
+  "stats": {
+    "signals": 18,
+    "signal_markets": 3,
+    "L1": {
+      "statuses": {
+        "FAILURE": 10,
+        "UNKNOWN": 8
+      },
+      "valid": 10,
+      "success": 0,
+      "rate_pct": 0.0
+    },
+    "L2": {
+      "statuses": {
+        "FAILURE": 3,
+        "SUCCESS": 1,
+        "UNKNOWN": 14
+      },
+      "valid": 4,
+      "success": 1,
+      "rate_pct": 25.0
+    },
+    "collection_errors": []
+  },
+  "matched_v3_first_clusters": 18,
+  "features_match_v3": true,
+  "outcomes_match_v3": true,
+  "restart_tested": true,
+  "note": "Bounded offline replay, not a new efficacy study. Relative strength uses the four replay alts, not the 50-market universe. No network. Temporary scanner DB removed."
+}

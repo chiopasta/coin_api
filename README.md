@@ -1,5 +1,35 @@
 # 코인 급등 분석 프로젝트
 
+## 현재 단계: V4 forward 관찰 기록기
+
+먼저 [프로젝트 현재 상태](docs/research_status.md)를 읽으세요. V3 독립 validation은 PARTIAL이며, 동결된 30분 range >=4%를 기록하는 V4의 제한된 실제 API smoke 단계입니다. 자동매매가 아니며 명시적 요청 없이 장기 scanner나 대량 다운로드를 실행하지 않습니다.
+
+[V4 설계·실행 안내](docs/forward_scanner_v4.md) · [독립 validation 결과](reports/forward_surge_v3_independent_validation.md)
+
+## 과거 단계: V2 정책 수정 재검증
+
+전체 280종목 분석은 보류 중입니다. t0·가격 흐름 episode·대칭 coverage 정책을 적용한 **고정 40종목 재검증**은 다음 명령으로 실행합니다. API/다운로드는 없습니다.
+
+```powershell
+python -m coin_analysis.surge_event_research_v2_revised --min-valid 20
+```
+
+[수정 정책](docs/surge_event_v2_revised_policy.md) · [80%/100% 비교 보고서](reports/surge_event_v2_policy_comparison.md)
+
+아래 기존 V2 명령과 모듈은 과거 결과 재현용으로 보존합니다. 현재 수정 정책의 실행 진입점은 위 명령입니다.
+
+## V2: 가격 이벤트 기반 사전 특징 연구
+
+기존 DB를 읽기 전용으로 사용하며 API 호출 없이 60분 +10%, 6시간 +20% 사건과 사건 전 5/15/30/60/120분 특징을 분석합니다. 같은 시각 타 종목 및 같은 종목 다른 시점 대조군과 단일 특징 발생률을 비교합니다. 매수 신호와 조건부 상승 확률은 계산하지 않습니다.
+
+전체 저장 종목 분석은 직접 아래 명령으로 실행합니다.
+
+```powershell
+python -m coin_analysis.surge_event_research_v2 --db data/altcoin_market.db --btc-db data/historical_market.db --output reports/surge_event_research_v2
+```
+
+[V2 정의·결측 처리·실행 안내](docs/surge_event_research_v2.md) · [소규모 검증 보고서](reports/surge_event_research_v2_smoke.md)
+
 과거 데이터로 급등 사례의 특징을 찾고 백테스트로 검증합니다. 실시간 검사는 검증 이후로 보류 중입니다.
 
 ## 알트코인 급등 사전 신호 연구

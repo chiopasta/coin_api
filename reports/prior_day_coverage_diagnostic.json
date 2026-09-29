@@ -1,0 +1,219 @@
+{
+  "reference_time_kst": "2026-09-01T00:00:00+09:00",
+  "window_start_kst": "2026-08-31T00:00:00+09:00",
+  "requests": 24,
+  "retries": 0,
+  "elapsed_seconds": 3.512,
+  "results": [
+    {
+      "market": "KRW-BTC",
+      "start_utc": "2026-08-30T15:00:00+00:00",
+      "end_exclusive_utc": "2026-08-31T15:00:00+00:00",
+      "expected_minutes": 1440,
+      "unique_minutes": 1440,
+      "coverage": 1.0,
+      "page_count": 8,
+      "response_candles": 1600,
+      "reached_window_start": true,
+      "final_cursor": 1788092400,
+      "pages": [
+        {
+          "request_cursor": 1788188400,
+          "oldest": 1788176400,
+          "newest": 1788188340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788176400,
+          "oldest": 1788164400,
+          "newest": 1788176340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788164400,
+          "oldest": 1788152400,
+          "newest": 1788164340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788152400,
+          "oldest": 1788140400,
+          "newest": 1788152340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788140400,
+          "oldest": 1788128400,
+          "newest": 1788140340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788128400,
+          "oldest": 1788116400,
+          "newest": 1788128340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788116400,
+          "oldest": 1788104400,
+          "newest": 1788116340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788104400,
+          "oldest": 1788092400,
+          "newest": 1788104340,
+          "response_candles": 200,
+          "in_range_candles": 40
+        }
+      ]
+    },
+    {
+      "market": "KRW-ETH",
+      "start_utc": "2026-08-30T15:00:00+00:00",
+      "end_exclusive_utc": "2026-08-31T15:00:00+00:00",
+      "expected_minutes": 1440,
+      "unique_minutes": 1440,
+      "coverage": 1.0,
+      "page_count": 8,
+      "response_candles": 1600,
+      "reached_window_start": true,
+      "final_cursor": 1788092400,
+      "pages": [
+        {
+          "request_cursor": 1788188400,
+          "oldest": 1788176400,
+          "newest": 1788188340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788176400,
+          "oldest": 1788164400,
+          "newest": 1788176340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788164400,
+          "oldest": 1788152400,
+          "newest": 1788164340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788152400,
+          "oldest": 1788140400,
+          "newest": 1788152340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788140400,
+          "oldest": 1788128400,
+          "newest": 1788140340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788128400,
+          "oldest": 1788116400,
+          "newest": 1788128340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788116400,
+          "oldest": 1788104400,
+          "newest": 1788116340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788104400,
+          "oldest": 1788092400,
+          "newest": 1788104340,
+          "response_candles": 200,
+          "in_range_candles": 40
+        }
+      ]
+    },
+    {
+      "market": "KRW-XRP",
+      "start_utc": "2026-08-30T15:00:00+00:00",
+      "end_exclusive_utc": "2026-08-31T15:00:00+00:00",
+      "expected_minutes": 1440,
+      "unique_minutes": 1440,
+      "coverage": 1.0,
+      "page_count": 8,
+      "response_candles": 1600,
+      "reached_window_start": true,
+      "final_cursor": 1788092400,
+      "pages": [
+        {
+          "request_cursor": 1788188400,
+          "oldest": 1788176400,
+          "newest": 1788188340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788176400,
+          "oldest": 1788164400,
+          "newest": 1788176340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788164400,
+          "oldest": 1788152400,
+          "newest": 1788164340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788152400,
+          "oldest": 1788140400,
+          "newest": 1788152340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788140400,
+          "oldest": 1788128400,
+          "newest": 1788140340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788128400,
+          "oldest": 1788116400,
+          "newest": 1788128340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788116400,
+          "oldest": 1788104400,
+          "newest": 1788116340,
+          "response_candles": 200,
+          "in_range_candles": 200
+        },
+        {
+          "request_cursor": 1788104400,
+          "oldest": 1788092400,
+          "newest": 1788104340,
+          "response_candles": 200,
+          "in_range_candles": 40
+        }
+      ]
+    }
+  ]
+}

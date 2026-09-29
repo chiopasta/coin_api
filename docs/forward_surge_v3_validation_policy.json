@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "status": "FROZEN_BEFORE_VALIDATION",
+  "validation_status": "NOT_RUN",
+  "primary_filter": {
+    "feature": "range_30m_pct",
+    "formula": "100*(high30/low30-1)",
+    "threshold": 4,
+    "observation_step_seconds": 300,
+    "complete_past30_required": true
+  },
+  "cluster": "First observation only; observed <4 resets; NULL does not reset; warm up state in pre-buffer. Never replace an UNKNOWN first signal.",
+  "labels": {
+    "L1": {
+      "minutes": 30,
+      "high_rise_pct": 5
+    },
+    "L2": {
+      "minutes": 60,
+      "high_rise_pct": 10
+    }
+  },
+  "missing": "No fill; any incomplete future window UNKNOWN, even partial observed hits. Baseline uses same per-label full-future and range-valid policies.",
+  "baseline": "All range-valid 5-minute observations, not matched controls; L1 and L2 separate valid denominators.",
+  "discovery_reference": {
+    "start": 1788188400,
+    "end": 1789398000,
+    "clusters": 522,
+    "L1": {
+      "success": 44,
+      "valid": 434,
+      "rate_pct": 10.138248847926267
+    },
+    "L2": {
+      "success": 27,
+      "valid": 357,
+      "rate_pct": 7.563025210084033
+    }
+  },
+  "required_metrics": [
+    "valid observation baseline L1/L2",
+    "signal cluster count",
+    "per-label valid/success/failure/unknown/rate/lift",
+    "signal markets",
+    "success markets",
+    "largest signal market share",
+    "FLOCK included/excluded rates and baseline lifts"
+  ],
+  "secondary_observation_only": [
+    "range_15m_pct",
+    "range_30m_pct",
+    "alt_relative_60m_pct"
+  ],
+  "secondary_rule": "Compare success/failure median and rank-effect direction only. No cutoffs, combinations, or changes to primary filter.",
+  "verdict_rules": {
+    "note": "Operational descriptive gates fixed now, not significance claims. Discovery rates are references, never pass thresholds.",
+    "REPLICATED": "Both labels: >=20 successes, >=20 failures, >=3 success markets, cluster rate / same-population observation baseline >=1.5, and FLOCK-excluded lift >1 with >=3 success markets.",
+    "PARTIAL": "Not REPLICATED or concentrated FAILED: at least one label lift >1 with >=3 success markets and FLOCK-excluded lift >1. Insufficient sample explicitly flagged.",
+    "FAILED": "Neither label has such support, or both labels depend on <3 success markets or lose lift after FLOCK exclusion.",
+    "no_valid_data": "Do not assign performance verdict; DATA_INSUFFICIENT."
+  },
+  "boundaries": "Main periods disjoint. Buffers may overlap. Discovery post-buffer already includes Sep15 00:00-06:00 KST; declare this prior exposure. Also report predeclared exclusion of validation first6h without replacing primary period.",
+  "limitations": "Retrospective historical validation, not fully prospective: freeze date Sep26 is after validation start. Do not claim the entire interval was future at policy freeze. Multiple signals/labels remain dependent.",
+  "collection": "A primary same fixed 50 alts + BTC; B separate optional DB, prior-only existing 60% policy. Never reselect A after missing/delisted markets."
+}
