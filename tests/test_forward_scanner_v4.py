@@ -30,16 +30,16 @@ class ScannerTests(unittest.TestCase):
             self.db.execute('UPDATE scanner_state SET verified_until=?',(end,))
     def test_signal_pending_restart_and_final_outcome_immutable(self):
         self.ingest(history(START),START);s.process_observations(self.db,START,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['signals'],4)
-        self.assertEqual(s.statistics(self.db)['L1']['statuses'],{'PENDING':4})
+        self.assertEqual(s.statistics(self.db,'ALL')['signals'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['L1']['statuses'],{'PENDING':4})
         before=list(self.db.execute('SELECT values_json FROM signal_features'))
         self.db.close();self.db=s.connect(self.path)
         self.ingest(history(START+3600),START+3600)
         s.process_observations(self.db,START+3600,lambda _:None)
         s.evaluate_outcomes(self.db,START+3600,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['signals'],4)
-        self.assertEqual(s.statistics(self.db)['L1']['success'],4)
-        self.assertEqual(s.statistics(self.db)['L2']['success'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['signals'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['L1']['success'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['L2']['success'],4)
         self.assertEqual([tuple(r) for r in before],[tuple(r) for r in self.db.execute('SELECT values_json FROM signal_features')])
         final=[tuple(r) for r in self.db.execute('SELECT * FROM signal_outcomes')]
         s.evaluate_outcomes(self.db,START+7200,lambda _:None)
@@ -50,11 +50,11 @@ class ScannerTests(unittest.TestCase):
         data=history(START+3600);data=[r for r in data if r[0]!=START+600]
         self.ingest(data,START+3600);s.process_observations(self.db,START,lambda _:None)
         s.evaluate_outcomes(self.db,START+3600+s.GRACE,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['L1']['statuses'],{'UNKNOWN':4})
-        self.assertEqual(s.statistics(self.db)['L2']['statuses'],{'UNKNOWN':4})
+        self.assertEqual(s.statistics(self.db,'ALL')['L1']['statuses'],{'UNKNOWN':4})
+        self.assertEqual(s.statistics(self.db,'ALL')['L2']['statuses'],{'UNKNOWN':4})
         self.ingest(history(START+3600),START+3600)
         s.evaluate_outcomes(self.db,START+3600+s.GRACE,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['L1']['success'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['L1']['success'],4)
     def test_future_mutation_deletion_cannot_change_features_or_cluster_start(self):
         outcomes=[]
         for index,rows in enumerate([history(START),history(START+3600),[(r if r[0]<START else (r[0],1.,10000.,1.,9999.,1e12)) for r in history(START+3600)]]):
@@ -71,11 +71,11 @@ class ScannerTests(unittest.TestCase):
         data=history(START+7200)
         data=[(t,o,105. if START+6900<=t else h,l,c,v) for t,o,h,l,c,v in data]
         self.ingest(data,START+7200);s.process_observations(self.db,START+7200,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['signals'],8)
+        self.assertEqual(s.statistics(self.db,'ALL')['signals'],8)
     def test_initial_high_range_is_left_censored_not_new_signal(self):
         data=[(t,100.,105.,100.,100.,1000.) for t in range(START-s.WARMUP,START,60)]
         self.ingest(data,START);s.process_observations(self.db,START,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['signals'],0)
+        self.assertEqual(s.statistics(self.db,'ALL')['signals'],0)
     def test_bounded_mock_transport_smoke_and_page_resume(self):
         data=history(START+3600)
         requests=[]
@@ -94,8 +94,8 @@ class ScannerTests(unittest.TestCase):
         count=self.db.execute('SELECT COUNT(*) FROM minute_candles').fetchone()[0]
         s.cycle(self.db,client,START+3605,lambda _:None)
         self.assertEqual(count,self.db.execute('SELECT COUNT(*) FROM minute_candles').fetchone()[0])
-        self.assertEqual(s.statistics(self.db)['signals'],4)
-        self.assertEqual(s.statistics(self.db)['L2']['success'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['signals'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['L2']['success'],4)
     def test_existing_research_db_rejected(self):
         path=Path(self.tmp.name)/'other.db'
         with contextlib.closing(sqlite3.connect(path)) as db:db.execute('CREATE TABLE minute_candles(x)')
@@ -107,18 +107,18 @@ class ScannerTests(unittest.TestCase):
         data=[(t,o,100. if t>=START else h,l,c,v) for t,o,h,l,c,v in data]
         self.ingest(data,START+3600);s.process_observations(self.db,START,lambda _:None)
         s.evaluate_outcomes(self.db,START+60,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['L1']['statuses'],{'PENDING':4})
+        self.assertEqual(s.statistics(self.db,'ALL')['L1']['statuses'],{'PENDING':4})
         s.evaluate_outcomes(self.db,START+3600,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['L1']['statuses'],{'FAILURE':4})
-        self.assertEqual(s.statistics(self.db)['L2']['statuses'],{'FAILURE':4})
+        self.assertEqual(s.statistics(self.db,'ALL')['L1']['statuses'],{'FAILURE':4})
+        self.assertEqual(s.statistics(self.db,'ALL')['L2']['statuses'],{'FAILURE':4})
     def test_null_range_does_not_rearm_active_cluster(self):
         data=[(t,100.,105. if t>=START-300 else 100.,100.,100.,1000.) for t in range(START-s.WARMUP,START+3600,60) if t!=START+60]
         self.ingest(data,START+3600);s.process_observations(self.db,START+3600,lambda _:None)
-        self.assertEqual(s.statistics(self.db)['signals'],4)
+        self.assertEqual(s.statistics(self.db,'ALL')['signals'],4)
     def test_ip_block_stops_cycle_instead_of_repeating(self):
         class Blocked:
             def get(self,*args,**kwargs):raise s.collector.CollectionBlocked('IP blocked')
         with self.assertRaises(s.collector.CollectionBlocked):s.cycle(self.db,Blocked(),START+3605,lambda _:None)
-        self.assertTrue(s.statistics(self.db)['collection_errors'])
+        self.assertTrue(s.statistics(self.db,'ALL')['collection_errors'])
 
 if __name__=='__main__':unittest.main()

@@ -10,6 +10,7 @@ import time
 from . import research_dataset_collector_v1 as collector
 from . import forward_surge_research_v3 as v3
 from .paths import DATA_DIR
+from . import forward_scanner_v4_operations as ops
 
 STEP=300
 WARMUP=21600
@@ -26,6 +27,8 @@ def connect(path):
     tables={r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
     if tables and 'scanner_config' not in tables:
         db.close();raise ValueError('Not a V4 DB; existing database preserved')
+    if 'signals' in tables and 'source' not in [r[1] for r in db.execute('PRAGMA table_info(signals)')]:
+        db.close();raise ValueError('Run --mode migrate before resuming this older scanner DB')
     db.execute('PRAGMA foreign_keys=ON');db.execute('PRAGMA journal_mode=WAL')
     db.executescript('''
       CREATE TABLE IF NOT EXISTS scanner_config(id INTEGER PRIMARY KEY CHECK(id=1),payload TEXT NOT NULL);
@@ -33,13 +36,14 @@ def connect(path):
       CREATE TABLE IF NOT EXISTS scanner_state(market TEXT PRIMARY KEY,verified_until INTEGER,last_observation INTEGER,active INTEGER,cluster_id TEXT,last_error TEXT);
       CREATE TABLE IF NOT EXISTS collection_jobs(market TEXT PRIMARY KEY,start INTEGER,end INTEGER,cursor INTEGER);
       CREATE TABLE IF NOT EXISTS collection_pages(market TEXT,start INTEGER,end INTEGER,response_count INTEGER,PRIMARY KEY(market,start,end));
-      CREATE TABLE IF NOT EXISTS signals(signal_id TEXT PRIMARY KEY,market TEXT,signal_time INTEGER,signal_price REAL,range_30m REAL,cluster_id TEXT UNIQUE,detected_at INTEGER,delay_seconds INTEGER,UNIQUE(market,signal_time));
+      CREATE TABLE IF NOT EXISTS signals(signal_id TEXT PRIMARY KEY,market TEXT,signal_time INTEGER,signal_price REAL,range_30m REAL,cluster_id TEXT UNIQUE,detected_at INTEGER,delay_seconds INTEGER,source TEXT NOT NULL CHECK(source IN ('LIVE','CATCHUP')),UNIQUE(market,signal_time));
       CREATE TABLE IF NOT EXISTS signal_features(signal_id TEXT PRIMARY KEY REFERENCES signals(signal_id),asof_time INTEGER,values_json TEXT,flags_json TEXT,observed_candidates_json TEXT);
       CREATE TABLE IF NOT EXISTS signal_outcomes(signal_id TEXT REFERENCES signals(signal_id),label TEXT,status TEXT,max_return REAL,first_target_time INTEGER,observed_minutes INTEGER,expected_minutes INTEGER,evaluated_at INTEGER,PRIMARY KEY(signal_id,label));
       CREATE TRIGGER IF NOT EXISTS immutable_features BEFORE UPDATE ON signal_features BEGIN SELECT RAISE(ABORT,'Frozen signal features'); END;
       CREATE TRIGGER IF NOT EXISTS immutable_signals BEFORE UPDATE ON signals BEGIN SELECT RAISE(ABORT,'Frozen signal'); END;
       CREATE TRIGGER IF NOT EXISTS immutable_completed_outcome BEFORE UPDATE ON signal_outcomes WHEN OLD.status IN ('SUCCESS','FAILURE') BEGIN SELECT RAISE(ABORT,'Outcome already complete'); END;
     ''')
+    ops.schema(db)
     return db
 
 def config(db):
@@ -115,10 +119,11 @@ def process_observations(db,now,emit=print):
                     if t>=cfg['start']:
                         fs=v3.features(research,m,t);signal=v3.v2.old.identity('v4signal',m,t)
                         candidates={k:fs['values'][k] for k in ('range_15m_pct','range_30m_pct','alt_relative_60m_pct')}
-                        db.execute('INSERT INTO signals VALUES(?,?,?,?,?,?,?,?)',(signal,m,t,s.price(t),width,cluster,now,max(0,now-t)))
+                        source=ops.source_for(t,now)
+                        db.execute('INSERT INTO signals VALUES(?,?,?,?,?,?,?,?,?)',(signal,m,t,s.price(t),width,cluster,now,max(0,now-t),source))
                         db.execute('INSERT INTO signal_features VALUES(?,?,?,?,?)',(signal,t,json.dumps(fs['values'],allow_nan=False),json.dumps(fs['flags'],allow_nan=False),json.dumps(candidates,allow_nan=False)))
                         for y,(minutes,_) in LABELS.items():db.execute('INSERT INTO signal_outcomes VALUES(?,?,?,NULL,NULL,0,?,NULL)',(signal,y,'PENDING',minutes))
-                        message=f'SIGNAL {m} time={collector.iso(t,collector.KST)} price={s.price(t)} range30={width:.3f}% range15={candidates["range_15m_pct"]} alt_relative60={candidates["alt_relative_60m_pct"]} delay={max(0,now-t)}s'
+                        message=f'SIGNAL {source} {m} time={collector.iso(t,collector.KST)} price={s.price(t)} range30={width:.3f}% range15={candidates["range_15m_pct"]} alt_relative60={candidates["alt_relative_60m_pct"]} delay={max(0,now-t)}s'
                 db.execute('UPDATE scanner_state SET last_observation=?,active=?,cluster_id=? WHERE market=?',(t,active,cluster,m))
             if message:emit(message)
         research.feature_cache.clear();research.market_returns.clear()
@@ -141,16 +146,29 @@ def evaluate_outcomes(db,now,emit=print):
         with db:db.execute('UPDATE signal_outcomes SET status=?,max_return=?,first_target_time=?,observed_minutes=?,evaluated_at=? WHERE signal_id=? AND label=?',(status,rise,hit,len(candles),now,row['signal_id'],row['label']))
         emit(f'{row["market"]} {row["label"]} {status} signal={row["signal_id"]} max_return={rise:.3f}%')
 
-def statistics(db):
-    result=dict(signals=db.execute('SELECT COUNT(*) FROM signals').fetchone()[0],signal_markets=db.execute('SELECT COUNT(DISTINCT market) FROM signals').fetchone()[0])
+def statistics(db,source='LIVE'):
+    if source not in ('LIVE','CATCHUP','ALL'):raise ValueError('Invalid source')
+    where='' if source=='ALL' else ' WHERE source=?'
+    params=() if source=='ALL' else (source,)
+    result=dict(source=source,signals=db.execute('SELECT COUNT(*) FROM signals'+where,params).fetchone()[0],signal_markets=db.execute('SELECT COUNT(DISTINCT market) FROM signals'+where,params).fetchone()[0])
     for y in LABELS:
-        counts=dict(db.execute('SELECT status,COUNT(*) FROM signal_outcomes WHERE label=? GROUP BY status',(y,)))
+        counts=dict(db.execute('SELECT o.status,COUNT(*) FROM signal_outcomes o JOIN signals s USING(signal_id) WHERE o.label=?'+('' if source=='ALL' else ' AND s.source=?')+' GROUP BY o.status',(y,)+params))
         valid=counts.get('SUCCESS',0)+counts.get('FAILURE',0)
         result[y]=dict(statuses=counts,valid=valid,success=counts.get('SUCCESS',0),rate_pct=100*counts.get('SUCCESS',0)/valid if valid else None)
     result['collection_errors']=[dict(r) for r in db.execute('SELECT market,last_error,verified_until FROM scanner_state WHERE last_error IS NOT NULL')]
     return result
 
-def cycle(db,client,now=None,emit=print):
+def grouped_statistics(db):
+    return dict(default_view='LIVE',**{source:statistics(db,source) for source in ('LIVE','CATCHUP','ALL')})
+
+def cycle(db,client,now=None,emit=print,session_id=None):
+    began=int(time.time()) if now is None else now
+    cid=ops.start_cycle(db,session_id,began);error=None
+    try:return _cycle(db,client,now,emit)
+    except BaseException as exc:error=repr(exc);raise
+    finally:ops.end_cycle(db,cid,int(time.time()) if now is None else now,error)
+
+def _cycle(db,client,now=None,emit=print):
     live_clock=now is None
     now=int(time.time()) if now is None else now
     end=(now-5)//60*60  # settle delay; excludes all still-open minute candles
@@ -163,7 +181,7 @@ def cycle(db,client,now=None,emit=print):
             if isinstance(exc,collector.CollectionBlocked):blocked=exc;break
     if live_clock:now=int(time.time())
     process_observations(db,now,emit);evaluate_outcomes(db,now,emit)
-    emit(json.dumps(statistics(db),ensure_ascii=False))
+    emit(json.dumps(grouped_statistics(db),ensure_ascii=False))
     if blocked is not None:raise blocked
     return statistics(db)
 
@@ -190,11 +208,17 @@ def exclusive(path):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--db',type=Path,default=DATA_DIR/'forward_scanner_v4.db')
-    p.add_argument('--mode',choices=('init','once','run','stats'),required=True)
+    p.add_argument('--mode',choices=('init','once','run','stats','migrate'),required=True)
+    p.add_argument('--source',choices=('LIVE','CATCHUP','ALL'),default='LIVE',help='Statistics view; default LIVE')
+    p.add_argument('--migration-evidence',type=Path,default=Path('reports/forward_scanner_v4_delay_causes_20261001.json'))
     p.add_argument('--market-manifest',type=Path,help='Existing frozen JSON market list, no discovery DB access')
     p.add_argument('--start',help='Explicit five-minute aligned UTC/KST time; default next five-minute tick')
     p.add_argument('--max-cycles',type=int);p.add_argument('--max-requests',type=int)
     a=p.parse_args()
+    if a.mode=='migrate':
+        report=ops.migrate(a.db,a.migration_evidence)
+        Path('reports/forward_scanner_v4_source_migration.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+        print(json.dumps(report,indent=2));return
     if a.max_cycles is not None and a.max_cycles<=0 or a.max_requests is not None and a.max_requests<=0:p.error('Budgets must be positive')
     with exclusive(a.db),closing(connect(a.db)) as db:
         if a.mode=='init':
@@ -203,11 +227,16 @@ def main():
             start=collector.parse(a.start) if a.start else (int(time.time())//STEP+1)*STEP
             initialize(db,m['markets'],start);print(json.dumps(config(db),ensure_ascii=False,indent=2));return
         config(db)
-        if a.mode=='stats':print(json.dumps(statistics(db),ensure_ascii=False,indent=2));return
+        if a.mode=='stats':print(json.dumps(statistics(db,a.source),ensure_ascii=False,indent=2));return
         client=collector.Client(max_requests=a.max_requests);n=0
-        while True:
-            cycle(db,client);n+=1
-            if a.mode=='once' or a.max_cycles is not None and n>=a.max_cycles or a.max_requests is not None and client.requests>=a.max_requests:return
-            time.sleep(max(1,65-time.time()%60))
+        sid=ops.start_session(db);status='CLOSED'
+        try:
+            while True:
+                cycle(db,client,session_id=sid);n+=1
+                if a.mode=='once' or a.max_cycles is not None and n>=a.max_cycles or a.max_requests is not None and client.requests>=a.max_requests:return
+                time.sleep(max(1,65-time.time()%60))
+        except KeyboardInterrupt:status='STOPPED';raise
+        except BaseException:status='ERROR';raise
+        finally:ops.end_session(db,sid,status)
 
 if __name__=='__main__':main()

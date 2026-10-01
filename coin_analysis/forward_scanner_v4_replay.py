@@ -50,7 +50,7 @@ def run():
                     if outcome['status']!=expected_status:raise AssertionError((outcome['status'],expected_status))
             report=dict(source=str(source),source_hash_before=before,source_hash_after=s.v3.v2.digest(source),
                         markets=markets,period_kst=[s.collector.iso(start,s.collector.KST),s.collector.iso(end,s.collector.KST)],
-                        warmup_hours=6,label_buffer_hours=1,stats=s.statistics(db),matched_v3_first_clusters=len(expected),
+                        warmup_hours=6,label_buffer_hours=1,stats=s.statistics(db,'ALL'),matched_v3_first_clusters=len(expected),
                         features_match_v3=True,outcomes_match_v3=True,restart_tested=True,
                         note='Bounded offline replay, not a new efficacy study. Relative strength uses the four replay alts, not the 50-market universe. No network. Temporary scanner DB removed.')
             if report['source_hash_before']!=report['source_hash_after']:raise AssertionError('Source DB changed')

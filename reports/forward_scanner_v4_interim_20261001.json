@@ -1,0 +1,1026 @@
+{
+  "snapshot_utc": "2026-10-01T14:37:11+00:00",
+  "snapshot_kst": "2026-10-01T23:37:11+09:00",
+  "source": "C:\\dev\\coin_api-1\\data\\forward_scanner_v4.db",
+  "signal_count": 48,
+  "universe": 51,
+  "config": {
+    "policy": {
+      "version": 4,
+      "range_threshold": 4,
+      "step_seconds": 300,
+      "warmup_seconds": 21600,
+      "grace_seconds": 600,
+      "missing_range": "keep cluster state",
+      "features": "V3 closed candles only",
+      "incomplete_future": "PENDING until horizon+grace then UNKNOWN; recover if later complete",
+      "universe": "fixed KRW alts plus BTC; never auto-reselect",
+      "unknown_initial_cluster": "suppress until observed below4"
+    },
+    "markets": [
+      "KRW-0G",
+      "KRW-ADA",
+      "KRW-AUCTION",
+      "KRW-BCH",
+      "KRW-BTC",
+      "KRW-CHIP",
+      "KRW-CPOOL",
+      "KRW-DATA",
+      "KRW-DOGE",
+      "KRW-ENA",
+      "KRW-ENS",
+      "KRW-ERA",
+      "KRW-ETC",
+      "KRW-ETH",
+      "KRW-FLOCK",
+      "KRW-ICX",
+      "KRW-KAITO",
+      "KRW-LA",
+      "KRW-LINK",
+      "KRW-MANTRA",
+      "KRW-ME",
+      "KRW-MIRA",
+      "KRW-NEAR",
+      "KRW-O",
+      "KRW-ONDO",
+      "KRW-ONG",
+      "KRW-PEPE",
+      "KRW-POL",
+      "KRW-PRL",
+      "KRW-PUMP",
+      "KRW-RE",
+      "KRW-RVN",
+      "KRW-SAND",
+      "KRW-SHIB",
+      "KRW-SKR",
+      "KRW-SLX",
+      "KRW-SOL",
+      "KRW-STX",
+      "KRW-SUI",
+      "KRW-TREE",
+      "KRW-TRUMP",
+      "KRW-TRX",
+      "KRW-UNI",
+      "KRW-WLD",
+      "KRW-XLM",
+      "KRW-XRP",
+      "KRW-ZBT",
+      "KRW-ZK",
+      "KRW-ZKC",
+      "KRW-ZKP",
+      "KRW-ZORA"
+    ],
+    "start": 1790697000,
+    "collection_start": 1790675400
+  },
+  "signal_period_kst": [
+    "2026-09-30T02:30:00+09:00",
+    "2026-10-01T22:20:00+09:00"
+  ],
+  "outcomes": {
+    "L1": {
+      "SUCCESS": 3,
+      "FAILURE": 38,
+      "PENDING": 0,
+      "UNKNOWN": 7,
+      "valid": 41,
+      "success_rate_pct": 7.317073170731708
+    },
+    "L2": {
+      "SUCCESS": 4,
+      "FAILURE": 33,
+      "PENDING": 0,
+      "UNKNOWN": 11,
+      "valid": 37,
+      "success_rate_pct": 10.81081081081081
+    }
+  },
+  "medians": {
+    "L1": {
+      "range_15m_pct": {
+        "SUCCESS": {
+          "valid_n": 3,
+          "median": 4.76361031518624
+        },
+        "FAILURE": {
+          "valid_n": 38,
+          "median": 3.347710176427643
+        },
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "range_30m_pct": {
+        "SUCCESS": {
+          "valid_n": 3,
+          "median": 4.80114654245789
+        },
+        "FAILURE": {
+          "valid_n": 38,
+          "median": 4.4672269429867795
+        },
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "alt_relative_60m_pct": {
+        "SUCCESS": {
+          "valid_n": 3,
+          "median": 3.2097004279600494
+        },
+        "FAILURE": {
+          "valid_n": 36,
+          "median": 2.037146785458721
+        },
+        "status": "INSUFFICIENT_SAMPLE"
+      }
+    },
+    "L2": {
+      "range_15m_pct": {
+        "SUCCESS": {
+          "valid_n": 4,
+          "median": 3.7140776993548674
+        },
+        "FAILURE": {
+          "valid_n": 33,
+          "median": 3.3519553072625774
+        },
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "range_30m_pct": {
+        "SUCCESS": {
+          "valid_n": 4,
+          "median": 4.62009828705483
+        },
+        "FAILURE": {
+          "valid_n": 33,
+          "median": 4.4901065449010735
+        },
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "alt_relative_60m_pct": {
+        "SUCCESS": {
+          "valid_n": 4,
+          "median": -1.5515273044621192
+        },
+        "FAILURE": {
+          "valid_n": 31,
+          "median": 2.212204818491892
+        },
+        "status": "INSUFFICIENT_SAMPLE"
+      }
+    }
+  },
+  "market_distribution": [
+    {
+      "market": "KRW-0G",
+      "signals": 8,
+      "labels": {
+        "L1": {
+          "FAILURE": 7,
+          "UNKNOWN": 1
+        },
+        "L2": {
+          "FAILURE": 7,
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-ICX",
+      "signals": 7,
+      "labels": {
+        "L1": {
+          "FAILURE": 4,
+          "UNKNOWN": 1,
+          "SUCCESS": 2
+        },
+        "L2": {
+          "FAILURE": 2,
+          "UNKNOWN": 1,
+          "SUCCESS": 4
+        }
+      }
+    },
+    {
+      "market": "KRW-STX",
+      "signals": 6,
+      "labels": {
+        "L1": {
+          "UNKNOWN": 1,
+          "FAILURE": 5
+        },
+        "L2": {
+          "UNKNOWN": 2,
+          "FAILURE": 4
+        }
+      }
+    },
+    {
+      "market": "KRW-NEAR",
+      "signals": 5,
+      "labels": {
+        "L1": {
+          "FAILURE": 5
+        },
+        "L2": {
+          "FAILURE": 5
+        }
+      }
+    },
+    {
+      "market": "KRW-WLD",
+      "signals": 5,
+      "labels": {
+        "L1": {
+          "FAILURE": 5
+        },
+        "L2": {
+          "FAILURE": 5
+        }
+      }
+    },
+    {
+      "market": "KRW-PUMP",
+      "signals": 3,
+      "labels": {
+        "L1": {
+          "FAILURE": 1,
+          "UNKNOWN": 2
+        },
+        "L2": {
+          "UNKNOWN": 3
+        }
+      }
+    },
+    {
+      "market": "KRW-ENA",
+      "signals": 3,
+      "labels": {
+        "L1": {
+          "FAILURE": 3
+        },
+        "L2": {
+          "FAILURE": 3
+        }
+      }
+    },
+    {
+      "market": "KRW-TRUMP",
+      "signals": 3,
+      "labels": {
+        "L1": {
+          "SUCCESS": 1,
+          "FAILURE": 2
+        },
+        "L2": {
+          "FAILURE": 3
+        }
+      }
+    },
+    {
+      "market": "KRW-FLOCK",
+      "signals": 2,
+      "labels": {
+        "L1": {
+          "FAILURE": 2
+        },
+        "L2": {
+          "FAILURE": 1,
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-RE",
+      "signals": 2,
+      "labels": {
+        "L1": {
+          "FAILURE": 1,
+          "UNKNOWN": 1
+        },
+        "L2": {
+          "FAILURE": 1,
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-MIRA",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "UNKNOWN": 1
+        },
+        "L2": {
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-LINK",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "FAILURE": 1
+        },
+        "L2": {
+          "FAILURE": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-RVN",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "FAILURE": 1
+        },
+        "L2": {
+          "FAILURE": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-CPOOL",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "FAILURE": 1
+        },
+        "L2": {
+          "UNKNOWN": 1
+        }
+      }
+    }
+  ],
+  "delay_seconds": {
+    "min": 12,
+    "median": 19783.0,
+    "max": 76633,
+    "over5m": 40,
+    "over30m": 39,
+    "over60m": 35
+  },
+  "integrity": "ok",
+  "duplicates": {
+    "signal_market_time": 0,
+    "cluster_id": 0,
+    "candle_market_time": 0
+  },
+  "audit_checks": {},
+  "audit_details": [],
+  "expected_clusters": 48,
+  "missing_expected_clusters": [],
+  "unexpected_clusters": [],
+  "triggers": [
+    {
+      "name": "immutable_features",
+      "sql": "CREATE TRIGGER immutable_features BEFORE UPDATE ON signal_features BEGIN SELECT RAISE(ABORT,'Frozen signal features'); END"
+    },
+    {
+      "name": "immutable_signals",
+      "sql": "CREATE TRIGGER immutable_signals BEFORE UPDATE ON signals BEGIN SELECT RAISE(ABORT,'Frozen signal'); END"
+    },
+    {
+      "name": "immutable_completed_outcome",
+      "sql": "CREATE TRIGGER immutable_completed_outcome BEFORE UPDATE ON signal_outcomes WHEN OLD.status IN ('SUCCESS','FAILURE') BEGIN SELECT RAISE(ABORT,'Outcome already complete'); END"
+    }
+  ],
+  "quality": [
+    {
+      "market": "KRW-0G",
+      "expected_minutes": 2807,
+      "observed_minutes": 2610,
+      "missing_minutes": 197,
+      "coverage_pct": 92.9818311364446,
+      "longest_gap": 7,
+      "gap_count": 136,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ADA",
+      "expected_minutes": 2807,
+      "observed_minutes": 2499,
+      "missing_minutes": 308,
+      "coverage_pct": 89.02743142144638,
+      "longest_gap": 6,
+      "gap_count": 240,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-AUCTION",
+      "expected_minutes": 2807,
+      "observed_minutes": 502,
+      "missing_minutes": 2305,
+      "coverage_pct": 17.88386177413609,
+      "longest_gap": 42,
+      "gap_count": 336,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-BCH",
+      "expected_minutes": 2807,
+      "observed_minutes": 1840,
+      "missing_minutes": 967,
+      "coverage_pct": 65.55040969006056,
+      "longest_gap": 13,
+      "gap_count": 547,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-CHIP",
+      "expected_minutes": 2807,
+      "observed_minutes": 1293,
+      "missing_minutes": 1514,
+      "coverage_pct": 46.063412896330604,
+      "longest_gap": 22,
+      "gap_count": 584,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-CPOOL",
+      "expected_minutes": 2807,
+      "observed_minutes": 1518,
+      "missing_minutes": 1289,
+      "coverage_pct": 54.07908799429996,
+      "longest_gap": 20,
+      "gap_count": 533,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-DATA",
+      "expected_minutes": 2807,
+      "observed_minutes": 2012,
+      "missing_minutes": 795,
+      "coverage_pct": 71.67794798717492,
+      "longest_gap": 19,
+      "gap_count": 409,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-DOGE",
+      "expected_minutes": 2807,
+      "observed_minutes": 2564,
+      "missing_minutes": 243,
+      "coverage_pct": 91.34307089419309,
+      "longest_gap": 5,
+      "gap_count": 187,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ENA",
+      "expected_minutes": 2807,
+      "observed_minutes": 2501,
+      "missing_minutes": 306,
+      "coverage_pct": 89.09868186676167,
+      "longest_gap": 5,
+      "gap_count": 225,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ENS",
+      "expected_minutes": 2807,
+      "observed_minutes": 1816,
+      "missing_minutes": 991,
+      "coverage_pct": 64.69540434627716,
+      "longest_gap": 15,
+      "gap_count": 531,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ERA",
+      "expected_minutes": 2807,
+      "observed_minutes": 1298,
+      "missing_minutes": 1509,
+      "coverage_pct": 46.24153900961881,
+      "longest_gap": 33,
+      "gap_count": 455,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ETC",
+      "expected_minutes": 2807,
+      "observed_minutes": 2094,
+      "missing_minutes": 713,
+      "coverage_pct": 74.59921624510153,
+      "longest_gap": 13,
+      "gap_count": 453,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ETH",
+      "expected_minutes": 2807,
+      "observed_minutes": 2804,
+      "missing_minutes": 3,
+      "coverage_pct": 99.89312433202707,
+      "longest_gap": 1,
+      "gap_count": 3,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-FLOCK",
+      "expected_minutes": 2807,
+      "observed_minutes": 2203,
+      "missing_minutes": 604,
+      "coverage_pct": 78.48236551478446,
+      "longest_gap": 12,
+      "gap_count": 365,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ICX",
+      "expected_minutes": 2807,
+      "observed_minutes": 1282,
+      "missing_minutes": 1525,
+      "coverage_pct": 45.671535447096545,
+      "longest_gap": 49,
+      "gap_count": 295,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-KAITO",
+      "expected_minutes": 2807,
+      "observed_minutes": 1224,
+      "missing_minutes": 1583,
+      "coverage_pct": 43.60527253295333,
+      "longest_gap": 19,
+      "gap_count": 596,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-LA",
+      "expected_minutes": 2807,
+      "observed_minutes": 1734,
+      "missing_minutes": 1073,
+      "coverage_pct": 61.77413608835055,
+      "longest_gap": 23,
+      "gap_count": 500,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-LINK",
+      "expected_minutes": 2807,
+      "observed_minutes": 2621,
+      "missing_minutes": 186,
+      "coverage_pct": 93.37370858567866,
+      "longest_gap": 3,
+      "gap_count": 164,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-MANTRA",
+      "expected_minutes": 2807,
+      "observed_minutes": 1428,
+      "missing_minutes": 1379,
+      "coverage_pct": 50.87281795511222,
+      "longest_gap": 20,
+      "gap_count": 535,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ME",
+      "expected_minutes": 2807,
+      "observed_minutes": 803,
+      "missing_minutes": 2004,
+      "coverage_pct": 28.607053794086212,
+      "longest_gap": 41,
+      "gap_count": 445,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-MIRA",
+      "expected_minutes": 2807,
+      "observed_minutes": 1376,
+      "missing_minutes": 1431,
+      "coverage_pct": 49.02030637691485,
+      "longest_gap": 20,
+      "gap_count": 544,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-NEAR",
+      "expected_minutes": 2807,
+      "observed_minutes": 2791,
+      "missing_minutes": 16,
+      "coverage_pct": 99.42999643747774,
+      "longest_gap": 1,
+      "gap_count": 16,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-O",
+      "expected_minutes": 2807,
+      "observed_minutes": 996,
+      "missing_minutes": 1811,
+      "coverage_pct": 35.48272176701104,
+      "longest_gap": 57,
+      "gap_count": 452,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ONDO",
+      "expected_minutes": 2807,
+      "observed_minutes": 2797,
+      "missing_minutes": 10,
+      "coverage_pct": 99.64374777342358,
+      "longest_gap": 1,
+      "gap_count": 10,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ONG",
+      "expected_minutes": 2807,
+      "observed_minutes": 1348,
+      "missing_minutes": 1459,
+      "coverage_pct": 48.02280014250089,
+      "longest_gap": 22,
+      "gap_count": 504,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-PEPE",
+      "expected_minutes": 2807,
+      "observed_minutes": 1734,
+      "missing_minutes": 1073,
+      "coverage_pct": 61.77413608835055,
+      "longest_gap": 14,
+      "gap_count": 555,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-POL",
+      "expected_minutes": 2807,
+      "observed_minutes": 1497,
+      "missing_minutes": 1310,
+      "coverage_pct": 53.33095831848949,
+      "longest_gap": 19,
+      "gap_count": 572,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-PRL",
+      "expected_minutes": 2807,
+      "observed_minutes": 879,
+      "missing_minutes": 1928,
+      "coverage_pct": 31.314570716066974,
+      "longest_gap": 39,
+      "gap_count": 497,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-PUMP",
+      "expected_minutes": 2807,
+      "observed_minutes": 2339,
+      "missing_minutes": 468,
+      "coverage_pct": 83.32739579622373,
+      "longest_gap": 7,
+      "gap_count": 323,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-RE",
+      "expected_minutes": 2807,
+      "observed_minutes": 1666,
+      "missing_minutes": 1141,
+      "coverage_pct": 59.35162094763092,
+      "longest_gap": 27,
+      "gap_count": 460,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-RVN",
+      "expected_minutes": 2807,
+      "observed_minutes": 1375,
+      "missing_minutes": 1432,
+      "coverage_pct": 48.98468115425722,
+      "longest_gap": 36,
+      "gap_count": 442,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-SAND",
+      "expected_minutes": 2807,
+      "observed_minutes": 1526,
+      "missing_minutes": 1281,
+      "coverage_pct": 54.3640897755611,
+      "longest_gap": 15,
+      "gap_count": 557,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-SHIB",
+      "expected_minutes": 2807,
+      "observed_minutes": 2479,
+      "missing_minutes": 328,
+      "coverage_pct": 88.31492696829355,
+      "longest_gap": 7,
+      "gap_count": 256,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-SKR",
+      "expected_minutes": 2807,
+      "observed_minutes": 817,
+      "missing_minutes": 1990,
+      "coverage_pct": 29.105806911293197,
+      "longest_gap": 34,
+      "gap_count": 496,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-SLX",
+      "expected_minutes": 2807,
+      "observed_minutes": 2158,
+      "missing_minutes": 649,
+      "coverage_pct": 76.8792304951906,
+      "longest_gap": 9,
+      "gap_count": 386,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-SOL",
+      "expected_minutes": 2807,
+      "observed_minutes": 2788,
+      "missing_minutes": 19,
+      "coverage_pct": 99.32312076950481,
+      "longest_gap": 2,
+      "gap_count": 18,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-STX",
+      "expected_minutes": 2807,
+      "observed_minutes": 2147,
+      "missing_minutes": 660,
+      "coverage_pct": 76.48735304595654,
+      "longest_gap": 13,
+      "gap_count": 312,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-SUI",
+      "expected_minutes": 2807,
+      "observed_minutes": 2754,
+      "missing_minutes": 53,
+      "coverage_pct": 98.11186319914499,
+      "longest_gap": 3,
+      "gap_count": 46,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-TREE",
+      "expected_minutes": 2807,
+      "observed_minutes": 1239,
+      "missing_minutes": 1568,
+      "coverage_pct": 44.13965087281795,
+      "longest_gap": 22,
+      "gap_count": 560,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-TRUMP",
+      "expected_minutes": 2807,
+      "observed_minutes": 2659,
+      "missing_minutes": 148,
+      "coverage_pct": 94.72746704666905,
+      "longest_gap": 3,
+      "gap_count": 127,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-TRX",
+      "expected_minutes": 2807,
+      "observed_minutes": 2024,
+      "missing_minutes": 783,
+      "coverage_pct": 72.10545065906662,
+      "longest_gap": 17,
+      "gap_count": 448,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-UNI",
+      "expected_minutes": 2807,
+      "observed_minutes": 2089,
+      "missing_minutes": 718,
+      "coverage_pct": 74.42109013181333,
+      "longest_gap": 9,
+      "gap_count": 446,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-WLD",
+      "expected_minutes": 2807,
+      "observed_minutes": 2771,
+      "missing_minutes": 36,
+      "coverage_pct": 98.71749198432491,
+      "longest_gap": 2,
+      "gap_count": 33,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-XLM",
+      "expected_minutes": 2807,
+      "observed_minutes": 2706,
+      "missing_minutes": 101,
+      "coverage_pct": 96.4018525115782,
+      "longest_gap": 4,
+      "gap_count": 88,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-XRP",
+      "expected_minutes": 2807,
+      "observed_minutes": 2807,
+      "missing_minutes": 0,
+      "coverage_pct": 100.0,
+      "longest_gap": 0,
+      "gap_count": 0,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ZBT",
+      "expected_minutes": 2806,
+      "observed_minutes": 867,
+      "missing_minutes": 1939,
+      "coverage_pct": 30.89807555238774,
+      "longest_gap": 29,
+      "gap_count": 487,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ZK",
+      "expected_minutes": 2806,
+      "observed_minutes": 421,
+      "missing_minutes": 2385,
+      "coverage_pct": 15.003563791874555,
+      "longest_gap": 40,
+      "gap_count": 305,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ZKC",
+      "expected_minutes": 2806,
+      "observed_minutes": 1110,
+      "missing_minutes": 1696,
+      "coverage_pct": 39.55808980755524,
+      "longest_gap": 21,
+      "gap_count": 563,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ZKP",
+      "expected_minutes": 2806,
+      "observed_minutes": 754,
+      "missing_minutes": 2052,
+      "coverage_pct": 26.870990734141127,
+      "longest_gap": 37,
+      "gap_count": 460,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-ZORA",
+      "expected_minutes": 2806,
+      "observed_minutes": 721,
+      "missing_minutes": 2085,
+      "coverage_pct": 25.694939415538133,
+      "longest_gap": 37,
+      "gap_count": 430,
+      "unverified_minutes": 0
+    },
+    {
+      "market": "KRW-BTC",
+      "expected_minutes": 2807,
+      "observed_minutes": 2807,
+      "missing_minutes": 0,
+      "coverage_pct": 100.0,
+      "longest_gap": 0,
+      "gap_count": 0,
+      "unverified_minutes": 0
+    }
+  ],
+  "total_candles": 106461,
+  "collection_errors": [],
+  "collection_jobs": [
+    {
+      "market": "KRW-ZBT",
+      "start": 1790865360,
+      "end": 1790865420,
+      "cursor": 1790865420
+    }
+  ],
+  "unknown_gap_details": [
+    {
+      "signal_id": "3137752e4a475c466eb1",
+      "label": "L2",
+      "observed": 59,
+      "expected": 60
+    },
+    {
+      "signal_id": "6264194ebb8ff33ca7ca",
+      "label": "L1",
+      "observed": 29,
+      "expected": 30
+    },
+    {
+      "signal_id": "6264194ebb8ff33ca7ca",
+      "label": "L2",
+      "observed": 57,
+      "expected": 60
+    },
+    {
+      "signal_id": "0ac401b62c3a5caeefb5",
+      "label": "L1",
+      "observed": 27,
+      "expected": 30
+    },
+    {
+      "signal_id": "0ac401b62c3a5caeefb5",
+      "label": "L2",
+      "observed": 47,
+      "expected": 60
+    },
+    {
+      "signal_id": "ff78c677130f7c43065f",
+      "label": "L1",
+      "observed": 29,
+      "expected": 30
+    },
+    {
+      "signal_id": "ff78c677130f7c43065f",
+      "label": "L2",
+      "observed": 52,
+      "expected": 60
+    },
+    {
+      "signal_id": "91420199ef5babcb1fcd",
+      "label": "L1",
+      "observed": 29,
+      "expected": 30
+    },
+    {
+      "signal_id": "91420199ef5babcb1fcd",
+      "label": "L2",
+      "observed": 59,
+      "expected": 60
+    },
+    {
+      "signal_id": "02e1cb3ad40dfd8209fc",
+      "label": "L2",
+      "observed": 59,
+      "expected": 60
+    },
+    {
+      "signal_id": "185f356767641e9d518b",
+      "label": "L1",
+      "observed": 29,
+      "expected": 30
+    },
+    {
+      "signal_id": "185f356767641e9d518b",
+      "label": "L2",
+      "observed": 58,
+      "expected": 60
+    },
+    {
+      "signal_id": "b89e5e575a5322f28f47",
+      "label": "L1",
+      "observed": 28,
+      "expected": 30
+    },
+    {
+      "signal_id": "b89e5e575a5322f28f47",
+      "label": "L2",
+      "observed": 58,
+      "expected": 60
+    },
+    {
+      "signal_id": "f285e0dd98af862b2532",
+      "label": "L1",
+      "observed": 29,
+      "expected": 30
+    },
+    {
+      "signal_id": "f285e0dd98af862b2532",
+      "label": "L2",
+      "observed": 56,
+      "expected": 60
+    },
+    {
+      "signal_id": "a2fd190964ae209e8663",
+      "label": "L2",
+      "observed": 58,
+      "expected": 60
+    },
+    {
+      "signal_id": "7a8f93dc825382aa9a37",
+      "label": "L2",
+      "observed": 59,
+      "expected": 60
+    }
+  ],
+  "limitations": [
+    "Live WAL source copied read-only into consistent in-memory backup; running scanner untouched. Live DB file hash may legitimately change.",
+    "No historical outcome transition log or old feature hashes exist. Current consistency and triggers cannot prove every past transition/restart.",
+    "Feature reconstruction uses only <=t confirmed data; floating sum tolerance 1e-8. No feature definitions changed."
+  ],
+  "feature_rows_unchanged_between_snapshots": true,
+  "outcome_changes_between_snapshots": [],
+  "scanner_code_hash_unchanged": true
+}

@@ -1,5 +1,19 @@
 # V4 실시간 forward observation recorder
 
+## 2026-10-01 source 분리 및 운영 로그
+
+기존 연구/feature/label/POLICY와 5분 관측/REST 수집은 변경하지 않았다. 운영 출처만 `signals.source`에 추가했다.
+
+- **LIVE:** `0 <= detected_at - signal_time < 300초`. 다음 5분 관측 경계 전에 탐지. 정상 12초도 포함한다.
+- **CATCHUP:** 300초 이상 또는 음수 시계 이상. 정확히 300초는 CATCHUP이다. 성과/label을 참조하지 않고 기존 관측 주기 하나를 운영상 허용 지연으로 사용한다. LIVE라고 12초 이내 처리나 무중단 프로세스를 보장하지 않는다.
+- 기존 48건은 원인 보고서의 ID 및 기존 모든 signal 값을 대조한 후 LIVE 8/CATCHUP 40으로 분류했다. 분류 정책은 별도 source_policy 테이블에 저장한다. 원래 scanner_config의 연구 정책은 유지한다.
+- 기존 DB는 OS 독점 lock, SQLite 백업·integrity 및 기존 8개 업무 테이블의 값 hash 확인 후 migration했다. source만 추가하고 모든 기존 값은 전후 동일. 기존 immutable signal trigger는 migration transaction 내에서만 해제했다가 복구했다. 이후 source를 포함한 signal UPDATE 금지.
+- `statistics()` 및 `--mode stats` 기본값은 LIVE. 실행 cycle 출력은 default_view=LIVE와 LIVE/CATCHUP/ALL 세 집계를 명시한다. `--source CATCHUP` 또는 `--source ALL`로 별도 확인한다. UNKNOWN/PENDING은 각 출처의 성공률 분모에서 제외한다. catch-up 수집/feature/결과 복구는 계속한다.
+- scanner_sessions: 시작/종료 시각, 상태, restart 여부, 이전 session. scanner_cycles: 시작/종료, 전후 watermark, 전후 backlog seconds, API 오류, 예외/완료 상태. backlog는 현재 5분 격자와 최저 알트 last_observation 차이다. 강제 종료 시 실제 종료 시각을 만들어내지 않고 다음 시작에 INTERRUPTED로 표시한다. 이전 운영의 session 이력은 소급 생성하지 않는다.
+- 운영 재시작 명령은 기존 `--mode run`과 동일. 이미 migration한 production DB는 init을 다시 하지 않는다. `--mode migrate`는 백업을 생성하며 네트워크를 호출하지 않는다. 구버전 scanner로 migrated DB를 실행하면 안 된다.
+
+통계 예시: `python -m coin_analysis.forward_scanner_v4 --mode stats --db data/forward_scanner_v4.db --source LIVE`
+
 ## 범위와 고정 규칙
 
 자동매매가 아닌 관찰 기록기다. 4% 외 threshold 옵션, 점수, ranking, 주문 API, TP/SL은 없다. V3 discovery/validation 파일과 정책은 수정하지 않는다.
@@ -14,7 +28,7 @@ range=(최근 30개 실제 분의 high 최대 / low 최소 -1)*100 >=4. 최근 3
 
 - `scanner_config`: 동결 정책, 시장 목록, 최초 forward 시작 및 warmup 시작.
 - `minute_candles`: 기존 V3와 같은 market/ts/open/high/low/close/trade_value. PK(market,ts). 원본 캔들 보존, 보간 없음.
-- `signals`: signal_id, market, signal_time, signal_price, range_30m, cluster_id, detected_at, delay_seconds. market/time과 cluster 중복 금지.
+- `signals`: signal_id, market, signal_time, signal_price, range_30m, cluster_id, detected_at, delay_seconds, source. market/time과 cluster 중복 금지.
 - `signal_features`: asof_time, values_json, flags_json, observed_candidates_json. V3 수익률 5/15/30/60/120, range 15/30/60, MA5/20·비율·기울기, 거래대금 배율·가속, 60분 고점 대비 drawdown, 이전 고점 breakout, 알트/BTC 상대강도. 15/30 range 및 alt relative60은 관찰 후보로 별도 명시한다.
 - `signal_outcomes`: signal_id/label별 행. status, max_return, first_target_time, observed_minutes, expected_minutes, evaluated_at. L1/L2 두 행으로 정규화했다. first_target_time은 최초 목표 도달 봉의 확정 시각이며 실제 체결 순간이 아니다.
 - `scanner_state`: 시장별 verified_until, last_observation, active, cluster_id, last_error.
