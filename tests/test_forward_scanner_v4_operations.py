@@ -1,8 +1,11 @@
 import json
 from pathlib import Path
 import sqlite3
+import subprocess
+import sys
 import tempfile
 import unittest
+from contextlib import contextmanager
 from unittest.mock import patch
 from coin_analysis import forward_scanner_v4 as s
 from coin_analysis import forward_scanner_v4_operations as o
@@ -11,7 +14,9 @@ class SourceTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.path=Path(self.tmp.name)/'test.db'
         self.db=s.connect(self.path);s.initialize(self.db,['KRW-BTC','KRW-ETH'],86400)
-    def tearDown(self):self.db.close();self.tmp.cleanup()
+    def tearDown(self):
+        if self.db is not None:self.db.close()
+        self.tmp.cleanup()
     def seed(self):
         with self.db:
             for sid,delay in [('a',12),('b',3600)]:
@@ -86,5 +91,51 @@ class SourceTests(unittest.TestCase):
         with patch.object(o,'fingerprints',side_effect=broken),self.assertRaises(ValueError):o.migrate(self.path,evidence)
         self.assertNotIn('source',[r[1] for r in self.db.execute('PRAGMA table_info(signals)')])
         self.assertIsNotNone(self.db.execute("SELECT name FROM sqlite_master WHERE name='immutable_signals'").fetchone())
+
+    def test_clean_close_checkpoints_wal_and_preserves_values(self):
+        with self.db:self.db.execute("UPDATE scanner_state SET last_error='checkpoint-test' WHERE market='KRW-ETH'")
+        before=o.full_fingerprints(self.db)
+        o.close_cleanly(self.db);self.db=None
+        wal=Path(str(self.path)+'-wal')
+        self.assertTrue(not wal.exists() or wal.stat().st_size==0)
+        with o.readonly(self.path) as read:
+            self.assertEqual(read.execute('PRAGMA quick_check').fetchone()[0],'ok')
+            self.assertEqual(before,o.full_fingerprints(read))
+        self.db=s.connect(self.path)
+
+    def test_abrupt_exit_recovers_committed_wal_then_cleanly_closes(self):
+        o.close_cleanly(self.db);self.db=None
+        code=("import os,sqlite3,sys; p=sys.argv[1]; d=sqlite3.connect(p); "
+              "d.execute('PRAGMA journal_mode=WAL'); "
+              "d.execute(\"UPDATE scanner_state SET last_error='crash-marker' WHERE market='KRW-ETH'\"); "
+              "d.commit(); os._exit(7)")
+        result=subprocess.run([sys.executable,'-c',code,str(self.path)],check=False)
+        self.assertEqual(result.returncode,7)
+        self.assertTrue(Path(str(self.path)+'-wal').exists())
+        self.db=s.connect(self.path)
+        self.assertEqual(self.db.execute("SELECT last_error FROM scanner_state WHERE market='KRW-ETH'").fetchone()[0],'crash-marker')
+
+    def test_sidecar_error_is_distinguished_from_main_corruption(self):
+        error=o.explain_open_error(self.path,sqlite3.DatabaseError('database disk image is malformed'))
+        self.assertIsInstance(error,o.DatabaseSidecarError)
+        self.assertIn('main database quick_check is ok',str(error))
+
+    def test_repair_backs_up_sidecars_and_preserves_every_value(self):
+        before=o.full_fingerprints(self.db)
+        self.db.close();self.db=None
+        Path(str(self.path)+'-wal').write_bytes(b'stale-test-sidecar')
+        real_readonly=o.readonly;calls=0
+        @contextmanager
+        def diagnosed_once(path):
+            nonlocal calls
+            calls+=1
+            if calls==1:raise o.DatabaseSidecarError('synthetic stale WAL')
+            with real_readonly(path) as db:yield db
+        with patch.object(o,'readonly',diagnosed_once):
+            result=o.repair_stale_sidecars(self.path,Path(self.tmp.name)/'backups')
+        self.assertTrue(result['repaired']);self.assertTrue(result['preserved'])
+        self.assertTrue(Path(result['backup']).exists())
+        with o.readonly(self.path) as read:self.assertEqual(before,o.full_fingerprints(read))
+        self.db=s.connect(self.path)
 
 if __name__=='__main__':unittest.main()

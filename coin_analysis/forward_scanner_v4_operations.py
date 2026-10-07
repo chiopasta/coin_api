@@ -1,14 +1,149 @@
-"""Operational provenance only; no change to V3 signal/feature/label definitions."""
-from contextlib import closing
+"""Operational provenance and SQLite lifecycle; no research-policy changes."""
+from contextlib import closing, contextmanager
 import hashlib
 import json
+import os
 from pathlib import Path
+import shutil
 import sqlite3
 import time
 import uuid
 
 SOURCE_POLICY={'version':1,'live_delay_seconds_exclusive':300,
                'rule':'LIVE iff 0 <= detected_at - signal_time < 300; otherwise CATCHUP. Fixed observation interval, not outcome optimized.'}
+
+class DatabaseSidecarError(RuntimeError):
+    """The main DB is readable but its WAL sidecar cannot be safely applied."""
+
+def _file_sha256(path):
+    h=hashlib.sha256()
+    with open(path,'rb') as f:
+        for chunk in iter(lambda:f.read(1024*1024),b''):h.update(chunk)
+    return h.hexdigest()
+
+def _readonly_uri(path,immutable=False):
+    uri=Path(path).resolve().as_uri()+'?mode=ro'
+    return uri+('&immutable=1' if immutable else '')
+
+def main_db_health(path):
+    """Inspect the main file without trusting or mutating WAL/SHM sidecars."""
+    db=sqlite3.connect(_readonly_uri(path,True),uri=True)
+    try:return db.execute('PRAGMA quick_check').fetchone()[0]
+    finally:db.close()
+
+def explain_open_error(path,exc):
+    """Distinguish an unhealthy main file from an obsolete/corrupt sidecar."""
+    try:health=main_db_health(path)
+    except sqlite3.DatabaseError:return RuntimeError(f'V4 database main file is unreadable: {exc}')
+    if health=='ok':
+        return DatabaseSidecarError(
+            'V4 main database quick_check is ok, but normal SQLite recovery failed; '
+            'a stale or corrupt WAL/SHM sidecar is present. Preserve all files and run '
+            '`python -m coin_analysis.forward_scanner_v4 --mode repair-wal --db <path>`.'
+        )
+    return RuntimeError(f'V4 database quick_check failed: {health}; original error: {exc}')
+
+@contextmanager
+def readonly(path):
+    """Normal read-only access that never silently ignores a WAL."""
+    db=None
+    try:
+        db=sqlite3.connect(_readonly_uri(path),uri=True)
+        db.row_factory=sqlite3.Row
+        db.execute('PRAGMA query_only=ON')
+        health=db.execute('PRAGMA quick_check').fetchone()[0]
+        if health!='ok':raise sqlite3.DatabaseError('quick_check: '+health)
+        yield db
+    except sqlite3.DatabaseError as exc:
+        raise explain_open_error(path,exc) from exc
+    finally:
+        if db is not None:db.close()
+
+def full_fingerprints(db):
+    """Hash every logical value, including signal source and operational tables."""
+    result={}
+    tables=[r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name")]
+    for table in tables:
+        info=list(db.execute(f'PRAGMA table_info({table})'))
+        cols=[r[1] for r in info]
+        primary=[r[1] for r in sorted(info,key=lambda r:r[5]) if r[5]]
+        order=primary or cols
+        h=hashlib.sha256();count=0
+        for row in db.execute(f'SELECT {",".join(cols)} FROM {table} ORDER BY {",".join(order)}'):
+            h.update(json.dumps(tuple(row),ensure_ascii=False,allow_nan=False,separators=(',',':')).encode('utf-8'))
+            h.update(b'\n');count+=1
+        result[table]={'rows':count,'sha256':h.hexdigest()}
+    return result
+
+def checkpoint(db,mode='PASSIVE'):
+    if mode not in ('PASSIVE','FULL','RESTART','TRUNCATE'):raise ValueError('Invalid WAL checkpoint mode')
+    row=tuple(db.execute(f'PRAGMA wal_checkpoint({mode})').fetchone())
+    if row[0]:raise RuntimeError(f'WAL checkpoint {mode} remained busy: {row}')
+    return row
+
+def close_cleanly(db):
+    """Roll back unfinished work, checkpoint committed WAL frames, then close."""
+    try:
+        if db.in_transaction:db.rollback()
+        checkpoint(db,'TRUNCATE')
+    finally:db.close()
+
+def repair_stale_sidecars(path,backup_root=None):
+    """Back up all files, quarantine WAL/SHM, and prove logical values unchanged."""
+    path=Path(path)
+    if not path.exists():raise ValueError('Existing scanner DB required')
+    stamp=time.strftime('%Y%m%d_%H%M%S')
+    root=Path(backup_root) if backup_root else path.parent/'backups'
+    backup=root/f'{path.stem}_wal_repair_{stamp}_{time.time_ns()}'
+    backup.mkdir(parents=True)
+    files=[p for p in (path,Path(str(path)+'-wal'),Path(str(path)+'-shm')) if p.exists()]
+    file_evidence={}
+    for source in files:
+        target=backup/source.name;shutil.copy2(source,target)
+        file_evidence[source.name]={'bytes':source.stat().st_size,'sha256':_file_sha256(source)}
+        if target.stat().st_size!=source.stat().st_size or _file_sha256(target)!=file_evidence[source.name]['sha256']:
+            raise RuntimeError('Backup verification failed: '+source.name)
+    try:
+        with readonly(path):
+            return {'repaired':False,'reason':'normal read-only open already succeeds','backup':str(backup),'files':file_evidence}
+    except DatabaseSidecarError as diagnosed:
+        diagnosis_text=str(diagnosed)
+    if main_db_health(path)!='ok':raise RuntimeError('Immutable main database is not healthy')
+    immutable=sqlite3.connect(_readonly_uri(path,True),uri=True);immutable.row_factory=sqlite3.Row
+    try:before=full_fingerprints(immutable)
+    finally:immutable.close()
+    quarantined=[]
+    try:
+        for suffix in ('-wal','-shm'):
+            sidecar=Path(str(path)+suffix)
+            if sidecar.exists():
+                target=backup/(sidecar.name+'.quarantined')
+                os.replace(sidecar,target);quarantined.append(str(target))
+        db=sqlite3.connect(path);db.row_factory=sqlite3.Row
+        try:
+            db.execute('PRAGMA foreign_keys=ON')
+            db.execute('PRAGMA synchronous=FULL')
+            db.execute('PRAGMA journal_mode=WAL')
+            if db.execute('PRAGMA quick_check').fetchone()[0]!='ok':raise RuntimeError('Normalized DB quick_check failed')
+            after=full_fingerprints(db)
+            if before!=after:raise RuntimeError('Logical database values changed during WAL normalization')
+            checkpoint(db,'TRUNCATE')
+        finally:db.close()
+        with readonly(path) as check:
+            final_health=check.execute('PRAGMA quick_check').fetchone()[0]
+            final=full_fingerprints(check)
+        if final!=before:raise RuntimeError('Post-close logical database values changed')
+    except BaseException:
+        # Restore the exact verified input files; keep the backup for investigation.
+        for suffix in ('-wal','-shm'):
+            current=Path(str(path)+suffix)
+            if current.exists():current.unlink()
+        for source in files:
+            shutil.copy2(backup/source.name,source)
+        raise
+    return {'repaired':True,'diagnosis':diagnosis_text,'backup':str(backup),'files':file_evidence,
+            'quarantined':quarantined,'quick_check':final_health,'before':before,'after':final,
+            'preserved':before==final}
 
 def source_for(t,detected):
     return 'LIVE' if 0<=detected-t<300 else 'CATCHUP'

@@ -1,0 +1,222 @@
+{
+  "report_type": "forward_scanner_v4_live_review",
+  "snapshot_at_kst": "2026-10-07T23:59:42.417324+09:00",
+  "database": "data/forward_scanner_v4.db",
+  "read_method": {
+    "mode": "sqlite_immutable_main_file",
+    "quick_check": "ok",
+    "normal_readonly_error": "database disk image is malformed",
+    "note": "No scanner process was running. The main DB was stable and newer than the stale WAL, so the snapshot was read with immutable=1 without modifying DB/WAL files."
+  },
+  "frozen_policy": {
+    "primary_filter": "30m range >= 4%",
+    "l1": "+5% high within 30m",
+    "l2": "+10% high within 60m",
+    "live_delay_limit_seconds": 300
+  },
+  "signal_period_kst": {
+    "first_live": "2026-09-30T22:55:00+09:00",
+    "last_live": "2026-10-07T17:40:00+09:00"
+  },
+  "signal_counts": {
+    "LIVE": 32,
+    "CATCHUP": 131,
+    "ALL": 163
+  },
+  "live_outcomes": {
+    "L1": {
+      "SUCCESS": 0,
+      "FAILURE": 24,
+      "PENDING": 0,
+      "UNKNOWN": 8,
+      "valid": 24,
+      "success_rate_pct": 0.0,
+      "unknown_rate_pct": 25.0,
+      "wilson_95_pct": [0.0, 13.798]
+    },
+    "L2": {
+      "SUCCESS": 0,
+      "FAILURE": 20,
+      "PENDING": 0,
+      "UNKNOWN": 12,
+      "valid": 20,
+      "success_rate_pct": 0.0,
+      "unknown_rate_pct": 37.5,
+      "wilson_95_pct": [0.0, 16.113]
+    }
+  },
+  "catchup_reference": {
+    "L1": {
+      "SUCCESS": 9,
+      "FAILURE": 100,
+      "PENDING": 0,
+      "UNKNOWN": 22,
+      "valid": 109,
+      "success_rate_pct": 8.2569
+    },
+    "L2": {
+      "SUCCESS": 6,
+      "FAILURE": 88,
+      "PENDING": 0,
+      "UNKNOWN": 37,
+      "valid": 94,
+      "success_rate_pct": 6.383
+    },
+    "warning": "Reference only; retrospective catch-up signals are excluded from LIVE forward performance."
+  },
+  "previous_live_comparison": {
+    "previous_snapshot_date": "2026-10-05",
+    "previous": {
+      "signals": 12,
+      "L1_success": 0,
+      "L1_valid": 9,
+      "L2_success": 0,
+      "L2_valid": 7
+    },
+    "current": {
+      "signals": 32,
+      "L1_success": 0,
+      "L1_valid": 24,
+      "L2_success": 0,
+      "L2_valid": 20
+    },
+    "change": {
+      "signals": 20,
+      "L1_valid": 15,
+      "L2_valid": 13,
+      "L1_success": 0,
+      "L2_success": 0
+    }
+  },
+  "historical_comparison": [
+    {
+      "dataset": "Discovery",
+      "L1_success": 44,
+      "L1_valid": 434,
+      "L1_rate_pct": 10.14,
+      "L1_baseline_pct": 3.22,
+      "L1_lift": 3.15,
+      "L2_success": 27,
+      "L2_valid": 357,
+      "L2_rate_pct": 7.56,
+      "L2_baseline_pct": 1.59,
+      "L2_lift": 4.76
+    },
+    {
+      "dataset": "Independent validation",
+      "L1_success": 29,
+      "L1_valid": 373,
+      "L1_rate_pct": 7.77,
+      "L1_baseline_pct": 0.94,
+      "L1_lift": 8.28,
+      "L2_success": 13,
+      "L2_valid": 313,
+      "L2_rate_pct": 4.15,
+      "L2_baseline_pct": 0.38,
+      "L2_lift": 10.82
+    },
+    {
+      "dataset": "LIVE current",
+      "L1_success": 0,
+      "L1_valid": 24,
+      "L1_rate_pct": 0.0,
+      "L1_baseline_pct": null,
+      "L1_lift": null,
+      "L2_success": 0,
+      "L2_valid": 20,
+      "L2_rate_pct": 0.0,
+      "L2_baseline_pct": null,
+      "L2_lift": null
+    }
+  ],
+  "live_market_summary": {
+    "market_count": 20,
+    "largest_signal_market": "KRW-SAND",
+    "largest_signal_count": 6,
+    "largest_signal_share_pct": 18.75,
+    "top3_signal_share_pct": 34.375,
+    "success_concentration": null,
+    "success_concentration_reason": "No LIVE successes",
+    "markets": [
+      {"market":"KRW-SAND","signals":6,"L1_success":0,"L1_valid":6,"L2_success":0,"L2_valid":6},
+      {"market":"KRW-ENA","signals":3,"L1_success":0,"L1_valid":3,"L2_success":0,"L2_valid":2},
+      {"market":"KRW-FLOCK","signals":2,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-PUMP","signals":2,"L1_success":0,"L1_valid":0,"L2_success":0,"L2_valid":0},
+      {"market":"KRW-WLD","signals":2,"L1_success":0,"L1_valid":2,"L2_success":0,"L2_valid":2},
+      {"market":"KRW-NEAR","signals":2,"L1_success":0,"L1_valid":2,"L2_success":0,"L2_valid":2},
+      {"market":"KRW-ICX","signals":2,"L1_success":0,"L1_valid":2,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-STX","signals":1,"L1_success":0,"L1_valid":0,"L2_success":0,"L2_valid":0},
+      {"market":"KRW-CPOOL","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":0},
+      {"market":"KRW-CHIP","signals":1,"L1_success":0,"L1_valid":0,"L2_success":0,"L2_valid":0},
+      {"market":"KRW-ADA","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-DOGE","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-ONDO","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-SHIB","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-TRUMP","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-SUI","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":1},
+      {"market":"KRW-POL","signals":1,"L1_success":0,"L1_valid":0,"L2_success":0,"L2_valid":0},
+      {"market":"KRW-LA","signals":1,"L1_success":0,"L1_valid":0,"L2_success":0,"L2_valid":0},
+      {"market":"KRW-ZKC","signals":1,"L1_success":0,"L1_valid":1,"L2_success":0,"L2_valid":0},
+      {"market":"KRW-RVN","signals":1,"L1_success":0,"L1_valid":0,"L2_success":0,"L2_valid":0}
+    ]
+  },
+  "frozen_feature_comparison": {
+    "status": "INSUFFICIENT_SAMPLE",
+    "reason": "There are no LIVE SUCCESS observations for either label.",
+    "L1": {
+      "range_15m": {"success_n":0,"success_median":null,"failure_n":24,"failure_median":4.220733,"failure_mean":4.418034,"difference":null},
+      "range_30m": {"success_n":0,"success_median":null,"failure_n":24,"failure_median":4.695834,"failure_mean":5.533328,"difference":null},
+      "alt_relative_strength_60m": {"success_n":0,"success_median":null,"failure_n":23,"failure_median":-0.672869,"failure_mean":0.544008,"difference":null}
+    },
+    "L2": {
+      "range_15m": {"success_n":0,"success_median":null,"failure_n":20,"failure_median":4.220733,"failure_mean":4.562734,"difference":null},
+      "range_30m": {"success_n":0,"success_median":null,"failure_n":20,"failure_median":4.601392,"failure_mean":5.356861,"difference":null},
+      "alt_relative_strength_60m": {"success_n":0,"success_median":null,"failure_n":19,"failure_median":-0.672869,"failure_mean":0.675141,"difference":null}
+    }
+  },
+  "live_hourly_kst": [
+    {"hour":0,"signals":1,"L1_success":0,"L2_success":0},
+    {"hour":10,"signals":1,"L1_success":0,"L2_success":0},
+    {"hour":11,"signals":16,"L1_success":0,"L2_success":0},
+    {"hour":12,"signals":1,"L1_success":0,"L2_success":0},
+    {"hour":13,"signals":2,"L1_success":0,"L2_success":0},
+    {"hour":14,"signals":1,"L1_success":0,"L2_success":0},
+    {"hour":16,"signals":1,"L1_success":0,"L2_success":0},
+    {"hour":17,"signals":1,"L1_success":0,"L2_success":0},
+    {"hour":22,"signals":4,"L1_success":0,"L2_success":0},
+    {"hour":23,"signals":4,"L1_success":0,"L2_success":0}
+  ],
+  "live_daily_kst": [
+    {"date":"2026-09-30","signals":5},
+    {"date":"2026-10-01","signals":3},
+    {"date":"2026-10-02","signals":1},
+    {"date":"2026-10-06","signals":2},
+    {"date":"2026-10-07","signals":21}
+  ],
+  "data_quality": {
+    "minute_candles": 371708,
+    "duplicate_signals": 0,
+    "source_classification_mismatch": 0,
+    "collection_error_markets": 0,
+    "live_detection_delay_seconds": {"min":12,"median":12,"max":279},
+    "unknown_label_rows": 20,
+    "missing_future_minutes_across_unknown_labels": 84,
+    "observed_partial_target_hits_in_unknown_labels": 0,
+    "scanner_watermark_lag_seconds_at_snapshot": 16362,
+    "scanner_watermark_lag_human": "4h 32m 42s",
+    "warning": "UNKNOWN is caused by incomplete future windows and is substantial, especially for L2. The normal SQLite read path also failed because of the stale/malformed WAL."
+  },
+  "assessment": {
+    "replication_status": "NOT YET REPLICATED",
+    "practical_signal_evidence": "No positive LIVE confirmation yet",
+    "statistical_limit": "Zero successes do not yet statistically exclude validation rates because the 95% upper bounds are 13.80% for L1 and 16.11% for L2.",
+    "baseline_limit": "A contemporaneous all-observation LIVE baseline was not available in this snapshot, so LIVE lift cannot be calculated.",
+    "next_checkpoint": {
+      "target_valid_per_label": 100,
+      "additional_L1_valid_needed": 76,
+      "additional_L2_valid_needed": 80,
+      "estimated_additional_live_signals_at_current_valid_fraction": 128
+    },
+    "recommendation": "Fix or safely recover the DB/WAL read path first, then continue frozen-policy forward collection. Do not promote the filter to a strategy; review again at at least 100 valid outcomes per label."
+  }
+}

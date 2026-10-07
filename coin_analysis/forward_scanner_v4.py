@@ -24,12 +24,19 @@ POLICY=dict(version=4,range_threshold=4,step_seconds=STEP,warmup_seconds=WARMUP,
 def connect(path):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
     db=sqlite3.connect(path);db.row_factory=sqlite3.Row
-    tables={r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+    try:tables={r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+    except sqlite3.DatabaseError as exc:
+        db.close();raise ops.explain_open_error(path,exc) from exc
     if tables and 'scanner_config' not in tables:
         db.close();raise ValueError('Not a V4 DB; existing database preserved')
     if 'signals' in tables and 'source' not in [r[1] for r in db.execute('PRAGMA table_info(signals)')]:
         db.close();raise ValueError('Run --mode migrate before resuming this older scanner DB')
-    db.execute('PRAGMA foreign_keys=ON');db.execute('PRAGMA journal_mode=WAL')
+    db.execute('PRAGMA foreign_keys=ON');db.execute('PRAGMA synchronous=FULL');db.execute('PRAGMA journal_mode=WAL');db.execute('PRAGMA wal_autocheckpoint=1000')
+    try:health=db.execute('PRAGMA quick_check').fetchone()[0]
+    except sqlite3.DatabaseError as exc:
+        db.close();raise ops.explain_open_error(path,exc) from exc
+    if health!='ok':
+        db.close();raise RuntimeError('V4 database quick_check failed: '+health)
     db.executescript('''
       CREATE TABLE IF NOT EXISTS scanner_config(id INTEGER PRIMARY KEY CHECK(id=1),payload TEXT NOT NULL);
       CREATE TABLE IF NOT EXISTS minute_candles(market TEXT,ts INTEGER,open REAL,high REAL,low REAL,close REAL,trade_value REAL,PRIMARY KEY(market,ts));
@@ -208,7 +215,7 @@ def exclusive(path):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--db',type=Path,default=DATA_DIR/'forward_scanner_v4.db')
-    p.add_argument('--mode',choices=('init','once','run','stats','migrate'),required=True)
+    p.add_argument('--mode',choices=('init','once','run','stats','migrate','repair-wal'),required=True)
     p.add_argument('--source',choices=('LIVE','CATCHUP','ALL'),default='LIVE',help='Statistics view; default LIVE')
     p.add_argument('--migration-evidence',type=Path,default=Path('reports/forward_scanner_v4_delay_causes_20261001.json'))
     p.add_argument('--market-manifest',type=Path,help='Existing frozen JSON market list, no discovery DB access')
@@ -219,24 +226,34 @@ def main():
         report=ops.migrate(a.db,a.migration_evidence)
         Path('reports/forward_scanner_v4_source_migration.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
         print(json.dumps(report,indent=2));return
+    if a.mode=='repair-wal':
+        with exclusive(a.db):report=ops.repair_stale_sidecars(a.db)
+        output=Path('reports/forward_scanner_v4_wal_repair.json')
+        output.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+        print(json.dumps(report,ensure_ascii=False,indent=2));return
     if a.max_cycles is not None and a.max_cycles<=0 or a.max_requests is not None and a.max_requests<=0:p.error('Budgets must be positive')
-    with exclusive(a.db),closing(connect(a.db)) as db:
-        if a.mode=='init':
-            if not a.market_manifest:p.error('--market-manifest is required')
-            m=json.loads(a.market_manifest.read_text(encoding='utf-8'))
-            start=collector.parse(a.start) if a.start else (int(time.time())//STEP+1)*STEP
-            initialize(db,m['markets'],start);print(json.dumps(config(db),ensure_ascii=False,indent=2));return
-        config(db)
-        if a.mode=='stats':print(json.dumps(statistics(db,a.source),ensure_ascii=False,indent=2));return
-        client=collector.Client(max_requests=a.max_requests);n=0
-        sid=ops.start_session(db);status='CLOSED'
+    if a.mode=='stats':
+        with exclusive(a.db),ops.readonly(a.db) as db:
+            config(db);print(json.dumps(statistics(db,a.source),ensure_ascii=False,indent=2));return
+    with exclusive(a.db):
+        db=connect(a.db)
         try:
-            while True:
-                cycle(db,client,session_id=sid);n+=1
-                if a.mode=='once' or a.max_cycles is not None and n>=a.max_cycles or a.max_requests is not None and client.requests>=a.max_requests:return
-                time.sleep(max(1,65-time.time()%60))
-        except KeyboardInterrupt:status='STOPPED';raise
-        except BaseException:status='ERROR';raise
-        finally:ops.end_session(db,sid,status)
+            if a.mode=='init':
+                if not a.market_manifest:p.error('--market-manifest is required')
+                m=json.loads(a.market_manifest.read_text(encoding='utf-8'))
+                start=collector.parse(a.start) if a.start else (int(time.time())//STEP+1)*STEP
+                initialize(db,m['markets'],start);print(json.dumps(config(db),ensure_ascii=False,indent=2));return
+            config(db)
+            client=collector.Client(max_requests=a.max_requests);n=0
+            sid=ops.start_session(db);status='CLOSED'
+            try:
+                while True:
+                    cycle(db,client,session_id=sid);n+=1
+                    if a.mode=='once' or a.max_cycles is not None and n>=a.max_cycles or a.max_requests is not None and client.requests>=a.max_requests:return
+                    time.sleep(max(1,65-time.time()%60))
+            except KeyboardInterrupt:status='STOPPED';raise
+            except BaseException:status='ERROR';raise
+            finally:ops.end_session(db,sid,status)
+        finally:ops.close_cleanly(db)
 
 if __name__=='__main__':main()

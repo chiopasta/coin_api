@@ -1,6 +1,21 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
-최종 갱신: 2026-10-01. 현재 단계: **사용자가 시작한 V4 live 관찰의 중간 점검**. 매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+## 2026-10-08 V4 WAL 정상화
+
+- `data/forward_scanner_v4.db`의 메인 파일은 정상이었으나 이전 세대 WAL/SHM이 남아 정상 SQLite 연결이 실패했다. WAL 유효 prefix의 마지막 commit은 6,274 page, 현재 메인 DB는 8,622 page여서 sidecar와 메인 파일의 세대가 일치하지 않았다.
+- 원본 세 파일을 먼저 백업한 뒤 sidecar를 격리했다. 복구 전후 전체 12개 테이블의 행 수와 모든 값 hash가 동일하다. candles 371,708, signals/features 163, outcomes 326이며 signal/source/feature/outcome 값 변경은 없다. 정상 read-only/writable 연결과 `quick_check=ok` 확인.
+- 정상 종료 시 WAL TRUNCATE checkpoint, 강제 종료 후 commit WAL 복구, 시작 시 quick_check, stale sidecar 전용 오류와 백업 기반 `repair-wal` 명령을 추가했다. 전체 자동 테스트 **126개 통과**. API와 scanner cycle은 실행하지 않았다.
+- 기존 재개 명령 유지: `python -m coin_analysis.forward_scanner_v4 --mode run --db data/forward_scanner_v4.db`.
+
+최종 갱신: 2026-10-08. 현재 단계: **V4 live 관찰 DB의 WAL 정상화 완료**. 매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+
+## 최신 LIVE 성과 점검 — 2026-10-05 22:43 KST
+
+- ALL 103 / LIVE 12 / CATCHUP 91. LIVE만 L1 S/F/P/U=0/9/0/3, L2=0/7/0/5. valid 성공률 둘 다 0%이지만 표본 부족으로 실패 판정 불가. 성공 0이므로 세 관찰 후보 성공/실패 차이를 계산할 수 없다.
+- LIVE 9시장, ENA/WLD/ICX 각2건. KST 00시1/22시5/23시6건. 마지막 LIVE는 10/2 23:35이며 정상 운영 노출 자체가 야간에 치우쳤다. 야간 시장 효과로 해석하지 않는다.
+- 10/2 DNS 오류 cycle 약66분, 최신 공통 verified_until 10/3 23:08, 가장 앞선 시장 10/4 10:01. 마지막 cycle 종료 미기록. DB의 RUNNING만으로 현재 프로세스가 살아 있다고 판단하지 않는다. 며칠간 연속 live 관측이 충분히 누적된 상태가 아니다.
+- UNKNOWN L1 25%, L2 41.67%. complete 표본 선택 편향 주의. 다음 중간 점검 valid100건/label 제안: 추가 valid L1 91/L2 93, 현재 완결률 유지 가정 추가 LIVE 약160건. 이는 정식 검정력/합격 기준이 아니며 성공20건과 시장 분산은 별도 필요.
+- 상세 `reports/forward_scanner_v4_live_review_20261005.md/.json`. 코드/DB/frozen 정의 변경, API 호출, scanner 실행 없이 read-only memory snapshot 분석만 수행했다.
 
 ## 최신 구현: LIVE/CATCHUP 분리 완료
 

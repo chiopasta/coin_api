@@ -1,5 +1,14 @@
 # V4 실시간 forward observation recorder
 
+## 2026-10-08 SQLite WAL 안정화
+
+- 2026-10-07 종료 상태에서 메인 DB는 `quick_check=ok`였지만 이전 세대 `-wal`/`-shm`이 남아 정상 read-only 연결이 `database disk image is malformed`로 실패했다. WAL 자체 체크섬의 유효 prefix는 335 frame이며 마지막 commit DB 크기는 6,274 page, 현재 메인 DB는 8,622 page였다. SHM만 제거해도 실패했으므로 WAL과 현재 메인 파일의 세대 불일치가 직접 원인이다.
+- 원본 DB/WAL/SHM을 SHA-256으로 검증하여 `data/backups/forward_scanner_v4_wal_20261008_000701`에 먼저 백업했다. 복구 명령도 별도 검증 백업을 만들고 sidecar를 격리한다.
+- 복구 전후 12개 테이블의 모든 열을 hash했다. 371,708 candles, 163 signals, 163 features, 326 outcomes를 포함해 모든 행 수와 값 hash가 동일했고 정상 read-only/writable 연결 및 `quick_check=ok`를 확인했다.
+- 정상 종료는 `wal_checkpoint(TRUNCATE)` 후 연결을 닫는다. 완료되지 않은 transaction은 종료 시 commit하지 않고 rollback한다. 강제 종료 후에는 SQLite가 commit된 WAL을 재생하며, 시작 시 `quick_check`를 통과해야 실행한다.
+- read-only 통계는 WAL을 무시하지 않는다. 정상 연결이 실패하고 immutable 메인만 정상이라면 `DatabaseSidecarError`로 구분하여 메인 DB 손상으로 오판하거나 자동 삭제하지 않는다.
+- 복구 명령: `python -m coin_analysis.forward_scanner_v4 --mode repair-wal --db data/forward_scanner_v4.db`. 반드시 scanner가 종료된 상태에서 사용한다. 원래 run 명령은 변경되지 않았다.
+
 ## 2026-10-01 source 분리 및 운영 로그
 
 기존 연구/feature/label/POLICY와 5분 관측/REST 수집은 변경하지 않았다. 운영 출처만 `signals.source`에 추가했다.

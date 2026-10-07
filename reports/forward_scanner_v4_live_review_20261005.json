@@ -1,0 +1,755 @@
+{
+  "snapshot_kst": "2026-10-05T22:43:04.834449+09:00",
+  "source": "C:\\dev\\coin_api-1\\data\\forward_scanner_v4.db",
+  "counts": {
+    "CATCHUP": 91,
+    "LIVE": 12
+  },
+  "ALL": 103,
+  "live_markets": 9,
+  "period": [
+    "2026-09-30T22:55:00+09:00",
+    "2026-10-02T23:35:00+09:00"
+  ],
+  "labels": {
+    "L1": {
+      "counts": {
+        "SUCCESS": 0,
+        "FAILURE": 9,
+        "PENDING": 0,
+        "UNKNOWN": 3
+      },
+      "valid": 9,
+      "rate_pct": 0.0,
+      "wilson95_pct": [
+        0.0,
+        29.91527535509594
+      ],
+      "unknown_pct": 25.0,
+      "success_markets": {}
+    },
+    "L2": {
+      "counts": {
+        "SUCCESS": 0,
+        "FAILURE": 7,
+        "PENDING": 0,
+        "UNKNOWN": 5
+      },
+      "valid": 7,
+      "rate_pct": 0.0,
+      "wilson95_pct": [
+        0.0,
+        35.433884297520656
+      ],
+      "unknown_pct": 41.666666666666664,
+      "success_markets": {}
+    }
+  },
+  "features": {
+    "L1": {
+      "range_15m_pct": {
+        "SUCCESS": {
+          "n": 0,
+          "median": null
+        },
+        "FAILURE": {
+          "n": 9,
+          "median": 4.788732394366191
+        },
+        "difference": null,
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "range_30m_pct": {
+        "SUCCESS": {
+          "n": 0,
+          "median": null
+        },
+        "FAILURE": {
+          "n": 9,
+          "median": 4.788732394366191
+        },
+        "difference": null,
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "alt_relative_60m_pct": {
+        "SUCCESS": {
+          "n": 0,
+          "median": null
+        },
+        "FAILURE": {
+          "n": 9,
+          "median": 3.4300779038395124
+        },
+        "difference": null,
+        "status": "INSUFFICIENT_SAMPLE"
+      }
+    },
+    "L2": {
+      "range_15m_pct": {
+        "SUCCESS": {
+          "n": 0,
+          "median": null
+        },
+        "FAILURE": {
+          "n": 7,
+          "median": 4.788732394366191
+        },
+        "difference": null,
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "range_30m_pct": {
+        "SUCCESS": {
+          "n": 0,
+          "median": null
+        },
+        "FAILURE": {
+          "n": 7,
+          "median": 4.788732394366191
+        },
+        "difference": null,
+        "status": "INSUFFICIENT_SAMPLE"
+      },
+      "alt_relative_60m_pct": {
+        "SUCCESS": {
+          "n": 0,
+          "median": null
+        },
+        "FAILURE": {
+          "n": 7,
+          "median": 3.4300779038395124
+        },
+        "difference": null,
+        "status": "INSUFFICIENT_SAMPLE"
+      }
+    }
+  },
+  "markets": [
+    {
+      "market": "KRW-ENA",
+      "signals": 2,
+      "labels": {
+        "L1": {
+          "FAILURE": 2
+        },
+        "L2": {
+          "FAILURE": 1,
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-WLD",
+      "signals": 2,
+      "labels": {
+        "L1": {
+          "FAILURE": 2
+        },
+        "L2": {
+          "FAILURE": 2
+        }
+      }
+    },
+    {
+      "market": "KRW-ICX",
+      "signals": 2,
+      "labels": {
+        "L1": {
+          "FAILURE": 1,
+          "UNKNOWN": 1
+        },
+        "L2": {
+          "FAILURE": 1,
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-FLOCK",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "FAILURE": 1
+        },
+        "L2": {
+          "FAILURE": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-PUMP",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "UNKNOWN": 1
+        },
+        "L2": {
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-STX",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "UNKNOWN": 1
+        },
+        "L2": {
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-NEAR",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "FAILURE": 1
+        },
+        "L2": {
+          "FAILURE": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-CPOOL",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "FAILURE": 1
+        },
+        "L2": {
+          "UNKNOWN": 1
+        }
+      }
+    },
+    {
+      "market": "KRW-SAND",
+      "signals": 1,
+      "labels": {
+        "L1": {
+          "FAILURE": 1
+        },
+        "L2": {
+          "FAILURE": 1
+        }
+      }
+    }
+  ],
+  "hours": {
+    "0": 1,
+    "22": 5,
+    "23": 6
+  },
+  "days": {
+    "2026-09-30": 5,
+    "2026-10-01": 3,
+    "2026-10-02": 4
+  },
+  "quality": {
+    "rows": 208191,
+    "integrity": "ok",
+    "source_mismatch": 0,
+    "signal_duplicates": 0,
+    "states": [
+      {
+        "market": "KRW-0G",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ADA",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-AUCTION",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-BCH",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-BTC",
+        "verified_until": 1791075660,
+        "last_observation": 1790675100,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-CHIP",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-CPOOL",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-DATA",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-DOGE",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ENA",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ENS",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ERA",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ETC",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ETH",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-FLOCK",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ICX",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-KAITO",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-LA",
+        "verified_until": 1791075660,
+        "last_observation": 1791036300,
+        "active": 1,
+        "cluster_id": "975f020620ba6d948a7d",
+        "last_error": null
+      },
+      {
+        "market": "KRW-LINK",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-MANTRA",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ME",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-MIRA",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-NEAR",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-O",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ONDO",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ONG",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-PEPE",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-POL",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-PRL",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-PUMP",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-RE",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-RVN",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-SAND",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-SHIB",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-SKR",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-SLX",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-SOL",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-STX",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-SUI",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-TREE",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-TRUMP",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-TRX",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-UNI",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-WLD",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-XLM",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-XRP",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ZBT",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ZK",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ZKC",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": 0,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ZKP",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      },
+      {
+        "market": "KRW-ZORA",
+        "verified_until": 1791036480,
+        "last_observation": 1791036300,
+        "active": null,
+        "cluster_id": null,
+        "last_error": null
+      }
+    ],
+    "cycle_statuses": {
+      "COMPLETE": 211,
+      "ERROR": 1,
+      "RUNNING": 1
+    },
+    "session_statuses": {
+      "INTERRUPTED": 1,
+      "RUNNING": 1,
+      "STOPPED": 2
+    }
+  },
+  "unknown_checks": [
+    {
+      "market": "KRW-PUMP",
+      "label": "L1",
+      "missing_minutes": 1,
+      "observed_target_hit": false
+    },
+    {
+      "market": "KRW-PUMP",
+      "label": "L2",
+      "missing_minutes": 8,
+      "observed_target_hit": false
+    },
+    {
+      "market": "KRW-STX",
+      "label": "L1",
+      "missing_minutes": 1,
+      "observed_target_hit": false
+    },
+    {
+      "market": "KRW-STX",
+      "label": "L2",
+      "missing_minutes": 1,
+      "observed_target_hit": false
+    },
+    {
+      "market": "KRW-CPOOL",
+      "label": "L2",
+      "missing_minutes": 1,
+      "observed_target_hit": false
+    },
+    {
+      "market": "KRW-ENA",
+      "label": "L2",
+      "missing_minutes": 2,
+      "observed_target_hit": false
+    },
+    {
+      "market": "KRW-ICX",
+      "label": "L1",
+      "missing_minutes": 2,
+      "observed_target_hit": false
+    },
+    {
+      "market": "KRW-ICX",
+      "label": "L2",
+      "missing_minutes": 2,
+      "observed_target_hit": false
+    }
+  ],
+  "live_outcome_mismatches": [],
+  "observed_cadence": [],
+  "operational_live_grid_hours": {
+    "0": 8,
+    "20": 5,
+    "21": 7,
+    "22": 11,
+    "23": 14
+  },
+  "exposure_note": "Distinct 5m ticks reached by COMPLETE cycle within same 5m interval, only since session logging began; not per-market feature-valid denominator.",
+  "delays": {
+    "min": 12,
+    "median": 12.0,
+    "max": 279
+  },
+  "operational_findings": {
+    "last_live_signal_kst": "2026-10-02T23:35:00+09:00",
+    "verified_until_kst_min": "2026-10-03 23:08",
+    "verified_until_kst_max": "2026-10-04 10:01",
+    "dns_error_cycle": "2026-10-02 21:33:05~22:39:13 KST: getaddrinfo failed, 66m08s",
+    "last_unclosed_cycle": "2026-10-04 10:01:43 KST; DB RUNNING is not proof process is alive",
+    "interpretation": "Not uninterrupted multi-day live observation; session gaps and network errors constrain sample."
+  },
+  "sample_plan": {
+    "next_descriptive_checkpoint_valid_per_label": 100,
+    "additional_valid_L1": 91,
+    "additional_valid_L2": 93,
+    "additional_live_approx_if_current_L2_valid_fraction_persists": 160,
+    "caveat": "Planning checkpoint, not a formal power calculation or success criterion. Current zero success cannot estimate a positive event rate. >=20 successes across multiple markets needed for even exploratory success/failure feature comparisons."
+  }
+}
