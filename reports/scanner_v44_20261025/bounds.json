@@ -1,0 +1,30 @@
+{
+  "frozen_at": 1792854801.0358703,
+  "max_requests": 36,
+  "max_seconds": 120,
+  "retries": 0,
+  "min_spacing_seconds": 0.3,
+  "markets": [
+    "KRW-ENA",
+    "KRW-FLOCK",
+    "KRW-SAND"
+  ],
+  "exchanges": [
+    "UPBIT",
+    "BITHUMB"
+  ],
+  "candle_units": [
+    1,
+    5,
+    15
+  ],
+  "tick_pages_max_per_market": 3,
+  "tick_count": 500,
+  "candle_count": 200,
+  "window_start": 1792851600,
+  "window_end": 1792853700,
+  "raw_max_bytes": 20971520,
+  "no_live_scanner": true,
+  "no_orders": true,
+  "no_keys": true
+}

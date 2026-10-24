@@ -1,0 +1,4697 @@
+{
+  "at": 1792855295.3541274,
+  "classification_basis": "Retrospective only; no signals/features rewritten",
+  "episode": "data\\scanner_v43_live\\episode_20261024",
+  "observation_stop": 1792853767.8540454,
+  "per_exchange": {
+    "UPBIT": {
+      "windows": [
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-ENA",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 28,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-ENA",
+              "ts": 1792853100,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-ENA",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 2
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 6
+        },
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-ENA",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 27,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-ENA",
+              "ts": 1792853100,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-ENA",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-ENA",
+              "ts": 1792853520,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 3
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 6
+        },
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-ETH",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 30,
+          "complete": true,
+          "missing": [],
+          "cause_counts": {},
+          "core_range_pct": 0.956632653061229,
+          "processing_lag_seconds": 6
+        },
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-ETH",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 30,
+          "complete": true,
+          "missing": [],
+          "cause_counts": {},
+          "core_range_pct": 0.956632653061229,
+          "processing_lag_seconds": 6
+        },
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-FLOCK",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 16,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792851720,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792851780,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792851960,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852320,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852380,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852560,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852680,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852800,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852920,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852980,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853040,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853100,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853160,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853220,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 14
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 6
+        },
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-FLOCK",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 13,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792851960,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852320,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852380,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852560,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852680,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852800,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852920,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792852980,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853040,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853100,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853160,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853220,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853400,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853460,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853520,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853580,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-FLOCK",
+              "ts": 1792853640,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 17
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 6
+        },
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-SAND",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 27,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853160,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853220,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853340,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853406,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 3
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 6
+        },
+        {
+          "exchange": "UPBIT",
+          "market": "KRW-SAND",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 25,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853160,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853220,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853340,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853520,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "UPBIT",
+              "market": "KRW-SAND",
+              "ts": 1792853580,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853706,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 5
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 6
+        }
+      ],
+      "unique_gap_minutes": 27,
+      "unique_cause_counts": {
+        "NO_TRADE": 27,
+        "API_MISSING": 0,
+        "COLLECTION_FAILURE": 0,
+        "LATE_CANDLE": 0,
+        "ALIGNMENT_ERROR": 0,
+        "EVALUATION_PENDING": 0,
+        "UNKNOWN": 0
+      },
+      "slot_cause_counts": {
+        "NO_TRADE": 44,
+        "API_MISSING": 0,
+        "COLLECTION_FAILURE": 0,
+        "LATE_CANDLE": 0,
+        "ALIGNMENT_ERROR": 0,
+        "EVALUATION_PENDING": 0,
+        "UNKNOWN": 0
+      },
+      "affected_windows": {
+        "NO_TRADE": 6,
+        "API_MISSING": 0,
+        "COLLECTION_FAILURE": 0,
+        "LATE_CANDLE": 0,
+        "ALIGNMENT_ERROR": 0,
+        "EVALUATION_PENDING": 0,
+        "UNKNOWN": 0
+      },
+      "complete_windows": 2,
+      "total_windows": 8,
+      "observed_slots": 196,
+      "expected_slots": 240,
+      "evaluation_errors": [],
+      "forward_readiness_at_stop": [
+        {
+          "market": "KRW-ENA",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 5,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 5,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ENA",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 4,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 4,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        }
+      ],
+      "forward_readiness_at_audit": [
+        {
+          "market": "KRW-ENA",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 5,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 5,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ENA",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 6,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 4,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 4,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        }
+      ],
+      "actual_signals": 0,
+      "actual_signal_horizons": [],
+      "quick_check": "ok",
+      "misaligned_candles": 0,
+      "unclosed_at_stop": 0,
+      "native_snapshot_candle_count": 366,
+      "min_watermark": 1792853760
+    },
+    "BITHUMB": {
+      "windows": [
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-ENA",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 28,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-ENA",
+              "ts": 1792852860,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-ENA",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 2
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 7
+        },
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-ENA",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 28,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-ENA",
+              "ts": 1792852860,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-ENA",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 2
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 7
+        },
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-ETH",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 30,
+          "complete": true,
+          "missing": [],
+          "cause_counts": {},
+          "core_range_pct": 0.9238611022618581,
+          "processing_lag_seconds": 7
+        },
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-ETH",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 30,
+          "complete": true,
+          "missing": [],
+          "cause_counts": {},
+          "core_range_pct": 0.9238611022618581,
+          "processing_lag_seconds": 7
+        },
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-FLOCK",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 15,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792851600,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792851660,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792851780,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792851900,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792851960,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852020,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852080,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852260,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852320,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852440,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852500,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852800,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852980,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792853040,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 15
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 7
+        },
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-FLOCK",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 16,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792851900,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792851960,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852020,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852080,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852260,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852320,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852440,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852500,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852800,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792852980,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792853040,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792853400,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-FLOCK",
+              "ts": 1792853520,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 14
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 7
+        },
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-SAND",
+          "t": 1792853400,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 20,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792851600,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852500,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852560,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852920,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852980,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853040,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853160,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853220,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853340,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853407,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 10
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 7
+        },
+        {
+          "exchange": "BITHUMB",
+          "market": "KRW-SAND",
+          "t": 1792853700,
+          "window_kind": "LOOKBACK_30M",
+          "expected": 30,
+          "observed": 17,
+          "complete": false,
+          "missing": [
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852500,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852560,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852920,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792852980,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853040,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853160,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853220,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853280,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853340,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853400,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853520,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853580,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            },
+            {
+              "exchange": "BITHUMB",
+              "market": "KRW-SAND",
+              "ts": 1792853640,
+              "cause": "NO_TRADE",
+              "processing_asof": 1792853707,
+              "original_page_verified": true,
+              "first_response_receipt": null,
+              "requery_source_absent": true
+            }
+          ],
+          "cause_counts": {
+            "NO_TRADE": 13
+          },
+          "core_range_pct": null,
+          "processing_lag_seconds": 7
+        }
+      ],
+      "unique_gap_minutes": 33,
+      "unique_cause_counts": {
+        "NO_TRADE": 33,
+        "API_MISSING": 0,
+        "COLLECTION_FAILURE": 0,
+        "LATE_CANDLE": 0,
+        "ALIGNMENT_ERROR": 0,
+        "EVALUATION_PENDING": 0,
+        "UNKNOWN": 0
+      },
+      "slot_cause_counts": {
+        "NO_TRADE": 56,
+        "API_MISSING": 0,
+        "COLLECTION_FAILURE": 0,
+        "LATE_CANDLE": 0,
+        "ALIGNMENT_ERROR": 0,
+        "EVALUATION_PENDING": 0,
+        "UNKNOWN": 0
+      },
+      "affected_windows": {
+        "NO_TRADE": 6,
+        "API_MISSING": 0,
+        "COLLECTION_FAILURE": 0,
+        "LATE_CANDLE": 0,
+        "ALIGNMENT_ERROR": 0,
+        "EVALUATION_PENDING": 0,
+        "UNKNOWN": 0
+      },
+      "complete_windows": 2,
+      "total_windows": 8,
+      "observed_slots": 184,
+      "expected_slots": 240,
+      "evaluation_errors": [],
+      "forward_readiness_at_stop": [
+        {
+          "market": "KRW-ENA",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ENA",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 3,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 3,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792853767,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        }
+      ],
+      "forward_readiness_at_audit": [
+        {
+          "market": "KRW-ENA",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 6,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ENA",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 6,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 6,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-ETH",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 3,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 3,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-FLOCK",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853400,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853400,
+              "end": 1792855200,
+              "asof": 1792855295,
+              "status": "UNKNOWN",
+              "reason": "FORWARD_RANGE_NOT_COLLECTED",
+              "observed": 1,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853400,
+              "end": 1792857000,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 1,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "market": "KRW-SAND",
+          "t": 1792853700,
+          "diagnostic_grid_only": true,
+          "not_a_signal": true,
+          "horizons": [
+            {
+              "minutes": 30,
+              "start": 1792853700,
+              "end": 1792855500,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 30,
+              "ready": false
+            },
+            {
+              "minutes": 60,
+              "start": 1792853700,
+              "end": 1792857300,
+              "asof": 1792855295,
+              "status": "EVALUATION_PENDING",
+              "reason": "HORIZON_NOT_REACHED",
+              "observed": 0,
+              "expected": 60,
+              "ready": false
+            }
+          ]
+        }
+      ],
+      "actual_signals": 0,
+      "actual_signal_horizons": [],
+      "quick_check": "ok",
+      "misaligned_candles": 0,
+      "unclosed_at_stop": 0,
+      "native_snapshot_candle_count": 364,
+      "min_watermark": 1792853760
+    }
+  },
+  "unique_missing_minutes": [
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "ts": 1792853100,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "ts": 1792853280,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "ts": 1792853520,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792851720,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853406,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792851780,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853406,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792851960,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792852320,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792852380,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792852560,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792852680,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792852800,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792852920,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792852980,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853040,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853100,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853160,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853220,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853400,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853460,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853520,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853580,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "ts": 1792853640,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "ts": 1792853160,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "ts": 1792853220,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "ts": 1792853340,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "ts": 1792853520,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "ts": 1792853580,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853706,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "ts": 1792852860,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "ts": 1792853280,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792851600,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853407,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792851660,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853407,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792851780,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853407,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792851900,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792851960,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852020,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852080,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852260,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852320,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852440,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852500,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852800,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792852980,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792853040,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792853280,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792853400,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "ts": 1792853520,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792851600,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853407,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792852500,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792852560,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792852920,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792852980,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853040,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853160,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853220,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853280,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853340,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853400,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853520,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853580,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "ts": 1792853640,
+      "cause": "NO_TRADE",
+      "processing_asof": 1792853707,
+      "original_page_verified": true,
+      "first_response_receipt": null,
+      "requery_source_absent": true
+    }
+  ],
+  "source_evidence": [
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "trades": {
+        "start": 1792851600,
+        "end": 1792853700,
+        "oldest_trade_ms": 1792851483323,
+        "newest_trade_ms": 1792853686759,
+        "trade_records": 500,
+        "distinct_ids": 500,
+        "reused_id_extra_rows": 0,
+        "identical_payload_extra_rows": 0,
+        "unique_trades_not_proven": false,
+        "absence_verified": true,
+        "positive_neighbor_checks": 32,
+        "contradictions": [],
+        "counts": {
+          "1792853640": 2,
+          "1792853580": 6,
+          "1792853460": 2,
+          "1792853400": 3,
+          "1792853340": 5,
+          "1792853220": 3,
+          "1792853160": 4,
+          "1792853040": 5,
+          "1792852980": 2,
+          "1792852920": 1,
+          "1792852860": 3,
+          "1792852800": 14,
+          "1792852740": 18,
+          "1792852680": 5,
+          "1792852620": 12,
+          "1792852560": 21,
+          "1792852500": 4,
+          "1792852440": 6,
+          "1792852380": 20,
+          "1792852320": 21,
+          "1792852260": 8,
+          "1792852200": 32,
+          "1792852140": 41,
+          "1792852080": 11,
+          "1792852020": 72,
+          "1792851960": 5,
+          "1792851900": 12,
+          "1792851840": 21,
+          "1792851780": 22,
+          "1792851720": 24,
+          "1792851660": 20,
+          "1792851600": 18
+        },
+        "comparisons": [
+          {
+            "ts": 1792853640,
+            "trades": 2,
+            "trade_value": 2193219.8130910103,
+            "candle_value": 2193219.81309101,
+            "matches": true
+          },
+          {
+            "ts": 1792853580,
+            "trades": 6,
+            "trade_value": 11260675.550558351,
+            "candle_value": 11260675.55055835,
+            "matches": true
+          },
+          {
+            "ts": 1792853460,
+            "trades": 2,
+            "trade_value": 3155502.49999666,
+            "candle_value": 3155502.49999666,
+            "matches": true
+          },
+          {
+            "ts": 1792853400,
+            "trades": 3,
+            "trade_value": 345942.57041675,
+            "candle_value": 345942.57041675,
+            "matches": true
+          },
+          {
+            "ts": 1792853340,
+            "trades": 5,
+            "trade_value": 2856146.86072358,
+            "candle_value": 2856146.86072358,
+            "matches": true
+          },
+          {
+            "ts": 1792853220,
+            "trades": 3,
+            "trade_value": 5379694.25383656,
+            "candle_value": 5379694.25383656,
+            "matches": true
+          },
+          {
+            "ts": 1792853160,
+            "trades": 4,
+            "trade_value": 1370484.18837189,
+            "candle_value": 1370484.18837189,
+            "matches": true
+          },
+          {
+            "ts": 1792853040,
+            "trades": 5,
+            "trade_value": 8546680.6049184,
+            "candle_value": 8546680.6049184,
+            "matches": true
+          },
+          {
+            "ts": 1792852980,
+            "trades": 2,
+            "trade_value": 15836.99999773,
+            "candle_value": 15836.99999773,
+            "matches": true
+          },
+          {
+            "ts": 1792852920,
+            "trades": 1,
+            "trade_value": 122780.07815724,
+            "candle_value": 122780.07815724,
+            "matches": true
+          },
+          {
+            "ts": 1792852860,
+            "trades": 3,
+            "trade_value": 85302.37154067,
+            "candle_value": 85302.37154067,
+            "matches": true
+          },
+          {
+            "ts": 1792852800,
+            "trades": 14,
+            "trade_value": 34892963.455205314,
+            "candle_value": 34892963.45520531,
+            "matches": true
+          },
+          {
+            "ts": 1792852740,
+            "trades": 18,
+            "trade_value": 180303465.67106062,
+            "candle_value": 180303465.67106062,
+            "matches": true
+          },
+          {
+            "ts": 1792852680,
+            "trades": 5,
+            "trade_value": 8954502.69877369,
+            "candle_value": 8954502.69877369,
+            "matches": true
+          },
+          {
+            "ts": 1792852620,
+            "trades": 12,
+            "trade_value": 59394284.70077492,
+            "candle_value": 59394284.70077492,
+            "matches": true
+          },
+          {
+            "ts": 1792852560,
+            "trades": 21,
+            "trade_value": 93904790.76546854,
+            "candle_value": 93904790.76546854,
+            "matches": true
+          },
+          {
+            "ts": 1792852500,
+            "trades": 4,
+            "trade_value": 12127130.399516061,
+            "candle_value": 12127130.39951606,
+            "matches": true
+          },
+          {
+            "ts": 1792852440,
+            "trades": 6,
+            "trade_value": 2886942.99248894,
+            "candle_value": 2886942.99248894,
+            "matches": true
+          },
+          {
+            "ts": 1792852380,
+            "trades": 20,
+            "trade_value": 41979672.21431244,
+            "candle_value": 41979672.21431244,
+            "matches": true
+          },
+          {
+            "ts": 1792852320,
+            "trades": 21,
+            "trade_value": 25460039.44490894,
+            "candle_value": 25460039.44490894,
+            "matches": true
+          },
+          {
+            "ts": 1792852260,
+            "trades": 8,
+            "trade_value": 25320090.48571261,
+            "candle_value": 25320090.48571261,
+            "matches": true
+          },
+          {
+            "ts": 1792852200,
+            "trades": 32,
+            "trade_value": 67753017.8745767,
+            "candle_value": 67753017.8745767,
+            "matches": true
+          },
+          {
+            "ts": 1792852140,
+            "trades": 41,
+            "trade_value": 154360928.20121726,
+            "candle_value": 154360928.20121726,
+            "matches": true
+          },
+          {
+            "ts": 1792852080,
+            "trades": 11,
+            "trade_value": 83177733.84975107,
+            "candle_value": 83177733.84975107,
+            "matches": true
+          },
+          {
+            "ts": 1792852020,
+            "trades": 72,
+            "trade_value": 154759404.58544144,
+            "candle_value": 154759404.58544144,
+            "matches": true
+          },
+          {
+            "ts": 1792851960,
+            "trades": 5,
+            "trade_value": 5332280.05171262,
+            "candle_value": 5332280.05171262,
+            "matches": true
+          },
+          {
+            "ts": 1792851900,
+            "trades": 12,
+            "trade_value": 2860195.35353472,
+            "candle_value": 2860195.35353472,
+            "matches": true
+          },
+          {
+            "ts": 1792851840,
+            "trades": 21,
+            "trade_value": 10488387.32499105,
+            "candle_value": 10488387.32499105,
+            "matches": true
+          },
+          {
+            "ts": 1792851780,
+            "trades": 22,
+            "trade_value": 77880686.09594616,
+            "candle_value": 77880686.09594616,
+            "matches": true
+          },
+          {
+            "ts": 1792851720,
+            "trades": 24,
+            "trade_value": 25873041.25922384,
+            "candle_value": 25873041.25922384,
+            "matches": true
+          },
+          {
+            "ts": 1792851660,
+            "trades": 20,
+            "trade_value": 6862537.18025194,
+            "candle_value": 6862537.18025194,
+            "matches": true
+          },
+          {
+            "ts": 1792851600,
+            "trades": 18,
+            "trade_value": 20811565.91556338,
+            "candle_value": 20811565.91556338,
+            "matches": true
+          }
+        ]
+      },
+      "native": [
+        {
+          "ts": 1792851600,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.4191621777597636
+        },
+        {
+          "ts": 1792851900,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 4.004905420416571
+        },
+        {
+          "ts": 1792852200,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.6339976301199963
+        },
+        {
+          "ts": 1792852500,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 3.5468417423559386
+        },
+        {
+          "ts": 1792852800,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 7.450580596923828e-09,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853100,
+          "unit": 5,
+          "present_minutes": 3,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853400,
+          "unit": 5,
+          "present_minutes": 4,
+          "status": "MATCH",
+          "absolute_value_error": 3.725290298461914e-09,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 15,
+          "present_minutes": 15,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 5.617475007574128
+        }
+      ],
+      "validation_errors": [],
+      "requery_candle_range_verified": true,
+      "returned_missing_original": []
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "trades": {
+        "start": 1792851600,
+        "end": 1792853700,
+        "oldest_trade_ms": 1792841054287,
+        "newest_trade_ms": 1792853371600,
+        "trade_records": 500,
+        "distinct_ids": 500,
+        "reused_id_extra_rows": 0,
+        "identical_payload_extra_rows": 0,
+        "unique_trades_not_proven": false,
+        "absence_verified": true,
+        "positive_neighbor_checks": 16,
+        "contradictions": [],
+        "counts": {
+          "1792853340": 3,
+          "1792853280": 1,
+          "1792852860": 2,
+          "1792852740": 2,
+          "1792852620": 3,
+          "1792852500": 2,
+          "1792852440": 4,
+          "1792852260": 5,
+          "1792852200": 8,
+          "1792852140": 25,
+          "1792852080": 9,
+          "1792852020": 12,
+          "1792851900": 2,
+          "1792851840": 5,
+          "1792851660": 3,
+          "1792851600": 14
+        },
+        "comparisons": [
+          {
+            "ts": 1792853340,
+            "trades": 3,
+            "trade_value": 5000000.000000312,
+            "candle_value": 5000000.00000031,
+            "matches": true
+          },
+          {
+            "ts": 1792853280,
+            "trades": 1,
+            "trade_value": 598461.72177015,
+            "candle_value": 598461.72177015,
+            "matches": true
+          },
+          {
+            "ts": 1792852860,
+            "trades": 2,
+            "trade_value": 741840.07995987,
+            "candle_value": 741840.07995987,
+            "matches": true
+          },
+          {
+            "ts": 1792852740,
+            "trades": 2,
+            "trade_value": 601628.1859065,
+            "candle_value": 601628.1859065,
+            "matches": true
+          },
+          {
+            "ts": 1792852620,
+            "trades": 3,
+            "trade_value": 18372.246889568,
+            "candle_value": 18372.24688957,
+            "matches": true
+          },
+          {
+            "ts": 1792852500,
+            "trades": 2,
+            "trade_value": 23451.940201517,
+            "candle_value": 23451.94020152,
+            "matches": true
+          },
+          {
+            "ts": 1792852440,
+            "trades": 4,
+            "trade_value": 156233.05861953902,
+            "candle_value": 156233.05861954,
+            "matches": true
+          },
+          {
+            "ts": 1792852260,
+            "trades": 5,
+            "trade_value": 6249772.014484435,
+            "candle_value": 6249772.01448444,
+            "matches": true
+          },
+          {
+            "ts": 1792852200,
+            "trades": 8,
+            "trade_value": 3492388.598472042,
+            "candle_value": 3492388.59847204,
+            "matches": true
+          },
+          {
+            "ts": 1792852140,
+            "trades": 25,
+            "trade_value": 18485592.605055135,
+            "candle_value": 18485592.60505513,
+            "matches": true
+          },
+          {
+            "ts": 1792852080,
+            "trades": 9,
+            "trade_value": 3644984.476229477,
+            "candle_value": 3644984.47622948,
+            "matches": true
+          },
+          {
+            "ts": 1792852020,
+            "trades": 12,
+            "trade_value": 4925492.129157234,
+            "candle_value": 4925492.12915723,
+            "matches": true
+          },
+          {
+            "ts": 1792851900,
+            "trades": 2,
+            "trade_value": 48693.94600721,
+            "candle_value": 48693.94600721,
+            "matches": true
+          },
+          {
+            "ts": 1792851840,
+            "trades": 5,
+            "trade_value": 41927.499998884,
+            "candle_value": 41927.49999888,
+            "matches": true
+          },
+          {
+            "ts": 1792851660,
+            "trades": 3,
+            "trade_value": 638176.413793425,
+            "candle_value": 638176.41379343,
+            "matches": true
+          },
+          {
+            "ts": 1792851600,
+            "trades": 14,
+            "trade_value": 9754278.778615216,
+            "candle_value": 9754278.77861522,
+            "matches": true
+          }
+        ]
+      },
+      "native": [
+        {
+          "ts": 1792851600,
+          "unit": 5,
+          "present_minutes": 3,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792851900,
+          "unit": 5,
+          "present_minutes": 4,
+          "status": "MATCH",
+          "absolute_value_error": 1.1175870895385742e-08,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 5,
+          "present_minutes": 3,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852500,
+          "unit": 5,
+          "present_minutes": 3,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852800,
+          "unit": 5,
+          "present_minutes": 1,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853100,
+          "unit": 5,
+          "present_minutes": 2,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853400,
+          "unit": 5,
+          "present_minutes": 0,
+          "status": "CONSISTENT_SOURCE_ABSENCE"
+        },
+        {
+          "ts": 1792852200,
+          "unit": 15,
+          "present_minutes": 7,
+          "status": "MATCH",
+          "absolute_value_error": 9.313225746154785e-09,
+          "value_tolerance": 1.0
+        }
+      ],
+      "validation_errors": [],
+      "requery_candle_range_verified": true,
+      "returned_missing_original": []
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "trades": {
+        "start": 1792851600,
+        "end": 1792853700,
+        "oldest_trade_ms": 1792851301979,
+        "newest_trade_ms": 1792853698674,
+        "trade_records": 500,
+        "distinct_ids": 500,
+        "reused_id_extra_rows": 0,
+        "identical_payload_extra_rows": 0,
+        "unique_trades_not_proven": false,
+        "absence_verified": true,
+        "positive_neighbor_checks": 30,
+        "contradictions": [],
+        "counts": {
+          "1792853640": 8,
+          "1792853460": 3,
+          "1792853400": 4,
+          "1792853280": 4,
+          "1792853100": 1,
+          "1792853040": 21,
+          "1792852980": 20,
+          "1792852920": 10,
+          "1792852860": 1,
+          "1792852800": 9,
+          "1792852740": 1,
+          "1792852680": 13,
+          "1792852620": 38,
+          "1792852560": 3,
+          "1792852500": 7,
+          "1792852440": 4,
+          "1792852380": 7,
+          "1792852320": 1,
+          "1792852260": 3,
+          "1792852200": 8,
+          "1792852140": 22,
+          "1792852080": 34,
+          "1792852020": 16,
+          "1792851960": 6,
+          "1792851900": 2,
+          "1792851840": 6,
+          "1792851780": 12,
+          "1792851720": 4,
+          "1792851660": 4,
+          "1792851600": 9
+        },
+        "comparisons": [
+          {
+            "ts": 1792853640,
+            "trades": 8,
+            "trade_value": 2283787.26945468,
+            "candle_value": 2283787.26945468,
+            "matches": true
+          },
+          {
+            "ts": 1792853460,
+            "trades": 3,
+            "trade_value": 1155412.539282824,
+            "candle_value": 1155412.53928282,
+            "matches": true
+          },
+          {
+            "ts": 1792853400,
+            "trades": 4,
+            "trade_value": 1870232.99422699,
+            "candle_value": 1870232.99422699,
+            "matches": true
+          },
+          {
+            "ts": 1792853280,
+            "trades": 4,
+            "trade_value": 465993.84298510797,
+            "candle_value": 465993.84298511,
+            "matches": true
+          },
+          {
+            "ts": 1792853100,
+            "trades": 1,
+            "trade_value": 44325.724711088,
+            "candle_value": 44325.72471109,
+            "matches": true
+          },
+          {
+            "ts": 1792853040,
+            "trades": 21,
+            "trade_value": 1962830.02506569,
+            "candle_value": 1962830.02506569,
+            "matches": true
+          },
+          {
+            "ts": 1792852980,
+            "trades": 20,
+            "trade_value": 4692611.963965199,
+            "candle_value": 4692611.9639652,
+            "matches": true
+          },
+          {
+            "ts": 1792852920,
+            "trades": 10,
+            "trade_value": 1496764.461157352,
+            "candle_value": 1496764.46115735,
+            "matches": true
+          },
+          {
+            "ts": 1792852860,
+            "trades": 1,
+            "trade_value": 5000.999999927999,
+            "candle_value": 5000.99999993,
+            "matches": true
+          },
+          {
+            "ts": 1792852800,
+            "trades": 9,
+            "trade_value": 5015116.48804098,
+            "candle_value": 5015116.48804098,
+            "matches": true
+          },
+          {
+            "ts": 1792852740,
+            "trades": 1,
+            "trade_value": 5000.999999418,
+            "candle_value": 5000.99999942,
+            "matches": true
+          },
+          {
+            "ts": 1792852680,
+            "trades": 13,
+            "trade_value": 6090326.089204067,
+            "candle_value": 6090326.08920407,
+            "matches": true
+          },
+          {
+            "ts": 1792852620,
+            "trades": 38,
+            "trade_value": 12824629.9357,
+            "candle_value": 12824629.9357,
+            "matches": true
+          },
+          {
+            "ts": 1792852560,
+            "trades": 3,
+            "trade_value": 409178.95439627697,
+            "candle_value": 409178.95439628,
+            "matches": true
+          },
+          {
+            "ts": 1792852500,
+            "trades": 7,
+            "trade_value": 1239445.8766193,
+            "candle_value": 1239445.8766193,
+            "matches": true
+          },
+          {
+            "ts": 1792852440,
+            "trades": 4,
+            "trade_value": 1769255.67024548,
+            "candle_value": 1769255.67024548,
+            "matches": true
+          },
+          {
+            "ts": 1792852380,
+            "trades": 7,
+            "trade_value": 536659.563721044,
+            "candle_value": 536659.56372104,
+            "matches": true
+          },
+          {
+            "ts": 1792852320,
+            "trades": 1,
+            "trade_value": 1000092.953522672,
+            "candle_value": 1000092.95352267,
+            "matches": true
+          },
+          {
+            "ts": 1792852260,
+            "trades": 3,
+            "trade_value": 875558.109320146,
+            "candle_value": 875558.10932015,
+            "matches": true
+          },
+          {
+            "ts": 1792852200,
+            "trades": 8,
+            "trade_value": 4523108.946026248,
+            "candle_value": 4523108.94602625,
+            "matches": true
+          },
+          {
+            "ts": 1792852140,
+            "trades": 22,
+            "trade_value": 15146623.476537576,
+            "candle_value": 15146623.47653758,
+            "matches": true
+          },
+          {
+            "ts": 1792852080,
+            "trades": 34,
+            "trade_value": 27048828.642885316,
+            "candle_value": 27048828.64288531,
+            "matches": true
+          },
+          {
+            "ts": 1792852020,
+            "trades": 16,
+            "trade_value": 6681274.952882812,
+            "candle_value": 6681274.95288281,
+            "matches": true
+          },
+          {
+            "ts": 1792851960,
+            "trades": 6,
+            "trade_value": 1382460.689799666,
+            "candle_value": 1382460.68979967,
+            "matches": true
+          },
+          {
+            "ts": 1792851900,
+            "trades": 2,
+            "trade_value": 5621261.369315093,
+            "candle_value": 5621261.36931509,
+            "matches": true
+          },
+          {
+            "ts": 1792851840,
+            "trades": 6,
+            "trade_value": 2523611.1401371113,
+            "candle_value": 2523611.14013711,
+            "matches": true
+          },
+          {
+            "ts": 1792851780,
+            "trades": 12,
+            "trade_value": 4466512.511491688,
+            "candle_value": 4466512.51149169,
+            "matches": true
+          },
+          {
+            "ts": 1792851720,
+            "trades": 4,
+            "trade_value": 233372.92145636203,
+            "candle_value": 233372.92145636,
+            "matches": true
+          },
+          {
+            "ts": 1792851660,
+            "trades": 4,
+            "trade_value": 546218.999999441,
+            "candle_value": 546218.99999944,
+            "matches": true
+          },
+          {
+            "ts": 1792851600,
+            "trades": 9,
+            "trade_value": 4290979.588605961,
+            "candle_value": 4290979.58860596,
+            "matches": true
+          }
+        ]
+      },
+      "native": [
+        {
+          "ts": 1792851600,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792851900,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 7.450580596923828e-09,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852500,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 1.1175870895385742e-08,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852800,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853100,
+          "unit": 5,
+          "present_minutes": 2,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853400,
+          "unit": 5,
+          "present_minutes": 3,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 15,
+          "present_minutes": 15,
+          "status": "MATCH",
+          "absolute_value_error": 7.450580596923828e-09,
+          "value_tolerance": 1.0
+        }
+      ],
+      "validation_errors": [],
+      "requery_candle_range_verified": true,
+      "returned_missing_original": []
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "trades": {
+        "start": 1792851600,
+        "end": 1792853700,
+        "oldest_trade_ms": 1792848756437,
+        "newest_trade_ms": 1792853655559,
+        "trade_records": 500,
+        "distinct_ids": 488,
+        "reused_id_extra_rows": 12,
+        "identical_payload_extra_rows": 0,
+        "unique_trades_not_proven": true,
+        "absence_verified": true,
+        "positive_neighbor_checks": 33,
+        "contradictions": [],
+        "counts": {
+          "1792853640": 1,
+          "1792853580": 1,
+          "1792853520": 1,
+          "1792853460": 1,
+          "1792853400": 2,
+          "1792853340": 1,
+          "1792853220": 3,
+          "1792853160": 1,
+          "1792853100": 10,
+          "1792853040": 1,
+          "1792852980": 2,
+          "1792852920": 3,
+          "1792852800": 7,
+          "1792852740": 3,
+          "1792852680": 2,
+          "1792852620": 8,
+          "1792852560": 3,
+          "1792852500": 2,
+          "1792852440": 3,
+          "1792852380": 1,
+          "1792852320": 2,
+          "1792852260": 10,
+          "1792852200": 4,
+          "1792852140": 7,
+          "1792852080": 13,
+          "1792852020": 15,
+          "1792851960": 17,
+          "1792851900": 9,
+          "1792851840": 18,
+          "1792851780": 7,
+          "1792851720": 9,
+          "1792851660": 20,
+          "1792851600": 9
+        },
+        "comparisons": [
+          {
+            "ts": 1792853640,
+            "trades": 1,
+            "trade_value": 948569.8255840801,
+            "candle_value": 948569.82558408,
+            "matches": true
+          },
+          {
+            "ts": 1792853580,
+            "trades": 1,
+            "trade_value": 5000000.99750503,
+            "candle_value": 5000000.99750503,
+            "matches": true
+          },
+          {
+            "ts": 1792853520,
+            "trades": 1,
+            "trade_value": 5950000.00000224,
+            "candle_value": 5950000.00000224,
+            "matches": true
+          },
+          {
+            "ts": 1792853460,
+            "trades": 1,
+            "trade_value": 10000.0,
+            "candle_value": 10000.0,
+            "matches": true
+          },
+          {
+            "ts": 1792853400,
+            "trades": 2,
+            "trade_value": 9492873.75092448,
+            "candle_value": 9492873.75092448,
+            "matches": true
+          },
+          {
+            "ts": 1792853340,
+            "trades": 1,
+            "trade_value": 8689.65517224,
+            "candle_value": 8689.65517224,
+            "matches": true
+          },
+          {
+            "ts": 1792853220,
+            "trades": 3,
+            "trade_value": 110195.26184627999,
+            "candle_value": 110195.26184628,
+            "matches": true
+          },
+          {
+            "ts": 1792853160,
+            "trades": 1,
+            "trade_value": 4980276.0,
+            "candle_value": 4980276.0,
+            "matches": true
+          },
+          {
+            "ts": 1792853100,
+            "trades": 10,
+            "trade_value": 1506937.6558587998,
+            "candle_value": 1506937.6558588,
+            "matches": true
+          },
+          {
+            "ts": 1792853040,
+            "trades": 1,
+            "trade_value": 102175.50636161,
+            "candle_value": 102175.50636161,
+            "matches": true
+          },
+          {
+            "ts": 1792852980,
+            "trades": 2,
+            "trade_value": 1261662.7926,
+            "candle_value": 1261662.7926,
+            "matches": true
+          },
+          {
+            "ts": 1792852920,
+            "trades": 3,
+            "trade_value": 2059518.72318662,
+            "candle_value": 2059518.72318662,
+            "matches": true
+          },
+          {
+            "ts": 1792852800,
+            "trades": 7,
+            "trade_value": 10319348.44595721,
+            "candle_value": 10319348.44595721,
+            "matches": true
+          },
+          {
+            "ts": 1792852740,
+            "trades": 3,
+            "trade_value": 2649165.93852163,
+            "candle_value": 2649165.93852163,
+            "matches": true
+          },
+          {
+            "ts": 1792852680,
+            "trades": 2,
+            "trade_value": 2420196.37562195,
+            "candle_value": 2420196.37562195,
+            "matches": true
+          },
+          {
+            "ts": 1792852620,
+            "trades": 8,
+            "trade_value": 4869404.8251555,
+            "candle_value": 4869404.8251555,
+            "matches": true
+          },
+          {
+            "ts": 1792852560,
+            "trades": 3,
+            "trade_value": 8387826.695758319,
+            "candle_value": 8387826.69575832,
+            "matches": true
+          },
+          {
+            "ts": 1792852500,
+            "trades": 2,
+            "trade_value": 2494926.2992153903,
+            "candle_value": 2494926.29921539,
+            "matches": true
+          },
+          {
+            "ts": 1792852440,
+            "trades": 3,
+            "trade_value": 4205501.4463861305,
+            "candle_value": 4205501.44638613,
+            "matches": true
+          },
+          {
+            "ts": 1792852380,
+            "trades": 1,
+            "trade_value": 503148.00802644005,
+            "candle_value": 503148.00802644,
+            "matches": true
+          },
+          {
+            "ts": 1792852320,
+            "trades": 2,
+            "trade_value": 613879.10224404,
+            "candle_value": 613879.10224404,
+            "matches": true
+          },
+          {
+            "ts": 1792852260,
+            "trades": 10,
+            "trade_value": 13413273.41413235,
+            "candle_value": 13413273.41413235,
+            "matches": true
+          },
+          {
+            "ts": 1792852200,
+            "trades": 4,
+            "trade_value": 3272693.55999264,
+            "candle_value": 3272693.55999264,
+            "matches": true
+          },
+          {
+            "ts": 1792852140,
+            "trades": 7,
+            "trade_value": 10845494.76874062,
+            "candle_value": 10845494.76874062,
+            "matches": true
+          },
+          {
+            "ts": 1792852080,
+            "trades": 13,
+            "trade_value": 17267302.22089363,
+            "candle_value": 17267302.22089363,
+            "matches": true
+          },
+          {
+            "ts": 1792852020,
+            "trades": 15,
+            "trade_value": 13903815.28248491,
+            "candle_value": 13903815.28248491,
+            "matches": true
+          },
+          {
+            "ts": 1792851960,
+            "trades": 17,
+            "trade_value": 3144741.3965073,
+            "candle_value": 3144741.3965073,
+            "matches": true
+          },
+          {
+            "ts": 1792851900,
+            "trades": 9,
+            "trade_value": 435270.1022425,
+            "candle_value": 435270.1022425,
+            "matches": true
+          },
+          {
+            "ts": 1792851840,
+            "trades": 18,
+            "trade_value": 16077969.93313337,
+            "candle_value": 16077969.93313337,
+            "matches": true
+          },
+          {
+            "ts": 1792851780,
+            "trades": 7,
+            "trade_value": 6577831.74151372,
+            "candle_value": 6577831.74151372,
+            "matches": true
+          },
+          {
+            "ts": 1792851720,
+            "trades": 9,
+            "trade_value": 2239757.62982559,
+            "candle_value": 2239757.62982559,
+            "matches": true
+          },
+          {
+            "ts": 1792851660,
+            "trades": 20,
+            "trade_value": 8829043.21999693,
+            "candle_value": 8829043.21999693,
+            "matches": true
+          },
+          {
+            "ts": 1792851600,
+            "trades": 9,
+            "trade_value": 1207597.56,
+            "candle_value": 1207597.56,
+            "matches": true
+          }
+        ]
+      },
+      "native": [
+        {
+          "ts": 1792851600,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792851900,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 3.725290298461914e-09,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852500,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852800,
+          "unit": 5,
+          "present_minutes": 4,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853100,
+          "unit": 5,
+          "present_minutes": 4,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853400,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 15,
+          "present_minutes": 14,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        }
+      ],
+      "validation_errors": [],
+      "requery_candle_range_verified": true,
+      "returned_missing_original": []
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "trades": {
+        "start": 1792851600,
+        "end": 1792853700,
+        "oldest_trade_ms": 1792819247826,
+        "newest_trade_ms": 1792853669639,
+        "trade_records": 500,
+        "distinct_ids": 453,
+        "reused_id_extra_rows": 47,
+        "identical_payload_extra_rows": 0,
+        "unique_trades_not_proven": true,
+        "absence_verified": true,
+        "positive_neighbor_checks": 18,
+        "contradictions": [],
+        "counts": {
+          "1792853640": 2,
+          "1792853580": 3,
+          "1792853460": 1,
+          "1792853340": 2,
+          "1792853220": 5,
+          "1792853160": 7,
+          "1792853100": 1,
+          "1792852920": 2,
+          "1792852860": 1,
+          "1792852740": 2,
+          "1792852680": 3,
+          "1792852620": 1,
+          "1792852560": 3,
+          "1792852380": 2,
+          "1792852200": 9,
+          "1792852140": 24,
+          "1792851840": 1,
+          "1792851720": 1
+        },
+        "comparisons": [
+          {
+            "ts": 1792853640,
+            "trades": 2,
+            "trade_value": 150919.872,
+            "candle_value": 150919.872,
+            "matches": true
+          },
+          {
+            "ts": 1792853580,
+            "trades": 3,
+            "trade_value": 1138454.9646949,
+            "candle_value": 1138454.9646949,
+            "matches": true
+          },
+          {
+            "ts": 1792853460,
+            "trades": 1,
+            "trade_value": 100655.72480000001,
+            "candle_value": 100655.7248,
+            "matches": true
+          },
+          {
+            "ts": 1792853340,
+            "trades": 2,
+            "trade_value": 568600.0,
+            "candle_value": 568600.0,
+            "matches": true
+          },
+          {
+            "ts": 1792853220,
+            "trades": 5,
+            "trade_value": 888769.81186417,
+            "candle_value": 888769.81186417,
+            "matches": true
+          },
+          {
+            "ts": 1792853160,
+            "trades": 7,
+            "trade_value": 1569127.53019995,
+            "candle_value": 1569127.53019995,
+            "matches": true
+          },
+          {
+            "ts": 1792853100,
+            "trades": 1,
+            "trade_value": 171901.927458,
+            "candle_value": 171901.927458,
+            "matches": true
+          },
+          {
+            "ts": 1792852920,
+            "trades": 2,
+            "trade_value": 169629.142,
+            "candle_value": 169629.142,
+            "matches": true
+          },
+          {
+            "ts": 1792852860,
+            "trades": 1,
+            "trade_value": 70233.20009999999,
+            "candle_value": 70233.2001,
+            "matches": true
+          },
+          {
+            "ts": 1792852740,
+            "trades": 2,
+            "trade_value": 189811.4319,
+            "candle_value": 189811.4319,
+            "matches": true
+          },
+          {
+            "ts": 1792852680,
+            "trades": 3,
+            "trade_value": 190806.12977200001,
+            "candle_value": 190806.129772,
+            "matches": true
+          },
+          {
+            "ts": 1792852620,
+            "trades": 1,
+            "trade_value": 5708.0,
+            "candle_value": 5708.0,
+            "matches": true
+          },
+          {
+            "ts": 1792852560,
+            "trades": 3,
+            "trade_value": 1067706.9258252615,
+            "candle_value": 1067706.9258252615,
+            "matches": true
+          },
+          {
+            "ts": 1792852380,
+            "trades": 2,
+            "trade_value": 86063.8403989728,
+            "candle_value": 86063.8403989728,
+            "matches": true
+          },
+          {
+            "ts": 1792852200,
+            "trades": 9,
+            "trade_value": 36277413.1758664,
+            "candle_value": 36277413.1758664,
+            "matches": true
+          },
+          {
+            "ts": 1792852140,
+            "trades": 24,
+            "trade_value": 15612131.142511176,
+            "candle_value": 15612131.142511176,
+            "matches": true
+          },
+          {
+            "ts": 1792851840,
+            "trades": 1,
+            "trade_value": 4998.3492933222005,
+            "candle_value": 4998.3492933222,
+            "matches": true
+          },
+          {
+            "ts": 1792851720,
+            "trades": 1,
+            "trade_value": 5001.000000507001,
+            "candle_value": 5001.000000507,
+            "matches": true
+          }
+        ]
+      },
+      "native": [
+        {
+          "ts": 1792851600,
+          "unit": 5,
+          "present_minutes": 2,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792851900,
+          "unit": 5,
+          "present_minutes": 1,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 5,
+          "present_minutes": 2,
+          "status": "MATCH",
+          "absolute_value_error": 7.450580596923828e-09,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852500,
+          "unit": 5,
+          "present_minutes": 4,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852800,
+          "unit": 5,
+          "present_minutes": 2,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853100,
+          "unit": 5,
+          "present_minutes": 4,
+          "status": "MATCH",
+          "absolute_value_error": 4.656612873077393e-10,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853400,
+          "unit": 5,
+          "present_minutes": 3,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 15,
+          "present_minutes": 8,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        }
+      ],
+      "validation_errors": [],
+      "requery_candle_range_verified": true,
+      "returned_missing_original": []
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "trades": {
+        "start": 1792851600,
+        "end": 1792853700,
+        "oldest_trade_ms": 1792821702359,
+        "newest_trade_ms": 1792853508104,
+        "trade_records": 500,
+        "distinct_ids": 432,
+        "reused_id_extra_rows": 68,
+        "identical_payload_extra_rows": 3,
+        "unique_trades_not_proven": true,
+        "absence_verified": true,
+        "positive_neighbor_checks": 21,
+        "contradictions": [],
+        "counts": {
+          "1792853460": 2,
+          "1792853100": 1,
+          "1792852860": 5,
+          "1792852800": 2,
+          "1792852740": 7,
+          "1792852680": 3,
+          "1792852620": 2,
+          "1792852440": 2,
+          "1792852380": 1,
+          "1792852320": 6,
+          "1792852260": 2,
+          "1792852200": 2,
+          "1792852140": 1,
+          "1792852080": 19,
+          "1792852020": 2,
+          "1792851960": 6,
+          "1792851900": 1,
+          "1792851840": 6,
+          "1792851780": 14,
+          "1792851720": 1,
+          "1792851660": 1
+        },
+        "comparisons": [
+          {
+            "ts": 1792853460,
+            "trades": 2,
+            "trade_value": 288101.207142,
+            "candle_value": 288101.207142,
+            "matches": true
+          },
+          {
+            "ts": 1792853100,
+            "trades": 1,
+            "trade_value": 394807.0,
+            "candle_value": 394807.0,
+            "matches": true
+          },
+          {
+            "ts": 1792852860,
+            "trades": 5,
+            "trade_value": 59016.357251034206,
+            "candle_value": 59016.3572510342,
+            "matches": true
+          },
+          {
+            "ts": 1792852800,
+            "trades": 2,
+            "trade_value": 115945.50035175461,
+            "candle_value": 115945.5003517546,
+            "matches": true
+          },
+          {
+            "ts": 1792852740,
+            "trades": 7,
+            "trade_value": 145438.9451840409,
+            "candle_value": 145438.9451840409,
+            "matches": true
+          },
+          {
+            "ts": 1792852680,
+            "trades": 3,
+            "trade_value": 16089.6,
+            "candle_value": 16089.6,
+            "matches": true
+          },
+          {
+            "ts": 1792852620,
+            "trades": 2,
+            "trade_value": 202187.615456,
+            "candle_value": 202187.615456,
+            "matches": true
+          },
+          {
+            "ts": 1792852440,
+            "trades": 2,
+            "trade_value": 83074.1507686218,
+            "candle_value": 83074.1507686218,
+            "matches": true
+          },
+          {
+            "ts": 1792852380,
+            "trades": 1,
+            "trade_value": 8903.410871815198,
+            "candle_value": 8903.4108718152,
+            "matches": true
+          },
+          {
+            "ts": 1792852320,
+            "trades": 6,
+            "trade_value": 82124.1529115599,
+            "candle_value": 82124.1529115599,
+            "matches": true
+          },
+          {
+            "ts": 1792852260,
+            "trades": 2,
+            "trade_value": 27288.089114855095,
+            "candle_value": 27288.0891148551,
+            "matches": true
+          },
+          {
+            "ts": 1792852200,
+            "trades": 2,
+            "trade_value": 88050.78695392,
+            "candle_value": 88050.78695392,
+            "matches": true
+          },
+          {
+            "ts": 1792852140,
+            "trades": 1,
+            "trade_value": 327467.0,
+            "candle_value": 327467.0,
+            "matches": true
+          },
+          {
+            "ts": 1792852080,
+            "trades": 19,
+            "trade_value": 1505713.6374450962,
+            "candle_value": 1505713.637445096,
+            "matches": true
+          },
+          {
+            "ts": 1792852020,
+            "trades": 2,
+            "trade_value": 407288.32741092035,
+            "candle_value": 407288.3274109203,
+            "matches": true
+          },
+          {
+            "ts": 1792851960,
+            "trades": 6,
+            "trade_value": 40070.4341730249,
+            "candle_value": 40070.4341730249,
+            "matches": true
+          },
+          {
+            "ts": 1792851900,
+            "trades": 1,
+            "trade_value": 42659.879659523,
+            "candle_value": 42659.879659523,
+            "matches": true
+          },
+          {
+            "ts": 1792851840,
+            "trades": 6,
+            "trade_value": 159937.4784726101,
+            "candle_value": 159937.4784726101,
+            "matches": true
+          },
+          {
+            "ts": 1792851780,
+            "trades": 14,
+            "trade_value": 180532.0771764978,
+            "candle_value": 180532.0771764978,
+            "matches": true
+          },
+          {
+            "ts": 1792851720,
+            "trades": 1,
+            "trade_value": 133971.7755315669,
+            "candle_value": 133971.7755315669,
+            "matches": true
+          },
+          {
+            "ts": 1792851660,
+            "trades": 1,
+            "trade_value": 148701.842921509,
+            "candle_value": 148701.842921509,
+            "matches": true
+          }
+        ]
+      },
+      "native": [
+        {
+          "ts": 1792851600,
+          "unit": 5,
+          "present_minutes": 4,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792851900,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 4.656612873077393e-10,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 5,
+          "present_minutes": 5,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852500,
+          "unit": 5,
+          "present_minutes": 3,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852800,
+          "unit": 5,
+          "present_minutes": 2,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853100,
+          "unit": 5,
+          "present_minutes": 1,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792853400,
+          "unit": 5,
+          "present_minutes": 1,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        },
+        {
+          "ts": 1792852200,
+          "unit": 15,
+          "present_minutes": 10,
+          "status": "MATCH",
+          "absolute_value_error": 0.0,
+          "value_tolerance": 1.0
+        }
+      ],
+      "validation_errors": [],
+      "requery_candle_range_verified": true,
+      "returned_missing_original": []
+    }
+  ],
+  "old_http": {
+    "attempts": 92,
+    "statuses": {
+      "HTTP_END": 92
+    },
+    "success_pct": 100.0,
+    "latency_mean_seconds": 0.04862767457962036,
+    "latency_max_seconds": 0.07945060729980469
+  },
+  "before": {
+    "complete_windows": 4,
+    "total_windows": 16
+  },
+  "after": {
+    "complete_windows": 4,
+    "total_windows": 16,
+    "observed_slots": 380,
+    "expected_slots": 480
+  },
+  "cause_counts_unique": {
+    "NO_TRADE": 60,
+    "API_MISSING": 0,
+    "COLLECTION_FAILURE": 0,
+    "LATE_CANDLE": 0,
+    "ALIGNMENT_ERROR": 0,
+    "EVALUATION_PENDING": 0,
+    "UNKNOWN": 0
+  },
+  "cause_counts_slots": {
+    "NO_TRADE": 100,
+    "API_MISSING": 0,
+    "COLLECTION_FAILURE": 0,
+    "LATE_CANDLE": 0,
+    "ALIGNMENT_ERROR": 0,
+    "EVALUATION_PENDING": 0,
+    "UNKNOWN": 0
+  },
+  "status": "PARTIAL",
+  "no_fill": true,
+  "no_live_run": true,
+  "no_original_db_write": true
+}

@@ -1,0 +1,30 @@
+{
+  "at": 1792855425.1483467,
+  "status": "PARTIAL",
+  "protected_inputs": 86,
+  "original_signals": 163,
+  "all_inputs_preserved": true,
+  "prior_v42_v43_runtimes_preserved": true,
+  "stale_open_ledger": 115,
+  "stale_open_ledger_unchanged": true,
+  "source_probe_raw_hashes_match": true,
+  "core_collection_and_policy_files_unchanged": true,
+  "selective_tests": 29,
+  "all_passed": true,
+  "no_scanner_started": true,
+  "no_orders": true,
+  "raw_data_git_excluded": true,
+  "before_complete": 4,
+  "after_complete": 4,
+  "denominator": 16,
+  "no_trade_unique_minutes": 60,
+  "no_trade_overlapping_slots": 100,
+  "source_probe_attempts": 24,
+  "source_probe_successes": 24,
+  "source_probe_errors": 0,
+  "source_hashes": {
+    "coin_analysis/scanner_gap_audit_v44.py": "4315734386bf292dad42b2fa384a7d3db5e0727827b25b38d491d82b47d6eefd",
+    "tests/test_scanner_gap_audit_v44.py": "e8c94912c2be5dd09e19883d6254e8c297878a693915d17a076f93f2970b4c5d",
+    "reports\\scanner_v41_validation_20261024\\legacy_reconciliation.json": "d13b4d2df6d93d8c78efc8db4d204899de614a63084853981404337cb4569d49"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "at": 1792855424.283421,
+  "checks": [
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/candles/minutes/1",
+      "started_at": 1792854801.0385065,
+      "received_at": 1792854801.1132226,
+      "server_date": "Sat, 24 Oct 2026 15:13:23 GMT",
+      "server_date_minus_received": 1.886777400970459
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/candles/minutes/5",
+      "started_at": 1792854801.339461,
+      "received_at": 1792854801.3777707,
+      "server_date": "Sat, 24 Oct 2026 15:13:23 GMT",
+      "server_date_minus_received": 1.6222293376922607
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/candles/minutes/15",
+      "started_at": 1792854801.640327,
+      "received_at": 1792854801.6871016,
+      "server_date": "Sat, 24 Oct 2026 15:13:23 GMT",
+      "server_date_minus_received": 1.3128983974456787
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/trades/ticks",
+      "started_at": 1792854801.9405797,
+      "received_at": 1792854802.023849,
+      "server_date": "Sat, 24 Oct 2026 15:13:24 GMT",
+      "server_date_minus_received": 1.9761509895324707
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/candles/minutes/1",
+      "started_at": 1792854802.2414696,
+      "received_at": 1792854802.2831178,
+      "server_date": "Sat, 24 Oct 2026 15:13:24 GMT",
+      "server_date_minus_received": 1.7168822288513184
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/candles/minutes/5",
+      "started_at": 1792854802.5415342,
+      "received_at": 1792854802.5857236,
+      "server_date": "Sat, 24 Oct 2026 15:13:24 GMT",
+      "server_date_minus_received": 1.414276361465454
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/candles/minutes/15",
+      "started_at": 1792854802.8419244,
+      "received_at": 1792854802.8844388,
+      "server_date": "Sat, 24 Oct 2026 15:13:25 GMT",
+      "server_date_minus_received": 2.1155612468719482
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/trades/ticks",
+      "started_at": 1792854803.141952,
+      "received_at": 1792854803.2428772,
+      "server_date": "Sat, 24 Oct 2026 15:13:25 GMT",
+      "server_date_minus_received": 1.7571227550506592
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/candles/minutes/1",
+      "started_at": 1792854803.4420326,
+      "received_at": 1792854803.4864483,
+      "server_date": "Sat, 24 Oct 2026 15:13:25 GMT",
+      "server_date_minus_received": 1.5135517120361328
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/candles/minutes/5",
+      "started_at": 1792854803.7420619,
+      "received_at": 1792854803.7850797,
+      "server_date": "Sat, 24 Oct 2026 15:13:25 GMT",
+      "server_date_minus_received": 1.2149202823638916
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/candles/minutes/15",
+      "started_at": 1792854804.0420887,
+      "received_at": 1792854804.083377,
+      "server_date": "Sat, 24 Oct 2026 15:13:26 GMT",
+      "server_date_minus_received": 1.9166231155395508
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/trades/ticks",
+      "started_at": 1792854804.3421154,
+      "received_at": 1792854804.4419887,
+      "server_date": "Sat, 24 Oct 2026 15:13:26 GMT",
+      "server_date_minus_received": 1.5580112934112549
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/candles/minutes/1",
+      "started_at": 1792854804.6427991,
+      "received_at": 1792854804.6890988,
+      "server_date": "Sat, 24 Oct 2026 15:13:26 GMT",
+      "server_date_minus_received": 1.310901165008545
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/candles/minutes/5",
+      "started_at": 1792854804.9428267,
+      "received_at": 1792854804.982265,
+      "server_date": "Sat, 24 Oct 2026 15:13:27 GMT",
+      "server_date_minus_received": 2.017735004425049
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/candles/minutes/15",
+      "started_at": 1792854805.2429547,
+      "received_at": 1792854805.2885044,
+      "server_date": "Sat, 24 Oct 2026 15:13:27 GMT",
+      "server_date_minus_received": 1.7114956378936768
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "endpoint": "/v1/trades/ticks",
+      "started_at": 1792854805.5430238,
+      "received_at": 1792854805.594928,
+      "server_date": "Sat, 24 Oct 2026 15:13:27 GMT",
+      "server_date_minus_received": 1.4050719738006592
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/candles/minutes/1",
+      "started_at": 1792854805.8431556,
+      "received_at": 1792854805.8784041,
+      "server_date": "Sat, 24 Oct 2026 15:13:28 GMT",
+      "server_date_minus_received": 2.121595859527588
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/candles/minutes/5",
+      "started_at": 1792854806.1440518,
+      "received_at": 1792854806.181799,
+      "server_date": "Sat, 24 Oct 2026 15:13:28 GMT",
+      "server_date_minus_received": 1.8182010650634766
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/candles/minutes/15",
+      "started_at": 1792854806.4440808,
+      "received_at": 1792854806.503275,
+      "server_date": "Sat, 24 Oct 2026 15:13:28 GMT",
+      "server_date_minus_received": 1.496725082397461
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "endpoint": "/v1/trades/ticks",
+      "started_at": 1792854806.7446542,
+      "received_at": 1792854806.8059833,
+      "server_date": "Sat, 24 Oct 2026 15:13:28 GMT",
+      "server_date_minus_received": 1.194016695022583
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/candles/minutes/1",
+      "started_at": 1792854807.0456445,
+      "received_at": 1792854807.092069,
+      "server_date": "Sat, 24 Oct 2026 15:13:29 GMT",
+      "server_date_minus_received": 1.9079310894012451
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/candles/minutes/5",
+      "started_at": 1792854807.3456984,
+      "received_at": 1792854807.3881223,
+      "server_date": "Sat, 24 Oct 2026 15:13:29 GMT",
+      "server_date_minus_received": 1.611877679824829
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/candles/minutes/15",
+      "started_at": 1792854807.6457644,
+      "received_at": 1792854807.6859574,
+      "server_date": "Sat, 24 Oct 2026 15:13:29 GMT",
+      "server_date_minus_received": 1.314042568206787
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "endpoint": "/v1/trades/ticks",
+      "started_at": 1792854807.9458745,
+      "received_at": 1792854807.9947858,
+      "server_date": "Sat, 24 Oct 2026 15:13:30 GMT",
+      "server_date_minus_received": 2.005214214324951
+    }
+  ],
+  "minimum_server_date_ahead_seconds": 1.194016695022583,
+  "maximum_server_date_ahead_seconds": 2.121595859527588,
+  "caveat": "HTTP Date has one-second precision and is not an authenticated clock calibration. Do not shift candles or signals."
+}
