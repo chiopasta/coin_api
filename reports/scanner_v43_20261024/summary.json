@@ -1,0 +1,1282 @@
+{
+  "finalized_at": 1792853774.3936145,
+  "status": "PARTIAL",
+  "performance_verdict": "INSUFFICIENT_DATA",
+  "runtime": "data\\scanner_v43_live\\episode_20261024",
+  "config": {
+    "version": "4.3_OBSERVATION",
+    "created_at": 1792853369.8310792,
+    "markets": [
+      "KRW-BTC",
+      "KRW-ENA",
+      "KRW-ETH",
+      "KRW-FLOCK",
+      "KRW-SAND"
+    ],
+    "policy": {
+      "version": 4,
+      "range_threshold": 4,
+      "step_seconds": 300,
+      "warmup_seconds": 21600,
+      "grace_seconds": 600,
+      "missing_range": "keep cluster state",
+      "features": "V3 closed candles only",
+      "incomplete_future": "PENDING until horizon+grace then UNKNOWN; recover if later complete",
+      "universe": "fixed KRW alts plus BTC; never auto-reselect",
+      "unknown_initial_cluster": "suppress until observed below4"
+    },
+    "signal_start": 1792853400,
+    "scope": "V4.2 fixed five per venue; not entire market"
+  },
+  "runs": [
+    {
+      "run_id": "e123d3f5395d43619a918eb7ccbb8c91",
+      "status": "STOPPED",
+      "reason": "STOP_REQUESTED",
+      "started_at": 1792853370.1829286,
+      "ended_at": 1792853434.2001982,
+      "completed_rounds": 2,
+      "requests": 30,
+      "peak_rss_bytes": 36737024,
+      "max_cpu_percent": 8.427521437677374,
+      "per_exchange": {
+        "UPBIT": {
+          "integrity": "ok",
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          },
+          "candles": 1540,
+          "pending_jobs": 0,
+          "coverage": [
+            {
+              "minutes": 1,
+              "status": "COMPLETE",
+              "n": 3
+            },
+            {
+              "minutes": 1,
+              "status": "SOURCE_ABSENT",
+              "n": 1
+            },
+            {
+              "minutes": 5,
+              "status": "COMPLETE",
+              "n": 1
+            },
+            {
+              "minutes": 5,
+              "status": "SOURCE_ABSENT",
+              "n": 3
+            },
+            {
+              "minutes": 15,
+              "status": "COMPLETE",
+              "n": 1
+            },
+            {
+              "minutes": 15,
+              "status": "SOURCE_ABSENT",
+              "n": 3
+            },
+            {
+              "minutes": 30,
+              "status": "COMPLETE",
+              "n": 1
+            },
+            {
+              "minutes": 30,
+              "status": "SOURCE_ABSENT",
+              "n": 3
+            }
+          ],
+          "horizons": []
+        },
+        "BITHUMB": {
+          "integrity": "ok",
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          },
+          "candles": 1231,
+          "pending_jobs": 0,
+          "coverage": [
+            {
+              "minutes": 1,
+              "status": "COMPLETE",
+              "n": 3
+            },
+            {
+              "minutes": 1,
+              "status": "SOURCE_ABSENT",
+              "n": 1
+            },
+            {
+              "minutes": 5,
+              "status": "COMPLETE",
+              "n": 1
+            },
+            {
+              "minutes": 5,
+              "status": "SOURCE_ABSENT",
+              "n": 3
+            },
+            {
+              "minutes": 15,
+              "status": "COMPLETE",
+              "n": 1
+            },
+            {
+              "minutes": 15,
+              "status": "SOURCE_ABSENT",
+              "n": 3
+            },
+            {
+              "minutes": 30,
+              "status": "COMPLETE",
+              "n": 1
+            },
+            {
+              "minutes": 30,
+              "status": "SOURCE_ABSENT",
+              "n": 3
+            }
+          ],
+          "horizons": []
+        }
+      },
+      "collection_errors": {
+        "UPBIT": [],
+        "BITHUMB": []
+      },
+      "close_errors": {},
+      "no_orders": true,
+      "performance_verdict": "INSUFFICIENT_DATA"
+    },
+    {
+      "run_id": "daf2306ba9f84b0a8a24417b44a0e1ee",
+      "status": "BOUNDED_STOP",
+      "reason": "ROUND_TIME_RESERVE",
+      "started_at": 1792853458.1237936,
+      "ended_at": 1792853767.8540454,
+      "completed_rounds": 7,
+      "requests": 62,
+      "peak_rss_bytes": 36798464,
+      "max_cpu_percent": 4.90045283810616,
+      "per_exchange": {
+        "UPBIT": {
+          "integrity": "ok",
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          },
+          "candles": 1561,
+          "pending_jobs": 0,
+          "coverage": [
+            {
+              "minutes": 1,
+              "status": "COMPLETE",
+              "n": 6
+            },
+            {
+              "minutes": 1,
+              "status": "SOURCE_ABSENT",
+              "n": 2
+            },
+            {
+              "minutes": 5,
+              "status": "COMPLETE",
+              "n": 2
+            },
+            {
+              "minutes": 5,
+              "status": "SOURCE_ABSENT",
+              "n": 6
+            },
+            {
+              "minutes": 15,
+              "status": "COMPLETE",
+              "n": 2
+            },
+            {
+              "minutes": 15,
+              "status": "SOURCE_ABSENT",
+              "n": 6
+            },
+            {
+              "minutes": 30,
+              "status": "COMPLETE",
+              "n": 2
+            },
+            {
+              "minutes": 30,
+              "status": "SOURCE_ABSENT",
+              "n": 6
+            }
+          ],
+          "horizons": []
+        },
+        "BITHUMB": {
+          "integrity": "ok",
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          },
+          "candles": 1253,
+          "pending_jobs": 0,
+          "coverage": [
+            {
+              "minutes": 1,
+              "status": "COMPLETE",
+              "n": 6
+            },
+            {
+              "minutes": 1,
+              "status": "SOURCE_ABSENT",
+              "n": 2
+            },
+            {
+              "minutes": 5,
+              "status": "COMPLETE",
+              "n": 3
+            },
+            {
+              "minutes": 5,
+              "status": "SOURCE_ABSENT",
+              "n": 5
+            },
+            {
+              "minutes": 15,
+              "status": "COMPLETE",
+              "n": 2
+            },
+            {
+              "minutes": 15,
+              "status": "SOURCE_ABSENT",
+              "n": 6
+            },
+            {
+              "minutes": 30,
+              "status": "COMPLETE",
+              "n": 2
+            },
+            {
+              "minutes": 30,
+              "status": "SOURCE_ABSENT",
+              "n": 6
+            }
+          ],
+          "horizons": []
+        }
+      },
+      "collection_errors": {
+        "UPBIT": [],
+        "BITHUMB": []
+      },
+      "close_errors": {},
+      "no_orders": true,
+      "performance_verdict": "INSUFFICIENT_DATA"
+    }
+  ],
+  "exits": [
+    {
+      "at": 1792853434.2209315,
+      "run_id": "e123d3f5395d43619a918eb7ccbb8c91",
+      "worker_reaped": true,
+      "worker_returncode": 0,
+      "forced_kill": false,
+      "automatic_restart": false
+    },
+    {
+      "at": 1792853767.8756752,
+      "run_id": "daf2306ba9f84b0a8a24417b44a0e1ee",
+      "worker_reaped": true,
+      "worker_returncode": 0,
+      "forced_kill": false,
+      "automatic_restart": false
+    }
+  ],
+  "http": {
+    "attempts": 92,
+    "statuses": {
+      "HTTP_END": 92
+    },
+    "per_run": {
+      "daf2306ba9f84b0a8a24417b44a0e1ee": 62,
+      "e123d3f5395d43619a918eb7ccbb8c91": 30
+    },
+    "quick_check": "ok"
+  },
+  "task_http_including_diagnosis": 100,
+  "observed_process_seconds": 373.74752140045166,
+  "unobserved_restart_gap_seconds": 23.923595428466797,
+  "event_policy": {
+    "horizon_minutes": 60,
+    "thresholds_pct": [
+      5,
+      10
+    ],
+    "grid_seconds": 300,
+    "reference": "First fully observed 5-minute anchor whose future high hits target; suppress new same-threshold anchor through t+60m",
+    "early_reference": "Actual LIVE detected_at in [anchor-30m,anchor]; NOT certified onset prediction",
+    "chase": "Actual LIVE detected_at in (anchor,first_target_close)",
+    "late": "Actual LIVE detected_at in [first_target_close,anchor+60m]",
+    "population": "Only new episode, fixed four alts per venue, exact anchor and full future 60m; exclude bootstrap"
+  },
+  "per_exchange": {
+    "UPBIT": {
+      "quick_check": "ok",
+      "cohort_markets": 5,
+      "states": [
+        {
+          "market": "KRW-BTC",
+          "verified_until": 1792853760,
+          "last_observation": 1792831500,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ENA",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ETH",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-FLOCK",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-SAND",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        }
+      ],
+      "common_verified_until": 1792853760,
+      "candle_counts": [
+        {
+          "market": "KRW-BTC",
+          "total": 366,
+          "after_signal_start": 6
+        },
+        {
+          "market": "KRW-ENA",
+          "total": 316,
+          "after_signal_start": 5
+        },
+        {
+          "market": "KRW-ETH",
+          "total": 366,
+          "after_signal_start": 6
+        },
+        {
+          "market": "KRW-FLOCK",
+          "total": 211,
+          "after_signal_start": 0
+        },
+        {
+          "market": "KRW-SAND",
+          "total": 302,
+          "after_signal_start": 4
+        }
+      ],
+      "coverage": [
+        {
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 6
+        },
+        {
+          "minutes": 1,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "minutes": 5,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 6
+        },
+        {
+          "minutes": 15,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 6
+        },
+        {
+          "minutes": 30,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 6
+        }
+      ],
+      "coverage_by_market": [
+        {
+          "market": "KRW-ENA",
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ENA",
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-ENA",
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-ENA",
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 5,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 15,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 30,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 1
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 1,
+          "status": "SOURCE_ABSENT",
+          "n": 1
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 1
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 1,
+          "status": "SOURCE_ABSENT",
+          "n": 1
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        }
+      ],
+      "signal_count": 0,
+      "source_counts": {},
+      "signal_details": [],
+      "signal_context": [],
+      "horizons": [],
+      "events": {
+        "5": {
+          "eligible_full_future_anchors": 0,
+          "cases": [],
+          "recall_pct": null
+        },
+        "10": {
+          "eligible_full_future_anchors": 0,
+          "cases": [],
+          "recall_pct": null
+        }
+      },
+      "sessions": [
+        {
+          "session_id": "c00a55a3d6e442a89b692622eed8c35c",
+          "started_at": 1792853370,
+          "ended_at": 1792853434,
+          "status": "STOPPED",
+          "restart": 0,
+          "previous_session_id": null
+        },
+        {
+          "session_id": "8934ff83699a4a54aad363c317bce1d4",
+          "started_at": 1792853458,
+          "ended_at": 1792853767,
+          "status": "STOPPED",
+          "restart": 1,
+          "previous_session_id": "c00a55a3d6e442a89b692622eed8c35c"
+        }
+      ],
+      "cycle_statuses": {
+        "COMPLETE": 9
+      },
+      "pending_jobs": 0,
+      "collection_errors": [],
+      "late_candles": 0,
+      "future_candles_at_stop": 0,
+      "timestamp_errors": 0,
+      "duplicate_signals": 0,
+      "prior_append_only_rows_preserved": {
+        "minute_candles": true,
+        "signals": true,
+        "signal_features": true,
+        "live_signal_details": true,
+        "candle_receipts": true,
+        "coverage_windows": true,
+        "signal_context": true,
+        "scanner_sessions": true,
+        "scanner_cycles": true,
+        "collection_pages": true
+      },
+      "progress_preserved": {
+        "KRW-BTC": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-ENA": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-ETH": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-FLOCK": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-SAND": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        }
+      }
+    },
+    "BITHUMB": {
+      "quick_check": "ok",
+      "cohort_markets": 5,
+      "states": [
+        {
+          "market": "KRW-BTC",
+          "verified_until": 1792853760,
+          "last_observation": 1792831500,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ENA",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ETH",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-FLOCK",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-SAND",
+          "verified_until": 1792853760,
+          "last_observation": 1792853700,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        }
+      ],
+      "common_verified_until": 1792853760,
+      "candle_counts": [
+        {
+          "market": "KRW-BTC",
+          "total": 364,
+          "after_signal_start": 6
+        },
+        {
+          "market": "KRW-ENA",
+          "total": 269,
+          "after_signal_start": 6
+        },
+        {
+          "market": "KRW-ETH",
+          "total": 360,
+          "after_signal_start": 6
+        },
+        {
+          "market": "KRW-FLOCK",
+          "total": 142,
+          "after_signal_start": 3
+        },
+        {
+          "market": "KRW-SAND",
+          "total": 118,
+          "after_signal_start": 1
+        }
+      ],
+      "coverage": [
+        {
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 6
+        },
+        {
+          "minutes": 1,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "minutes": 5,
+          "status": "COMPLETE",
+          "n": 3
+        },
+        {
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 5
+        },
+        {
+          "minutes": 15,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 6
+        },
+        {
+          "minutes": 30,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 6
+        }
+      ],
+      "coverage_by_market": [
+        {
+          "market": "KRW-ENA",
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ENA",
+          "minutes": 5,
+          "status": "COMPLETE",
+          "n": 1
+        },
+        {
+          "market": "KRW-ENA",
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 1
+        },
+        {
+          "market": "KRW-ENA",
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-ENA",
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 5,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 15,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-ETH",
+          "minutes": 30,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 1,
+          "status": "COMPLETE",
+          "n": 2
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-FLOCK",
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 1,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 5,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 15,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        },
+        {
+          "market": "KRW-SAND",
+          "minutes": 30,
+          "status": "SOURCE_ABSENT",
+          "n": 2
+        }
+      ],
+      "signal_count": 0,
+      "source_counts": {},
+      "signal_details": [],
+      "signal_context": [],
+      "horizons": [],
+      "events": {
+        "5": {
+          "eligible_full_future_anchors": 0,
+          "cases": [],
+          "recall_pct": null
+        },
+        "10": {
+          "eligible_full_future_anchors": 0,
+          "cases": [],
+          "recall_pct": null
+        }
+      },
+      "sessions": [
+        {
+          "session_id": "da6c6dd8a00b4995a5b9e9091ba84c6d",
+          "started_at": 1792853370,
+          "ended_at": 1792853434,
+          "status": "STOPPED",
+          "restart": 0,
+          "previous_session_id": null
+        },
+        {
+          "session_id": "8652970f16834908894217f564518caa",
+          "started_at": 1792853458,
+          "ended_at": 1792853767,
+          "status": "STOPPED",
+          "restart": 1,
+          "previous_session_id": "da6c6dd8a00b4995a5b9e9091ba84c6d"
+        }
+      ],
+      "cycle_statuses": {
+        "COMPLETE": 9
+      },
+      "pending_jobs": 0,
+      "collection_errors": [],
+      "late_candles": 0,
+      "future_candles_at_stop": 0,
+      "timestamp_errors": 0,
+      "duplicate_signals": 0,
+      "prior_append_only_rows_preserved": {
+        "minute_candles": true,
+        "signals": true,
+        "signal_features": true,
+        "live_signal_details": true,
+        "candle_receipts": true,
+        "coverage_windows": true,
+        "signal_context": true,
+        "scanner_sessions": true,
+        "scanner_cycles": true,
+        "collection_pages": true
+      },
+      "progress_preserved": {
+        "KRW-BTC": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-ENA": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-ETH": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-FLOCK": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        },
+        "KRW-SAND": {
+          "verified_non_decreasing": true,
+          "observation_non_decreasing": true
+        }
+      }
+    }
+  },
+  "original_signals": 163,
+  "original_quick_check": "ok",
+  "protected_inputs_unchanged": {
+    "C:/dev/coin_api-1/data/altcoin_market.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4_before_source_1790866337414810500.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4_smoke_1790696252.db": true,
+    "C:/dev/coin_api-1/data/historical_market.db": true,
+    "C:/dev/coin_api-1/data/replay_20260921.db": true,
+    "C:/dev/coin_api-1/data/research_market_v1.db": true,
+    "C:/dev/coin_api-1/data/research_market_v1_smoke.db": true,
+    "C:/dev/coin_api-1/data/research_market_validation_v1.db": true,
+    "C:/dev/coin_api-1/reports/altcoin_research.json": true,
+    "C:/dev/coin_api-1/reports/altcoin_research.md": true,
+    "C:/dev/coin_api-1/reports/backtest_v16_result.json": true,
+    "C:/dev/coin_api-1/reports/backtest_v16_result.md": true,
+    "C:/dev/coin_api-1/reports/data_quality_audit.json": true,
+    "C:/dev/coin_api-1/reports/data_quality_audit.md": true,
+    "C:/dev/coin_api-1/reports/data_quality_daily.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_deficits_5d.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_deficits_7d.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_markets.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_market_daily.csv": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_state_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_replay.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_source_migration.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_wal_repair.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.md": true,
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.json": true,
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.md": true,
+    "C:/dev/coin_api-1/reports/replay_20260921.json": true,
+    "C:/dev/coin_api-1/reports/replay_20260921.md": true,
+    "C:/dev/coin_api-1/reports/research_dataset_collector_v1_validation.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.md": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.md": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.md": true,
+    "C:/dev/coin_api-1/reports/research_market_validation_v1_dry_run.txt": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.csv": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.json": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_charts.html": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.md": true,
+    "C:/dev/coin_api-1/reports/surge_pattern_result.json": true,
+    "C:/dev/coin_api-1/reports/surge_pattern_result.md": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/audit.py": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/evidence.json": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_audit.py": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_evidence.json": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/supplemental.json": true,
+    "C:/dev/coin_api-1/docs/forward_surge_v3_validation_policy.json": true,
+    "C:/dev/coin_api-1/docs/research_market_validation_v1_manifest.json": true,
+    "C:/dev/coin_API/crypto_scanner.db": true,
+    "C:/dev/coin_API/scanner_v15.py": true,
+    "C:/dev/coin_API/scanner_v16.py": true,
+    "C:/dev/coin_API/db_analyzer_v7.py": true,
+    "C:/dev/coin_API/db_checker_v1.py": true
+  },
+  "v42_runtime_preserved": {
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.bootstrap-backup.db": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db-shm": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db-wal": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db.lock": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\config.json": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\events.jsonl": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\supervisor.json": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\supervisor_exit.json": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.bootstrap-backup.db": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db-shm": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db-wal": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db.lock": true,
+    "data\\scanner_v42_live\\episode_20261024_supported\\worker_summary.json": true
+  },
+  "frozen_code_unchanged": true,
+  "raw_runtime_bytes": 886609,
+  "raw_runtime_hashes": {
+    "data\\scanner_v43_live\\episode_20261024\\bithumb.db": "c0bcaf00c131ce7dd90db9932d46bada81b07f8d4823d43c728e05ddbcfcc4b3",
+    "data\\scanner_v43_live\\episode_20261024\\bithumb.db-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "data\\scanner_v43_live\\episode_20261024\\bithumb.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data\\scanner_v43_live\\episode_20261024\\bithumb.db.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "data\\scanner_v43_live\\episode_20261024\\config.json": "d18ae87ba813c913407d9e9ea6c8e7a248255bb7f5e9d0849fdc159ef8efb16d",
+    "data\\scanner_v43_live\\episode_20261024\\control.db": "82447d17232df7f3ee539ec0faba5c98e1aec8e7885735a90b4be18415ddf1cb",
+    "data\\scanner_v43_live\\episode_20261024\\events.jsonl": "b74eadecc8e47fc1a8576eeecfdc4c328367ade1c87fc89f162d13702fc31983",
+    "data\\scanner_v43_live\\episode_20261024\\heartbeat.json": "36df3e4e8b157ae26e4c8b140883a82474554901c71eaff4644868ac58b94116",
+    "data\\scanner_v43_live\\episode_20261024\\STOP.first_run": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data\\scanner_v43_live\\episode_20261024\\supervisor.json": "bbdbc028230aad161c42266f1056d81fbdebae19415d2ffc5686df448cacab60",
+    "data\\scanner_v43_live\\episode_20261024\\upbit.db": "b142307ee13897f777a6221db78425e7737674c832491b0d18012179e4149450",
+    "data\\scanner_v43_live\\episode_20261024\\upbit.db-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "data\\scanner_v43_live\\episode_20261024\\upbit.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data\\scanner_v43_live\\episode_20261024\\upbit.db.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "data\\scanner_v43_live\\episode_20261024\\runs\\daf2306ba9f84b0a8a24417b44a0e1ee.exit.json": "215de168954f3ae3ee9cc915af4fdead4a4e9729c5da83a0ad4833879bdc94a6",
+    "data\\scanner_v43_live\\episode_20261024\\runs\\daf2306ba9f84b0a8a24417b44a0e1ee.json": "1296e50fac4d5e2039c499cbf1e9b36873094e0ac87973b09949e25dd89e3168",
+    "data\\scanner_v43_live\\episode_20261024\\runs\\daf2306ba9f84b0a8a24417b44a0e1ee.summary.json": "5514e433a4199f3a6256cac3c32f8ecbcab4050f9e5aabce98fbe59531f91998",
+    "data\\scanner_v43_live\\episode_20261024\\runs\\e123d3f5395d43619a918eb7ccbb8c91.exit.json": "097f8518a2b755ee567a991608a320cb93be697f49eee4bc8e48ba5be5a8e3ef",
+    "data\\scanner_v43_live\\episode_20261024\\runs\\e123d3f5395d43619a918eb7ccbb8c91.json": "9f2a5c2917d45bf7c84512dbc9471717a81a65b01815efe1b8f379ecd701b87f",
+    "data\\scanner_v43_live\\episode_20261024\\runs\\e123d3f5395d43619a918eb7ccbb8c91.summary.json": "49f02cd4c3ff281fc9fb3ec3ee4733f1f42ea85820b6bc5de2f6643ed3407fba"
+  },
+  "no_24h_run": true,
+  "no_orders": true,
+  "cohorts_not_merged": true,
+  "limitations": [
+    "Short real run; no real 60m natural signal completion unless explicitly present",
+    "No full market denominator",
+    "Native absent candles remain NULL",
+    "No real reboot or sustained external outage test"
+  ]
+}

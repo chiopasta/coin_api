@@ -1,0 +1,697 @@
+{
+  "started_at": 1792853163.4993749,
+  "ended_at": 1792853166.462366,
+  "bounds": {
+    "max_requests": 8,
+    "max_seconds": 60,
+    "min_spacing_seconds": 0.3,
+    "markets": [
+      "KRW-FLOCK",
+      "KRW-SAND",
+      "KRW-BTC"
+    ],
+    "units": [
+      1,
+      5,
+      15
+    ],
+    "retries": 0
+  },
+  "http_attempts": 8,
+  "results": [
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "unit": 1,
+      "requested_at": 1792853163.50213,
+      "params": {
+        "market": "KRW-FLOCK",
+        "count": 200,
+        "to": "2026-10-24T14:36:00+00:00"
+      },
+      "received_at": 1792853163.59397,
+      "rows": 200,
+      "raw_sha256": "09ea66e238e61efc59222cdf936c37993907219226d1ae00bbcfc46a374c3ef1",
+      "windows": [
+        {
+          "t": 1792851900,
+          "stored": 16,
+          "missing": [
+            1792850160,
+            1792850220,
+            1792850280,
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850760,
+            1792850880,
+            1792851120,
+            1792851240,
+            1792851720,
+            1792851780
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850160,
+            1792850220,
+            1792850280,
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850760,
+            1792850880,
+            1792851120,
+            1792851240,
+            1792851720,
+            1792851780
+          ]
+        },
+        {
+          "t": 1792852200,
+          "stored": 18,
+          "missing": [
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850760,
+            1792850880,
+            1792851120,
+            1792851240,
+            1792851720,
+            1792851780,
+            1792851960
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850760,
+            1792850880,
+            1792851120,
+            1792851240,
+            1792851720,
+            1792851780,
+            1792851960
+          ]
+        },
+        {
+          "t": 1792852500,
+          "stored": 21,
+          "missing": [
+            1792850760,
+            1792850880,
+            1792851120,
+            1792851240,
+            1792851720,
+            1792851780,
+            1792851960,
+            1792852320,
+            1792852380
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850760,
+            1792850880,
+            1792851120,
+            1792851240,
+            1792851720,
+            1792851780,
+            1792851960,
+            1792852320,
+            1792852380
+          ]
+        }
+      ]
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "unit": 1,
+      "requested_at": 1792853163.9091675,
+      "params": {
+        "market": "KRW-SAND",
+        "count": 200,
+        "to": "2026-10-24T14:36:00+00:00"
+      },
+      "received_at": 1792853163.950467,
+      "rows": 200,
+      "raw_sha256": "ec9425b3b97ef810f9b705fc31f2212723b640b44bd43a3e891a005ad0c78595",
+      "windows": [
+        {
+          "t": 1792851900,
+          "stored": 27,
+          "missing": [
+            1792850520,
+            1792850940,
+            1792851000
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850520,
+            1792850940,
+            1792851000
+          ]
+        },
+        {
+          "t": 1792852200,
+          "stored": 27,
+          "missing": [
+            1792850520,
+            1792850940,
+            1792851000
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850520,
+            1792850940,
+            1792851000
+          ]
+        },
+        {
+          "t": 1792852500,
+          "stored": 28,
+          "missing": [
+            1792850940,
+            1792851000
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850940,
+            1792851000
+          ]
+        }
+      ]
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "unit": 1,
+      "requested_at": 1792853164.2737756,
+      "params": {
+        "market": "KRW-FLOCK",
+        "count": 200,
+        "to": "2026-10-24T23:36:00"
+      },
+      "received_at": 1792853164.3196113,
+      "rows": 200,
+      "raw_sha256": "c6a222a1a817ee5f1c2962c34ac4e77f5fcfc6f919b2f41b15ef6dfcac823fe8",
+      "windows": [
+        {
+          "t": 1792851900,
+          "stored": 14,
+          "missing": [
+            1792850100,
+            1792850160,
+            1792850220,
+            1792850340,
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850700,
+            1792850760,
+            1792850820,
+            1792850940,
+            1792851000,
+            1792851600,
+            1792851660,
+            1792851780
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850100,
+            1792850160,
+            1792850220,
+            1792850340,
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850700,
+            1792850760,
+            1792850820,
+            1792850940,
+            1792851000,
+            1792851600,
+            1792851660,
+            1792851780
+          ]
+        },
+        {
+          "t": 1792852200,
+          "stored": 14,
+          "missing": [
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850700,
+            1792850760,
+            1792850820,
+            1792850940,
+            1792851000,
+            1792851600,
+            1792851660,
+            1792851780,
+            1792851900,
+            1792851960,
+            1792852020,
+            1792852080
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850700,
+            1792850760,
+            1792850820,
+            1792850940,
+            1792851000,
+            1792851600,
+            1792851660,
+            1792851780,
+            1792851900,
+            1792851960,
+            1792852020,
+            1792852080
+          ]
+        },
+        {
+          "t": 1792852500,
+          "stored": 15,
+          "missing": [
+            1792850700,
+            1792850760,
+            1792850820,
+            1792850940,
+            1792851000,
+            1792851600,
+            1792851660,
+            1792851780,
+            1792851900,
+            1792851960,
+            1792852020,
+            1792852080,
+            1792852260,
+            1792852320,
+            1792852440
+          ],
+          "historical_response_spans_window": false,
+          "missing_now_returned": [],
+          "missing_still_source_absent": null
+        }
+      ]
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "unit": 1,
+      "requested_at": 1792853164.6374772,
+      "params": {
+        "market": "KRW-SAND",
+        "count": 200,
+        "to": "2026-10-24T23:36:00"
+      },
+      "received_at": 1792853164.6819923,
+      "rows": 200,
+      "raw_sha256": "c5984b4a2fb37ba57d68aad930ebf0f19f33fb388fea5bd91d7174705ff72ef0",
+      "windows": [
+        {
+          "t": 1792851900,
+          "stored": 15,
+          "missing": [
+            1792850100,
+            1792850160,
+            1792850220,
+            1792850280,
+            1792850340,
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850700,
+            1792850940,
+            1792851000,
+            1792851180,
+            1792851600
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850100,
+            1792850160,
+            1792850220,
+            1792850280,
+            1792850340,
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850700,
+            1792850940,
+            1792851000,
+            1792851180,
+            1792851600
+          ]
+        },
+        {
+          "t": 1792852200,
+          "stored": 20,
+          "missing": [
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850700,
+            1792850940,
+            1792851000,
+            1792851180,
+            1792851600
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850400,
+            1792850460,
+            1792850520,
+            1792850580,
+            1792850640,
+            1792850700,
+            1792850940,
+            1792851000,
+            1792851180,
+            1792851600
+          ]
+        },
+        {
+          "t": 1792852500,
+          "stored": 25,
+          "missing": [
+            1792850700,
+            1792850940,
+            1792851000,
+            1792851180,
+            1792851600
+          ],
+          "historical_response_spans_window": true,
+          "missing_now_returned": [],
+          "missing_still_source_absent": [
+            1792850700,
+            1792850940,
+            1792851000,
+            1792851180,
+            1792851600
+          ]
+        }
+      ]
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-BTC",
+      "unit": 5,
+      "requested_at": 1792853165.0061946,
+      "params": {
+        "market": "KRW-BTC",
+        "count": 200,
+        "to": "2026-10-24T14:35:00+00:00"
+      },
+      "received_at": 1792853165.0457978,
+      "rows": 200,
+      "raw_sha256": "128c64e2c97c324d95bbb4993413379ea29ef4155d2694e3d634fd34fa2e286e",
+      "native_value_crosscheck": [
+        {
+          "ts": 1792852200,
+          "native_value": 483072884.51815,
+          "minute_value": 483072884.51815003,
+          "absolute_error": 5.960464477539063e-08,
+          "tolerance": 4.8307288451815,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851900,
+          "native_value": 1660073472.47123,
+          "minute_value": 1660073472.47123,
+          "absolute_error": 0.0,
+          "tolerance": 16.6007347247123,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851600,
+          "native_value": 1184426269.21628,
+          "minute_value": 1184426269.21628,
+          "absolute_error": 0.0,
+          "tolerance": 11.8442626921628,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851300,
+          "native_value": 5556609502.33064,
+          "minute_value": 5556609502.33064,
+          "absolute_error": 0.0,
+          "tolerance": 55.5660950233064,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851000,
+          "native_value": 149073749.45158,
+          "minute_value": 149073749.45158,
+          "absolute_error": 0.0,
+          "tolerance": 1.4907374945157998,
+          "within_tolerance": true
+        }
+      ]
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-BTC",
+      "unit": 15,
+      "requested_at": 1792853165.3637264,
+      "params": {
+        "market": "KRW-BTC",
+        "count": 200,
+        "to": "2026-10-24T14:30:00+00:00"
+      },
+      "received_at": 1792853165.4155416,
+      "rows": 200,
+      "raw_sha256": "52a5001152d454321b41a24b6e2c9d805312e8ef40ad7d823dcd312e7992fecd",
+      "native_value_crosscheck": [
+        {
+          "ts": 1792851300,
+          "native_value": 8401109244.01815,
+          "minute_value": 8401109244.01815,
+          "absolute_error": 0.0,
+          "tolerance": 84.0110924401815,
+          "within_tolerance": true
+        }
+      ]
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-BTC",
+      "unit": 5,
+      "requested_at": 1792853165.7335706,
+      "params": {
+        "market": "KRW-BTC",
+        "count": 200,
+        "to": "2026-10-24T23:35:00"
+      },
+      "received_at": 1792853165.779494,
+      "rows": 200,
+      "raw_sha256": "2eee3b9a9f2e928b442ee0eb53b2f3815a945a60621de198219cf9a42ebddd22",
+      "native_value_crosscheck": [
+        {
+          "ts": 1792852200,
+          "native_value": 215548647.54658,
+          "minute_value": 215548647.54658002,
+          "absolute_error": 2.9802322387695312e-08,
+          "tolerance": 2.1554864754658,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851900,
+          "native_value": 942323289.65822,
+          "minute_value": 942323289.65822,
+          "absolute_error": 0.0,
+          "tolerance": 9.423232896582201,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851600,
+          "native_value": 293512362.49704,
+          "minute_value": 293512362.49704,
+          "absolute_error": 0.0,
+          "tolerance": 2.9351236249704,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851300,
+          "native_value": 2182520556.19079,
+          "minute_value": 2182520556.19079,
+          "absolute_error": 0.0,
+          "tolerance": 21.825205561907904,
+          "within_tolerance": true
+        },
+        {
+          "ts": 1792851000,
+          "native_value": 54667071.29075,
+          "minute_value": 54667071.29075,
+          "absolute_error": 0.0,
+          "tolerance": 1.0,
+          "within_tolerance": true
+        }
+      ]
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-BTC",
+      "unit": 15,
+      "requested_at": 1792853166.0992968,
+      "params": {
+        "market": "KRW-BTC",
+        "count": 200,
+        "to": "2026-10-24T23:30:00"
+      },
+      "received_at": 1792853166.1429539,
+      "rows": 200,
+      "raw_sha256": "001c3f7f20a8eed01c4983bab386ddac1f94f2d770cd141990e8e5458f969f62",
+      "native_value_crosscheck": [
+        {
+          "ts": 1792851300,
+          "native_value": 3418356208.34605,
+          "minute_value": 3418356208.3460503,
+          "absolute_error": 4.76837158203125e-07,
+          "tolerance": 34.1835620834605,
+          "within_tolerance": true
+        }
+      ]
+    }
+  ],
+  "protected_inputs_unchanged": {
+    "C:/dev/coin_api-1/data/altcoin_market.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4_before_source_1790866337414810500.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4_smoke_1790696252.db": true,
+    "C:/dev/coin_api-1/data/historical_market.db": true,
+    "C:/dev/coin_api-1/data/replay_20260921.db": true,
+    "C:/dev/coin_api-1/data/research_market_v1.db": true,
+    "C:/dev/coin_api-1/data/research_market_v1_smoke.db": true,
+    "C:/dev/coin_api-1/data/research_market_validation_v1.db": true,
+    "C:/dev/coin_api-1/reports/altcoin_research.json": true,
+    "C:/dev/coin_api-1/reports/altcoin_research.md": true,
+    "C:/dev/coin_api-1/reports/backtest_v16_result.json": true,
+    "C:/dev/coin_api-1/reports/backtest_v16_result.md": true,
+    "C:/dev/coin_api-1/reports/data_quality_audit.json": true,
+    "C:/dev/coin_api-1/reports/data_quality_audit.md": true,
+    "C:/dev/coin_api-1/reports/data_quality_daily.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_deficits_5d.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_deficits_7d.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_markets.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_market_daily.csv": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_state_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_replay.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_source_migration.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_wal_repair.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.md": true,
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.json": true,
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.md": true,
+    "C:/dev/coin_api-1/reports/replay_20260921.json": true,
+    "C:/dev/coin_api-1/reports/replay_20260921.md": true,
+    "C:/dev/coin_api-1/reports/research_dataset_collector_v1_validation.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.md": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.md": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.md": true,
+    "C:/dev/coin_api-1/reports/research_market_validation_v1_dry_run.txt": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.csv": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.json": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_charts.html": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.md": true,
+    "C:/dev/coin_api-1/reports/surge_pattern_result.json": true,
+    "C:/dev/coin_api-1/reports/surge_pattern_result.md": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/audit.py": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/evidence.json": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_audit.py": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_evidence.json": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/supplemental.json": true,
+    "C:/dev/coin_api-1/docs/forward_surge_v3_validation_policy.json": true,
+    "C:/dev/coin_api-1/docs/research_market_validation_v1_manifest.json": true,
+    "C:/dev/coin_API/crypto_scanner.db": true,
+    "C:/dev/coin_API/scanner_v15.py": true,
+    "C:/dev/coin_API/scanner_v16.py": true,
+    "C:/dev/coin_API/db_analyzer_v7.py": true,
+    "C:/dev/coin_API/db_checker_v1.py": true
+  },
+  "v42_runtime_hashes": {
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.bootstrap-backup.db": "49669dd566633ad09aa85fa69dd8735e7bf28c78444dc5fdab75aac16ed411df",
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db": "73c2da39f7cfa576c8e5dfd463029cb6762dd5368e218077c7791445b767bf3c",
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "data\\scanner_v42_live\\episode_20261024_supported\\config.json": "6a7e0b31b81f65ff25ab6394df2346732c51d232ffdeebb15c499ccae120a2d6",
+    "data\\scanner_v42_live\\episode_20261024_supported\\events.jsonl": "f46888e62e2994671fd17a6eb4de4a08535d188293b95cd6562c19471f861d03",
+    "data\\scanner_v42_live\\episode_20261024_supported\\supervisor.json": "e2337fbd832b718a4fc844179a3f4d05b98d49727c75080b8f6526a3fe474bcb",
+    "data\\scanner_v42_live\\episode_20261024_supported\\supervisor_exit.json": "f6f10fa197bd9cb0226764b6050d4b9b0279e53d328f105227ac23a3b550b271",
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.bootstrap-backup.db": "128fab87b44ee5ad25b483ea651cc919d808741c699fee5cc623b4f4948fdee7",
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db": "d7344fb719a71ca4636e2ced029d13af0235ece3b603287d3b2cc7a0baff784c",
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "data\\scanner_v42_live\\episode_20261024_supported\\worker_summary.json": "18ecd59ad9d5a1265ae7a79dd84374635d696a2d049d7d00af9597e8276794f3"
+  },
+  "v42_runtime_preserved": true
+}

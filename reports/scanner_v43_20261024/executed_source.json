@@ -1,0 +1,10 @@
+{
+  "captured_at": 1792853427.3384159,
+  "basis": "Post-start capture; source unchanged since local creation; not a pre-start signed custody claim",
+  "sources": {
+    "coin_analysis/forward_scanner_v43.py": "44c5c6827b1cad7ce10dccd8a64cd236b878ab26daaf5f41e0dadd5640d1cfb2",
+    "coin_analysis/forward_scanner_v42.py": "d608f06e8fc47d63c023a34a723ef35b3959121bb413c630a8a6f95f403d3c30",
+    "coin_analysis/forward_scanner_v4.py": "6ebb67f835e8c821c8d55564cac30a1b1fd541dd2d973c6999dd0f9134071ca2",
+    "coin_analysis/scanner_candles.py": "ff7a8a158c92d721790037852e011051803f9673be8f601e7dbeb3f2c211c94b"
+  }
+}

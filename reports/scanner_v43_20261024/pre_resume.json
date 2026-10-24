@@ -1,0 +1,480 @@
+{
+  "at": 1792853457.0379694,
+  "first_run": {
+    "run_id": "e123d3f5395d43619a918eb7ccbb8c91",
+    "status": "STOPPED",
+    "reason": "STOP_REQUESTED",
+    "started_at": 1792853370.1829286,
+    "ended_at": 1792853434.2001982,
+    "completed_rounds": 2,
+    "requests": 30,
+    "peak_rss_bytes": 36737024,
+    "max_cpu_percent": 8.427521437677374,
+    "per_exchange": {
+      "UPBIT": {
+        "integrity": "ok",
+        "signals": {
+          "default_view": "LIVE",
+          "LIVE": {
+            "source": "LIVE",
+            "signals": 0,
+            "signal_markets": 0,
+            "L1": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "L2": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "collection_errors": []
+          },
+          "CATCHUP": {
+            "source": "CATCHUP",
+            "signals": 0,
+            "signal_markets": 0,
+            "L1": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "L2": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "collection_errors": []
+          },
+          "ALL": {
+            "source": "ALL",
+            "signals": 0,
+            "signal_markets": 0,
+            "L1": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "L2": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "collection_errors": []
+          }
+        },
+        "candles": 1540,
+        "pending_jobs": 0,
+        "coverage": [
+          {
+            "minutes": 1,
+            "status": "COMPLETE",
+            "n": 3
+          },
+          {
+            "minutes": 1,
+            "status": "SOURCE_ABSENT",
+            "n": 1
+          },
+          {
+            "minutes": 5,
+            "status": "COMPLETE",
+            "n": 1
+          },
+          {
+            "minutes": 5,
+            "status": "SOURCE_ABSENT",
+            "n": 3
+          },
+          {
+            "minutes": 15,
+            "status": "COMPLETE",
+            "n": 1
+          },
+          {
+            "minutes": 15,
+            "status": "SOURCE_ABSENT",
+            "n": 3
+          },
+          {
+            "minutes": 30,
+            "status": "COMPLETE",
+            "n": 1
+          },
+          {
+            "minutes": 30,
+            "status": "SOURCE_ABSENT",
+            "n": 3
+          }
+        ],
+        "horizons": []
+      },
+      "BITHUMB": {
+        "integrity": "ok",
+        "signals": {
+          "default_view": "LIVE",
+          "LIVE": {
+            "source": "LIVE",
+            "signals": 0,
+            "signal_markets": 0,
+            "L1": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "L2": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "collection_errors": []
+          },
+          "CATCHUP": {
+            "source": "CATCHUP",
+            "signals": 0,
+            "signal_markets": 0,
+            "L1": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "L2": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "collection_errors": []
+          },
+          "ALL": {
+            "source": "ALL",
+            "signals": 0,
+            "signal_markets": 0,
+            "L1": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "L2": {
+              "statuses": {},
+              "valid": 0,
+              "success": 0,
+              "rate_pct": null
+            },
+            "collection_errors": []
+          }
+        },
+        "candles": 1231,
+        "pending_jobs": 0,
+        "coverage": [
+          {
+            "minutes": 1,
+            "status": "COMPLETE",
+            "n": 3
+          },
+          {
+            "minutes": 1,
+            "status": "SOURCE_ABSENT",
+            "n": 1
+          },
+          {
+            "minutes": 5,
+            "status": "COMPLETE",
+            "n": 1
+          },
+          {
+            "minutes": 5,
+            "status": "SOURCE_ABSENT",
+            "n": 3
+          },
+          {
+            "minutes": 15,
+            "status": "COMPLETE",
+            "n": 1
+          },
+          {
+            "minutes": 15,
+            "status": "SOURCE_ABSENT",
+            "n": 3
+          },
+          {
+            "minutes": 30,
+            "status": "COMPLETE",
+            "n": 1
+          },
+          {
+            "minutes": 30,
+            "status": "SOURCE_ABSENT",
+            "n": 3
+          }
+        ],
+        "horizons": []
+      }
+    },
+    "collection_errors": {
+      "UPBIT": [],
+      "BITHUMB": []
+    },
+    "close_errors": {},
+    "no_orders": true,
+    "performance_verdict": "INSUFFICIENT_DATA"
+  },
+  "config_sha256": "d18ae87ba813c913407d9e9ea6c8e7a248255bb7f5e9d0849fdc159ef8efb16d",
+  "databases": {
+    "UPBIT": {
+      "fingerprints": {
+        "candle_receipts": {
+          "rows": 2004,
+          "sha256": "32eaec8e0e17f69bf388dabe9aa6a09c390ada9793fa6250602ad909b86fa59e"
+        },
+        "collection_jobs": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "collection_pages": {
+          "rows": 15,
+          "sha256": "c2b710ba3a3718bdb3365859e437b0228333d02599d2803387177aedea7b9fa2"
+        },
+        "coverage_windows": {
+          "rows": 16,
+          "sha256": "07f735ff10b46fc1eca138d78ed60dbe7963d9d2c4a25c2f8c6f03ef2e145f37"
+        },
+        "live_horizons": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "live_signal_details": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "minute_candles": {
+          "rows": 1540,
+          "sha256": "3bb2689c3184bff10e4785afab3b27882c98c63dc006ff181260e11f43915c80"
+        },
+        "scanner_config": {
+          "rows": 1,
+          "sha256": "80ee5a51e83ff0afcb1e1e6535fddc511785b3f3bda8c8ff6729c1fc29053570"
+        },
+        "scanner_cycles": {
+          "rows": 2,
+          "sha256": "88ed7b7f615ea0fb00b409f1db97d15103ae24bb413790bb436afe513ffb8dff"
+        },
+        "scanner_late_candles": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "scanner_runtime_events": {
+          "rows": 2,
+          "sha256": "d016a4b4a2518383a351e43f67d701c8a987f8b43421f1a4aeccae3efafda40b"
+        },
+        "scanner_sessions": {
+          "rows": 1,
+          "sha256": "26b81755efb61aceed7de322d76de32ec9a681538880054ed66b73e44e884923"
+        },
+        "scanner_state": {
+          "rows": 5,
+          "sha256": "647a0cba5bc80d089ca37fe227a7d9c544df76841374b62589b112679ee96980"
+        },
+        "signal_context": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_features": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_outcomes": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signals": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_migrations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_policy": {
+          "rows": 1,
+          "sha256": "bb58ea9e983aa1ffb507540216a270b288430ebf19c0769318e74b63c578d797"
+        }
+      },
+      "state": [
+        {
+          "market": "KRW-BTC",
+          "verified_until": 1792853400,
+          "last_observation": 1792831500,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ENA",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ETH",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-FLOCK",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-SAND",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        }
+      ]
+    },
+    "BITHUMB": {
+      "fingerprints": {
+        "candle_receipts": {
+          "rows": 1604,
+          "sha256": "1d4e6e2ddc3850aaa97beae24b717cab573625ffb674c71b73fe8b4fbf40d94d"
+        },
+        "collection_jobs": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "collection_pages": {
+          "rows": 13,
+          "sha256": "597dda29a7f81b4b1baaea89ef4f5ecfaf48d9388a354a6d68f2e72414eef924"
+        },
+        "coverage_windows": {
+          "rows": 16,
+          "sha256": "2535a8e4e332fcff8edc8ee8dae414041dec9208d329f11dafb6fc8a776db309"
+        },
+        "live_horizons": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "live_signal_details": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "minute_candles": {
+          "rows": 1231,
+          "sha256": "a3af17d8d13a2028c828dab0e6e0790537beb1aa70d023489881a5b01f1cf2ab"
+        },
+        "scanner_config": {
+          "rows": 1,
+          "sha256": "80ee5a51e83ff0afcb1e1e6535fddc511785b3f3bda8c8ff6729c1fc29053570"
+        },
+        "scanner_cycles": {
+          "rows": 2,
+          "sha256": "3dd400f37b83810001ab72b0d0505aa2de74c0594f09b173d3abf3a9acfc5707"
+        },
+        "scanner_late_candles": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "scanner_runtime_events": {
+          "rows": 2,
+          "sha256": "22939815f55b77769c6a3bbe7964005f607137b9ce897125de09a24dc1469552"
+        },
+        "scanner_sessions": {
+          "rows": 1,
+          "sha256": "d36a05d3b1bbf20e2a0e4be1a0333a039983a6ae405e82310a2003534638e290"
+        },
+        "scanner_state": {
+          "rows": 5,
+          "sha256": "9a39d47d90f5318bd812719559513c94203f3d9caa31c0b434467daa39756e00"
+        },
+        "signal_context": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_features": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_outcomes": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signals": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_migrations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_policy": {
+          "rows": 1,
+          "sha256": "bb58ea9e983aa1ffb507540216a270b288430ebf19c0769318e74b63c578d797"
+        }
+      },
+      "state": [
+        {
+          "market": "KRW-BTC",
+          "verified_until": 1792853400,
+          "last_observation": 1792831500,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ENA",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ETH",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-FLOCK",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-SAND",
+          "verified_until": 1792853400,
+          "last_observation": 1792853400,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        }
+      ]
+    }
+  }
+}

@@ -6,3 +6,4 @@ data/*.db-wal
 data/*.db-shm
 data/backups/
 data/scanner_v42_live/
+data/scanner_v43_live/

@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-24 V4.3 관측 이어받기·안정화 검증
+
+- [V4.3 보고서](scanner_v43_stability_validation_20261024.md), 관측 인프라 **PARTIAL**, 탐지 성능 **INSUFFICIENT_DATA**. 24시간 명령은 [운영 안내](scanner_v43_operations.md)에 준비했으나 이번에는 실행하지 않았으며 무인24시간 안전성을 입증한 상태가 아니다. 현재 관측 프로세스는 종료됐다.
+- V4.2 불완전15/24격자는 성공적으로 조회한 범위의 원천 분봉 부재였다. FLOCK·SAND 양 거래소 제한 재조회에서 기존 누락 봉 새 반환0. BTC 네이티브5/15분 거래대금과 기존 저장1분 합계12구간 모두 허용오차 내 일치. 진단8회, 오류0. 무체결/원천 부재를 보간하거나 NULL 정책을 바꾸지 않았다.
+- 별도 V4.3 wrapper에 수동 새 run 예산·동일 dataset resume, durable HTTP 장부, 로그 순환, round 예약, transient next-poll recovery/circuit, CPU·메모리·디스크 guard, receipt 기반 가격 proxy·coverage를 추가했다. 원래 V4.1 core/collector/V4.2·V15 및 점수 없음·threshold·cluster·label·관측 주기·고정5종목 cohort는 불변이다.
+- 실제 첫 실행 **23:49:30.183~23:50:34.200 KST**, STOP 종료. 같은 DB resume **23:50:58.124~23:56:07.854**, ROUND_TIME_RESERVE 종료. 합계373.748초, 재시작 공백23.924초 제외. 총9round·LIVE HTTP92회+진단8회=100회. 기존 append-only 모든 행·state 진도 보존, 실제 duplicate lock 거부 확인.
+- 업비트/빗썸 각5시장, 새 신호0. 저장2,814봉 중warmup2,771·signal_start 이후43봉. 신규30분 완전4/16(25.0%), 나머지12개 SOURCE_ABSENT·NOT_COLLECTED0. 기존9/24(37.5%)와 시간·표본이 달라 개선 효과로 주장하지 않는다. 자연60분 사건/신호 성과는 미검증, synthetic PENDING→resume→COMPLETE만 확인했다.
+- 양 DB/HTTP 장부 quick_check=ok, API 오류·미완료 job·시각 오류·중복 신호0. 두 worker 모두 정상 reap, forced kill0·close_errors={}. RSS max35.094MiB, CPU max8.428%/한 코어, episode 약0.846MiB. 실제 장기 장애·재부팅·24시간 자원 사용은 미검증이다.
+- **선별61개 테스트 통과**, 전체 회귀·장기 백테스트·최적화 없음. 원본163신호·86보호 입력·V4.2 원시 파일 hash 유지. raw DB/로그/진단 응답/backup은 Git 제외, 작은 증거는 `reports/scanner_v43_20261024/`. 주문·키·가상체결·다른 작업 중단·Windows 종료 없음.
+
 ## 2026-10-24 V4.2 제한 LIVE 관측 완료
 
 - [V4.2 실제 관측 보고서](scanner_v42_live_review_20261024.md), 판정 **INSUFFICIENT_DATA**. `4426c56`의 V4.1 탐지·점수 정책(점수 없음)·4% threshold·label은 변경하지 않았다. 새 공개 시세 wrapper에서 업비트·빗썸 별도 DB로 같은 V4 정책을 실행했다. 구형 V15 점수 전략 검증은 아니다.
@@ -37,7 +47,7 @@
 - 정상 종료 시 WAL TRUNCATE checkpoint, 강제 종료 후 commit WAL 복구, 시작 시 quick_check, stale sidecar 전용 오류와 백업 기반 `repair-wal` 명령을 추가했다. 전체 자동 테스트 **126개 통과**. API와 scanner cycle은 실행하지 않았다.
 - 기존 재개 명령 유지: `python -m coin_analysis.forward_scanner_v4 --mode run --db data/forward_scanner_v4.db`.
 
-최종 갱신: 2026-10-24. 현재 단계: **V4.2 제한 LIVE 종료, 조기 탐지 실효성 INSUFFICIENT_DATA**. 매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+최종 갱신: 2026-10-24. 현재 단계: **V4.3 수동 이어받기·제한 LIVE 종료, 인프라 PARTIAL / 조기 탐지 실효성 INSUFFICIENT_DATA**. 무인24시간 운영·매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
 
 ## 최신 LIVE 성과 점검 — 2026-10-05 22:43 KST
 

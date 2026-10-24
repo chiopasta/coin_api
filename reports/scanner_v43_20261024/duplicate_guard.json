@@ -1,0 +1,6 @@
+{
+  "at": 1792853393.542307,
+  "rejected": true,
+  "reason": "Another scanner owns this DB",
+  "new_directory_created": false
+}

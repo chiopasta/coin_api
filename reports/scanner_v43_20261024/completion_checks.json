@@ -1,0 +1,23 @@
+{
+  "at": 1792853946.4665592,
+  "status": "PARTIAL",
+  "performance": "INSUFFICIENT_DATA",
+  "selective_tests": 61,
+  "all_passed": true,
+  "original_signals": 163,
+  "protected_inputs": 86,
+  "all_preserved": true,
+  "original_v42_files_preserved": true,
+  "core_unchanged": true,
+  "http_attempts": 100,
+  "worker_reaped": true,
+  "forced_kill": false,
+  "unfinished_jobs": 0,
+  "no_24h_run": true,
+  "raw_data_git_excluded": true,
+  "executed_source_hashes_match_final": true,
+  "source_hashes": {
+    "coin_analysis/forward_scanner_v43.py": "44c5c6827b1cad7ce10dccd8a64cd236b878ab26daaf5f41e0dadd5640d1cfb2",
+    "tests/test_forward_scanner_v43.py": "6318688b79c31efd54822069d519d84b0a5f2a6d6cfe4fc9e46b32adadecc35c"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "frozen_at": 1792853163.4993749,
+  "max_requests": 8,
+  "max_seconds": 60,
+  "min_spacing_seconds": 0.3,
+  "markets": [
+    "KRW-FLOCK",
+    "KRW-SAND",
+    "KRW-BTC"
+  ],
+  "units": [
+    1,
+    5,
+    15
+  ],
+  "retries": 0
+}

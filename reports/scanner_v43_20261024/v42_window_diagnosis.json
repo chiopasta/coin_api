@@ -1,0 +1,368 @@
+{
+  "at": 1792853427.3359795,
+  "rows": [
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "t": 1792851900,
+      "observed": 27,
+      "missing": [
+        1792850100,
+        1792850160,
+        1792850640
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "t": 1792852200,
+      "observed": 29,
+      "missing": [
+        1792850640
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ENA",
+      "t": 1792852500,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ETH",
+      "t": 1792851900,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ETH",
+      "t": 1792852200,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-ETH",
+      "t": 1792852500,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "t": 1792851900,
+      "observed": 16,
+      "missing": [
+        1792850160,
+        1792850220,
+        1792850280,
+        1792850400,
+        1792850460,
+        1792850520,
+        1792850580,
+        1792850640,
+        1792850760,
+        1792850880,
+        1792851120,
+        1792851240,
+        1792851720,
+        1792851780
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "t": 1792852200,
+      "observed": 18,
+      "missing": [
+        1792850400,
+        1792850460,
+        1792850520,
+        1792850580,
+        1792850640,
+        1792850760,
+        1792850880,
+        1792851120,
+        1792851240,
+        1792851720,
+        1792851780,
+        1792851960
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-FLOCK",
+      "t": 1792852500,
+      "observed": 21,
+      "missing": [
+        1792850760,
+        1792850880,
+        1792851120,
+        1792851240,
+        1792851720,
+        1792851780,
+        1792851960,
+        1792852320,
+        1792852380
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "t": 1792851900,
+      "observed": 27,
+      "missing": [
+        1792850520,
+        1792850940,
+        1792851000
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "t": 1792852200,
+      "observed": 27,
+      "missing": [
+        1792850520,
+        1792850940,
+        1792851000
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "UPBIT",
+      "market": "KRW-SAND",
+      "t": 1792852500,
+      "observed": 28,
+      "missing": [
+        1792850940,
+        1792851000
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "t": 1792851900,
+      "observed": 28,
+      "missing": [
+        1792850160,
+        1792850220
+      ],
+      "verified_until": 1792852560,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "t": 1792852200,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ENA",
+      "t": 1792852500,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ETH",
+      "t": 1792851900,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ETH",
+      "t": 1792852200,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-ETH",
+      "t": 1792852500,
+      "observed": 30,
+      "missing": [],
+      "verified_until": 1792852560,
+      "status": "COMPLETE"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "t": 1792851900,
+      "observed": 14,
+      "missing": [
+        1792850100,
+        1792850160,
+        1792850220,
+        1792850340,
+        1792850400,
+        1792850460,
+        1792850520,
+        1792850580,
+        1792850700,
+        1792850760,
+        1792850820,
+        1792850940,
+        1792851000,
+        1792851600,
+        1792851660,
+        1792851780
+      ],
+      "verified_until": 1792852500,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "t": 1792852200,
+      "observed": 14,
+      "missing": [
+        1792850400,
+        1792850460,
+        1792850520,
+        1792850580,
+        1792850700,
+        1792850760,
+        1792850820,
+        1792850940,
+        1792851000,
+        1792851600,
+        1792851660,
+        1792851780,
+        1792851900,
+        1792851960,
+        1792852020,
+        1792852080
+      ],
+      "verified_until": 1792852500,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-FLOCK",
+      "t": 1792852500,
+      "observed": 15,
+      "missing": [
+        1792850700,
+        1792850760,
+        1792850820,
+        1792850940,
+        1792851000,
+        1792851600,
+        1792851660,
+        1792851780,
+        1792851900,
+        1792851960,
+        1792852020,
+        1792852080,
+        1792852260,
+        1792852320,
+        1792852440
+      ],
+      "verified_until": 1792852500,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "t": 1792851900,
+      "observed": 15,
+      "missing": [
+        1792850100,
+        1792850160,
+        1792850220,
+        1792850280,
+        1792850340,
+        1792850400,
+        1792850460,
+        1792850520,
+        1792850580,
+        1792850640,
+        1792850700,
+        1792850940,
+        1792851000,
+        1792851180,
+        1792851600
+      ],
+      "verified_until": 1792852500,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "t": 1792852200,
+      "observed": 20,
+      "missing": [
+        1792850400,
+        1792850460,
+        1792850520,
+        1792850580,
+        1792850640,
+        1792850700,
+        1792850940,
+        1792851000,
+        1792851180,
+        1792851600
+      ],
+      "verified_until": 1792852500,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    },
+    {
+      "exchange": "BITHUMB",
+      "market": "KRW-SAND",
+      "t": 1792852500,
+      "observed": 25,
+      "missing": [
+        1792850700,
+        1792850940,
+        1792851000,
+        1792851180,
+        1792851600
+      ],
+      "verified_until": 1792852500,
+      "status": "SOURCE_ABSENT_AT_V42_COLLECTION"
+    }
+  ],
+  "counts": {
+    "COMPLETE": 9,
+    "SOURCE_ABSENT_AT_V42_COLLECTION": 15,
+    "NOT_COLLECTED": 0
+  },
+  "caveat": "No received_at raw page archive in V4.2. Source absence is the successful paginated request range, not independent proof of no trades. Later bounded requery covers FLOCK/SAND; ENA was not requeried."
+}

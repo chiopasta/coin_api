@@ -1,0 +1,14 @@
+{
+  "policy": "Frozen before the short V4.3 LIVE starts; no 24h run",
+  "markets_each_exchange": ["KRW-BTC", "KRW-ENA", "KRW-ETH", "KRW-FLOCK", "KRW-SAND"],
+  "diagnostic_requests_max": 8,
+  "first_launch_seconds_max": 150,
+  "first_launch_requests_max": 80,
+  "resume_launch_seconds_max": 330,
+  "resume_launch_requests_max": 180,
+  "task_http_max_including_diagnosis": 268,
+  "short_live_seconds_max_across_launches": 480,
+  "stop_restart": "First launch STOP after completed round; manual resume same DB, fixed signal_start. No extra observation beyond these two launches.",
+  "no_orders_or_keys": true,
+  "original_databases_not_opened_for_writing": true
+}
