@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-24 급등 Scanner 종합 진단
+
+- 최종 실전 활용 판정 **NOT_READY**, 기술 구성은 부분 작동. 별도 [종합 보고서](scanner_comprehensive_audit_20261024.md)에 버전·실행·가상거래·가격 경로·포착 평가·결점·개선 우선순위를 기록했다. production 코드, 연구 정의, 원본 DB·기존 결과는 변경하지 않았다.
+- V4 마지막 정상 cycle은 **10/7 19:27:12 KST**, session 종료 19:27:59 STOPPED. 현재 급등 Scanner 프로세스 없음. 371,708봉 / LIVE32 / CATCHUP131. 재검산 feature·cluster·완료 outcome 불일치 0, quick_check=ok. LIVE L1 **0/24**, L2 **0/20**, UNKNOWN8/12. 60분 완전20건 평균 가격 변화 **-0.2625%**, 실제 detected_at 후 첫 분 종가 기준 proxy는 -0.6080%. 비용 미반영, 실현 수익 아님.
+- `C:\dev\coin_API\crypto_scanner.db`에서 구형 원본 신호1,761 / 가상거래305건을 추가 발견했다. 종료 DIP99 평균 -0.4234%, REBOUND66 평균 -0.3400%. 점수60~64·TP3/SL1.5·신호 후45분 DIP 재계산은37건 평균 +0.3744%이나 최신12건 -0.0650%; V7의 사후 조건 선별 이력 때문에 독립 OOS 아님. OPEN115 중104개가 마지막 관측 시각 기준 기한 경과. 구형 분봉 마감 순서·preload 거래대금 결점과 가격 시각 증빙 한계가 있다.
+- discovery522 / validation455 cluster와 label을 원본 봉으로 재구성해 기존 수치 일치. 연구용 V16 proxy929건도 기존 event/summary와 정확히 일치. 기존 validation PARTIAL 및 OOS 한계 유지. 원본76개 입력과 구형5개 파일 전후 hash 동일, 두 연구 DB·policy·manifest의 이전 custody hash도 일치.
+- 별도 EXPLORATORY +5%/+10%/60분 사건은72/15개. 명목 정책 목표 전 포착41/72,11/15와 실제 LIVE 기록3/72,1/15를 구분했다. 전 시장 연속 관측이 아니며5분 기준점111,400개 중 평가가능15,427개(13.85%)뿐이라 전체 누락률·진짜 상승 onset 조기탐지율은 확정하지 않는다.
+- BTC 한정 양 거래소 ticker·1/5/15분봉 **총8회** 제한 REST 확인은 모두200. 새 Scanner/장기 수집/WS/주문 미실행. CHIO BOT은 별도 빗썸 시세 UI 경로이며 구형/V4 급등 신호 조회 연결 없음. 다른 실행 중 연구 작업 보존.
+- 관련 **선별34개 테스트 통과**, 전체 회귀 미실행. 진단 코드·JSON은 `reports/scanner_audit_20261024/`에 분리했다. 실시간 자연 신호·장기 안정성·구형 원시 체결·실제 포트폴리오 수익/MDD는 미검증이다.
+
 ## 2026-10-08 V4 WAL 정상화
 
 - `data/forward_scanner_v4.db`의 메인 파일은 정상이었으나 이전 세대 WAL/SHM이 남아 정상 SQLite 연결이 실패했다. WAL 유효 prefix의 마지막 commit은 6,274 page, 현재 메인 DB는 8,622 page여서 sidecar와 메인 파일의 세대가 일치하지 않았다.
@@ -7,7 +17,7 @@
 - 정상 종료 시 WAL TRUNCATE checkpoint, 강제 종료 후 commit WAL 복구, 시작 시 quick_check, stale sidecar 전용 오류와 백업 기반 `repair-wal` 명령을 추가했다. 전체 자동 테스트 **126개 통과**. API와 scanner cycle은 실행하지 않았다.
 - 기존 재개 명령 유지: `python -m coin_analysis.forward_scanner_v4 --mode run --db data/forward_scanner_v4.db`.
 
-최종 갱신: 2026-10-08. 현재 단계: **V4 live 관찰 DB의 WAL 정상화 완료**. 매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+최종 갱신: 2026-10-24. 현재 단계: **V4 WAL 정상화 후 종합 진단 완료, 실전 활용 NOT_READY**. 매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
 
 ## 최신 LIVE 성과 점검 — 2026-10-05 22:43 KST
 
