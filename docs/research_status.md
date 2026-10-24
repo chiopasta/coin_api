@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-24 V4.2 제한 LIVE 관측 완료
+
+- [V4.2 실제 관측 보고서](scanner_v42_live_review_20261024.md), 판정 **INSUFFICIENT_DATA**. `4426c56`의 V4.1 탐지·점수 정책(점수 없음)·4% threshold·label은 변경하지 않았다. 새 공개 시세 wrapper에서 업비트·빗썸 별도 DB로 같은 V4 정책을 실행했다. 구형 V15 점수 전략 검증은 아니다.
+- 최초 ICX 포함 scope는 업비트 지원 목록 누락으로1회 조회 후 BLOCKED, 캔들0. 원본 universe를 수정하지 않고 새 cohort를 BTC·ENA·ETH·FLOCK·SAND로 고정했다. 각5시장, BTC 제외 신호 대상 총8거래소-종목쌍이다.
+- 실제 정상 지원 episode는 **2026-10-24 23:21:06~23:36:06 KST**, worker899.668초·완료15round·HTTP168회. 최초 지원 확인1회를 합친 task HTTP169회로220회 한도 안이다. 신규 신호 **0개**, 신규 signal_start는23:25이며 그 전 봉은 warmup으로 분리했다. 원본163개 신호와 성과를 혼합하지 않았다.
+- 총 저장2,853봉 중 signal_start 이후98봉. 신규 range 관측24개 중 유효9개(37.5%), 유효 범위 max 업비트2.0161%/빗썸2.4194%. 양쪽 FLOCK·SAND는3개 격자 모두 최근30분 결측으로 NULL이다. 조기/추격/누락률 및5/15/30/60분 후속 성과는 N/A,60분 완전 사건 기준점0개다.
+- 양 DB quick_check=ok, 중복·시각 정렬·미래 봉 오류0. 실제 disk close/reopen·bootstrap backup 일치, 실제 두 번째 supervisor lock 거부 확인. 시간 한도가 마지막 빗썸 round 도중 도달해 FLOCK TIME_LIMIT·미완료 job1개를 보존하고 종료했다. 최상위 오류 요약의 stale cache를 shutdown 재조회로 작은 수정, 원시 LIVE 로그/summary는 그대로 보존했다.
+- 종료 후 worker와 supervisor 모두 종료·reap 확인. RSS max35.36MiB, runtime 약0.99MiB. 장기 무인 운영은 승인하지 않았다. [안전 종료/재시작 안내](scanner_v42_operations.md). raw DB·LIVE 로그는 `data/scanner_v42_live/`에 Git 제외 보존, 작은 증거는 `reports/scanner_v42_20261024/`.
+- **선별58개 테스트 통과**, 전체 회귀·과거 재평가·최적화 없음. 원본 신호163개·보호 입력86개 hash 유지, 원본 V4/구형 DB 사전 일관 backup 확보. 주문·가상자금 체결·API 키·다른 작업 중단·Windows 종료 없음.
+
 ## 2026-10-24 V4.1 핵심 복구·재검증
 
 - 구현4.1, frozen POLICY v4 유지. [V4.1 복구 보고서](scanner_v41_repair_validation_20261024.md). 운영 기반 판정 **PARTIAL**, 수익성·급등 조기 탐지 승인 아님. 장시간 LIVE 미실행, 현재 원본 세션 STOPPED 유지.
@@ -27,7 +37,7 @@
 - 정상 종료 시 WAL TRUNCATE checkpoint, 강제 종료 후 commit WAL 복구, 시작 시 quick_check, stale sidecar 전용 오류와 백업 기반 `repair-wal` 명령을 추가했다. 전체 자동 테스트 **126개 통과**. API와 scanner cycle은 실행하지 않았다.
 - 기존 재개 명령 유지: `python -m coin_analysis.forward_scanner_v4 --mode run --db data/forward_scanner_v4.db`.
 
-최종 갱신: 2026-10-24. 현재 단계: **V4.1 데이터·운영 기반 복구 PARTIAL, 급등 실효성·수익성 미검증**. 매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+최종 갱신: 2026-10-24. 현재 단계: **V4.2 제한 LIVE 종료, 조기 탐지 실효성 INSUFFICIENT_DATA**. 매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
 
 ## 최신 LIVE 성과 점검 — 2026-10-05 22:43 KST
 

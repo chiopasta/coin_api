@@ -1,0 +1,1191 @@
+{
+  "finalized_at": 1792852658.23293,
+  "verdict": "INSUFFICIENT_DATA",
+  "baseline_commit": "4426c56",
+  "episodes": [
+    {
+      "runtime": "C:\\dev\\coin_api-1\\data\\scanner_v42_live\\episode_20261024",
+      "config": {
+        "created_at": 1792851622.3489974,
+        "duration_seconds": 900,
+        "deadline": 1792852522.3489974,
+        "signal_start": 1792851900,
+        "markets": [
+          "KRW-BTC",
+          "KRW-ENA",
+          "KRW-FLOCK",
+          "KRW-ICX",
+          "KRW-SAND"
+        ],
+        "max_requests": 220,
+        "policy": {
+          "version": 4,
+          "range_threshold": 4,
+          "step_seconds": 300,
+          "warmup_seconds": 21600,
+          "grace_seconds": 600,
+          "missing_range": "keep cluster state",
+          "features": "V3 closed candles only",
+          "incomplete_future": "PENDING until horizon+grace then UNKNOWN; recover if later complete",
+          "universe": "fixed KRW alts plus BTC; never auto-reselect",
+          "unknown_initial_cluster": "suppress until observed below4"
+        },
+        "version": "4.2_OBSERVATION_WRAPPER",
+        "hosts": {
+          "UPBIT": "https://api.upbit.com",
+          "BITHUMB": "https://api.bithumb.com"
+        },
+        "bootstrap": "New public API warmup only; no original database input",
+        "score": "NOT_DEFINED_BY_V4"
+      },
+      "worker": {
+        "status": "BLOCKED",
+        "reason": "ValueError(\"UPBIT fixed markets unsupported: ['KRW-ICX']\")",
+        "worker_pid": 31716,
+        "worker_started_at": 1792851622.6716275,
+        "worker_ended_at": 1792851622.7535748,
+        "elapsed_seconds": 0.08194732666015625,
+        "signal_start": 1792851900,
+        "requests": 1,
+        "completed_rounds": 0,
+        "disk_reopen_verified": false,
+        "per_exchange": {},
+        "close_errors": {},
+        "collection_errors": {},
+        "peak_rss_bytes": 27037696,
+        "data_bytes": 2368,
+        "no_orders": true,
+        "unattended_continuation": false,
+        "performance_verdict": "INSUFFICIENT_DATA"
+      },
+      "supervisor": {
+        "ended_at": 1792851622.774294,
+        "worker_returncode": 1,
+        "worker_reaped": true,
+        "automatic_restart": false
+      },
+      "process_interval": {
+        "start": 1792851622.6716275,
+        "end": 1792851622.7535748
+      },
+      "http": {
+        "attempts": 1,
+        "successes": 1,
+        "errors": 0,
+        "error_details": [],
+        "count_matches_worker": true,
+        "incomplete_log": false,
+        "first_attempt": 1792851622.682781,
+        "last_response": 1792851622.75131
+      },
+      "round_completion_gaps_seconds": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "positive_pct": null
+      },
+      "event_policy": {
+        "horizon_minutes": 60,
+        "thresholds_pct": [
+          5,
+          10
+        ],
+        "grid_seconds": 300,
+        "reference": "First fully observed 5-minute anchor whose future high hits target; suppress new same-threshold anchor through t+60m",
+        "early_reference": "Actual LIVE detected_at in [anchor-30m,anchor]; NOT certified onset prediction",
+        "chase": "Actual LIVE detected_at in (anchor,first_target_close)",
+        "late": "Actual LIVE detected_at in [first_target_close,anchor+60m]",
+        "population": "Only new episode, fixed four alts per venue, exact anchor and full future 60m; exclude bootstrap"
+      },
+      "per_exchange": {},
+      "historical_cohort_merged": false,
+      "score_policy": "NULL; V4 never defined a score",
+      "price_metrics": "Unlevered price changes versus signal confirmed close; no fees/slippage, no actual fills",
+      "performance_verdict": "INSUFFICIENT_DATA"
+    },
+    {
+      "runtime": "C:\\dev\\coin_api-1\\data\\scanner_v42_live\\episode_20261024_supported",
+      "config": {
+        "created_at": 1792851666.4439452,
+        "duration_seconds": 900,
+        "deadline": 1792852566.4439452,
+        "signal_start": 1792851900,
+        "markets": [
+          "KRW-BTC",
+          "KRW-ENA",
+          "KRW-ETH",
+          "KRW-FLOCK",
+          "KRW-SAND"
+        ],
+        "max_requests": 219,
+        "policy": {
+          "version": 4,
+          "range_threshold": 4,
+          "step_seconds": 300,
+          "warmup_seconds": 21600,
+          "grace_seconds": 600,
+          "missing_range": "keep cluster state",
+          "features": "V3 closed candles only",
+          "incomplete_future": "PENDING until horizon+grace then UNKNOWN; recover if later complete",
+          "universe": "fixed KRW alts plus BTC; never auto-reselect",
+          "unknown_initial_cluster": "suppress until observed below4"
+        },
+        "version": "4.2_OBSERVATION_WRAPPER",
+        "hosts": {
+          "UPBIT": "https://api.upbit.com",
+          "BITHUMB": "https://api.bithumb.com"
+        },
+        "bootstrap": "New public API warmup only; no original database input",
+        "score": "NOT_DEFINED_BY_V4"
+      },
+      "worker": {
+        "status": "BOUNDED_STOP",
+        "reason": "TIME_LIMIT",
+        "worker_pid": 21772,
+        "worker_started_at": 1792851666.8067791,
+        "worker_ended_at": 1792852566.4745812,
+        "elapsed_seconds": 899.6678020954132,
+        "signal_start": 1792851900,
+        "requests": 168,
+        "completed_rounds": 15,
+        "disk_reopen_verified": true,
+        "per_exchange": {
+          "UPBIT": {
+            "stats": {
+              "default_view": "LIVE",
+              "LIVE": {
+                "source": "LIVE",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "CATCHUP": {
+                "source": "CATCHUP",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "ALL": {
+                "source": "ALL",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              }
+            },
+            "candle_rows": 1597,
+            "integrity": "ok",
+            "horizons": [],
+            "late_candles": 0
+          },
+          "BITHUMB": {
+            "stats": {
+              "default_view": "LIVE",
+              "LIVE": {
+                "source": "LIVE",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": [
+                  {
+                    "market": "KRW-FLOCK",
+                    "last_error": "TIME_LIMIT",
+                    "verified_until": 1792852500
+                  }
+                ]
+              },
+              "CATCHUP": {
+                "source": "CATCHUP",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": [
+                  {
+                    "market": "KRW-FLOCK",
+                    "last_error": "TIME_LIMIT",
+                    "verified_until": 1792852500
+                  }
+                ]
+              },
+              "ALL": {
+                "source": "ALL",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": [
+                  {
+                    "market": "KRW-FLOCK",
+                    "last_error": "TIME_LIMIT",
+                    "verified_until": 1792852500
+                  }
+                ]
+              }
+            },
+            "candle_rows": 1256,
+            "integrity": "ok",
+            "horizons": [],
+            "late_candles": 0
+          }
+        },
+        "close_errors": {},
+        "collection_errors": {
+          "UPBIT": [],
+          "BITHUMB": []
+        },
+        "peak_rss_bytes": 37072896,
+        "data_bytes": 1035015,
+        "no_orders": true,
+        "unattended_continuation": false,
+        "performance_verdict": "INSUFFICIENT_DATA"
+      },
+      "supervisor": {
+        "ended_at": 1792852566.4978518,
+        "worker_returncode": 0,
+        "worker_reaped": true,
+        "automatic_restart": false
+      },
+      "process_interval": {
+        "start": 1792851666.8067791,
+        "end": 1792852566.4745812
+      },
+      "http": {
+        "attempts": 168,
+        "successes": 168,
+        "errors": 0,
+        "error_details": [],
+        "count_matches_worker": true,
+        "incomplete_log": false,
+        "first_attempt": 1792851666.8171227,
+        "last_response": 1792852566.4550462
+      },
+      "round_completion_gaps_seconds": {
+        "n": 14,
+        "mean": 59.71265302385603,
+        "median": 59.99803054332733,
+        "positive_pct": 100.0
+      },
+      "event_policy": {
+        "horizon_minutes": 60,
+        "thresholds_pct": [
+          5,
+          10
+        ],
+        "grid_seconds": 300,
+        "reference": "First fully observed 5-minute anchor whose future high hits target; suppress new same-threshold anchor through t+60m",
+        "early_reference": "Actual LIVE detected_at in [anchor-30m,anchor]; NOT certified onset prediction",
+        "chase": "Actual LIVE detected_at in (anchor,first_target_close)",
+        "late": "Actual LIVE detected_at in [first_target_close,anchor+60m]",
+        "population": "Only new episode, fixed four alts per venue, exact anchor and full future 60m; exclude bootstrap"
+      },
+      "per_exchange": {
+        "UPBIT": {
+          "config": {
+            "policy": {
+              "version": 4,
+              "range_threshold": 4,
+              "step_seconds": 300,
+              "warmup_seconds": 21600,
+              "grace_seconds": 600,
+              "missing_range": "keep cluster state",
+              "features": "V3 closed candles only",
+              "incomplete_future": "PENDING until horizon+grace then UNKNOWN; recover if later complete",
+              "universe": "fixed KRW alts plus BTC; never auto-reselect",
+              "unknown_initial_cluster": "suppress until observed below4"
+            },
+            "markets": [
+              "KRW-BTC",
+              "KRW-ENA",
+              "KRW-ETH",
+              "KRW-FLOCK",
+              "KRW-SAND"
+            ],
+            "start": 1792851900,
+            "collection_start": 1792830300
+          },
+          "states": [
+            {
+              "market": "KRW-BTC",
+              "verified_until": 1792852560,
+              "last_observation": 1792830000,
+              "active": null,
+              "cluster_id": null,
+              "last_error": null
+            },
+            {
+              "market": "KRW-ENA",
+              "verified_until": 1792852560,
+              "last_observation": 1792852500,
+              "active": 0,
+              "cluster_id": null,
+              "last_error": null
+            },
+            {
+              "market": "KRW-ETH",
+              "verified_until": 1792852560,
+              "last_observation": 1792852500,
+              "active": 0,
+              "cluster_id": null,
+              "last_error": null
+            },
+            {
+              "market": "KRW-FLOCK",
+              "verified_until": 1792852560,
+              "last_observation": 1792852500,
+              "active": null,
+              "cluster_id": null,
+              "last_error": null
+            },
+            {
+              "market": "KRW-SAND",
+              "verified_until": 1792852560,
+              "last_observation": 1792852500,
+              "active": 0,
+              "cluster_id": null,
+              "last_error": null
+            }
+          ],
+          "signal_count": 0,
+          "source_counts": {},
+          "signals": [],
+          "horizon_summary": {
+            "5": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            },
+            "15": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            },
+            "30": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            },
+            "60": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            }
+          },
+          "recall": {
+            "5": {
+              "grid_anchors": 0,
+              "eligible_full_future_anchors": 0,
+              "events": 0,
+              "counts": {},
+              "capture_before_target_pct": null,
+              "early_reference_pct": null,
+              "cases": [],
+              "verdict": "INSUFFICIENT_DATA"
+            },
+            "10": {
+              "grid_anchors": 0,
+              "eligible_full_future_anchors": 0,
+              "events": 0,
+              "counts": {},
+              "capture_before_target_pct": null,
+              "early_reference_pct": null,
+              "cases": [],
+              "verdict": "INSUFFICIENT_DATA"
+            }
+          },
+          "quality": {
+            "quick_check": "ok",
+            "duplicate_signals": 0,
+            "duplicate_candles": 0,
+            "future_candles_at_stop": 0,
+            "timestamp_misalignment": 0,
+            "orphan_features": 0,
+            "unfinished_collection_jobs": 0,
+            "collection_errors": [],
+            "late_candles": 0
+          },
+          "candle_counts": [
+            {
+              "market": "KRW-BTC",
+              "total": 371,
+              "new_candles": 11,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            },
+            {
+              "market": "KRW-ENA",
+              "total": 321,
+              "new_candles": 11,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            },
+            {
+              "market": "KRW-ETH",
+              "total": 371,
+              "new_candles": 11,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            },
+            {
+              "market": "KRW-FLOCK",
+              "total": 225,
+              "new_candles": 8,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            },
+            {
+              "market": "KRW-SAND",
+              "total": 309,
+              "new_candles": 11,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            }
+          ],
+          "range_observation_panel": {
+            "KRW-ENA": {
+              "grid": 3,
+              "valid": 1,
+              "missing": 2,
+              "range30_max_pct": 2.016129032258074,
+              "at_or_above4": 0
+            },
+            "KRW-ETH": {
+              "grid": 3,
+              "valid": 3,
+              "missing": 0,
+              "range30_max_pct": 1.4987244897959107,
+              "at_or_above4": 0
+            },
+            "KRW-FLOCK": {
+              "grid": 3,
+              "valid": 0,
+              "missing": 3,
+              "range30_max_pct": null,
+              "at_or_above4": 0
+            },
+            "KRW-SAND": {
+              "grid": 3,
+              "valid": 0,
+              "missing": 3,
+              "range30_max_pct": null,
+              "at_or_above4": 0
+            }
+          },
+          "common_verified_until": 1792852560,
+          "last_observation": 1792852500,
+          "cycles": 16,
+          "cycle_statuses": {
+            "COMPLETE": 16
+          },
+          "new_label_statistics": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          },
+          "repeated_market_signals": {},
+          "immediate_declines": [],
+          "additional_surge_cases": []
+        },
+        "BITHUMB": {
+          "config": {
+            "policy": {
+              "version": 4,
+              "range_threshold": 4,
+              "step_seconds": 300,
+              "warmup_seconds": 21600,
+              "grace_seconds": 600,
+              "missing_range": "keep cluster state",
+              "features": "V3 closed candles only",
+              "incomplete_future": "PENDING until horizon+grace then UNKNOWN; recover if later complete",
+              "universe": "fixed KRW alts plus BTC; never auto-reselect",
+              "unknown_initial_cluster": "suppress until observed below4"
+            },
+            "markets": [
+              "KRW-BTC",
+              "KRW-ENA",
+              "KRW-ETH",
+              "KRW-FLOCK",
+              "KRW-SAND"
+            ],
+            "start": 1792851900,
+            "collection_start": 1792830300
+          },
+          "states": [
+            {
+              "market": "KRW-BTC",
+              "verified_until": 1792852560,
+              "last_observation": 1792830000,
+              "active": null,
+              "cluster_id": null,
+              "last_error": null
+            },
+            {
+              "market": "KRW-ENA",
+              "verified_until": 1792852560,
+              "last_observation": 1792852500,
+              "active": 0,
+              "cluster_id": null,
+              "last_error": null
+            },
+            {
+              "market": "KRW-ETH",
+              "verified_until": 1792852560,
+              "last_observation": 1792852500,
+              "active": 0,
+              "cluster_id": null,
+              "last_error": null
+            },
+            {
+              "market": "KRW-FLOCK",
+              "verified_until": 1792852500,
+              "last_observation": 1792852500,
+              "active": null,
+              "cluster_id": null,
+              "last_error": "TIME_LIMIT"
+            },
+            {
+              "market": "KRW-SAND",
+              "verified_until": 1792852500,
+              "last_observation": 1792852500,
+              "active": null,
+              "cluster_id": null,
+              "last_error": null
+            }
+          ],
+          "signal_count": 0,
+          "source_counts": {},
+          "signals": [],
+          "horizon_summary": {
+            "5": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            },
+            "15": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            },
+            "30": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            },
+            "60": {
+              "complete": 0,
+              "pending": 0,
+              "return_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mfe_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              },
+              "mae_pct": {
+                "n": 0,
+                "mean": null,
+                "median": null,
+                "positive_pct": null
+              }
+            }
+          },
+          "recall": {
+            "5": {
+              "grid_anchors": 0,
+              "eligible_full_future_anchors": 0,
+              "events": 0,
+              "counts": {},
+              "capture_before_target_pct": null,
+              "early_reference_pct": null,
+              "cases": [],
+              "verdict": "INSUFFICIENT_DATA"
+            },
+            "10": {
+              "grid_anchors": 0,
+              "eligible_full_future_anchors": 0,
+              "events": 0,
+              "counts": {},
+              "capture_before_target_pct": null,
+              "early_reference_pct": null,
+              "cases": [],
+              "verdict": "INSUFFICIENT_DATA"
+            }
+          },
+          "quality": {
+            "quick_check": "ok",
+            "duplicate_signals": 0,
+            "duplicate_candles": 0,
+            "future_candles_at_stop": 0,
+            "timestamp_misalignment": 0,
+            "orphan_features": 0,
+            "unfinished_collection_jobs": 1,
+            "collection_errors": [
+              {
+                "market": "KRW-FLOCK",
+                "last_error": "TIME_LIMIT"
+              }
+            ],
+            "late_candles": 0
+          },
+          "candle_counts": [
+            {
+              "market": "KRW-BTC",
+              "total": 369,
+              "new_candles": 11,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            },
+            {
+              "market": "KRW-ENA",
+              "total": 271,
+              "new_candles": 11,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            },
+            {
+              "market": "KRW-ETH",
+              "total": 365,
+              "new_candles": 11,
+              "first_ts": 1792830300,
+              "last_ts": 1792852500
+            },
+            {
+              "market": "KRW-FLOCK",
+              "total": 129,
+              "new_candles": 3,
+              "first_ts": 1792831980,
+              "last_ts": 1792852380
+            },
+            {
+              "market": "KRW-SAND",
+              "total": 122,
+              "new_candles": 10,
+              "first_ts": 1792830300,
+              "last_ts": 1792852440
+            }
+          ],
+          "range_observation_panel": {
+            "KRW-ENA": {
+              "grid": 3,
+              "valid": 2,
+              "missing": 1,
+              "range30_max_pct": 2.4193548387096753,
+              "at_or_above4": 0
+            },
+            "KRW-ETH": {
+              "grid": 3,
+              "valid": 3,
+              "missing": 0,
+              "range30_max_pct": 1.4335775724753086,
+              "at_or_above4": 0
+            },
+            "KRW-FLOCK": {
+              "grid": 3,
+              "valid": 0,
+              "missing": 3,
+              "range30_max_pct": null,
+              "at_or_above4": 0
+            },
+            "KRW-SAND": {
+              "grid": 3,
+              "valid": 0,
+              "missing": 3,
+              "range30_max_pct": null,
+              "at_or_above4": 0
+            }
+          },
+          "common_verified_until": 1792852500,
+          "last_observation": 1792852500,
+          "cycles": 16,
+          "cycle_statuses": {
+            "COMPLETE": 15,
+            "ERROR": 1
+          },
+          "new_label_statistics": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": [
+                {
+                  "market": "KRW-FLOCK",
+                  "last_error": "TIME_LIMIT",
+                  "verified_until": 1792852500
+                }
+              ]
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": [
+                {
+                  "market": "KRW-FLOCK",
+                  "last_error": "TIME_LIMIT",
+                  "verified_until": 1792852500
+                }
+              ]
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": [
+                {
+                  "market": "KRW-FLOCK",
+                  "last_error": "TIME_LIMIT",
+                  "verified_until": 1792852500
+                }
+              ]
+            }
+          },
+          "repeated_market_signals": {},
+          "immediate_declines": [],
+          "additional_surge_cases": []
+        }
+      },
+      "historical_cohort_merged": false,
+      "score_policy": "NULL; V4 never defined a score",
+      "price_metrics": "Unlevered price changes versus signal confirmed close; no fees/slippage, no actual fills",
+      "performance_verdict": "INSUFFICIENT_DATA"
+    }
+  ],
+  "protected_inputs": 86,
+  "preservation": {
+    "C:/dev/coin_api-1/data/altcoin_market.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4_before_source_1790866337414810500.db": true,
+    "C:/dev/coin_api-1/data/forward_scanner_v4_smoke_1790696252.db": true,
+    "C:/dev/coin_api-1/data/historical_market.db": true,
+    "C:/dev/coin_api-1/data/replay_20260921.db": true,
+    "C:/dev/coin_api-1/data/research_market_v1.db": true,
+    "C:/dev/coin_api-1/data/research_market_v1_smoke.db": true,
+    "C:/dev/coin_api-1/data/research_market_validation_v1.db": true,
+    "C:/dev/coin_api-1/reports/altcoin_research.json": true,
+    "C:/dev/coin_api-1/reports/altcoin_research.md": true,
+    "C:/dev/coin_api-1/reports/backtest_v16_result.json": true,
+    "C:/dev/coin_api-1/reports/backtest_v16_result.md": true,
+    "C:/dev/coin_api-1/reports/data_quality_audit.json": true,
+    "C:/dev/coin_api-1/reports/data_quality_audit.md": true,
+    "C:/dev/coin_api-1/reports/data_quality_daily.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_deficits_5d.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_deficits_7d.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_markets.csv": true,
+    "C:/dev/coin_api-1/reports/data_quality_market_daily.csv": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_state_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.md": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_replay.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_source_migration.json": true,
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_wal_repair.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.md": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.json": true,
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.md": true,
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.json": true,
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.md": true,
+    "C:/dev/coin_api-1/reports/replay_20260921.json": true,
+    "C:/dev/coin_api-1/reports/replay_20260921.md": true,
+    "C:/dev/coin_api-1/reports/research_dataset_collector_v1_validation.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.md": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.md": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.json": true,
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.md": true,
+    "C:/dev/coin_api-1/reports/research_market_validation_v1_dry_run.txt": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.csv": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.json": true,
+    "C:/dev/coin_api-1/reports/research_selection_distribution.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_charts.html": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.md": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.json": true,
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.md": true,
+    "C:/dev/coin_api-1/reports/surge_pattern_result.json": true,
+    "C:/dev/coin_api-1/reports/surge_pattern_result.md": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/audit.py": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/evidence.json": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_audit.py": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_evidence.json": true,
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/supplemental.json": true,
+    "C:/dev/coin_api-1/docs/forward_surge_v3_validation_policy.json": true,
+    "C:/dev/coin_api-1/docs/research_market_validation_v1_manifest.json": true,
+    "C:/dev/coin_API/crypto_scanner.db": true,
+    "C:/dev/coin_API/scanner_v15.py": true,
+    "C:/dev/coin_API/scanner_v16.py": true,
+    "C:/dev/coin_API/db_analyzer_v7.py": true,
+    "C:/dev/coin_API/db_checker_v1.py": true
+  },
+  "all_preserved": true,
+  "original_signals": 163,
+  "original_integrity": "ok",
+  "private_evidence_hashes": {
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.bootstrap-backup.db": {
+      "bytes": 221184,
+      "sha256": "49669dd566633ad09aa85fa69dd8735e7bf28c78444dc5fdab75aac16ed411df"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db": {
+      "bytes": 221184,
+      "sha256": "73c2da39f7cfa576c8e5dfd463029cb6762dd5368e218077c7791445b767bf3c"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db-shm": {
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db-wal": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db.lock": {
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\config.json": {
+      "bytes": 975,
+      "sha256": "6a7e0b31b81f65ff25ab6394df2346732c51d232ffdeebb15c499ccae120a2d6"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\events.jsonl": {
+      "bytes": 95934,
+      "sha256": "f46888e62e2994671fd17a6eb4de4a08535d188293b95cd6562c19471f861d03"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\supervisor.json": {
+      "bytes": 120,
+      "sha256": "e2337fbd832b718a4fc844179a3f4d05b98d49727c75080b8f6526a3fe474bcb"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\supervisor_exit.json": {
+      "bytes": 122,
+      "sha256": "f6f10fa197bd9cb0226764b6050d4b9b0279e53d328f105227ac23a3b550b271"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.bootstrap-backup.db": {
+      "bytes": 245760,
+      "sha256": "128fab87b44ee5ad25b483ea651cc919d808741c699fee5cc623b4f4948fdee7"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db": {
+      "bytes": 249856,
+      "sha256": "d7344fb719a71ca4636e2ced029d13af0235ece3b603287d3b2cc7a0baff784c"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db-shm": {
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db-wal": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db.lock": {
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    "data\\scanner_v42_live\\episode_20261024_supported\\worker_summary.json": {
+      "bytes": 4125,
+      "sha256": "18ecd59ad9d5a1265ae7a79dd84374635d696a2d049d7d00af9597e8276794f3"
+    }
+  },
+  "total_http_attempts": 169,
+  "task_http_budget": 220,
+  "original_163_merged": false,
+  "automatic_restart": false,
+  "worker_left_running": false
+}

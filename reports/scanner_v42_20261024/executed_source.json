@@ -1,0 +1,6 @@
+{
+  "captured_at": 1792852641.7929358,
+  "sha256": "d128062ba948c95daa269a0223d8c8235ff3523659ff6989f56ab544f906c176",
+  "private_copy": "C:\\dev\\coin_api-1\\data\\backups\\v42_preflight_20261024\\executed_wrapper.py",
+  "note": "Post-run capture of wrapper source before shutdown-summary fix; not asserted as a pre-start signed custody record. V4 core detection unchanged from 4426c56."
+}

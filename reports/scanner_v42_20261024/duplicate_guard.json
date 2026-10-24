@@ -1,0 +1,9 @@
+{
+  "at": 1792852349.9193177,
+  "returncode": 1,
+  "expected_lock_rejection": true,
+  "no_worker_started": true,
+  "no_http_events": true,
+  "detail": " [Errno 13] Permission denied\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\dev\\coin_api-1\\coin_analysis\\forward_scanner_v42.py\", line 316, in <module>\n    if __name__=='__main__':raise SystemExit(main())\n                                             ~~~~^^\n  File \"C:\\dev\\coin_api-1\\coin_analysis\\forward_scanner_v42.py\", line 313, in main\n    return run(args.runtime_dir,args.seconds,args.resume,args.max_requests)\n  File \"C:\\dev\\coin_api-1\\coin_analysis\\forward_scanner_v42.py\", line 284, in run\n    with scanner.exclusive(base/'supervisor'):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stan\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\contextlib.py\", line 141, in __enter__\n    return next(self.gen)\n  File \"C:\\dev\\coin_api-1\\coin_analysis\\forward_scanner_v4.py\", line 229, in exclusive\n    except OSError as exc:raise RuntimeError('Another scanner owns this DB') from exc\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Another scanner owns this DB\n",
+  "note": "Actual second supervisor attempt during live run; no original process stopped"
+}

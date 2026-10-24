@@ -1,0 +1,19 @@
+{
+  "at": 1792851666.0123994,
+  "prior_episode": "episode_20261024",
+  "prior_http_attempts": 1,
+  "prior_candle_requests": 0,
+  "reason": "UPBIT market/all does not list KRW-ICX. Episode blocked before candles; no automatic replacement or restart.",
+  "new_episode": "episode_20261024_supported",
+  "new_fixed_markets": [
+    "KRW-BTC",
+    "KRW-ENA",
+    "KRW-ETH",
+    "KRW-FLOCK",
+    "KRW-SAND"
+  ],
+  "new_http_budget": 219,
+  "total_task_http_budget": 220,
+  "research_universe_unchanged": true,
+  "selection_uses_no_returns": true
+}

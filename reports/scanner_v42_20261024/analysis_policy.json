@@ -1,0 +1,18 @@
+{
+  "recorded_at": 1792851980.1808224,
+  "criteria": {
+    "horizon_minutes": 60,
+    "thresholds_pct": [
+      5,
+      10
+    ],
+    "grid_seconds": 300,
+    "reference": "First fully observed 5-minute anchor whose future high hits target; suppress new same-threshold anchor through t+60m",
+    "early_reference": "Actual LIVE detected_at in [anchor-30m,anchor]; NOT certified onset prediction",
+    "chase": "Actual LIVE detected_at in (anchor,first_target_close)",
+    "late": "Actual LIVE detected_at in [first_target_close,anchor+60m]",
+    "population": "Only new episode, fixed four alts per venue, exact anchor and full future 60m; exclude bootstrap"
+  },
+  "basis": "Same explicit +5/+10 percent, 60m non-overlap reference used in prior audit; no threshold search",
+  "note": "Recorded during limited run, not falsely claimed frozen before its process start. No complete new 60m outcome inspected."
+}
