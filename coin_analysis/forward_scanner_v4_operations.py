@@ -154,6 +154,8 @@ def schema(db):
       CREATE TABLE IF NOT EXISTS scanner_sessions(session_id TEXT PRIMARY KEY,started_at INTEGER,ended_at INTEGER,status TEXT,restart INTEGER,previous_session_id TEXT);
       CREATE TABLE IF NOT EXISTS scanner_cycles(cycle_id INTEGER PRIMARY KEY,session_id TEXT,started_at INTEGER,ended_at INTEGER,watermark_before INTEGER,watermark_after INTEGER,backlog_before_seconds INTEGER,backlog_after_seconds INTEGER,status TEXT,api_errors_json TEXT,error TEXT);
       CREATE TABLE IF NOT EXISTS source_migrations(id INTEGER PRIMARY KEY,completed_at INTEGER,backup_path TEXT,report_json TEXT);
+      CREATE TABLE IF NOT EXISTS scanner_runtime_events(event_id INTEGER PRIMARY KEY,session_id TEXT,at INTEGER,kind TEXT,details_json TEXT);
+      CREATE TABLE IF NOT EXISTS scanner_late_candles(market TEXT,ts INTEGER,first_seen_at INTEGER,previous_verified_until INTEGER,PRIMARY KEY(market,ts));
     ''')
     expected=json.dumps(SOURCE_POLICY,sort_keys=True)
     row=db.execute('SELECT payload FROM source_policy WHERE id=1').fetchone()
@@ -171,13 +173,38 @@ def start_session(db,now=None):
     cfg=json.loads(db.execute('SELECT payload FROM scanner_config WHERE id=1').fetchone()[0])
     progressed=db.execute("SELECT COUNT(*) FROM scanner_state WHERE market!='KRW-BTC' AND last_observation>=?",(cfg['collection_start'],)).fetchone()[0]>0
     with db:
+        for row in db.execute("SELECT session_id FROM scanner_sessions WHERE ended_at IS NULL AND status='RUNNING'").fetchall():
+            runtime_event(db,row['session_id'],now,'INTERRUPTED','Previous process did not record termination; actual stop time unknown')
         db.execute("UPDATE scanner_sessions SET status='INTERRUPTED' WHERE ended_at IS NULL AND status='RUNNING'")
         db.execute("UPDATE scanner_cycles SET status='INTERRUPTED' WHERE ended_at IS NULL AND status='RUNNING'")
         db.execute('INSERT INTO scanner_sessions VALUES(?,?,NULL,?,?,?)',(sid,now,'RUNNING',int(bool(previous) or progressed),previous[0] if previous else None))
+        runtime_event(db,sid,now,'START','Implementation 4.1; frozen research policy unchanged')
     return sid
 
-def end_session(db,sid,status):
-    with db:db.execute('UPDATE scanner_sessions SET ended_at=?,status=? WHERE session_id=?',(int(time.time()),status,sid))
+def runtime_event(db,sid,now,kind,reason):
+    db.execute('INSERT INTO scanner_runtime_events(session_id,at,kind,details_json) VALUES(?,?,?,?)',
+               (sid,now,kind,json.dumps(dict(reason=reason),ensure_ascii=False)))
+
+def end_session(db,sid,status,reason=None):
+    now=int(time.time())
+    with db:
+        db.execute('UPDATE scanner_sessions SET ended_at=?,status=? WHERE session_id=?',(now,status,sid))
+        runtime_event(db,sid,now,'END',dict(status=status,reason=reason))
+
+def health(db,now=None):
+    """Read-only evidence of recent activity; never claims an OS process is alive."""
+    now=int(time.time()) if now is None else now
+    session=db.execute('SELECT * FROM scanner_sessions ORDER BY rowid DESC LIMIT 1').fetchone()
+    cycle=db.execute('SELECT * FROM scanner_cycles ORDER BY cycle_id DESC LIMIT 1').fetchone()
+    w,b=watermark(db,now)
+    last_activity=(cycle['ended_at'] or cycle['started_at']) if cycle else None
+    age=now-last_activity if last_activity is not None else None
+    state='NO_SESSION' if session is None else 'STOPPED' if session['ended_at'] is not None else 'CLOCK_ANOMALY' if age is not None and age<0 else 'STALE' if age is None or age>=300 else 'RECENT_ACTIVITY_UNVERIFIED'
+    return dict(operational_state=state,recorded_session=dict(session) if session else None,
+                last_cycle=dict(cycle) if cycle else None,activity_age_seconds=age,
+                watermark=w,watermark_age_seconds=now-w if w is not None else None,
+                backlog_seconds=b,collection_errors=[dict(r) for r in db.execute('SELECT market,last_error FROM scanner_state WHERE last_error IS NOT NULL')],
+                process_liveness='NOT_VERIFIED',research_policy_changed=False)
 
 def start_cycle(db,sid,now):
     w,b=watermark(db,now)

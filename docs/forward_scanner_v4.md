@@ -1,5 +1,17 @@
 # V4 실시간 forward observation recorder
 
+## 2026-10-24 V4.1 운영·입력 복구
+
+구현 버전4.1이며 frozen 연구 POLICY는 v4 그대로다. threshold·label·5분 observation·LIVE/CATCHUP 경계는 변경하지 않았다. [복구 및 검증 보고서](scanner_v41_repair_validation_20261024.md)의 최종 판정은 운영 기반 **PARTIAL**이다. 장시간 LIVE는 이번에 시작하지 않았다.
+
+- `scanner_candles.py`: UTC/KST·interval·확정 cutoff·원천 KRW 거래대금/수량·오류본문 검증. V4는 계속 업비트1분봉만 수집한다. 빗썸의 요청 `to`는 KST, 업비트는 UTC로 별도 직렬화한다. 5/15분은 검증 지원이다.
+- 새 수집 job은 직전 verified_until 이전120초를 겹쳐 확인해 늦게 발표된 봉을 재확인한다. 실제 늦은 봉만 추가하고 `scanner_late_candles`에 최초 확인 시각을 기록한다. 과거 signal/feature/state를 되감지 않으며 완료 outcome은 유지한다. 무체결 분 보간 없음.
+- malformed 데이터·확정 봉 충돌은 cursor를 확정하지 않고 cycle ERROR로 중단한다. 일반 네트워크 retry와 구분한다. 정상 원본 값을 허용오차로 덮어쓰지 않는다.
+- 긴 batch에서도 신호별 실제 저장 시각을 detected_at으로 기록한다. `scanner_runtime_events`에 시작·종료/사유·이전 비정상 중단 발견을 기록한다. 알 수 없는 과거 종료 시각은 만들지 않는다.
+- read-only health: `python -m coin_analysis.forward_scanner_v4 --mode health --db data/forward_scanner_v4.db`. 마지막 cycle·watermark·지연·저장 세션 상태를 보여주며 실제 OS 생존을 추정하지 않는다. writer lock을 요구하지 않는다.
+- 기존12개 테이블은 유지하고 두 운영 테이블만 추가한다. 이번에는 원본 DB에 schema 변경을 실행하지 않고 격리 복사본에서 보존을 확인했다.
+- 구형 paper OPEN은 V4와 별개다. `coin_analysis.legacy_open_reconciliation`으로 별도 read-only 장부를 생성할 수 있으며 원본 status/pnl을 수정하지 않는다. 상세 명령과115건의 검증 한계는 위 보고서를 따른다.
+
 ## 2026-10-08 SQLite WAL 안정화
 
 - 2026-10-07 종료 상태에서 메인 DB는 `quick_check=ok`였지만 이전 세대 `-wal`/`-shm`이 남아 정상 read-only 연결이 `database disk image is malformed`로 실패했다. WAL 자체 체크섬의 유효 prefix는 335 frame이며 마지막 commit DB 크기는 6,274 page, 현재 메인 DB는 8,622 page였다. SHM만 제거해도 실패했으므로 WAL과 현재 메인 파일의 세대 불일치가 직접 원인이다.

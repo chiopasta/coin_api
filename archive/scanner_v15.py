@@ -6,7 +6,8 @@ import threading
 import time
 import sqlite3
 from collections import defaultdict, deque
-from datetime import datetime
+from datetime import datetime, timezone
+import math
 
 
 # =========================================================
@@ -438,6 +439,36 @@ def get_markets(exchange):
 # 업비트 과거 데이터
 # =========================================================
 
+def confirmed_preload_points(rows, market, now):
+    """Archive-only repair: native KRW value, closed UTC bars, no gap compression."""
+    points = {}
+    cutoff = int((now - 5) // 60) * 60
+    for row in rows:
+        parsed = datetime.fromisoformat(row['candle_date_time_utc'])
+        if parsed.second or parsed.microsecond or parsed.tzinfo is not None:
+            raise ValueError('Expected minute-aligned naive UTC candle field')
+        ts = int(parsed.replace(tzinfo=timezone.utc).timestamp())
+        if row.get('market') != market or ts % 60:
+            raise ValueError('Invalid preload market/time')
+        if ts + 60 > cutoff:
+            continue
+        price, value = float(row['trade_price']), float(row['candle_acc_trade_price'])
+        if not math.isfinite(price) or price <= 0 or not math.isfinite(value) or value < 0:
+            raise ValueError('Invalid preload price/native value')
+        point = (price, value)
+        if ts in points and points[ts] != point:
+            raise ValueError('Conflicting preload candle')
+        points[ts] = point
+    contiguous = []
+    previous = None
+    for ts in sorted(points):
+        if previous is not None and ts != previous + 60:
+            contiguous = []
+        contiguous.append(points[ts])
+        previous = ts
+    return contiguous
+
+
 def load_upbit_candles(market):
 
     try:
@@ -461,35 +492,10 @@ def load_upbit_candles(market):
         result = http_get(url)
 
 
-        result.reverse()
+        result = confirmed_preload_points(result, market, time.time())
 
 
-        for candle in result:
-
-            close_price = candle.get(
-                "trade_price"
-            )
-
-            volume = candle.get(
-                "candle_acc_trade_volume",
-                0
-            )
-
-
-            if close_price is None:
-
-                continue
-
-
-            # =====================================
-            # 1분 거래대금 계산
-            # 거래량 × 가격
-            # =====================================
-
-            trade_value = (
-                volume
-                * close_price
-            )
+        for close_price, trade_value in result:
 
 
             minute_prices[
@@ -552,35 +558,10 @@ def load_bithumb_candles(market):
         result = http_get(url)
 
 
-        result.reverse()
+        result = confirmed_preload_points(result, market, time.time())
 
 
-        for candle in result:
-
-            close_price = candle.get(
-                "trade_price"
-            )
-
-            volume = candle.get(
-                "candle_acc_trade_volume",
-                0
-            )
-
-
-            if close_price is None:
-
-                continue
-
-
-            # =====================================
-            # 1분 거래대금 계산
-            # 거래량 × 가격
-            # =====================================
-
-            trade_value = (
-                volume
-                * close_price
-            )
+        for close_price, trade_value in result:
 
 
             minute_prices[
@@ -2806,12 +2787,10 @@ def upbit_message(
             return
 
 
-        prices[
-            "UPBIT"
-        ][market] = price
-
-
         minute = timestamp // 60000
+
+        if current_minute['UPBIT'] is not None and minute < current_minute['UPBIT']:
+            return
 
 
         if current_minute[
@@ -2836,6 +2815,9 @@ def upbit_message(
                 "UPBIT"
             ] = minute
 
+
+        # The previous bar must close using its previous trade price.
+        prices['UPBIT'][market] = price
 
         current_volume[
             "UPBIT"
@@ -2948,12 +2930,10 @@ def bithumb_message(
             return
 
 
-        prices[
-            "BITHUMB"
-        ][market] = price
-
-
         minute = timestamp // 60000
+
+        if current_minute['BITHUMB'] is not None and minute < current_minute['BITHUMB']:
+            return
 
 
         if current_minute[
@@ -2978,6 +2958,8 @@ def bithumb_message(
                 "BITHUMB"
             ] = minute
 
+
+        prices['BITHUMB'][market] = price
 
         current_volume[
             "BITHUMB"

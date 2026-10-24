@@ -11,6 +11,13 @@ from . import research_dataset_collector_v1 as collector
 from . import forward_surge_research_v3 as v3
 from .paths import DATA_DIR
 from . import forward_scanner_v4_operations as ops
+from . import scanner_candles as candles
+
+IMPLEMENTATION_VERSION='4.1'  # Operational revision; frozen research POLICY remains v4.
+LATE_RECHECK_SECONDS=120  # Two existing one-minute polls; not a signal threshold.
+
+class CandleConflictError(ValueError):
+    """A confirmed candle conflicts with stored evidence; stop, never overwrite."""
 
 STEP=300
 WARMUP=21600
@@ -80,16 +87,23 @@ def fetch_market(db,client,market,end):
     job=db.execute('SELECT * FROM collection_jobs WHERE market=?',(market,)).fetchone()
     if not job:
         if state['verified_until']>=end:return
-        with db:db.execute('INSERT INTO collection_jobs VALUES(?,?,?,?)',(market,state['verified_until'],end,end))
+        # API publication can lag a closed minute. Recheck two prior poll slots
+        # using the same 200-row request; never rewrite or rewind frozen signals.
+        start=max(config(db)['collection_start'],state['verified_until']-LATE_RECHECK_SECONDS)
+        with db:db.execute('INSERT INTO collection_jobs VALUES(?,?,?,?)',(market,start,end,end))
     while True:
         job=db.execute('SELECT * FROM collection_jobs WHERE market=?',(market,)).fetchone()
-        raw=client.get('/v1/candles/minutes/1',market=market,to=collector.iso(job['cursor']),count=200)
-        rows=collector.validate_page(raw,job['cursor'],market);oldest=rows[-1][0]
+        try:raw=client.get('/v1/candles/minutes/1',market=market,to=collector.iso(job['cursor']),count=200)
+        except ValueError as exc:raise candles.CandleValidationError(str(exc)) from exc
+        rows=candles.validate_page(raw,job['cursor'],market);oldest=rows[-1][0]
         selected=[(market,)+r for r in rows if job['start']<=r[0]<job['end']]
         with db:
             for record in selected:
                 existing=db.execute('SELECT open,high,low,close,trade_value FROM minute_candles WHERE market=? AND ts=?',record[:2]).fetchone()
-                if existing and tuple(existing)!=record[2:]:raise ValueError('Conflicting confirmed candle; stop rather than overwrite')
+                if existing and tuple(existing)!=record[2:]:raise CandleConflictError('Conflicting confirmed candle; stop rather than overwrite')
+                if existing is None and record[1]<state['verified_until']:
+                    db.execute('INSERT OR IGNORE INTO scanner_late_candles VALUES(?,?,?,?)',
+                               (market,record[1],int(time.time()),state['verified_until']))
             db.executemany('INSERT OR IGNORE INTO minute_candles VALUES(?,?,?,?,?,?,?)',selected)
             db.execute('INSERT OR IGNORE INTO collection_pages VALUES(?,?,?,?)',(market,max(oldest,job['start']),job['cursor'],len(rows)))
             if oldest<=job['start']:
@@ -104,7 +118,7 @@ def load_research(db,start,end):
     btc=series.pop('KRW-BTC')
     return v3.v2.old.Research(series,[],start,end,btc)
 
-def process_observations(db,now,emit=print):
+def process_observations(db,now,emit=print,detected_clock=None):
     cfg=config(db);states=list(db.execute('SELECT * FROM scanner_state WHERE market<>? ORDER BY market',('KRW-BTC',)))
     watermark=db.execute('SELECT MIN(verified_until) FROM scanner_state').fetchone()[0]
     end=min(watermark,now//60*60)//STEP*STEP
@@ -126,11 +140,12 @@ def process_observations(db,now,emit=print):
                     if t>=cfg['start']:
                         fs=v3.features(research,m,t);signal=v3.v2.old.identity('v4signal',m,t)
                         candidates={k:fs['values'][k] for k in ('range_15m_pct','range_30m_pct','alt_relative_60m_pct')}
-                        source=ops.source_for(t,now)
-                        db.execute('INSERT INTO signals VALUES(?,?,?,?,?,?,?,?,?)',(signal,m,t,s.price(t),width,cluster,now,max(0,now-t),source))
+                        detected=int(detected_clock()) if detected_clock is not None else now
+                        source=ops.source_for(t,detected)
+                        db.execute('INSERT INTO signals VALUES(?,?,?,?,?,?,?,?,?)',(signal,m,t,s.price(t),width,cluster,detected,max(0,detected-t),source))
                         db.execute('INSERT INTO signal_features VALUES(?,?,?,?,?)',(signal,t,json.dumps(fs['values'],allow_nan=False),json.dumps(fs['flags'],allow_nan=False),json.dumps(candidates,allow_nan=False)))
                         for y,(minutes,_) in LABELS.items():db.execute('INSERT INTO signal_outcomes VALUES(?,?,?,NULL,NULL,0,?,NULL)',(signal,y,'PENDING',minutes))
-                        message=f'SIGNAL {source} {m} time={collector.iso(t,collector.KST)} price={s.price(t)} range30={width:.3f}% range15={candidates["range_15m_pct"]} alt_relative60={candidates["alt_relative_60m_pct"]} delay={max(0,now-t)}s'
+                        message=f'SIGNAL {source} {m} time={collector.iso(t,collector.KST)} price={s.price(t)} range30={width:.3f}% range15={candidates["range_15m_pct"]} alt_relative60={candidates["alt_relative_60m_pct"]} delay={max(0,detected-t)}s'
                 db.execute('UPDATE scanner_state SET last_observation=?,active=?,cluster_id=? WHERE market=?',(t,active,cluster,m))
             if message:emit(message)
         research.feature_cache.clear();research.market_returns.clear()
@@ -178,16 +193,20 @@ def cycle(db,client,now=None,emit=print,session_id=None):
 def _cycle(db,client,now=None,emit=print):
     live_clock=now is None
     now=int(time.time()) if now is None else now
-    end=(now-5)//60*60  # settle delay; excludes all still-open minute candles
+    end=candles.closed_cutoff(now)  # same five-second settle, explicit UTC boundary
     blocked=None
     for m in config(db)['markets']:
         try:fetch_market(db,client,m,end)
         except Exception as exc:
             with db:db.execute('UPDATE scanner_state SET last_error=? WHERE market=?',(str(exc),m))
             emit(f'COLLECTION ERROR {m}: {exc}')
+            if isinstance(exc,(candles.CandleValidationError,CandleConflictError)):
+                raise  # Bad data is not a recoverable network outage.
             if isinstance(exc,collector.CollectionBlocked):blocked=exc;break
     if live_clock:now=int(time.time())
-    process_observations(db,now,emit);evaluate_outcomes(db,now,emit)
+    process_observations(db,now,emit,detected_clock=time.time if live_clock else None)
+    if live_clock:now=int(time.time())
+    evaluate_outcomes(db,now,emit)
     emit(json.dumps(grouped_statistics(db),ensure_ascii=False))
     if blocked is not None:raise blocked
     return statistics(db)
@@ -197,7 +216,9 @@ def exclusive(path):
     """OS-released single writer lock, including after forced process termination."""
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
     with open(str(path)+'.lock','a+b') as f:
-        f.seek(0);f.write(b'0');f.flush();f.seek(0)
+        f.seek(0,2)
+        if f.tell()==0:f.write(b'0');f.flush()
+        f.seek(0)
         try:
             if __import__('os').name=='nt':
                 import msvcrt
@@ -215,13 +236,17 @@ def exclusive(path):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--db',type=Path,default=DATA_DIR/'forward_scanner_v4.db')
-    p.add_argument('--mode',choices=('init','once','run','stats','migrate','repair-wal'),required=True)
+    p.add_argument('--mode',choices=('init','once','run','stats','health','migrate','repair-wal'),required=True)
     p.add_argument('--source',choices=('LIVE','CATCHUP','ALL'),default='LIVE',help='Statistics view; default LIVE')
     p.add_argument('--migration-evidence',type=Path,default=Path('reports/forward_scanner_v4_delay_causes_20261001.json'))
     p.add_argument('--market-manifest',type=Path,help='Existing frozen JSON market list, no discovery DB access')
     p.add_argument('--start',help='Explicit five-minute aligned UTC/KST time; default next five-minute tick')
     p.add_argument('--max-cycles',type=int);p.add_argument('--max-requests',type=int)
     a=p.parse_args()
+    if a.mode=='health':
+        with ops.readonly(a.db) as db:
+            config(db);print(json.dumps(ops.health(db),ensure_ascii=False,indent=2))
+        return
     if a.mode=='migrate':
         report=ops.migrate(a.db,a.migration_evidence)
         Path('reports/forward_scanner_v4_source_migration.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
@@ -245,15 +270,15 @@ def main():
                 initialize(db,m['markets'],start);print(json.dumps(config(db),ensure_ascii=False,indent=2));return
             config(db)
             client=collector.Client(max_requests=a.max_requests);n=0
-            sid=ops.start_session(db);status='CLOSED'
+            sid=ops.start_session(db);status='CLOSED';reason='bounded run completed'
             try:
                 while True:
                     cycle(db,client,session_id=sid);n+=1
                     if a.mode=='once' or a.max_cycles is not None and n>=a.max_cycles or a.max_requests is not None and client.requests>=a.max_requests:return
                     time.sleep(max(1,65-time.time()%60))
-            except KeyboardInterrupt:status='STOPPED';raise
-            except BaseException:status='ERROR';raise
-            finally:ops.end_session(db,sid,status)
+            except KeyboardInterrupt:status='STOPPED';reason='KeyboardInterrupt';raise
+            except BaseException as exc:status='ERROR';reason=repr(exc);raise
+            finally:ops.end_session(db,sid,status,reason=reason)
         finally:ops.close_cleanly(db)
 
 if __name__=='__main__':main()

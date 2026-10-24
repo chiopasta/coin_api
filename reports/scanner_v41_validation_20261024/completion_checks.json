@@ -1,0 +1,28 @@
+{
+  "protected_inputs": 86,
+  "all_hashes_preserved": true,
+  "selective_tests": 41,
+  "tests_passed": true,
+  "policy_unchanged": true,
+  "signals": 163,
+  "signal_and_outcome_mismatches": 0,
+  "path_mismatches": 0,
+  "stale_open": 115,
+  "verified_recovery_exits": 0,
+  "api_requests": 9,
+  "api_success": 6,
+  "initial_api_parameter_errors": 3,
+  "cross_interval_checks": 32,
+  "cross_interval_passed": 32,
+  "code_sha256": {
+    "coin_analysis/scanner_candles.py": "ff7a8a158c92d721790037852e011051803f9673be8f601e7dbeb3f2c211c94b",
+    "coin_analysis/legacy_open_reconciliation.py": "8d377de81ad2071812c74fc1c8141b5ed5b400494b7d72c0d93054f4fdcd8e76",
+    "coin_analysis/forward_scanner_v4.py": "6ebb67f835e8c821c8d55564cac30a1b1fd541dd2d973c6999dd0f9134071ca2",
+    "coin_analysis/forward_scanner_v4_operations.py": "906adfa5ed81926d702ddb14ca4a8476290512c6e8d89fdfe5576980ac4a4288",
+    "archive/scanner_v15.py": "ddc8f6802ccb0f1f33bf93189f8d0eea63c7a023c2e359e591a268a11219faa0",
+    "tests/test_scanner_v41.py": "39270beaaadfb69b3315e95e012ffd023c497f3075c3c9f98afab865f9f8c2ee"
+  },
+  "status": "PARTIAL",
+  "long_live_run_started": false,
+  "production_db_migrated": false
+}

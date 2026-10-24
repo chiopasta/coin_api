@@ -1,0 +1,83 @@
+test_new_minute_first_trade_does_not_change_previous_close_both_exchanges (tests.test_scanner_v41.ArchiveRepairs.test_new_minute_first_trade_does_not_change_previous_close_both_exchanges) ... ok
+test_preload_native_value_and_closed_bars_gap_and_duplicates (tests.test_scanner_v41.ArchiveRepairs.test_preload_native_value_and_closed_bars_gap_and_duplicates) ... ok
+test_1_5_15_close_boundaries_and_settle (tests.test_scanner_v41.CandleGuards.test_1_5_15_close_boundaries_and_settle) ... ok
+test_invalid_duplicate_future_page (tests.test_scanner_v41.CandleGuards.test_invalid_duplicate_future_page) ... ok
+test_native_value_not_volume_times_close (tests.test_scanner_v41.CandleGuards.test_native_value_not_volume_times_close) ... ok
+test_utc_kst_mismatch_and_interval (tests.test_scanner_v41.CandleGuards.test_utc_kst_mismatch_and_interval) ... ok
+test_candidate_requires_contiguous_timed_observations_and_is_not_closed (tests.test_scanner_v41.OpenReconciliation.test_candidate_requires_contiguous_timed_observations_and_is_not_closed) ... ok
+test_closed_original_and_timezone_required (tests.test_scanner_v41.OpenReconciliation.test_closed_original_and_timezone_required) ... ok
+test_separate_ledger_readonly_source_and_no_duplicate_publish (tests.test_scanner_v41.OpenReconciliation.test_separate_ledger_readonly_source_and_no_duplicate_publish) ... ERROR
+test_stale_preserves_original_and_never_invents_exit_or_pnl (tests.test_scanner_v41.OpenReconciliation.test_stale_preserves_original_and_never_invents_exit_or_pnl) ... ok
+test_actual_detection_clock_prevents_false_live_after_slow_processing (tests.test_scanner_v41.RuntimeRepairs.test_actual_detection_clock_prevents_false_live_after_slow_processing) ... ok
+test_confirmed_conflict_stops_without_overwrite (tests.test_scanner_v41.RuntimeRepairs.test_confirmed_conflict_stops_without_overwrite) ... ok
+test_health_and_stop_reason_preserved_after_restart (tests.test_scanner_v41.RuntimeRepairs.test_health_and_stop_reason_preserved_after_restart) ... ok
+test_http_200_error_payload_is_fatal_and_preserves_job (tests.test_scanner_v41.RuntimeRepairs.test_http_200_error_payload_is_fatal_and_preserves_job) ... ok
+test_network_retry_resume_and_duplicate_skip (tests.test_scanner_v41.RuntimeRepairs.test_network_retry_resume_and_duplicate_skip) ... ok
+test_old_schema_upgrade_preserves_existing_business_tables (tests.test_scanner_v41.RuntimeRepairs.test_old_schema_upgrade_preserves_existing_business_tables) ... ok
+test_os_lock_rejects_second_process_without_growing_file (tests.test_scanner_v41.RuntimeRepairs.test_os_lock_rejects_second_process_without_growing_file) ... ok
+test_rejected_data_logs_and_does_not_advance_cursor (tests.test_scanner_v41.RuntimeRepairs.test_rejected_data_logs_and_does_not_advance_cursor) ... ok
+test_bounded_mock_transport_smoke_and_page_resume (tests.test_forward_scanner_v4.ScannerTests.test_bounded_mock_transport_smoke_and_page_resume) ... ok
+test_existing_research_db_rejected (tests.test_forward_scanner_v4.ScannerTests.test_existing_research_db_rejected) ... ok
+test_future_mutation_deletion_cannot_change_features_or_cluster_start (tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start) ... C:\dev\coin_api-1\coin_analysis\forward_scanner_v4.py:142: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x000002C5DA4A26B0>
+  db.execute('UPDATE scanner_state SET last_observation=?,active=?,cluster_id=? WHERE market=?',(t,active,cluster,m))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_initial_high_range_is_left_censored_not_new_signal (tests.test_forward_scanner_v4.ScannerTests.test_initial_high_range_is_left_censored_not_new_signal) ... ok
+test_ip_block_stops_cycle_instead_of_repeating (tests.test_forward_scanner_v4.ScannerTests.test_ip_block_stops_cycle_instead_of_repeating) ... ok
+test_missing_future_is_unknown_and_recoverable (tests.test_forward_scanner_v4.ScannerTests.test_missing_future_is_unknown_and_recoverable) ... ok
+test_no_early_success_and_complete_failure (tests.test_forward_scanner_v4.ScannerTests.test_no_early_success_and_complete_failure) ... ok
+test_null_range_does_not_rearm_active_cluster (tests.test_forward_scanner_v4.ScannerTests.test_null_range_does_not_rearm_active_cluster) ... ok
+test_reset_allows_new_cluster_and_null_does_not_reset (tests.test_forward_scanner_v4.ScannerTests.test_reset_allows_new_cluster_and_null_does_not_reset) ... ok
+test_signal_pending_restart_and_final_outcome_immutable (tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable) ... ok
+test_abrupt_exit_recovers_committed_wal_then_cleanly_closes (tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes) ... ok
+test_catchup_generation_and_restart_keep_source (tests.test_forward_scanner_v4_operations.SourceTests.test_catchup_generation_and_restart_keep_source) ... ok
+test_clean_close_checkpoints_wal_and_preserves_values (tests.test_forward_scanner_v4_operations.SourceTests.test_clean_close_checkpoints_wal_and_preserves_values) ... ok
+test_cycle_api_error_log (tests.test_forward_scanner_v4_operations.SourceTests.test_cycle_api_error_log) ... ok
+test_default_live_and_separate_all (tests.test_forward_scanner_v4_operations.SourceTests.test_default_live_and_separate_all) ... ok
+test_exact_live_interval_boundaries (tests.test_forward_scanner_v4_operations.SourceTests.test_exact_live_interval_boundaries) ... ok
+test_migration_backup_preserves_every_business_table_and_idempotent (tests.test_forward_scanner_v4_operations.SourceTests.test_migration_backup_preserves_every_business_table_and_idempotent) ... ok
+test_migration_refuses_evidence_mismatch_without_mutation (tests.test_forward_scanner_v4_operations.SourceTests.test_migration_refuses_evidence_mismatch_without_mutation) ... ok
+test_migration_rolls_back_source_and_trigger_on_postcheck_failure (tests.test_forward_scanner_v4_operations.SourceTests.test_migration_rolls_back_source_and_trigger_on_postcheck_failure) ... ok
+test_repair_backs_up_sidecars_and_preserves_every_value (tests.test_forward_scanner_v4_operations.SourceTests.test_repair_backs_up_sidecars_and_preserves_every_value) ... ok
+test_restart_session_and_interrupted_cycle (tests.test_forward_scanner_v4_operations.SourceTests.test_restart_session_and_interrupted_cycle) ... ok
+test_sidecar_error_is_distinguished_from_main_corruption (tests.test_forward_scanner_v4_operations.SourceTests.test_sidecar_error_is_distinguished_from_main_corruption) ... ok
+
+======================================================================
+ERROR: test_separate_ledger_readonly_source_and_no_duplicate_publish (tests.test_scanner_v41.OpenReconciliation.test_separate_ledger_readonly_source_and_no_duplicate_publish)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\shutil.py", line 701, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\Users\\stan\\AppData\\Local\\Temp\\tmp92ur47f8\\legacy.db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\dev\coin_api-1\tests\test_scanner_v41.py", line 212, in test_separate_ledger_readonly_source_and_no_duplicate_publish
+    with tempfile.TemporaryDirectory() as tmp:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\tempfile.py", line 972, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\tempfile.py", line 976, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\tempfile.py", line 956, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\shutil.py", line 705, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\tempfile.py", line 931, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: 'C:\\Users\\stan\\AppData\\Local\\Temp\\tmp92ur47f8\\legacy.db'
+
+----------------------------------------------------------------------
+Ran 40 tests in 4.882s
+
+FAILED (errors=1)

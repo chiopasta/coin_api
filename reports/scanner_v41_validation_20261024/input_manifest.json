@@ -1,0 +1,349 @@
+{
+  "baseline_commit": "c015fc8",
+  "inputs": {
+    "C:/dev/coin_api-1/data/altcoin_market.db": {
+      "bytes": 461737984,
+      "sha256": "11779bc0f043cb7256c9a15c04a83a1e400a4eb5552c54eb1bba716515e2f0dd"
+    },
+    "C:/dev/coin_api-1/data/forward_scanner_v4.db": {
+      "bytes": 35315712,
+      "sha256": "376c66056b10a012bc917246a29972138106a1cef1c10e13463efc920c54d451"
+    },
+    "C:/dev/coin_api-1/data/forward_scanner_v4_before_source_1790866337414810500.db": {
+      "bytes": 9338880,
+      "sha256": "331e4a59ae94f353ff7bcc9e037b4e1644eaa3609fbc91c4093f89801468b7f2"
+    },
+    "C:/dev/coin_api-1/data/forward_scanner_v4_smoke_1790696252.db": {
+      "bytes": 147456,
+      "sha256": "b566451f3e6f913d4a4f3fe4528563429ba1b15e2e2181e2fe7f8d6ffaeeeeb9"
+    },
+    "C:/dev/coin_api-1/data/historical_market.db": {
+      "bytes": 8974336,
+      "sha256": "001e79d2e4250722168bea63d8dd802820804ee42944aec18a97e2c418d88c03"
+    },
+    "C:/dev/coin_api-1/data/replay_20260921.db": {
+      "bytes": 921600,
+      "sha256": "22e6204d84279921c3b648724ada29b84f6d61ab1826e173409dbfb4d8f00e8f"
+    },
+    "C:/dev/coin_api-1/data/research_market_v1.db": {
+      "bytes": 74199040,
+      "sha256": "ea217854758134dafc96dcf56ee86a474d1832f1eb35c65f547815d3842a1633"
+    },
+    "C:/dev/coin_api-1/data/research_market_v1_smoke.db": {
+      "bytes": 86016,
+      "sha256": "d55e00d98ef5dabd73915225a6d2124d8c1147f66ec43a0de79707b8fec47517"
+    },
+    "C:/dev/coin_api-1/data/research_market_validation_v1.db": {
+      "bytes": 77197312,
+      "sha256": "741e03592849630dbe7b7a2bb82ae9b31587afee66f4f351c9e8e0ed652a8248"
+    },
+    "C:/dev/coin_api-1/reports/altcoin_research.json": {
+      "bytes": 11708419,
+      "sha256": "8412618e6cea3dfdcb9638bd478059f10de458e76134c283786a5d3014173666"
+    },
+    "C:/dev/coin_api-1/reports/altcoin_research.md": {
+      "bytes": 16033,
+      "sha256": "29cab55bc38a50195d2d710a532046d01364addfafdc4862a7e72e02f7ee5396"
+    },
+    "C:/dev/coin_api-1/reports/backtest_v16_result.json": {
+      "bytes": 1355023,
+      "sha256": "484d9e70013b260dec0e3daa69b1c46279f44af95a487e07e3e93661b4137b6d"
+    },
+    "C:/dev/coin_api-1/reports/backtest_v16_result.md": {
+      "bytes": 3131,
+      "sha256": "cb6b3a89012ffede760768b498110e621b6addc4c704ad9cc831bbae8e723e0f"
+    },
+    "C:/dev/coin_api-1/reports/data_quality_audit.json": {
+      "bytes": 337741,
+      "sha256": "28723ae0a647e571c60ed86f9d0981a7580df5bb1ab01c2043adcd6af4972213"
+    },
+    "C:/dev/coin_api-1/reports/data_quality_audit.md": {
+      "bytes": 6410,
+      "sha256": "a097ea97f9ca4e0ce9c382af2acd2dfa19889b1229c74cc0e8c5118196c45b8f"
+    },
+    "C:/dev/coin_api-1/reports/data_quality_daily.csv": {
+      "bytes": 1350,
+      "sha256": "bd8f5bc17794475df179496c3190dfb839badc2921a4dc8d4f3fa8017a42c931"
+    },
+    "C:/dev/coin_api-1/reports/data_quality_deficits_5d.csv": {
+      "bytes": 25177,
+      "sha256": "31b767f777ea3b0ee115dff4403e898236f6155c49404b060b0c8f32d191f34c"
+    },
+    "C:/dev/coin_api-1/reports/data_quality_deficits_7d.csv": {
+      "bytes": 35468,
+      "sha256": "b69579c1a50745c7980c2d43394d24cd1d3d97cb1042265dd41b771727c4146f"
+    },
+    "C:/dev/coin_api-1/reports/data_quality_markets.csv": {
+      "bytes": 51346,
+      "sha256": "b5c96a55438b1876899e2532b7633b7a79754ff470e3dfaf6d54518079a95f64"
+    },
+    "C:/dev/coin_api-1/reports/data_quality_market_daily.csv": {
+      "bytes": 438939,
+      "sha256": "e5c33e69cf4289771549f921c4ae622203a7cd1cb4b627215ef6e282a4e4a4ba"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.json": {
+      "bytes": 21769,
+      "sha256": "98d39d2522b28c8e14a46ecb19eb8d58342051d0f5196a124b7349c0d1db07be"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_causes_20261001.md": {
+      "bytes": 8274,
+      "sha256": "4beecd4ddb4e771d8412810a44cb971d828d9228a327d80a1783083be0293de5"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_delay_state_20261001.json": {
+      "bytes": 37401,
+      "sha256": "0ba15d9f32092e387cfd243aafee223c269076911a3341f6a9633cb2dc7f9342"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.json": {
+      "bytes": 24654,
+      "sha256": "1d169486a7d6af6266495054498efc0e8effde7faffdbe1c40955a4c8c7c7d48"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_interim_20261001.md": {
+      "bytes": 3286,
+      "sha256": "d4257d58021ca15ed0a031ff02cbe54d43d0212f66f45aef83d296b7a899faa2"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.json": {
+      "bytes": 18221,
+      "sha256": "898aeeeeef4f6236b3048afacb044bf8a43d3d6b0572a570070580f9d497694d"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261005.md": {
+      "bytes": 3178,
+      "sha256": "f67ca61bfb76de72d53344c3db4ba7c7594d6dcb3584963641ff1595ba4c6705"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.json": {
+      "bytes": 8874,
+      "sha256": "f90f1e6efc613fbf0931730e99c4082eedc8cb21e83c44c07e80d319a8b76d04"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_review_20261007.md": {
+      "bytes": 6608,
+      "sha256": "bc36135c9f0dea6b61c6107fd022a76f75cebbb03e51c98f9353f69ecf09b2ee"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.json": {
+      "bytes": 5626,
+      "sha256": "db9e4e1e509d2cd066e2cc6e8b2046021754ece9ba7ca54faf304d16859a7c31"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_live_smoke.md": {
+      "bytes": 1935,
+      "sha256": "ba57f3d985d211e8c251b3477bd6d060a59356e2b53c50d714d536c71044b352"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_replay.json": {
+      "bytes": 1256,
+      "sha256": "e3003caa0f8debbe814c7fdc99f6948906d445cd3e1a9f18378c8c3e9a06e228"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_source_migration.json": {
+      "bytes": 1806,
+      "sha256": "a23afbc3d96f5a906271d158a19c8876f6a25e7bd95677458342fa0b76c83074"
+    },
+    "C:/dev/coin_api-1/reports/forward_scanner_v4_wal_repair.json": {
+      "bytes": 4480,
+      "sha256": "e532733d2b13d7c97c7d28805a72f20f331407d6d2c0842a8859cacfa1666bd5"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3.json": {
+      "bytes": 4957160,
+      "sha256": "08de4d4b5250c8656919932a581ff861f767b6ba2194323c00ea706bf5e40b84"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3.md": {
+      "bytes": 50382,
+      "sha256": "db858ada5313c027e5b5881f23440bbb797023db4b96ad4845fd425ddcadeee1"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.json": {
+      "bytes": 671652,
+      "sha256": "e1a6e5092a4d3d70cda88c43b4d7ce215f9e894832e96aa1f0b0afdb341aedf0"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3_independent_validation.md": {
+      "bytes": 11314,
+      "sha256": "3c7b233e84f316ece72f505b69dad5c729be998448f3345d0daf770d0bf1a84e"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.json": {
+      "bytes": 6286483,
+      "sha256": "52c69cea46cbe525f22a2dddcb2bf74361ef34e2ce134d30b6603798c26b8a61"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3_range_validation.md": {
+      "bytes": 48133,
+      "sha256": "ca2d30cd0bc0a6f3a073c1c1133299b58c40aef2975c6eb7b985b83e3cf133f1"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.json": {
+      "bytes": 1209215,
+      "sha256": "812354808fce9f049d650c495a4759c70666bb80f14f9f17516cbee51ad2f509"
+    },
+    "C:/dev/coin_api-1/reports/forward_surge_v3_success_failure.md": {
+      "bytes": 29235,
+      "sha256": "bafd94e8c0c6778d4be00cf52c7ea5d9f42d919ee0d41c55071ed13fe06d6f30"
+    },
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.json": {
+      "bytes": 6192,
+      "sha256": "bf5c4cb47abae8ae4920f7a8ac44ceb07ec0682b40ca5dc3785d998aa56751d2"
+    },
+    "C:/dev/coin_api-1/reports/prior_day_coverage_diagnostic.md": {
+      "bytes": 2328,
+      "sha256": "87cf018dfe6cb2daa3aab971456a004be7ef61493b74384436037477cbd714ea"
+    },
+    "C:/dev/coin_api-1/reports/replay_20260921.json": {
+      "bytes": 379656,
+      "sha256": "699a4ec5197896693aed2f8f700bea172e02ac3046873a404811a9f526789db5"
+    },
+    "C:/dev/coin_api-1/reports/replay_20260921.md": {
+      "bytes": 3545,
+      "sha256": "26ef75187f1abc1d2e4bcde8123109b357df6d332e8f8befc139071cd8fca9a6"
+    },
+    "C:/dev/coin_api-1/reports/research_dataset_collector_v1_validation.json": {
+      "bytes": 3141,
+      "sha256": "22b35b636762ad2fe9b92856d0f0b44ed3f7c0c895325b35889339605a41ea0a"
+    },
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.json": {
+      "bytes": 19046844,
+      "sha256": "c047382d2c51ea99d46361ff155a0297049cbc4cec5d90ffc448e8611a0565cd"
+    },
+    "C:/dev/coin_api-1/reports/research_market_v1_analysis.md": {
+      "bytes": 40905,
+      "sha256": "1b42bdc8b7f2008796e44a78249f359549dd5c52127b13fed7d271abeeedfe71"
+    },
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.json": {
+      "bytes": 892473,
+      "sha256": "bb02f86d0f9b15810ffb478b118236a94c762e9ca1a188f9caf5c719020b9432"
+    },
+    "C:/dev/coin_api-1/reports/research_market_v1_pattern_summary.md": {
+      "bytes": 51053,
+      "sha256": "c44ef392ffb3f99f955a52ac85430f8f9501fbceba04dbb3c7d28c503851e532"
+    },
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.json": {
+      "bytes": 1868040,
+      "sha256": "63014a2b85b12a020f50785cc9a8ac72e043978e1382ac4e38eb0399714410da"
+    },
+    "C:/dev/coin_api-1/reports/research_market_v1_quality.md": {
+      "bytes": 7739,
+      "sha256": "430a9ffd1289f5f8c233bcb56526418b15f9fe1f3df4477231e4cbde154b690d"
+    },
+    "C:/dev/coin_api-1/reports/research_market_validation_v1_dry_run.txt": {
+      "bytes": 4164,
+      "sha256": "0e29414a4c497fa517138db2e66755024e4b7529d0a33bad74f07553696a5292"
+    },
+    "C:/dev/coin_api-1/reports/research_selection_distribution.csv": {
+      "bytes": 6535,
+      "sha256": "7944c670b9d06ce7f9c507af8d9164119fd38c31dd1aeb136af81d77c2f34abd"
+    },
+    "C:/dev/coin_api-1/reports/research_selection_distribution.json": {
+      "bytes": 456537,
+      "sha256": "226ed9809e29c9267461c950f1ddb81abe00566a9dfc64d8f9f577575cb77f73"
+    },
+    "C:/dev/coin_api-1/reports/research_selection_distribution.md": {
+      "bytes": 3643,
+      "sha256": "ecdbac5fea01a1486bd2de6d2d3593303df992158699eeb620e3a121f10fde10"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.json": {
+      "bytes": 16094334,
+      "sha256": "b71f2ec2e75155935b46d11f1e9cfd8fff5eafd4b33c9d711ada3e5d51182fd3"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_research_v2.md": {
+      "bytes": 32345,
+      "sha256": "d1c96e6f9e9e8887ab88fff25acd4e34b147195dfd8860719124ebe4b4deb860"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.json": {
+      "bytes": 603427,
+      "sha256": "916d4bb201d51ba46c71cac0c342345d95ea78a2199213772b1fb6c92480317c"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_research_v2_smoke.md": {
+      "bytes": 20883,
+      "sha256": "7cf9c447f49ab4bd040ee79bd537d83c52f6b2d3d3137aafc6cc8176788e9d06"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.json": {
+      "bytes": 449297,
+      "sha256": "31f8d06b186ce8cb4517ba9ab0659526089a98164b87f908492e024fad090c47"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_audit.md": {
+      "bytes": 56483,
+      "sha256": "9cb92fe97195923de22ac14eb15cd4f4b4cbd6fe54848ac31ce1761869dd2999"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_charts.html": {
+      "bytes": 80193,
+      "sha256": "71432e2ad406e7f026ece37b18a121c8290f1e1fd9c284235da4d3dbd2ea6e0e"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.json": {
+      "bytes": 917616,
+      "sha256": "b2875d4110e383a11f29fe175b4bcfad0f994ef09fcb69f64cc94c8acc708ddd"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_medium_research.md": {
+      "bytes": 21944,
+      "sha256": "4bfacd204030d94bac83929e35b13aea645fe353c373e415aa0d82370792caac"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.json": {
+      "bytes": 59075,
+      "sha256": "042d695a867184385fbc0dadf2cce7e62c161c72bac15ffa4cb29dc679d27ff7"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_policy_comparison.md": {
+      "bytes": 8436,
+      "sha256": "4ea4cb2bc07f7695fe78ca4398989ec9c28bffc717e71d25d2ceda5e6c74aed8"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.json": {
+      "bytes": 5428312,
+      "sha256": "c92912d08ada166bd487a31d4527947d36016dd6edbdf4c0425b5d776ad3e672"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_100.md": {
+      "bytes": 36176,
+      "sha256": "325f55a9c91007822a59c535c26e30c4140f635934a10498db49c4a4878e6d75"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.json": {
+      "bytes": 10229638,
+      "sha256": "31b1e918342058f5d4c09056dffd77c8e4020c4d007d580153b229ce6d575c35"
+    },
+    "C:/dev/coin_api-1/reports/surge_event_v2_revised_80.md": {
+      "bytes": 36649,
+      "sha256": "b622531746f39b081edb676874fd9a4eed0f875ba220cf1e204dc353a71268c7"
+    },
+    "C:/dev/coin_api-1/reports/surge_pattern_result.json": {
+      "bytes": 147200,
+      "sha256": "d3cd7716b5e23725e9d92335e22a5bb64d00dde32eb1617e44d20b36eb57db1b"
+    },
+    "C:/dev/coin_api-1/reports/surge_pattern_result.md": {
+      "bytes": 3666,
+      "sha256": "35f31a7abff6c60e3de2d30a540d84d9980a54579bad3c4b4126e70bcd526384"
+    },
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/audit.py": {
+      "bytes": 19930,
+      "sha256": "69b8d462c7605f423b9cb3e833c89203b1bee4b8ca3af243f4a75398dbbbd757"
+    },
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/evidence.json": {
+      "bytes": 614100,
+      "sha256": "bc9b2ea9117912b8de9251d6e72084706805b42a79f896a2a7a774a7cd0cc4e4"
+    },
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_audit.py": {
+      "bytes": 11934,
+      "sha256": "595166c05b9d0f15bcdaede8e4c97c2e249fd0e0c2fc144b0fbf34be696c7112"
+    },
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/legacy_evidence.json": {
+      "bytes": 1470519,
+      "sha256": "1de8e05f383e04a633092a034c40b114ab72396dd98f8143d9273349d1291fe1"
+    },
+    "C:/dev/coin_api-1/reports/scanner_audit_20261024/supplemental.json": {
+      "bytes": 2922,
+      "sha256": "7ac48a5d66d589b22c1c32e5f0f635d2981a811093a545b31cd459a5cf90465b"
+    },
+    "C:/dev/coin_api-1/docs/forward_surge_v3_validation_policy.json": {
+      "bytes": 3129,
+      "sha256": "6f2c99deb59eac8cc9fbb6ad55062642f165d7d99d31c2768fd29e7b37f3e7c5"
+    },
+    "C:/dev/coin_api-1/docs/research_market_validation_v1_manifest.json": {
+      "bytes": 228696,
+      "sha256": "d78cd8d500099599b32e5a131e25ea7796bed44e256797476cf2be0f3f6d070c"
+    },
+    "C:/dev/coin_API/crypto_scanner.db": {
+      "bytes": 3915776,
+      "sha256": "4863731b981415e697a83a8965457ae7888099b05022f0eb73e1e05136696339"
+    },
+    "C:/dev/coin_API/scanner_v15.py": {
+      "bytes": 67248,
+      "sha256": "4ee908f58c92c6e42b14f6bb33785771ccbbae4cc5c76ddbd6c147cf87e8dff6"
+    },
+    "C:/dev/coin_API/scanner_v16.py": {
+      "bytes": 71180,
+      "sha256": "c2c84a2f9526d606e6a6fb3dbb515a1f3fb0eb8b4a9a7e77cae94d871d28c527"
+    },
+    "C:/dev/coin_API/db_analyzer_v7.py": {
+      "bytes": 14423,
+      "sha256": "9ab8f798b99992ec9149a0814cef91cf4749c074190482bd08d2a259d273b703"
+    },
+    "C:/dev/coin_API/db_checker_v1.py": {
+      "bytes": 10191,
+      "sha256": "36d432c6950c075cab66e444a21993f51c463fe1a0ccae4736cb85f30847be5b"
+    }
+  }
+}
