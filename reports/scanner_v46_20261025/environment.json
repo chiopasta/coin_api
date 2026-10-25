@@ -1,0 +1,89 @@
+{
+  "localNow": "2026-10-25T20:26:41.3868152+09:00",
+  "utcNow": "2026-10-25T11:26:41.3898164Z",
+  "timezone": {
+    "Id": "Korea Standard Time",
+    "BaseUtcOffset": {
+      "Ticks": 324000000000,
+      "Days": 0,
+      "Hours": 9,
+      "Milliseconds": 0,
+      "Minutes": 0,
+      "Seconds": 0,
+      "TotalDays": 0.375,
+      "TotalHours": 9,
+      "TotalMilliseconds": 32400000,
+      "TotalMinutes": 540,
+      "TotalSeconds": 32400
+    }
+  },
+  "service": {
+    "Name": "W32Time",
+    "State": "Stopped",
+    "StartMode": "Manual"
+  },
+  "os": {
+    "LastBootUpTime": "/Date(1792925651500)/",
+    "LocalDateTime": "/Date(1792927601567)/"
+  },
+  "domain": {
+    "PartOfDomain": false
+  },
+  "tasks": [
+    {
+      "TaskName": "ForceSynchronizeTime",
+      "State": "Ready",
+      "LastRunTime": "/Date(943887600000)/",
+      "LastTaskResult": 267011,
+      "NextRunTime": null
+    },
+    {
+      "TaskName": "SynchronizeTime",
+      "State": "Ready",
+      "LastRunTime": "/Date(1792859674000)/",
+      "LastTaskResult": 0,
+      "NextRunTime": null
+    }
+  ],
+  "syncEvents": [
+    {
+      "Id": 37,
+      "Time": "2026-10-24T00:07:25.6198498+09:00",
+      "Message": "The time provider NtpClient is currently receiving valid time data from time.windows.com,0x9 (ntp.m|0x9|0.0.0.0:123->52.231.114.183:123)."
+    },
+    {
+      "Id": 35,
+      "Time": "2026-10-24T00:07:04.9148394+09:00",
+      "Message": "The time service is now synchronizing the system time with the time source time.windows.com,0x9 (ntp.m|0x9|0.0.0.0:123->52.231.114.183:123) with reference id 3077760820. Current local stratum number is 5."
+    },
+    {
+      "Id": 37,
+      "Time": "2026-10-24T00:06:53.7373024+09:00",
+      "Message": "The time provider NtpClient is currently receiving valid time data from time.windows.com,0x9 (ntp.m|0x9|0.0.0.0:123->52.231.114.183:123)."
+    },
+    {
+      "Id": 35,
+      "Time": "2026-10-20T02:51:25.8206849+09:00",
+      "Message": "The time service is now synchronizing the system time with the time source time.windows.com,0x9 (ntp.m|0x9|0.0.0.0:123->52.231.114.183:123) with reference id 3077760820. Current local stratum number is 5."
+    },
+    {
+      "Id": 37,
+      "Time": "2026-10-20T02:51:08.7794228+09:00",
+      "Message": "The time provider NtpClient is currently receiving valid time data from time.windows.com,0x9 (ntp.m|0x9|0.0.0.0:123->52.231.114.183:123)."
+    },
+    {
+      "Id": 35,
+      "Time": "2026-10-19T02:31:21.9961936+09:00",
+      "Message": "The time service is now synchronizing the system time with the time source time.windows.com,0x9 (ntp.m|0x9|0.0.0.0:123->52.231.114.183:123) with reference id 3077760820. Current local stratum number is 5."
+    }
+  ],
+  "resumeEvents": [
+    {
+      "Id": 1,
+      "Time": "2026-10-18T22:50:33.8520614+09:00",
+      "Message": "시스템이 저전원 상태에서 복귀되었습니다.\r\n\r\n절전 모드 시간: ‎2026‎-‎10‎-‎18T13:11:31.084734200Z\r\n절전 모드 해제 시간: ‎2026‎-‎10‎-‎18T13:50:32.242451300Z\r\n\r\n절전 모드 해제 원본: 장치 -AMD USB 3.10 확장 가능한 호스트 컨트롤러 - 1.10(Microsoft)"
+    }
+  ],
+  "activeScannerProcesses": [],
+  "noSystemChange": true
+}

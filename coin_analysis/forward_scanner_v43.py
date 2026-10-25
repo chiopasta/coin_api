@@ -22,7 +22,7 @@ from . import scanner_clock_v45 as clock_guard
 from . import scanner_observation_v45 as price_overlay
 
 scanner, ops, candles = v42.scanner, v42.ops, v42.candles
-OBSERVER_REVISION = '4.5'  # Dataset's frozen 4.3/V4 config remains unchanged.
+OBSERVER_REVISION = '4.6'  # Dataset's frozen 4.3/V4 config remains unchanged.
 MARKETS = v42.MARKETS  # Same five markets; no liquidity/return-based reselection.
 RUNTIME_ROOT = scanner.DATA_DIR/'scanner_v43_live'
 MAX_SECONDS = 86400
@@ -64,6 +64,8 @@ class Budget(v42.Budget):
         self.clock_anchor = (time.monotonic(), self.last_clock)
         self.monotonic_deadline = self.clock_anchor[0]+max(0,min(run['duration_seconds'],run['deadline']-self.last_clock))
         self.clock_verified_at = None
+        self.last_check_monotonic = self.clock_anchor[0]
+        self.last_awake_seconds = clock_guard.awake_seconds()
 
     def remaining_seconds(self):
         return max(0,self.monotonic_deadline-time.monotonic())
@@ -101,11 +103,24 @@ class Budget(v42.Budget):
             raise Stop('CLOCK_WALL_MONOTONIC_DIVERGENCE')
         self.last_clock=now
         if monotonic>=self.monotonic_deadline or now>=self.config['deadline']:raise Stop('TIME_LIMIT')
+        awake=clock_guard.awake_seconds()
+        if awake is None or self.last_awake_seconds is None:raise Stop('CLOCK_SUSPEND_MONITOR_UNAVAILABLE')
+        gap=monotonic-self.last_check_monotonic
+        suspended=gap-(awake-self.last_awake_seconds)>clock_guard.SUSPEND_DIFFERENCE_SECONDS
+        if suspended or gap>clock_guard.MAX_CHECK_GAP_SECONDS:
+            self.clock_verified_at=None
+            self.event('CLOCK_REVERIFY_REQUIRED',reason='SUSPEND_OR_HIBERNATE' if suspended else 'CHECK_GAP',gap_seconds=gap)
+        self.last_check_monotonic=monotonic;self.last_awake_seconds=awake
         if self.clock_verified_at is None or monotonic-self.clock_verified_at>=clock_guard.RECHECK_SECONDS:
             evidence=clock_guard.verify_clock()
             self.event('CLOCK_CHECK',evidence=evidence)
             if evidence['status']!='VERIFIED':raise Stop(evidence['reason'])
-            self.clock_verified_at=time.monotonic()
+            after_monotonic=time.monotonic();after_awake=clock_guard.awake_seconds()
+            if after_awake is None:raise Stop('CLOCK_SUSPEND_MONITOR_UNAVAILABLE')
+            if (after_monotonic-monotonic)-(after_awake-awake)>clock_guard.SUSPEND_DIFFERENCE_SECONDS:
+                raise Stop('CLOCK_SUSPEND_DURING_VERIFICATION')
+            self.clock_verified_at=after_monotonic
+            self.last_check_monotonic=after_monotonic;self.last_awake_seconds=after_awake
             # Recheck after the bounded external call before returning to work.
             self.check()
         self.peak_rss=max(self.peak_rss,v42.rss_bytes())
@@ -307,6 +322,7 @@ def run(root, seconds, resume=False, max_requests=MAX_REQUESTS):
     with scanner.exclusive(v42.RUNTIME_ROOT/'supervisor'):
         evidence=clock_guard.verify_clock()
         if evidence['status']!='VERIFIED':raise Stop(evidence['reason'])
+        if clock_guard.awake_seconds() is None:raise Stop('CLOCK_SUSPEND_MONITOR_UNAVAILABLE')
         if resume:
             config=json.loads((root/'config.json').read_text(encoding='utf8'));validate_config(config)
             if (root/'STOP').exists():raise ValueError('Archive/remove own STOP explicitly before resume')

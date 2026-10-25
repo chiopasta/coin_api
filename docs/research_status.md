@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-25 V4.6 시계 검증 원인 규명·LIVE 준비
+
+- [V4.6 보고서](scanner_v46_clock_recovery_20261025.md), 인프라 **PARTIAL / 실제 LIVE admission BLOCKED**. W32Time STOPPED·Manual, 서비스 조회0x80070426, 비도메인 PC의 서비스 시작 트리거는DOMAIN JOINED다. 현재 부팅 이후 실행 이력 없음(exit1077), 마지막 확인 동기화 로그는10/24 00:07 KST다. 환경 설정·서비스·시각을 변경하지 않았다.
+- 두 NTP 제공자에 실제 접근 성공. 최종 로컬 시각20:28:55 이후 Windows offset **+4.39309~+4.39440초**(표본 최대 불확실성0.012968초), Cloudflare **+4.39595~+4.39608초**(0.069907초). 로컬이 약4.39초 느려 기존1초 한도를 벗어난다. 이번 차단은 허용 가능한 시계의 오탐이 아니다.
+- 서비스 실패로 외부 측정까지 생략하던 진단 결점, offset 불확실성 미기록, 절전 복귀 재검증 공백을 수정했다. 기존1초·spread0.5초를 유지하고 전체 오차 구간이1초 이내인 두 제공자의 일치를 요구한다. 외부 검사 child12초·서비스 조회3초, 최대6 NTP 패킷이다. awake 타이머/검사 공백에 따른 복귀 재검증·실패 차단을 추가했다.
+- 거래소 진단은 BTC ticker 각1회, 총2회 모두200. HTTP Date는 독립 시계 대신 쓰지 않는다. 빗썸 ticker의 numeric trade timestamp가 명명된UTC 시각보다32400.613초 앞서는 응답을 보존했으며 자동 보정·탐지 입력 사용은 하지 않았다. 기존 원천 분봉 시각 경로는 변경하지 않았다.
+- LIVE 조건이 충족되지 않아 **실제 scanner 시작0, 재시작0, 신규LIVE신호0**. 실제60분 후속·절전/복귀·24시간 운영은 미검증이다. NO_TRADE 자동 체결 증거 수집도SKIP이며 source absence는 UNKNOWN/평가 불가로 유지한다. 기존25%와 V4.5의 사후98.75% 지표는 불변이다.
+- **선별65개 테스트 통과**(실제HTTP/UDP 금지), 전체 회귀·백테스트 없음. 실제 임시DB·WAL·OS lock 및 mock 시계/네트워크를 구분해 검증했다. 기록 스크립트UTF-8 읽기 오류 후 측정 즉시 저장으로 수정하고 별도 한도를 고정해 재측정했다. NTP 총상한19패킷, 거래소 진단2회다.
+- 기존163신호·86보호 입력·STALE_OPEN115·이전 증거83파일 hash 보존. 탐지/label/threshold/점수·collector·300초 가격 정책·연구 원본 불변, 주문·키·CHIO BOT 통합·자동 재시작·Windows 종료 없음. [시계 증거](../reports/scanner_v46_20261025/clock_recheck.json), [보존 검증](../reports/scanner_v46_20261025/completion_checks.json). 다음은 사용자 시계 환경 복구 후 두 제공자 재검증 및 새 episode의 감독하 제한 관측이다.
+
 ## 2026-10-25 V4.5 NO_TRADE·장시간 운영 준비 검증
 
 - [V4.5 보고서](scanner_v45_observation_readiness_20261025.md), 관측 인프라 **PARTIAL**, 현재 호스트의 LIVE 시작 **CLOCK_SYNC_UNVERIFIED로 BLOCKED**. W32Time 서비스 조회가0x80070426으로 실패해 독립 시계 정확도는 미검증이다. 시계/서비스를 변경하거나 장시간 LIVE를 시작하지 않았다.
@@ -68,7 +78,7 @@
 - 정상 종료 시 WAL TRUNCATE checkpoint, 강제 종료 후 commit WAL 복구, 시작 시 quick_check, stale sidecar 전용 오류와 백업 기반 `repair-wal` 명령을 추가했다. 전체 자동 테스트 **126개 통과**. API와 scanner cycle은 실행하지 않았다.
 - 기존 재개 명령 유지: `python -m coin_analysis.forward_scanner_v4 --mode run --db data/forward_scanner_v4.db`.
 
-최종 갱신: 2026-10-25. 현재 단계: **V4.5 가격 전용 NO_TRADE 평가·운영 guard 검증 완료, 인프라 PARTIAL / 현재 LIVE 시계 admission BLOCKED / 조기 탐지 실효성 INSUFFICIENT_DATA**. 무인24시간 운영·매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+최종 갱신: 2026-10-25. 현재 단계: **V4.6 시계 실패 원인·약4.39초 지연 확인 및 검증/복귀 guard 보강 완료, 인프라 PARTIAL / 환경 복구 전 LIVE admission BLOCKED / 조기 탐지 실효성 INSUFFICIENT_DATA**. 무인24시간 운영·매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
 
 ## 최신 LIVE 성과 점검 — 2026-10-05 22:43 KST
 

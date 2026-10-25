@@ -1,48 +1,75 @@
 """Read-only Windows clock admission. Never starts a service or sets the clock."""
 import os
-import re
+import ctypes
+import json
 import subprocess
+import sys
 import time
+
+from . import scanner_ntp_v46 as ntp
 
 MAX_OFFSET_SECONDS = 1.0
 MAX_SPREAD_SECONDS = .5
 RECHECK_SECONDS = 600
 MAX_WALL_DRIFT_SECONDS = 1.0
+MAX_CHECK_GAP_SECONDS = 10.0
+SUSPEND_DIFFERENCE_SECONDS = .5
+
+
+def decode_output(raw):
+    try:return raw.decode('utf8')
+    except UnicodeDecodeError:return raw.decode('cp949',errors='replace')
+
+
+def awake_seconds():
+    """Windows elapsed time excluding sleep/hibernation; no clock setting."""
+    if os.name!='nt':return None
+    value=ctypes.c_ulonglong()
+    try:
+        query=ctypes.windll.kernel32.QueryUnbiasedInterruptTime
+        query.argtypes=[ctypes.POINTER(ctypes.c_ulonglong)];query.restype=ctypes.c_bool
+        if not query(ctypes.byref(value)):return None
+        return value.value/10_000_000
+    except (AttributeError,OSError):return None
 
 
 def verify_clock():
-    """Service status plus three bounded external offset samples, fail closed.
+    """V4.6: diagnose external accuracy even when Windows service is stopped.
 
-    A single unauthenticated NTP reference is an operational check, not a
-    metrology/security attestation. HTTP Date never substitutes for this check.
-    Service failure prevents all NTP samples and exchange calls.
+    Admission STILL requires Windows status plus two-provider evidence inside
+    the existing tolerance INCLUDING uncertainty. No time correction or offset
+    compensation. Subprocess timeout also bounds DNS. NTP is unauthenticated.
     """
     result = dict(at=time.time(),status='BLOCKED',reason='CLOCK_SYNC_UNVERIFIED',
-                  reference='time.windows.com',max_samples=3,max_seconds=15,
+                  references=list(ntp.HOSTS),max_samples=6,max_seconds=15,clock_policy='V46_NTP_UNCERTAINTY',
                   max_offset_seconds=MAX_OFFSET_SECONDS,max_spread_seconds=MAX_SPREAD_SECONDS,
                   clock_changed=False,commands=[])
     if os.name!='nt':
         return result
-    commands = [(['w32tm','/query','/status','/verbose'],3),
-                (['w32tm','/stripchart','/computer:time.windows.com','/samples:3',
-                  '/period:1','/dataonly'],12)]
+    service_ok=False;blockers=[]
     try:
-        for command,timeout in commands:
-            completed = subprocess.run(command,capture_output=True,timeout=timeout,
-                                       creationflags=0x08000000)
-            output = (completed.stdout+completed.stderr).decode('utf8',errors='replace')
-            result['commands'].append(dict(argv=command,returncode=completed.returncode,output=output))
-            if completed.returncode:
-                return result
-        offsets = [float(x.replace(',','.')) for x in re.findall(r'([+-]\d+[.,]\d+)s\s*$',output,re.MULTILINE)]
-        result['offset_seconds'] = offsets
-        if len(offsets)!=3:
-            return result
-        if max(abs(x) for x in offsets)>MAX_OFFSET_SECONDS or max(offsets)-min(offsets)>MAX_SPREAD_SECONDS:
-            return dict(result,reason='CLOCK_REFERENCE_OFFSET_OR_JITTER')
-        return dict(result,status='VERIFIED',reason='BOUNDED_EXTERNAL_OFFSET_CHECK')
+        command=['w32tm','/query','/status','/verbose']
+        completed=subprocess.run(command,capture_output=True,timeout=3,creationflags=0x08000000)
+        result['commands'].append(dict(argv=command,returncode=completed.returncode,
+                                      output=decode_output(completed.stdout+completed.stderr)))
+        service_ok=completed.returncode==0
     except (OSError,subprocess.TimeoutExpired) as exc:
-        return dict(result,error=repr(exc))
+        result['service_error']=repr(exc)
+    if not service_ok:blockers.append('CLOCK_WINDOWS_TIME_SERVICE_UNVERIFIED')
+    try:
+        command=[sys.executable,'-m','coin_analysis.scanner_ntp_v46']
+        completed=subprocess.run(command,capture_output=True,timeout=ntp.MAX_PROCESS_SECONDS,creationflags=0x08000000)
+        if completed.returncode:raise ValueError('NTP probe child failed: '+decode_output(completed.stderr))
+        measurement=json.loads(completed.stdout)
+        result['measurement']=measurement
+        assessment=ntp.assess(measurement,MAX_OFFSET_SECONDS,MAX_SPREAD_SECONDS)
+    except (OSError,subprocess.TimeoutExpired,ValueError) as exc:
+        result['measurement_error']=repr(exc)
+        assessment=dict(status='BLOCKED',reason='CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE')
+    if assessment['status']!='VERIFIED':blockers.append(assessment['reason'])
+    result['blockers']=blockers
+    if blockers:return dict(result,reason=blockers[-1])
+    return dict(result,status='VERIFIED',reason=assessment['reason'])
 
 
 def resume_continuity(db, now):

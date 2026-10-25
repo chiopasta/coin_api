@@ -116,16 +116,21 @@ class Clocks(unittest.TestCase):
     def result(self,text='',code=0):
         return subprocess.CompletedProcess([],code,text.encode(),b'')
 
-    def test_service_failure_blocks_before_external_samples(self):
-        with patch.object(clock.os,'name','nt'),patch.object(clock.subprocess,'run',return_value=self.result(code=1)) as run:
+    def measurement(self,offsets=None):
+        offsets=offsets or [.01]*6
+        return dict(rows=[dict(host=clock.ntp.HOSTS[i%2],status='MEASURED',offset_seconds=x,
+            uncertainty_seconds=.02,error_interval_seconds=[x-.02,x+.02]) for i,x in enumerate(offsets)])
+
+    def test_service_failure_still_measures_but_cannot_admit_live(self):
+        with patch.object(clock.os,'name','nt'),patch.object(clock.subprocess,'run',side_effect=[self.result(code=1),self.result(json.dumps(self.measurement()))]) as run:
             self.assertEqual(clock.verify_clock()['status'],'BLOCKED')
-        self.assertEqual(run.call_count,1)
+        self.assertEqual(run.call_count,2)
 
     def test_external_offset_and_jitter_and_missing_samples_fail_closed(self):
-        for text in ['12:00:00, +02.000s\n'*3,'+00.000s\n+00.800s\n+00.000s\n','+00.010s\n']:
-            with self.subTest(text=text),patch.object(clock.os,'name','nt'),patch.object(clock.subprocess,'run',side_effect=[self.result(),self.result(text)]):
+        for measurement in [self.measurement([2.]*6),self.measurement([0.,.8]*3),self.measurement([.01])]:
+            with self.subTest(measurement=measurement),patch.object(clock.os,'name','nt'),patch.object(clock.subprocess,'run',side_effect=[self.result(),self.result(json.dumps(measurement))]):
                 self.assertEqual(clock.verify_clock()['status'],'BLOCKED')
-        with patch.object(clock.os,'name','nt'),patch.object(clock.subprocess,'run',side_effect=[self.result(),self.result('+00.01s\n-00.02s\n+00.03s\n')]):
+        with patch.object(clock.os,'name','nt'),patch.object(clock.subprocess,'run',side_effect=[self.result(),self.result(json.dumps(self.measurement()))]):
             self.assertEqual(clock.verify_clock()['status'],'VERIFIED')
 
     def test_clock_command_timeout_blocks(self):

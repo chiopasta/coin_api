@@ -1,0 +1,269 @@
+{
+  "at": 1792927359.392889,
+  "commands": [
+    {
+      "argv": [
+        "sc.exe",
+        "query",
+        "W32Time"
+      ],
+      "returncode": 0,
+      "output": "\r\nSERVICE_NAME: W32Time \r\n        종류               : 20  WIN32_SHARE_PROCESS  \r\n        상태              : 1  STOPPED \r\n        WIN32_EXIT_CODE    : 1077  (0x435)\r\n        SERVICE_EXIT_CODE  : 0  (0x0)\r\n        검사점         : 0x0\r\n        WAIT_HINT          : 0x0\r\n"
+    },
+    {
+      "argv": [
+        "sc.exe",
+        "qc",
+        "W32Time"
+      ],
+      "returncode": 0,
+      "output": "[SC] QueryServiceConfig 성공\r\n\r\nSERVICE_NAME: W32Time\r\n        종류               : 20  WIN32_SHARE_PROCESS \r\n        START_TYPE         : 3   DEMAND_START\r\n        ERROR_CONTROL      : 1   NORMAL\r\n        BINARY_PATH_NAME   : C:\\WINDOWS\\system32\\svchost.exe -k LocalService\r\n        LOAD_ORDER_GROUP   : \r\n        태그                : 0\r\n        DISPLAY_NAME       : Windows Time\r\n        종속성       : \r\n        SERVICE_START_NAME : NT AUTHORITY\\LocalService\r\n"
+    },
+    {
+      "argv": [
+        "sc.exe",
+        "qtriggerinfo",
+        "W32Time"
+      ],
+      "returncode": 0,
+      "output": "[SC] QueryServiceConfig2 성공\r\n\r\nSERVICE_NAME: W32Time\r\n\r\n        서비스 시작 \r\n          도메인 가입 상태         : 1ce20aba-9851-4421-9430-1ddeb766e809 [도메인에 가입됨]\r\n"
+    },
+    {
+      "argv": [
+        "reg.exe",
+        "query",
+        "HKLM\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters"
+      ],
+      "returncode": 0,
+      "output": "\r\nHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters\r\n    NtpServer    REG_SZ    time.windows.com,0x9\r\n    ServiceDll    REG_EXPAND_SZ    %systemroot%\\system32\\w32time.dll\r\n    ServiceDllUnloadOnStop    REG_DWORD    0x1\r\n    ServiceMain    REG_SZ    SvchostEntry_W32Time\r\n    Type    REG_SZ    NTP\r\n\r\n"
+    },
+    {
+      "argv": [
+        "reg.exe",
+        "query",
+        "HKLM\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient"
+      ],
+      "returncode": 0,
+      "output": "\r\nHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\NtpClient\r\n    AllowNonstandardModeCombinations    REG_DWORD    0x1\r\n    CompatibilityFlags    REG_DWORD    0x80000000\r\n    CrossSiteSyncFlags    REG_DWORD    0x2\r\n    DllName    REG_EXPAND_SZ    %systemroot%\\system32\\w32time.dll\r\n    Enabled    REG_DWORD    0x1\r\n    EventLogFlags    REG_DWORD    0x1\r\n    InputProvider    REG_DWORD    0x1\r\n    LargeSampleSkew    REG_DWORD    0x3\r\n    ResolvePeerBackoffMaxTimes    REG_DWORD    0x7\r\n    ResolvePeerBackoffMinutes    REG_DWORD    0xf\r\n    SignatureAuthAllowed    REG_DWORD    0x1\r\n    SpecialPollInterval    REG_DWORD    0x93a80\r\n    SpecialPollTimeRemaining    REG_MULTI_SZ    time.windows.com,0\r\n\r\n"
+    },
+    {
+      "argv": [
+        "w32tm",
+        "/query",
+        "/status",
+        "/verbose"
+      ],
+      "returncode": 2147943462,
+      "output": "다음 오류가 발생했습니다. 서비스가 시작되지 않았습니다. (0x80070426)\n"
+    },
+    {
+      "argv": [
+        "w32tm",
+        "/stripchart",
+        "/computer:time.windows.com",
+        "/samples:1",
+        "/dataonly"
+      ],
+      "returncode": 0,
+      "output": "time.windows.com[52.231.114.183:123] 추적 중\n1개 샘플 수집 중\n현재 시간은 2026-10-25 오후 8:22:37입니다.\n20:22:37, +04.3847874s\n"
+    }
+  ],
+  "ntp": {
+    "at": 1792927359.3822987,
+    "hosts": [
+      "time.windows.com",
+      "time.cloudflare.com"
+    ],
+    "samples_per_host": 3,
+    "max_packets": 6,
+    "rows": [
+      {
+        "host": "time.windows.com",
+        "started_at": 1792927358.0925117,
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "offset_seconds": 4.384999632835388,
+        "uncertainty_seconds": 0.011884207470646084,
+        "error_interval_seconds": [
+          4.373115425364742,
+          4.396883840306034
+        ],
+        "delay_seconds": 0.003469228744506836,
+        "elapsed_monotonic_seconds": 0.0034717999999429594,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.0101165771484375,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 1.3791625406156527e-06,
+        "stratum": 4,
+        "reference_at": 1792927351.456182,
+        "server_received_at": 1792927362.4871814,
+        "server_transmitted_at": 1792927362.4871826,
+        "local_sent_at": 1792927358.1004472,
+        "local_received_at": 1792927358.1039176,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee8864fe19b6e800",
+        "response_hex": "1c0400e90000000400000297564d5450ee8864f774c859a0ee8864fe19b6e800ee8865027cb7eb94ee8865027cb7fe08"
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792927358.3547852,
+        "peer": [
+          "162.159.200.1",
+          123
+        ],
+        "offset_seconds": 4.387821912765503,
+        "uncertainty_seconds": 0.06979209779558712,
+        "error_interval_seconds": [
+          4.318029814969916,
+          4.45761401056109
+        ],
+        "delay_seconds": 0.0028295516967773438,
+        "elapsed_monotonic_seconds": 0.00288700000010067,
+        "root_delay_seconds": 0.135040283203125,
+        "root_dispersion_seconds": 0.0008544921875,
+        "server_precision_seconds": 2.9802322387695312e-08,
+        "local_sampling_difference_seconds": 1.6583558135607745e-06,
+        "stratum": 3,
+        "reference_at": 1792927305.7623153,
+        "server_received_at": 1792927362.7476478,
+        "server_transmitted_at": 1792927362.7477036,
+        "local_sent_at": 1792927358.358411,
+        "local_received_at": 1792927358.3612964,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee8864fe5bc0d000",
+        "response_hex": "240300e700002292000000380a99080bee8864c9c327169eee8864fe5bc0d000ee886502bf65d96bee886502bf697ede"
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792927358.6116316,
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "offset_seconds": 4.386517405509949,
+        "uncertainty_seconds": 0.013313567248703998,
+        "error_interval_seconds": [
+          4.373203838261245,
+          4.399830972758653
+        ],
+        "delay_seconds": 0.0062978267669677734,
+        "elapsed_monotonic_seconds": 0.006300200000168843,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.0101318359375,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 1.181140305561712e-06,
+        "stratum": 4,
+        "reference_at": 1792927351.4550512,
+        "server_received_at": 1792927363.0020504,
+        "server_transmitted_at": 1792927363.0020516,
+        "local_sent_at": 1792927358.612384,
+        "local_received_at": 1792927358.618683,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee8864fe9cc53000",
+        "response_hex": "1c0400e90000000400000298564d5450ee8864f7747e3a98ee8864fe9cc53000ee88650300866000ee88650300867422"
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792927358.8693855,
+        "peer": [
+          "162.159.200.1",
+          123
+        ],
+        "offset_seconds": 4.3877034187316895,
+        "uncertainty_seconds": 0.06968939644719083,
+        "error_interval_seconds": [
+          4.3180140222844985,
+          4.45739281517888
+        ],
+        "delay_seconds": 0.0024428367614746094,
+        "elapsed_monotonic_seconds": 0.002518000000009124,
+        "root_delay_seconds": 0.13507080078125,
+        "root_dispersion_seconds": 0.0009307861328125,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 7.766418548271758e-07,
+        "stratum": 3,
+        "reference_at": 1792927309.6053982,
+        "server_received_at": 1792927363.2590003,
+        "server_transmitted_at": 1792927363.2590747,
+        "local_sent_at": 1792927358.8700755,
+        "local_received_at": 1792927358.8725927,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee8864fedebd4000",
+        "response_hex": "240300e6000022940000003d0a6a0804ee8864cd9afb61f1ee8864fedebd4000ee886503424dd61dee8865034252b604"
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792927359.1227963,
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "offset_seconds": 4.385193109512329,
+        "uncertainty_seconds": 0.011888422212339515,
+        "error_interval_seconds": [
+          4.3733046872999894,
+          4.397081531724669
+        ],
+        "delay_seconds": 0.003448963165283203,
+        "elapsed_monotonic_seconds": 0.0034511000001202774,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.0101318359375,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 4.6790478336333763e-07,
+        "stratum": 4,
+        "reference_at": 1792927351.4476023,
+        "server_received_at": 1792927363.5106013,
+        "server_transmitted_at": 1792927363.510603,
+        "local_sent_at": 1792927359.1236837,
+        "local_received_at": 1792927359.1271343,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee8864ff1fa9c000",
+        "response_hex": "1c0400e90000000400000298564d5450ee8864f772961078ee8864ff1fa9c000ee88650382b6c29fee88650382b6e0d2"
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792927359.3778608,
+        "peer": [
+          "162.159.200.1",
+          123
+        ],
+        "offset_seconds": 4.387426853179932,
+        "uncertainty_seconds": 0.07035633060252419,
+        "error_interval_seconds": [
+          4.317070522577407,
+          4.457783183782456
+        ],
+        "delay_seconds": 0.0032720565795898438,
+        "elapsed_monotonic_seconds": 0.0033318000000690517,
+        "root_delay_seconds": 0.1346893310546875,
+        "root_dispersion_seconds": 0.001373291015625,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 1.3308685993251856e-06,
+        "stratum": 3,
+        "reference_at": 1792927309.443615,
+        "server_received_at": 1792927363.7678907,
+        "server_transmitted_at": 1792927363.767949,
+        "local_sent_at": 1792927359.3788278,
+        "local_received_at": 1792927359.3821583,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee8864ff60fae000",
+        "response_hex": "240300e60000227b0000005a0a220839ee8864cd7190be4fee8864ff60fae000ee886503c4947defee886503c49850f2"
+      }
+    ],
+    "elapsed_monotonic_seconds": 1.289790900000071,
+    "authenticated": false,
+    "clock_modified": false
+  },
+  "assessment": {
+    "status": "BLOCKED",
+    "reason": "CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY"
+  }
+}

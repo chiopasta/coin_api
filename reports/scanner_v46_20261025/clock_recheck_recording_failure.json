@@ -1,0 +1,10 @@
+{
+  "at": 1792927734.7262654,
+  "cause": "UnicodeDecodeError reading UTF-8 clock_probe.json with Windows cp949 default",
+  "ntp_probe_started": true,
+  "max_ntp_packets": 6,
+  "measurement_not_durably_saved": true,
+  "raw_result_unknown": true,
+  "no_live_started": true,
+  "fix": "Explicit UTF-8 reads and immediate durable measurement output before report processing"
+}

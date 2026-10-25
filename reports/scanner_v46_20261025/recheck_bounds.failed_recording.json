@@ -1,0 +1,13 @@
+{
+  "at": 1792927684.8926544,
+  "ntp_max_packets": 6,
+  "hosts": [
+    "time.windows.com",
+    "time.cloudflare.com"
+  ],
+  "max_seconds": 15,
+  "w32tm_query_only": true,
+  "exchange_http_calls": 0,
+  "live_scanner_seconds": 0,
+  "no_system_changes": true
+}

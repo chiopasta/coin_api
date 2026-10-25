@@ -1,0 +1,52 @@
+{
+  "at": 1792927359.512229,
+  "records": [
+    {
+      "exchange": "UPBIT",
+      "endpoint": "/v1/ticker",
+      "params": {
+        "markets": "KRW-BTC"
+      },
+      "started_at": 1792927359.395106,
+      "status": 200,
+      "received_at": 1792927359.4688053,
+      "elapsed_monotonic_seconds": 0.07369870000002265,
+      "server_date": "Sun, 25 Oct 2026 11:22:43 GMT",
+      "date_minus_local_receipt_seconds": 3.5311946868896484,
+      "date_offset_interval_seconds": [
+        3.5311946868896484,
+        4.604893922805786
+      ],
+      "date_assumptions": "Second quantization, unknown generation/cache point; not trusted clock admission",
+      "age": null,
+      "ticker_update_timestamp_ms": 1792927363356,
+      "raw_file": "data\\scanner_v46_audit\\20261025\\upbit_ticker.json",
+      "raw_sha256": "cba21bb7dc38b4b97e7ebdd0049a7869e74477264c1e7aa625a694f977401f36"
+    },
+    {
+      "exchange": "BITHUMB",
+      "endpoint": "/v1/ticker",
+      "params": {
+        "markets": "KRW-BTC"
+      },
+      "started_at": 1792927359.479104,
+      "status": 200,
+      "received_at": 1792927359.5021598,
+      "elapsed_monotonic_seconds": 0.02305490000003374,
+      "server_date": "Sun, 25 Oct 2026 11:22:43 GMT",
+      "date_minus_local_receipt_seconds": 3.497840166091919,
+      "date_offset_interval_seconds": [
+        3.497840166091919,
+        4.520895957946777
+      ],
+      "date_assumptions": "Second quantization, unknown generation/cache point; not trusted clock admission",
+      "age": null,
+      "ticker_update_timestamp_ms": 1792959757613,
+      "raw_file": "data\\scanner_v46_audit\\20261025\\bithumb_ticker.json",
+      "raw_sha256": "baf9294f0f619af7db4f5961d1bc24cdd14af1f3250c4796abf68ee6e83ccf6c"
+    }
+  ],
+  "http_attempts": 2,
+  "source": "HTTP Date approximate only; ticker timestamp is a data update timestamp, not server NOW",
+  "utc_now": "2026-10-25T11:22:39.512236+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "tests_run": 65,
+  "successful": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 3.9651223999999274,
+  "selected_names": [
+    "tests.test_scanner_clock_v46",
+    "tests.test_scanner_observation_v45",
+    "tests.test_forward_scanner_v43",
+    "tests.test_scanner_v41.CandleGuards",
+    "tests.test_scanner_v41.RuntimeRepairs.test_network_retry_resume_and_duplicate_skip",
+    "tests.test_scanner_v41.RuntimeRepairs.test_os_lock_rejects_second_process_without_growing_file",
+    "tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start",
+    "tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable",
+    "tests.test_forward_scanner_v4.ScannerTests.test_missing_future_is_unknown_and_recoverable",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_restart_session_and_interrupted_cycle",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_clean_close_checkpoints_wal_and_preserves_values",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes"
+  ],
+  "tested_source_sha256": {
+    "coin_analysis/forward_scanner_v43.py": "87cccec82e8a396f0358818a23d1c7f3fefb516ba5f6752bc4c6340d0a08c9d1",
+    "coin_analysis/scanner_clock_v45.py": "c299410f50d22045db42c1cf52675cd30562d295336ec80ddc32c71861dfbf55",
+    "coin_analysis/scanner_ntp_v46.py": "eb63e5c1665a8c540026ab9f9fcf3bdbaff3a5f488861c3a63506d48f8f3b3df",
+    "tests/test_scanner_clock_v46.py": "b30e005fe258a892a04d750c0d1d3d57c3b4208f916096416cd2891c961cbe61",
+    "tests/test_scanner_observation_v45.py": "da44119c9fb834ddb62d0c06640b3985773da8c6f70e9efac752641b19a1b6f4",
+    "tests/test_forward_scanner_v43.py": "9b7a10f7b8a0dbda516c4d49afa0e5abeda3dbd1431fd5a8843efae1fc926894"
+  },
+  "scope": "Impact-selected; real HTTP/UDP forbidden. No full regression or backtest."
+}
