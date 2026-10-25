@@ -1,0 +1,508 @@
+{
+  "started_at": 1792935235.589811,
+  "ended_at": 1792936089.5878005,
+  "root": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49",
+  "runs": [
+    {
+      "summary": {
+        "run_id": "94d76c0f83984e8ebc4c115e326b365d",
+        "status": "STOPPED",
+        "reason": "STOP_REQUESTED",
+        "started_at": 1792935243.7606757,
+        "ended_at": 1792935326.1198802,
+        "completed_rounds": 2,
+        "observer_revision": "4.9",
+        "price_policy": "V45_PRICE_ONLY_300S_FROM_MINUTE_START",
+        "elapsed_monotonic_seconds": 82.35802189999959,
+        "clock_fault": false,
+        "requests": 29,
+        "peak_rss_bytes": 37195776,
+        "max_cpu_percent": 9.043424162809298,
+        "per_exchange": {
+          "UPBIT": {
+            "integrity": "ok",
+            "signals": {
+              "default_view": "LIVE",
+              "LIVE": {
+                "source": "LIVE",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "CATCHUP": {
+                "source": "CATCHUP",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "ALL": {
+                "source": "ALL",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              }
+            },
+            "candles": 1425,
+            "pending_jobs": 0,
+            "coverage": [
+              {
+                "minutes": 1,
+                "status": "COMPLETE",
+                "n": 3
+              },
+              {
+                "minutes": 1,
+                "status": "SOURCE_ABSENT",
+                "n": 1
+              },
+              {
+                "minutes": 5,
+                "status": "COMPLETE",
+                "n": 1
+              },
+              {
+                "minutes": 5,
+                "status": "SOURCE_ABSENT",
+                "n": 3
+              },
+              {
+                "minutes": 15,
+                "status": "COMPLETE",
+                "n": 1
+              },
+              {
+                "minutes": 15,
+                "status": "SOURCE_ABSENT",
+                "n": 3
+              },
+              {
+                "minutes": 30,
+                "status": "COMPLETE",
+                "n": 1
+              },
+              {
+                "minutes": 30,
+                "status": "SOURCE_ABSENT",
+                "n": 3
+              }
+            ],
+            "horizons": [],
+            "price_endpoints_v45": []
+          },
+          "BITHUMB": {
+            "integrity": "ok",
+            "signals": {
+              "default_view": "LIVE",
+              "LIVE": {
+                "source": "LIVE",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "CATCHUP": {
+                "source": "CATCHUP",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "ALL": {
+                "source": "ALL",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              }
+            },
+            "candles": 1198,
+            "pending_jobs": 0,
+            "coverage": [
+              {
+                "minutes": 1,
+                "status": "COMPLETE",
+                "n": 2
+              },
+              {
+                "minutes": 1,
+                "status": "SOURCE_ABSENT",
+                "n": 2
+              },
+              {
+                "minutes": 5,
+                "status": "COMPLETE",
+                "n": 2
+              },
+              {
+                "minutes": 5,
+                "status": "SOURCE_ABSENT",
+                "n": 2
+              },
+              {
+                "minutes": 15,
+                "status": "COMPLETE",
+                "n": 1
+              },
+              {
+                "minutes": 15,
+                "status": "SOURCE_ABSENT",
+                "n": 3
+              },
+              {
+                "minutes": 30,
+                "status": "COMPLETE",
+                "n": 1
+              },
+              {
+                "minutes": 30,
+                "status": "SOURCE_ABSENT",
+                "n": 3
+              }
+            ],
+            "horizons": [],
+            "price_endpoints_v45": []
+          }
+        },
+        "collection_errors": {
+          "UPBIT": [],
+          "BITHUMB": []
+        },
+        "close_errors": {},
+        "no_orders": true,
+        "performance_verdict": "INSUFFICIENT_DATA"
+      },
+      "exit": {
+        "at": 1792935326.1415818,
+        "run_id": "94d76c0f83984e8ebc4c115e326b365d",
+        "worker_reaped": true,
+        "worker_returncode": 0,
+        "forced_kill": false,
+        "automatic_restart": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reaped": true
+    },
+    {
+      "summary": {
+        "run_id": "44c5e49cdaa64da1b6f71325b02ccf0b",
+        "status": "BOUNDED_STOP",
+        "reason": "ROUND_TIME_RESERVE",
+        "started_at": 1792935333.4210467,
+        "ended_at": 1792936087.918515,
+        "completed_rounds": 14,
+        "observer_revision": "4.9",
+        "price_policy": "V45_PRICE_ONLY_300S_FROM_MINUTE_START",
+        "elapsed_monotonic_seconds": 754.4858614999994,
+        "clock_fault": false,
+        "requests": 132,
+        "peak_rss_bytes": 37978112,
+        "max_cpu_percent": 6.369673930959286,
+        "per_exchange": {
+          "UPBIT": {
+            "integrity": "ok",
+            "signals": {
+              "default_view": "LIVE",
+              "LIVE": {
+                "source": "LIVE",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "CATCHUP": {
+                "source": "CATCHUP",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "ALL": {
+                "source": "ALL",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              }
+            },
+            "candles": 1476,
+            "pending_jobs": 0,
+            "coverage": [
+              {
+                "minutes": 1,
+                "status": "COMPLETE",
+                "n": 10
+              },
+              {
+                "minutes": 1,
+                "status": "SOURCE_ABSENT",
+                "n": 2
+              },
+              {
+                "minutes": 5,
+                "status": "COMPLETE",
+                "n": 3
+              },
+              {
+                "minutes": 5,
+                "status": "SOURCE_ABSENT",
+                "n": 9
+              },
+              {
+                "minutes": 15,
+                "status": "COMPLETE",
+                "n": 3
+              },
+              {
+                "minutes": 15,
+                "status": "SOURCE_ABSENT",
+                "n": 9
+              },
+              {
+                "minutes": 30,
+                "status": "COMPLETE",
+                "n": 3
+              },
+              {
+                "minutes": 30,
+                "status": "SOURCE_ABSENT",
+                "n": 9
+              }
+            ],
+            "horizons": [],
+            "price_endpoints_v45": []
+          },
+          "BITHUMB": {
+            "integrity": "ok",
+            "signals": {
+              "default_view": "LIVE",
+              "LIVE": {
+                "source": "LIVE",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "CATCHUP": {
+                "source": "CATCHUP",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              },
+              "ALL": {
+                "source": "ALL",
+                "signals": 0,
+                "signal_markets": 0,
+                "L1": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "L2": {
+                  "statuses": {},
+                  "valid": 0,
+                  "success": 0,
+                  "rate_pct": null
+                },
+                "collection_errors": []
+              }
+            },
+            "candles": 1237,
+            "pending_jobs": 0,
+            "coverage": [
+              {
+                "minutes": 1,
+                "status": "COMPLETE",
+                "n": 5
+              },
+              {
+                "minutes": 1,
+                "status": "SOURCE_ABSENT",
+                "n": 7
+              },
+              {
+                "minutes": 5,
+                "status": "COMPLETE",
+                "n": 3
+              },
+              {
+                "minutes": 5,
+                "status": "SOURCE_ABSENT",
+                "n": 9
+              },
+              {
+                "minutes": 15,
+                "status": "COMPLETE",
+                "n": 1
+              },
+              {
+                "minutes": 15,
+                "status": "SOURCE_ABSENT",
+                "n": 11
+              },
+              {
+                "minutes": 30,
+                "status": "COMPLETE",
+                "n": 1
+              },
+              {
+                "minutes": 30,
+                "status": "SOURCE_ABSENT",
+                "n": 11
+              }
+            ],
+            "horizons": [],
+            "price_endpoints_v45": []
+          }
+        },
+        "collection_errors": {
+          "UPBIT": [],
+          "BITHUMB": []
+        },
+        "close_errors": {},
+        "no_orders": true,
+        "performance_verdict": "INSUFFICIENT_DATA"
+      },
+      "exit": {
+        "at": 1792936087.940466,
+        "run_id": "44c5e49cdaa64da1b6f71325b02ccf0b",
+        "worker_reaped": true,
+        "worker_returncode": 0,
+        "forced_kill": false,
+        "automatic_restart": false
+      },
+      "supervisor_returncode": 0,
+      "supervisor_reaped": true
+    }
+  ],
+  "clock_checks": 3,
+  "requests": 161,
+  "no_orders": true,
+  "no_24h_run": true,
+  "only_explicit_single_resume": true
+}

@@ -6,7 +6,7 @@ import subprocess
 import sys
 import time
 
-from . import scanner_ntp_v46 as ntp
+from . import scanner_ntp_v49 as ntp
 from . import scanner_clock_v47 as admission
 
 MAX_OFFSET_SECONDS = 1.0
@@ -35,14 +35,15 @@ def awake_seconds():
 
 
 def verify_clock():
-    """V4.7: validate Windows root distance/age and fresh external accuracy.
+    """V4.9: bounded timeout retries, unchanged root/accuracy/freshness limits.
 
     Admission STILL requires Windows status plus two-provider evidence inside
     the existing tolerance INCLUDING uncertainty. No time correction or offset
     compensation. Subprocess timeout also bounds DNS. NTP is unauthenticated.
     """
+    began=time.monotonic()
     result = dict(at=time.time(),status='BLOCKED',reason='CLOCK_SYNC_UNVERIFIED',
-                  references=list(ntp.HOSTS),max_samples=6,max_seconds=15,clock_policy='V47_WINDOWS_ROOT_AND_FRESH_NTP',
+                  references=list(ntp.HOSTS),max_samples=6,max_attempts=ntp.MAX_ATTEMPTS,max_seconds=15,clock_policy='V49_PACED_RETRY_FRESH_NTP',
                   max_offset_seconds=MAX_OFFSET_SECONDS,max_spread_seconds=MAX_SPREAD_SECONDS,
                   clock_changed=False,commands=[])
     if os.name!='nt':
@@ -61,8 +62,10 @@ def verify_clock():
         result['service_error']=repr(exc)
     if not service_ok:blockers.append('CLOCK_WINDOWS_TIME_SERVICE_UNVERIFIED')
     try:
-        command=[sys.executable,'-m','coin_analysis.scanner_ntp_v46']
-        completed=subprocess.run(command,capture_output=True,timeout=ntp.MAX_PROCESS_SECONDS,creationflags=0x08000000)
+        command=[sys.executable,'-m','coin_analysis.scanner_ntp_v49']
+        remaining=min(ntp.MAX_PROCESS_SECONDS,15-(time.monotonic()-began))
+        if remaining<=0:raise ValueError('Clock verification time budget exhausted')
+        completed=subprocess.run(command,capture_output=True,timeout=remaining,creationflags=0x08000000)
         if completed.returncode:raise ValueError('NTP probe child failed: '+decode_output(completed.stderr))
         measurement=json.loads(completed.stdout)
         result['measurement']=measurement
@@ -74,8 +77,13 @@ def verify_clock():
         result['measurement_error']=repr(exc)
         assessment=dict(status='BLOCKED',reason='CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE')
     if assessment['status']!='VERIFIED':blockers.append(assessment['reason'])
-    result['blockers']=blockers
     result['completed_at']=time.time()
+    result['elapsed_monotonic_seconds']=time.monotonic()-began
+    result['wall_monotonic_difference_seconds']=abs((result['completed_at']-result['at'])-result['elapsed_monotonic_seconds'])
+    if result['wall_monotonic_difference_seconds']>MAX_WALL_DRIFT_SECONDS:
+        blockers.append('CLOCK_WALL_MONOTONIC_DIVERGENCE')
+    if result['elapsed_monotonic_seconds']>15:blockers.append('CLOCK_VERIFICATION_TIME_BUDGET')
+    result['blockers']=blockers
     if blockers:return dict(result,reason=blockers[-1])
     return dict(result,status='VERIFIED',reason=assessment['reason'])
 

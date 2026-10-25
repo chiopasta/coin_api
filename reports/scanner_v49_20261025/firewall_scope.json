@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "output": "[\r\n    {\r\n        \"Name\":  \"{B8DA78C1-C1AF-4C74-B58C-9D8043C19F27}\",\r\n        \"RemoteAddress\":  {\r\n                              \"value\":  [\r\n                                            \"127.0.0.0/255.0.0.0\",\r\n                                            \"::/127\"\r\n                                        ],\r\n                              \"Count\":  2\r\n                          },\r\n        \"HasLocalUserRestriction\":  true,\r\n        \"HasRemoteUserRestriction\":  false\r\n    },\r\n    {\r\n        \"Name\":  \"{1C07BA16-C1F5-49EE-9327-C6A21A7A4E8D}\",\r\n        \"RemoteAddress\":  {\r\n                              \"value\":  [\r\n                                            \"0.0.0.0-126.255.255.255\",\r\n                                            \"128.0.0.0-255.255.255.255\",\r\n                                            \"::\",\r\n                                            \"::2-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\"\r\n                                        ],\r\n                              \"Count\":  4\r\n                          },\r\n        \"HasLocalUserRestriction\":  true,\r\n        \"HasRemoteUserRestriction\":  false\r\n    }\r\n]\r\n",
+  "error": "",
+  "read_only": true
+}

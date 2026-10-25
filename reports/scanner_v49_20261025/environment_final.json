@@ -1,0 +1,178 @@
+{
+  "at": "2026-10-25T22:48:31.1186643+09:00",
+  "service": {
+    "Name": "W32Time",
+    "State": "Running",
+    "StartMode": "Automatic"
+  },
+  "timezone": {
+    "Id": "Korea Standard Time"
+  },
+  "scanners": [],
+  "adapter": [
+    {
+      "Name": "이더넷",
+      "ReceivedPacketErrors": 0,
+      "OutboundPacketErrors": 0,
+      "ReceivedDiscardedPackets": 0,
+      "OutboundDiscardedPackets": 0
+    }
+  ],
+  "profiles": [
+    {
+      "Name": "Domain",
+      "Enabled": 1,
+      "DefaultInboundAction": 0,
+      "DefaultOutboundAction": 0,
+      "LogBlocked": 0,
+      "LogAllowed": 0
+    },
+    {
+      "Name": "Private",
+      "Enabled": 1,
+      "DefaultInboundAction": 0,
+      "DefaultOutboundAction": 0,
+      "LogBlocked": 0,
+      "LogAllowed": 0
+    },
+    {
+      "Name": "Public",
+      "Enabled": 1,
+      "DefaultInboundAction": 0,
+      "DefaultOutboundAction": 0,
+      "LogBlocked": 0,
+      "LogAllowed": 0
+    }
+  ],
+  "udp123": [
+    {
+      "LocalAddress": "::",
+      "LocalPort": 123,
+      "OwningProcess": 20576
+    },
+    {
+      "LocalAddress": "0.0.0.0",
+      "LocalPort": 123,
+      "OwningProcess": 20576
+    }
+  ],
+  "udpBlockFilters": [
+    {
+      "Protocol": "UDP",
+      "LocalPort": "Any",
+      "RemotePort": "Any",
+      "InstanceID": "UDP Query User{627027F6-8EF1-4D91-9186-6C91F885F091}C:\\program files (x86)\\blizzard app\\battle.net.9093\\battle.net.exe"
+    },
+    {
+      "Protocol": "UDP",
+      "LocalPort": "Any",
+      "RemotePort": "Any",
+      "InstanceID": "UDP Query User{18A01A64-47A6-470A-B9E4-505BFB1710AF}C:\\program files (x86)\\kakao\\kakaotalk\\kakaotalk.exe"
+    },
+    {
+      "Protocol": "UDP",
+      "LocalPort": "Any",
+      "RemotePort": "Any",
+      "InstanceID": "UDP Query User{7FE7EF43-A876-415E-808B-F92DEA2C49B3}C:\\program files (x86)\\markany\\webdrmnoax\\bin\\mawebdrmagent.exe"
+    },
+    {
+      "Protocol": "UDP",
+      "LocalPort": "Any",
+      "RemotePort": "Any",
+      "InstanceID": "UDP Query User{14E21CE2-06BA-4835-A6E6-9B82F318BA95}C:\\program files (x86)\\cloudflared\\cloudflared.exe"
+    },
+    {
+      "Protocol": "UDP",
+      "LocalPort": "Any",
+      "RemotePort": "Any",
+      "InstanceID": "{B8DA78C1-C1AF-4C74-B58C-9D8043C19F27}"
+    },
+    {
+      "Protocol": "Any",
+      "LocalPort": "Any",
+      "RemotePort": "Any",
+      "InstanceID": "{1C07BA16-C1F5-49EE-9327-C6A21A7A4E8D}"
+    }
+  ],
+  "timeEvents": [
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T22:20:29.1482113+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T22:03:40.9894741+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:46:36.9757827+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:29:32.9744485+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 35,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:28.9616075+09:00",
+      "Message": "The time service is now synchronizing the system time with the time source time.google.com,0x8 (ntp.m|0x8|0.0.0.0:123->216.239.35.0:123) with reference id 2355160. Current local stratum number is 2."
+    },
+    {
+      "Id": 37,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:13.0811956+09:00",
+      "Message": "The time provider NtpClient is currently receiving valid time data from time.google.com,0x8 (ntp.m|0x8|0.0.0.0:123->216.239.35.0:123)."
+    },
+    {
+      "Id": 35,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:12.9396658+09:00",
+      "Message": "The time service is now synchronizing the system time with the time source time.windows.com,0x8 (ntp.m|0x8|0.0.0.0:123->52.231.114.183:123) with reference id 3077760820. Current local stratum number is 5."
+    },
+    {
+      "Id": 37,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:08.4767590+09:00",
+      "Message": "The time provider NtpClient is currently receiving valid time data from time.windows.com,0x8 (ntp.m|0x8|0.0.0.0:123->52.231.114.183:123)."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:08.1902260+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:07.8969242+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:11:16.6684426+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    }
+  ],
+  "jumps": [
+    {
+      "Id": 1,
+      "Time": "2026-10-25T21:12:12.9399185+09:00",
+      "Message": "시스템 시간이 ‎2026‎-‎10‎-‎25T12:12:12.939055600Z에서 ‎2026‎-‎10‎-‎25T12:12:12.939689500Z(으)로 변경되었습니다.\r\n\r\n변경 이유: An application or system component changed the time.\r\n프로세스: '\\Device\\HarddiskVolume2\\Windows\\System32\\svchost.exe'(PID 20576)."
+    },
+    {
+      "Id": 1,
+      "Time": "2026-10-25T21:12:12.9392740+09:00",
+      "Message": "시스템 시간이 ‎2026‎-‎10‎-‎25T12:12:08.491691400Z에서 ‎2026‎-‎10‎-‎25T12:12:12.937109500Z(으)로 변경되었습니다.\r\n\r\n변경 이유: An application or system component changed the time.\r\n프로세스: '\\Device\\HarddiskVolume2\\Windows\\System32\\svchost.exe'(PID 20576)."
+    }
+  ],
+  "noSystemChanges": true
+}

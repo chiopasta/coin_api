@@ -1,0 +1,19 @@
+{
+  "at": 1792935235.589811,
+  "root": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49",
+  "max_seconds": 1200,
+  "runs": [
+    {
+      "seconds": 180,
+      "max_requests": 80,
+      "stop_after_seconds": 90
+    },
+    {
+      "seconds": 780,
+      "max_requests": 180,
+      "resume": true
+    }
+  ],
+  "no_orders": true,
+  "no_auto_restart": true
+}

@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-25 V4.9 NTP 제한 재시도·LIVE 재개 검증
+
+- [V4.9 보고서](scanner_v49_ntp_recovery_20261025.md), 인프라 **PARTIAL / 제한 LIVE admission PASS·관측 완료 /24시간 NOT_READY**. 기존 NTP 검사2회 중1회 timeout을 재현했다(Windows5/6·Cloudflare6/6, 전체1/2 PASS). 근본 손실 지점은 UNKNOWN이며 서버/경로/방화벽 중 어느 원인인지 단정하지 않았다.
+- 새 전송 계층은 probe 내 동일 제공자2초·전체0.5초 직렬 간격, 수신timeout만2초 backoff 후 논리 표본당1회·전체2회 재시도한다. 최대8시도/내부10.5초/child12초/전체15초이며 두 제공자 각각3개 유효 표본·1초 오차/불확실성·0.5초 spread·구간 중첩·15초/3600초 신선도는 그대로다. 패킷 계산과 탐지 구현은 재사용했고 검사 전체 시간 점프도 차단한다.
+- 개선 비교2/2·새 검사 전체9/9 PASS, 새 전송54/56응답이다. 실제 최초supervisor 및resume worker에서 각각1개 Windows 수신timeout을 새 유효 표본으로 복구했다. 실패 시도는 보존됐으며 유효 표본 부족을 무시하지 않았다. 전체 검사 최대7.440초·표본 나이 최대7.236초다. 직접NTP 총68시도/128상한이다.
+- 종료 후 Windows offset **+67.631~+70.436ms**(최대 불확실성14.443ms), Cloudflare **+69.438~+70.848ms**(70.335ms), 최대 offset+불확실성140.552ms다. Windows 루트 거리0.12161355초, W32Time Running/Automatic·Google·계층2·윤초0·오류0이며 시간/서비스/방화벽 설정 변경0이다.
+- 별도 `episode_20261025_v49`에서 최초 **22:34:03.761~22:35:26.120 KST** STOP, 동일DB resume **22:35:33.421~22:48:07.919**, 합계836.844초·공백7.301초다. LIVE161회+API사전4회=165HTTP 모두200, 신규신호0, 수집오류/미완료job/중복0, 두 worker/supervisor 정상reap·forced0·close_errors={}다. 실행 중600초 재검증도PASS다.
+- 신규 원천30분 완전4/24=16.67%, 원천/가격slot483/720=67.08%(격자 중첩 포함), SOURCE_ABSENT237slot·NOT_COLLECTED0·실시간NO_TRADE증거0이다. 미입증151·300초 초과86slot은 가격 평가 불가이며 UNKNOWN 유지다. 기존25%·사후98.75%는 별도 시점/분모 그대로 보존했다. 실제 신호30/60분 완료는N/A/미검증이다.
+- **선별69개 통과**, 실제HTTP/UDP 금지·전체 회귀/백테스트 없음. 원본163신호·보호86입력·STALE_OPEN115·이전 증거138파일 hash 유지, 원본 및 이전V4.3 DB3개와 새두DB quick_check=ok다. RSS36.219MiB·CPU9.043%/한코어·새episode1.862MiB, 장기 자원/절전/재부팅은 미검증이다. 활성 Scanner0·주문/키/CHIO BOT통합/장기자동시작/Windows종료0. [실제 관측](../reports/scanner_v49_20261025/live_result.json), [보존 검증](../reports/scanner_v49_20261025/completion_checks.json).
+
 ## 2026-10-25 V4.8 Windows 루트 불확실성 분석
 
 - [V4.8 보고서](scanner_v48_windows_uncertainty_20261025.md), 인프라 **PARTIAL / 전체 시계 FAIL·LIVE BLOCKED /24시간 NOT_READY**. Windows 루트 조건은 자연 수렴으로 해소됐지만 이후 두 번의 새 전체 검사에서 각1개 Windows NTP 표본 timeout으로 차단됐다. 실패 표본을 제외해 통과시키거나 허용 기준을 변경하지 않았다.

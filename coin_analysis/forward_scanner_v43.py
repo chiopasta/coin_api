@@ -22,7 +22,7 @@ from . import scanner_clock_v45 as clock_guard
 from . import scanner_observation_v45 as price_overlay
 
 scanner, ops, candles = v42.scanner, v42.ops, v42.candles
-OBSERVER_REVISION = '4.7'  # Dataset's frozen 4.3/V4 config remains unchanged.
+OBSERVER_REVISION = '4.9'  # Dataset's frozen 4.3/V4 config remains unchanged.
 MARKETS = v42.MARKETS  # Same five markets; no liquidity/return-based reselection.
 RUNTIME_ROOT = scanner.DATA_DIR/'scanner_v43_live'
 MAX_SECONDS = 86400

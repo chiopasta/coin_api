@@ -1,0 +1,267 @@
+{
+  "config_sha256": "59893e79ffc74202348139f12871b1f7b4d0f8b82fe9dc4e9efd9b56609d28ea",
+  "databases": {
+    "UPBIT": {
+      "fingerprints": {
+        "candle_receipts": {
+          "rows": 1804,
+          "sha256": "316f2fef8a30d54dc22d062fd092b6bf3fa62adc5b2600b9470575a09cfa14e5"
+        },
+        "collection_jobs": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "collection_pages": {
+          "rows": 14,
+          "sha256": "400917fb35aa1480a77a28eb793c4c0ca382cb5c273b5cd99a4f9fbb19b6769c"
+        },
+        "coverage_windows": {
+          "rows": 16,
+          "sha256": "e992df46d79bc2e32e1485523d029374be129667845ca9469bb4d7edf7ec5d2a"
+        },
+        "live_horizons": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "live_signal_details": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "minute_candles": {
+          "rows": 1425,
+          "sha256": "be444d09e9fd64e4ff56986f82a92e3ff3d6dce8f2ea9df883c973253a0dd6b1"
+        },
+        "no_trade_evidence_v45": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "price_horizons_v45": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "scanner_config": {
+          "rows": 1,
+          "sha256": "cfc8e0fb7d53e01610afbda6ea45fa54f823c21bd3888593abef4919d9b885fc"
+        },
+        "scanner_cycles": {
+          "rows": 2,
+          "sha256": "0464fa0c1aafb46fb1e164e47a9914de5c90d770faee359765e4c19871552765"
+        },
+        "scanner_late_candles": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "scanner_runtime_events": {
+          "rows": 2,
+          "sha256": "9074a38bafdf77166a74694fc6df0fd32bd6dacd5a677894161b650cd78954e3"
+        },
+        "scanner_sessions": {
+          "rows": 1,
+          "sha256": "5f4e7ff729d45f59776d5cdf836c323fb0231e551e16f19f5b411f3e9e138bf4"
+        },
+        "scanner_state": {
+          "rows": 5,
+          "sha256": "c4fcbbec28ce28c5801e7595a871e0f3c49efe2e9b175a7edaf4c0ba9a56285c"
+        },
+        "signal_context": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_features": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_outcomes": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signals": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_migrations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_policy": {
+          "rows": 1,
+          "sha256": "bb58ea9e983aa1ffb507540216a270b288430ebf19c0769318e74b63c578d797"
+        }
+      },
+      "state": [
+        {
+          "market": "KRW-BTC",
+          "verified_until": 1792935300,
+          "last_observation": 1792913400,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ENA",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ETH",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-FLOCK",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-SAND",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        }
+      ],
+      "pending": []
+    },
+    "BITHUMB": {
+      "fingerprints": {
+        "candle_receipts": {
+          "rows": 1603,
+          "sha256": "205ea5e47022838883b1b8bdd880a334a6e77f61eafcd37b4855e4f3ff21cebd"
+        },
+        "collection_jobs": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "collection_pages": {
+          "rows": 13,
+          "sha256": "2b9b89437df8d03a5cc13f3b9d1d54956471c8720a28074cce898aedfd067004"
+        },
+        "coverage_windows": {
+          "rows": 16,
+          "sha256": "2d6750509ab749266143f605a289166c50ed8e346c6008ff77ac947ecaebc3e5"
+        },
+        "live_horizons": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "live_signal_details": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "minute_candles": {
+          "rows": 1198,
+          "sha256": "6e8be5ebd48d9e20ba2ad17709b9084b18db14a1061aeba875abe0fb77f8a16b"
+        },
+        "no_trade_evidence_v45": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "price_horizons_v45": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "scanner_config": {
+          "rows": 1,
+          "sha256": "cfc8e0fb7d53e01610afbda6ea45fa54f823c21bd3888593abef4919d9b885fc"
+        },
+        "scanner_cycles": {
+          "rows": 2,
+          "sha256": "248a0334365b9438930f219486e3decead13bd46cc69072473acd9bd7bc2dd2f"
+        },
+        "scanner_late_candles": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "scanner_runtime_events": {
+          "rows": 2,
+          "sha256": "98648185f9eb2527b744b32e28b976ef3e3a24f1dc58faaae5eff6f3b0979052"
+        },
+        "scanner_sessions": {
+          "rows": 1,
+          "sha256": "e9cbfd4f5f108b13555d16eee946c3d695273186af160777da9df35e5f91d295"
+        },
+        "scanner_state": {
+          "rows": 5,
+          "sha256": "dc1e5e4fa015f2c98382623aa5319fb08529dcee88b7b7eca0c6c6aad1dc5a7b"
+        },
+        "signal_context": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_features": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signal_outcomes": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "signals": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_migrations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_policy": {
+          "rows": 1,
+          "sha256": "bb58ea9e983aa1ffb507540216a270b288430ebf19c0769318e74b63c578d797"
+        }
+      },
+      "state": [
+        {
+          "market": "KRW-BTC",
+          "verified_until": 1792935300,
+          "last_observation": 1792913400,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ENA",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-ETH",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": 0,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-FLOCK",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        },
+        {
+          "market": "KRW-SAND",
+          "verified_until": 1792935300,
+          "last_observation": 1792935300,
+          "active": null,
+          "cluster_id": null,
+          "last_error": null
+        }
+      ],
+      "pending": []
+    }
+  }
+}
