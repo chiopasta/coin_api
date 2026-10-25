@@ -1,0 +1,5 @@
+{
+  "returncode": 2,
+  "stdout": "Status : BLOCKED\r\nReason : Another scanner owns this DB\r\nAction : Use status_coin_api.bat and stop_coin_api.bat for the owned run. Do not kill other Python processes.\r\n",
+  "stderr": ""
+}

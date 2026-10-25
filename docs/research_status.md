@@ -1,5 +1,14 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-25 V4.10 Windows BAT 실행·종료·상태
+
+- 루트 `start_coin_api.bat`·`stop_coin_api.bat`·`status_coin_api.bat` 추가. [사용 안내](scanner_v410_windows_launcher.md), [검증 보고서](scanner_v410_launcher_validation_20261025.md). 런처기능 PASS·인프라 **PARTIAL /24시간 NOT_READY**, 최종 **STOPPED/SAVED**다.
+- 기존V4.3/V4.9 엔진·시계·탐지·정책 변경0. 새 관리 계층이 Python3.11+ 자동확인·전체시계검증·기존잠금/STOP을 재사용하고 매번별도DB를 만든다. 기본은 수동종료까지의감독실행이되 기존86400초/16000요청 상한과fail-safe를 유지하며 자동재시작하지 않는다. API키/.env/추가패키지 불필요다.
+- PID+Windows 생성시각·고유launch경로로 소유권을검사하고 STOP만보낸다. 정상summary/reap·DB검사·빈WAL·로그flush 후SAVED, 미확인은UNKNOWN/BLOCKED다. 상태숫자는새DB/receipt/시계기록에서조회한다. 다른Python/CHIO BOT/수동기동을죽이지 않는다.
+- 실제첫BAT Shell연결은NTP누락으로BLOCKED·DB/worker/API0. 두번째PowerShell BAT는전체시계PASS 후23:33:39.879~23:34:12.976 KST worker33.096초·29HTTP모두200·신호0, CMD상태/중복차단/종료와종료후PowerShell상태/종료를확인했다. 총NTP27패킷.2608봉은23:35이전warmup으로자연신호/후속성과표본은없다.
+- **선별81개 PASS**, 전체회귀/백테스트없음. 실제CMD/PowerShell의한글·공백·구두점경로오프라인기동, 잘못된/구형Python, 오류pause, Windows잠금, 임시DB상태집계 및mock시계/PID재사용을검증했다. Shell BAT연결은확인했지만물리마우스더블클릭·한글경로LIVE·실제창X종료·24시간은미검증이다.
+- 원본163신호·보호86입력·STALE_OPEN115·이전증거169파일·V4.9 원시26파일 hash유지. 원본/새DB quick_check=ok·활성Scanner0. 주문·키·자동실행등록·Windows설정/시각/종료/재부팅0. [완료 검증](../reports/scanner_v410_20261025/completion_checks.json).
+
 ## 2026-10-25 V4.9 NTP 제한 재시도·LIVE 재개 검증
 
 - [V4.9 보고서](scanner_v49_ntp_recovery_20261025.md), 인프라 **PARTIAL / 제한 LIVE admission PASS·관측 완료 /24시간 NOT_READY**. 기존 NTP 검사2회 중1회 timeout을 재현했다(Windows5/6·Cloudflare6/6, 전체1/2 PASS). 근본 손실 지점은 UNKNOWN이며 서버/경로/방화벽 중 어느 원인인지 단정하지 않았다.

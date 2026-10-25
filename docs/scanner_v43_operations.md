@@ -1,5 +1,14 @@
 # Scanner V4.3 관측 전용 운영
 
+## V4.10 Windows 간편 실행 — 2026-10-25
+
+루트의 `start_coin_api.bat`, `stop_coin_api.bat`, `status_coin_api.bat`를 사용한다.
+[사용 안내](scanner_v410_windows_launcher.md)와 [검증 결과](scanner_v410_launcher_validation_20261025.md)를 먼저 확인한다.
+기존 엔진/시계 기준은 그대로이며 이 관리 계층은 새dataset의감독실행·정상STOP·실제상태조회만 제공한다.
+기본은사용자종료까지이되 기존24시간/16000요청 hard cap에서종료하며자동재시작하지 않는다.
+24시간무인은 NOT_READY이고 이번검증은120초/80요청 제한기동만사용했다. 현재는모두STOPPED/SAVED다.
+아래직접모듈명령은고급운영절차로유지하며BAT가과거episode를자동resume하지 않는다.
+
 ## V4.9 현재 admission — 2026-10-25
 
 [V4.9 보고서](scanner_v49_ntp_recovery_20261025.md)를 먼저 확인한다.

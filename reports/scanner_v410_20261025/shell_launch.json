@@ -1,0 +1,8 @@
+﻿{
+    "at":  "2026-10-25T23:30:35.3039002+09:00",
+    "shell_pid":  9032,
+    "method":  "Windows shell BAT association",
+    "seconds":  120,
+    "max_requests":  80,
+    "no_pause_for_test":  true
+}

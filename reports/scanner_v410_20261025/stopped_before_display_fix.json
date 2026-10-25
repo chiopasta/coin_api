@@ -1,0 +1,10 @@
+{
+  "status": {
+    "returncode": 0,
+    "stdout": "\r\n============================================================\r\nStatus       : STOPPED\r\nPhase        : TERMINAL\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UPBIT / BITHUMB\r\nMarkets      : 5 unique / 10 venue pairs (8 signal pairs)\r\nClock        : PASS (check age 244.7s; periodic recheck 600s)\r\nSignals      : 0\r\nStarted      : 2026-10-25 23:33:26 KST\r\nDuration     : 46.5s\r\nLast signal  : UNKNOWN\r\nCollected    : 2026-10-25 23:34:07 KST\r\nDB save      : SAVED / WAL checkpoint and normal close confirmed\r\nDB bytes     : 774144\r\nRecent error : NONE\r\nLast result  : STOP_REQUESTED\r\nWarning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result\r\nSafety cap   : 120s / 80 HTTP\r\nStop         : stop_coin_api.bat\r\n============================================================\r\n"
+  },
+  "stop": {
+    "returncode": 0,
+    "stdout": "\r\n============================================================\r\nStatus       : STOPPED\r\nPhase        : TERMINAL\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UPBIT / BITHUMB\r\nMarkets      : 5 unique / 10 venue pairs (8 signal pairs)\r\nClock        : PASS (check age 246.3s; periodic recheck 600s)\r\nSignals      : 0\r\nStarted      : 2026-10-25 23:33:26 KST\r\nDuration     : 46.5s\r\nLast signal  : UNKNOWN\r\nCollected    : 2026-10-25 23:34:07 KST\r\nDB save      : SAVED / WAL checkpoint and normal close confirmed\r\nDB bytes     : 774144\r\nRecent error : NONE\r\nLast result  : STOP_REQUESTED\r\nWarning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result\r\nSafety cap   : 120s / 80 HTTP\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nNo owned live process; no signal or kill sent.\r\n"
+  }
+}

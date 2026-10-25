@@ -1,0 +1,154 @@
+{
+  "run_id": "07aa5962ccf74c9eb303b33dbb4a7572",
+  "status": "STOPPED",
+  "reason": "STOP_REQUESTED",
+  "started_at": 1792938819.8792608,
+  "ended_at": 1792938852.9755492,
+  "completed_rounds": 2,
+  "observer_revision": "4.9",
+  "price_policy": "V45_PRICE_ONLY_300S_FROM_MINUTE_START",
+  "elapsed_monotonic_seconds": 33.09554179999941,
+  "clock_fault": false,
+  "requests": 29,
+  "peak_rss_bytes": 36839424,
+  "max_cpu_percent": 8.258126877714515,
+  "per_exchange": {
+    "UPBIT": {
+      "integrity": "ok",
+      "signals": {
+        "default_view": "LIVE",
+        "LIVE": {
+          "source": "LIVE",
+          "signals": 0,
+          "signal_markets": 0,
+          "L1": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "L2": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "collection_errors": []
+        },
+        "CATCHUP": {
+          "source": "CATCHUP",
+          "signals": 0,
+          "signal_markets": 0,
+          "L1": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "L2": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "collection_errors": []
+        },
+        "ALL": {
+          "source": "ALL",
+          "signals": 0,
+          "signal_markets": 0,
+          "L1": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "L2": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "collection_errors": []
+        }
+      },
+      "candles": 1416,
+      "pending_jobs": 0,
+      "coverage": [],
+      "horizons": [],
+      "price_endpoints_v45": []
+    },
+    "BITHUMB": {
+      "integrity": "ok",
+      "signals": {
+        "default_view": "LIVE",
+        "LIVE": {
+          "source": "LIVE",
+          "signals": 0,
+          "signal_markets": 0,
+          "L1": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "L2": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "collection_errors": []
+        },
+        "CATCHUP": {
+          "source": "CATCHUP",
+          "signals": 0,
+          "signal_markets": 0,
+          "L1": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "L2": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "collection_errors": []
+        },
+        "ALL": {
+          "source": "ALL",
+          "signals": 0,
+          "signal_markets": 0,
+          "L1": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "L2": {
+            "statuses": {},
+            "valid": 0,
+            "success": 0,
+            "rate_pct": null
+          },
+          "collection_errors": []
+        }
+      },
+      "candles": 1192,
+      "pending_jobs": 0,
+      "coverage": [],
+      "horizons": [],
+      "price_endpoints_v45": []
+    }
+  },
+  "collection_errors": {
+    "UPBIT": [],
+    "BITHUMB": []
+  },
+  "close_errors": {},
+  "no_orders": true,
+  "performance_verdict": "INSUFFICIENT_DATA"
+}

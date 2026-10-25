@@ -6,6 +6,13 @@
 
 [V4 설계·실행 안내](docs/forward_scanner_v4.md) · [독립 validation 결과](reports/forward_surge_v3_independent_validation.md)
 
+## Windows 간편 관측 실행
+
+프로젝트 루트의 `start_coin_api.bat`를 더블클릭해 시작하고, `status_coin_api.bat`로 확인한 뒤
+`stop_coin_api.bat`로 안전하게 종료합니다. PowerShell에서도 `.\start_coin_api.bat`처럼 실행합니다.
+관측 전용·감독하 사용이며24시간 무인은 NOT_READY입니다. 기존 시계/실행 한도와 데이터 보호를 유지합니다.
+[Python 선택·실행·종료 안내](docs/scanner_v410_windows_launcher.md)
+
 ## 과거 단계: V2 정책 수정 재검증
 
 전체 280종목 분석은 보류 중입니다. t0·가격 흐름 episode·대칭 coverage 정책을 적용한 **고정 40종목 재검증**은 다음 명령으로 실행합니다. API/다운로드는 없습니다.

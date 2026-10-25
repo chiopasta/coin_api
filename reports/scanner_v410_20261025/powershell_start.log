@@ -1,0 +1,111 @@
+Python       : C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Project      : C:\dev\coin_api-1
+Config       : built-in frozen policy; no .env or API keys required
+Safety       : SUPERVISED ONLY; 24h unattended NOT_READY
+Stop         : stop_coin_api.bat
+Clock        : CHECKING (existing Windows + two-provider NTP gates)
+
+============================================================
+Status       : RUNNING
+Phase        : STARTING
+Mode         : OBSERVATION ONLY
+Exchanges    : UNKNOWN
+Markets      : UNKNOWN
+Clock        : PASS (check age 0.0s; periodic recheck 600s)
+Signals      : UNKNOWN
+Started      : 2026-10-25 23:33:26 KST
+Duration     : 7.5s
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : UNKNOWN / final close not yet confirmed
+DB bytes     : UNKNOWN
+Recent error : UNKNOWN
+Last result  : UNKNOWN
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY
+Safety cap   : 120s / 80 HTTP
+Stop         : stop_coin_api.bat
+============================================================
+
+============================================================
+Status       : RUNNING
+Phase        : STARTING
+Mode         : OBSERVATION ONLY
+Exchanges    : UNKNOWN
+Markets      : UNKNOWN
+Clock        : PASS (check age 10.3s; periodic recheck 600s)
+Signals      : UNKNOWN
+Started      : 2026-10-25 23:33:26 KST
+Duration     : 17.7s
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : UNKNOWN / final close not yet confirmed
+DB bytes     : UNKNOWN
+Recent error : UNKNOWN
+Last result  : UNKNOWN
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY
+Safety cap   : 120s / 80 HTTP
+Stop         : stop_coin_api.bat
+============================================================
+
+============================================================
+Status       : RUNNING
+Phase        : OBSERVING
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+Clock        : PASS (check age 7.5s; periodic recheck 600s)
+Signals      : 0
+Started      : 2026-10-25 23:33:26 KST
+Duration     : 28.0s
+Last signal  : UNKNOWN
+Collected    : 2026-10-25 23:33:53 KST
+DB save      : UNKNOWN / final close not yet confirmed
+DB bytes     : 4762352
+Recent error : NONE
+Last result  : UNKNOWN
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : 120s / 80 HTTP
+Stop         : stop_coin_api.bat
+============================================================
+
+============================================================
+Status       : RUNNING
+Phase        : OBSERVING
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+Clock        : PASS (check age 17.8s; periodic recheck 600s)
+Signals      : 0
+Started      : 2026-10-25 23:33:26 KST
+Duration     : 38.3s
+Last signal  : UNKNOWN
+Collected    : 2026-10-25 23:34:05 KST
+DB save      : UNKNOWN / final close not yet confirmed
+DB bytes     : 4820032
+Recent error : NONE
+Last result  : UNKNOWN
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : 120s / 80 HTTP
+Stop         : stop_coin_api.bat
+============================================================
+
+============================================================
+Status       : STOPPED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+Clock        : PASS (check age 26.1s; periodic recheck 600s)
+Signals      : 0
+Started      : 2026-10-25 23:33:26 KST
+Duration     : 46.5s
+Last signal  : UNKNOWN
+Collected    : 2026-10-25 23:34:07 KST
+DB save      : SAVED / WAL checkpoint and normal close confirmed
+DB bytes     : 774144
+Recent error : NONE
+Last result  : STOP_REQUESTED
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : 120s / 80 HTTP
+Stop         : stop_coin_api.bat
+============================================================

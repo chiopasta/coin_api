@@ -1,0 +1,34 @@
+{
+  "tests_run": 81,
+  "successful": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 8.567990499999723,
+  "selected_names": [
+    "tests.test_scanner_control_v410",
+    "tests.test_scanner_ntp_v49",
+    "tests.test_scanner_clock_v47",
+    "tests.test_scanner_clock_v46",
+    "tests.test_forward_scanner_v43",
+    "tests.test_scanner_v41.CandleGuards",
+    "tests.test_scanner_v41.RuntimeRepairs.test_os_lock_rejects_second_process_without_growing_file",
+    "tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start",
+    "tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable",
+    "tests.test_scanner_observation_v45.Prices.test_pending_60m_endpoint_survives_real_disk_close_reopen",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes"
+  ],
+  "source_sha256": {
+    "coin_analysis/scanner_control_v410.py": "10ea2a7a2a2ee441ac723522aa2eacb30167daba01eb5dd60247dab6572e71af",
+    "scripts/coin_api_entry.py": "fd725cedd7eab4beef1e6a8c806f9b684496f275e329fc50312b1d0e2b06a4dd",
+    "scripts/coin_api_python.cmd": "91a7cd40fec7e6467d2d16032aeecb6326daceec93d56eb34bfeac7a5ae327c0",
+    "start_coin_api.bat": "39b322951a4e7364d165a86f3ba7faa17c9ea0bd568d0f71f4692a0cbf5a092d",
+    "stop_coin_api.bat": "917b02660a3b262825275faf8af3f4b2a9fbbad51925ae3895de6fc4bf0d54a9",
+    "status_coin_api.bat": "7f84421e0389cc0c1616da1901d16a128f427324153ea96388183838512f8eaf",
+    "tests/test_scanner_control_v410.py": "fb17cbf6e0da33ccc71ed29e6c071fa7d8a6e9db4d230844f7635b178e784577",
+    "coin_analysis/forward_scanner_v43.py": "7cbbfa7697a4ce9772a02a62e2ee3b8b26aa454fbbea29b46ab8f79962f28a26",
+    "coin_analysis/scanner_clock_v45.py": "222581f107a1308d1a372976de4fa84aa4294cd96f5745a17e95fe236d04814f",
+    "coin_analysis/scanner_ntp_v49.py": "ed4b78c94382134a1c7b2177c04addc162a998683a6e36ffb4694bf01172c0bc"
+  },
+  "scope": "Selected only; mock network plus actual offline BAT/CMD/PowerShell/SQLite/Windows locks"
+}
