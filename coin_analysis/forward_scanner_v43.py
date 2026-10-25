@@ -18,8 +18,11 @@ import time
 import uuid
 
 from . import forward_scanner_v42 as v42
+from . import scanner_clock_v45 as clock_guard
+from . import scanner_observation_v45 as price_overlay
 
 scanner, ops, candles = v42.scanner, v42.ops, v42.candles
+OBSERVER_REVISION = '4.5'  # Dataset's frozen 4.3/V4 config remains unchanged.
 MARKETS = v42.MARKETS  # Same five markets; no liquidity/return-based reselection.
 RUNTIME_ROOT = scanner.DATA_DIR/'scanner_v43_live'
 MAX_SECONDS = 86400
@@ -58,6 +61,12 @@ class Budget(v42.Budget):
         self.next_request = time.monotonic()+max(0, (latest or 0)+.25-time.time())
         self.peak_rss = 0; self.max_cpu_percent = 0.; self.cpu_sample = (time.monotonic(),time.process_time())
         self.last_clock = time.time(); self.active_seq = None; self.receipts = {}
+        self.clock_anchor = (time.monotonic(), self.last_clock)
+        self.monotonic_deadline = self.clock_anchor[0]+max(0,min(run['duration_seconds'],run['deadline']-self.last_clock))
+        self.clock_verified_at = None
+
+    def remaining_seconds(self):
+        return max(0,self.monotonic_deadline-time.monotonic())
 
     def event(self, kind, **payload):
         if kind == 'HTTP_START':
@@ -72,6 +81,7 @@ class Budget(v42.Budget):
                     (kind,time.time(),json.dumps(payload),self.active_seq))
             self.active_seq = None
         line = json.dumps(dict(at=time.time(),run_id=self.run['run_id'],kind=kind,**payload),allow_nan=False)+'\n'
+        if len(line.encode('utf8'))>LOG_BYTES:raise Stop('LOG_RECORD_LIMIT')
         if self.path.exists() and self.path.stat().st_size+len(line.encode('utf8'))>LOG_BYTES:
             # Only this new observer's bounded telemetry rotates. DB evidence stays.
             oldest=self.root/f'events.{LOG_COPIES-1}.jsonl'
@@ -86,9 +96,18 @@ class Budget(v42.Budget):
     def check(self):
         now=time.time()
         if self.stop or (self.root/'STOP').exists():raise Stop('STOP_REQUESTED')
-        if now+2<self.last_clock:raise Stop('CLOCK_MOVED_BACKWARDS')
+        monotonic=time.monotonic()
+        if abs((now-self.clock_anchor[1])-(monotonic-self.clock_anchor[0]))>clock_guard.MAX_WALL_DRIFT_SECONDS or now+1<self.last_clock:
+            raise Stop('CLOCK_WALL_MONOTONIC_DIVERGENCE')
         self.last_clock=now
-        if now>=self.config['deadline']:raise Stop('TIME_LIMIT')
+        if monotonic>=self.monotonic_deadline or now>=self.config['deadline']:raise Stop('TIME_LIMIT')
+        if self.clock_verified_at is None or monotonic-self.clock_verified_at>=clock_guard.RECHECK_SECONDS:
+            evidence=clock_guard.verify_clock()
+            self.event('CLOCK_CHECK',evidence=evidence)
+            if evidence['status']!='VERIFIED':raise Stop(evidence['reason'])
+            self.clock_verified_at=time.monotonic()
+            # Recheck after the bounded external call before returning to work.
+            self.check()
         self.peak_rss=max(self.peak_rss,v42.rss_bytes())
         if self.peak_rss>MAX_RSS:raise Stop('MEMORY_LIMIT')
         if sum(p.stat().st_size for p in self.root.rglob('*') if p.is_file())>=MAX_DISK:raise Stop('DISK_LIMIT')
@@ -102,8 +121,12 @@ class Budget(v42.Budget):
 
     def request(self, exchange, endpoint, params):
         # v4.2 transport allows only market/all and 1-minute PUBLIC candles.
-        body,headers=super().request(exchange,endpoint,params)
-        self.next_request=max(self.next_request,time.monotonic()+.25)
+        try:
+            body,headers=super().request(exchange,endpoint,params)
+        finally:
+            # Failed attempts obey the same spacing as successful responses.
+            self.next_request=max(self.next_request,time.monotonic()+.25)
+        self.check()  # Never admit a response after a clock fault/deadline.
         if endpoint.endswith('/1'):
             rows=candles.validate_page(body,scanner.collector.parse(params['to']),params['market'])
             db=self.receipts.get(exchange)
@@ -118,7 +141,7 @@ class Budget(v42.Budget):
         self.check()
         seconds=30 if bootstrap else ROUND_RESERVE_SECONDS
         requests=24 if bootstrap else ROUND_RESERVE_REQUESTS
-        if self.config['deadline']-time.time()<seconds:return 'ROUND_TIME_RESERVE'
+        if self.remaining_seconds()<seconds:return 'ROUND_TIME_RESERVE'
         if self.config['max_requests']-self.requests<requests:return 'ROUND_REQUEST_RESERVE'
         return None
 
@@ -137,6 +160,7 @@ def observation_schema(db):
       CREATE TRIGGER IF NOT EXISTS immutable_coverage BEFORE UPDATE ON coverage_windows
         BEGIN SELECT RAISE(ABORT,'Coverage at processing time is immutable'); END;
     ''')
+    price_overlay.schema(db)
 
 
 def open_runtime(root, config, exchange):
@@ -178,6 +202,7 @@ def record_metrics(db, exchange, now):
             db.execute('INSERT INTO signal_context VALUES(?,?,?,?,?)',(row['signal_id'],values.get('return_5m_pct'),
                 values.get('trade_value_ratio'),json.dumps(values),'First response receipt <= actual detected_at; unknown stays NULL'))
     v42.record_metrics(db,exchange,now)
+    price_overlay.record_price_horizons(db,now)
 
 
 def validate_config(config):
@@ -193,7 +218,7 @@ def worker(root, run_id):
     run=json.loads((root/'runs'/f'{run_id}.json').read_text(encoding='utf8'))
     if not 0<run['duration_seconds']<=MAX_SECONDS or not 0<run['max_requests']<=MAX_REQUESTS or run['deadline']!=run['created_at']+run['duration_seconds']:
         raise ValueError('Invalid launch bounds')
-    began=time.time();dbs={};sessions={};budget=None;status='BLOCKED';reason=None;rounds=0
+    began=time.time();began_monotonic=time.monotonic();dbs={};sessions={};budget=None;status='BLOCKED';reason=None;rounds=0
     errors={};close_errors={};locks=ExitStack();control=None;per_exchange={}
     try:
         locks.enter_context(scanner.exclusive(v42.RUNTIME_ROOT/'observer'))
@@ -203,6 +228,8 @@ def worker(root, run_id):
         budget.check();budget.event('WORKER_START',pid=os.getpid(),bounds=run)
         for exchange in v42.HOSTS:
             dbs[exchange]=open_runtime(root,config,exchange)
+            try:clock_guard.resume_continuity(dbs[exchange],time.time())
+            except ValueError as exc:raise Stop(str(exc)) from exc
             sessions[exchange]=ops.start_session(dbs[exchange])
             budget.receipts[exchange]=dbs[exchange]
             # Avoid unbounded historical catchup after long OS downtime.
@@ -221,6 +248,7 @@ def worker(root, run_id):
             for exchange,db in dbs.items():
                 before=dict(db.execute('SELECT market,last_observation FROM scanner_state'))
                 scanner.cycle(db,clients[exchange],emit=lambda msg,e=exchange:budget.event('ENGINE',exchange=e,message=msg),session_id=sessions[exchange])
+                budget.check()
                 now=int(time.time());coverage(db,before,now);record_metrics(db,exchange,now)
                 errors[exchange]=[dict(r) for r in db.execute('SELECT market,last_error FROM scanner_state WHERE last_error IS NOT NULL')]
             rounds+=1
@@ -232,7 +260,7 @@ def worker(root, run_id):
             if consecutive_errors>=5:raise Stop('NETWORK_CIRCUIT_OPEN_5_ROUNDS')
             # Transient exhausted retries retain jobs. Next poll resumes them.
             wait=max(1,65-time.time()%60)
-            remaining=run['deadline']-time.time()-ROUND_RESERVE_SECONDS
+            remaining=budget.remaining_seconds()-ROUND_RESERVE_SECONDS
             if wait>=remaining:status='BOUNDED_STOP';reason='ROUND_TIME_RESERVE';break
             budget.sleep(wait)
     except Stop as exc:
@@ -241,13 +269,15 @@ def worker(root, run_id):
     finally:
         for exchange,db in dbs.items():
             try:
-                record_metrics(db,exchange,int(time.time()))
+                # A suspect clock must not finalize any price/label at shutdown.
+                if not (reason or '').startswith('CLOCK_'):record_metrics(db,exchange,int(time.time()))
                 if exchange in sessions:ops.end_session(db,sessions[exchange],'STOPPED' if status in ('STOPPED','BOUNDED_STOP') else 'ERROR',reason)
                 errors[exchange]=[dict(r) for r in db.execute('SELECT market,last_error FROM scanner_state WHERE last_error IS NOT NULL')]
                 per_exchange[exchange]=dict(integrity=db.execute('PRAGMA quick_check').fetchone()[0],signals=scanner.grouped_statistics(db),
                     candles=db.execute('SELECT COUNT(*) FROM minute_candles').fetchone()[0],pending_jobs=db.execute('SELECT COUNT(*) FROM collection_jobs').fetchone()[0],
                     coverage=[dict(r) for r in db.execute('SELECT minutes,status,COUNT(*) AS n FROM coverage_windows GROUP BY minutes,status')],
-                    horizons=[dict(r) for r in db.execute('SELECT minutes,status,COUNT(*) AS n FROM live_horizons GROUP BY minutes,status')])
+                    horizons=[dict(r) for r in db.execute('SELECT minutes,status,COUNT(*) AS n FROM live_horizons GROUP BY minutes,status')],
+                    price_endpoints_v45=[dict(r) for r in db.execute('SELECT minutes,status,COUNT(*) AS n FROM price_horizons_v45 GROUP BY minutes,status')])
                 ops.close_cleanly(db)
             except Exception as exc:
                 close_errors[exchange]=repr(exc)
@@ -259,6 +289,8 @@ def worker(root, run_id):
         if control:control.close()
         locks.close()
         result=dict(run_id=run_id,status=status,reason=reason,started_at=began,ended_at=time.time(),completed_rounds=rounds,
+            observer_revision=OBSERVER_REVISION,price_policy=price_overlay.POLICY,
+            elapsed_monotonic_seconds=time.monotonic()-began_monotonic,clock_fault=(reason or '').startswith('CLOCK_'),
             requests=budget.requests if budget else 0,peak_rss_bytes=budget.peak_rss if budget else None,
             max_cpu_percent=budget.max_cpu_percent if budget else None,per_exchange=per_exchange,collection_errors=errors,
             close_errors=close_errors,no_orders=True,performance_verdict='INSUFFICIENT_DATA')
@@ -273,6 +305,8 @@ def run(root, seconds, resume=False, max_requests=MAX_REQUESTS):
     if not 30<=seconds<=MAX_SECONDS or not 26<=max_requests<=MAX_REQUESTS:raise ValueError('Outside bounded launch limits')
     # Same global locks as v4.2; duplicate launch cannot create/alter dataset.
     with scanner.exclusive(v42.RUNTIME_ROOT/'supervisor'):
+        evidence=clock_guard.verify_clock()
+        if evidence['status']!='VERIFIED':raise Stop(evidence['reason'])
         if resume:
             config=json.loads((root/'config.json').read_text(encoding='utf8'));validate_config(config)
             if (root/'STOP').exists():raise ValueError('Archive/remove own STOP explicitly before resume')
@@ -284,16 +318,18 @@ def run(root, seconds, resume=False, max_requests=MAX_REQUESTS):
         if shutil.disk_usage(root).free<256*1024*1024:raise RuntimeError('Insufficient free disk')
         now=time.time();run_id=uuid.uuid4().hex
         bounds=dict(run_id=run_id,created_at=now,duration_seconds=seconds,deadline=now+seconds,
-                    max_requests=max_requests,resume=resume)
+                    max_requests=max_requests,resume=resume,clock_admission=evidence,
+                    observer_revision=OBSERVER_REVISION,price_policy=price_overlay.POLICY)
         (root/'runs').mkdir(exist_ok=True);write_json(root/'runs'/f'{run_id}.json',bounds)
         with ledger(root/'control.db') as control:
             control.execute('INSERT INTO runs VALUES(?,?)',(run_id,json.dumps(bounds)))
         control.close()
+        supervisor_deadline=time.monotonic()+seconds+30
         process=subprocess.Popen([sys.executable,'-m',__spec__.name,'--execute-live','--worker','--runtime-dir',str(root),'--run-id',run_id],
             creationflags=0x08000000 if os.name=='nt' else 0)
         write_json(root/'supervisor.json',dict(at=time.time(),run_id=run_id,pid=os.getpid(),worker_pid=process.pid,deadline=bounds['deadline']))
         forced=False
-        try:code=process.wait(timeout=max(1,bounds['deadline']-time.time()+30))
+        try:code=process.wait(timeout=max(1,supervisor_deadline-time.monotonic()))
         except (subprocess.TimeoutExpired,KeyboardInterrupt) as exc:
             (root/'STOP').touch()
             try:code=process.wait(timeout=20 if isinstance(exc,KeyboardInterrupt) else 5)

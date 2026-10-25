@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-25 V4.5 NO_TRADE·장시간 운영 준비 검증
+
+- [V4.5 보고서](scanner_v45_observation_readiness_20261025.md), 관측 인프라 **PARTIAL**, 현재 호스트의 LIVE 시작 **CLOCK_SYNC_UNVERIFIED로 BLOCKED**. W32Time 서비스 조회가0x80070426으로 실패해 독립 시계 정확도는 미검증이다. 시계/서비스를 변경하거나 장시간 LIVE를 시작하지 않았다.
+- 기존 V4.4 **4/16=25% 원천30봉 완성도는 그대로**다. 독립 체결 근거를 재검증한 사후 가격 전용 평가는 **474/480slot=98.75%**(실제380+파생94), 고유276/280, 가격 격자13/16이다. 이 값은 원천 봉·range·탐지 완성도가 아니다. 가격 신선도 상한300초(원천 분봉 시작 기준)를 넘는6slot은 제외했다.
+- 나중에 확보한 NO_TRADE 증거는 당시 feature로 쓸 수 없다. 당시 지식 기준 가격 평가380/480은 보존했다. 원천 candle·거래량·거래대금·threshold·label·5분 간격·cluster·점수 없음 정책은 불변이다. 기존 수집92/92 성공, NO_TRADE100/480slot·60/280고유분도 유지한다.
+- 기존 V4.3 wrapper에 별도 가격 endpoint 테이블과 시계 admission/600초 재검증, 단조 실행 제한·벽시계 drift 차단·재시작 미래 시각 차단, 실패 HTTP 간격 및 큰 로그 행 제한을 보강했다. 기존 core/collector/V4.2/V15·동결 연구 정의는 변경하지 않았다. 실시간 NO_TRADE 증거 자동 수집은 SKIP이며 근거 없는 원천 부재는 계속 평가 불가다.
+- 실제 새 신호0, 실제 후속 평가율 N/A. 동일16진단격자 후속30/60분은 전체 경로·부가 endpoint 모두0/16이다. 종료 이후 자료를 수집했다고 간주하지 않는다. 자연60분 완료·실제24시간 자원/장애·재부팅은 미검증이다.
+- **영향 범위 선별70개 테스트 통과**. 실제 임시 DB close/reopen·별도 child 비정상 종료 WAL/PENDING 복구·OS lock, mock 네트워크/시계/자원 장애·watchdog를 구분해 기록했다. 전체 회귀·백테스트·거래소 API 추가 호출은0이다.
+- 기존163신호·86보호 입력·STALE_OPEN115 장부·구형 DB 및 기존 V4.2/V4.3/V4.4 파일 hash 보존을 확인했다. 원본 DB는 immutable 읽기, 부가 증거는 메모리 복사/임시 DB에서만 적용했다. 주문·키·CHIO BOT 통합·자동 재시작·Windows 종료 없음. [비교 증거](../reports/scanner_v45_20261025/comparison.json), [보존 검증](../reports/scanner_v45_20261025/completion_checks.json).
+
 ## 2026-10-25 V4.4 분봉 결측 원인 검증
 
 - [V4.4 보고서](scanner_v44_gap_validation_20261025.md), 최종 **PARTIAL**. V4.3의 LOOKBACK_30M 완전 격자는 저장값과 core로 재구성해 **4/16(25%) 그대로**다. 후속30분 성과의 완결률이 아니며, 기준·분모 완화나 가상 봉 생성은 없다.
@@ -58,7 +68,7 @@
 - 정상 종료 시 WAL TRUNCATE checkpoint, 강제 종료 후 commit WAL 복구, 시작 시 quick_check, stale sidecar 전용 오류와 백업 기반 `repair-wal` 명령을 추가했다. 전체 자동 테스트 **126개 통과**. API와 scanner cycle은 실행하지 않았다.
 - 기존 재개 명령 유지: `python -m coin_analysis.forward_scanner_v4 --mode run --db data/forward_scanner_v4.db`.
 
-최종 갱신: 2026-10-25. 현재 단계: **V4.4 결측 원인 검증 완료, 인프라 PARTIAL / 조기 탐지 실효성 INSUFFICIENT_DATA**. 무인24시간 운영·매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+최종 갱신: 2026-10-25. 현재 단계: **V4.5 가격 전용 NO_TRADE 평가·운영 guard 검증 완료, 인프라 PARTIAL / 현재 LIVE 시계 admission BLOCKED / 조기 탐지 실효성 INSUFFICIENT_DATA**. 무인24시간 운영·매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
 
 ## 최신 LIVE 성과 점검 — 2026-10-05 22:43 KST
 

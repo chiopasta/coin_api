@@ -14,6 +14,8 @@ from coin_analysis import forward_scanner_v43 as v
 
 class Runtime(unittest.TestCase):
     def setUp(self):
+        self.clock=patch.object(v.clock_guard,'verify_clock',return_value=dict(status='VERIFIED',reason='ISOLATED_TEST'))
+        self.clock.start();self.addCleanup(self.clock.stop)
         self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
         self.config=dict(version='4.3_OBSERVATION',markets=v.MARKETS,policy=v.scanner.POLICY,signal_start=86400)
         self.run=dict(run_id='run',created_at=time.time(),duration_seconds=100,deadline=time.time()+100,max_requests=50,resume=False)
@@ -37,6 +39,21 @@ class Runtime(unittest.TestCase):
             result=client.get('/v1/market/all')
         self.assertEqual(result,[dict(market='KRW-BTC')]);self.assertEqual(client.retries,1)
         self.assertEqual([r[0] for r in self.control.execute('SELECT status FROM http_attempts ORDER BY seq')],['HTTP_ERROR','HTTP_END'])
+    def test_failed_attempt_obeys_spacing_and_persisted_limit_blocks_next_call(self):
+        self.b.config['max_requests']=1
+        with patch.object(v.v42.urllib.request,'urlopen',side_effect=urllib.error.URLError('offline')):
+            with self.assertRaises(urllib.error.URLError):self.request()
+        self.assertGreater(self.b.next_request-time.monotonic(),.20)
+        reconstructed=v.Budget(self.root,self.config,self.run,self.control)
+        reconstructed.config['max_requests']=1
+        with patch.object(v.v42.urllib.request,'urlopen') as url,patch.object(reconstructed,'sleep'):
+            with self.assertRaisesRegex(v.Stop,'REQUEST_LIMIT'):reconstructed.request('UPBIT','/v1/market/all',{})
+        url.assert_not_called()
+
+    def test_low_free_disk_blocks_without_network(self):
+        with patch.object(v.shutil,'disk_usage',return_value=type('Disk',(),dict(free=1))()),patch.object(v.v42.urllib.request,'urlopen') as url:
+            with self.assertRaisesRegex(v.Stop,'FREE_DISK_LIMIT'):self.request()
+        url.assert_not_called()
     def test_order_endpoint_and_scope_rejected_without_network_or_ledger(self):
         with patch.object(v.v42.urllib.request,'urlopen') as url:
             with self.assertRaises(ValueError):self.b.request('UPBIT','/v1/orders',{})
@@ -48,8 +65,10 @@ class Runtime(unittest.TestCase):
         url.assert_not_called()
     def test_round_reserves_prevent_normal_boundary_partial_poll(self):
         self.b.config['deadline']=time.time()+10
+        self.b.monotonic_deadline=time.monotonic()+10
         self.assertEqual(self.b.round_admission(),'ROUND_TIME_RESERVE')
         self.b.config['deadline']=time.time()+100;self.b.config['max_requests']=11
+        self.b.monotonic_deadline=time.monotonic()+100
         self.assertEqual(self.b.round_admission(),'ROUND_REQUEST_RESERVE')
     def test_cpu_memory_disk_and_clock_stop_safely(self):
         self.b.cpu_sample=(time.monotonic()-11,time.process_time()-10)
@@ -124,6 +143,25 @@ class Runtime(unittest.TestCase):
         code,summary,calls=self.exercise_worker_errors(False)
         self.assertEqual(code,1);self.assertEqual(summary['status'],'BLOCKED')
         self.assertEqual(summary['reason'],'NETWORK_CIRCUIT_OPEN_5_ROUNDS');self.assertEqual(calls,10)
+
+    def test_clock_fault_shutdown_keeps_pending_endpoint_and_saves_error_session(self):
+        episode=self.root/'clock_worker';episode.mkdir();(episode/'runs').mkdir()
+        cfg=dict(self.config,signal_start=(int(time.time())//300+1)*300)
+        bounds=dict(self.run,deadline=self.run['created_at']+self.run['duration_seconds'])
+        v.write_json(episode/'config.json',cfg);v.write_json(episode/'runs/run.json',bounds)
+        def fault(db,*args,**kwargs):
+            with db:db.execute("INSERT INTO price_horizons_v45 VALUES('fixture',60,'PENDING','HORIZON_NOT_REACHED',NULL,NULL,NULL,NULL,123,'test')")
+            raise v.Stop('CLOCK_WALL_MONOTONIC_DIVERGENCE')
+        with patch.object(v,'RUNTIME_ROOT',self.root),patch.object(v.v42,'RUNTIME_ROOT',self.root/'locks'),patch.object(v.signal,'signal'),\
+             patch.object(v.Budget,'request',return_value=([dict(market=m) for m in v.MARKETS],{})),\
+             patch.object(v.scanner,'cycle',side_effect=fault),patch.object(v,'record_metrics') as metrics:
+            self.assertEqual(v.worker(episode,'run'),1)
+            metrics.assert_not_called()
+        with v.ops.readonly(episode/'upbit.db') as db:
+            self.assertEqual(tuple(db.execute('SELECT status,evaluated_at FROM price_horizons_v45').fetchone()),('PENDING',123.))
+            self.assertEqual(db.execute('SELECT status FROM scanner_sessions').fetchone()[0],'ERROR')
+        summary=json.loads((episode/'runs/run.summary.json').read_text())
+        self.assertTrue(summary['clock_fault']);self.assertEqual(summary['close_errors'],{})
 
 
 class Observation(unittest.TestCase):

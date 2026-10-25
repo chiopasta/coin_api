@@ -1,5 +1,22 @@
 # Scanner V4.3 관측 전용 운영
 
+## V4.5 운영 보강 안내 — 2026-10-25
+
+[V4.5 검증 보고서](scanner_v45_observation_readiness_20261025.md)를 먼저 확인한다.
+기존 명령 진입점은 유지하지만 시작 전·worker 최초 요청 전·600초마다 시계 검증을 요구한다.
+W32Time 조회 실패, 외부 offset3표본 미확보, 절댓값1초 초과 또는 spread0.5초 초과는
+`CLOCK_SYNC_UNVERIFIED`/`CLOCK_REFERENCE_OFFSET_OR_JITTER`로 차단한다.
+Windows 시계나 서비스를 자동 변경하지 않는다. 현재 호스트는 서비스 미실행으로 BLOCKED다.
+worker와 supervisor의 실행 한도는 단조 시간이며 벽시계의 누적 차이1초 초과도 중단한다.
+시계 오류 종료에서는 마지막 horizon 평가를 갱신하지 않고 PENDING과 원천 자료를 보존한다.
+
+기존 연구 원본과 검증 episode는 재실행하지 말고 새 episode를 사용한다.
+새 운영 DB에는 별도 가격 endpoint 평가 테이블을 추가한다. 실제 종가만 사용하거나,
+독립 NO_TRADE 증거가 평가 시각에 이미 존재할 때만 마지막 가격을 최대300초
+(원천 분봉 시작부터의 상한)까지 유지할 수 있다. 원천 봉·거래량·거래대금·기존 feature/label은 불변이다.
+실시간 NO_TRADE 증거 자동 수집은 구현하지 않았으므로 source absence만으로 빈 분을 채우지 않는다.
+아래24시간 명령은 절차 예시이며 V4.5에서도 실제 실행하지 않았다.
+
 V4.1 core와 V4.2 공개 전송 계층을 재사용한다. 4% range, 5분 격자, cluster,
 NULL 결측 정책, feature, L1/L2 label과 LIVE/CATCHUP 경계는 불변이다.
 점수는 원래 없으므로 NULL이며 주문·계정 endpoint·API 키 로딩 경로는 없다.

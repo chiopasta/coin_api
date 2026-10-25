@@ -1,0 +1,32 @@
+{
+  "tests_run": 70,
+  "successful": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 4.05532089999997,
+  "selected_names": [
+    "tests.test_scanner_observation_v45",
+    "tests.test_forward_scanner_v43",
+    "tests.test_scanner_gap_audit_v44",
+    "tests.test_scanner_v41.CandleGuards",
+    "tests.test_scanner_v41.RuntimeRepairs.test_network_retry_resume_and_duplicate_skip",
+    "tests.test_scanner_v41.RuntimeRepairs.test_os_lock_rejects_second_process_without_growing_file",
+    "tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start",
+    "tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable",
+    "tests.test_forward_scanner_v4.ScannerTests.test_missing_future_is_unknown_and_recoverable",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_restart_session_and_interrupted_cycle",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_clean_close_checkpoints_wal_and_preserves_values",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes",
+    "tests.test_research_dataset_collector_v1.CollectorTests.test_retry_backoff_and_exhaustion",
+    "tests.test_research_dataset_collector_v1.CollectorTests.test_remaining_req_and_418"
+  ],
+  "tested_source_sha256": {
+    "coin_analysis\\forward_scanner_v43.py": "308657c2153a599be988a71915b454ead3a60b5b5db4750df378f7e804edda93",
+    "coin_analysis\\scanner_clock_v45.py": "9eb3a8dccd8e633cf32b5cf2e21c3e89a78e608a837f65ac3e6e4c35f90654c7",
+    "coin_analysis\\scanner_observation_v45.py": "b03e4688ffceb9c273f4571c6a566e688a13aa4af15d602324e247d24498da24",
+    "tests\\test_scanner_observation_v45.py": "a75022a2fd94c32e22969d4d5b9885e23fa1d804764bb10c108147dfd84d8402",
+    "tests\\test_forward_scanner_v43.py": "9b7a10f7b8a0dbda516c4d49afa0e5abeda3dbd1431fd5a8843efae1fc926894"
+  },
+  "scope": "Impact-selected only; no unittest discover, full regression, backtest or real exchange API"
+}
