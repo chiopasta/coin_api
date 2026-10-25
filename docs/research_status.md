@@ -1,5 +1,13 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-26 V5.0 독립 localhost 웹 대시보드
+
+- [사용 안내](scanner_v50_dashboard.md), [검증 보고서](scanner_v50_dashboard_validation_20261026.md). 대시보드·BAT **PASS**, 관측 인프라 **PARTIAL / 24시간 무인 운영 NOT_READY**. Python 표준 라이브러리·단일 다크 페이지, `http://127.0.0.1:8765`, CHIO BOT과 독립이다. 기존 BAT로 시작·상태·정상 종료하며 웹 RUNNING과 Scanner LIVE를 분리한다.
+- 기존 163개 신호 목록·실제 저장 분봉 상세·차트·KST·5초 폴링·필터·새로고침 복원·모바일·빈/오류 상태를 실브라우저로 확인했다. 점수는 기존 엔진 미정의라 UNKNOWN. 원래 연구 평가를 유지하며 보관 DB의 화면용 후속 지표는 연속된 실제 원천봉만 사용한다. 실제 PUMP 결측은 84개 종가·6개 분리 구간, 15/30/60분 NO_DATA다. 원천 생성·보간·label/전략/임계값 변경 없음.
+- 첫 제한 시작은 세 계층 시계 PASS 후 Windows 상태 JSON 교체 충돌로 안전 STOP됐다. worker 4.721초·거래소 HTTP0·신호0·정상 reap·forced0·close_errors 없음. 관리 JSON만 최대0.5초 재시도를 추가하고 실제 핸들 충돌·지속 오류 차단을 검증했다. 기존 venv 경로의 수직 탭도 수정했다. 두 번째 시작은 NTP 필수6표본 중5개로 **BLOCKED**, worker/관측 DB 미생성. 전체 NTP25시도/23응답/2timeout, 기존 1초/루트 거리/신선도/두 제공자/점프 안전 기준 불변이다. 추가 실제 시작 없음.
+- **선별105개 PASS**, 전체 회귀·백테스트 없음. CMD/PowerShell·BAT shell association·한글/공백 실제 웹 실행·포트 충돌 거부·중복 웹 재사용·다른 Python 서버 생존·정상 종료/재실행 PASS. 물리 마우스 더블클릭·수정 후 NTP PASS 수집·자연 신규 신호와30/60분 완료·장시간/절전/재부팅은 미검증이다. 새 수집 완성도는 NO_DATA/분모 없음이다.
+- 원본163·보호86·STALE_OPEN115·이전 증거169·V4.9 원시26·V4.10 증거/기존runtime101파일 해시 보존, DB quick_check=ok. 최종 소유 manager/worker/웹 프로세스0·8765 listener 종료. 최근 Scanner BLOCKED 기록은 NTP admission 이력이다. 주문·원본 덮어쓰기·자동 시작·장시간 관측·Windows 종료/재부팅 없음. [보존·종료 검사](../reports/scanner_v50_20261025/completion_checks.json).
+
 ## 2026-10-25 V4.10 Windows BAT 실행·종료·상태
 
 - 루트 `start_coin_api.bat`·`stop_coin_api.bat`·`status_coin_api.bat` 추가. [사용 안내](scanner_v410_windows_launcher.md), [검증 보고서](scanner_v410_launcher_validation_20261025.md). 런처기능 PASS·인프라 **PARTIAL /24시간 NOT_READY**, 최종 **STOPPED/SAVED**다.

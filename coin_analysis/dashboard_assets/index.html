@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHIO COIN SCANNER</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><span class="logo" aria-hidden="true">C<span>↗</span></span><div><div class="eyebrow">LOCAL OBSERVATION DESK <span>V5.0</span></div><h1>CHIO COIN SCANNER</h1><p>급등 신호 관측 · UPBIT / BITHUMB</p></div></div>
+    <div class="server"><span class="dot"></span><span id="web-state">웹 서버 연결 중</span><small id="updated">마지막 갱신 UNKNOWN</small></div>
+  </header>
+  <div class="notice"><span>OBSERVATION ONLY</span> 감독하에 사용하는 관측 전용 대시보드입니다. 24시간 무인 운영 NOT_READY · 종료: <code>stop_coin_api.bat</code></div>
+  <div id="api-error" role="alert" hidden></div>
+  <section class="cards" aria-label="관측 상태">
+    <article class="card"><div class="card-label">SCANNER LIVE <span>01</span></div><strong id="scanner-status">UNKNOWN</strong><small id="scanner-phase">수집 상태 확인 중</small></article>
+    <article class="card"><div class="card-label">감시 중인 종목 <span>02</span></div><strong id="markets">UNKNOWN</strong><small id="pairs">실제 수집 상태 기준</small></article>
+    <article class="card"><div class="card-label">오늘의 신규 LIVE 신호 <span>03</span></div><strong id="today-signals">UNKNOWN</strong><small>KST 탐지일 · 보관 연구 신호 제외</small></article>
+    <article class="card"><div class="card-label">거래소 연결 <span>04</span></div><div id="connections"><small>UPBIT · UNKNOWN</small><small>BITHUMB · UNKNOWN</small></div></article>
+    <article class="card"><div class="card-label">NTP 시계 검증 <span>05</span></div><strong id="clock-status">UNKNOWN</strong><small id="clock-detail">기존 1초 기준 유지</small></article>
+  </section>
+  <section class="panel signals-panel">
+    <div class="section-head"><div><h2>탐지 신호 <span id="signal-count">—</span></h2><p>저장된 관측 기록 · 신호를 선택해 상세 확인</p></div><div class="list-tools"><label class="sr-only" for="scope">신호 구분</label><select id="scope"><option value="ALL">모든 저장 신호</option><option value="CURRENT_LIVE">이번 관측</option><option value="ARCHIVE">기존 연구 보관</option><option value="STORED_OBSERVATION">이전 관측</option></select><button id="refresh" type="button">새로 고침 ↻</button></div></div>
+    <div class="table-scroll"><table><thead><tr><th>탐지 시각 <span>KST</span></th><th>거래소 / 종목</th><th>구분 / 패턴</th><th class="number">점수</th><th class="number">탐지 가격 <span>KRW</span></th><th class="number">신호 후 변동</th><th>평가 상태</th></tr></thead><tbody id="signal-rows"></tbody></table><div id="empty" hidden>아직 탐지된 신호가 없습니다</div></div>
+    <div class="table-foot"><span id="list-note">저장 데이터 조회 중</span><span>5초 자동 갱신 · 주문 기능 없음</span></div>
+  </section>
+  <section class="panel detail-panel" aria-label="신호 상세">
+    <div class="section-head"><div><h2>신호 상세 <span id="detail-market">선택 대기</span></h2><p id="detail-subtitle">목록에서 신호를 선택하세요.</p></div><span class="badge" id="detail-scope">SAVED DATA ONLY</span></div>
+    <div id="detail-empty" class="detail-placeholder">신호를 선택하면 실제 저장 가격과 후속 평가를 확인할 수 있습니다.</div>
+    <div id="detail-content" hidden>
+      <div class="detail-grid">
+        <div class="metrics">
+          <div class="key-metrics"><div><small>탐지 가격</small><strong id="detail-price">UNKNOWN</strong></div><div><small>신호 점수</small><strong id="detail-score">UNKNOWN</strong></div></div>
+          <div class="horizons" id="horizons"></div>
+          <div class="excursions"><div><small>최대 상승폭 MFE <span id="mfe-horizon"></span></small><strong id="mfe">UNKNOWN</strong></div><div><small>최대 하락폭 MAE <span id="mae-horizon"></span></small><strong id="mae">UNKNOWN</strong></div></div>
+          <p class="metric-note" id="metric-note"></p>
+        </div>
+        <div class="chart-wrap"><div class="chart-head"><span>신호 전후 가격 <small>저장 1분봉 종가</small></span><span class="legend">● 실제 가격 <i></i> 신호 시점</span></div><div id="chart"></div><p class="chart-note">−30분 ~ +60분 · 봉 마감 시각 기준 · 결측 구간은 연결하지 않습니다.</p></div>
+      </div>
+      <div class="detail-footer" id="outcomes"></div>
+    </div>
+  </section>
+  <footer><span><span class="dot"></span> 127.0.0.1:8765 · LOCALHOST ONLY</span><span id="storage">DB 저장 상태 UNKNOWN</span></footer>
+</main>
+</body></html>

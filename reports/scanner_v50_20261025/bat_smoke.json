@@ -1,0 +1,90 @@
+{
+  "at": 1792940762.6778119,
+  "success": true,
+  "results": [
+    {
+      "action": "start",
+      "args": [
+        "--dashboard-only",
+        "--no-browser"
+      ],
+      "shell": "powershell",
+      "exit_code": 0,
+      "seconds": 1.7223604999999225,
+      "stdout": "\r\n============================================================\r\nStatus       : STOPPED\r\nPhase        : NO_MANAGED_RUN\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UNKNOWN\r\nMarkets      : UNKNOWN\r\nClock        : UNKNOWN\r\nSignals      : UNKNOWN\r\nStarted      : UNKNOWN\r\nDuration     : UNKNOWN\r\nLast signal  : UNKNOWN\r\nCollected    : UNKNOWN\r\nDB save      : UNKNOWN\r\nDB bytes     : UNKNOWN\r\nRecent error : UNKNOWN\r\nLast result  : UNKNOWN\r\nWarning      : SUPERVISED ONLY; 24h NOT_READY\r\nSafety cap   : UNKNOWN\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nWeb          : RUNNING\r\nDashboard    : http://127.0.0.1:8765\r\nSafety       : SUPERVISED ONLY; 24h unattended NOT_READY\r\n",
+      "stderr": ""
+    },
+    {
+      "action": "status",
+      "args": [],
+      "shell": "cmd",
+      "exit_code": 0,
+      "seconds": 0.5683155000006082,
+      "stdout": "\r\n============================================================\r\nStatus       : STOPPED\r\nPhase        : NO_MANAGED_RUN\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UNKNOWN\r\nMarkets      : UNKNOWN\r\nClock        : UNKNOWN\r\nSignals      : UNKNOWN\r\nStarted      : UNKNOWN\r\nDuration     : UNKNOWN\r\nLast signal  : UNKNOWN\r\nCollected    : UNKNOWN\r\nDB save      : UNKNOWN\r\nDB bytes     : UNKNOWN\r\nRecent error : UNKNOWN\r\nLast result  : UNKNOWN\r\nWarning      : SUPERVISED ONLY; 24h NOT_READY\r\nSafety cap   : UNKNOWN\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nWeb          : RUNNING\r\nDashboard    : http://127.0.0.1:8765\r\n",
+      "stderr": ""
+    },
+    {
+      "action": "start",
+      "args": [
+        "--dashboard-only",
+        "--no-browser"
+      ],
+      "shell": "cmd",
+      "exit_code": 2,
+      "seconds": 1.023753299999953,
+      "stdout": "Status : BLOCKED\r\nReason : WEB_PORT_OR_START_FAILURE; port 8765 may belong to another program; nothing was killed\r\nAction : Inspect status and the managed launch log; fix the reported environment/storage problem before starting again.\r\n",
+      "stderr": ""
+    },
+    {
+      "action": "stop",
+      "args": [],
+      "shell": "powershell",
+      "exit_code": 0,
+      "seconds": 0.7890131000003748,
+      "stdout": "\r\n============================================================\r\nStatus       : BLOCKED\r\nPhase        : TERMINAL\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UNKNOWN\r\nMarkets      : UNKNOWN\r\nClock        : FAIL: CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nSignals      : UNKNOWN\r\nStarted      : 2026-10-26 00:00:47 KST\r\nDuration     : 8.6s\r\nLast signal  : UNKNOWN\r\nCollected    : UNKNOWN\r\nDB save      : UNKNOWN\r\nDB bytes     : UNKNOWN\r\nRecent error : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nLast result  : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nWarning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY\r\nSafety cap   : 120s / 80 HTTP\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nNo owned live process; no signal or kill sent.\r\nWeb          : STOPPED / listener closed and log flushed\r\n",
+      "stderr": ""
+    },
+    {
+      "action": "stop",
+      "args": [],
+      "shell": "cmd",
+      "exit_code": 0,
+      "seconds": 1.128941400000258,
+      "stdout": "\r\n============================================================\r\nStatus       : STOPPED\r\nPhase        : NO_MANAGED_RUN\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UNKNOWN\r\nMarkets      : UNKNOWN\r\nClock        : UNKNOWN\r\nSignals      : UNKNOWN\r\nStarted      : UNKNOWN\r\nDuration     : UNKNOWN\r\nLast signal  : UNKNOWN\r\nCollected    : UNKNOWN\r\nDB save      : UNKNOWN\r\nDB bytes     : UNKNOWN\r\nRecent error : UNKNOWN\r\nLast result  : UNKNOWN\r\nWarning      : SUPERVISED ONLY; 24h NOT_READY\r\nSafety cap   : UNKNOWN\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nNo managed Scanner process.\r\nWeb          : STOPPED / listener closed and log flushed\r\n",
+      "stderr": ""
+    },
+    {
+      "action": "start",
+      "args": [
+        "--dashboard-only",
+        "--no-browser"
+      ],
+      "shell": "powershell",
+      "exit_code": 0,
+      "seconds": 0.807009600001038,
+      "stdout": "\r\n============================================================\r\nStatus       : BLOCKED\r\nPhase        : TERMINAL\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UNKNOWN\r\nMarkets      : UNKNOWN\r\nClock        : FAIL: CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nSignals      : UNKNOWN\r\nStarted      : 2026-10-26 00:00:47 KST\r\nDuration     : 8.6s\r\nLast signal  : UNKNOWN\r\nCollected    : UNKNOWN\r\nDB save      : UNKNOWN\r\nDB bytes     : UNKNOWN\r\nRecent error : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nLast result  : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nWarning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY\r\nSafety cap   : 120s / 80 HTTP\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nWeb          : RUNNING\r\nDashboard    : http://127.0.0.1:8765\r\nSafety       : SUPERVISED ONLY; 24h unattended NOT_READY\r\n",
+      "stderr": ""
+    },
+    {
+      "action": "status",
+      "args": [],
+      "shell": "powershell",
+      "exit_code": 0,
+      "seconds": 0.7590865999991365,
+      "stdout": "\r\n============================================================\r\nStatus       : BLOCKED\r\nPhase        : TERMINAL\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UNKNOWN\r\nMarkets      : UNKNOWN\r\nClock        : FAIL: CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nSignals      : UNKNOWN\r\nStarted      : 2026-10-26 00:00:47 KST\r\nDuration     : 8.6s\r\nLast signal  : UNKNOWN\r\nCollected    : UNKNOWN\r\nDB save      : UNKNOWN\r\nDB bytes     : UNKNOWN\r\nRecent error : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nLast result  : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nWarning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY\r\nSafety cap   : 120s / 80 HTTP\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nWeb          : RUNNING\r\nDashboard    : http://127.0.0.1:8765\r\n",
+      "stderr": ""
+    }
+  ],
+  "unicode_space_actual_web": true,
+  "no_database_empty": true,
+  "foreign_port_untouched": true,
+  "foreign_python_survives_stop": true,
+  "shell_association_launch": true,
+  "shell_association_seconds": 3.203830899999957,
+  "physical_mouse_doubleclick": "UNVERIFIED",
+  "restart_original_signals": 163,
+  "duplicate_web_same_identity": true,
+  "live_started": false,
+  "ntp_calls": 0,
+  "final_web": "RUNNING for remaining browser validation; must stop before completion"
+}

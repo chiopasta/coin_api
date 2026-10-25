@@ -1,0 +1,11 @@
+{
+  "at": 1792941015.61765,
+  "process": {
+    "pid": 21848,
+    "birth": 134374143604892350
+  },
+  "working_set_bytes": 32686080,
+  "peak_working_set_bytes": 34713600,
+  "cpu_seconds": 6.46875,
+  "threads": 3
+}

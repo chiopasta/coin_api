@@ -1,0 +1,41 @@
+{
+  "tests_run": 105,
+  "successful": true,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 9.73781340000096,
+  "selected_names": [
+    "tests.test_scanner_control_v410",
+    "tests.test_scanner_ntp_v49",
+    "tests.test_scanner_clock_v47",
+    "tests.test_scanner_clock_v46",
+    "tests.test_forward_scanner_v43",
+    "tests.test_scanner_v41.CandleGuards",
+    "tests.test_scanner_v41.RuntimeRepairs.test_os_lock_rejects_second_process_without_growing_file",
+    "tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start",
+    "tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable",
+    "tests.test_scanner_observation_v45.Prices.test_pending_60m_endpoint_survives_real_disk_close_reopen",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes",
+    "tests.test_scanner_dashboard_v50"
+  ],
+  "source_sha256": {
+    "coin_analysis/scanner_dashboard_v50.py": "9edb9f352520f963a4721b3e4ceeca3c84c33708a85c2390c4c2517e58fd6e71",
+    "coin_analysis/scanner_desktop_v50.py": "8edaa805c4b5e3b0f404b740d0402314d20e8392d4b47db574e60490e2b6bf63",
+    "tests/test_scanner_dashboard_v50.py": "ef990c19d9ad15eb816735c1a3055fc37a44b61f4dab4dfa16ca28836722370c",
+    "coin_analysis\\dashboard_assets\\app.js": "fc5c2eda64448ea851563e47394b34fa5626937c252904d405e36ed064026198",
+    "coin_analysis\\dashboard_assets\\index.html": "49112e488407007f61973a4a4f29de5240844b0487e61539b7b874d22171196e",
+    "coin_analysis\\dashboard_assets\\style.css": "b62f7dc900dc5e20177530cd9d574086856439e4e33c56bbd487d5a5bc9e81ce",
+    "coin_analysis/scanner_control_v410.py": "f36a50d433a6e86d7e804940a05fe124aa1161436a5c052cd630c4ce6b5ae5a0",
+    "scripts/coin_api_entry.py": "25273cd0351cbe2f1d8f76a99dbbd9402bf6847f9d94e5a772885b90fc7cb433",
+    "scripts/coin_api_python.cmd": "cb5ee57d5f93daaee85b85230f029f5e2da488cfc9eb39e05c74002aadbd6913",
+    "start_coin_api.bat": "39b322951a4e7364d165a86f3ba7faa17c9ea0bd568d0f71f4692a0cbf5a092d",
+    "stop_coin_api.bat": "917b02660a3b262825275faf8af3f4b2a9fbbad51925ae3895de6fc4bf0d54a9",
+    "status_coin_api.bat": "7f84421e0389cc0c1616da1901d16a128f427324153ea96388183838512f8eaf",
+    "tests/test_scanner_control_v410.py": "fb17cbf6e0da33ccc71ed29e6c071fa7d8a6e9db4d230844f7635b178e784577",
+    "coin_analysis/forward_scanner_v43.py": "7cbbfa7697a4ce9772a02a62e2ee3b8b26aa454fbbea29b46ab8f79962f28a26",
+    "coin_analysis/scanner_clock_v45.py": "222581f107a1308d1a372976de4fa84aa4294cd96f5745a17e95fe236d04814f",
+    "coin_analysis/scanner_ntp_v49.py": "ed4b78c94382134a1c7b2177c04addc162a998683a6e36ffb4694bf01172c0bc"
+  },
+  "scope": "Selected launcher/admission/DB safety plus isolated dashboard fixtures and loopback HTTP; no full regression or actual exchange/NTP in tests"
+}

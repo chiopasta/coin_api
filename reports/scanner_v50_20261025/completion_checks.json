@@ -1,0 +1,73 @@
+{
+  "at": 1792941019.1088696,
+  "dashboard": "PASS",
+  "infrastructure": "PARTIAL",
+  "unattended_24h": "NOT_READY",
+  "original_signals": 163,
+  "stale_open": 115,
+  "preservation": {
+    "protected_hashes": {
+      "count": 86,
+      "unchanged": true
+    },
+    "prior_evidence_hashes": {
+      "count": 169,
+      "unchanged": true
+    },
+    "previous_live_raw_hashes": {
+      "count": 26,
+      "unchanged": true
+    },
+    "previous_v410_and_runtime_hashes": {
+      "count": 101,
+      "unchanged": true
+    }
+  },
+  "db_quick_check": {
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_2ea5dea262de41a786e346935d868935\\control.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\bithumb.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\control.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\upbit.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261024\\bithumb.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261024\\control.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261024\\upbit.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\bithumb.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\control.db": "ok",
+    "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\upbit.db": "ok"
+  },
+  "engine_and_clock_policy_unchanged": true,
+  "tests_run": 105,
+  "tested_sources_match": true,
+  "actual_start_attempts": 2,
+  "actual_exchange_http": 0,
+  "new_signals": 0,
+  "new_data_completeness": "NO_DATA / no collection denominator",
+  "actual_ntp_attempts": 25,
+  "actual_ntp_measured": 23,
+  "actual_ntp_failures": 2,
+  "max_measured_abs_offset_plus_uncertainty_seconds": 0.15917501951264765,
+  "latest_live_admission": "BLOCKED / CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE",
+  "manager_alive": false,
+  "worker_alive": false,
+  "web_alive": false,
+  "port_8765_closed": true,
+  "active_owned_processes": [],
+  "actual_natural_30_60m": "UNVERIFIED",
+  "post_fix_clock_pass_live_collection": "UNVERIFIED; second clock gate failed",
+  "no_orders": true,
+  "no_new_force_kill": true,
+  "no_autostart": true,
+  "no_windows_shutdown": true,
+  "new_runtime_hashes": {
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/bithumb.db.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/config.json": "411ee010f9c043f266841a45c3ad5878f154465b8e31c94716be37cd8ca96143",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/control.db": "5d3213b31ea7c8c9734f73863e2efd6acd26719f0c535e7a36f86ff8da499bea",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/events.jsonl": "990844f40109d3d16ad9637864bc28f85b50da87bcd0e05ba295aeab5796bb81",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/STOP": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/supervisor.json": "6653ce3f0d7e46b9e78439f25799afbba9f3360c02dbc3a62fc8fe5635c67992",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/upbit.db.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/runs/2f514026f8bf4a08bed6a5986b981bdc.exit.json": "228e0e1ba4d571e6c82886b8847e203d854ad2e2baebe6f1a5e9c62ea9e9a5d1",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/runs/2f514026f8bf4a08bed6a5986b981bdc.json": "445fde420442d664a3c0a42380012c9ed77a0362ed77c640cfa0f288738954eb",
+    "C:/dev/coin_api-1/data/scanner_v43_live/console_2ea5dea262de41a786e346935d868935/runs/2f514026f8bf4a08bed6a5986b981bdc.summary.json": "41952c9ed16d06a40a4d07d95956a150bea4a76e9d1cf2cf078e6191580e6742"
+  }
+}

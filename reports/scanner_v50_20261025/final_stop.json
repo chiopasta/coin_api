@@ -1,0 +1,5 @@
+{
+  "at": 1792941017.0522215,
+  "exit_code": 0,
+  "stdout": "\r\n============================================================\r\nStatus       : BLOCKED\r\nPhase        : TERMINAL\r\nMode         : OBSERVATION ONLY\r\nExchanges    : UNKNOWN\r\nMarkets      : UNKNOWN\r\nClock        : FAIL: CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nSignals      : UNKNOWN\r\nStarted      : 2026-10-26 00:00:47 KST\r\nDuration     : 8.6s\r\nLast signal  : UNKNOWN\r\nCollected    : UNKNOWN\r\nDB save      : UNKNOWN\r\nDB bytes     : UNKNOWN\r\nRecent error : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nLast result  : CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE\r\nWarning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY\r\nSafety cap   : 120s / 80 HTTP\r\nStop         : stop_coin_api.bat\r\n============================================================\r\nNo owned live process; no signal or kill sent.\r\nWeb          : STOPPED / listener closed and log flushed\r\n"
+}

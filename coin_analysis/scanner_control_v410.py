@@ -34,7 +34,24 @@ KST=timezone(timedelta(hours=9))
 def read_json(path):
     path=Path(path)
     if path.stat().st_size>128*1024:raise ValueError('Metadata size limit')
-    return json.loads(path.read_text(encoding='utf8'))
+    with path.open('r',encoding='utf8') as stream:body=stream.read(128*1024+1)
+    if len(body)>128*1024:raise ValueError('Metadata size limit')
+    return json.loads(body)
+
+
+def write_metadata(path,value):
+    """Bounded retry of Windows metadata replacement during a brief reader.
+
+    Applies only to management JSON. No DB writes or clock admission changes.
+    Persistent sharing/permission errors still fail closed within 0.5 seconds.
+    """
+    until=time.monotonic()+.5
+    while True:
+        try:
+            observer.write_json(path,value);return
+        except PermissionError as exc:
+            if os.name!='nt' or getattr(exc,'winerror',None) not in (5,32,33) or time.monotonic()>=until:raise
+            time.sleep(.01)
 
 
 def process_birth(pid):
@@ -96,7 +113,7 @@ def stop_marker(state):return CONTROL/'launches'/state['launch_id']/'STOP_REQUES
 
 def persist(state):
     state['updated_at']=time.time()
-    observer.write_json(state_path(state),state)
+    write_metadata(state_path(state),state)
 
 
 def clock_view(evidence,now):
@@ -246,7 +263,7 @@ def start(seconds,max_requests):
         state=dict(launch_id=token,root=str(root),status='RUNNING',phase='PRECHECK',started_at=time.time(),
             manager=identity(os.getpid()),child=None,seconds=seconds,max_requests=max_requests,started_monotonic=began,
             elapsed_monotonic_seconds=0.,db_saved='UNKNOWN',clock_evidence=None,reason=None)
-        persist(state);observer.write_json(CONTROL/'current.json',dict(launch_id=token))
+        persist(state);write_metadata(CONTROL/'current.json',dict(launch_id=token))
         requested=threading.Event()
         previous={}
         for sig in (signal.SIGINT,signal.SIGTERM):

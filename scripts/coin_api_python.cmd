@@ -3,7 +3,7 @@ setlocal DisableDelayedExpansion
 set "COIN_API_ROOT=%~dp0.."
 if defined COIN_API_PYTHON goto explicit
 if exist "%COIN_API_ROOT%\.venv\Scripts\python.exe" goto dotvenv
-if exist "%COIN_API_ROOT%env\Scripts\python.exe" goto venv
+if exist "%COIN_API_ROOT%\venv\Scripts\python.exe" goto venv
 py -3 -I -c "import sys,sqlite3,ssl,ctypes; sys.exit(0 if sys.version_info >= (3,11) and sys.platform == 'win32' else 2)" >nul 2>&1
 if not errorlevel 1 goto use_py
 python -I -c "import sys,sqlite3,ssl,ctypes; sys.exit(0 if sys.version_info >= (3,11) and sys.platform == 'win32' else 2)" >nul 2>&1
@@ -16,7 +16,7 @@ exit /b 2
 set "COIN_API_PYTHON=%COIN_API_ROOT%\.venv\Scripts\python.exe"
 goto explicit
 :venv
-set "COIN_API_PYTHON=%COIN_API_ROOT%env\Scripts\python.exe"
+set "COIN_API_PYTHON=%COIN_API_ROOT%\venv\Scripts\python.exe"
 :explicit
 if not exist "%COIN_API_PYTHON%" goto invalid
 "%COIN_API_PYTHON%" -I -c "import sys,sqlite3,ssl,ctypes; sys.exit(0 if sys.version_info >= (3,11) and sys.platform == 'win32' else 2)" >nul 2>&1
