@@ -1,0 +1,9 @@
+{
+  "at": 1792931649.2321143,
+  "max_seconds": 2400,
+  "max_queries": 42,
+  "interval_seconds": 60,
+  "no_ntp_packets": true,
+  "no_live": true,
+  "no_system_changes": true
+}

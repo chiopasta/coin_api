@@ -1,0 +1,31 @@
+{
+  "tests_run": 64,
+  "successful": true,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "elapsed_seconds": 2.951574200000323,
+  "selected_names": [
+    "tests.test_scanner_root_v48",
+    "tests.test_scanner_clock_v47",
+    "tests.test_scanner_clock_v46",
+    "tests.test_forward_scanner_v43",
+    "tests.test_scanner_v41.CandleGuards",
+    "tests.test_scanner_v41.RuntimeRepairs.test_os_lock_rejects_second_process_without_growing_file",
+    "tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start",
+    "tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable",
+    "tests.test_scanner_observation_v45.Prices.test_pending_60m_endpoint_survives_real_disk_close_reopen",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes"
+  ],
+  "tested_source_sha256": {
+    "coin_analysis/forward_scanner_v43.py": "38a5d5e82421a2887d94def1a0a4be53b8f88f91c155b7afe7d274df18112521",
+    "coin_analysis/scanner_clock_v45.py": "4f8372793cbf22c86345da5fe979a6bc60550d8667d36ff30e3d4a4fd8afff90",
+    "coin_analysis/scanner_clock_v47.py": "fd8b5640e6ee6ef9e76eaa00598f0dd408c18f40ccaaa6c4013ba7582434a29b",
+    "coin_analysis/scanner_ntp_v46.py": "eb63e5c1665a8c540026ab9f9fcf3bdbaff3a5f488861c3a63506d48f8f3b3df",
+    "reports/scanner_v48_20261025/trend.py": "37253209b6d5aa6c737b75182675abe9a1fabb307ed50622f4614240d05c790e",
+    "reports/scanner_v48_20261025/live.py": "b36ed205de952db51a1150dccc4e5510ec073c2dd43d00400b9fc0e0542844a7",
+    "reports/scanner_v48_20261025/analysis.py": "4b7e411f54e43c6c9c806bfc0d543619da75048243239915ef0824437873ae90",
+    "tests/test_scanner_root_v48.py": "0028d4c6c1315c133cbecba52c112eb4f7f160ece641c0b77f7367723f2de936"
+  },
+  "scope": "Impact-selected; no full regression/backtest; real HTTP/UDP forbidden"
+}

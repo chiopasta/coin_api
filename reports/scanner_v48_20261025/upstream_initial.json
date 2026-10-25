@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "host": "time.google.com",
+      "started_at": 1792931739.7870345,
+      "peer": [
+        "216.239.35.4",
+        123
+      ],
+      "offset_seconds": 0.027735471725463867,
+      "uncertainty_seconds": 0.03267349082091439,
+      "error_interval_seconds": [
+        -0.004938019095450524,
+        0.06040896254637826
+      ],
+      "delay_seconds": 0.06506538391113281,
+      "elapsed_monotonic_seconds": 0.06506690000060189,
+      "root_delay_seconds": 0.0,
+      "root_dispersion_seconds": 9.1552734375e-05,
+      "server_precision_seconds": 9.5367431640625e-07,
+      "local_sampling_difference_seconds": 1.516089469077997e-06,
+      "stratum": 1,
+      "reference_at": 1792931739.855543,
+      "server_received_at": 1792931739.855543,
+      "server_transmitted_at": 1792931739.855543,
+      "local_sent_at": 1792931739.7952747,
+      "local_received_at": 1792931739.86034,
+      "positive_offset_means": "Reference is ahead of local wall clock",
+      "status": "MEASURED",
+      "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761bcb972000",
+      "response_hex": "240100ec0000000000000006474f4f47ee88761bdb04dc83ee88761bcb972000ee88761bdb04dc84ee88761bdb04dc86"
+    },
+    {
+      "host": "time.google.com",
+      "started_at": 1792931740.110581,
+      "peer": [
+        "216.239.35.4",
+        123
+      ],
+      "offset_seconds": 0.027132153511047363,
+      "uncertainty_seconds": 0.03203090968111408,
+      "error_interval_seconds": [
+        -0.004898756170066715,
+        0.05916306319216144
+      ],
+      "delay_seconds": 0.06378054618835449,
+      "elapsed_monotonic_seconds": 0.06378189999941242,
+      "root_delay_seconds": 0.0,
+      "root_dispersion_seconds": 9.1552734375e-05,
+      "server_precision_seconds": 9.5367431640625e-07,
+      "local_sampling_difference_seconds": 1.3538110579247586e-06,
+      "stratum": 1,
+      "reference_at": 1792931740.1704335,
+      "server_received_at": 1792931740.1704335,
+      "server_transmitted_at": 1792931740.1704335,
+      "local_sent_at": 1792931740.111411,
+      "local_received_at": 1792931740.1751916,
+      "positive_offset_means": "Reference is ahead of local wall clock",
+      "status": "MEASURED",
+      "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761c1c857000",
+      "response_hex": "240100ec0000000000000006474f4f47ee88761c2ba18636ee88761c1c857000ee88761c2ba18637ee88761c2ba18639"
+    },
+    {
+      "host": "time.google.com",
+      "started_at": 1792931740.4253953,
+      "peer": [
+        "216.239.35.4",
+        123
+      ],
+      "offset_seconds": 0.027686715126037598,
+      "uncertainty_seconds": 0.0327585640849318,
+      "error_interval_seconds": [
+        -0.005071848958894204,
+        0.0604452792109694
+      ],
+      "delay_seconds": 0.06523823738098145,
+      "elapsed_monotonic_seconds": 0.06523839999954362,
+      "root_delay_seconds": 0.0,
+      "root_dispersion_seconds": 9.1552734375e-05,
+      "server_precision_seconds": 9.5367431640625e-07,
+      "local_sampling_difference_seconds": 1.6261856217170134e-07,
+      "stratum": 1,
+      "reference_at": 1792931740.4864879,
+      "server_received_at": 1792931740.4864879,
+      "server_transmitted_at": 1792931740.4864879,
+      "local_sent_at": 1792931740.426182,
+      "local_received_at": 1792931740.4914203,
+      "positive_offset_means": "Reference is ahead of local wall clock",
+      "status": "MEASURED",
+      "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761c6d1a4000",
+      "response_hex": "240100ec0000000000000006474f4f47ee88761c7c8a7954ee88761c6d1a4000ee88761c7c8a7955ee88761c7c8a7957"
+    }
+  ],
+  "clock_changed": false
+}

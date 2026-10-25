@@ -1,0 +1,61 @@
+{
+  "at": 1792931740.715059,
+  "commands": [
+    {
+      "argv": [
+        "w32tm",
+        "/query",
+        "/configuration"
+      ],
+      "returncode": 0,
+      "output": "[구성]\r\n\nEventLogFlags: 2 (로컬)\nAnnounceFlags: 10 (로컬)\nTimeJumpAuditOffset: 28800 (로컬)\nMinPollInterval: 10 (로컬)\nMaxPollInterval: 15 (로컬)\nMaxNegPhaseCorrection: 54000 (로컬)\nMaxPosPhaseCorrection: 54000 (로컬)\nMaxAllowedPhaseOffset: 1 (로컬)\n\nFrequencyCorrectRate: 4 (로컬)\nPollAdjustFactor: 5 (로컬)\nLargePhaseOffset: 50000000 (로컬)\nSpikeWatchPeriod: 900 (로컬)\nLocalClockDispersion: 10 (로컬)\nHoldPeriod: 5 (로컬)\nPhaseCorrectRate: 1 (로컬)\nUpdateInterval: 360000 (로컬)\n\n\n[시간 공급자]\r\n\nNtpClient (로컬)\nDllName: C:\\WINDOWS\\system32\\w32time.dll (로컬)\nEnabled: 1 (로컬)\nInputProvider: 1 (로컬)\nAllowNonstandardModeCombinations: 1 (로컬)\nResolvePeerBackoffMinutes: 15 (로컬)\nResolvePeerBackoffMaxTimes: 7 (로컬)\nCompatibilityFlags: 2147483648 (로컬)\nEventLogFlags: 1 (로컬)\nLargeSampleSkew: 3 (로컬)\nSpecialPollInterval: 32768 (로컬)\nType: NTP (로컬)\nNtpServer: time.windows.com,0x8 time.google.com,0x8 (로컬)\n\nNtpServer (로컬)\nDllName: C:\\WINDOWS\\system32\\w32time.dll (로컬)\nEnabled: 0 (로컬)\nInputProvider: 0 (로컬)\n\n\n"
+    },
+    {
+      "argv": [
+        "w32tm",
+        "/query",
+        "/peers",
+        "/verbose"
+      ],
+      "returncode": 0,
+      "output": "#피어: 2\n\n피어: time.google.com,0x8\n상태: 활성\n남은 시간: 640.4785250s\n모드: 3 (클라이언트)\n계층: 1(기본 참조 - 라디오 클록으로 동기화됨)\n피어폴링 간격: 10(1024s)\n호스트폴링 간격: 10(1024s)\n마지막으로 동기화한 시간: 2026-10-25 오후 9:29:17\nLastSyncError: 0x00000000 (성공)\nLastSyncErrorMsgId: 0x00000000 (성공)\nAuthTypeMsgId: 0x0000005A (NoAuth )\n해결 시도: 0\nValidDataCounter: 2\n연결: 7\n\n피어: time.windows.com,0x8\n상태: 활성\n남은 시간: 641.8463062s\n모드: 3 (클라이언트)\n계층: 4(보조 참조 - (S)NTP로 동기화됨)\n피어폴링 간격: 10(1024s)\n호스트폴링 간격: 10(1024s)\n마지막으로 동기화한 시간: 2026-10-25 오후 9:29:18\nLastSyncError: 0x00000000 (성공)\nLastSyncErrorMsgId: 0x00000000 (성공)\nAuthTypeMsgId: 0x0000005A (NoAuth )\n해결 시도: 0\nValidDataCounter: 3\n연결: 15\n"
+    },
+    {
+      "argv": [
+        "sc.exe",
+        "qc",
+        "W32Time"
+      ],
+      "returncode": 0,
+      "output": "[SC] QueryServiceConfig 성공\r\n\r\nSERVICE_NAME: W32Time\r\n        종류               : 20  WIN32_SHARE_PROCESS \r\n        START_TYPE         : 2   AUTO_START\r\n        ERROR_CONTROL      : 1   NORMAL\r\n        BINARY_PATH_NAME   : C:\\WINDOWS\\system32\\svchost.exe -k LocalService\r\n        LOAD_ORDER_GROUP   : \r\n        태그                : 0\r\n        DISPLAY_NAME       : Windows Time\r\n        종속성       : \r\n        SERVICE_START_NAME : NT AUTHORITY\\LocalService\r\n"
+    },
+    {
+      "argv": [
+        "sc.exe",
+        "qtriggerinfo",
+        "W32Time"
+      ],
+      "returncode": 0,
+      "output": "[SC] QueryServiceConfig2 성공\r\n\r\nSERVICE_NAME: W32Time\r\n\r\n        서비스 시작 \r\n          도메인 가입 상태         : 1ce20aba-9851-4421-9430-1ddeb766e809 [도메인에 가입됨]\r\n"
+    },
+    {
+      "argv": [
+        "reg.exe",
+        "query",
+        "HKLM\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config"
+      ],
+      "returncode": 0,
+      "output": "\r\nHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config\r\n    AnnounceFlags    REG_DWORD    0xa\r\n    ClockAdjustmentAuditLimit    REG_DWORD    0x320\r\n    ClockHoldoverPeriod    REG_DWORD    0xc350\r\n    EventLogFlags    REG_DWORD    0x2\r\n    FrequencyCorrectRate    REG_DWORD    0x4\r\n    HoldPeriod    REG_DWORD    0x5\r\n    LargePhaseOffset    REG_DWORD    0x2faf080\r\n    LocalClockDispersion    REG_DWORD    0xa\r\n    MaxAllowedPhaseOffset    REG_DWORD    0x1\r\n    MaxNegPhaseCorrection    REG_DWORD    0xd2f0\r\n    MaxPollInterval    REG_DWORD    0xf\r\n    MaxPosPhaseCorrection    REG_DWORD    0xd2f0\r\n    MinPollInterval    REG_DWORD    0xa\r\n    PhaseCorrectRate    REG_DWORD    0x1\r\n    PollAdjustFactor    REG_DWORD    0x5\r\n    SpikeWatchPeriod    REG_DWORD    0x384\r\n    TimeJumpAuditOffset    REG_DWORD    0x7080\r\n    UpdateInterval    REG_DWORD    0x57e40\r\n    UtilizeSslTimeData    REG_DWORD    0x1\r\n    LastKnownGoodTime    REG_QWORD    0x1dd647c7d2bd2fc\r\n    LastClockRate    REG_DWORD    0x2625a\r\n\r\nHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Config\\Status\r\n"
+    },
+    {
+      "argv": [
+        "reg.exe",
+        "query",
+        "HKLM\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters"
+      ],
+      "returncode": 0,
+      "output": "\r\nHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\Parameters\r\n    NtpServer    REG_SZ    time.windows.com,0x8 time.google.com,0x8\r\n    ServiceDll    REG_EXPAND_SZ    %systemroot%\\system32\\w32time.dll\r\n    ServiceDllUnloadOnStop    REG_DWORD    0x1\r\n    ServiceMain    REG_SZ    SvchostEntry_W32Time\r\n    Type    REG_SZ    NTP\r\n\r\n"
+    }
+  ],
+  "no_system_changes": true
+}

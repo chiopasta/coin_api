@@ -1,0 +1,250 @@
+{
+  "at": 1792931738.2093935,
+  "status": "BLOCKED",
+  "reason": "CLOCK_WINDOWS_ROOT_UNCERTAINTY",
+  "references": [
+    "time.windows.com",
+    "time.cloudflare.com"
+  ],
+  "max_samples": 6,
+  "max_seconds": 15,
+  "clock_policy": "V47_WINDOWS_ROOT_AND_FRESH_NTP",
+  "max_offset_seconds": 1.0,
+  "max_spread_seconds": 0.5,
+  "clock_changed": false,
+  "commands": [
+    {
+      "argv": [
+        "w32tm",
+        "/query",
+        "/status",
+        "/verbose"
+      ],
+      "returncode": 0,
+      "output": "윤초 조정: 0(경고 없음)\n계층: 2(보조 참조 - (S)NTP로 동기화됨)\n정밀도: -23(틱당 119.209ns)\n루트 지연: 0.0394439s\n루트 분산: 3.8087560s\n참조 ID: 0xD8EF2300(원본 IP:  216.239.35.0)\n마지막으로 동기화한 시간: 2026-10-25 오후 9:29:32\n원본: time.google.com,0x8 \n폴링 간격: 10(1024s)\n\n단계 오프셋: 0.0221931s\n클록 속도: 0.0156249s\n상태 시스템: 1 (저장됨)\n시간 원본 플래그: 0 (없음)\n서버 역할: 0 (없음)\n마지막 동기화 오류: 0 (명령이 성공적으로 완료되었습니다.)\n마지막으로 동기화한 후 지난 시간: 365.2733233s\n\n"
+    }
+  ],
+  "windows_status": {
+    "status": "BLOCKED",
+    "reason": "CLOCK_WINDOWS_ROOT_UNCERTAINTY",
+    "leap": 0,
+    "stratum": 2,
+    "last_sync_error": 0,
+    "root_delay_seconds": 0.0394439,
+    "root_dispersion_seconds": 3.808756,
+    "root_distance_seconds": 3.82847795,
+    "sync_age_seconds": 365.2733233,
+    "source": "time.google.com,0x8",
+    "last_sync_display": "2026-10-25 오후 9:29:32",
+    "max_sync_age_seconds": 3600,
+    "root_distance_limit_seconds": 1.0
+  },
+  "measurement": {
+    "at": 1792931739.6644182,
+    "hosts": [
+      "time.windows.com",
+      "time.cloudflare.com"
+    ],
+    "samples_per_host": 3,
+    "max_packets": 6,
+    "rows": [
+      {
+        "host": "time.windows.com",
+        "started_at": 1792931738.3698905,
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "offset_seconds": 0.028355836868286133,
+        "uncertainty_seconds": 0.013619460735415282,
+        "error_interval_seconds": [
+          0.01473637613287085,
+          0.04197529760370142
+        ],
+        "delay_seconds": 0.007015705108642578,
+        "elapsed_monotonic_seconds": 0.007018200000857178,
+        "root_delay_seconds": 7.62939453125e-05,
+        "root_dispersion_seconds": 0.0100250244140625,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 1.5412178981932811e-06,
+        "stratum": 4,
+        "reference_at": 1792931735.6610928,
+        "server_received_at": 1792931738.411092,
+        "server_transmitted_at": 1792931738.411093,
+        "local_sent_at": 1792931738.3792284,
+        "local_received_at": 1792931738.386245,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761a61152000",
+        "response_hex": "1c0400e90000000500000291564d5450ee887617a93d5f06ee88761a61152000ee88761a693d5347ee88761a693d65bc"
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792931738.6369565,
+        "peer": [
+          "162.159.200.1",
+          123
+        ],
+        "offset_seconds": 0.02883279323577881,
+        "uncertainty_seconds": 0.0710247605508155,
+        "error_interval_seconds": [
+          -0.04219196731503669,
+          0.0998575537865943
+        ],
+        "delay_seconds": 0.0025780200958251953,
+        "elapsed_monotonic_seconds": 0.0026508999999350635,
+        "root_delay_seconds": 0.136962890625,
+        "root_dispersion_seconds": 0.0012054443359375,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 2.0695861167041585e-06,
+        "stratum": 3,
+        "reference_at": 1792931734.5504594,
+        "server_received_at": 1792931738.6727664,
+        "server_transmitted_at": 1792931738.6728373,
+        "local_sent_at": 1792931738.6426446,
+        "local_received_at": 1792931738.6452935,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761aa4846000",
+        "response_hex": "240300e6000023100000004f0a6a0804ee8876168ceae81aee88761aa4846000ee88761aac3a6be7ee88761aac3f104e"
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792931738.896011,
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "offset_seconds": 0.027274012565612793,
+        "uncertainty_seconds": 0.01229785729049379,
+        "error_interval_seconds": [
+          0.014976155275119004,
+          0.039571869856106584
+        ],
+        "delay_seconds": 0.004373311996459961,
+        "elapsed_monotonic_seconds": 0.004375399999844376,
+        "root_delay_seconds": 7.62939453125e-05,
+        "root_dispersion_seconds": 0.0100250244140625,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 1.1343290680088103e-06,
+        "stratum": 4,
+        "reference_at": 1792931735.6612747,
+        "server_received_at": 1792931738.926274,
+        "server_transmitted_at": 1792931738.926275,
+        "local_sent_at": 1792931738.8968134,
+        "local_received_at": 1792931738.9011877,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761ae5959000",
+        "response_hex": "1c0400e90000000500000291564d5450ee887617a9494c7aee88761ae5959000ee88761aed204af9ee88761aed205d6d"
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792931739.1520667,
+        "peer": [
+          "162.159.200.1",
+          123
+        ],
+        "offset_seconds": 0.028758525848388672,
+        "uncertainty_seconds": 0.06920800634964305,
+        "error_interval_seconds": [
+          -0.04044948050125438,
+          0.09796653219803172
+        ],
+        "delay_seconds": 0.0021505355834960938,
+        "elapsed_monotonic_seconds": 0.0022650000000794535,
+        "root_delay_seconds": 0.13427734375,
+        "root_dispersion_seconds": 0.000946044921875,
+        "server_precision_seconds": 2.9802322387695312e-08,
+        "local_sampling_difference_seconds": 1.2155915101175196e-06,
+        "stratum": 3,
+        "reference_at": 1792931691.5288947,
+        "server_received_at": 1792931739.182636,
+        "server_transmitted_at": 1792931739.1827493,
+        "local_sent_at": 1792931739.1528022,
+        "local_received_at": 1792931739.155066,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761b271e1000",
+        "response_hex": "240300e7000022600000003e0a99080bee8875eb8765a321ee88761b271e1000ee88761b2ec13dfdee88761b2ec8a744"
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792931739.4061286,
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "offset_seconds": 0.02686333656311035,
+        "uncertainty_seconds": 0.011911255338989372,
+        "error_interval_seconds": [
+          0.01495208122412098,
+          0.038774591902099725
+        ],
+        "delay_seconds": 0.003570556640625,
+        "elapsed_monotonic_seconds": 0.00357239999993908,
+        "root_delay_seconds": 7.62939453125e-05,
+        "root_dispersion_seconds": 0.010040283203125,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 6.512664185720496e-07,
+        "stratum": 4,
+        "reference_at": 1792931735.6546574,
+        "server_received_at": 1792931739.4356565,
+        "server_transmitted_at": 1792931739.4356577,
+        "local_sent_at": 1792931739.407008,
+        "local_received_at": 1792931739.4105797,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761b6831b000",
+        "response_hex": "1c0400e90000000500000292564d5450ee887617a7979eedee88761b6831b000ee88761b6f8730e1ee88761b6f874355"
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792931739.6611848,
+        "peer": [
+          "162.159.200.1",
+          123
+        ],
+        "offset_seconds": 0.028807640075683594,
+        "uncertainty_seconds": 0.06919476625501172,
+        "error_interval_seconds": [
+          -0.04038712617932813,
+          0.09800240633069532
+        ],
+        "delay_seconds": 0.002124786376953125,
+        "elapsed_monotonic_seconds": 0.002242699999442266,
+        "root_delay_seconds": 0.13427734375,
+        "root_dispersion_seconds": 0.000946044921875,
+        "server_precision_seconds": 2.9802322387695312e-08,
+        "local_sampling_difference_seconds": 8.501001502736472e-07,
+        "stratum": 3,
+        "reference_at": 1792931691.5288947,
+        "server_received_at": 1792931739.6919029,
+        "server_transmitted_at": 1792931739.69202,
+        "local_sent_at": 1792931739.6620328,
+        "local_received_at": 1792931739.6642747,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee88761ba97b0000",
+        "response_hex": "240300e7000022600000003e0a99080bee8875eb8765a321ee88761ba97b0000ee88761bb1208c95ee88761bb1283604"
+      }
+    ],
+    "elapsed_monotonic_seconds": 1.2945231000003332,
+    "authenticated": false,
+    "clock_modified": false
+  },
+  "external_assessment": {
+    "status": "VERIFIED",
+    "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY"
+  },
+  "measurement_freshness": {
+    "status": "VERIFIED",
+    "reason": "FRESH_DIRECT_NTP_SAMPLES",
+    "max_age_seconds": 15,
+    "oldest_sample_age_seconds": 1.2935304641723633
+  },
+  "blockers": [
+    "CLOCK_WINDOWS_ROOT_UNCERTAINTY"
+  ],
+  "completed_at": 1792931739.6727686
+}

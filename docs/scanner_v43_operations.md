@@ -1,5 +1,18 @@
 # Scanner V4.3 관측 전용 운영
 
+## V4.8 현재 admission — 2026-10-25
+
+[V4.8 보고서](scanner_v48_windows_uncertainty_20261025.md)를 먼저 확인한다.
+Windows 루트 분산은 자연 폴링에서7.763→3.809→1.822→0.836초로 감소했고
+루트 거리0.8558684초로 기존1초 조건을 통과했다. 시간·서비스·레지스트리·정책 변경은 없다.
+그러나22:04와22:05의 새 전체 검사 각각에서 Windows NTP1표본이 timeout되어
+**현재 LIVE는 `CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE`로 BLOCKED**다.
+나머지5표본의 작은 오차로 필수6표본이나 전체 신선도 검증을 대신하지 않는다.
+이 작업의 LIVE/거래소API/resume은0회이며24시간은 NOT_READY다.
+timeout의 서버/경로/로컬 원인은 미확정이다. 다음에는 접근 안정성을 제한된 예산으로
+조사한 뒤 기존 전체 gate를 새로 통과해야 한다. 보관한 과거 PASS나 추세 예측은 admission이 아니다.
+아래 V4.7 이하의 현재/차단 설명은 각 버전 당시 이력이며, 지금도 예시 명령을 자동 실행하지 않는다.
+
 ## V4.7 현재 admission — 2026-10-25
 
 [V4.7 보고서](scanner_v47_clock_validation_20261025.md)를 먼저 확인한다.

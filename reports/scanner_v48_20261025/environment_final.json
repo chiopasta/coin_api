@@ -1,0 +1,107 @@
+{
+  "at": "2026-10-25T22:05:44.7724357+09:00",
+  "utc": "2026-10-25T13:05:44.7764365Z",
+  "service": {
+    "Name": "W32Time",
+    "State": "Running",
+    "StartMode": "Automatic"
+  },
+  "timezone": {
+    "Id": "Korea Standard Time",
+    "BaseUtcOffset": {
+      "Ticks": 324000000000,
+      "Days": 0,
+      "Hours": 9,
+      "Milliseconds": 0,
+      "Minutes": 0,
+      "Seconds": 0,
+      "TotalDays": 0.375,
+      "TotalHours": 9,
+      "TotalMilliseconds": 32400000,
+      "TotalMinutes": 540,
+      "TotalSeconds": 32400
+    }
+  },
+  "boot": {
+    "LastBootUpTime": "/Date(1792925655946)/"
+  },
+  "domain": {
+    "PartOfDomain": false
+  },
+  "timeEvents": [
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T22:03:40.9894741+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:46:36.9757827+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:29:32.9744485+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 35,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:28.9616075+09:00",
+      "Message": "The time service is now synchronizing the system time with the time source time.google.com,0x8 (ntp.m|0x8|0.0.0.0:123->216.239.35.0:123) with reference id 2355160. Current local stratum number is 2."
+    },
+    {
+      "Id": 37,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:13.0811956+09:00",
+      "Message": "The time provider NtpClient is currently receiving valid time data from time.google.com,0x8 (ntp.m|0x8|0.0.0.0:123->216.239.35.0:123)."
+    },
+    {
+      "Id": 35,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:12.9396658+09:00",
+      "Message": "The time service is now synchronizing the system time with the time source time.windows.com,0x8 (ntp.m|0x8|0.0.0.0:123->52.231.114.183:123) with reference id 3077760820. Current local stratum number is 5."
+    },
+    {
+      "Id": 37,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:08.4767590+09:00",
+      "Message": "The time provider NtpClient is currently receiving valid time data from time.windows.com,0x8 (ntp.m|0x8|0.0.0.0:123->52.231.114.183:123)."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:08.1902260+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:12:07.8969242+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    },
+    {
+      "Id": 158,
+      "Level": 4,
+      "Time": "2026-10-25T21:11:16.6684426+09:00",
+      "Message": "The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well."
+    }
+  ],
+  "jumpEvents": [
+    {
+      "Id": 1,
+      "Time": "2026-10-25T21:12:12.9399185+09:00",
+      "Message": "시스템 시간이 ‎2026‎-‎10‎-‎25T12:12:12.939055600Z에서 ‎2026‎-‎10‎-‎25T12:12:12.939689500Z(으)로 변경되었습니다.\r\n\r\n변경 이유: An application or system component changed the time.\r\n프로세스: '\\Device\\HarddiskVolume2\\Windows\\System32\\svchost.exe'(PID 20576)."
+    },
+    {
+      "Id": 1,
+      "Time": "2026-10-25T21:12:12.9392740+09:00",
+      "Message": "시스템 시간이 ‎2026‎-‎10‎-‎25T12:12:08.491691400Z에서 ‎2026‎-‎10‎-‎25T12:12:12.937109500Z(으)로 변경되었습니다.\r\n\r\n변경 이유: An application or system component changed the time.\r\n프로세스: '\\Device\\HarddiskVolume2\\Windows\\System32\\svchost.exe'(PID 20576)."
+    }
+  ],
+  "activeScanners": [],
+  "noSystemChanges": true
+}

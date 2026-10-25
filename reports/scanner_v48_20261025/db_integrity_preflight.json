@@ -1,0 +1,18 @@
+{
+  "at": 1792932480.1391373,
+  "immutable_read_only": true,
+  "databases": {
+    "data\\forward_scanner_v4.db": {
+      "quick_check": "ok"
+    },
+    "data\\scanner_v43_live\\episode_20261024\\bithumb.db": {
+      "quick_check": "ok"
+    },
+    "data\\scanner_v43_live\\episode_20261024\\control.db": {
+      "quick_check": "ok"
+    },
+    "data\\scanner_v43_live\\episode_20261024\\upbit.db": {
+      "quick_check": "ok"
+    }
+  }
+}

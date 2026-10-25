@@ -1,0 +1,23 @@
+{
+  "at": 1792933544.5251508,
+  "status": "BLOCKED",
+  "reason": "CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE",
+  "windows_root_status": "VERIFIED",
+  "clock_checks": [
+    "clock_initial.json",
+    "clock_ready.json",
+    "clock_recheck.json"
+  ],
+  "failed_ready_attempts": 2,
+  "missing_samples_reason": "time.windows.com UDP response timed out once in each fresh six-sample check",
+  "packet_loss_origin": "UNKNOWN_NETWORK_OR_SERVER; no packet capture or settings changes",
+  "no_further_admission_retry": true,
+  "clock_policy_changed": false,
+  "live_worker_starts": 0,
+  "exchange_http_attempts": 0,
+  "new_signals": 0,
+  "runtime_created": false,
+  "actual_resume_runs": 0,
+  "readiness": "PARTIAL",
+  "readiness_24h": "NOT_READY"
+}

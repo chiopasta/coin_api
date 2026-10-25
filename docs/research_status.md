@@ -1,5 +1,14 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-25 V4.8 Windows 루트 불확실성 분석
+
+- [V4.8 보고서](scanner_v48_windows_uncertainty_20261025.md), 인프라 **PARTIAL / 전체 시계 FAIL·LIVE BLOCKED /24시간 NOT_READY**. Windows 루트 조건은 자연 수렴으로 해소됐지만 이후 두 번의 새 전체 검사에서 각1개 Windows NTP 표본 timeout으로 차단됐다. 실패 표본을 제외해 통과시키거나 허용 기준을 변경하지 않았다.
+- 동일 Google 원본·1024초 자연 폴링에서 루트 분산 **7.7630189→3.8087560→1.8216905→0.8362296초**, 마지막 루트 거리 **0.8558684초**를 확인했다. 복구 후 초기 필터 수렴과 일치한다는 추론이며 비공개 Windows 내부 상태까지 입증하지는 않았다. 원본 직접 광고 분산은0.000091553~0.000122070초로 호스트 값과 구분된다.
+- 최종 성공 표본은 Windows offset **+47.334~+48.517ms**(최대 불확실성12.845ms), Cloudflare **+50.841~+52.435ms**(71.952ms), 최대 offset+불확실성124.387ms다. 그러나 필수6표본 중1개 누락으로 전체 정확도/신선도는 FAIL/UNVERIFIED다. 원래1초·0.5초 spread·구간 중첩·15초/3600초 신선도 조건과 production 코드는 불변이다.
+- W32Time 시작/종료 조회 모두 Running/Automatic, 윤초0·계층2·오류0이다. 읽기 전용 추세31회/1801.286초, 직접NTP24패킷 중22응답(Windows7/9·Cloudflare9/9·추가Google6/6). UDP timeout의 경로/서버/방화벽 원인은 UNKNOWN/BLOCKED이며 설정·레지스트리·시각·서비스·강제resync 변경0이다.
+- **실제LIVE0회·resume0회·거래소HTTP0회·신규신호0개**, 새 관측DB 없음. 원천/가격 완성도·후속30/60분 예약/완료는N/A다. 기존25% 및 사후98.75% 결과와 NO_TRADE/UNKNOWN 정책은 유지한다. 실제 재부팅·절전·자연60분·24시간 자원/장애 운영은 미검증이다.
+- **선별64개 통과**, 실제HTTP/UDP 금지·전체 회귀/백테스트 없음. 원본163신호·보호86입력·STALE_OPEN115·이전 증거113파일 hash 유지, 원본 및 이전V4.3 DB3개 quick_check=ok. 주문·키·CHIO BOT 통합·장기자동시작·Windows종료 없음. [최종 결정](../reports/scanner_v48_20261025/live_decision.json), [보존 검증](../reports/scanner_v48_20261025/completion_checks.json). 다음은 NTP 응답 누락 조사 후 기존 전체 gate를 통과한 새 episode의 제한 관측이다.
+
 ## 2026-10-25 V4.7 복구 시계 독립 검증·조건부 LIVE 준비
 
 - [V4.7 보고서](scanner_v47_clock_validation_20261025.md), 인프라 **PARTIAL / 전체 LIVE admission BLOCKED /24시간 NOT_READY**. 사용자 복구 후 W32Time Running·Automatic, 계층2·윤초0·Google 원본·동기화 오류0을 확인했다. 이전4.39초 지연이 계속되는 상태는 아니다.
