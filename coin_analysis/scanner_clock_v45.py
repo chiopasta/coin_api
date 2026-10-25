@@ -7,6 +7,7 @@ import sys
 import time
 
 from . import scanner_ntp_v46 as ntp
+from . import scanner_clock_v47 as admission
 
 MAX_OFFSET_SECONDS = 1.0
 MAX_SPREAD_SECONDS = .5
@@ -34,14 +35,14 @@ def awake_seconds():
 
 
 def verify_clock():
-    """V4.6: diagnose external accuracy even when Windows service is stopped.
+    """V4.7: validate Windows root distance/age and fresh external accuracy.
 
     Admission STILL requires Windows status plus two-provider evidence inside
     the existing tolerance INCLUDING uncertainty. No time correction or offset
     compensation. Subprocess timeout also bounds DNS. NTP is unauthenticated.
     """
     result = dict(at=time.time(),status='BLOCKED',reason='CLOCK_SYNC_UNVERIFIED',
-                  references=list(ntp.HOSTS),max_samples=6,max_seconds=15,clock_policy='V46_NTP_UNCERTAINTY',
+                  references=list(ntp.HOSTS),max_samples=6,max_seconds=15,clock_policy='V47_WINDOWS_ROOT_AND_FRESH_NTP',
                   max_offset_seconds=MAX_OFFSET_SECONDS,max_spread_seconds=MAX_SPREAD_SECONDS,
                   clock_changed=False,commands=[])
     if os.name!='nt':
@@ -53,6 +54,9 @@ def verify_clock():
         result['commands'].append(dict(argv=command,returncode=completed.returncode,
                                       output=decode_output(completed.stdout+completed.stderr)))
         service_ok=completed.returncode==0
+        if service_ok:
+            result['windows_status']=admission.windows_status(result['commands'][-1]['output'],MAX_OFFSET_SECONDS)
+            if result['windows_status']['status']!='VERIFIED':blockers.append(result['windows_status']['reason'])
     except (OSError,subprocess.TimeoutExpired) as exc:
         result['service_error']=repr(exc)
     if not service_ok:blockers.append('CLOCK_WINDOWS_TIME_SERVICE_UNVERIFIED')
@@ -63,11 +67,15 @@ def verify_clock():
         measurement=json.loads(completed.stdout)
         result['measurement']=measurement
         assessment=ntp.assess(measurement,MAX_OFFSET_SECONDS,MAX_SPREAD_SECONDS)
+        result['external_assessment']=assessment
+        result['measurement_freshness']=admission.measurement_freshness(measurement,time.time())
+        if result['measurement_freshness']['status']!='VERIFIED':blockers.append(result['measurement_freshness']['reason'])
     except (OSError,subprocess.TimeoutExpired,ValueError) as exc:
         result['measurement_error']=repr(exc)
         assessment=dict(status='BLOCKED',reason='CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE')
     if assessment['status']!='VERIFIED':blockers.append(assessment['reason'])
     result['blockers']=blockers
+    result['completed_at']=time.time()
     if blockers:return dict(result,reason=blockers[-1])
     return dict(result,status='VERIFIED',reason=assessment['reason'])
 

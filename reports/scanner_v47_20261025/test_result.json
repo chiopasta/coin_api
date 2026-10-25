@@ -1,0 +1,35 @@
+{
+  "tests_run": 76,
+  "successful": true,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "elapsed_seconds": 4.0498083000002225,
+  "selected_names": [
+    "tests.test_scanner_clock_v47",
+    "tests.test_scanner_clock_v46",
+    "tests.test_scanner_observation_v45",
+    "tests.test_forward_scanner_v43",
+    "tests.test_scanner_v41.CandleGuards",
+    "tests.test_scanner_v41.RuntimeRepairs.test_network_retry_resume_and_duplicate_skip",
+    "tests.test_scanner_v41.RuntimeRepairs.test_os_lock_rejects_second_process_without_growing_file",
+    "tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start",
+    "tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable",
+    "tests.test_forward_scanner_v4.ScannerTests.test_missing_future_is_unknown_and_recoverable",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_restart_session_and_interrupted_cycle",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_clean_close_checkpoints_wal_and_preserves_values",
+    "tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes"
+  ],
+  "tested_source_sha256": {
+    "coin_analysis/forward_scanner_v43.py": "38a5d5e82421a2887d94def1a0a4be53b8f88f91c155b7afe7d274df18112521",
+    "coin_analysis/scanner_clock_v45.py": "4f8372793cbf22c86345da5fe979a6bc60550d8667d36ff30e3d4a4fd8afff90",
+    "coin_analysis/scanner_clock_v47.py": "fd8b5640e6ee6ef9e76eaa00598f0dd408c18f40ccaaa6c4013ba7582434a29b",
+    "coin_analysis/scanner_ntp_v46.py": "eb63e5c1665a8c540026ab9f9fcf3bdbaff3a5f488861c3a63506d48f8f3b3df",
+    "tests/scanner_clock_fixtures.py": "8b46a477175448dbb912cd61ec3f90fe5bdd70f387d28de7ac9cdbbf3216b911",
+    "tests/test_scanner_clock_v47.py": "6c90c1fdf316739b0c33e13a9ca152381e1004314ef46a9803dea714eb94857f",
+    "tests/test_scanner_clock_v46.py": "b9f62e9318cf71274438ee25cbe31da4c94973d541ea09ea59ab94f39b95ab96",
+    "tests/test_scanner_observation_v45.py": "f2f3930f57824aa78ba8c06a9d1f2243cbc04902bb5eba21011bb2cf2c8c9b2a",
+    "tests/test_forward_scanner_v43.py": "9b7a10f7b8a0dbda516c4d49afa0e5abeda3dbd1431fd5a8843efae1fc926894"
+  },
+  "scope": "Impact-selected only; HTTP/UDP forbidden in test process; no full regression/backtest"
+}

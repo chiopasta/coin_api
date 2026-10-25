@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-25 V4.7 복구 시계 독립 검증·조건부 LIVE 준비
+
+- [V4.7 보고서](scanner_v47_clock_validation_20261025.md), 인프라 **PARTIAL / 전체 LIVE admission BLOCKED /24시간 NOT_READY**. 사용자 복구 후 W32Time Running·Automatic, 계층2·윤초0·Google 원본·동기화 오류0을 확인했다. 이전4.39초 지연이 계속되는 상태는 아니다.
+- 외부 Windows·Cloudflare 각3표본을2회 독립 측정했다. 최종 Windows offset **+9.274~+13.232ms**(최대 불확실성17.059ms), Cloudflare **+10.648~+11.159ms**(70.392ms), 최대 offset+불확실성81.550ms로 외부 정확도PASS다. 최종 가장 오래된 표본은약1.297초 전이다.
+- 다만 Windows 루트 분산 **7.7630189초**, 지연0.0390809초, 루트 거리 **7.78255935초**로 기존1초 안전 조건을 충족하지 못했다. 원본 동기화는21:12:28, 최종 경과378.842초다. 작은 외부offset으로 큰 Windows 분산을 덮어쓰지 않았고 시간/서비스/레지스트리를 변경하지 않았다.
+- V4.6의 Windows 루트 분산 미검사 결점을 운영 계층에 보강했다. 영문/한국어 필드·동기화 상대 나이≤3600초·루트 거리≤1초, 직접NTP표본 나이≤15초를 요구한다. 기존1초·spread0.5초·packet계산·단조 제한·점프/절전 guard는 그대로다. 탐지 전략·threshold·label·점수·collector·300초 가격 정책은 불변이다.
+- 시계 gate실패로 **LIVE0회·실제resume0회·거래소API0회·신규LIVE신호0개**, 새 관측DB는 생성하지 않았다. 원천/가격 완성도·수집성공률·실제30/60분 예약/완료는N/A다. NO_TRADE 실시간/사후 증거 추가0, 근거 없는 구간은UNKNOWN 유지. 기존25%·사후98.75% 결과는 보존했다.
+- **선별76개 테스트 통과**, 실제HTTP/UDP 금지·전체 회귀/백테스트 없음. 작은offset+큰Windows분산·표본신선도·시각역전·차단시worker미생성, 기존leakage/PENDING/재연결/자원guard를 검증했다. 실제60분·절전/24시간 안정성은 미검증이다.
+- 기존163신호·86보호 입력·STALE_OPEN115·이전 증거103파일 hash 유지, 원본/이전 관측DB quick_check=ok. 주문·키·CHIO BOT통합·자동재시작·Windows종료 없음. [시계 증거](../reports/scanner_v47_20261025/clock_final.json), [LIVE차단 결정](../reports/scanner_v47_20261025/live_decision.json), [보존 검증](../reports/scanner_v47_20261025/completion_checks.json). 다음은 루트 분산 조건 충족 후 신규DB의 감독하 제한 관측이다.
+
 ## 2026-10-25 V4.6 시계 검증 원인 규명·LIVE 준비
 
 - [V4.6 보고서](scanner_v46_clock_recovery_20261025.md), 인프라 **PARTIAL / 실제 LIVE admission BLOCKED**. W32Time STOPPED·Manual, 서비스 조회0x80070426, 비도메인 PC의 서비스 시작 트리거는DOMAIN JOINED다. 현재 부팅 이후 실행 이력 없음(exit1077), 마지막 확인 동기화 로그는10/24 00:07 KST다. 환경 설정·서비스·시각을 변경하지 않았다.
@@ -78,7 +88,7 @@
 - 정상 종료 시 WAL TRUNCATE checkpoint, 강제 종료 후 commit WAL 복구, 시작 시 quick_check, stale sidecar 전용 오류와 백업 기반 `repair-wal` 명령을 추가했다. 전체 자동 테스트 **126개 통과**. API와 scanner cycle은 실행하지 않았다.
 - 기존 재개 명령 유지: `python -m coin_analysis.forward_scanner_v4 --mode run --db data/forward_scanner_v4.db`.
 
-최종 갱신: 2026-10-25. 현재 단계: **V4.6 시계 실패 원인·약4.39초 지연 확인 및 검증/복귀 guard 보강 완료, 인프라 PARTIAL / 환경 복구 전 LIVE admission BLOCKED / 조기 탐지 실효성 INSUFFICIENT_DATA**. 무인24시간 운영·매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
+최종 갱신: 2026-10-25. 현재 단계: **V4.7 외부 시각 정확도 복구PASS·Windows 루트 불확실성으로 LIVE BLOCKED, 인프라 PARTIAL /24시간 NOT_READY / 조기 탐지 실효성 INSUFFICIENT_DATA**. 무인24시간 운영·매매 전략으로 승인된 상태가 아니다. 신규 요청 없이 장기 실행·대량 수집하지 않는다. 아래 이전 smoke 기록은 해당 시점의 이력이다.
 
 ## 최신 LIVE 성과 점검 — 2026-10-05 22:43 KST
 

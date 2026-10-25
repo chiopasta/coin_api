@@ -11,6 +11,7 @@ from unittest.mock import patch
 from coin_analysis import scanner_ntp_v46 as n
 from coin_analysis import scanner_clock_v45 as c
 from coin_analysis import forward_scanner_v43 as v
+from tests.scanner_clock_fixtures import WINDOWS_OK
 
 
 def fixture(offset=.2):
@@ -25,8 +26,10 @@ def fixture(offset=.2):
 
 def measurement(offsets=None,uncertainty=.02):
     offsets=[.01]*6 if offsets is None else offsets
+    now=time.time()
     return dict(rows=[dict(host=n.HOSTS[i%2],status='MEASURED',offset_seconds=x,
-        uncertainty_seconds=uncertainty,error_interval_seconds=[x-uncertainty,x+uncertainty]) for i,x in enumerate(offsets)])
+        uncertainty_seconds=uncertainty,error_interval_seconds=[x-uncertainty,x+uncertainty],
+        local_sent_at=now-.02,local_received_at=now-.01) for i,x in enumerate(offsets)])
 
 
 class NtpProtocol(unittest.TestCase):
@@ -97,7 +100,7 @@ class Admission(unittest.TestCase):
 
     def test_localized_service_output_decodes_and_success_needs_actual_evidence(self):
         self.assertEqual(c.decode_output('서비스가 시작되지 않았습니다'.encode('cp949')),'서비스가 시작되지 않았습니다')
-        with patch.object(c.os,'name','nt'),patch.object(c.subprocess,'run',side_effect=[self.result('localized status'),self.result(measurement())]):
+        with patch.object(c.os,'name','nt'),patch.object(c.subprocess,'run',side_effect=[self.result(WINDOWS_OK),self.result(measurement())]):
             self.assertEqual(c.verify_clock()['status'],'VERIFIED')
 
     def test_unbiased_windows_clock_is_available_and_non_decreasing(self):

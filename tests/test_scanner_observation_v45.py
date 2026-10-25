@@ -10,6 +10,7 @@ from unittest.mock import patch
 from coin_analysis import forward_scanner_v43 as v
 from coin_analysis import scanner_clock_v45 as clock
 from coin_analysis import scanner_observation_v45 as price
+from tests.scanner_clock_fixtures import WINDOWS_OK
 
 
 class Prices(unittest.TestCase):
@@ -113,13 +114,14 @@ os._exit(19)
 
 
 class Clocks(unittest.TestCase):
-    def result(self,text='',code=0):
+    def result(self,text=WINDOWS_OK,code=0):
         return subprocess.CompletedProcess([],code,text.encode(),b'')
 
     def measurement(self,offsets=None):
         offsets=offsets or [.01]*6
+        now=time.time()
         return dict(rows=[dict(host=clock.ntp.HOSTS[i%2],status='MEASURED',offset_seconds=x,
-            uncertainty_seconds=.02,error_interval_seconds=[x-.02,x+.02]) for i,x in enumerate(offsets)])
+            uncertainty_seconds=.02,error_interval_seconds=[x-.02,x+.02],local_sent_at=now-.02,local_received_at=now-.01) for i,x in enumerate(offsets)])
 
     def test_service_failure_still_measures_but_cannot_admit_live(self):
         with patch.object(clock.os,'name','nt'),patch.object(clock.subprocess,'run',side_effect=[self.result(code=1),self.result(json.dumps(self.measurement()))]) as run:
