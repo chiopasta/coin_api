@@ -1,0 +1,11 @@
+{
+  "scope": "Implementation commit; a following documentation-only receipt commit does not change tested code",
+  "implementation_commit": "e0a95c86357c64ce5dfaba70bfb5c0b55964d7fb",
+  "local_head": "e0a95c86357c64ce5dfaba70bfb5c0b55964d7fb",
+  "origin_main": "e0a95c86357c64ce5dfaba70bfb5c0b55964d7fb",
+  "git_remote_main": "e0a95c86357c64ce5dfaba70bfb5c0b55964d7fb",
+  "github_main": "e0a95c86357c64ce5dfaba70bfb5c0b55964d7fb",
+  "push_verified": true,
+  "db_zip_secrets_not_committed": true,
+  "at": 1793029737.546776
+}

@@ -117,3 +117,6 @@ Git 루트는 `C:\dev\coin_api-1`, 시작 HEAD는 `b2e9dd3`이며 작업 시작 
 우선순위: (1) 사용자 환경에서 실제 브라우저·모바일 외관/클릭 확인, (2) 장시간 수신·단절·중단 이후 가격 추적을 원본 규칙 그대로 관찰, (3) 다른 PC의 기존 분석기 경로/지문 확인. PRE-PUMP72h 성과·전략 유효성·시장 전체 수신 보장·24시간 무인은 미검증이다. 새 최적화/연구 엔진 개발은 이번 범위에 포함하지 않는다.
 
 이번 소스·테스트·문서·검증 메타데이터만 커밋하고 origin/main에 push한다. 실제 commit/원격 HEAD 대조 결과는 같은 폴더의 Git 검증 자료와 최종 응답에 기록한다. 원본 DB·개인정보·인증정보·백업 ZIP·기존 런타임 로그는 커밋에서 제외한다.
+
+
+Implementation commit: [`e0a95c8`](https://github.com/chiopasta/coin_api/commit/e0a95c86357c64ce5dfaba70bfb5c0b55964d7fb). Push verified: local HEAD = origin/main = Git remote main = GitHub API main. [Verification receipt](../reports/v15_dashboard_integration_20261027/git_verification.json). The following documentation-only receipt commit leaves tested source unchanged.
