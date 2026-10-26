@@ -1,7 +1,9 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const names = {ARCHIVE:'기존 연구 보관',CURRENT_LIVE:'이번 LIVE 관측 기록',STORED_OBSERVATION:'이전 관측 저장'};
+const names = {ARCHIVE:'과거 DB · 버전 출처 미확정',CURRENT_LIVE:'현재 V15 DB',STORED_OBSERVATION:'이전 관측 저장'};
 const groups={ARCHIVE_LIVE:'연구 보관 · LIVE',ARCHIVE_CATCHUP:'연구 보관 · 지연 수집',OBSERVATION_LIVE:'신규 관측 · LIVE',OBSERVATION_CATCHUP:'신규 관측 · 지연 수집'};
+Object.assign(groups,{V15_CURRENT:'현재 V15 DB',V15_LEGACY:'과거 V15 계열 DB',SCORE:'저장 SURGE 점수'});
+const quality={MISSING_SAMPLES:'중간 가격 누락',DELAYED_OR_INVALID_SAMPLE_TIMES:'추적 지연·시각 이상',UNVERIFIED_CHECKPOINT_TIME:'시점 검증 불가',SAVED_ENDPOINT_MISMATCH:'저장 값 불일치'};
 const states={COMPLETE:'평가 완료',PENDING:'평가 대기',NO_DATA:'데이터 부족',INSUFFICIENT_DATA:'데이터 부족',UNKNOWN:'확인 불가'};
 const patternName=p=>p==='RANGE_30M_GE4_FIRST_CLUSTER'?'30분 변동폭 ≥ 4% · 첫 클러스터':p==='UNKNOWN'?'패턴 미정의':p;
 const number = n => Number.isFinite(n) ? new Intl.NumberFormat('ko-KR',{maximumFractionDigits:2}).format(n) : '—';
@@ -53,6 +55,18 @@ function renderStatus(data){
   value('storage',`DB ${s.db_saved||'UNKNOWN'} · ${s.size===null||s.size===undefined?'크기 UNKNOWN':(s.size/1048576).toFixed(2)+' MiB'} · 수집 ${date(s.collected)}`);
   const messages=[...data.errors];if(s.reason)messages.push(`최근 시작·운영 결과: ${s.reason} · 다시 시작하면 시계를 새로 검증합니다.`);
   $('api-error').hidden=!messages.length;$('api-error').textContent=messages.join(' / ');
+  if(data.engine==='V15'){
+    value('scanner-phase',s.status==='EXTERNAL_RUNNING'?'별도 실행 V15 · 웹 제어 제외':`${s.phase} · 원본 V15 스캔 상태`);
+    value('clock-status',s.heartbeat_fresh?'FRESH':s.process_alive?'UNKNOWN':'STOPPED',s.heartbeat_fresh?'positive':'muted');
+    value('clock-detail',`최근 heartbeat ${date(s.heartbeat)} KST · V15 NTP 검사 미지원`);
+    value('markets',number(s.markets));value('pairs',s.venue_pairs==null?'실제 수신 수 확인 불가':`${number(s.venue_pairs)} 거래소·종목 쌍 · 누적 유효 수신`);
+    value('configured-scope','기존 V15 전체 KRW 구독 · 실제 수신 확인 수와 구분');
+    value('total-markets',number(s.listed_unique));value('total-by-exchange',Object.entries(s.exchanges||{}).map(([e,v])=>`${e} 목록 ${number(v.listed)} / 수신 ${number(v.received)} / 최근60초 ${number(v.active)}`).join(' · ')||'현재 실행의 목록 근거 없음');
+    value('total-market-time',s.started_at?`현재/마지막 실행 ${date(s.started_at)} KST`:'조회 시각 미확인');
+    value('focus-markets',s.heartbeat_fresh?number(s.scanned_pairs):'UNKNOWN');value('focus-pairs',`원본 analyze ${number(s.analyze_calls)}회 · 최근 ${date(s.last_analyze)} KST`);
+    value('scope-note','V15는 미검증 실험 전략입니다. 목록·실제 수신·스캔 완료 수를 구분합니다. 별도 실행의 상세 수집 상태는 추정하지 않습니다.');
+    if(s.reason){$('api-error').hidden=false;value('api-error',[...data.errors,`최근 V15 상태: ${s.reason}`].join(' / '));}
+  }
 }
 function renderRows(){
   const data=isAnalysis?analysisReport:latest;if(!data)return;
@@ -72,7 +86,7 @@ function renderRows(){
     if(selected?.key===key)tr.className='selected';
     const time=node('td');const button=node('button',date(r.detected_at),'signal-button');button.type='button';button.setAttribute('aria-label',`${r.market} ${date(r.detected_at)} 신호 상세`);button.addEventListener('click',()=>choose(r));time.append(button,node('span',`신호 ${date(r.signal_time).slice(11)}`,'sub'));tr.append(time);
     const market=node('td');market.append(node('div',r.exchange,'exchange'),node('div',r.market,'market'));tr.append(market);
-    const pattern=node('td');pattern.append(node('span',groups[r.cohort]||names[r.scope]||'확인 불가',`tag ${r.scope==='CURRENT_LIVE'?'live':''}`),node('div',patternName(r.pattern),'pattern'),node('span',r.source==='LIVE'?'원천 LIVE':'원천 지연 수집','sub'));tr.append(pattern);
+    const pattern=node('td');pattern.append(node('span',groups[r.cohort]||names[r.scope]||'확인 불가',`tag ${r.scope==='CURRENT_LIVE'?'live':''}`),node('div',patternName(r.pattern),'pattern'),node('span',r.source==='V15'?'원천 V15 · 별도 기준 시각 미저장':r.source==='LIVE'?'원천 LIVE':'원천 지연 수집','sub'));tr.append(pattern);
     tr.append(node('td',Number.isFinite(r.score)?number(r.score):'미정의','number muted'),node('td',price(r.detection_price),'number'));
     const completed=r.horizons.filter(h=>h.status==='COMPLETE'&&Number.isFinite(h.return_pct)).at(-1);
     r={...r,return_pct:completed?.return_pct,return_minutes:completed?.minutes};
@@ -92,14 +106,20 @@ async function loadDetail(){
     $('detail-empty').hidden=true;$('detail-content').hidden=false;
     value('detail-market',`${r.exchange} · ${r.market}`);value('detail-scope',names[r.scope]||'UNKNOWN');
     value('detail-subtitle',`기준 ${date(r.signal_time)} KST · 탐지 ${date(r.detected_at)} KST · ${patternName(r.pattern)}`);
+    if(r.engine==='V15')value('detail-subtitle',`저장 탐지 ${date(r.detected_at)} KST · 별도 기준 시각 미지원 · ${patternName(r.pattern)}`);
     value('detail-price',price(r.detection_price));value('detail-score',Number.isFinite(r.score)?number(r.score):'미정의','muted');
     $('horizons').replaceChildren();r.horizons.forEach(h=>{const card=node('div',undefined,'horizon');card.append(node('small',`${h.minutes}분 후`),node('strong',h.status==='COMPLETE'?pct(h.return_pct):'—',tone(h.return_pct)),node('span',states[h.status]||'확인 불가','sub'));$('horizons').append(card);});
     const complete=r.horizons.filter(h=>h.status==='COMPLETE');const longest=complete.at(-1);
     value('mfe',pct(longest?.mfe_pct),tone(longest?.mfe_pct));value('mae',pct(longest?.mae_pct),tone(longest?.mae_pct));
     value('mfe-horizon',longest?`(${longest.minutes}분)`:'');value('mae-horizon',longest?`(${longest.minutes}분)`:'');
     value('metric-note',r.horizons.some(h=>h.basis==='STORED_CANDLES_VIEW_ONLY')?'가격 지표는 연속된 저장 원천봉으로 화면에서만 계산합니다. 결측을 채우거나 원래 연구 평가를 변경하지 않습니다.':'DB에 저장된 후속 평가만 표시합니다. 미완성 구간의 수익률은 계산하지 않습니다.');
+    if(r.engine==='V15')value('metric-note','원래 저장 지표만 표시합니다. 누락·지연·미도래 구간은 집계에서 제외합니다. PRE-PUMP 시각 검증은 미지원이며 관측 극값은 시장 전체 고가·저가가 아닙니다.');
     const labels={SUCCESS:'조건 도달',FAILURE:'조건 미도달',PENDING:'평가 대기',UNKNOWN:'자료 부족'};
     value('outcomes',`기존 연구 평가: ${r.outcomes.length?r.outcomes.map(o=>`${o.label} ${labels[o.status]||'확인 불가'} (${o.observed_minutes}/${o.expected_minutes}분)`).join(' · '):'자료 없음'} · 평가 기준가격 ${price(r.signal_price)} KRW · 단순 가격 변화이며 실제 거래 수익률이 아닙니다.`);
+    if(r.engine==='V15'){
+      value('outcomes','원래 저장 탐지 시각(KST 가정) 기준 · 별도 신호 기준 시각/기존 연구 label 미지원 · 실제 체결 수익이 아닙니다.');
+      value('metric-note',$('metric-note').textContent+' '+r.horizons.filter(h=>h.status==='INSUFFICIENT_DATA').map(h=>`${h.minutes}분 ${quality[h.reason]||'자료 검증 불가'}`).join(' / '));
+    }
     chart(r);
   }catch(e){if(version===detailVersion){$('detail-content').hidden=true;$('detail-empty').hidden=false;value('detail-empty',e.message);}}
 }
@@ -109,17 +129,18 @@ function chart(r){
   const bars=r.candles.filter(c=>Number.isFinite(c.close)&&c.close>0);
   if(!bars.length){wrap.append(node('div','저장된 원천 가격이 없습니다.','chart-empty'));return;}
   const w=900,h=210,l=70,right=20,top=16,bottom=30;
-  const start=r.signal_time-1800,end=r.signal_time+3600;
+  const isV15=r.engine==='V15';
+  const start=r.signal_time-(isV15?0:1800),end=Math.max(r.signal_time+3600,...bars.map(b=>b.ts));
   let low=Math.min(...bars.map(b=>b.close)),high=Math.max(...bars.map(b=>b.close));
   const pad=Math.max((high-low)*.14,high*.0005);low-=pad;high+=pad;
   const x=t=>l+(t-start)/(end-start)*(w-l-right),y=p=>top+(high-p)/(high-low)*(h-top-bottom);
   const s=svg('svg',{viewBox:`0 0 ${w} ${h}`,role:'img','aria-label':`${r.market} 실제 저장 종가 ${bars.length}개. 빈 구간은 연결하지 않음.`});
   for(let i=0;i<4;i++){const p=low+(high-low)*i/3;const at=y(p);s.append(svg('line',{x1:l,x2:w-right,y1:at,y2:at,stroke:'#2b3b30','stroke-width':.7}),svg('text',{x:l-10,y:at+3,'text-anchor':'end',fill:'#7e9787','font-size':10},price(p)));}
-  for(const offset of [-30,0,15,30,60]){const at=x(r.signal_time+offset*60);s.append(svg('text',{x:at,y:h-8,'text-anchor':'middle',fill:offset===0?'#b2cfaa':'#7e9787','font-size':10},offset===0?'신호':`${offset>0?'+':''}${offset}분`));}
+  for(const offset of (isV15?[0,5,10,30,60]:[-30,0,15,30,60])){const at=x(r.signal_time+offset*60);s.append(svg('text',{x:at,y:h-8,'text-anchor':'middle',fill:offset===0?'#b2cfaa':'#7e9787','font-size':10},offset===0?'신호':`${offset>0?'+':''}${offset}분`));}
   s.append(svg('line',{x1:x(r.signal_time),x2:x(r.signal_time),y1:top,y2:h-bottom,stroke:'#91a785','stroke-dasharray':'4 4'}));
-  let path='',prev=null;bars.forEach(b=>{const t=b.ts+60;path+=`${prev!==null&&b.ts-prev===60?'L':'M'}${x(t).toFixed(2)},${y(b.close).toFixed(2)} `;prev=b.ts;});
+  let path='',prev=null;bars.forEach(b=>{const t=b.ts+(isV15?0:60);const contiguous=prev!==null&&(isV15?b.minute===prev.minute+1&&b.ts-prev.ts<120:b.ts-prev.ts===60);path+=`${contiguous?'L':'M'}${x(t).toFixed(2)},${y(b.close).toFixed(2)} `;prev=b;});
   s.append(svg('path',{d:path,fill:'none',stroke:'#8bdbac','stroke-width':2,'stroke-linejoin':'round'}));
-  bars.forEach(b=>{const c=svg('circle',{cx:x(b.ts+60),cy:y(b.close),r:2,fill:'#8bdbac'});c.append(svg('title',{},`${date(b.ts+60)} KST · ${number(b.close)} KRW`));s.append(c);});
+  bars.forEach(b=>{const at=b.ts+(isV15?0:60);const c=svg('circle',{cx:x(at),cy:y(b.close),r:2,fill:'#8bdbac'});c.append(svg('title',{},`${date(at)} KST · ${number(b.close)} KRW`));s.append(c);});
   wrap.append(s);
 }
 async function refresh(){
@@ -131,11 +152,12 @@ async function refresh(){
 function renderAnalysis(){
   const s=analysisReport.summary;
   value('analyzed',`${number(s.analyzed)}개`);value('analyzed-n',`유효 표본 ${number(s.analyzed)} / 저장 ${number(s.total)}개 · 1개 이상 구간 완료`);
+  if(analysisReport.analyzer){value('analyzed-n',`유효 ${number(s.analyzed)} / 저장 ${number(s.total)} · 미도래 ${number(s.pending)} · 누락·시각미검증 ${number(s.incomplete)}`);value('analysis-note',`기존 V7 분석기 연결 · 저장 값만 집계 · 5·10·30·60분. PRE-PUMP 시각 검증/장기 차트 미지원. ${Object.entries(analysisReport.paper||{}).map(([g,p])=>`${groups[g]} 가상매매 종료 n=${p.n}, 평균 ${pct(p.mean_pct)}, 승률 ${pct(p.win_pct)}, OPEN ${p.open}건 제외`).join(' / ')}. 실제 체결 수익이 아닙니다.`);}
   for(const [id,key] of [['rise-30m','rise_30m'],['return-30m','return_30m'],['mfe-30m','mfe_30m']]){
     const m=s[key];value(id,pct(m.value),id==='rise-30m'?'':tone(m.value));value(`${id}-n`,`유효 표본 ${number(m.n)}개 · 30분 평가 완료`);
   }
   const body=$('pattern-rows');body.replaceChildren();$('patterns-empty').hidden=analysisReport.patterns.length>0;
-  for(const p of analysisReport.patterns){
+  for(const p of [...analysisReport.patterns,...(analysisReport.score_groups||[])]){
     const tr=node('tr'),name=node('td');name.append(node('span',groups[p.cohort]||p.cohort,'tag'),node('div',patternName(p.pattern),'pattern'),node('small','성능 판단 보류','sub'));tr.append(name,node('td',`${p.return_30m.n} / ${p.total}개`,'number'));
     for(const k of ['return_30m','rise_30m']){const td=node('td',pct(p[k].value),`number ${k==='return_30m'?tone(p[k].value):''}`);td.append(node('small',`n=${p[k].n}`,'sub'));tr.append(td);}
     const exc=node('td',undefined,'number');exc.append(node('span',pct(p.mfe_30m.value),tone(p.mfe_30m.value)),document.createTextNode(' / '),node('span',pct(p.mae_30m.value),tone(p.mae_30m.value)),node('small',`n=${p.mfe_30m.n} / ${p.mae_30m.n}`,'sub'));tr.append(exc);body.append(tr);
@@ -165,9 +187,9 @@ function averageChart(summary){
 function renderControl(data){
   controlData=data;csrf=data.token||csrf;
   $('start-scanner').disabled=controlBusy||data.busy||data.process_alive!==false;
-  $('stop-scanner').disabled=controlBusy||data.stopping||!(data.process_alive||data.starting);
+  $('stop-scanner').disabled=controlBusy||data.stopping||!(data.starting||(data.stop_allowed??data.process_alive));
   value('control-message',data.message,data.state==='FAILED'?'warning':data.state==='SUCCEEDED'?'positive':'');
-  value('control-bounds',`관측 전용 · 최대 ${number(data.seconds)}초 / HTTP ${number(data.max_requests)}회 · 시계 검증 후 시작`);
+  value('control-bounds',`관측 전용 · 최대 ${number(data.seconds)}초 / HTTP ${number(data.max_requests)}회 · ${data.engine==='V15'?'원본 V15 · 외부 실행 보호 · NTP 검사 미지원':'시계 검증 후 시작'}`);
 }
 async function refreshControl(){try{renderControl(await get('/api/control'));}catch{csrf=null;$('start-scanner').disabled=true;$('stop-scanner').disabled=true;value('control-message','로컬 제어 연결을 확인할 수 없습니다. 상태 BAT를 확인하세요.','warning');}}
 async function operate(action){

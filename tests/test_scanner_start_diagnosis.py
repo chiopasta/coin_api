@@ -104,7 +104,7 @@ class ControlDiagnostics(unittest.TestCase):
         with patch.object(dashboard.control,'current',return_value=None),\
              patch.object(dashboard.control,'snapshot',return_value=dict(status='STOPPED',phase='NO_MANAGED_RUN')),\
              patch.object(desktop,'start_scanner',side_effect=exc):
-            server=dashboard.Server(('127.0.0.1',0),logger=logger,seconds=120,max_requests=40)
+            server=dashboard.Server(('127.0.0.1',0),logger=logger,seconds=120,max_requests=40,engine='V4')
             thread=threading.Thread(target=server.serve_forever,kwargs=dict(poll_interval=.05));thread.start()
             try:
                 conn=http.client.HTTPConnection('127.0.0.1',server.server_port,timeout=3)

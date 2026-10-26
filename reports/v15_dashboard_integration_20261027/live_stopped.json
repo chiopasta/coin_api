@@ -1,0 +1,40 @@
+{
+  "engine": "V15",
+  "phase": "TERMINAL",
+  "status": "STOPPED",
+  "heartbeat": 1793027927.3423588,
+  "started_at": 1793027870.7975552,
+  "elapsed_monotonic_seconds": 56.54329560000042,
+  "http_requests": 102,
+  "analyze_calls": 3,
+  "last_analyze": 1793027917.64597,
+  "exchanges": {
+    "UPBIT": {
+      "listed": 298,
+      "subscription_sent": 298,
+      "received": 50,
+      "active": 50,
+      "last_received": 1793027927.1885505,
+      "status": "DISCONNECTED"
+    },
+    "BITHUMB": {
+      "listed": 489,
+      "subscription_sent": 489,
+      "received": 162,
+      "active": 162,
+      "last_received": 1793027927.3055258,
+      "status": "DISCONNECTED"
+    }
+  },
+  "listed_unique": 493,
+  "received_unique": 181,
+  "scanned_pairs": 106,
+  "reason": "STOP_REQUESTED",
+  "db_saved": "CLOSED",
+  "process_alive": false,
+  "owned": false,
+  "external_count": 0,
+  "heartbeat_fresh": false,
+  "live_collecting": false,
+  "stop_allowed": false
+}

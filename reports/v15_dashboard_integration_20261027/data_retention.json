@@ -1,0 +1,10 @@
+{
+  "original_signals_preserved": 43,
+  "signals_after": 43,
+  "original_history_preserved": 1246,
+  "history_after": 1281,
+  "added_history": 35,
+  "unchanged_original_features": true,
+  "unchanged_original_price_history": true,
+  "native_tracking_checkpoint_updates": "Allowed only through unchanged V15 during bounded LIVE"
+}

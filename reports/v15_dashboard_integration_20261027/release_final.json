@@ -1,0 +1,66 @@
+{
+  "repository": "chiopasta/coin-api-v15-backups",
+  "private": true,
+  "tag": "v15-backup-20261026T153734Z-7b6409ea",
+  "release_id": 424434822,
+  "url": "https://github.com/chiopasta/coin-api-v15-backups/releases/tag/v15-backup-20261026T153734Z-7b6409ea",
+  "sha256": "b94dbff35785b45fab26de470e3ded972243b43d94c186a3b7c9fbda67d3076d",
+  "download_verification": {
+    "status": "VERIFIED_QUARANTINE",
+    "zip_sha256": "b94dbff35785b45fab26de470e3ded972243b43d94c186a3b7c9fbda67d3076d",
+    "automatic_merge": false,
+    "files": [
+      "live_archive.db",
+      "legacy_standalone.db"
+    ]
+  },
+  "assets": [
+    {
+      "id": 678609530,
+      "name": "v15-backup.zip",
+      "size": 1316479,
+      "digest": "sha256:b94dbff35785b45fab26de470e3ded972243b43d94c186a3b7c9fbda67d3076d"
+    },
+    {
+      "id": 678609580,
+      "name": "v15-backup.zip.sha256",
+      "size": 82,
+      "digest": "sha256:01f7851150b768d60729a88356f0a76e0d550404222db6c895b99cbd20c63b05"
+    }
+  ],
+  "snapshot_files": [
+    {
+      "filename": "live_archive.db",
+      "sha256": "4463d7b7d1ef0105ccd73bb411ee01b458ea7545d1839c18e22f9b8df3bfc9c3",
+      "schema_sha256": "371b8528f127da34fcbdef9b7e901cc070b440491a9bd75e4f9d46f96b9a1375",
+      "table_counts": {
+        "prepump_events": 0,
+        "prepump_tracking": 0,
+        "pullback_paper_trades": 12,
+        "pullback_watch": 43,
+        "signal_price_history": 1281,
+        "signals": 43,
+        "sqlite_sequence": 2
+      },
+      "integrity": "ok",
+      "foreign_key_violations": 0
+    },
+    {
+      "filename": "legacy_standalone.db",
+      "sha256": "524179fa75e3b38a879ee9961da76d688d09701f55b401bec102d9fce3a2eb56",
+      "schema_sha256": "6846adec3530d02a455b4cdd2ef932f5b6611ca342617c63cfbe477f61f8abce",
+      "table_counts": {
+        "low_heat_watch": 174,
+        "prepump_events": 76,
+        "prepump_tracking": 76,
+        "pullback_paper_trades": 305,
+        "pullback_watch": 559,
+        "signal_price_history": 43950,
+        "signals": 1761,
+        "sqlite_sequence": 5
+      },
+      "integrity": "ok",
+      "foreign_key_violations": 0
+    }
+  ]
+}

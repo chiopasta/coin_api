@@ -1,0 +1,20 @@
+{
+  "method": "Node VM minimal DOM + actual localhost GET; not a real browser",
+  "pages": [
+    {
+      "path": "/",
+      "rows": 200,
+      "detailRendered": true,
+      "engine": "V15",
+      "web": "웹 서버 RUNNING"
+    },
+    {
+      "path": "/analysis",
+      "rows": 43,
+      "detailRendered": true,
+      "engine": "V15",
+      "web": "웹 서버 RUNNING"
+    }
+  ],
+  "result": "PASS"
+}

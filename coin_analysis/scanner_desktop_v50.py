@@ -19,6 +19,7 @@ import webbrowser
 
 from . import scanner_control_v410 as control
 from . import scanner_dashboard_v50 as dashboard
+from . import v15_control
 
 WEB = control.DATA_DIR/'scanner_dashboard_v50'
 ENTRY = control.PROJECT_ROOT/'scripts'/'coin_api_entry.py'
@@ -210,7 +211,7 @@ def cancel_pending_start():
             (control.CONTROL/('CANCEL_'+token)).touch(exist_ok=True)
 
 
-def start(seconds,max_requests,dashboard_only=False,no_browser=False):
+def start(seconds,max_requests,dashboard_only=False,no_browser=False,engine='V15'):
     if not 30<=seconds<=control.observer.MAX_SECONDS or not 26<=max_requests<=control.observer.MAX_REQUESTS:
         raise ValueError('Outside existing Scanner safety limits')
     WEB.mkdir(parents=True,exist_ok=True)
@@ -220,14 +221,18 @@ def start(seconds,max_requests,dashboard_only=False,no_browser=False):
             raise RuntimeError('WEB_START_PENDING; use stop_coin_api.bat')
         ensure_web(seconds,max_requests)
         if not dashboard_only:
-            old=control.current()
-            if old and (control.alive(old.get('manager')) or control.alive(old.get('child'))):
+            old=v15_control.snapshot() if engine=='V15' else control.snapshot()
+            raw=control.current() if engine=='V4' else None
+            if old.get('process_alive') or raw and (control.alive(raw.get('manager')) or control.alive(raw.get('child'))):
                 print('Scanner      : already managed; no duplicate start')
             else:
                 # Existing V4.10 start owns its lock, full clock gates and scoped
                 # observation child. Backgrounding changes no admission policy.
-                start_scanner(seconds,max_requests)
-        value=control.snapshot();control.render(value)
+                if engine=='V15':v15_control.start(seconds,max_requests)
+                else:start_scanner(seconds,max_requests)
+        value=v15_control.snapshot() if engine=='V15' else control.snapshot()
+        if engine=='V15':print(f"Scanner V15  : {value['status']} / {value['phase']}")
+        else:control.render(value)
         print(f'Web          : RUNNING\nDashboard    : {dashboard.URL}\nSafety       : SUPERVISED ONLY; 24h unattended NOT_READY',flush=True)
         if not no_browser:
             try:
@@ -250,20 +255,33 @@ def main(argv=None):
     parser.add_argument('--request-id')
     args=parser.parse_args(argv)
     try:
-        if args.check: return control.main(['status','--check'])
+        if args.check:
+            v15_control.preflight_database()
+            from .v15_dashboard import analyzer
+            import websocket
+            analyzer()
+            print('V15 original entry / existing V7 analyzer / SQLite schema / websocket dependency : PASS (offline)')
+            return 0
         if args.action=='_serve': return serve(args.token or '',args.seconds,args.max_requests)
-        if args.action=='_scanner': return control.start(args.seconds,args.max_requests,args.request_id)
+        if args.action=='_scanner':
+            try:
+                value=v15_control.start(args.seconds,args.max_requests)
+                print(f"Scanner V15 : {value['status']} / {value['phase']}",flush=True)
+                while v15_control.snapshot()['owned']:time.sleep(.5)
+                return 0
+            except KeyboardInterrupt:
+                v15_control.stop();return 0
         if args.action=='start': return start(args.seconds,args.max_requests,args.dashboard_only or not args.start_scanner,args.no_browser)
         if args.action=='stop':
             try:
-                cancel_pending_start()
-                scanner_code=control.stop()
+                result=v15_control.stop()
+                scanner_code=0 if result['status']=='STOPPED' else 2
             finally: web_code=stop_web()
             return max(scanner_code,web_code)
-        value=control.snapshot();web=web_state()
+        value=v15_control.snapshot();web=web_state()
         if args.json: print(json.dumps(dict(scanner=value,web=web),ensure_ascii=False,allow_nan=False))
         else:
-            control.render(value);print(f"Web          : {web['status']}\nDashboard    : {dashboard.URL}")
+            print(f"Scanner V15  : {value['status']} / {value['phase']}\nWeb          : {web['status']}\nDashboard    : {dashboard.URL}")
         return 0
     except Exception as exc:
         print('Status : BLOCKED\nReason : '+str(exc)+'\nAction : '+control.guidance(str(exc)),flush=True)

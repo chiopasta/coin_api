@@ -147,7 +147,7 @@ class HTTPBoundary(unittest.TestCase):
     def setUp(self):
         self.view=Mock();self.view.snapshot.return_value=dict(web='RUNNING',signals=[])
         self.view.detail.side_effect=LookupError()
-        self.server=d.Server(('127.0.0.1',0),view=self.view)
+        self.server=d.Server(('127.0.0.1',0),view=self.view,engine='V4')
         self.thread=threading.Thread(target=self.server.serve_forever,kwargs=dict(poll_interval=.05));self.thread.start()
         self.addCleanup(self.close)
 
@@ -200,7 +200,7 @@ class Desktop(unittest.TestCase):
         with patch.object(desktop,'ensure_web') as web,patch.object(desktop,'spawn',side_effect=start_existing) as spawn,\
              patch.object(desktop.control.observer.clock_guard,'verify_clock',return_value=blocked),\
              patch.object(desktop.control.subprocess,'Popen') as worker,patch.object(desktop.webbrowser,'open',return_value=True) as browser:
-            self.assertEqual(desktop.start(30,26),2)
+            self.assertEqual(desktop.start(30,26,engine='V4'),2)
             web.assert_called_once();browser.assert_called_once_with(d.URL,new=2);worker.assert_not_called()
             self.assertEqual(spawn.call_args.args[0][0],'_scanner')
         self.assertFalse(desktop.control.observer.RUNTIME_ROOT.exists())
@@ -208,13 +208,13 @@ class Desktop(unittest.TestCase):
     def test_dashboard_only_never_starts_scanner_or_ntp(self):
         with patch.object(desktop,'ensure_web'),patch.object(desktop,'spawn') as child,\
              patch.object(desktop.control.observer.clock_guard,'verify_clock') as clock:
-            self.assertEqual(desktop.start(30,26,True,True),0);child.assert_not_called();clock.assert_not_called()
+            self.assertEqual(desktop.start(30,26,True,True,engine='V4'),0);child.assert_not_called();clock.assert_not_called()
 
     def test_existing_scanner_is_reused_no_duplicate_process(self):
         old=dict(manager=desktop.control.identity(os.getpid()),child=None)
         with patch.object(desktop.control,'current',return_value=old),patch.object(desktop.control,'snapshot',return_value=dict(status='RUNNING')),\
              patch.object(desktop,'ensure_web'),patch.object(desktop,'spawn') as child:
-            self.assertEqual(desktop.start(30,26,no_browser=True),0);child.assert_not_called()
+            self.assertEqual(desktop.start(30,26,no_browser=True,engine='V4'),0);child.assert_not_called()
 
     def test_port_failure_never_starts_scanner(self):
         with patch.object(desktop,'ensure_web',side_effect=RuntimeError('WEB_PORT_OR_START_FAILURE')),patch.object(desktop,'spawn') as child:

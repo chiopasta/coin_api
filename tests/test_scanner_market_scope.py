@@ -89,7 +89,8 @@ class ScopeAgreement(unittest.TestCase):
             self.assertEqual(web['market_scope']['focus']['venue_pairs'],2)
             self.assertEqual(web['market_scope']['configured_unique'],len(control.observer.MARKETS))
             self.assertIs(control.observer.MARKETS,control.observer.v42.MARKETS)
-            with patch.object(control,'start',return_value=0) as start:
+            with patch.object(desktop.v15_control,'start',return_value=dict(status='RUNNING',phase='OBSERVING')) as start,\
+                 patch.object(desktop.v15_control,'snapshot',return_value=dict(owned=False)):
                 self.assertEqual(desktop.main(['_scanner','--seconds','120','--max-requests','40']),0)
                 self.assertEqual(start.call_args.args[:2],(120,40))
 

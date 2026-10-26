@@ -1,0 +1,53 @@
+{
+  "reason": "Legacy V4 API tests initially used new default V15 server and unmocked new CLI route",
+  "runs": [
+    {
+      "started_at": 1793028377.7327297,
+      "status": "STOPPED",
+      "http_requests": 0,
+      "analyze_calls": 0,
+      "elapsed_monotonic_seconds": 0.13130719999935536,
+      "db_saved": "CLOSED"
+    },
+    {
+      "started_at": 1793027870.7975552,
+      "status": "STOPPED",
+      "http_requests": 102,
+      "analyze_calls": 3,
+      "elapsed_monotonic_seconds": 56.54329560000042,
+      "db_saved": "CLOSED"
+    },
+    {
+      "started_at": 1793028343.0588925,
+      "status": "STOPPED",
+      "http_requests": 13,
+      "analyze_calls": 0,
+      "elapsed_monotonic_seconds": 2.094858899999963,
+      "db_saved": "CLOSED"
+    },
+    {
+      "started_at": 1793028152.4427257,
+      "status": "STOPPED",
+      "http_requests": 102,
+      "analyze_calls": 1,
+      "elapsed_monotonic_seconds": 32.279995700000654,
+      "db_saved": "CLOSED"
+    },
+    {
+      "started_at": 1793028353.1814075,
+      "status": "STOPPED",
+      "http_requests": 40,
+      "analyze_calls": 0,
+      "elapsed_monotonic_seconds": 7.138788199999908,
+      "db_saved": "CLOSED"
+    }
+  ],
+  "total_http": 257,
+  "planned_live_http": 204,
+  "additional_regression_http": 53,
+  "production_wrapper_starts": 5,
+  "additional_regression_starts": 3,
+  "all_stopped": true,
+  "fix": "Legacy Server fixtures explicitly engine=V4; new CLI mocked; offline suite audit rejects production V15 subprocess",
+  "at": 1793028545.6415088
+}

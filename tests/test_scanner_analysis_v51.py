@@ -222,7 +222,7 @@ s.update(status='STOPPED',phase='TERMINAL',**{k:v for k,v in c.saved_result(root
             stack.enter_context(patch.object(desktop,'spawn',side_effect=spawn))
             unrelated=subprocess.Popen([sys.executable,'-c',
                 "import sys,time;from pathlib import Path;p=Path(sys.argv[1]);end=time.monotonic()+20\nwhile not p.exists() and time.monotonic()<end:time.sleep(.02)",str(base/'unrelated-stop')],creationflags=0x08000000)
-            server=d.Server(('127.0.0.1',0),seconds=120,max_requests=80)
+            server=d.Server(('127.0.0.1',0),seconds=120,max_requests=80,engine='V4')
             thread=threading.Thread(target=server.serve_forever,kwargs=dict(poll_interval=.05));thread.start()
             def post(action):
                 conn=http.client.HTTPConnection('127.0.0.1',server.server_port,timeout=3)

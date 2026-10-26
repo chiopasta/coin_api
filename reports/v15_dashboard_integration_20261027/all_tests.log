@@ -1,0 +1,200 @@
+ANALYZED KRW-TEST events 1
+{"status": "BOUNDED_STOP", "reason": "TIME_LIMIT", "requests": 0, "rounds": 0, "root": "C:\\Users\\stan\\AppData\\Local\\Temp\\tmpbdar7q1f\\episode"}
+{"status": "BLOCKED", "reason": "CLOCK_WALL_MONOTONIC_DIVERGENCE", "root": "C:\\Users\\stan\\AppData\\Local\\Temp\\tmpds9osbbh\\clock_worker", "run_id": "run"}
+{"status": "BLOCKED", "reason": "NETWORK_CIRCUIT_OPEN_5_ROUNDS", "root": "C:\\Users\\stan\\AppData\\Local\\Temp\\tmp47t3z9qy\\worker", "run_id": "run"}
+{"event": "CLOCK_CHECK", "stage": "SUPERVISOR", "status": "VERIFIED", "reason": "ISOLATED_TEST", "provider_summary": [], "execution": {}}
+{"status": "STOPPED", "reason": "STOP_REQUESTED", "root": "C:\\Users\\stan\\AppData\\Local\\Temp\\tmpdtjvowaj\\worker", "run_id": "run"}
+{"event": "CLOCK_CHECK", "stage": "SUPERVISOR", "status": "VERIFIED", "reason": "ISOLATED_TEST", "provider_summary": [], "execution": {}}
+
+============================================================
+Status       : STOPPED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+KRW listed   : UNKNOWN / no market-list receipt
+Follow-up    : 0 markets / 0 pairs; saved PENDING horizons
+Clock        : UNKNOWN
+Signals      : 0
+Started      : UNKNOWN
+Duration     : UNKNOWN
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : SAVED / WAL checkpoint and normal close confirmed
+DB bytes     : 409600
+Recent error : NONE
+Last result  : STOP_REQUESTED
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : UNKNOWN
+Stop         : stop_coin_api.bat
+============================================================
+
+============================================================
+Status       : STOPPED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+KRW listed   : UNKNOWN / no market-list receipt
+Follow-up    : 0 markets / 0 pairs; saved PENDING horizons
+Clock        : UNKNOWN
+Signals      : 0
+Started      : UNKNOWN
+Duration     : UNKNOWN
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : SAVED / WAL checkpoint and normal close confirmed
+DB bytes     : 409600
+Recent error : NONE
+Last result  : STOP_REQUESTED
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : UNKNOWN
+Stop         : stop_coin_api.bat
+============================================================
+No owned live process; no signal or kill sent.
+{"event": "CLOCK_CHECK", "stage": "SUPERVISOR", "status": "BLOCKED", "reason": "CLOCK_WINDOWS_ROOT_UNCERTAINTY", "provider_summary": [], "execution": {}}
+DB 업그레이드: max_profit_5m 추가
+DB 업그레이드: max_profit_10m 추가
+DB 업그레이드: max_profit_30m 추가
+DB 업그레이드: max_profit_60m 추가
+DB 업그레이드: max_drawdown_5m 추가
+DB 업그레이드: max_drawdown_10m 추가
+DB 업그레이드: max_drawdown_30m 추가
+DB 업그레이드: max_drawdown_60m 추가
+
+DATABASE READY
+Scanner V15 : RUNNING / OBSERVING
+{"event": "CLOCK_CHECK", "stage": "SUPERVISOR", "status": "BLOCKED", "reason": "CLOCK_SYNC_UNVERIFIED", "provider_summary": [], "execution": {}}
+1970-01-01T11:05:30 KRW-TEST EARLY {"price": 100, "ma20": 100.0, "slope_pct": 0.0, "trend": "FLAT", "extension_pct": 0.0, "price_5m_pct": 0.0, "value": 30000.0, "value_ratio": 10.0, "volume_ratio": 10.0, "trades": 30}
+MINED KRW-W {'A': {'events': 0, 'low_coverage_candidate_hits': 0}, 'B': {'events': 0, 'low_coverage_candidate_hits': 0}}
+MINED KRW-X {'A': {'events': 1, 'low_coverage_candidate_hits': 0}, 'B': {'events': 1, 'low_coverage_candidate_hits': 0}}
+MINED KRW-Y {'A': {'events': 0, 'low_coverage_candidate_hits': 0}, 'B': {'events': 0, 'low_coverage_candidate_hits': 0}}
+MINED KRW-Z {'A': {'events': 0, 'low_coverage_candidate_hits': 0}, 'B': {'events': 0, 'low_coverage_candidate_hits': 0}}
+DB 업그레이드: max_profit_5m 추가
+DB 업그레이드: max_profit_10m 추가
+DB 업그레이드: max_profit_30m 추가
+DB 업그레이드: max_profit_60m 추가
+DB 업그레이드: max_drawdown_5m 추가
+DB 업그레이드: max_drawdown_10m 추가
+DB 업그레이드: max_drawdown_30m 추가
+DB 업그레이드: max_drawdown_60m 추가
+
+DATABASE READY
+DB 업그레이드: max_profit_5m 추가
+DB 업그레이드: max_profit_10m 추가
+DB 업그레이드: max_profit_30m 추가
+DB 업그레이드: max_profit_60m 추가
+DB 업그레이드: max_drawdown_5m 추가
+DB 업그레이드: max_drawdown_10m 추가
+DB 업그레이드: max_drawdown_30m 추가
+DB 업그레이드: max_drawdown_60m 추가
+
+DATABASE READY
+DB 업그레이드: max_profit_5m 추가
+DB 업그레이드: max_profit_10m 추가
+DB 업그레이드: max_profit_30m 추가
+DB 업그레이드: max_profit_60m 추가
+DB 업그레이드: max_drawdown_5m 추가
+DB 업그레이드: max_drawdown_10m 추가
+DB 업그레이드: max_drawdown_30m 추가
+DB 업그레이드: max_drawdown_60m 추가
+
+DATABASE READY
+DB 업그레이드: max_profit_5m 추가
+DB 업그레이드: max_profit_10m 추가
+DB 업그레이드: max_profit_30m 추가
+DB 업그레이드: max_profit_60m 추가
+DB 업그레이드: max_drawdown_5m 추가
+DB 업그레이드: max_drawdown_10m 추가
+DB 업그레이드: max_drawdown_30m 추가
+DB 업그레이드: max_drawdown_60m 추가
+
+DATABASE READY
+
+======================================
+      CRYPTO SURGE SCANNER V15
+======================================
+DB 업그레이드: max_profit_5m 추가
+DB 업그레이드: max_profit_10m 추가
+DB 업그레이드: max_profit_30m 추가
+DB 업그레이드: max_profit_60m 추가
+DB 업그레이드: max_drawdown_5m 추가
+DB 업그레이드: max_drawdown_10m 추가
+DB 업그레이드: max_drawdown_30m 추가
+DB 업그레이드: max_drawdown_60m 추가
+
+DATABASE READY
+
+Loading UPBIT markets...
+UPBIT: 1
+
+Loading BITHUMB markets...
+BITHUMB: 1
+
+======================================
+HISTORICAL DATA PRELOAD
+최근 120 분 데이터
+======================================
+
+UPBIT preload...
+UPBIT preload complete: 1
+
+BITHUMB preload...
+BITHUMB preload complete: 1
+ACTIVE SIGNALS RESTORED: 0
+V15 PRE-PUMP TRACKS RESTORED: 0
+UPBIT WebSocket CONNECTED
+BITHUMB WebSocket CONNECTED
+
+SCANNER STOPPED
+
+======================================
+      CRYPTO SURGE SCANNER V15
+======================================
+DB 업그레이드: max_profit_5m 추가
+DB 업그레이드: max_profit_10m 추가
+DB 업그레이드: max_profit_30m 추가
+DB 업그레이드: max_profit_60m 추가
+DB 업그레이드: max_drawdown_5m 추가
+DB 업그레이드: max_drawdown_10m 추가
+DB 업그레이드: max_drawdown_30m 추가
+DB 업그레이드: max_drawdown_60m 추가
+
+DATABASE READY
+
+Loading UPBIT markets...
+UPBIT: 1
+
+Loading BITHUMB markets...
+BITHUMB: 1
+
+======================================
+HISTORICAL DATA PRELOAD
+최근 120 분 데이터
+======================================
+
+UPBIT preload...
+UPBIT preload complete: 1
+
+BITHUMB preload...
+BITHUMB preload complete: 1
+ACTIVE SIGNALS RESTORED: 0
+V15 PRE-PUMP TRACKS RESTORED: 0
+UPBIT WebSocket CONNECTED
+BITHUMB WebSocket CONNECTED
+
+SCANNER STOPPED
+
+.................................usage: observe [-h] [--execute-live] --runtime-dir RUNTIME_DIR
+               [--seconds SECONDS] [--max-requests MAX_REQUESTS] [--resume]
+observe: error: Explicit public LIVE opt-in required
+..................................usage: smoke [-h] [--execute-live]
+smoke: error: Explicit --execute-live required; at most 20 actual requests
+...........................................................................................................................................................................Read request failed (RuntimeError)
+....................................................................................................................................................<USER_HOME>\AppData\Local\Python\pythoncore-3.14-64\Lib\zipfile\__init__.py:1730: UserWarning: Duplicate name: 'manifest.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+....
+----------------------------------------------------------------------
+Ran 390 tests in 32.320s
+
+OK

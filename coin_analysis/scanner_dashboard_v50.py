@@ -232,15 +232,23 @@ class Server(ThreadingHTTPServer):
     allow_reuse_address = False
 
     def __init__(self, address, view=None, logger=None, seconds=control.observer.MAX_SECONDS,
-                 max_requests=control.observer.MAX_REQUESTS):
+                 max_requests=control.observer.MAX_REQUESTS, engine='V15'):
         if address[0] != HOST: raise ValueError('Loopback binding required')
         if not 30<=seconds<=control.observer.MAX_SECONDS or not 26<=max_requests<=control.observer.MAX_REQUESTS:
             raise ValueError('Outside existing Scanner safety limits')
-        from .scanner_analysis_v51 import Analysis
-        self.view = view or View()
-        self.analysis = Analysis()
+        self.engine=engine
+        if engine=='V15':
+            from .v15_dashboard import View as V15View
+            from . import v15_control
+            self.view=view or V15View()
+            self.analysis=self.view
+            lifecycle=v15_control
+        elif engine=='V4':
+            from .scanner_analysis_v51 import Analysis
+            self.view=view or View();self.analysis=Analysis();lifecycle=None
+        else:raise ValueError('Unknown engine')
         self.logger = logger or logging.getLogger('scanner_dashboard')
-        self.operations = Operations(seconds,max_requests,self.logger)
+        self.operations = Operations(seconds,max_requests,self.logger,lifecycle=lifecycle)
         self.csrf = secrets.token_urlsafe(32)
         self.slots = threading.BoundedSemaphore(8)
         super().__init__(address, Handler)
@@ -309,7 +317,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.respond(200,dict(token=self.server.csrf,**self.server.operations.status()))
             elif parsed.path=='/api/analysis':
                 query=parse_qs(parsed.query)
-                self.respond(200,self.server.analysis.report(query.get('group',['ARCHIVE_LIVE'])[0],
+                self.respond(200,self.server.analysis.report(query.get('group',['V15_CURRENT' if self.server.engine=='V15' else 'ARCHIVE_LIVE'])[0],
                                                            int(query.get('offset',['0'])[0])))
             elif parsed.path=='/api/analysis/signal':
                 query=parse_qs(parsed.query)
@@ -393,9 +401,11 @@ def exception_details(exc):
 
 class Operations:
     """Only explicit local POSTs launch; status and analysis never start LIVE."""
-    def __init__(self, seconds, max_requests, logger=None):
+    def __init__(self, seconds, max_requests, logger=None, lifecycle=None):
         self.seconds,self.max_requests=seconds,max_requests
         self.logger=logger or logging.getLogger('scanner_dashboard')
+        self.lifecycle=lifecycle
+        self.manager=lifecycle or control
         self.lock=threading.Lock()
         self.active=set()
         self.generation=0
@@ -409,9 +419,11 @@ class Operations:
             result=dict(self.result,busy=bool(self.active),starting='start' in self.active,
                         stopping='stop' in self.active,seconds=self.seconds,max_requests=self.max_requests)
         try:
-            raw=control.current()
-            s=control.snapshot()
-            result['process_alive']=bool(raw and (control.alive(raw.get('manager')) or control.alive(raw.get('child'))))
+            raw=self.manager.current()
+            s=self.manager.snapshot()
+            result['process_alive']=s.get('process_alive',bool(raw and (control.alive(raw.get('manager')) or control.alive(raw.get('child')))))
+            result['stop_allowed']=s.get('stop_allowed',result['process_alive'])
+            result['engine']='V15' if self.lifecycle else 'V4'
             result['scanner']={k:s.get(k) for k in ('status','phase','clock','db_saved')}
             if (s['status']=='BLOCKED' and s.get('reason') and not result['busy'] and
                     not (result['action']=='stop' and result['state']=='SUCCEEDED')):
@@ -427,21 +439,26 @@ class Operations:
             if self.closing:raise RuntimeError('웹 서버를 종료하고 있습니다.')
             if action in self.active or action=='start' and self.active:
                 raise RuntimeError('시작·종료 확인이 진행 중입니다.')
-            raw=control.current()
-            alive=bool(raw and (control.alive(raw.get('manager')) or control.alive(raw.get('child'))))
+            raw=self.manager.current()
+            state=self.manager.snapshot() if self.lifecycle else {}
+            alive=state.get('process_alive',bool(raw and (control.alive(raw.get('manager')) or control.alive(raw.get('child')))))
             if action=='start' and alive:
                 raise RuntimeError('스캐너가 이미 실행 중입니다.')
+            if action=='stop' and self.lifecycle and alive and not state.get('stop_allowed'):
+                raise RuntimeError('EXTERNAL_V15_PROTECTED')
             if action=='start':self.cancel_start.clear()
             else:self.cancel_start.set()
             self.active.add(action);self.generation+=1;generation=self.generation
             operation_id=secrets.token_hex(12)
-            self.result=dict(action=action,operation_id=operation_id,state='WORKING',message='시계 검증 및 실제 수집 시작 확인 중…' if action=='start' else '저장 완료와 정상 종료 확인 중…')
+            self.result=dict(action=action,operation_id=operation_id,state='WORKING',message='V15 준비 및 실제 스캔 시작 확인 중…' if action=='start' and self.lifecycle else '시계 검증 및 실제 수집 시작 확인 중…' if action=='start' else '저장 완료와 정상 종료 확인 중…')
         control_event(self.logger,'CONTROL_REQUEST',action=action,operation_id=operation_id,source='WEB_API')
 
         def run():
             from . import scanner_desktop_v50 as desktop
             try:
-                result=desktop.start_scanner(self.seconds,self.max_requests,self.cancel_start) if action=='start' else desktop.stop_scanner()
+                if self.lifecycle:
+                    result=self.lifecycle.start(self.seconds,self.max_requests,self.cancel_start) if action=='start' else self.lifecycle.stop()
+                else:result=desktop.start_scanner(self.seconds,self.max_requests,self.cancel_start) if action=='start' else desktop.stop_scanner()
                 if action=='stop':
                     # A stop arriving before the manager publishes PRECHECK also
                     # waits for the cancelled start operation to finish.
@@ -449,7 +466,7 @@ class Operations:
                         if thread is not threading.current_thread() and thread.name=='scanner-start':
                             thread.join(control.STOP_WAIT_SECONDS)
                             if thread.is_alive():raise RuntimeError('SCANNER_STOP_UNCONFIRMED')
-                    result=desktop.stop_scanner()
+                    result=self.lifecycle.stop() if self.lifecycle else desktop.stop_scanner()
                 success=(result['status']=='RUNNING' and result['phase']=='OBSERVING') if action=='start' else result['status']=='STOPPED'
                 message=('스캐너 수집 시작을 확인했습니다.' if action=='start' else
                          '실행 중인 스캐너가 없습니다. 웹 대시보드는 계속 사용할 수 있습니다.' if result.get('reason')=='NO_RUNNING_SCANNER' else
@@ -478,8 +495,10 @@ class Operations:
             threads=list(self.threads)
         if active:
             from . import scanner_desktop_v50 as desktop
-            desktop.cancel_pending_start()
-            control.stop()
+            if self.lifecycle:self.lifecycle.stop()
+            else:
+                desktop.cancel_pending_start()
+                control.stop()
         for thread in threads:
             thread.join(control.STOP_WAIT_SECONDS+3)
 

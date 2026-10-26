@@ -146,6 +146,10 @@ class BatEntry(unittest.TestCase):
             root=Path(temporary)/'한글 경로 & 괄호 (검증)!';root.mkdir()
             shutil.copytree(project/'coin_analysis',root/'coin_analysis',ignore=shutil.ignore_patterns('__pycache__'))
             shutil.copytree(project/'scripts',root/'scripts',ignore=shutil.ignore_patterns('__pycache__'))
+            (root/'archive').mkdir()
+            shutil.copy2(project/'archive/scanner_v15.py',root/'archive/scanner_v15.py')
+            from tests.test_v15_dashboard_integration import init_db
+            init_db(root/'archive/crypto_scanner.db')
             for p in project.glob('*_coin_api.bat'):shutil.copy2(p,root/p.name)
             env=dict(os.environ,COIN_API_NO_PAUSE='1',COIN_API_PYTHON=sys.executable)
             for command in (['cmd','/d','/c','call',str(root/'start_coin_api.bat'),'--check'],

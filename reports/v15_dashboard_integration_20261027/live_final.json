@@ -1,0 +1,89 @@
+{
+  "start_http": 202,
+  "observing": {
+    "engine": "V15",
+    "phase": "OBSERVING",
+    "status": "RUNNING",
+    "heartbeat": 1793028183.852582,
+    "started_at": 1793028152.4427257,
+    "elapsed_monotonic_seconds": 31.409029200000077,
+    "http_requests": 102,
+    "analyze_calls": 1,
+    "last_analyze": 1793028179.7923603,
+    "exchanges": {
+      "UPBIT": {
+        "listed": 298,
+        "subscription_sent": 298,
+        "received": 143,
+        "active": 143,
+        "last_received": 1793028182.866792,
+        "status": "CONNECTED"
+      },
+      "BITHUMB": {
+        "listed": 489,
+        "subscription_sent": 489,
+        "received": 198,
+        "active": 198,
+        "last_received": 1793028183.8251865,
+        "status": "CONNECTED"
+      }
+    },
+    "listed_unique": 493,
+    "received_unique": 257,
+    "scanned_pairs": 101,
+    "reason": null,
+    "db_saved": "WRITER_ACTIVE",
+    "process_alive": true,
+    "owned": true,
+    "external_count": 0,
+    "heartbeat_fresh": true,
+    "live_collecting": true,
+    "stop_allowed": true
+  },
+  "duplicate_start_http": 409,
+  "stop_http": 202,
+  "stopped": {
+    "engine": "V15",
+    "phase": "TERMINAL",
+    "status": "STOPPED",
+    "heartbeat": 1793028184.723572,
+    "started_at": 1793028152.4427257,
+    "elapsed_monotonic_seconds": 32.279995700000654,
+    "http_requests": 102,
+    "analyze_calls": 1,
+    "last_analyze": 1793028179.7923603,
+    "exchanges": {
+      "UPBIT": {
+        "listed": 298,
+        "subscription_sent": 298,
+        "received": 143,
+        "active": 143,
+        "last_received": 1793028182.866792,
+        "status": "DISCONNECTED"
+      },
+      "BITHUMB": {
+        "listed": 489,
+        "subscription_sent": 489,
+        "received": 200,
+        "active": 200,
+        "last_received": 1793028184.655014,
+        "status": "DISCONNECTED"
+      }
+    },
+    "listed_unique": 493,
+    "received_unique": 259,
+    "scanned_pairs": 101,
+    "reason": "STOP_REQUESTED",
+    "db_saved": "CLOSED",
+    "process_alive": false,
+    "owned": false,
+    "external_count": 0,
+    "heartbeat_fresh": false,
+    "live_collecting": false,
+    "stop_allowed": false
+  },
+  "stop_operation_state": "SUCCEEDED",
+  "unrelated_python_alive": true,
+  "web_still_serving": true,
+  "elapsed_seconds": 35.759386599998834
+}

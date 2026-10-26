@@ -1,5 +1,13 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-27 V15 웹 통합 — 핵심 동작 완료 / 전체 PARTIAL
+
+- [최종 구현·실검증·한계](v15_dashboard_integration_20261027.md). 기본 BAT/웹 START는 `v15_control → v15_runtime → 원본 archive/scanner_v15.py`이며 V4/V5.2 대신 V15를 실행한다. 원본 알고리즘·점수·임계값·V4/V5.2/연구 DB·CSS는 보존했다. START/STOP·PID 생성시각·별도 V15 보호·read-only 현재/과거 DB·두 페이지·기존 V7 분석 함수 연결을 완료했다. 새로운 탐지/연구/최적화 엔진은 없다.
+- 운영 DB `C:\dev\coin_api-1\archive\crypto_scanner.db`: 최종43신호·가격이력1281·PRE-PUMP0·paper12, integrity=ok·DELETE 모드. 기존43신호의 당시 지표와 가격이력1246개 전부 보존, 원래 V15 추적으로35개 추가. 과거 DB1761신호/43950이력/76 PRE-PUMP는 별도이며 자동 병합하지 않는다.
+- 수정 후 실제 웹 START202→OBSERVING/SUCCEEDED→중복409→STOP202/SUCCEEDED·DB CLOSED·웹200·다른 fixture Python 생존 PASS. 해당 실행 HTTP102/analyze1회/101쌍 처리·수신UPBIT143/BITHUMB200. 첫 정상 종료의 UI 캐시 오판을 수정했다. 초기 전체 회귀의 legacy mock 누락으로 준비 실행3회/추가HTTP53이 발생하여 전체HTTP257(계획240 초과)을 기록했다. 구형 fixture 경로 수정과 오프라인 운영 V15 subprocess 차단 runner를 추가했으며 이후 추가 LIVE는 없다.
+- **390 테스트 PASS**, 실제 저장 자료의 분석 결과와 독립 SQL 일치(30분 유효 현재21/과거685), 실제 API 응답으로 Node DOM 두 페이지·상세 차트 렌더 PASS. 브라우저 도구 초기화 실패로 실제 화면/모바일은 미검증이다. 외부 V7 파일/지문이 필요하며 부재 시 미지원, PRE-PUMP 정확한 체크포인트 시각/장기 곡선·전략 유효성·24시간 무인은 미검증이다.
+- 새 [Private Release](https://github.com/chiopasta/coin-api-v15-backups/releases/tag/v15-backup-20261026T153734Z-7b6409ea)에 최종43신호/1281이력과 과거 DB를 Online Backup·Manifest·CRC/SHA/integrity·재다운로드 검증 후 보존했다. 이전 Release 유지, 운영DB/ZIP/토큰/로그 제외. 검증용 웹·V15는 종료하고 이번 변경만 commit/push한다.
+
 ## 2026-10-26 V15 DB 비공개 Release 백업·이전 검증
 
 - [안전한 백업·다운로드·격리 복원 절차](v15_release_backup_20261026.md). 현재 코드 원격은 public이므로 사용자 동의로 별도 private `chiopasta/coin-api-v15-backups`를 생성했다. 새 [Release](https://github.com/chiopasta/coin-api-v15-backups/releases/tag/v15-backup-20261026T144330Z-a5bdb121)에 ZIP/체크섬을 올리고 재다운로드·CRC/SHA-256/DB integrity/schema/count 검증을 완료했다. 기존 tag/asset 덮어쓰기 없음.

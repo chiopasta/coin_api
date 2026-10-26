@@ -1,22 +1,22 @@
 # 코인 급등 분석 프로젝트
 
-## 현재 단계: V4 forward 관찰 기록기
+## 현재 단계: V15 실험 전략 관찰 대시보드
 
-먼저 [프로젝트 현재 상태](docs/research_status.md)를 읽으세요. V3 독립 validation은 PARTIAL이며, 동결된 30분 range >=4%를 기록하는 V4의 제한된 실제 API smoke 단계입니다. 자동매매가 아니며 명시적 요청 없이 장기 scanner나 대량 다운로드를 실행하지 않습니다.
+먼저 [프로젝트 현재 상태](docs/research_status.md)를 읽으세요. 기본 웹 START는 원래 `archive/scanner_v15.py`를 실행합니다. V15는 성과 미검증 실험 전략이며, 기존 수집·신호 저장·가격 추적과 기존 V7 분석기의 조회·기초 통계를 연결합니다. 새 탐지/연구 엔진·전략 최적화·자동매매를 추가하지 않습니다. [통합·최종 검증 보고서](docs/v15_dashboard_integration_20261027.md)를 확인하세요. V3/V4의 기존 연구 정책과 자료는 별도 보존합니다.
 
 [V4 설계·실행 안내](docs/forward_scanner_v4.md) · [독립 validation 결과](reports/forward_surge_v3_independent_validation.md)
 
 ## Windows 간편 관측 실행
 
-현재 BAT/웹의 수집기는 **V5.2 전체 공개 KRW WebSocket**입니다. 등록·구독 요청·실제 수신·탐지 평가 수를 따로 표시합니다. [V5.2 검증 보고서](docs/scanner_v52_validation_20261026.md)의 판정은 PARTIAL이며, 전체 초기화/평가 완료와 신규 상장 무중단 추가는 아직 검증·구현되지 않았습니다. 기존 V4.2/V4.3 직접 CLI는 이전 고정 5종목 dataset 재현용으로 유지합니다.
+현재 BAT/웹의 기본 엔진은 **기존 V15**입니다. 현재 DB는 `archive/crypto_scanner.db`이며 웹은 읽기 전용으로 조회합니다. 과거 `C:\dev\Coin_api\crypto_scanner.db`는 자동 병합하지 않습니다. V4/V5.2 원본·연구 DB·직접 CLI는 보존하되 기본 웹 START에서 실행하지 않습니다. 기존 [V5.2 검증 보고서](docs/scanner_v52_validation_20261026.md)는 과거 엔진의 기록입니다.
 
-**웹 없이 스캐너만 실행:** 루트의 `start_scanner_only.bat`를 더블클릭합니다. 기존 Python 선택·시계 검증·중복 방지·관측 엔진을 재사용하며 최대10분/180 HTTP로 제한합니다. 실행 창은 유지하고, 종료는 Ctrl+C 또는 기존 `stop_coin_api.bat`를 사용합니다. 종료 BAT는 열려 있는 이 프로젝트 대시보드도 함께 종료합니다. 실제 시계·네트워크·자원 검사에 따라 수집이 차단되거나 더 일찍 끝날 수 있습니다.
+**웹 없이 V15만 실행:** `start_scanner_only.bat`는 같은 원본 V15 관리 래퍼를 사용하며 최대10분/180 HTTP입니다. Ctrl+C 또는 `stop_coin_api.bat`로 관리 실행을 정상 종료합니다. 별도 수동 V15는 종료하지 않고 중복 시작을 차단합니다. V15 자체 NTP gate는 미지원이며 기존 V4의 시계/연구 정책을 V15에 강제로 결합하지 않습니다.
 
 프로젝트 루트의 `start_coin_api.bat`를 더블클릭하면 localhost 웹이 열립니다. 웹 상단 버튼으로 스캐너를 시작·종료하고,
 두 번째 **급등 신호 분석** 페이지에서 저장된 가격 평가를 확인합니다. 웹 종료 버튼은 대시보드를 유지하며,
 `stop_coin_api.bat`는 스캐너와 웹을 함께 종료합니다. PowerShell에서도 `.\start_coin_api.bat`처럼 실행합니다.
-BAT 자체는 스캐너를 자동 시작하지 않습니다. [대시보드 사용 안내](docs/scanner_v50_dashboard.md)를 확인하세요.
-관측 전용·감독하 사용이며24시간 무인은 NOT_READY입니다. 기존 시계/실행 한도와 데이터 보호를 유지합니다.
+BAT 자체는 스캐너를 자동 시작하지 않습니다. [현재 V15 사용·검증 안내](docs/v15_dashboard_integration_20261027.md)를 확인하세요. 기존 [V5.1 사용 안내](docs/scanner_v50_dashboard.md)는 이전 엔진용 기록입니다.
+관측 전용·감독하 사용이며24시간 무인은 NOT_READY입니다. 기본 웹 실행 한도는 최대86400초/16000 HTTP이며 자동 재시작은 없습니다. 기존 V7 파일은 `C:\dev\Coin_api\db_analyzer_v7.py`에서 재사용합니다. 다른 PC에서는 원래 파일을 보존하고 필요하면 웹 시작 전에 `V15_ANALYZER_PATH`로 위치를 지정합니다. 파일 부재/지문 불일치는 연결 미지원으로 표시합니다.
 [Python 선택·실행·종료 안내](docs/scanner_v410_windows_launcher.md)
 
 ## 과거 단계: V2 정책 수정 재검증

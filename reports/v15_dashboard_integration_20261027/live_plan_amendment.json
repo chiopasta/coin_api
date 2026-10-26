@@ -1,0 +1,10 @@
+{
+  "reason": "Retest after reproducible STOP status cache bug and exact scan counter fix; no detection changes",
+  "additional_starts": 1,
+  "additional_seconds": 150,
+  "additional_max_http": 120,
+  "total_max_starts": 2,
+  "total_max_http": 240,
+  "ntp_calls": 0,
+  "at": 1793028110.178913
+}

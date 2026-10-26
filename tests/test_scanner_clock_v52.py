@@ -147,7 +147,7 @@ class LocalAPI(unittest.TestCase):
         with patch.object(control,'current',return_value=None),patch.object(control,'snapshot',return_value=failed),\
              patch.object(dashboard,'catalog',return_value={}),\
              patch.object(desktop,'start_scanner',return_value=failed):
-            server=dashboard.Server(('127.0.0.1',0),seconds=60,max_requests=26)
+            server=dashboard.Server(('127.0.0.1',0),seconds=60,max_requests=26,engine='V4')
             worker=threading.Thread(target=server.serve_forever,kwargs=dict(poll_interval=.02));worker.start()
             try:
                 conn=http.client.HTTPConnection('127.0.0.1',server.server_port,timeout=3)

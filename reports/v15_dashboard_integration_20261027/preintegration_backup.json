@@ -1,0 +1,36 @@
+{
+  "directory": "C:\\dev\\coin_api-1\\data\\v15_transfer\\20261026T150650Z-0fcbf485",
+  "tag": "v15-backup-20261026T150650Z-0fcbf485",
+  "sha256": "f9b5a9a3180ba94f002b9f879e2f4a722e92d14acde55ca50001c84979bc5a3b",
+  "files": [
+    {
+      "filename": "live_archive.db",
+      "table_counts": {
+        "prepump_events": 0,
+        "prepump_tracking": 0,
+        "pullback_paper_trades": 12,
+        "pullback_watch": 43,
+        "signal_price_history": 1246,
+        "signals": 43,
+        "sqlite_sequence": 2
+      },
+      "schema_sha256": "371b8528f127da34fcbdef9b7e901cc070b440491a9bd75e4f9d46f96b9a1375",
+      "sha256": "eab09676dc67b32fee5d64bb7e3104080b0838f235fcd272290b3e33800fc4f5"
+    },
+    {
+      "filename": "legacy_standalone.db",
+      "table_counts": {
+        "low_heat_watch": 174,
+        "prepump_events": 76,
+        "prepump_tracking": 76,
+        "pullback_paper_trades": 305,
+        "pullback_watch": 559,
+        "signal_price_history": 43950,
+        "signals": 1761,
+        "sqlite_sequence": 5
+      },
+      "schema_sha256": "6846adec3530d02a455b4cdd2ef932f5b6611ca342617c63cfbe477f61f8abce",
+      "sha256": "524179fa75e3b38a879ee9961da76d688d09701f55b401bec102d9fce3a2eb56"
+    }
+  ]
+}

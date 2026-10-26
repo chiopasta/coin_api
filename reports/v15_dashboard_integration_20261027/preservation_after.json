@@ -1,0 +1,48 @@
+{
+  "protected_git_files": 495,
+  "changed_git_files": [
+    ".gitignore",
+    "README.md",
+    "coin_analysis\\dashboard_assets\\app.js",
+    "coin_analysis\\dashboard_assets\\index.html",
+    "coin_analysis\\scanner_dashboard_v50.py",
+    "coin_analysis\\scanner_desktop_v50.py",
+    "docs\\research_status.md",
+    "tests\\test_scanner_analysis_v51.py",
+    "tests\\test_scanner_clock_v52.py",
+    "tests\\test_scanner_control_v410.py",
+    "tests\\test_scanner_dashboard_v50.py",
+    "tests\\test_scanner_market_scope.py",
+    "tests\\test_scanner_start_diagnosis.py"
+  ],
+  "unchanged_v15_v4_engines_ui_css": [
+    "archive/scanner_v15.py",
+    "coin_analysis/forward_scanner_v4.py",
+    "coin_analysis/forward_scanner_v52.py",
+    "coin_analysis/scanner_control_v410.py",
+    "coin_analysis/dashboard_assets/style.css"
+  ],
+  "historical_static_db_baseline": "reports/v15_dashboard_design_20261026/preservation_before.json; predates current task",
+  "historical_db_count": 21,
+  "historical_db_differences": [],
+  "current_db": {
+    "path": "C:\\dev\\coin_api-1\\archive\\crypto_scanner.db",
+    "integrity": "ok",
+    "journal_mode": "delete",
+    "checkpoint": "Not applicable in DELETE mode; no forced checkpoint",
+    "counts": {
+      "signals": 43,
+      "signal_price_history": 1281,
+      "prepump_events": 0,
+      "prepump_tracking": 0,
+      "pullback_paper_trades": 12
+    },
+    "sidecars": []
+  },
+  "active_v15_processes": 0,
+  "process_kill_or_signal_calls": 0,
+  "source_writers": "Only unchanged V15; dashboard SQL connections read-only",
+  "external_analyzer_unchanged": true,
+  "test_web_closed": true,
+  "final_check_at": 1793029542.2890074
+}

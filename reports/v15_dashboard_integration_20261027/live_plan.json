@@ -1,0 +1,10 @@
+{
+  "max_starts": 1,
+  "seconds": 150,
+  "max_http": 120,
+  "ntp_calls": 0,
+  "engine": "Unchanged archive/scanner_v15.py",
+  "scope": "Native V15 full KRW list and original preload50 per exchange",
+  "stop": "Web managed V15 only; no force kill",
+  "at": 1793027849.5221462
+}

@@ -20,3 +20,4 @@ crypto_scanner.db*
 v15-backup.zip
 v15-backup.zip.sha256
 data/v15_transfer/
+data/scanner_v15_web/

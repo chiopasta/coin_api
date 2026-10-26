@@ -1,0 +1,6 @@
+{
+  "real_browser_visual_qa": "UNVERIFIED",
+  "browser_surfaces": 0,
+  "computer_use_runtime": "failed to write kernel assets: os error 3",
+  "fallback": "Node VM minimal DOM only; no browser claim"
+}
