@@ -1,5 +1,15 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-26 V5.1 웹 운영 버튼·급등 신호 분석실
+
+- [사용 안내](scanner_v50_dashboard.md), [검증 보고서](scanner_v51_validation_20261026.md). 실시간 감시와 급등 신호 분석의 **두 페이지 구현**. BAT 기본은 웹만 열고 웹 버튼으로 기존 관측 엔진을 시작·정상 종료한다. 웹 종료 버튼은 대시보드를 유지한다. loopback·Origin/Host/Fetch-Metadata·수명별 토큰으로 제어를 보호한다. 지연 시작 취소·중복 차단·PID 생성 시각 확인·기존 STOP/저장 검증을 재사용한다.
+- 기존 후속 평가 엔진을 메모리 복제본에 재사용하고 파생 결과만 별도 분석 DB에 저장한다. 원천 DB·feature·label·COMPLETE는 보존한다. 재시작 후 미완성 평가를 기존 저장 봉으로 재개한다. 5/15/30/60분 지평별 분모, 30분 상승 비율·평균 변화·MFE/MAE, 실제 저장 패턴·상세 차트를 제공한다. 연구/신규 관측 및 LIVE/CATCHUP을 구분하며 성능 우수 판정을 하지 않는다. 기존 신호 기준 시각과 실제 탐지 시각, 가격 변화와 거래 수익률을 구별한다.
+- **136개 검사 중135통과·1환경skip**, 오류0. 실제 loopback 제어·인증 거부·BAT 웹 재시작·이전 토큰 거부·독립 SQL 통계 대조·빈 상태/페이지 분할 PASS. 격리한 실제 Python 프로세스 fixture에서 제어 API의 시작 확인·정상 저장 종료·다른 Python 생존·웹 유지 PASS. 실제 LIVE/NTP PASS 시험으로 간주하지 않는다. [테스트](../reports/scanner_v51_20261026/test_result.json), [DB 대조](../reports/scanner_v51_20261026/analysis_comparison.json).
+- 실제 시작은 사전 고정120초/80HTTP·기존10시장 범위에서 **1회**. Windows 시간 서비스 미검증과 약+1.44~+1.45초 offset으로 **CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY / BLOCKED**. NTP7시도/6응답/1timeout, worker·관측DB·거래소HTTP·신규신호0. 기존1초 기준을 유지하고 추가 재시도·시계/서비스 변경 없음. 초기 웹 readiness 초과는 분석 준비를 백그라운드로 분리해 해결했다. [실제 제어](../reports/scanner_v51_20261026/final_http_checks.json).
+- **운영 검증 PARTIAL /24시간 무인 NOT_READY**. Computer Use가 현재 Windows 브라우저 URL을 신뢰할 수 없다고 중단해 브라우저 클릭·차트/모바일 외관·물리 BAT 더블클릭은 미검증이다. 시계 PASS 후 실제 LIVE 정상 저장·자연 신규 신호30/60분·장시간/절전/재부팅도 미검증이다. 주문·최적화·Windows 자동 시작/종료 없음.
+- 작업 시작 시 요청 경로는 없었고 현재 저장소는 `C:\dev\Coin_api`였다. 원본은 이미 **215신호(LIVE44/CATCHUP171)**였으며 과거163개로 맞추지 않고 현재 DB 전체 해시를 보존한다. 전체30분 유효174개·평균+0.27%·상승50.57%; 연구보관LIVE만35개·+0.37%·68.57%다. 보호86중실물75개(과거해시일치63·작업전차이12), 작업전부재11개를 구분한다. 현재 존재한 보호 입력은 모두 이번 기준 해시를 유지한다. STALE_OPEN115 조정 보고서는 보존하되 원천crypto_scanner.db 부재로115행 실물 재검증은 불가하다. [보존·종료 검사](../reports/scanner_v51_20261026/completion_checks.json).
+- 최종 소유 manager/worker/웹/지연 시작 프로세스0·8765 listener0. 기존 DB5개 quick_check=ok, 보호 입력75개와 기존 파일279개를 대조해 의도한 문서 수정 외 변경0을 확인했다. 작업 전의 dirty 잠금 파일은 수정/커밋하지 않는다. 최종 Scanner BLOCKED는 보존한 시계 실패 이력이며 실행 중인 프로세스는 없다.
+
 ## 2026-10-26 V5.0 독립 localhost 웹 대시보드
 
 - [사용 안내](scanner_v50_dashboard.md), [검증 보고서](scanner_v50_dashboard_validation_20261026.md). 대시보드·BAT **PASS**, 관측 인프라 **PARTIAL / 24시간 무인 운영 NOT_READY**. Python 표준 라이브러리·단일 다크 페이지, `http://127.0.0.1:8765`, CHIO BOT과 독립이다. 기존 BAT로 시작·상태·정상 종료하며 웹 RUNNING과 Scanner LIVE를 분리한다.

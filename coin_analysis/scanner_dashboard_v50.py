@@ -1,4 +1,4 @@
-"""Loopback, read-only view of the existing observer. No exchange requests/orders.
+"""Loopback dashboard with authenticated, explicit observer start/STOP.
 
 Original archive is immutable and must have an empty WAL. Observation databases
 use short read-only transactions, including their WAL. Chart gaps stay gaps.
@@ -12,6 +12,7 @@ from logging.handlers import RotatingFileHandler
 import math
 from pathlib import Path
 import re
+import secrets
 import socket
 import sqlite3
 import threading
@@ -221,9 +222,16 @@ class Server(ThreadingHTTPServer):
     request_queue_size = 8
     allow_reuse_address = False
 
-    def __init__(self, address, view=None, logger=None):
+    def __init__(self, address, view=None, logger=None, seconds=control.observer.MAX_SECONDS,
+                 max_requests=control.observer.MAX_REQUESTS):
         if address[0] != HOST: raise ValueError('Loopback binding required')
+        if not 30<=seconds<=control.observer.MAX_SECONDS or not 26<=max_requests<=control.observer.MAX_REQUESTS:
+            raise ValueError('Outside existing Scanner safety limits')
+        from .scanner_analysis_v51 import Analysis
         self.view = view or View()
+        self.analysis = Analysis()
+        self.operations = Operations(seconds,max_requests)
+        self.csrf = secrets.token_urlsafe(32)
         self.logger = logger or logging.getLogger('scanner_dashboard')
         self.slots = threading.BoundedSemaphore(8)
         super().__init__(address, Handler)
@@ -248,7 +256,7 @@ class Server(ThreadingHTTPServer):
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = 'CHIOScanner/5.0'
+    server_version = 'CHIOScanner/5.1'
     sys_version = ''
 
     def setup(self):
@@ -262,15 +270,21 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(code)
         for key,val in {'Content-Type':mime,'Content-Length':str(len(body)), 'Cache-Control':'no-store',
                         'X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer',
+                        'Cross-Origin-Resource-Policy':'same-origin','X-Frame-Options':'DENY',
                         'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"}.items():
             self.send_header(key,val)
         self.end_headers()
         try: self.wfile.write(body)
         except (BrokenPipeError,ConnectionResetError): pass
 
-    def do_GET(self):
+    def local_request(self, write=False):
         expected = f'{HOST}:{self.server.server_port}'
-        if self.headers.get('Host')!=expected or self.headers.get('Origin',f'http://{expected}')!=f'http://{expected}':
+        return (self.client_address[0]==HOST and self.headers.get('Host')==expected and
+                self.headers.get('Origin', None if write else f'http://{expected}')==f'http://{expected}' and
+                self.headers.get('Sec-Fetch-Site','same-origin') in ('same-origin','none'))
+
+    def do_GET(self):
+        if not self.local_request():
             self.respond(403,dict(error='Local origin required')); return
         parsed = urlsplit(self.path)
         try:
@@ -282,8 +296,17 @@ class Handler(BaseHTTPRequestHandler):
             elif parsed.path=='/api/signal':
                 query=parse_qs(parsed.query)
                 self.respond(200,self.server.view.detail(query.get('dataset',[''])[0],query.get('id',[''])[0]))
-            elif parsed.path in ('/','/app.js','/style.css'):
-                file,mime={'/':('index.html','text/html; charset=utf-8'),'/app.js':('app.js','text/javascript; charset=utf-8'),
+            elif parsed.path=='/api/control':
+                self.respond(200,dict(token=self.server.csrf,**self.server.operations.status()))
+            elif parsed.path=='/api/analysis':
+                query=parse_qs(parsed.query)
+                self.respond(200,self.server.analysis.report(query.get('group',['ARCHIVE_LIVE'])[0],
+                                                           int(query.get('offset',['0'])[0])))
+            elif parsed.path=='/api/analysis/signal':
+                query=parse_qs(parsed.query)
+                self.respond(200,self.server.analysis.detail(query.get('dataset',[''])[0],query.get('id',[''])[0]))
+            elif parsed.path in ('/','/analysis','/app.js','/style.css'):
+                file,mime={'/':('index.html','text/html; charset=utf-8'),'/analysis':('index.html','text/html; charset=utf-8'),'/app.js':('app.js','text/javascript; charset=utf-8'),
                            '/style.css':('style.css','text/css; charset=utf-8')}[parsed.path]
                 self.respond(200,(ASSETS/file).read_bytes(),mime)
             else: self.respond(404,dict(error='Not found'))
@@ -293,8 +316,124 @@ class Handler(BaseHTTPRequestHandler):
             self.server.logger.warning('Read request failed (%s)',type(exc).__name__)
             self.respond(503,dict(error='저장 데이터 조회 실패. 잠시 후 다시 시도하거나 상태 BAT를 확인하세요.'))
 
-    def do_POST(self): self.respond(405,dict(error='Read-only dashboard'))
-    do_PUT=do_DELETE=do_PATCH=do_POST
+    def do_POST(self):
+        parsed=urlsplit(self.path)
+        if parsed.query or parsed.path not in ('/api/control/start','/api/control/stop'):
+            self.respond(405,dict(error='Unsupported action'));return
+        token=self.headers.get('X-CSRF-Token','')
+        if not self.local_request(True) or not token.isascii() or not secrets.compare_digest(token,self.server.csrf):
+            self.respond(403,dict(error='로컬 페이지 인증이 필요합니다. 새로 고침하세요.'));return
+        if (self.headers.get('Content-Type')!='application/json' or
+                self.headers.get('Content-Length')!='2' or self.headers.get('Transfer-Encoding')):
+            self.respond(400,dict(error='Invalid local control request'));return
+        if self.rfile.read(2)!=b'{}':
+            self.respond(400,dict(error='Control options cannot be changed'));return
+        try:
+            self.server.operations.request(parsed.path.rsplit('/',1)[-1])
+            self.respond(202,self.server.operations.status())
+        except RuntimeError as exc:
+            self.respond(409,dict(error=str(exc)))
+        except Exception:
+            self.respond(503,dict(error='로컬 프로세스 상태 확인 실패. 상태 BAT를 확인하세요.'))
+
+    def unsupported(self): self.respond(405,dict(error='Unsupported method'))
+    do_PUT=do_DELETE=do_PATCH=do_OPTIONS=unsupported
+
+
+def control_message(reason):
+    reason=reason or ''
+    code=re.match(r'[A-Z][A-Z0-9_]+',reason)
+    code=code.group(0) if code else 'SCANNER_CONTROL_FAILED'
+    if 'CLOCK' in code:
+        return f'시계 안전 검증 실패 ({code}). Windows 시간 동기화와 NTP 연결을 확인하세요.'
+    if 'DUPLICATE' in code or 'Another scanner' in reason:
+        return '스캐너가 이미 실행 중이거나 다른 관측 작업이 잠금을 사용 중입니다.'
+    return f'시작·종료를 확인하지 못했습니다 ({code}). status_coin_api.bat에서 원인을 확인하세요.'
+
+
+class Operations:
+    """Only explicit local POSTs launch; status and analysis never start LIVE."""
+    def __init__(self, seconds, max_requests):
+        self.seconds,self.max_requests=seconds,max_requests
+        self.lock=threading.Lock()
+        self.active=set()
+        self.generation=0
+        self.closing=False
+        self.cancel_start=threading.Event()
+        self.threads=[]
+        self.result=dict(action=None,state='IDLE',message='스캐너 시작 버튼으로 관측을 시작하세요.')
+
+    def status(self):
+        with self.lock:
+            result=dict(self.result,busy=bool(self.active),starting='start' in self.active,
+                        stopping='stop' in self.active,seconds=self.seconds,max_requests=self.max_requests)
+        try:
+            raw=control.current()
+            s=control.snapshot()
+            result['process_alive']=bool(raw and (control.alive(raw.get('manager')) or control.alive(raw.get('child'))))
+            result['scanner']={k:s.get(k) for k in ('status','phase','clock','db_saved')}
+            if (s['status']=='BLOCKED' and s.get('reason') and not result['busy'] and
+                    not (result['action']=='stop' and result['state']=='SUCCEEDED')):
+                result.update(state='FAILED',message=control_message(s['reason']))
+        except Exception:
+            result.update(process_alive=None,state='FAILED',message='프로세스 상태 확인 실패. 상태 BAT를 확인하세요.')
+        return result
+
+    def request(self, action):
+        if action not in ('start','stop'):raise RuntimeError('지원하지 않는 동작입니다.')
+        with self.lock:
+            if self.closing:raise RuntimeError('웹 서버를 종료하고 있습니다.')
+            if action in self.active or action=='start' and self.active:
+                raise RuntimeError('시작·종료 확인이 진행 중입니다.')
+            raw=control.current()
+            alive=bool(raw and (control.alive(raw.get('manager')) or control.alive(raw.get('child'))))
+            if action=='start' and alive:
+                raise RuntimeError('스캐너가 이미 실행 중입니다.')
+            if action=='start':self.cancel_start.clear()
+            else:self.cancel_start.set()
+            self.active.add(action);self.generation+=1;generation=self.generation
+            self.result=dict(action=action,state='WORKING',message='시계 검증 및 실제 수집 시작 확인 중…' if action=='start' else '저장 완료와 정상 종료 확인 중…')
+
+        def run():
+            from . import scanner_desktop_v50 as desktop
+            try:
+                result=desktop.start_scanner(self.seconds,self.max_requests,self.cancel_start) if action=='start' else desktop.stop_scanner()
+                if action=='stop':
+                    # A stop arriving before the manager publishes PRECHECK also
+                    # waits for the cancelled start operation to finish.
+                    for thread in list(self.threads):
+                        if thread is not threading.current_thread() and thread.name=='scanner-start':
+                            thread.join(control.STOP_WAIT_SECONDS)
+                            if thread.is_alive():raise RuntimeError('SCANNER_STOP_UNCONFIRMED')
+                    result=desktop.stop_scanner()
+                success=(result['status']=='RUNNING' and result['phase']=='OBSERVING') if action=='start' else result['status']=='STOPPED'
+                message=('스캐너 수집 시작을 확인했습니다.' if action=='start' else
+                         '실행 중인 스캐너가 없습니다. 웹 대시보드는 계속 사용할 수 있습니다.' if result.get('reason')=='NO_RUNNING_SCANNER' else
+                         '스캐너 정상 종료를 확인했습니다. 웹 대시보드는 계속 사용할 수 있습니다.') if success else control_message(result.get('reason'))
+                outcome=dict(action=action,state='SUCCEEDED' if success else 'FAILED',message=message)
+            except Exception as exc:
+                outcome=dict(action=action,state='FAILED',message=control_message(str(exc)))
+            with self.lock:
+                self.active.discard(action)
+                if generation==self.generation:self.result=outcome
+        thread=threading.Thread(target=run,name='scanner-'+action,daemon=True)
+        with self.lock:
+            self.threads=[t for t in self.threads if t.is_alive()]
+            self.threads.append(thread)
+            thread.start()
+
+    def close(self):
+        with self.lock:
+            self.closing=True
+            self.cancel_start.set()
+            active=bool(self.active)
+            threads=list(self.threads)
+        if active:
+            from . import scanner_desktop_v50 as desktop
+            desktop.cancel_pending_start()
+            control.stop()
+        for thread in threads:
+            thread.join(control.STOP_WAIT_SECONDS+3)
 
 
 def rotating_logger(folder):

@@ -9,11 +9,17 @@
 <body>
 <main>
   <header>
-    <div class="brand"><span class="logo" aria-hidden="true">C<span>↗</span></span><div><div class="eyebrow">LOCAL OBSERVATION DESK <span>V5.0</span></div><h1>CHIO COIN SCANNER</h1><p>급등 신호 관측 · UPBIT / BITHUMB</p></div></div>
+    <div class="brand"><span class="logo" aria-hidden="true">C<span>↗</span></span><div><div class="eyebrow">LOCAL OBSERVATION DESK <span>V5.1</span></div><h1>CHIO COIN SCANNER</h1><p>급등 신호 관측 · UPBIT / BITHUMB</p></div></div>
     <div class="server"><span class="dot"></span><span id="web-state">웹 서버 연결 중</span><small id="updated">마지막 갱신 UNKNOWN</small></div>
   </header>
+  <nav aria-label="주 메뉴"><a href="/" id="nav-live">실시간 감시</a><a href="/analysis" id="nav-analysis">급등 신호 분석</a></nav>
   <div class="notice"><span>OBSERVATION ONLY</span> 감독하에 사용하는 관측 전용 대시보드입니다. 24시간 무인 운영 NOT_READY · 종료: <code>stop_coin_api.bat</code></div>
   <div id="api-error" role="alert" hidden></div>
+  <section id="live-controls" class="control-panel" aria-label="스캐너 제어">
+    <div class="control-actions"><button id="start-scanner" type="button" disabled>▶ 스캐너 시작</button><button id="stop-scanner" type="button" disabled>■ 스캐너 종료</button></div>
+    <div><p id="control-message" role="status" aria-live="polite">로컬 제어 연결 중…</p><small id="control-bounds"></small></div>
+  </section>
+  <div id="live-page">
   <section class="cards" aria-label="관측 상태">
     <article class="card"><div class="card-label">SCANNER LIVE <span>01</span></div><strong id="scanner-status">UNKNOWN</strong><small id="scanner-phase">수집 상태 확인 중</small></article>
     <article class="card"><div class="card-label">감시 중인 종목 <span>02</span></div><strong id="markets">UNKNOWN</strong><small id="pairs">실제 수집 상태 기준</small></article>
@@ -21,10 +27,22 @@
     <article class="card"><div class="card-label">거래소 연결 <span>04</span></div><div id="connections"><small>UPBIT · UNKNOWN</small><small>BITHUMB · UNKNOWN</small></div></article>
     <article class="card"><div class="card-label">NTP 시계 검증 <span>05</span></div><strong id="clock-status">UNKNOWN</strong><small id="clock-detail">기존 1초 기준 유지</small></article>
   </section>
+  </div>
+  <div id="analysis-page" hidden>
+    <div class="analysis-heading"><div><div class="eyebrow">SIGNAL ANALYSIS</div><h2>급등 신호 분석실</h2><p>저장된 신호의 단순 가격 변화 · 수수료·슬리피지·체결 미반영</p></div><div><label class="sr-only" for="analysis-group">분석 자료</label><select id="analysis-group"><option value="ARCHIVE_LIVE">연구 보관 · LIVE</option><option value="ARCHIVE_CATCHUP">연구 보관 · 지연 수집</option><option value="OBSERVATION_LIVE">신규 관측 · LIVE</option><option value="OBSERVATION_CATCHUP">신규 관측 · 지연 수집</option><option value="ALL">전체 · 구분별 비교</option></select></div></div>
+    <section class="cards analysis-cards" aria-label="분석 요약">
+      <article class="card"><div class="card-label">분석된 신호 수 <span>01</span></div><strong id="analyzed">—</strong><small id="analyzed-n">완료된 후속 구간이 있는 신호</small></article>
+      <article class="card"><div class="card-label">30분 후 상승 비율 <span>02</span></div><strong id="rise-30m">—</strong><small id="rise-30m-n">유효 표본 0개</small></article>
+      <article class="card"><div class="card-label">30분 평균 변동률 <span>03</span></div><strong id="return-30m">—</strong><small id="return-30m-n">유효 표본 0개</small></article>
+      <article class="card"><div class="card-label">평균 최대 상승폭 MFE · 30분 <span>04</span></div><strong id="mfe-30m">—</strong><small id="mfe-30m-n">유효 표본 0개</small></article>
+    </section>
+    <section class="panel"><div class="section-head"><div><h2>신호 후 평균 가격 변화</h2><p>확정된 신호 기준 가격 대비 · 시점별 유효 표본이 다를 수 있습니다.</p></div><span class="badge">STORED PRICES</span></div><div id="average-chart" class="average-chart"></div><div id="curve-samples" class="curve-samples"></div><p class="analysis-note">기존 평가 기준 시각부터 5·15·30·60분입니다. 지연 수집은 실제 탐지보다 기준 시각이 앞설 수 있습니다. 결측·미평가 값을 0으로 채우지 않습니다.</p></section>
+    <section class="panel"><div class="section-head"><div><h2>패턴별 관측 성과</h2><p>저장된 실제 패턴만 비교 · 관측 요약이며 표본만으로 전략 우수성을 판정하지 않습니다.</p></div></div><div class="pattern-scroll"><table><thead><tr><th>자료 / 패턴</th><th class="number">30분 평가 신호</th><th class="number">30분 평균 변동률</th><th class="number">30분 상승 비율</th><th class="number">평균 MFE / MAE · 30분</th></tr></thead><tbody id="pattern-rows"></tbody></table><div id="patterns-empty" class="detail-placeholder" hidden>아직 비교할 신호가 없습니다.</div></div></section>
+  </div>
   <section class="panel signals-panel">
     <div class="section-head"><div><h2>탐지 신호 <span id="signal-count">—</span></h2><p>저장된 관측 기록 · 신호를 선택해 상세 확인</p></div><div class="list-tools"><label class="sr-only" for="scope">신호 구분</label><select id="scope"><option value="ALL">모든 저장 신호</option><option value="CURRENT_LIVE">이번 관측</option><option value="ARCHIVE">기존 연구 보관</option><option value="STORED_OBSERVATION">이전 관측</option></select><button id="refresh" type="button">새로 고침 ↻</button></div></div>
     <div class="table-scroll"><table><thead><tr><th>탐지 시각 <span>KST</span></th><th>거래소 / 종목</th><th>구분 / 패턴</th><th class="number">점수</th><th class="number">탐지 가격 <span>KRW</span></th><th class="number">신호 후 변동</th><th>평가 상태</th></tr></thead><tbody id="signal-rows"></tbody></table><div id="empty" hidden>아직 탐지된 신호가 없습니다</div></div>
-    <div class="table-foot"><span id="list-note">저장 데이터 조회 중</span><span>5초 자동 갱신 · 주문 기능 없음</span></div>
+    <div class="table-foot"><span id="list-note">저장 데이터 조회 중</span><div id="pagination" hidden><button id="previous-page" type="button">이전</button><button id="next-page" type="button">다음</button></div><span>5초 자동 갱신 · 주문 기능 없음</span></div>
   </section>
   <section class="panel detail-panel" aria-label="신호 상세">
     <div class="section-head"><div><h2>신호 상세 <span id="detail-market">선택 대기</span></h2><p id="detail-subtitle">목록에서 신호를 선택하세요.</p></div><span class="badge" id="detail-scope">SAVED DATA ONLY</span></div>

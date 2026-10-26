@@ -62,6 +62,13 @@ class Control(unittest.TestCase):
             self.assertEqual(c.start(120,80),0);child.assert_not_called()
         self.assertEqual(c.current()['reason'],'CANCELLED_BEFORE_LIVE')
 
+    def test_delayed_web_start_cancellation_cannot_start_live_or_probe_clock(self):
+        token='a'*32;self.control.mkdir();(self.control/('CANCEL_'+token)).touch()
+        with patch.object(c.observer.clock_guard,'verify_clock') as clock,patch.object(c.subprocess,'Popen') as child:
+            with self.assertRaisesRegex(RuntimeError,'START_CANCELLED'):c.start(120,80,token)
+            clock.assert_not_called();child.assert_not_called()
+        self.assertFalse(self.runtime.exists())
+
     def test_actual_manager_lock_blocks_duplicate_before_clock_probe(self):
         with c.observer.scanner.exclusive(self.control/'manager'),patch.object(c.observer.clock_guard,'verify_clock') as clock:
             with self.assertRaisesRegex(RuntimeError,'Another scanner'):c.start(120,80)

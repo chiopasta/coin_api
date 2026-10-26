@@ -196,7 +196,7 @@ class Desktop(unittest.TestCase):
         blocked=dict(status='BLOCKED',reason='CLOCK_TEST_FAILURE',at=time.time(),completed_at=time.time())
         def start_existing(_):
             desktop.control.start(30,26)
-            child=Mock();child.poll.return_value=2;return child
+            child=Mock();child.pid=os.getpid();child.poll.return_value=2;return child
         with patch.object(desktop,'ensure_web') as web,patch.object(desktop,'spawn',side_effect=start_existing) as spawn,\
              patch.object(desktop.control.observer.clock_guard,'verify_clock',return_value=blocked),\
              patch.object(desktop.control.subprocess,'Popen') as worker,patch.object(desktop.webbrowser,'open',return_value=True) as browser:

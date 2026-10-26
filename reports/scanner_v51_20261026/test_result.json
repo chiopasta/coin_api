@@ -1,0 +1,32 @@
+{
+  "tests_run": 136,
+  "successful": true,
+  "skipped": [
+    "Old Python not installed on this host"
+  ],
+  "failures": 0,
+  "errors": 0,
+  "modules": [
+    "tests.test_scanner_analysis_v51",
+    "tests.test_scanner_dashboard_v50",
+    "tests.test_scanner_control_v410",
+    "tests.test_forward_scanner_v4",
+    "tests.test_forward_scanner_v4_operations",
+    "tests.test_forward_scanner_v42",
+    "tests.test_forward_scanner_v43",
+    "tests.test_scanner_clock_v47",
+    "tests.test_scanner_ntp_v49"
+  ],
+  "source_sha256": {
+    "coin_analysis/scanner_dashboard_v50.py": "90afce6fee91561f2e2e29756801f5d569e3f70c63cf2fb8f5351d0ea4b464a4",
+    "coin_analysis/scanner_desktop_v50.py": "dcbffbce0433f9c20bdd8d1dc4414cfe47d6cd755963f145f401513d2e196249",
+    "coin_analysis/scanner_control_v410.py": "f56a14b902a54aeba9862d3b4a45b7077cf273d52756f635894dea4bf2fa028f",
+    "coin_analysis/scanner_analysis_v51.py": "d66b620488a297e121bd86bbd5f029f0528355f4fe266f7e83e8b20b4634a4a6",
+    "coin_analysis/dashboard_assets/app.js": "a4ae66766711e7080b4fc464d0053ca0d72f09a7d7f0a49ee98f4842840ee615",
+    "coin_analysis/dashboard_assets/index.html": "68157948db2f1c0c89080e5908d6e339a7a42f09f5f53c1023a7ba007d058482",
+    "coin_analysis/dashboard_assets/style.css": "7e2f64e4b58e2aad22947d2014a4a265e32f959e9ec58bf07d72a209be378f21",
+    "tests/test_scanner_analysis_v51.py": "edea73e59223f67e5cb53e5344f969703cc310cca0865b1370836c327e7bb710",
+    "tests/test_scanner_dashboard_v50.py": "028d198643e5f31a475f09a45775dbc62d9310555479c10a1bab6c51f0644f44",
+    "tests/test_scanner_control_v410.py": "cab6be49e77cb6c2ef51790a11200dbb5765c30768fbf88abbb358c3039f0e71"
+  }
+}

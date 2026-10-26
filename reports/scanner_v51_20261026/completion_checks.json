@@ -1,0 +1,60 @@
+{
+  "original_signals_before": 215,
+  "original_signals_after": 215,
+  "original_db_sha256": "528ff08a037364839114369dc2af1385f3a89f61795352fcd544f7bd27d1c78e",
+  "protected_present": 75,
+  "protected_present_all_unchanged": true,
+  "historical_protected_total": 86,
+  "historical_missing_before": [
+    "data/forward_scanner_v4_before_source_1790866337414810500.db",
+    "data/forward_scanner_v4_smoke_1790696252.db",
+    "data/replay_20260921.db",
+    "data/research_market_v1.db",
+    "data/research_market_v1_smoke.db",
+    "data/research_market_validation_v1.db",
+    "crypto_scanner.db",
+    "scanner_v15.py",
+    "scanner_v16.py",
+    "db_analyzer_v7.py",
+    "db_checker_v1.py"
+  ],
+  "historical_matching_before": 63,
+  "historical_different_before": 12,
+  "preexisting_files_checked": 279,
+  "only_intended_document_updates": [
+    "docs/research_status.md",
+    "docs/scanner_v410_windows_launcher.md",
+    "docs/scanner_v50_dashboard.md"
+  ],
+  "db_quick_check": {
+    "data\\altcoin_market.db": "ok",
+    "data\\forward_scanner_v4.db": "ok",
+    "data\\historical_market.db": "ok",
+    "data\\scanner_v16.db": "ok",
+    "data\\scanner_v16_smoke.db": "ok"
+  },
+  "stale_open_report_count": 115,
+  "stale_open_report_unchanged": true,
+  "legacy_source_db_present": false,
+  "tests_run": 136,
+  "tests_skipped": 1,
+  "tested_sources_match": true,
+  "frozen_engine_and_policy_unchanged": true,
+  "owned_processes_alive": {
+    "manager": false,
+    "worker": false,
+    "web": false,
+    "pending.json": false,
+    "scanner_pending.json": false
+  },
+  "port_8765_closed": true,
+  "web_state": "STOPPED",
+  "scanner_terminal_reason": "CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY",
+  "actual_exchange_http": 0,
+  "actual_live_start_attempts": 1,
+  "browser_visual_validation": "UNVERIFIED / URL policy check blocked Computer Use",
+  "unattended_24h": "NOT_READY",
+  "no_orders": true,
+  "no_windows_shutdown": true,
+  "preexisting_dirty_lock_excluded_from_commit": "data/forward_scanner_v4.db.lock"
+}

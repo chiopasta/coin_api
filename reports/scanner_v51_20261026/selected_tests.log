@@ -1,0 +1,192 @@
+test_all_rows_aggregate_before_pagination_and_cohorts_stay_separate (tests.test_scanner_analysis_v51.Analysis.test_all_rows_aggregate_before_pagination_and_cohorts_stay_separate) ... ok
+test_due_pending_live_uses_existing_engine_but_frozen_complete_is_preserved (tests.test_scanner_analysis_v51.Analysis.test_due_pending_live_uses_existing_engine_but_frozen_complete_is_preserved) ... ok
+test_engine_is_reused_source_bytes_unchanged_and_cache_saved (tests.test_scanner_analysis_v51.Analysis.test_engine_is_reused_source_bytes_unchanged_and_cache_saved) ... ok
+test_gap_changes_denominators_without_zero_substitution (tests.test_scanner_analysis_v51.Analysis.test_gap_changes_denominators_without_zero_substitution) ... ok
+test_missing_metrics_have_independent_valid_counts_and_no_infinities (tests.test_scanner_analysis_v51.Analysis.test_missing_metrics_have_independent_valid_counts_and_no_infinities) ... ok
+test_missing_verified_range_never_completes_even_with_bars (tests.test_scanner_analysis_v51.Analysis.test_missing_verified_range_never_completes_even_with_bars) ... ok
+test_pattern_comparison_uses_actual_saved_pattern (tests.test_scanner_analysis_v51.Analysis.test_pattern_comparison_uses_actual_saved_pattern) ... ok
+test_restart_and_new_stored_bars_finish_pending_without_source_writes (tests.test_scanner_analysis_v51.Analysis.test_restart_and_new_stored_bars_finish_pending_without_source_writes) ... ok
+test_real_owned_process_readiness_stop_save_and_unrelated_process_survives (tests.test_scanner_analysis_v51.IsolatedProcessLifecycle.test_real_owned_process_readiness_stop_save_and_unrelated_process_survives) ...
+============================================================
+Status       : STOPPED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+Clock        : UNKNOWN
+Signals      : 0
+Started      : UNKNOWN
+Duration     : UNKNOWN
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : SAVED / WAL checkpoint and normal close confirmed
+DB bytes     : 409600
+Recent error : NONE
+Last result  : STOP_REQUESTED
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : UNKNOWN
+Stop         : stop_coin_api.bat
+============================================================
+
+============================================================
+Status       : STOPPED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+Clock        : UNKNOWN
+Signals      : 0
+Started      : UNKNOWN
+Duration     : UNKNOWN
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : SAVED / WAL checkpoint and normal close confirmed
+DB bytes     : 409600
+Recent error : NONE
+Last result  : STOP_REQUESTED
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : UNKNOWN
+Stop         : stop_coin_api.bat
+============================================================
+No owned live process; no signal or kill sent.
+ok
+test_bat_default_opens_web_only (tests.test_scanner_analysis_v51.Operations.test_bat_default_opens_web_only) ... ok
+test_clock_failure_is_human_readable_and_never_claims_success (tests.test_scanner_analysis_v51.Operations.test_clock_failure_is_human_readable_and_never_claims_success) ... ok
+test_duplicate_and_stop_use_existing_helpers_and_keep_web_alive (tests.test_scanner_analysis_v51.Operations.test_duplicate_and_stop_use_existing_helpers_and_keep_web_alive) ... ok
+test_stop_before_precheck_publication_cancels_delayed_start (tests.test_scanner_analysis_v51.Operations.test_stop_before_precheck_publication_cancels_delayed_start) ... ok
+test_external_missing_null_origin_and_bad_token_cannot_control (tests.test_scanner_analysis_v51.Security.test_external_missing_null_origin_and_bad_token_cannot_control) ... ok
+test_only_exact_local_empty_json_starts_and_browser_cannot_change_limits (tests.test_scanner_analysis_v51.Security.test_only_exact_local_empty_json_starts_and_browser_cannot_change_limits) ... ok
+test_read_routes_and_get_control_are_never_actions (tests.test_scanner_analysis_v51.Security.test_read_routes_and_get_control_are_never_actions) ... ok
+test_archive_filter_can_access_archive_even_after_many_newer_signals (tests.test_scanner_dashboard_v50.DataView.test_archive_filter_can_access_archive_even_after_many_newer_signals) ... ok
+test_archive_metrics_are_exact_stored_bars_and_readonly (tests.test_scanner_dashboard_v50.DataView.test_archive_metrics_are_exact_stored_bars_and_readonly) ... ok
+test_archive_nonempty_wal_is_blocked_not_ignored (tests.test_scanner_dashboard_v50.DataView.test_archive_nonempty_wal_is_blocked_not_ignored) ... ok
+test_blocked_and_precheck_do_not_claim_active_markets (tests.test_scanner_dashboard_v50.DataView.test_blocked_and_precheck_do_not_claim_active_markets) ... ok
+test_connections_depend_on_latest_http_and_freshness (tests.test_scanner_dashboard_v50.DataView.test_connections_depend_on_latest_http_and_freshness) ... ok
+test_empty_data_has_no_invented_values (tests.test_scanner_dashboard_v50.DataView.test_empty_data_has_no_invented_values) ... ok
+test_future_candles_never_complete_or_enter_chart (tests.test_scanner_dashboard_v50.DataView.test_future_candles_never_complete_or_enter_chart) ... ok
+test_live_wal_commits_are_visible_after_cache_expiry_without_db_writes (tests.test_scanner_dashboard_v50.DataView.test_live_wal_commits_are_visible_after_cache_expiry_without_db_writes) ... ok
+test_missing_candle_never_fills_or_completes_horizon (tests.test_scanner_dashboard_v50.DataView.test_missing_candle_never_fills_or_completes_horizon) ... ok
+test_public_status_distinguishes_web_and_live_no_process_or_path_leak (tests.test_scanner_dashboard_v50.DataView.test_public_status_distinguishes_web_and_live_no_process_or_path_leak) ... ok
+test_saved_live_pending_metrics_are_not_recomputed (tests.test_scanner_dashboard_v50.DataView.test_saved_live_pending_metrics_are_not_recomputed) ... ok
+test_unknown_file_or_sql_identifier_cannot_enter_query (tests.test_scanner_dashboard_v50.DataView.test_unknown_file_or_sql_identifier_cannot_enter_query) ... ok
+test_bad_clock_still_opens_web_without_dataset_or_observer (tests.test_scanner_dashboard_v50.Desktop.test_bad_clock_still_opens_web_without_dataset_or_observer) ... ok
+test_dashboard_only_never_starts_scanner_or_ntp (tests.test_scanner_dashboard_v50.Desktop.test_dashboard_only_never_starts_scanner_or_ntp) ... ok
+test_existing_scanner_is_reused_no_duplicate_process (tests.test_scanner_dashboard_v50.Desktop.test_existing_scanner_is_reused_no_duplicate_process) ... ok
+test_no_cap_override_and_check_remains_completely_offline (tests.test_scanner_dashboard_v50.Desktop.test_no_cap_override_and_check_remains_completely_offline) ... ok
+test_persistent_metadata_error_is_still_bounded_and_fail_closed (tests.test_scanner_dashboard_v50.Desktop.test_persistent_metadata_error_is_still_bounded_and_fail_closed) ... ok
+test_port_failure_never_starts_scanner (tests.test_scanner_dashboard_v50.Desktop.test_port_failure_never_starts_scanner) ... ok
+test_recycled_pid_or_bad_token_never_receives_stop (tests.test_scanner_dashboard_v50.Desktop.test_recycled_pid_or_bad_token_never_receives_stop) ... ok
+test_stop_uses_scoped_event_and_waits_for_identity_exit (tests.test_scanner_dashboard_v50.Desktop.test_stop_uses_scoped_event_and_waits_for_identity_exit) ... ok
+test_windows_brief_reader_collision_retries_and_atomically_replaces (tests.test_scanner_dashboard_v50.Desktop.test_windows_brief_reader_collision_retries_and_atomically_replaces) ... ok
+test_api_failure_returns_explicit_message_without_internal_secret (tests.test_scanner_dashboard_v50.HTTPBoundary.test_api_failure_returns_explicit_message_without_internal_secret) ... Read request failed (RuntimeError)
+ok
+test_port_collision_never_replaces_listener_and_public_bind_rejected (tests.test_scanner_dashboard_v50.HTTPBoundary.test_port_collision_never_replaces_listener_and_public_bind_rejected) ... ok
+test_real_loopback_static_api_headers_and_no_writes (tests.test_scanner_dashboard_v50.HTTPBoundary.test_real_loopback_static_api_headers_and_no_writes) ... ok
+test_cmd_and_powershell_work_in_korean_space_punctuation_path_without_live (tests.test_scanner_control_v410.BatEntry.test_cmd_and_powershell_work_in_korean_space_punctuation_path_without_live) ... ok
+test_error_window_waits_for_key_unless_no_pause_is_explicit (tests.test_scanner_control_v410.BatEntry.test_error_window_waits_for_key_unless_no_pause_is_explicit) ... ok
+test_real_old_python_is_rejected_before_entry (tests.test_scanner_control_v410.BatEntry.test_real_old_python_is_rejected_before_entry) ... skipped 'Old Python not installed on this host'
+test_actual_db_counts_receipts_zero_signals_and_unknown_no_signal_time (tests.test_scanner_control_v410.Control.test_actual_db_counts_receipts_zero_signals_and_unknown_no_signal_time) ... ok
+test_actual_manager_lock_blocks_duplicate_before_clock_probe (tests.test_scanner_control_v410.Control.test_actual_manager_lock_blocks_duplicate_before_clock_probe) ... ok
+test_clock_failure_preserves_blocker_and_never_creates_dataset_or_child (tests.test_scanner_control_v410.Control.test_clock_failure_preserves_blocker_and_never_creates_dataset_or_child) ... ok
+test_delayed_web_start_cancellation_cannot_start_live_or_probe_clock (tests.test_scanner_control_v410.Control.test_delayed_web_start_cancellation_cannot_start_live_or_probe_clock) ... ok
+test_existing_observer_lock_blocks_new_launcher (tests.test_scanner_control_v410.Control.test_existing_observer_lock_blocks_new_launcher) ... ok
+test_no_data_is_unknown_and_stale_pass_is_not_current_pass (tests.test_scanner_control_v410.Control.test_no_data_is_unknown_and_stale_pass_is_not_current_pass) ... ok
+test_normal_close_is_saved_and_force_flag_is_never_saved (tests.test_scanner_control_v410.Control.test_normal_close_is_saved_and_force_flag_is_never_saved) ... ok
+test_other_paths_and_bad_pointer_never_receive_stop (tests.test_scanner_control_v410.Control.test_other_paths_and_bad_pointer_never_receive_stop) ... ok
+test_pid_reuse_cannot_report_running_or_write_stop (tests.test_scanner_control_v410.Control.test_pid_reuse_cannot_report_running_or_write_stop) ... ok
+test_precheck_duration_advances_without_using_wall_time (tests.test_scanner_control_v410.Control.test_precheck_duration_advances_without_using_wall_time) ... ok
+test_stop_during_precheck_cancels_before_live (tests.test_scanner_control_v410.Control.test_stop_during_precheck_cancels_before_live) ... ok
+test_stop_is_only_a_scoped_event_and_waits_for_final_save (tests.test_scanner_control_v410.Control.test_stop_is_only_a_scoped_event_and_waits_for_final_save) ... ok
+test_storage_limit_and_invalid_caps_block_without_network (tests.test_scanner_control_v410.Control.test_storage_limit_and_invalid_caps_block_without_network) ... ok
+test_bounded_mock_transport_smoke_and_page_resume (tests.test_forward_scanner_v4.ScannerTests.test_bounded_mock_transport_smoke_and_page_resume) ... ok
+test_existing_research_db_rejected (tests.test_forward_scanner_v4.ScannerTests.test_existing_research_db_rejected) ... ok
+test_future_mutation_deletion_cannot_change_features_or_cluster_start (tests.test_forward_scanner_v4.ScannerTests.test_future_mutation_deletion_cannot_change_features_or_cluster_start) ... ok
+test_initial_high_range_is_left_censored_not_new_signal (tests.test_forward_scanner_v4.ScannerTests.test_initial_high_range_is_left_censored_not_new_signal) ... ok
+test_ip_block_stops_cycle_instead_of_repeating (tests.test_forward_scanner_v4.ScannerTests.test_ip_block_stops_cycle_instead_of_repeating) ... ok
+test_missing_future_is_unknown_and_recoverable (tests.test_forward_scanner_v4.ScannerTests.test_missing_future_is_unknown_and_recoverable) ... ok
+test_no_early_success_and_complete_failure (tests.test_forward_scanner_v4.ScannerTests.test_no_early_success_and_complete_failure) ... ok
+test_null_range_does_not_rearm_active_cluster (tests.test_forward_scanner_v4.ScannerTests.test_null_range_does_not_rearm_active_cluster) ... ok
+test_reset_allows_new_cluster_and_null_does_not_reset (tests.test_forward_scanner_v4.ScannerTests.test_reset_allows_new_cluster_and_null_does_not_reset) ... ok
+test_signal_pending_restart_and_final_outcome_immutable (tests.test_forward_scanner_v4.ScannerTests.test_signal_pending_restart_and_final_outcome_immutable) ... ok
+test_abrupt_exit_recovers_committed_wal_then_cleanly_closes (tests.test_forward_scanner_v4_operations.SourceTests.test_abrupt_exit_recovers_committed_wal_then_cleanly_closes) ... ok
+test_catchup_generation_and_restart_keep_source (tests.test_forward_scanner_v4_operations.SourceTests.test_catchup_generation_and_restart_keep_source) ... ok
+test_clean_close_checkpoints_wal_and_preserves_values (tests.test_forward_scanner_v4_operations.SourceTests.test_clean_close_checkpoints_wal_and_preserves_values) ... ok
+test_cycle_api_error_log (tests.test_forward_scanner_v4_operations.SourceTests.test_cycle_api_error_log) ... ok
+test_default_live_and_separate_all (tests.test_forward_scanner_v4_operations.SourceTests.test_default_live_and_separate_all) ... ok
+test_exact_live_interval_boundaries (tests.test_forward_scanner_v4_operations.SourceTests.test_exact_live_interval_boundaries) ... ok
+test_migration_backup_preserves_every_business_table_and_idempotent (tests.test_forward_scanner_v4_operations.SourceTests.test_migration_backup_preserves_every_business_table_and_idempotent) ... ok
+test_migration_refuses_evidence_mismatch_without_mutation (tests.test_forward_scanner_v4_operations.SourceTests.test_migration_refuses_evidence_mismatch_without_mutation) ... ok
+test_migration_rolls_back_source_and_trigger_on_postcheck_failure (tests.test_forward_scanner_v4_operations.SourceTests.test_migration_rolls_back_source_and_trigger_on_postcheck_failure) ... ok
+test_repair_backs_up_sidecars_and_preserves_every_value (tests.test_forward_scanner_v4_operations.SourceTests.test_repair_backs_up_sidecars_and_preserves_every_value) ... ok
+test_restart_session_and_interrupted_cycle (tests.test_forward_scanner_v4_operations.SourceTests.test_restart_session_and_interrupted_cycle) ... ok
+test_sidecar_error_is_distinguished_from_main_corruption (tests.test_forward_scanner_v4_operations.SourceTests.test_sidecar_error_is_distinguished_from_main_corruption) ... ok
+test_bithumb_request_uses_kst_and_error_body_rejected (tests.test_forward_scanner_v42.Bounds.test_bithumb_request_uses_kst_and_error_body_rejected) ... ok
+test_budget_stop_summary_refreshes_final_database_errors (tests.test_forward_scanner_v42.Bounds.test_budget_stop_summary_refreshes_final_database_errors) ... {"status": "BOUNDED_STOP", "reason": "TIME_LIMIT", "requests": 0, "rounds": 0, "root": "C:\\Users\\pcsin\\AppData\\Local\\Temp\\tmpd1h94mc7\\episode"}
+ok
+test_error_attempt_count_persisted_and_no_budget_reset (tests.test_forward_scanner_v42.Bounds.test_error_attempt_count_persisted_and_no_budget_reset) ... ok
+test_frozen_limits_and_original_policy (tests.test_forward_scanner_v42.Bounds.test_frozen_limits_and_original_policy) ... ok
+test_memory_and_disk_bounds (tests.test_forward_scanner_v42.Bounds.test_memory_and_disk_bounds) ... ok
+test_opt_in_before_worker_or_network (tests.test_forward_scanner_v42.Bounds.test_opt_in_before_worker_or_network) ... usage: observe [-h] [--execute-live] --runtime-dir RUNTIME_DIR
+               [--seconds SECONDS] [--max-requests MAX_REQUESTS] [--resume]
+observe: error: Explicit public LIVE opt-in required
+ok
+test_scope_never_allows_account_or_unknown_market (tests.test_forward_scanner_v42.Bounds.test_scope_never_allows_account_or_unknown_market) ... ok
+test_stop_file_and_deadline_prevent_network (tests.test_forward_scanner_v42.Bounds.test_stop_file_and_deadline_prevent_network) ... ok
+test_watchdog_kills_and_reaps_only_its_worker (tests.test_forward_scanner_v42.Bounds.test_watchdog_kills_and_reaps_only_its_worker) ... ok
+test_less_than_hour_is_not_a_zero_miss_rate (tests.test_forward_scanner_v42.EventReview.test_less_than_hour_is_not_a_zero_miss_rate) ... ok
+test_missing_future_never_counts_as_negative_or_complete (tests.test_forward_scanner_v42.EventReview.test_missing_future_never_counts_as_negative_or_complete) ... ok
+test_real_delivery_time_not_nominal_catchup_drives_recall (tests.test_forward_scanner_v42.EventReview.test_real_delivery_time_not_nominal_catchup_drives_recall) ... ok
+test_reference_early_does_not_claim_true_onset (tests.test_forward_scanner_v42.EventReview.test_reference_early_does_not_claim_true_onset) ... ok
+test_complete_price_metrics_and_null_score (tests.test_forward_scanner_v42.Metrics.test_complete_price_metrics_and_null_score) ... ok
+test_future_in_database_cannot_complete_before_its_close (tests.test_forward_scanner_v42.Metrics.test_future_in_database_cannot_complete_before_its_close) ... ok
+test_pending_never_uses_incomplete_horizon (tests.test_forward_scanner_v42.Metrics.test_pending_never_uses_incomplete_horizon) ... ok
+test_restart_duplicate_and_completed_immutable (tests.test_forward_scanner_v42.Metrics.test_restart_duplicate_and_completed_immutable) ... ok
+test_60m_pending_survives_close_resume_and_only_finishes_on_full_actual_data (tests.test_forward_scanner_v43.Observation.test_60m_pending_survives_close_resume_and_only_finishes_on_full_actual_data) ... ok
+test_detection_price_uses_receipt_not_future_or_late_arrival (tests.test_forward_scanner_v43.Observation.test_detection_price_uses_receipt_not_future_or_late_arrival) ... ok
+test_future_database_cannot_complete_unreached_horizon (tests.test_forward_scanner_v43.Observation.test_future_database_cannot_complete_unreached_horizon) ... ok
+test_not_yet_collected_distinct_from_api_absence (tests.test_forward_scanner_v43.Observation.test_not_yet_collected_distinct_from_api_absence) ... ok
+test_source_absence_is_not_collection_failure_or_filled_candle (tests.test_forward_scanner_v43.Observation.test_source_absence_is_not_collection_failure_or_filled_candle) ... ok
+test_attempt_reserved_before_failed_network_and_retry_recovers (tests.test_forward_scanner_v43.Runtime.test_attempt_reserved_before_failed_network_and_retry_recovers) ... ok
+test_clock_fault_shutdown_keeps_pending_endpoint_and_saves_error_session (tests.test_forward_scanner_v43.Runtime.test_clock_fault_shutdown_keeps_pending_endpoint_and_saves_error_session) ... {"status": "BLOCKED", "reason": "CLOCK_WALL_MONOTONIC_DIVERGENCE", "root": "C:\\Users\\pcsin\\AppData\\Local\\Temp\\tmpy7vfgjkp\\clock_worker", "run_id": "run"}
+ok
+test_cpu_memory_disk_and_clock_stop_safely (tests.test_forward_scanner_v43.Runtime.test_cpu_memory_disk_and_clock_stop_safely) ... ok
+test_duplicate_guard_precedes_dataset_mutation (tests.test_forward_scanner_v43.Runtime.test_duplicate_guard_precedes_dataset_mutation) ... ok
+test_durable_attempts_survive_log_rotation_and_worker_reconstruction (tests.test_forward_scanner_v43.Runtime.test_durable_attempts_survive_log_rotation_and_worker_reconstruction) ... ok
+test_exhausted_network_recovery_opens_circuit_after_five_rounds (tests.test_forward_scanner_v43.Runtime.test_exhausted_network_recovery_opens_circuit_after_five_rounds) ... {"status": "BLOCKED", "reason": "NETWORK_CIRCUIT_OPEN_5_ROUNDS", "root": "C:\\Users\\pcsin\\AppData\\Local\\Temp\\tmp264nzktc\\worker", "run_id": "run"}
+ok
+test_failed_attempt_obeys_spacing_and_persisted_limit_blocks_next_call (tests.test_forward_scanner_v43.Runtime.test_failed_attempt_obeys_spacing_and_persisted_limit_blocks_next_call) ... ok
+test_fixed_policy_and_cohort (tests.test_forward_scanner_v43.Runtime.test_fixed_policy_and_cohort) ... ok
+test_low_free_disk_blocks_without_network (tests.test_forward_scanner_v43.Runtime.test_low_free_disk_blocks_without_network) ... ok
+test_order_endpoint_and_scope_rejected_without_network_or_ledger (tests.test_forward_scanner_v43.Runtime.test_order_endpoint_and_scope_rejected_without_network_or_ledger) ... ok
+test_resume_keeps_config_and_history_but_uses_explicit_new_run_budget (tests.test_forward_scanner_v43.Runtime.test_resume_keeps_config_and_history_but_uses_explicit_new_run_budget) ... ok
+test_rotated_logs_are_bounded_without_touching_db (tests.test_forward_scanner_v43.Runtime.test_rotated_logs_are_bounded_without_touching_db) ... ok
+test_round_reserves_prevent_normal_boundary_partial_poll (tests.test_forward_scanner_v43.Runtime.test_round_reserves_prevent_normal_boundary_partial_poll) ... ok
+test_stop_and_deadline_checked_before_http (tests.test_forward_scanner_v43.Runtime.test_stop_and_deadline_checked_before_http) ... ok
+test_transient_round_errors_clear_on_next_round_without_new_dataset (tests.test_forward_scanner_v43.Runtime.test_transient_round_errors_clear_on_next_round_without_new_dataset) ... {"status": "STOPPED", "reason": "STOP_REQUESTED", "root": "C:\\Users\\pcsin\\AppData\\Local\\Temp\\tmph51yw49p\\worker", "run_id": "run"}
+ok
+test_watchdog_reaps_only_own_child_and_marks_forced (tests.test_forward_scanner_v43.Runtime.test_watchdog_reaps_only_own_child_and_marks_forced) ... ok
+test_all_gates_can_pass_without_relaxing_original_limits (tests.test_scanner_clock_v47.CombinedAdmission.test_all_gates_can_pass_without_relaxing_original_limits) ... ok
+test_external_accuracy_pass_does_not_override_large_windows_uncertainty (tests.test_scanner_clock_v47.CombinedAdmission.test_external_accuracy_pass_does_not_override_large_windows_uncertainty) ... ok
+test_old_reference_blocks_even_healthy_windows_and_small_offset (tests.test_scanner_clock_v47.CombinedAdmission.test_old_reference_blocks_even_healthy_windows_and_small_offset) ... ok
+test_root_failure_prevents_dataset_creation_and_worker_launch (tests.test_scanner_clock_v47.CombinedAdmission.test_root_failure_prevents_dataset_creation_and_worker_launch) ... ok
+test_fresh_and_stale_direct_samples (tests.test_scanner_clock_v47.Freshness.test_fresh_and_stale_direct_samples) ... ok
+test_future_missing_or_inverted_sample_timestamps_block (tests.test_scanner_clock_v47.Freshness.test_future_missing_or_inverted_sample_timestamps_block) ... ok
+test_actual_large_windows_root_dispersion_blocks_even_small_phase_offset (tests.test_scanner_clock_v47.WindowsRoot.test_actual_large_windows_root_dispersion_blocks_even_small_phase_offset) ... ok
+test_delay_part_of_distance_and_exact_one_second_boundary (tests.test_scanner_clock_v47.WindowsRoot.test_delay_part_of_distance_and_exact_one_second_boundary) ... ok
+test_english_and_korean_status_use_relative_sync_age_and_same_distance (tests.test_scanner_clock_v47.WindowsRoot.test_english_and_korean_status_use_relative_sync_age_and_same_distance) ... ok
+test_missing_ambiguous_units_nonfinite_and_negative_fail_closed (tests.test_scanner_clock_v47.WindowsRoot.test_missing_ambiguous_units_nonfinite_and_negative_fail_closed) ... ok
+test_unsynchronized_leap_error_and_old_sync_block (tests.test_scanner_clock_v47.WindowsRoot.test_unsynchronized_leap_error_and_old_sync_block) ... ok
+test_invalid_packet_and_dns_failure_are_not_transport_retries (tests.test_scanner_ntp_v49.AttemptEvidence.test_invalid_packet_and_dns_failure_are_not_transport_retries) ... ok
+test_receive_timeout_records_peer_port_request_phase_and_elapsed (tests.test_scanner_ntp_v49.AttemptEvidence.test_receive_timeout_records_peer_port_request_phase_and_elapsed) ... ok
+test_bad_accuracy_is_preserved_without_searching_for_better_samples (tests.test_scanner_ntp_v49.RetryPolicy.test_bad_accuracy_is_preserved_without_searching_for_better_samples) ... ok
+test_invalid_reply_is_terminal_and_not_retried (tests.test_scanner_ntp_v49.RetryPolicy.test_invalid_reply_is_terminal_and_not_retried) ... ok
+test_permanent_loss_never_passes_and_never_exceeds_eight_packets (tests.test_scanner_ntp_v49.RetryPolicy.test_permanent_loss_never_passes_and_never_exceeds_eight_packets) ... ok
+test_scheduler_does_not_spend_a_partial_timeout_after_internal_deadline (tests.test_scanner_ntp_v49.RetryPolicy.test_scheduler_does_not_spend_a_partial_timeout_after_internal_deadline) ... ok
+test_six_successes_two_providers_and_no_concurrent_or_fast_requests (tests.test_scanner_ntp_v49.RetryPolicy.test_six_successes_two_providers_and_no_concurrent_or_fast_requests) ... ok
+test_timeout_recovers_only_with_a_new_valid_sample_and_keeps_failure (tests.test_scanner_ntp_v49.RetryPolicy.test_timeout_recovers_only_with_a_new_valid_sample_and_keeps_failure) ... ok
+test_whole_check_clock_jump_blocks_even_when_individual_samples_are_good (tests.test_scanner_ntp_v49.WholeClock.test_whole_check_clock_jump_blocks_even_when_individual_samples_are_good) ... ok
+
+----------------------------------------------------------------------
+Ran 136 tests in 98.436s
+
+OK (skipped=1)

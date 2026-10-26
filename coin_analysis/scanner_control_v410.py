@@ -251,9 +251,12 @@ def stop(wait=STOP_WAIT_SECONDS):
     print('Status : BLOCKED\nSTOP requested; exit/flush not confirmed within 45s. No force kill was sent.\nRun status_coin_api.bat again.');return 2
 
 
-def start(seconds,max_requests):
+def start(seconds,max_requests,request_id=None):
     if not 30<=seconds<=observer.MAX_SECONDS or not 26<=max_requests<=observer.MAX_REQUESTS:raise ValueError('Outside existing Scanner safety limits')
+    if request_id is not None and not re.fullmatch('[0-9a-f]{32}',request_id):raise ValueError('Invalid start request')
+    cancellation=CONTROL/('CANCEL_'+request_id) if request_id else None
     with observer.scanner.exclusive(CONTROL/'manager'):
+        if cancellation and cancellation.exists():raise RuntimeError('SCANNER_START_CANCELLED')
         old=current()
         if old and (alive(old.get('manager')) or alive(old.get('child'))):raise RuntimeError('DUPLICATE_MANAGED_SCANNER')
         token=uuid.uuid4().hex;root=observer.RUNTIME_ROOT/('console_'+token)
@@ -279,7 +282,7 @@ def start(seconds,max_requests):
             evidence=observer.clock_guard.verify_clock();state['clock_evidence']=evidence
             observer.write_json(folder/'preflight.json',evidence);persist(state)
             if evidence['status']!='VERIFIED':raise RuntimeError(evidence['reason'])
-            if requested.is_set() or stop_marker(state).exists():
+            if requested.is_set() or stop_marker(state).exists() or (cancellation and cancellation.exists()):
                 state.update(status='STOPPED',phase='TERMINAL',reason='CANCELLED_BEFORE_LIVE');return 0
             env=dict(os.environ);env.pop('PYTHONHOME',None);env.pop('PYTHONPATH',None)
             env.update(PYTHONUTF8='1',PYTHONIOENCODING='utf-8',PYTHONNOUSERSITE='1')

@@ -1,0 +1,24 @@
+
+============================================================
+Status       : BLOCKED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UNKNOWN
+Markets      : UNKNOWN
+Clock        : FAIL: CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY
+Signals      : UNKNOWN
+Started      : 2026-10-26 10:27:07 KST
+Duration     : 8.1s
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : UNKNOWN
+DB bytes     : UNKNOWN
+Recent error : CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY
+Last result  : CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY
+Safety cap   : 120s / 80 HTTP
+Stop         : stop_coin_api.bat
+============================================================
+Web          : RUNNING
+Dashboard    : http://127.0.0.1:8765
+Safety       : SUPERVISED ONLY; 24h unattended NOT_READY

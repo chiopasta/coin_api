@@ -1,0 +1,10 @@
+{
+  "unique_html_ids": true,
+  "two_menu_routes": [
+    "/",
+    "/analysis"
+  ],
+  "js_literal_id_references_valid": true,
+  "browser_visual_validation": "BLOCKED: Computer Use could not determine current browser URL with enough confidence to enforce policy",
+  "mobile_visual_validation": "UNVERIFIED"
+}

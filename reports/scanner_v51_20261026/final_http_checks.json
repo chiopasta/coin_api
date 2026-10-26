@@ -1,0 +1,73 @@
+{
+  "default_bat_never_started_scanner": true,
+  "web_restarted": true,
+  "csrf_rotated_and_old_token_rejected": true,
+  "idle_stop": {
+    "action": "stop",
+    "state": "SUCCEEDED",
+    "message": "실행 중인 스캐너가 없습니다. 웹 대시보드는 계속 사용할 수 있습니다.",
+    "busy": false,
+    "starting": false,
+    "stopping": false,
+    "seconds": 120,
+    "max_requests": 80,
+    "process_alive": false,
+    "scanner": {
+      "status": "BLOCKED",
+      "phase": "TERMINAL",
+      "clock": "FAIL: CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY",
+      "db_saved": "UNKNOWN"
+    }
+  },
+  "web_after_scanner_stop": 200,
+  "analysis_after_restart": {
+    "total": 215,
+    "analyzed": 208,
+    "return_30m": {
+      "value": 0.2679066452390332,
+      "n": 174
+    },
+    "rise_30m": {
+      "value": 50.57471264367816,
+      "n": 174
+    },
+    "mfe_30m": {
+      "value": 2.0866430052450364,
+      "n": 174
+    },
+    "mae_30m": {
+      "value": -1.47522933756508,
+      "n": 174
+    },
+    "curve": [
+      {
+        "minutes": 5,
+        "value": 0.27200968038045203,
+        "n": 208
+      },
+      {
+        "minutes": 15,
+        "value": 0.38763238000455397,
+        "n": 192
+      },
+      {
+        "minutes": 30,
+        "value": 0.2679066452390332,
+        "n": 174
+      },
+      {
+        "minutes": 60,
+        "value": 0.4725877438093305,
+        "n": 151
+      }
+    ]
+  },
+  "clock_attempts": 7,
+  "clock_samples": 6,
+  "exchange_http": 0,
+  "actual_live_start_attempts": 1,
+  "clock_blockers": [
+    "CLOCK_WINDOWS_TIME_SERVICE_UNVERIFIED",
+    "CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY"
+  ]
+}

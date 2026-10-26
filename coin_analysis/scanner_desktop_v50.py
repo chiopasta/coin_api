@@ -38,14 +38,16 @@ def stop_path(token):
     return WEB/('STOP_'+token)
 
 
-def serve(token):
+def serve(token, seconds=control.observer.MAX_SECONDS, max_requests=control.observer.MAX_REQUESTS):
     stop_path(token)  # Validate before any write.
     with control.observer.scanner.exclusive(WEB/'listener'):
         logger=dashboard.rotating_logger(WEB)
         state=dict(token=token,process=control.identity(os.getpid()),status='BLOCKED',started_at=time.time())
         server=None; previous={}; stopped=threading.Event()
         try:
-            server=dashboard.Server((dashboard.HOST,dashboard.PORT),logger=logger)
+            server=dashboard.Server((dashboard.HOST,dashboard.PORT),logger=logger,
+                                    seconds=seconds,max_requests=max_requests)
+            server.analysis.start()
             server.timeout=.5
             state['status']='RUNNING'
             control.write_metadata(WEB/'current.json',state)
@@ -59,7 +61,10 @@ def serve(token):
             state.update(status='BLOCKED',reason=type(exc).__name__)
             logger.warning('Dashboard blocked (%s)',type(exc).__name__);return 2
         finally:
-            if server: server.server_close()
+            if server:
+                server.operations.close()
+                server.analysis.close()
+                server.server_close()
             state['ended_at']=time.time()
             control.write_metadata(WEB/'current.json',state)
             for sig,handler in previous.items(): signal.signal(sig,handler)
@@ -75,7 +80,7 @@ def spawn(arguments):
                             stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,creationflags=0x08000000)
 
 
-def ensure_web():
+def ensure_web(seconds=control.observer.MAX_SECONDS,max_requests=control.observer.MAX_REQUESTS):
     existing=web_state()
     if existing['status']=='RUNNING': return existing
     if control.alive(existing.get('process')): raise RuntimeError('WEB_STOP_UNCONFIRMED; no relaunch')
@@ -85,7 +90,7 @@ def ensure_web():
     if control.observer.shutil.disk_usage(WEB).free<256*1024*1024:
         raise RuntimeError('FREE_DISK_LIMIT')
     token=uuid.uuid4().hex
-    child=spawn(['_serve','--token',token])
+    child=spawn(['_serve','--token',token,'--seconds',str(seconds),'--max-requests',str(max_requests)])
     until=time.monotonic()+8
     while time.monotonic()<until:
         state=web_state()
@@ -117,6 +122,78 @@ def stop_web(wait=10):
     print('Web          : STOPPED / listener closed and log flushed');return 0
 
 
+def start_scanner(seconds,max_requests,cancellation_event=None):
+    """Same admission as BAT, with actual manager/worker readiness verification."""
+    if not 30<=seconds<=control.observer.MAX_SECONDS or not 26<=max_requests<=control.observer.MAX_REQUESTS:
+        raise ValueError('Outside existing Scanner safety limits')
+    WEB.mkdir(parents=True,exist_ok=True)
+    with control.observer.scanner.exclusive(WEB/'scanner_launcher'):
+        if cancellation_event and cancellation_event.is_set():
+            return dict(status='STOPPED',phase='TERMINAL',reason='CANCELLED_BEFORE_LIVE')
+        old=control.current()
+        if old and (control.alive(old.get('manager')) or control.alive(old.get('child'))):
+            raise RuntimeError('DUPLICATE_MANAGED_SCANNER')
+        request_id=uuid.uuid4().hex
+        cancellation=control.CONTROL/('CANCEL_'+request_id)
+        manager=spawn(['_scanner','--seconds',str(seconds),'--max-requests',str(max_requests),'--request-id',request_id])
+        until=time.monotonic()+35
+        try:
+            control.write_metadata(WEB/'scanner_pending.json',dict(request_id=request_id,process=control.identity(manager.pid)))
+            while time.monotonic()<until:
+                state=control.current()
+                fresh=state and (not old or state['launch_id']!=old['launch_id'])
+                if cancellation_event and cancellation_event.is_set():
+                    cancellation.parent.mkdir(parents=True,exist_ok=True)
+                    cancellation.touch(exist_ok=True)
+                    if fresh:control.stop()
+                if fresh and state['phase']=='TERMINAL':
+                    return control.snapshot(state)
+                if (fresh and state['phase']=='OBSERVING' and control.alive(state.get('manager'))
+                        and control.alive(state.get('child'))):
+                    return control.snapshot(state)
+                if manager.poll() is not None:
+                    manager.wait()
+                    if fresh:return control.snapshot(state)
+                    raise RuntimeError('SCANNER_PROCESS_START_FAILED')
+                time.sleep(.1)
+            raise RuntimeError('SCANNER_START_TIMEOUT')
+        except BaseException:
+            # A failed/time-limited admission must not become a delayed LIVE.
+            cancellation.parent.mkdir(parents=True,exist_ok=True)
+            cancellation.touch(exist_ok=True)
+            state=control.current()
+            if state and (not old or state['launch_id']!=old['launch_id']):
+                control.stop()
+            raise
+
+
+def stop_scanner():
+    cancel_pending_start()
+    code=control.stop()
+    until=time.monotonic()+3
+    while True:
+        state=control.current()
+        if not state or not (control.alive(state.get('manager')) or control.alive(state.get('child'))):
+            value=control.snapshot()
+            if not code and value['status']=='BLOCKED' and state and not control.owned_root(state).exists():
+                return dict(value,status='STOPPED',reason='NO_RUNNING_SCANNER')
+            if code or value['status']=='BLOCKED':raise RuntimeError(value.get('reason') or 'SCANNER_STOP_UNCONFIRMED')
+            return value
+        if time.monotonic()>=until:raise RuntimeError('SCANNER_STOP_UNCONFIRMED')
+        time.sleep(.1)
+
+
+def cancel_pending_start():
+    pending=WEB/'scanner_pending.json'
+    if pending.exists():
+        value=control.read_json(pending)
+        token=value.get('request_id','')
+        if not re.fullmatch('[0-9a-f]{32}',token):raise ValueError('Invalid pending start')
+        if control.alive(value.get('process')):
+            control.CONTROL.mkdir(parents=True,exist_ok=True)
+            (control.CONTROL/('CANCEL_'+token)).touch(exist_ok=True)
+
+
 def start(seconds,max_requests,dashboard_only=False,no_browser=False):
     if not 30<=seconds<=control.observer.MAX_SECONDS or not 26<=max_requests<=control.observer.MAX_REQUESTS:
         raise ValueError('Outside existing Scanner safety limits')
@@ -125,7 +202,7 @@ def start(seconds,max_requests,dashboard_only=False,no_browser=False):
         pending=WEB/'pending.json'
         if pending.exists() and control.alive(control.read_json(pending).get('process')):
             raise RuntimeError('WEB_START_PENDING; use stop_coin_api.bat')
-        ensure_web()
+        ensure_web(seconds,max_requests)
         if not dashboard_only:
             old=control.current()
             if old and (control.alive(old.get('manager')) or control.alive(old.get('child'))):
@@ -133,15 +210,7 @@ def start(seconds,max_requests,dashboard_only=False,no_browser=False):
             else:
                 # Existing V4.10 start owns its lock, full clock gates and scoped
                 # observation child. Backgrounding changes no admission policy.
-                manager=spawn(['_scanner','--seconds',str(seconds),'--max-requests',str(max_requests)])
-                until=time.monotonic()+35
-                while time.monotonic()<until:
-                    state=control.current()
-                    if state and (not old or state['launch_id']!=old['launch_id']) and state['phase']!='PRECHECK': break
-                    if manager.poll() is not None: manager.wait();break
-                    time.sleep(.2)
-                if manager.poll() is not None and control.current()==old:
-                    print('Scanner      : BLOCKED / admission or duplicate lock; see status/logs')
+                start_scanner(seconds,max_requests)
         value=control.snapshot();control.render(value)
         print(f'Web          : RUNNING\nDashboard    : {dashboard.URL}\nSafety       : SUPERVISED ONLY; 24h unattended NOT_READY',flush=True)
         if not no_browser:
@@ -159,16 +228,20 @@ def main(argv=None):
     parser.add_argument('--check',action='store_true')
     parser.add_argument('--json',action='store_true')
     parser.add_argument('--dashboard-only',action='store_true',help='Stored-data view only; never starts Scanner')
+    parser.add_argument('--start-scanner',action='store_true',help='Explicitly start observation as well as the web')
     parser.add_argument('--no-browser',action='store_true',help='Print localhost URL without opening browser')
     parser.add_argument('--token')
+    parser.add_argument('--request-id')
     args=parser.parse_args(argv)
     try:
         if args.check: return control.main(['status','--check'])
-        if args.action=='_serve': return serve(args.token or '')
-        if args.action=='_scanner': return control.start(args.seconds,args.max_requests)
-        if args.action=='start': return start(args.seconds,args.max_requests,args.dashboard_only,args.no_browser)
+        if args.action=='_serve': return serve(args.token or '',args.seconds,args.max_requests)
+        if args.action=='_scanner': return control.start(args.seconds,args.max_requests,args.request_id)
+        if args.action=='start': return start(args.seconds,args.max_requests,args.dashboard_only or not args.start_scanner,args.no_browser)
         if args.action=='stop':
-            try: scanner_code=control.stop()
+            try:
+                cancel_pending_start()
+                scanner_code=control.stop()
             finally: web_code=stop_web()
             return max(scanner_code,web_code)
         value=control.snapshot();web=web_state()

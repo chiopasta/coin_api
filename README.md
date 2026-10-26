@@ -8,8 +8,10 @@
 
 ## Windows 간편 관측 실행
 
-프로젝트 루트의 `start_coin_api.bat`를 더블클릭해 시작하고, `status_coin_api.bat`로 확인한 뒤
-`stop_coin_api.bat`로 안전하게 종료합니다. PowerShell에서도 `.\start_coin_api.bat`처럼 실행합니다.
+프로젝트 루트의 `start_coin_api.bat`를 더블클릭하면 localhost 웹이 열립니다. 웹 상단 버튼으로 스캐너를 시작·종료하고,
+두 번째 **급등 신호 분석** 페이지에서 저장된 가격 평가를 확인합니다. 웹 종료 버튼은 대시보드를 유지하며,
+`stop_coin_api.bat`는 스캐너와 웹을 함께 종료합니다. PowerShell에서도 `.\start_coin_api.bat`처럼 실행합니다.
+BAT 자체는 스캐너를 자동 시작하지 않습니다. [대시보드 사용 안내](docs/scanner_v50_dashboard.md)를 확인하세요.
 관측 전용·감독하 사용이며24시간 무인은 NOT_READY입니다. 기존 시계/실행 한도와 데이터 보호를 유지합니다.
 [Python 선택·실행·종료 안내](docs/scanner_v410_windows_launcher.md)
 

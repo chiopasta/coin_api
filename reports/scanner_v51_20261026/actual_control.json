@@ -1,0 +1,120 @@
+{
+  "bounds": {
+    "starts_max": 2,
+    "seconds": 120,
+    "http": 80,
+    "ntp_max_total": 48,
+    "markets": [
+      "KRW-BTC",
+      "KRW-ENA",
+      "KRW-ETH",
+      "KRW-FLOCK",
+      "KRW-SAND"
+    ],
+    "exchanges": [
+      "UPBIT",
+      "BITHUMB"
+    ]
+  },
+  "before": {
+    "action": null,
+    "state": "IDLE",
+    "message": "스캐너 시작 버튼으로 관측을 시작하세요.",
+    "busy": false,
+    "starting": false,
+    "stopping": false,
+    "seconds": 120,
+    "max_requests": 80,
+    "process_alive": false,
+    "scanner": {
+      "status": "STOPPED",
+      "phase": "NO_MANAGED_RUN",
+      "clock": "UNKNOWN",
+      "db_saved": "UNKNOWN"
+    }
+  },
+  "static": {
+    "/": 200,
+    "/analysis": 200,
+    "/app.js": 200,
+    "/style.css": 200
+  },
+  "security": {
+    "bad_origin": 403,
+    "bad_token": 403
+  },
+  "start_response": 202,
+  "duplicate_response": 409,
+  "history": [
+    {
+      "action": "start",
+      "state": "WORKING",
+      "message": "시계 검증 및 실제 수집 시작 확인 중…",
+      "busy": true,
+      "starting": true,
+      "stopping": false,
+      "seconds": 120,
+      "max_requests": 80,
+      "process_alive": false,
+      "scanner": {
+        "status": "STOPPED",
+        "phase": "NO_MANAGED_RUN",
+        "clock": "UNKNOWN",
+        "db_saved": "UNKNOWN"
+      }
+    },
+    {
+      "action": "start",
+      "state": "WORKING",
+      "message": "시계 검증 및 실제 수집 시작 확인 중…",
+      "busy": true,
+      "starting": true,
+      "stopping": false,
+      "seconds": 120,
+      "max_requests": 80,
+      "process_alive": true,
+      "scanner": {
+        "status": "RUNNING",
+        "phase": "PRECHECK",
+        "clock": "UNKNOWN",
+        "db_saved": "UNKNOWN"
+      }
+    },
+    {
+      "action": "start",
+      "state": "FAILED",
+      "message": "시계 안전 검증 실패 (CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY). Windows 시간 동기화와 NTP 연결을 확인하세요.",
+      "busy": false,
+      "starting": false,
+      "stopping": false,
+      "seconds": 120,
+      "max_requests": 80,
+      "process_alive": false,
+      "scanner": {
+        "status": "BLOCKED",
+        "phase": "TERMINAL",
+        "clock": "FAIL: CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY",
+        "db_saved": "UNKNOWN"
+      }
+    }
+  ],
+  "stop_response": 202,
+  "after_stop": {
+    "action": "stop",
+    "state": "FAILED",
+    "message": "시계 안전 검증 실패 (CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY). Windows 시간 동기화와 NTP 연결을 확인하세요.",
+    "busy": false,
+    "starting": false,
+    "stopping": false,
+    "seconds": 120,
+    "max_requests": 80,
+    "process_alive": false,
+    "scanner": {
+      "status": "BLOCKED",
+      "phase": "TERMINAL",
+      "clock": "FAIL: CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY",
+      "db_saved": "UNKNOWN"
+    }
+  },
+  "web_after_stop": 200
+}
