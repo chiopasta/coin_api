@@ -1,0 +1,11 @@
+python : .............................
+위치 줄:15 문자:16
++ ... | python -; python -B -m unittest tests.test_forward_scanner_v52 test ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (.............................:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+----------------------------------------------------------------------
+Ran 29 tests in 3.127s
+
+OK

@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-26T23:35:29.921877+09:00",
+  "baseline_files": 583,
+  "unchanged": 582,
+  "changed": [
+    "docs\\research_status.md"
+  ],
+  "missing": [],
+  "intended_change_only": true,
+  "user_v15_identity_and_survival": true,
+  "processes": [
+    {
+      "ProcessId": 28300,
+      "ParentProcessId": 21408,
+      "CreationDate": "/Date(1793020282231)/",
+      "CommandLine": "\"C:\\Users\\stan\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe\" .\\scanner_v15.py"
+    },
+    {
+      "ProcessId": 26448,
+      "ParentProcessId": 28300,
+      "CreationDate": "/Date(1793020282352)/",
+      "CommandLine": "\"C:\\Users\\stan\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe\"  .\\scanner_v15.py"
+    }
+  ],
+  "active_archive_db": "Excluded from byte identity; continuing user writes. SELECT-only .1s busy timeout, .25s progress cutoff. No checkpoint/journal/schema/source writes.",
+  "source_database_writes": 0,
+  "scanner_starts": 0,
+  "process_signal_or_stop_calls": 0,
+  "network_calls": 0,
+  "notes": "All 583 baseline files unchanged before the intentional status-document prepend; prior dirty status text preserved. Runtime scanner_v43_live excluded from hash baseline."
+}

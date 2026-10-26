@@ -1,0 +1,18 @@
+{
+  "stored_signals": 1761,
+  "score_sql_types": [
+    [
+      "blob",
+      1379
+    ],
+    [
+      "integer",
+      382
+    ]
+  ],
+  "numeric_score_rows": 382,
+  "matches": 382,
+  "mismatches": 0,
+  "examples": [],
+  "caveat": "BLOB score rows were not guessed/decoded. Historical records do not identify their exact producing revision."
+}

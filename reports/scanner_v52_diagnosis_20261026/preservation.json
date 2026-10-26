@@ -1,0 +1,36 @@
+{
+  "at": 1793023554.207986,
+  "baseline_file_count": 668,
+  "changed": [
+    "docs\\research_status.md"
+  ],
+  "missing": [],
+  "static_original_databases": 42,
+  "all_static_database_bytes_unchanged": true,
+  "code_ui_bat_git_unchanged": true,
+  "archive_v15_unchanged": true,
+  "external_legacy_files_unchanged": true,
+  "user_scanner_processes": [
+    {
+      "pid": 28300,
+      "alive": true,
+      "birth": 134374938822314277
+    },
+    {
+      "pid": 26448,
+      "alive": true,
+      "birth": 134374938823520764
+    }
+  ],
+  "user_db": {
+    "path": "C:\\dev\\coin_api-1\\archive\\crypto_scanner.db",
+    "mode": "read-only; no byte-stability claim for active writer",
+    "signals_observed": 5,
+    "modified_by_diagnosis": false
+  },
+  "api_calls_by_diagnosis": 0,
+  "live_launches_by_diagnosis": 0,
+  "stop_or_kill_actions": 0,
+  "production_files_modified": false,
+  "git_commit_or_push": false
+}

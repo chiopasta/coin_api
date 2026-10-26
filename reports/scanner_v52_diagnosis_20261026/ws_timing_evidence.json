@@ -1,0 +1,86 @@
+{
+  "UPBIT": {
+    "0": {
+      "untouched_initial_jobs": 97,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    },
+    "1": {
+      "untouched_initial_jobs": 96,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    },
+    "2": {
+      "untouched_initial_jobs": 92,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    }
+  },
+  "BITHUMB": {
+    "0": {
+      "untouched_initial_jobs": 96,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    },
+    "1": {
+      "untouched_initial_jobs": 95,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    },
+    "2": {
+      "untouched_initial_jobs": 100,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    },
+    "3": {
+      "untouched_initial_jobs": 99,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    },
+    "4": {
+      "untouched_initial_jobs": 89,
+      "job_end_values": [
+        1793017620
+      ],
+      "subscription_since_lower_inclusive": 1793017625,
+      "subscription_since_upper_exclusive": 1793017685,
+      "earliest_full_minute_seal": 1793017745,
+      "actual_worker_end": 1793017781.6148016
+    }
+  }
+}

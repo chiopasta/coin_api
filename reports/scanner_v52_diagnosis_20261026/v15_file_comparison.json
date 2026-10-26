@@ -1,0 +1,12 @@
+{
+  "archive_sha256": "ddc8f6802ccb0f1f33bf93189f8d0eea63c7a023c2e359e591a268a11219faa0",
+  "external_sha256": "4ee908f58c92c6e42b14f6bb33785771ccbbae4cc5c76ddbd6c147cf87e8dff6",
+  "changed_functions": [
+    "confirmed_preload_points",
+    "load_upbit_candles",
+    "load_bithumb_candles",
+    "upbit_message",
+    "bithumb_message"
+  ],
+  "extra_functions": []
+}

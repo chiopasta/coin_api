@@ -1,0 +1,267 @@
+{
+  "same_real_input": {
+    "source": "C:\\dev\\coin_api-1\\data\\forward_scanner_v4.db",
+    "source_sha256": "376c66056b10a012bc917246a29972138106a1cef1c10e13463efc920c54d451",
+    "start": 1790866800,
+    "end": 1790953200,
+    "markets": [
+      "KRW-BTC",
+      "KRW-ENA",
+      "KRW-ETH",
+      "KRW-FLOCK",
+      "KRW-SAND"
+    ],
+    "real_candles_loaded": {
+      "KRW-BTC": 2100,
+      "KRW-ENA": 1979,
+      "KRW-ETH": 2098,
+      "KRW-FLOCK": 1770,
+      "KRW-SAND": 1477
+    },
+    "old_cycle_calls": 361,
+    "bridge_evaluate_calls": 361,
+    "observations_function_calls": 722,
+    "old_offline_pages": 1800,
+    "v52_offline_pages": 1800,
+    "table_comparison": {
+      "signals": {
+        "old": {
+          "rows": 7,
+          "sha256": "0ec88d0b97a60e4ee9b7440d0fcffeb628dbe46780c759e2ccebd27bfdaa2e40"
+        },
+        "v52": {
+          "rows": 7,
+          "sha256": "0ec88d0b97a60e4ee9b7440d0fcffeb628dbe46780c759e2ccebd27bfdaa2e40"
+        }
+      },
+      "signal_features": {
+        "old": {
+          "rows": 7,
+          "sha256": "b593d23e019cec36169884298a057860bdb38f1efbd547deab2fc87808be7149"
+        },
+        "v52": {
+          "rows": 7,
+          "sha256": "b593d23e019cec36169884298a057860bdb38f1efbd547deab2fc87808be7149"
+        }
+      },
+      "signal_outcomes": {
+        "old": {
+          "rows": 14,
+          "sha256": "b4cb0cce5096f1b7df417e78e3afd9ae647b88b2d07113cfc57d473aa531ad5d"
+        },
+        "v52": {
+          "rows": 14,
+          "sha256": "b4cb0cce5096f1b7df417e78e3afd9ae647b88b2d07113cfc57d473aa531ad5d"
+        }
+      },
+      "scanner_state": {
+        "old": {
+          "rows": 5,
+          "sha256": "7b6e78304eebcfbefb5105d90a700ecf223b8858c319707368757fcdbbda58b4"
+        },
+        "v52": {
+          "rows": 5,
+          "sha256": "7b6e78304eebcfbefb5105d90a700ecf223b8858c319707368757fcdbbda58b4"
+        }
+      },
+      "minute_candles": {
+        "old": {
+          "rows": 8092,
+          "sha256": "a0c9c134edc6a1ed7aa6be7560bc53c259167a3979ca920f98eb1790a745a60f"
+        },
+        "v52": {
+          "rows": 8092,
+          "sha256": "a0c9c134edc6a1ed7aa6be7560bc53c259167a3979ca920f98eb1790a745a60f"
+        }
+      }
+    },
+    "v4_v52_signals": [
+      {
+        "signal_id": "8d7136a05e8561ac7b77",
+        "market": "KRW-ENA",
+        "signal_time": 1790867100,
+        "range_30m": 4.129793510324475
+      },
+      {
+        "signal_id": "eb824158f54aaab3191e",
+        "market": "KRW-FLOCK",
+        "signal_time": 1790924400,
+        "range_30m": 4.046242774566466
+      },
+      {
+        "signal_id": "94f29ca0bc972ca98e75",
+        "market": "KRW-SAND",
+        "signal_time": 1790924700,
+        "range_30m": 14.084507042253524
+      },
+      {
+        "signal_id": "ccfa0438fce0d6da28ff",
+        "market": "KRW-SAND",
+        "signal_time": 1790932500,
+        "range_30m": 5.054151624548742
+      },
+      {
+        "signal_id": "91d553e4eba906bec26a",
+        "market": "KRW-SAND",
+        "signal_time": 1790934300,
+        "range_30m": 4.63182897862231
+      },
+      {
+        "signal_id": "593fc8798a81c371cc47",
+        "market": "KRW-SAND",
+        "signal_time": 1790940600,
+        "range_30m": 4.462242562929042
+      },
+      {
+        "signal_id": "5d7c1344c095b582d48e",
+        "market": "KRW-SAND",
+        "signal_time": 1790951700,
+        "range_30m": 6.091954022988499
+      }
+    ],
+    "original_stored_signals_in_cohort_window": [
+      {
+        "signal_id": "8d7136a05e8561ac7b77",
+        "market": "KRW-ENA",
+        "signal_time": 1790867100,
+        "range_30m": 4.129793510324475
+      },
+      {
+        "signal_id": "eb824158f54aaab3191e",
+        "market": "KRW-FLOCK",
+        "signal_time": 1790924400,
+        "range_30m": 4.046242774566466
+      },
+      {
+        "signal_id": "94f29ca0bc972ca98e75",
+        "market": "KRW-SAND",
+        "signal_time": 1790924700,
+        "range_30m": 14.084507042253524
+      },
+      {
+        "signal_id": "ccfa0438fce0d6da28ff",
+        "market": "KRW-SAND",
+        "signal_time": 1790932500,
+        "range_30m": 5.054151624548742
+      },
+      {
+        "signal_id": "91d553e4eba906bec26a",
+        "market": "KRW-SAND",
+        "signal_time": 1790934300,
+        "range_30m": 4.63182897862231
+      },
+      {
+        "signal_id": "593fc8798a81c371cc47",
+        "market": "KRW-SAND",
+        "signal_time": 1790940600,
+        "range_30m": 4.462242562929042
+      },
+      {
+        "signal_id": "5d7c1344c095b582d48e",
+        "market": "KRW-SAND",
+        "signal_time": 1790951700,
+        "range_30m": 6.091954022988499
+      }
+    ],
+    "v15_closed_projection_signals": [
+      {
+        "id": 1,
+        "created_at": "2026-10-02 16:05:05",
+        "market": "KRW-SAND",
+        "score": 75,
+        "price": 72.8
+      }
+    ],
+    "v15_prepump_events": 0,
+    "caveat": "V15 is an unchanged AST function replay on confirmed close/value projections at common 5m checkpoints. Native live V15 checks every 10s and can use current partial value/tick price; raw ticks are not stored and not fabricated. No profitability comparison."
+  },
+  "runtime_causal_replay": {
+    "full": {
+      "UPBIT": {
+        "start": 1793017800,
+        "actual_end": 1793017781.6148016,
+        "watermark": 1792996200,
+        "calls": 2,
+        "research_load_calls": 0,
+        "evaluated_at_end": 0,
+        "evaluated_after_time_only_plus_1h": 0,
+        "source_30m_complete": 0,
+        "scanner_state_changed": false,
+        "actual_ws_candle_rows": 0,
+        "pending_jobs": 289
+      },
+      "BITHUMB": {
+        "start": 1793017800,
+        "actual_end": 1793017781.6148016,
+        "watermark": 1792996200,
+        "calls": 2,
+        "research_load_calls": 0,
+        "evaluated_at_end": 0,
+        "evaluated_after_time_only_plus_1h": 0,
+        "source_30m_complete": 0,
+        "scanner_state_changed": false,
+        "actual_ws_candle_rows": 0,
+        "pending_jobs": 483
+      }
+    },
+    "small": {
+      "UPBIT": {
+        "start": 1793017500,
+        "actual_end": 1793017577.126602,
+        "watermark": 1793017560,
+        "calls": 2,
+        "research_load_calls": 0,
+        "evaluated_at_end": 1,
+        "evaluated_after_time_only_plus_1h": 0,
+        "source_30m_complete": 0,
+        "scanner_state_changed": false,
+        "actual_ws_candle_rows": 2,
+        "pending_jobs": 0
+      },
+      "BITHUMB": {
+        "start": 1793017500,
+        "actual_end": 1793017577.126602,
+        "watermark": 1793017560,
+        "calls": 2,
+        "research_load_calls": 0,
+        "evaluated_at_end": 1,
+        "evaluated_after_time_only_plus_1h": 0,
+        "source_30m_complete": 0,
+        "scanner_state_changed": false,
+        "actual_ws_candle_rows": 2,
+        "pending_jobs": 0
+      }
+    }
+  },
+  "pending_job_gate": {
+    "markets": [
+      "KRW-BTC",
+      "KRW-ENA",
+      "KRW-ETH",
+      "KRW-FLOCK",
+      "KRW-SAND"
+    ],
+    "held_market": "KRW-SAND",
+    "real_candle_interval": [
+      1790845200,
+      1790870400
+    ],
+    "before_recovery": {
+      "evaluated": 0,
+      "source_rows": 1861,
+      "signals": 0,
+      "watermark": 1790845200,
+      "pending_jobs": 1
+    },
+    "after_recovery": {
+      "evaluated": 4,
+      "signals": 1,
+      "watermark": 1790870400,
+      "pending_jobs": 0,
+      "real_stored_recovery_pages": 2
+    },
+    "purpose": "Closed-candle admission/verification gate experiment, not a raw-WS replay or a production metadata override."
+  },
+  "elapsed_seconds": 23.254575699998895,
+  "external_api_calls": 0
+}

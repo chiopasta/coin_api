@@ -1,0 +1,82 @@
+{
+  "at": 1793023611.6617765,
+  "path": "C:\\dev\\coin_api-1\\archive\\crypto_scanner.db",
+  "initial_signals": 0,
+  "current_signals": 5,
+  "signals": [
+    {
+      "id": 1,
+      "created_at": "2026-10-26 22:39:08",
+      "exchange": "BITHUMB",
+      "market": "KRW-ZRX",
+      "score": 60,
+      "price": 135.0,
+      "price_1m": 0.746268656716409,
+      "price_5m": 0.746268656716409,
+      "price_15m": 0.746268656716409,
+      "volume_5m": 34.324626968984035,
+      "volume_15m": 8.831156742246009,
+      "volume_60m": null
+    },
+    {
+      "id": 2,
+      "created_at": "2026-10-26 22:43:39",
+      "exchange": "UPBIT",
+      "market": "KRW-BABY",
+      "score": 60,
+      "price": 19.7,
+      "price_1m": 1.025641025641022,
+      "price_5m": 2.072538860103612,
+      "price_15m": 3.6842105263157787,
+      "volume_5m": 5.241979702193297,
+      "volume_15m": 5.119671934922441,
+      "volume_60m": null
+    },
+    {
+      "id": 3,
+      "created_at": "2026-10-26 22:47:29",
+      "exchange": "BITHUMB",
+      "market": "KRW-BABY",
+      "score": 65,
+      "price": 19.39,
+      "price_1m": 1.1387163561076497,
+      "price_5m": 1.5064935064935003,
+      "price_15m": 2.626050420168058,
+      "volume_5m": 11.266214280741725,
+      "volume_15m": 10.295440227689586,
+      "volume_60m": null
+    },
+    {
+      "id": 4,
+      "created_at": "2026-10-26 22:56:00",
+      "exchange": "BITHUMB",
+      "market": "KRW-SHIB",
+      "score": 65,
+      "price": 0.0065,
+      "price_1m": 1.5625,
+      "price_5m": 1.5625,
+      "price_15m": 1.5625,
+      "volume_5m": 19.238773509255555,
+      "volume_15m": 6.234499509190665,
+      "volume_60m": null
+    },
+    {
+      "id": 5,
+      "created_at": "2026-10-26 23:02:01",
+      "exchange": "BITHUMB",
+      "market": "KRW-PCI",
+      "score": 65,
+      "price": 49.09,
+      "price_1m": 1.8867924528301883,
+      "price_5m": 1.8867924528301883,
+      "price_15m": 1.8867924528301883,
+      "volume_5m": 33.43948653573517,
+      "volume_15m": 10.06789517809091,
+      "volume_60m": null
+    }
+  ],
+  "price_history_rows": 88,
+  "prepump_events": 0,
+  "note": "Read-only observations of the user-owned running scanner DB. The diagnosis never executed archived top-level code, wrote this DB, called exchange APIs, or controlled user processes.",
+  "current_formula_and_filters_match_all_five": true
+}

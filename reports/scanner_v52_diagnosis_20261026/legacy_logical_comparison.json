@@ -1,0 +1,73 @@
+{
+  "files": {
+    "C:\\dev\\Coin_api\\crypto_scanner.db": {
+      "signals": {
+        "count": 1761,
+        "logical_sha256": "b1722b95aa70519f79ec36cc74229990425f2653b581cffe1cc5ed76a8f0567f"
+      },
+      "sqlite_sequence": {
+        "count": 5,
+        "logical_sha256": "a109df68dc0dbf0cea184d4c9ee94b2c3a3ea515208c8b612cd1f1eaa169c0ad"
+      },
+      "signal_price_history": {
+        "count": 43950,
+        "logical_sha256": "16ae8386194ebdf332d096d6111952d6053f8eae87a4dd29777ceb6f1e1528ef"
+      },
+      "pullback_paper_trades": {
+        "count": 305,
+        "logical_sha256": "75f03995cf2ffefe4bf45f74de23d96b65a53cfd2b31c8885ba0d9c66f975ad0"
+      },
+      "pullback_watch": {
+        "count": 559,
+        "logical_sha256": "19126e6fba594721b8e551fb8ccf7825540e17bb1352eefecbf62022eb6f0ca9"
+      },
+      "prepump_events": {
+        "count": 76,
+        "logical_sha256": "78de9d2b86bc04eaf124f4e563847d21faae173c4fd8de57dd61449c1df9bcb8"
+      },
+      "prepump_tracking": {
+        "count": 76,
+        "logical_sha256": "079a20062d7faf4bab06d391713e20687cec1e99b920cf49c418299cf3106a97"
+      },
+      "low_heat_watch": {
+        "count": 174,
+        "logical_sha256": "fd76607d3ed0be1e6356d582ecd59b8627c7c9a1fa5cfd88a878bb8f6cb2cf6f"
+      }
+    },
+    "data\\backups\\v42_preflight_20261024\\legacy.db": {
+      "signals": {
+        "count": 1761,
+        "logical_sha256": "b1722b95aa70519f79ec36cc74229990425f2653b581cffe1cc5ed76a8f0567f"
+      },
+      "sqlite_sequence": {
+        "count": 5,
+        "logical_sha256": "a109df68dc0dbf0cea184d4c9ee94b2c3a3ea515208c8b612cd1f1eaa169c0ad"
+      },
+      "signal_price_history": {
+        "count": 43950,
+        "logical_sha256": "16ae8386194ebdf332d096d6111952d6053f8eae87a4dd29777ceb6f1e1528ef"
+      },
+      "pullback_paper_trades": {
+        "count": 305,
+        "logical_sha256": "75f03995cf2ffefe4bf45f74de23d96b65a53cfd2b31c8885ba0d9c66f975ad0"
+      },
+      "pullback_watch": {
+        "count": 559,
+        "logical_sha256": "19126e6fba594721b8e551fb8ccf7825540e17bb1352eefecbf62022eb6f0ca9"
+      },
+      "prepump_events": {
+        "count": 76,
+        "logical_sha256": "78de9d2b86bc04eaf124f4e563847d21faae173c4fd8de57dd61449c1df9bcb8"
+      },
+      "prepump_tracking": {
+        "count": 76,
+        "logical_sha256": "079a20062d7faf4bab06d391713e20687cec1e99b920cf49c418299cf3106a97"
+      },
+      "low_heat_watch": {
+        "count": 174,
+        "logical_sha256": "fd76607d3ed0be1e6356d582ecd59b8627c7c9a1fa5cfd88a878bb8f6cb2cf6f"
+      }
+    }
+  },
+  "all_tables_logically_equal": true
+}

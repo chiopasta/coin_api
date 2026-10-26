@@ -1,0 +1,2366 @@
+[
+  {
+    "path": "C:\\dev\\coin_api-1\\archive\\crypto_scanner.db",
+    "bytes": 61440,
+    "tables": [
+      "signals",
+      "sqlite_sequence",
+      "signal_price_history",
+      "pullback_paper_trades",
+      "pullback_watch",
+      "prepump_events",
+      "prepump_tracking"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "id",
+        "created_at",
+        "exchange",
+        "market",
+        "score",
+        "price",
+        "price_1m",
+        "price_5m",
+        "price_15m",
+        "volume_5m",
+        "volume_15m",
+        "volume_60m",
+        "price_after_5m",
+        "price_after_10m",
+        "price_after_30m",
+        "price_after_60m",
+        "return_5m",
+        "return_10m",
+        "return_30m",
+        "return_60m",
+        "reason",
+        "max_profit_5m",
+        "max_profit_10m",
+        "max_profit_30m",
+        "max_profit_60m",
+        "max_drawdown_5m",
+        "max_drawdown_10m",
+        "max_drawdown_30m",
+        "max_drawdown_60m"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "signal_price_history": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "minute",
+        "observed_at",
+        "price",
+        "return_pct"
+      ]
+    },
+    "prepump_events": {
+      "count": 0,
+      "columns": [
+        "id",
+        "created_at",
+        "exchange",
+        "market",
+        "level",
+        "repeat_count",
+        "price",
+        "price_1m",
+        "price_5m",
+        "price_15m",
+        "volume_5m",
+        "volume_15m",
+        "volume_60m",
+        "previous_event_id",
+        "previous_strength",
+        "strength",
+        "reason"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\altcoin_market.db",
+    "bytes": 461737984,
+    "tables": [
+      "minute_candles",
+      "download_runs"
+    ],
+    "minute_candles": {
+      "count": 4460660,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\forward_scanner_v4.db",
+    "bytes": 35315712,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations"
+    ],
+    "signals": {
+      "count": 163,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        1790703000,
+        1791362400
+      ]
+    },
+    "minute_candles": {
+      "count": 371708,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 51,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\forward_scanner_v4_before_source_1790866337414810500.db",
+    "bytes": 9338880,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes"
+    ],
+    "signals": {
+      "count": 48,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds"
+      ],
+      "time_range": [
+        1790703000,
+        1790860800
+      ]
+    },
+    "minute_candles": {
+      "count": 106571,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 51,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\forward_scanner_v4_smoke_1790696252.db",
+    "bytes": 147456,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1074,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 3,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\historical_market.db",
+    "bytes": 8974336,
+    "tables": [
+      "minute_candles",
+      "download_runs"
+    ],
+    "minute_candles": {
+      "count": 86328,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\replay_20260921.db",
+    "bytes": 921600,
+    "tables": [
+      "minute_candles",
+      "download_runs"
+    ],
+    "minute_candles": {
+      "count": 9416,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\research_market_v1.db",
+    "bytes": 74199040,
+    "tables": [
+      "minute_candles",
+      "dataset_manifest",
+      "collection_state",
+      "collection_pages",
+      "quality_daily",
+      "daily_crosscheck"
+    ],
+    "minute_candles": {
+      "count": 691421,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\research_market_v1_smoke.db",
+    "bytes": 86016,
+    "tables": [
+      "minute_candles",
+      "dataset_manifest",
+      "collection_state",
+      "collection_pages",
+      "quality_daily",
+      "daily_crosscheck"
+    ],
+    "minute_candles": {
+      "count": 360,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\research_market_validation_v1.db",
+    "bytes": 77197312,
+    "tables": [
+      "minute_candles",
+      "dataset_manifest",
+      "collection_state",
+      "collection_pages",
+      "quality_daily",
+      "daily_crosscheck"
+    ],
+    "minute_candles": {
+      "count": 724694,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_dashboard_v50\\analysis.db",
+    "bytes": 245760,
+    "tables": [
+      "evaluations"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_2ea5dea262de41a786e346935d868935\\control.db",
+    "bytes": 36864,
+    "tables": [
+      "http_attempts",
+      "runs"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_403fb7161b6046baa7f35f1a9e2affb0\\bithumb.db",
+    "bytes": 446464,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45",
+      "ws_candles",
+      "ws_signal_provenance"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 947,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 489,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 483,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_403fb7161b6046baa7f35f1a9e2affb0\\control.db",
+    "bytes": 32768,
+    "tables": [
+      "http_attempts",
+      "runs"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_403fb7161b6046baa7f35f1a9e2affb0\\upbit.db",
+    "bytes": 495616,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45",
+      "ws_candles",
+      "ws_signal_provenance"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1651,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 298,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 289,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_6822d370c52446b1a96b6bda7d5da9eb\\bithumb.db",
+    "bytes": 339968,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1263,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_6822d370c52446b1a96b6bda7d5da9eb\\control.db",
+    "bytes": 65536,
+    "tables": [
+      "http_attempts",
+      "runs"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_6822d370c52446b1a96b6bda7d5da9eb\\upbit.db",
+    "bytes": 368640,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1464,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\bithumb.db",
+    "bytes": 339968,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1192,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\control.db",
+    "bytes": 49152,
+    "tables": [
+      "http_attempts",
+      "runs"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\upbit.db",
+    "bytes": 368640,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1416,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261024\\bithumb.db",
+    "bytes": 323584,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1253,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261024\\control.db",
+    "bytes": 45056,
+    "tables": [
+      "http_attempts",
+      "runs"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261024\\upbit.db",
+    "bytes": 376832,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1561,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\bithumb.db",
+    "bytes": 348160,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1237,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\control.db",
+    "bytes": 106496,
+    "tables": [
+      "http_attempts",
+      "runs"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\upbit.db",
+    "bytes": 376832,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1476,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\v52_small_1793017478896526700\\bithumb.db",
+    "bytes": 282624,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45",
+      "ws_candles",
+      "ws_signal_provenance"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 715,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 2,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\v52_small_1793017478896526700\\control.db",
+    "bytes": 16384,
+    "tables": [
+      "http_attempts",
+      "runs"
+    ]
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\v52_small_1793017478896526700\\upbit.db",
+    "bytes": 282624,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45",
+      "ws_candles",
+      "ws_signal_provenance"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 720,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 2,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\before_resume\\bithumb.db",
+    "bytes": 339968,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1198,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\episode_20261025_v49\\before_resume\\upbit.db",
+    "bytes": 368640,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context",
+      "no_trade_evidence_v45",
+      "price_horizons_v45"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1425,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v42_live\\episode_20261024_supported\\bithumb.bootstrap-backup.db",
+    "bytes": 221184,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1192,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db",
+    "bytes": 221184,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1256,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 1,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v42_live\\episode_20261024_supported\\upbit.bootstrap-backup.db",
+    "bytes": 245760,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1527,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v42_live\\episode_20261024_supported\\upbit.db",
+    "bytes": 249856,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1597,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\backups\\forward_scanner_v4_wal_20261008_000701\\forward_scanner_v4.db",
+    "bytes": 35315712,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations"
+    ],
+    "signals": {
+      "count": 163,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        1790703000,
+        1791362400
+      ]
+    },
+    "minute_candles": {
+      "count": 371708,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 51,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\backups\\forward_scanner_v4_wal_repair_20261008_001220_1791385940825089300\\forward_scanner_v4.db",
+    "bytes": 35315712,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations"
+    ],
+    "signals": {
+      "count": 163,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        1790703000,
+        1791362400
+      ]
+    },
+    "minute_candles": {
+      "count": 371708,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 51,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\backups\\v42_preflight_20261024\\legacy.db",
+    "bytes": 3915776,
+    "tables": [
+      "signals",
+      "sqlite_sequence",
+      "signal_price_history",
+      "pullback_paper_trades",
+      "pullback_watch",
+      "prepump_events",
+      "prepump_tracking",
+      "low_heat_watch"
+    ],
+    "signals": {
+      "count": 1761,
+      "columns": [
+        "id",
+        "created_at",
+        "exchange",
+        "market",
+        "score",
+        "price",
+        "price_1m",
+        "price_5m",
+        "price_15m",
+        "volume_5m",
+        "volume_15m",
+        "volume_60m",
+        "price_after_5m",
+        "price_after_10m",
+        "price_after_30m",
+        "price_after_60m",
+        "return_5m",
+        "return_10m",
+        "return_30m",
+        "return_60m",
+        "reason",
+        "max_profit_5m",
+        "max_profit_10m",
+        "max_profit_30m",
+        "max_profit_60m",
+        "max_drawdown_5m",
+        "max_drawdown_10m",
+        "max_drawdown_30m",
+        "max_drawdown_60m"
+      ],
+      "time_range": [
+        "2026-08-31 11:19:27",
+        "2026-09-09 23:50:21"
+      ]
+    },
+    "signal_price_history": {
+      "count": 43950,
+      "columns": [
+        "signal_id",
+        "minute",
+        "observed_at",
+        "price",
+        "return_pct"
+      ]
+    },
+    "prepump_events": {
+      "count": 76,
+      "columns": [
+        "id",
+        "created_at",
+        "exchange",
+        "market",
+        "level",
+        "repeat_count",
+        "price",
+        "price_1m",
+        "price_5m",
+        "price_15m",
+        "volume_5m",
+        "volume_15m",
+        "volume_60m",
+        "previous_event_id",
+        "previous_strength",
+        "strength",
+        "reason"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\backups\\v42_preflight_20261024\\original_v4.db",
+    "bytes": 35315712,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations"
+    ],
+    "signals": {
+      "count": 163,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        1790703000,
+        1791362400
+      ]
+    },
+    "minute_candles": {
+      "count": 371708,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 51,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\backups\\v43_pre_resume_20261024\\bithumb.db",
+    "bytes": 323584,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1231,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\coin_api-1\\data\\backups\\v43_pre_resume_20261024\\upbit.db",
+    "bytes": 372736,
+    "tables": [
+      "scanner_config",
+      "minute_candles",
+      "scanner_state",
+      "collection_jobs",
+      "collection_pages",
+      "signals",
+      "signal_features",
+      "signal_outcomes",
+      "source_policy",
+      "scanner_sessions",
+      "scanner_cycles",
+      "source_migrations",
+      "scanner_runtime_events",
+      "scanner_late_candles",
+      "live_signal_details",
+      "live_horizons",
+      "candle_receipts",
+      "coverage_windows",
+      "signal_context"
+    ],
+    "signals": {
+      "count": 0,
+      "columns": [
+        "signal_id",
+        "market",
+        "signal_time",
+        "signal_price",
+        "range_30m",
+        "cluster_id",
+        "detected_at",
+        "delay_seconds",
+        "source"
+      ],
+      "time_range": [
+        null,
+        null
+      ]
+    },
+    "minute_candles": {
+      "count": 1540,
+      "columns": [
+        "market",
+        "ts",
+        "open",
+        "high",
+        "low",
+        "close",
+        "trade_value"
+      ]
+    },
+    "scanner_state": {
+      "count": 5,
+      "columns": [
+        "market",
+        "verified_until",
+        "last_observation",
+        "active",
+        "cluster_id",
+        "last_error"
+      ]
+    },
+    "collection_jobs": {
+      "count": 0,
+      "columns": [
+        "market",
+        "start",
+        "end",
+        "cursor"
+      ]
+    }
+  },
+  {
+    "path": "C:\\dev\\Coin_api\\crypto_scanner.db",
+    "bytes": 3915776,
+    "tables": [
+      "signals",
+      "sqlite_sequence",
+      "signal_price_history",
+      "pullback_paper_trades",
+      "pullback_watch",
+      "prepump_events",
+      "prepump_tracking",
+      "low_heat_watch"
+    ],
+    "signals": {
+      "count": 1761,
+      "columns": [
+        "id",
+        "created_at",
+        "exchange",
+        "market",
+        "score",
+        "price",
+        "price_1m",
+        "price_5m",
+        "price_15m",
+        "volume_5m",
+        "volume_15m",
+        "volume_60m",
+        "price_after_5m",
+        "price_after_10m",
+        "price_after_30m",
+        "price_after_60m",
+        "return_5m",
+        "return_10m",
+        "return_30m",
+        "return_60m",
+        "reason",
+        "max_profit_5m",
+        "max_profit_10m",
+        "max_profit_30m",
+        "max_profit_60m",
+        "max_drawdown_5m",
+        "max_drawdown_10m",
+        "max_drawdown_30m",
+        "max_drawdown_60m"
+      ],
+      "time_range": [
+        "2026-08-31 11:19:27",
+        "2026-09-09 23:50:21"
+      ]
+    },
+    "signal_price_history": {
+      "count": 43950,
+      "columns": [
+        "signal_id",
+        "minute",
+        "observed_at",
+        "price",
+        "return_pct"
+      ]
+    },
+    "prepump_events": {
+      "count": 76,
+      "columns": [
+        "id",
+        "created_at",
+        "exchange",
+        "market",
+        "level",
+        "repeat_count",
+        "price",
+        "price_1m",
+        "price_5m",
+        "price_15m",
+        "volume_5m",
+        "volume_15m",
+        "volume_60m",
+        "previous_event_id",
+        "previous_strength",
+        "strength",
+        "reason"
+      ]
+    }
+  }
+]

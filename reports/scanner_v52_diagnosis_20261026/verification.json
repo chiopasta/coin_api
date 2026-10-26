@@ -1,0 +1,8 @@
+{
+  "tests": 29,
+  "seconds": 3.127,
+  "result": "PASS",
+  "source_signal_ids_times_ranges_match": true,
+  "source_original_hash_still_matches": true,
+  "new_api_calls": 0
+}

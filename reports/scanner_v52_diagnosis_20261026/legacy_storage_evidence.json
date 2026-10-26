@@ -1,0 +1,242 @@
+{
+  "C:\\dev\\Coin_api\\crypto_scanner.db": {
+    "sha256": "4863731b981415e697a83a8965457ae7888099b05022f0eb73e1e05136696339",
+    "signals": 1761,
+    "source_groups": [
+      {
+        "exchange": "BITHUMB",
+        "n": 1025
+      },
+      {
+        "exchange": "UPBIT",
+        "n": 736
+      }
+    ],
+    "schema": [
+      "id",
+      "created_at",
+      "exchange",
+      "market",
+      "score",
+      "price",
+      "price_1m",
+      "price_5m",
+      "price_15m",
+      "volume_5m",
+      "volume_15m",
+      "volume_60m",
+      "price_after_5m",
+      "price_after_10m",
+      "price_after_30m",
+      "price_after_60m",
+      "return_5m",
+      "return_10m",
+      "return_30m",
+      "return_60m",
+      "reason",
+      "max_profit_5m",
+      "max_profit_10m",
+      "max_profit_30m",
+      "max_profit_60m",
+      "max_drawdown_5m",
+      "max_drawdown_10m",
+      "max_drawdown_30m",
+      "max_drawdown_60m"
+    ],
+    "sample": [
+      {
+        "id": 1761,
+        "exchange": "UPBIT",
+        "market": "KRW-LA",
+        "score": 60,
+        "created_at": "2026-09-09 23:50:21",
+        "price": 85.9,
+        "price_1m": 0.943396226415083,
+        "price_5m": 1.42180094786728,
+        "price_15m": 1.6627078384797933,
+        "volume_5m": 39.56362649830551,
+        "volume_15m": 3.0488476767210515,
+        "volume_60m": 2.5379801085852196
+      },
+      {
+        "id": 1760,
+        "exchange": "BITHUMB",
+        "market": "KRW-HPP",
+        "score": 65,
+        "created_at": "2026-09-09 23:49:00",
+        "price": 9.296,
+        "price_1m": 0.0,
+        "price_5m": 1.043478260869568,
+        "price_15m": 1.3629920401264872,
+        "volume_5m": 18.54916702908237,
+        "volume_15m": 480.85262956430944,
+        "volume_60m": 8.911397519408858
+      },
+      {
+        "id": 1759,
+        "exchange": "BITHUMB",
+        "market": "KRW-GPS",
+        "score": 65,
+        "created_at": "2026-09-09 23:43:54",
+        "price": 16.64,
+        "price_1m": 1.2165450121654375,
+        "price_5m": 1.1550151975683987,
+        "price_15m": 0.5438066465256686,
+        "volume_5m": 176.94811200176724,
+        "volume_15m": 3.3060751886342596,
+        "volume_60m": 3.498800726819522
+      },
+      {
+        "id": 1758,
+        "exchange": "UPBIT",
+        "market": "KRW-POKT",
+        "score": 60,
+        "created_at": "2026-09-09 23:43:54",
+        "price": 10.8,
+        "price_1m": 0.0,
+        "price_5m": 0.9345794392523477,
+        "price_15m": 0.9345794392523477,
+        "volume_5m": 42.93311752008762,
+        "volume_15m": 11.040666312163912,
+        "volume_60m": 3.136788505758634
+      },
+      {
+        "id": 1757,
+        "exchange": "BITHUMB",
+        "market": "KRW-EGLD",
+        "score": 60,
+        "created_at": "2026-09-09 23:42:53",
+        "price": 6645.0,
+        "price_1m": 0.0,
+        "price_5m": 0.30188679245282124,
+        "price_15m": 0.15071590052750938,
+        "volume_5m": 32518.679250196543,
+        "volume_15m": 11.740145982028405,
+        "volume_60m": 15.246280787012504
+      }
+    ]
+  },
+  "data\\backups\\v42_preflight_20261024\\legacy.db": {
+    "sha256": "524179fa75e3b38a879ee9961da76d688d09701f55b401bec102d9fce3a2eb56",
+    "signals": 1761,
+    "source_groups": [
+      {
+        "exchange": "BITHUMB",
+        "n": 1025
+      },
+      {
+        "exchange": "UPBIT",
+        "n": 736
+      }
+    ],
+    "schema": [
+      "id",
+      "created_at",
+      "exchange",
+      "market",
+      "score",
+      "price",
+      "price_1m",
+      "price_5m",
+      "price_15m",
+      "volume_5m",
+      "volume_15m",
+      "volume_60m",
+      "price_after_5m",
+      "price_after_10m",
+      "price_after_30m",
+      "price_after_60m",
+      "return_5m",
+      "return_10m",
+      "return_30m",
+      "return_60m",
+      "reason",
+      "max_profit_5m",
+      "max_profit_10m",
+      "max_profit_30m",
+      "max_profit_60m",
+      "max_drawdown_5m",
+      "max_drawdown_10m",
+      "max_drawdown_30m",
+      "max_drawdown_60m"
+    ],
+    "sample": [
+      {
+        "id": 1761,
+        "exchange": "UPBIT",
+        "market": "KRW-LA",
+        "score": 60,
+        "created_at": "2026-09-09 23:50:21",
+        "price": 85.9,
+        "price_1m": 0.943396226415083,
+        "price_5m": 1.42180094786728,
+        "price_15m": 1.6627078384797933,
+        "volume_5m": 39.56362649830551,
+        "volume_15m": 3.0488476767210515,
+        "volume_60m": 2.5379801085852196
+      },
+      {
+        "id": 1760,
+        "exchange": "BITHUMB",
+        "market": "KRW-HPP",
+        "score": 65,
+        "created_at": "2026-09-09 23:49:00",
+        "price": 9.296,
+        "price_1m": 0.0,
+        "price_5m": 1.043478260869568,
+        "price_15m": 1.3629920401264872,
+        "volume_5m": 18.54916702908237,
+        "volume_15m": 480.85262956430944,
+        "volume_60m": 8.911397519408858
+      },
+      {
+        "id": 1759,
+        "exchange": "BITHUMB",
+        "market": "KRW-GPS",
+        "score": 65,
+        "created_at": "2026-09-09 23:43:54",
+        "price": 16.64,
+        "price_1m": 1.2165450121654375,
+        "price_5m": 1.1550151975683987,
+        "price_15m": 0.5438066465256686,
+        "volume_5m": 176.94811200176724,
+        "volume_15m": 3.3060751886342596,
+        "volume_60m": 3.498800726819522
+      },
+      {
+        "id": 1758,
+        "exchange": "UPBIT",
+        "market": "KRW-POKT",
+        "score": 60,
+        "created_at": "2026-09-09 23:43:54",
+        "price": 10.8,
+        "price_1m": 0.0,
+        "price_5m": 0.9345794392523477,
+        "price_15m": 0.9345794392523477,
+        "volume_5m": 42.93311752008762,
+        "volume_15m": 11.040666312163912,
+        "volume_60m": 3.136788505758634
+      },
+      {
+        "id": 1757,
+        "exchange": "BITHUMB",
+        "market": "KRW-EGLD",
+        "score": 60,
+        "created_at": "2026-09-09 23:42:53",
+        "price": 6645.0,
+        "price_1m": 0.0,
+        "price_5m": 0.30188679245282124,
+        "price_15m": 0.15071590052750938,
+        "volume_5m": 32518.679250196543,
+        "volume_15m": 11.740145982028405,
+        "volume_60m": 15.246280787012504
+      }
+    ]
+  },
+  "current_v4": {
+    "sha256": "376c66056b10a012bc917246a29972138106a1cef1c10e13463efc920c54d451",
+    "prior_v51_sha256": "528ff08a037364839114369dc2af1385f3a89f61795352fcd544f7bd27d1c78e",
+    "prior_v51_reported_signals": 215,
+    "current_signals": 163
+  }
+}

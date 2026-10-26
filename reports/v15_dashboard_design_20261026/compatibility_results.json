@@ -1,0 +1,405 @@
+{
+  "at": "2026-10-26T23:30:33.486045+09:00",
+  "network_calls": 0,
+  "scanner_starts": 0,
+  "source_db_writes": 0,
+  "optimization_runs": 0,
+  "sources": [
+    {
+      "path": "C:\\dev\\coin_api-1\\data\\backups\\v42_preflight_20261024\\legacy.db",
+      "active": false,
+      "at": "2026-10-26T23:30:33.682271+09:00",
+      "elapsed_ms": 196.053,
+      "schema": {
+        "signals": [
+          "id",
+          "created_at",
+          "exchange",
+          "market",
+          "score",
+          "price",
+          "price_1m",
+          "price_5m",
+          "price_15m",
+          "volume_5m",
+          "volume_15m",
+          "volume_60m",
+          "price_after_5m",
+          "price_after_10m",
+          "price_after_30m",
+          "price_after_60m",
+          "return_5m",
+          "return_10m",
+          "return_30m",
+          "return_60m",
+          "reason",
+          "max_profit_5m",
+          "max_profit_10m",
+          "max_profit_30m",
+          "max_profit_60m",
+          "max_drawdown_5m",
+          "max_drawdown_10m",
+          "max_drawdown_30m",
+          "max_drawdown_60m"
+        ],
+        "signal_price_history": [
+          "signal_id",
+          "minute",
+          "observed_at",
+          "price",
+          "return_pct"
+        ],
+        "pullback_watch": [
+          "signal_id",
+          "started_at"
+        ],
+        "prepump_events": [
+          "id",
+          "created_at",
+          "exchange",
+          "market",
+          "level",
+          "repeat_count",
+          "price",
+          "price_1m",
+          "price_5m",
+          "price_15m",
+          "volume_5m",
+          "volume_15m",
+          "volume_60m",
+          "previous_event_id",
+          "previous_strength",
+          "strength",
+          "reason"
+        ],
+        "pullback_paper_trades": [
+          "id",
+          "signal_id",
+          "strategy",
+          "entry_minute",
+          "entry_at",
+          "entry_price",
+          "entry_return_from_signal",
+          "tp_pct",
+          "sl_pct",
+          "status",
+          "exit_minute",
+          "exit_at",
+          "exit_price",
+          "exit_reason",
+          "pnl_pct",
+          "exit_deadline_minute"
+        ],
+        "prepump_tracking": [
+          "event_id",
+          "highest_price",
+          "lowest_price",
+          "max_profit_pct",
+          "max_drawdown_pct",
+          "last_seen_at",
+          "price_after_3h",
+          "return_3h",
+          "mfe_3h",
+          "mae_3h",
+          "price_after_6h",
+          "return_6h",
+          "mfe_6h",
+          "mae_6h",
+          "price_after_12h",
+          "return_12h",
+          "mfe_12h",
+          "mae_12h",
+          "price_after_24h",
+          "return_24h",
+          "mfe_24h",
+          "mae_24h",
+          "price_after_48h",
+          "return_48h",
+          "mfe_48h",
+          "mae_48h",
+          "price_after_72h",
+          "return_72h",
+          "mfe_72h",
+          "mae_72h",
+          "completed"
+        ],
+        "low_heat_watch": [
+          "signal_id",
+          "started_at"
+        ]
+      },
+      "counts": {
+        "signals": 1761,
+        "signal_price_history": 43950,
+        "pullback_watch": 559,
+        "prepump_events": 76,
+        "pullback_paper_trades": 305,
+        "prepump_tracking": 76,
+        "low_heat_watch": 174
+      },
+      "score_storage_types": {
+        "blob": 1379,
+        "integer": 382
+      },
+      "paper_status": {
+        "CLOSED": 190,
+        "OPEN": 115
+      }
+    },
+    {
+      "path": "C:\\dev\\coin_api-1\\archive\\crypto_scanner.db",
+      "active": true,
+      "at": "2026-10-26T23:30:33.692184+09:00",
+      "elapsed_ms": 9.617,
+      "schema": {
+        "signals": [
+          "id",
+          "created_at",
+          "exchange",
+          "market",
+          "score",
+          "price",
+          "price_1m",
+          "price_5m",
+          "price_15m",
+          "volume_5m",
+          "volume_15m",
+          "volume_60m",
+          "price_after_5m",
+          "price_after_10m",
+          "price_after_30m",
+          "price_after_60m",
+          "return_5m",
+          "return_10m",
+          "return_30m",
+          "return_60m",
+          "reason",
+          "max_profit_5m",
+          "max_profit_10m",
+          "max_profit_30m",
+          "max_profit_60m",
+          "max_drawdown_5m",
+          "max_drawdown_10m",
+          "max_drawdown_30m",
+          "max_drawdown_60m"
+        ],
+        "signal_price_history": [
+          "signal_id",
+          "minute",
+          "observed_at",
+          "price",
+          "return_pct"
+        ],
+        "pullback_watch": [
+          "signal_id",
+          "started_at"
+        ],
+        "prepump_events": [
+          "id",
+          "created_at",
+          "exchange",
+          "market",
+          "level",
+          "repeat_count",
+          "price",
+          "price_1m",
+          "price_5m",
+          "price_15m",
+          "volume_5m",
+          "volume_15m",
+          "volume_60m",
+          "previous_event_id",
+          "previous_strength",
+          "strength",
+          "reason"
+        ],
+        "pullback_paper_trades": [
+          "id",
+          "signal_id",
+          "strategy",
+          "entry_minute",
+          "entry_at",
+          "entry_price",
+          "entry_return_from_signal",
+          "tp_pct",
+          "sl_pct",
+          "status",
+          "exit_minute",
+          "exit_at",
+          "exit_price",
+          "exit_reason",
+          "pnl_pct"
+        ],
+        "prepump_tracking": [
+          "event_id",
+          "highest_price",
+          "lowest_price",
+          "max_profit_pct",
+          "max_drawdown_pct",
+          "last_seen_at",
+          "price_after_3h",
+          "return_3h",
+          "mfe_3h",
+          "mae_3h",
+          "price_after_6h",
+          "return_6h",
+          "mfe_6h",
+          "mae_6h",
+          "price_after_12h",
+          "return_12h",
+          "mfe_12h",
+          "mae_12h",
+          "price_after_24h",
+          "return_24h",
+          "mfe_24h",
+          "mae_24h",
+          "price_after_48h",
+          "return_48h",
+          "mfe_48h",
+          "mae_48h",
+          "price_after_72h",
+          "return_72h",
+          "mfe_72h",
+          "mae_72h",
+          "completed"
+        ]
+      },
+      "counts": {
+        "signals": 21,
+        "signal_price_history": 461,
+        "pullback_watch": 21,
+        "prepump_events": 0,
+        "pullback_paper_trades": 6,
+        "prepump_tracking": 0
+      },
+      "score_storage_types": {
+        "integer": 21
+      },
+      "paper_status": {
+        "CLOSED": 2,
+        "OPEN": 4
+      }
+    }
+  ],
+  "compatibility": [
+    {
+      "path": "C:\\dev\\coin_api-1\\data\\backups\\v42_preflight_20261024\\legacy.db",
+      "v7_schema": "PASS",
+      "decoded_history_signals": 919,
+      "decoded_paper_trades": 305,
+      "v51_required_columns_missing": [
+        "detected_at",
+        "signal_id",
+        "signal_price",
+        "signal_time",
+        "source"
+      ],
+      "minute_candles_missing": true,
+      "score_checked": 1761,
+      "score_mismatches": 0,
+      "score_invalid": 0,
+      "interpretation": "Formula consistency only; not raw-feed replay or profitability evidence",
+      "surge_saved_metric_coverage": {
+        "5": {
+          "saved_returns": 1722,
+          "endpoint_price_pairs": 876,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 846
+        },
+        "10": {
+          "saved_returns": 1662,
+          "endpoint_price_pairs": 835,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 828
+        },
+        "30": {
+          "saved_returns": 1478,
+          "endpoint_price_pairs": 697,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 793
+        },
+        "60": {
+          "saved_returns": 1294,
+          "endpoint_price_pairs": 602,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 714
+        }
+      }
+    },
+    {
+      "path": "C:\\dev\\coin_api-1\\archive\\crypto_scanner.db",
+      "v7_schema": "PASS",
+      "decoded_history_signals": 21,
+      "decoded_paper_trades": 6,
+      "v51_required_columns_missing": [
+        "detected_at",
+        "signal_id",
+        "signal_price",
+        "signal_time",
+        "source"
+      ],
+      "minute_candles_missing": true,
+      "score_checked": 21,
+      "score_mismatches": 0,
+      "score_invalid": 0,
+      "interpretation": "Formula consistency only; not raw-feed replay or profitability evidence",
+      "surge_saved_metric_coverage": {
+        "5": {
+          "saved_returns": 21,
+          "endpoint_price_pairs": 21,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 0
+        },
+        "10": {
+          "saved_returns": 16,
+          "endpoint_price_pairs": 16,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 0
+        },
+        "30": {
+          "saved_returns": 4,
+          "endpoint_price_pairs": 4,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 0
+        },
+        "60": {
+          "saved_returns": 0,
+          "endpoint_price_pairs": 0,
+          "endpoint_formula_mismatches": 0,
+          "saved_returns_with_missing_minute_samples": 0
+        }
+      }
+    }
+  ],
+  "private_function_checks": {
+    "surge_sparse_minutes": [
+      0,
+      5
+    ],
+    "surge_checkpoint_5m": [
+      10.000000000000009,
+      10.000000000000009,
+      0.0
+    ],
+    "surge_missing_endpoint_10m": null,
+    "surge_first_observation_at_elapsed_minutes": 65,
+    "surge_late_saved_minute": 60,
+    "surge_late_saved_60m_return": 10.000000000000009,
+    "prepump_first_observation_at_elapsed_hours": 7,
+    "prepump_saved_returns_3h_6h_12h": [
+      10.000000000000009,
+      10.000000000000009,
+      null
+    ],
+    "result": "PASS",
+    "data": "SYNTHETIC private fixtures; not market performance"
+  },
+  "direct_v51_view_probe": {
+    "result": "EXPECTED_INCOMPATIBLE",
+    "exception": "IndexError",
+    "message": "No item with that key"
+  },
+  "analyzer_inventory": [
+    "C:\\dev\\Coin_api\\db_analyzer_v7.py"
+  ]
+}
