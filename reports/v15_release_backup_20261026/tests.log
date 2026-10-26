@@ -1,0 +1,56 @@
+
+============================================================
+Status       : STOPPED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+KRW listed   : UNKNOWN / no market-list receipt
+Follow-up    : 0 markets / 0 pairs; saved PENDING horizons
+Clock        : UNKNOWN
+Signals      : 0
+Started      : UNKNOWN
+Duration     : UNKNOWN
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : SAVED / WAL checkpoint and normal close confirmed
+DB bytes     : 409600
+Recent error : NONE
+Last result  : STOP_REQUESTED
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : UNKNOWN
+Stop         : stop_coin_api.bat
+============================================================
+
+============================================================
+Status       : STOPPED
+Phase        : TERMINAL
+Mode         : OBSERVATION ONLY
+Exchanges    : UPBIT / BITHUMB
+Markets      : 5 unique / 10 venue pairs (8 signal pairs)
+KRW listed   : UNKNOWN / no market-list receipt
+Follow-up    : 0 markets / 0 pairs; saved PENDING horizons
+Clock        : UNKNOWN
+Signals      : 0
+Started      : UNKNOWN
+Duration     : UNKNOWN
+Last signal  : UNKNOWN
+Collected    : UNKNOWN
+DB save      : SAVED / WAL checkpoint and normal close confirmed
+DB bytes     : 409600
+Recent error : NONE
+Last result  : STOP_REQUESTED
+Warning      : SUPERVISED ONLY; 24-hour unattended operation NOT_READY; No signals yet; zero is a normal observation result
+Safety cap   : UNKNOWN
+Stop         : stop_coin_api.bat
+============================================================
+No owned live process; no signal or kill sent.
+
+...........C:\Users\stan\AppData\Local\Python\pythoncore-3.14-64\Lib\zipfile\__init__.py:1730: UserWarning: Duplicate name: 'manifest.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+......................................Read request failed (RuntimeError)
+......................
+----------------------------------------------------------------------
+Ran 71 tests in 6.517s
+
+OK

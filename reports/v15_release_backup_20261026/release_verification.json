@@ -1,0 +1,31 @@
+{
+  "repository": "chiopasta/coin-api-v15-backups",
+  "private": true,
+  "tag": "v15-backup-20261026T144330Z-a5bdb121",
+  "release_id": 424371319,
+  "url": "https://github.com/chiopasta/coin-api-v15-backups/releases/tag/v15-backup-20261026T144330Z-a5bdb121",
+  "sha256": "bff4e5d37f94561cf249487a0906ea16cb29c2a6b636c9cf5e910ac4a2d14da3",
+  "download_verification": {
+    "status": "VERIFIED_QUARANTINE",
+    "zip_sha256": "bff4e5d37f94561cf249487a0906ea16cb29c2a6b636c9cf5e910ac4a2d14da3",
+    "automatic_merge": false,
+    "files": [
+      "live_archive.db",
+      "legacy_standalone.db"
+    ]
+  },
+  "assets": [
+    {
+      "id": 678456987,
+      "name": "v15-backup.zip",
+      "size": 1301537,
+      "digest": "sha256:bff4e5d37f94561cf249487a0906ea16cb29c2a6b636c9cf5e910ac4a2d14da3"
+    },
+    {
+      "id": 678457010,
+      "name": "v15-backup.zip.sha256",
+      "size": 82,
+      "digest": "sha256:f41bf4ed270410361d422cf91e235d18afef6281a0868d2dbbbd3d95b61bb7ca"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "live_archive.db": {
+    "status": "QUARANTINE_REVIEW_REQUIRED",
+    "automatic_merge": false,
+    "tables": {
+      "prepump_events": {
+        "identical_keys": 0,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "prepump_tracking": {
+        "identical_keys": 0,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "pullback_paper_trades": {
+        "identical_keys": 8,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "pullback_watch": {
+        "identical_keys": 23,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "signal_price_history": {
+        "identical_keys": 740,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "signals": {
+        "identical_keys": 23,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      }
+    },
+    "note": "IDs are DB-local. Different values may be tracking updates or identity collisions. Source lineage and FK remapping require human review."
+  },
+  "legacy_standalone.db": {
+    "status": "QUARANTINE_REVIEW_REQUIRED",
+    "automatic_merge": false,
+    "tables": {
+      "low_heat_watch": {
+        "identical_keys": 174,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "prepump_events": {
+        "identical_keys": 76,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "prepump_tracking": {
+        "identical_keys": 76,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "pullback_paper_trades": {
+        "identical_keys": 305,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "pullback_watch": {
+        "identical_keys": 559,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "signal_price_history": {
+        "identical_keys": 43950,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      },
+      "signals": {
+        "identical_keys": 1761,
+        "conflicting_keys": 0,
+        "local_only": 0,
+        "incoming_only": 0
+      }
+    },
+    "note": "IDs are DB-local. Different values may be tracking updates or identity collisions. Source lineage and FK remapping require human review."
+  },
+  "cross_source": {
+    "status": "QUARANTINE_SCHEMA_MISMATCH",
+    "automatic_merge": false
+  },
+  "existing_release_refused": true,
+  "published_download": {
+    "repository": "chiopasta/coin-api-v15-backups",
+    "tag": "v15-backup-20261026T144330Z-a5bdb121",
+    "status": "VERIFIED_QUARANTINE",
+    "zip_sha256": "bff4e5d37f94561cf249487a0906ea16cb29c2a6b636c9cf5e910ac4a2d14da3",
+    "automatic_merge": false,
+    "files": [
+      "live_archive.db",
+      "legacy_standalone.db"
+    ]
+  },
+  "published_download_with_independently_pinned_sha256": "PASS"
+}

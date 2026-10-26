@@ -1,5 +1,12 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-26 V15 DB 비공개 Release 백업·이전 검증
+
+- [안전한 백업·다운로드·격리 복원 절차](v15_release_backup_20261026.md). 현재 코드 원격은 public이므로 사용자 동의로 별도 private `chiopasta/coin-api-v15-backups`를 생성했다. 새 [Release](https://github.com/chiopasta/coin-api-v15-backups/releases/tag/v15-backup-20261026T144330Z-a5bdb121)에 ZIP/체크섬을 올리고 재다운로드·CRC/SHA-256/DB integrity/schema/count 검증을 완료했다. 기존 tag/asset 덮어쓰기 없음.
+- 23:43:30 KST Online Backup 스냅샷: 현재 archive DB 23신호·가격이력740, 과거 standalone DB 1761신호·가격이력43950. 두 DB integrity=ok·FK위반0. 원본은 mode=ro로 열고 64페이지 단계/20초 예산, 실제 backup 약0.086/0.034초. Manifest에 임의 PC/DB UUID·시각·스키마 지문·건수·SHA 기록, 인증정보와 실제 사용자/호스트 식별값은 넣지 않았다.
+- 새로운 수동 도구 `v15_transfer`/`v15_release`만 추가했다. engine/UI/탐지 규칙·기존 DB·연구 자료 변경 없음. 자동 주기·삭제·자동 병합 없음. 두 출처의 실제 비교는 스키마 차이로 격리됐다. 다른 PC는 새 폴더에만 검증 복원하며 source lineage/정수ID 충돌·추적 갱신을 자동 판정하지 않는다.
+- 신규12+기존59 **71테스트 PASS**, 원격 게시 후 별도 새 폴더 download 경로도 PASS. 실제 다른 PC·GB급 DB·장기 네트워크 장애는 미검증이다. 사용자 V15 종료/시그널0, 이후 수집 증가·프로세스 생존 확인. DB/ZIP/registry는 Git에서 제외하고 도구·문서·비밀정보 없는 검증 자료만 commit/push한다.
+
 ## 2026-10-26 V5.2 전체 KRW WebSocket 수집 — PARTIAL
 
 - [개발·실제 검증·미완료 범위](scanner_v52_validation_20261026.md). 권위 있는 Git 경로는 현재 `C:\dev\coin_api-1`이다. 현재 BAT/웹 manager는 새 `forward_scanner_v52`를 실행한다. 기존 V4.2/V4.3의 5종목 dataset·직접 CLI와 연구 코어/정책은 그대로 보존한다.

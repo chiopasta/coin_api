@@ -11,3 +11,12 @@ data/scanner_v44_audit/
 data/scanner_v46_audit/
 data/scanner_console_v410/
 data/scanner_dashboard_v50/
+# V15 source DB and transfer artifacts belong in private Release assets, never Git.
+archive/*.db
+archive/*.db-wal
+archive/*.db-shm
+archive/*.db-journal
+crypto_scanner.db*
+v15-backup.zip
+v15-backup.zip.sha256
+data/v15_transfer/

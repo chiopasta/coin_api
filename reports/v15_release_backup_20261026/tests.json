@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.test_v15_transfer",
+    "tests.test_scanner_analysis_v51",
+    "tests.test_scanner_dashboard_v50",
+    "tests.test_scanner_v41"
+  ],
+  "exit_code": 0,
+  "network": "Only local fixture HTTP in existing dashboard tests; no exchange/GitHub test calls"
+}

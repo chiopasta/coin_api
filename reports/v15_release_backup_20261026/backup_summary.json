@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-26T14:43:30.701612+00:00",
+  "backup_directory": "data\\v15_transfer\\20261026T144330Z-a5bdb121",
+  "tag": "v15-backup-20261026T144330Z-a5bdb121",
+  "sha256": "bff4e5d37f94561cf249487a0906ea16cb29c2a6b636c9cf5e910ac4a2d14da3",
+  "files": [
+    {
+      "filename": "live_archive.db",
+      "size_bytes": 118784,
+      "sha256": "5ee3fea3f6ba2ea4e18a992d0e2d55662605d6b0ce77fe690aefd805fcc9f9b6",
+      "user_version": 0,
+      "schema_sha256": "371b8528f127da34fcbdef9b7e901cc070b440491a9bd75e4f9d46f96b9a1375",
+      "table_counts": {
+        "prepump_events": 0,
+        "prepump_tracking": 0,
+        "pullback_paper_trades": 8,
+        "pullback_watch": 23,
+        "signal_price_history": 740,
+        "signals": 23,
+        "sqlite_sequence": 2
+      },
+      "integrity": "ok",
+      "foreign_key_violations": 0,
+      "backup_seconds": 0.085763
+    },
+    {
+      "filename": "legacy_standalone.db",
+      "size_bytes": 3915776,
+      "sha256": "524179fa75e3b38a879ee9961da76d688d09701f55b401bec102d9fce3a2eb56",
+      "user_version": 0,
+      "schema_sha256": "6846adec3530d02a455b4cdd2ef932f5b6611ca342617c63cfbe477f61f8abce",
+      "table_counts": {
+        "low_heat_watch": 174,
+        "prepump_events": 76,
+        "prepump_tracking": 76,
+        "pullback_paper_trades": 305,
+        "pullback_watch": 559,
+        "signal_price_history": 43950,
+        "signals": 1761,
+        "sqlite_sequence": 5
+      },
+      "integrity": "ok",
+      "foreign_key_violations": 0,
+      "backup_seconds": 0.033854
+    }
+  ],
+  "source_inventory": {
+    "live_archive": "archive/crypto_scanner.db; V15 CWD-relative path",
+    "legacy_standalone": "C:/dev/Coin_api/crypto_scanner.db; existing analyzer/checker source",
+    "related_data": "Price histories, prepump tracks and paper trades are tables in these DBs; no extra data files referenced by these programs",
+    "not_included": "V4/V5.2, discovery/validation, historical market research DBs; unrelated formats"
+  }
+}

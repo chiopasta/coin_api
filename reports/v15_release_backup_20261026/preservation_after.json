@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-26T23:49:30.536368+09:00",
+  "protected_files": 420,
+  "changed_protected_files": [],
+  "user_v15_process_identity_preserved": true,
+  "processes": [
+    {
+      "ProcessId": 28300,
+      "ParentProcessId": 21408,
+      "CreationDate": "/Date(1793020282231)/"
+    },
+    {
+      "ProcessId": 26448,
+      "ParentProcessId": 28300,
+      "CreationDate": "/Date(1793020282352)/"
+    }
+  ],
+  "current_live_counts": {
+    "signals": 28,
+    "signal_price_history": 880,
+    "last_observed_at": "2026-10-26 23:49:20"
+  },
+  "backup_live_history_count": 740,
+  "collection_progress_confirmed": true,
+  "source_write_connections": 0,
+  "scanner_starts": 0,
+  "process_signals": 0,
+  "exchange_api_calls": 0
+}
