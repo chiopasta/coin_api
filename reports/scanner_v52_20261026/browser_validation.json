@@ -1,0 +1,1 @@
+{"status":"BLOCKED","inventory":{"apps":[],"browsers":[]},"attempt":"createBrowserTab(iab,http://127.0.0.1:8765)","error":"Browser is not available: iab","browser_clicks":false,"visual_qa":false,"barriers_bypassed":false}

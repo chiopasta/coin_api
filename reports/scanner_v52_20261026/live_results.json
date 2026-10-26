@@ -1,0 +1,468 @@
+{
+  "small": {
+    "root": "data\\scanner_v43_live\\v52_small_1793017478896526700",
+    "summary": {
+      "run_id": "075de2e7d06c4fd7a7edce99c7ceebbe",
+      "status": "BOUNDED_STOP",
+      "reason": "TIME_LIMIT",
+      "requests": 10,
+      "started_at": 1793017487.443964,
+      "ended_at": 1793017577.126602,
+      "close_errors": {},
+      "per_exchange": {
+        "UPBIT": {
+          "integrity": "ok",
+          "candles": 720,
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          }
+        },
+        "BITHUMB": {
+          "integrity": "ok",
+          "candles": 715,
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          }
+        }
+      }
+    },
+    "exchanges": {
+      "UPBIT": {
+        "listed": 2,
+        "eligible": 2,
+        "excluded": 0,
+        "sent": 2,
+        "received_unique": 2,
+        "eligible_received": 2,
+        "exclusion_reasons": {},
+        "stored_ws_bars": 2,
+        "integrity": "ok",
+        "candles": 720,
+        "signals": 0,
+        "ws_snapshot": {
+          "eligible": 2,
+          "listed": 2,
+          "registered": 2,
+          "subscription_sent": 2,
+          "subscription_confirmed": 2,
+          "active": 2,
+          "stale": 0,
+          "blocked": 0,
+          "excluded": 0,
+          "evaluated": 1,
+          "complete_30m": 0,
+          "evaluation_target": 1793017500,
+          "last_received": 1793017574.4062505,
+          "status": "CONNECTED",
+          "shards": 1,
+          "connected_shards": 1,
+          "counters": {
+            "connection_attempts": 1,
+            "messages": 232,
+            "bytes": 188831,
+            "closed_candles": 2
+          }
+        }
+      },
+      "BITHUMB": {
+        "listed": 2,
+        "eligible": 2,
+        "excluded": 0,
+        "sent": 2,
+        "received_unique": 2,
+        "eligible_received": 2,
+        "exclusion_reasons": {},
+        "stored_ws_bars": 2,
+        "integrity": "ok",
+        "candles": 715,
+        "signals": 0,
+        "ws_snapshot": {
+          "eligible": 2,
+          "listed": 2,
+          "registered": 2,
+          "subscription_sent": 2,
+          "subscription_confirmed": 2,
+          "active": 2,
+          "stale": 0,
+          "blocked": 0,
+          "excluded": 0,
+          "evaluated": 1,
+          "complete_30m": 0,
+          "evaluation_target": 1793017500,
+          "last_received": 1793017575.460317,
+          "status": "CONNECTED",
+          "shards": 1,
+          "connected_shards": 1,
+          "counters": {
+            "connection_attempts": 1,
+            "messages": 71,
+            "bytes": 42210,
+            "partial_trades": 2,
+            "closed_candles": 2
+          }
+        }
+      }
+    },
+    "ntp_attempts": 12,
+    "clock_checks": 2,
+    "clocks_pass": true,
+    "exit": {
+      "worker_reaped": true,
+      "worker_returncode": 0,
+      "forced_kill": false,
+      "automatic_restart": false
+    }
+  },
+  "full": {
+    "root": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_403fb7161b6046baa7f35f1a9e2affb0",
+    "summary": {
+      "run_id": "4a8a3cdf79be485e93f30c40fc1ae401",
+      "status": "STOPPED",
+      "reason": "STOP_REQUESTED",
+      "requests": 45,
+      "started_at": 1793017673.6831825,
+      "ended_at": 1793017781.6148016,
+      "close_errors": {},
+      "per_exchange": {
+        "UPBIT": {
+          "integrity": "ok",
+          "candles": 1651,
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          }
+        },
+        "BITHUMB": {
+          "integrity": "ok",
+          "candles": 947,
+          "signals": {
+            "default_view": "LIVE",
+            "LIVE": {
+              "source": "LIVE",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "CATCHUP": {
+              "source": "CATCHUP",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            },
+            "ALL": {
+              "source": "ALL",
+              "signals": 0,
+              "signal_markets": 0,
+              "L1": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "L2": {
+                "statuses": {},
+                "valid": 0,
+                "success": 0,
+                "rate_pct": null
+              },
+              "collection_errors": []
+            }
+          }
+        }
+      }
+    },
+    "exchanges": {
+      "UPBIT": {
+        "listed": 298,
+        "eligible": 296,
+        "excluded": 2,
+        "sent": 298,
+        "received_unique": 298,
+        "eligible_received": 296,
+        "exclusion_reasons": {
+          "KRW-SOPH": "OFFICIAL_MARKET_STATE_PREDELISTING",
+          "KRW-ZIL": "OFFICIAL_MARKET_STATE_PREDELISTING"
+        },
+        "stored_ws_bars": 0,
+        "integrity": "ok",
+        "candles": 1651,
+        "signals": 0,
+        "ws_snapshot": {
+          "eligible": 296,
+          "listed": 298,
+          "registered": 296,
+          "subscription_sent": 298,
+          "subscription_confirmed": 298,
+          "active": 147,
+          "stale": 59,
+          "blocked": 0,
+          "excluded": 2,
+          "evaluated": 0,
+          "complete_30m": 0,
+          "evaluation_target": 1793017500,
+          "last_received": 1793017781.4387672,
+          "status": "CONNECTED",
+          "shards": 3,
+          "connected_shards": 3,
+          "counters": {
+            "connection_attempts": 3,
+            "messages": 9041,
+            "bytes": 7070463,
+            "partial_trades": 1756
+          }
+        }
+      },
+      "BITHUMB": {
+        "listed": 489,
+        "eligible": 477,
+        "excluded": 12,
+        "sent": 489,
+        "received_unique": 484,
+        "eligible_received": 477,
+        "exclusion_reasons": {
+          "KRW-ZIL": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-EGG": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-TEMCO": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-FANC": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-D": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-AZIT": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-STAT": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-HOOK": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-ACX": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-SOPH": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-CUDIS": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+          "KRW-CAMP": "UNPARSEABLE_OFFICIAL_DELISTING_DATE"
+        },
+        "stored_ws_bars": 0,
+        "integrity": "ok",
+        "candles": 947,
+        "signals": 0,
+        "ws_snapshot": {
+          "eligible": 477,
+          "listed": 489,
+          "registered": 477,
+          "subscription_sent": 489,
+          "subscription_confirmed": 484,
+          "active": 101,
+          "stale": 95,
+          "blocked": 0,
+          "excluded": 12,
+          "evaluated": 0,
+          "complete_30m": 0,
+          "evaluation_target": 1793017500,
+          "last_received": 1793017781.351887,
+          "status": "CONNECTED",
+          "shards": 5,
+          "connected_shards": 5,
+          "counters": {
+            "connection_attempts": 5,
+            "messages": 4752,
+            "bytes": 2762584,
+            "partial_trades": 1348
+          }
+        }
+      }
+    },
+    "ntp_attempts": 18,
+    "clock_checks": 3,
+    "clocks_pass": true,
+    "exit": {
+      "worker_reaped": true,
+      "worker_returncode": 0,
+      "forced_kill": false,
+      "automatic_restart": false
+    },
+    "peak_active_simultaneous": 363,
+    "peak_active_by_exchange": {
+      "UPBIT": 192,
+      "BITHUMB": 171
+    }
+  },
+  "total_exchange_http": 55,
+  "total_ntp_attempts": 30
+}

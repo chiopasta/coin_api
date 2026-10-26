@@ -1,0 +1,23 @@
+{
+  "tests": 165,
+  "passed": 165,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 17.245339799999783,
+  "suites": [
+    "test_forward_scanner_v52",
+    "test_forward_scanner_v4",
+    "test_forward_scanner_v4_operations",
+    "test_forward_scanner_v42",
+    "test_forward_scanner_v43",
+    "test_scanner_control_v410",
+    "test_scanner_dashboard_v50",
+    "test_scanner_analysis_v51",
+    "test_scanner_clock_v52",
+    "test_scanner_start_v53",
+    "test_scanner_start_diagnosis",
+    "test_scanner_market_scope"
+  ],
+  "exchange_network_in_automated_tests": false
+}

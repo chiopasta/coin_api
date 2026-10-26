@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "unique_html_ids": 71,
+  "menus": [
+    "/",
+    "/analysis"
+  ],
+  "production_js_rendered": true,
+  "live": {
+    "active": "363",
+    "registered_requested_confirmed": "787 / 787 / 773",
+    "evaluated_complete": "0 / 0"
+  },
+  "stopped": {
+    "active": "0",
+    "registered_requested_confirmed": "787 / 0 / 0"
+  },
+  "fixture_note": "Actual peak snapshot; historical registered/confirmed field semantics normalized to final API schema from per-market evidence",
+  "browser_visual_qa": false
+}

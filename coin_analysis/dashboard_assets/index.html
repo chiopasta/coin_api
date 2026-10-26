@@ -9,7 +9,7 @@
 <body>
 <main>
   <header>
-    <div class="brand"><span class="logo" aria-hidden="true">C<span>↗</span></span><div><div class="eyebrow">LOCAL OBSERVATION DESK <span>V5.1</span></div><h1>CHIO COIN SCANNER</h1><p>급등 신호 관측 · UPBIT / BITHUMB</p></div></div>
+    <div class="brand"><span class="logo" aria-hidden="true">C<span>↗</span></span><div><div class="eyebrow">LOCAL OBSERVATION DESK <span>V5.2</span></div><h1>CHIO COIN SCANNER</h1><p>급등 신호 관측 · UPBIT / BITHUMB</p></div></div>
     <div class="server"><span class="dot"></span><span id="web-state">웹 서버 연결 중</span><small id="updated">마지막 갱신 UNKNOWN</small></div>
   </header>
   <nav aria-label="주 메뉴"><a href="/" id="nav-live">실시간 감시</a><a href="/analysis" id="nav-analysis">급등 신호 분석</a></nav>
@@ -31,7 +31,12 @@
     <article class="card"><div class="card-label">전체 KRW 시장 · 최근 조회</div><strong id="total-markets">UNKNOWN</strong><small id="total-by-exchange">거래소 시장목록 근거 없음</small><small id="total-market-time">조회 시각 확인 중</small></article>
     <article class="card"><div class="card-label">집중 추적 · 후속 평가 대기</div><strong id="focus-markets">UNKNOWN</strong><small id="focus-pairs">저장된 PENDING 평가 신호의 종목 수</small><small>순위 선별 없음 · 스캔 대상 수와 구분</small></article>
   </section>
-  <p id="scope-note" class="scope-note">현재는 고정 범위 관측이며 전체 시장 스캔이 아닙니다. 시장목록 수는 실제 주문 가능 여부를 보장하지 않습니다.</p>
+  <p id="scope-note" class="scope-note">시장목록 수와 실제 수신·평가 수는 구분합니다. 시장목록 수는 실제 주문 가능 여부를 보장하지 않습니다.</p>
+  <section id="ws-panel" class="cards scope-cards" aria-label="WebSocket 수집 상태" hidden>
+    <article class="card"><div class="card-label">등록 / 구독 요청 / 수신 확인</div><strong id="ws-subscriptions">UNKNOWN</strong><small>거래소·종목 쌍 · 요청 전송과 실제 응답 구분</small></article>
+    <article class="card"><div class="card-label">최근 유효 수신 / 지연 / 차단</div><strong id="ws-active">UNKNOWN</strong><small id="ws-last">최근 정상 수신 UNKNOWN</small></article>
+    <article class="card"><div class="card-label">탐지 평가 / 30분 원천 완전</div><strong id="ws-evaluated">UNKNOWN</strong><small id="ws-requests">수집량과 탐지 평가량 구분</small></article>
+  </section>
   </div>
   <div id="analysis-page" hidden>
     <div class="analysis-heading"><div><div class="eyebrow">SIGNAL ANALYSIS</div><h2>급등 신호 분석실</h2><p>저장된 신호의 단순 가격 변화 · 수수료·슬리피지·체결 미반영</p></div><div><label class="sr-only" for="analysis-group">분석 자료</label><select id="analysis-group"><option value="ARCHIVE_LIVE">연구 보관 · LIVE</option><option value="ARCHIVE_CATCHUP">연구 보관 · 지연 수집</option><option value="OBSERVATION_LIVE">신규 관측 · LIVE</option><option value="OBSERVATION_CATCHUP">신규 관측 · 지연 수집</option><option value="ALL">전체 · 구분별 비교</option></select></div></div>

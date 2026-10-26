@@ -1,0 +1,217 @@
+{
+  "/": {
+    "status": 200,
+    "body": {
+      "bytes": 10266
+    }
+  },
+  "/analysis": {
+    "status": 200,
+    "body": {
+      "bytes": 10266
+    }
+  },
+  "/api/snapshot": {
+    "status": 200,
+    "body": {
+      "web": "RUNNING",
+      "scanner": {
+        "status": "STOPPED",
+        "phase": "TERMINAL",
+        "started_at": 1793017663.5203981,
+        "elapsed_monotonic_seconds": 118.18841169999996,
+        "clock": "PASS (check age 499.2s; periodic recheck 600s)",
+        "db_saved": "SAVED / WAL checkpoint and normal close confirmed",
+        "signals": 0,
+        "size": 1007616,
+        "collected": 1793017779,
+        "last_signal": null,
+        "market_scope": {
+          "mode": "ALL_KRW_WEBSOCKET",
+          "configured_unique": 493,
+          "configured_venue_pairs": 787,
+          "scan": {
+            "unique": null,
+            "venue_pairs": 0,
+            "signal_pairs": null
+          },
+          "total": {
+            "status": "FRESH",
+            "unique": 493,
+            "venue_pairs": 787,
+            "by_exchange": {
+              "UPBIT": 298,
+              "BITHUMB": 489
+            },
+            "at": 1793017678.5011172,
+            "basis": "EXCHANGE_LISTED_KRW; ORDER_AVAILABILITY_NOT_EXPOSED"
+          },
+          "focus": {
+            "unique": 0,
+            "venue_pairs": 0,
+            "basis": "SAVED_PENDING_FOLLOWUP_HORIZONS; NOT_A_RANKED_SUBSET"
+          }
+        },
+        "websocket": {
+          "at": 1793017781.5799062,
+          "mode": "ALL_KRW_WEBSOCKET",
+          "terminal": true,
+          "status": "STOPPED",
+          "exchanges": {
+            "UPBIT": {
+              "eligible": 296,
+              "listed": 298,
+              "registered": 296,
+              "subscription_sent": 298,
+              "subscription_confirmed": 298,
+              "active": 147,
+              "stale": 59,
+              "blocked": 0,
+              "excluded": 2,
+              "evaluated": 0,
+              "complete_30m": 0,
+              "evaluation_target": 1793017500,
+              "last_received": 1793017781.4387672,
+              "status": "CONNECTED",
+              "shards": 3,
+              "connected_shards": 3,
+              "counters": {
+                "connection_attempts": 3,
+                "messages": 9041,
+                "bytes": 7070463,
+                "partial_trades": 1756
+              }
+            },
+            "BITHUMB": {
+              "eligible": 477,
+              "listed": 489,
+              "registered": 477,
+              "subscription_sent": 489,
+              "subscription_confirmed": 484,
+              "active": 101,
+              "stale": 95,
+              "blocked": 0,
+              "excluded": 12,
+              "evaluated": 0,
+              "complete_30m": 0,
+              "evaluation_target": 1793017500,
+              "last_received": 1793017781.351887,
+              "status": "CONNECTED",
+              "shards": 5,
+              "connected_shards": 5,
+              "counters": {
+                "connection_attempts": 5,
+                "messages": 4752,
+                "bytes": 2762584,
+                "partial_trades": 1348
+              }
+            }
+          },
+          "requests": 45,
+          "queue_depth": 16,
+          "fresh": false
+        },
+        "live_collecting": false,
+        "markets": 0,
+        "venue_pairs": 0,
+        "reason": null,
+        "connections": {
+          "UPBIT": {
+            "status": "DISCONNECTED",
+            "at": 1793017781.4387672
+          },
+          "BITHUMB": {
+            "status": "DISCONNECTED",
+            "at": 1793017781.351887
+          }
+        }
+      },
+      "total": 163,
+      "today_live_signals": 0,
+      "errors": [],
+      "at": 1793018177.773371,
+      "limit": 200,
+      "returned_signal_count": 163
+    }
+  },
+  "/api/analysis?group=ALL": {
+    "status": 200,
+    "body": {
+      "summary": {
+        "total": 163,
+        "analyzed": 161,
+        "return_30m": {
+          "value": 0.22339703467940297,
+          "n": 133
+        },
+        "rise_30m": {
+          "value": 48.87218045112782,
+          "n": 133
+        },
+        "mfe_30m": {
+          "value": 2.1071490973966265,
+          "n": 133
+        },
+        "mae_30m": {
+          "value": -1.5461822554867477,
+          "n": 133
+        },
+        "curve": [
+          {
+            "minutes": 5,
+            "value": 0.24605280339394542,
+            "n": 161
+          },
+          {
+            "minutes": 15,
+            "value": 0.32551602200167107,
+            "n": 148
+          },
+          {
+            "minutes": 30,
+            "value": 0.22339703467940297,
+            "n": 133
+          },
+          {
+            "minutes": 60,
+            "value": 0.47863066583289915,
+            "n": 114
+          }
+        ]
+      },
+      "offset": 0,
+      "limit": 200,
+      "at": 1793018172,
+      "errors": [],
+      "group": "ALL",
+      "returned_signal_count": 163,
+      "pattern_count": 2
+    }
+  },
+  "/api/control": {
+    "status": 200,
+    "body": {
+      "action": null,
+      "state": "IDLE",
+      "message": "스캐너 시작 버튼으로 관측을 시작하세요.",
+      "busy": false,
+      "starting": false,
+      "stopping": false,
+      "seconds": 150,
+      "max_requests": 50,
+      "process_alive": false,
+      "scanner": {
+        "status": "STOPPED",
+        "phase": "TERMINAL",
+        "clock": "PASS (check age 499.4s; periodic recheck 600s)",
+        "db_saved": "SAVED / WAL checkpoint and normal close confirmed"
+      }
+    }
+  },
+  "raw_evidence": {
+    "path": "C:\\dev\\coin_api-1\\data\\scanner_v43_live\\console_403fb7161b6046baa7f35f1a9e2affb0\\final_http_checks.raw.json",
+    "sha256": "73b80a904f234f9a9072d510ac32dc37e29cd747cb9bd4d5954ab157e6cafb90",
+    "bytes": 660724,
+    "note": "Full signal lists retained outside Git; all summary/count/status fields preserved"
+  }
+}

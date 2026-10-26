@@ -1,0 +1,272 @@
+{
+  "at": 1793018671.759406,
+  "baseline_files": 580,
+  "changed": [
+    "data\\scanner_console_v410\\current.json",
+    "data\\scanner_dashboard_v50\\current.json",
+    "data\\scanner_dashboard_v50\\scanner_pending.json",
+    "data\\scanner_dashboard_v50\\web.log",
+    "docs\\research_status.md"
+  ],
+  "missing": [
+    "data\\forward_scanner_v4.db-shm",
+    "data\\forward_scanner_v4.db-wal"
+  ],
+  "sqlite_sidecar_cleanup": {
+    "paths": [
+      "data\\forward_scanner_v4.db-shm",
+      "data\\forward_scanner_v4.db-wal"
+    ],
+    "initial_wal_was_empty": true,
+    "manual_deletion": false
+  },
+  "unexpected_changes": [],
+  "unexpected_missing": [],
+  "existing_db_count": 35,
+  "existing_databases": [
+    {
+      "path": "data\\altcoin_market.db",
+      "sha256": "11779bc0f043cb7256c9a15c04a83a1e400a4eb5552c54eb1bba716515e2f0dd",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\forward_scanner_v4.db",
+      "sha256": "376c66056b10a012bc917246a29972138106a1cef1c10e13463efc920c54d451",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\forward_scanner_v4_before_source_1790866337414810500.db",
+      "sha256": "331e4a59ae94f353ff7bcc9e037b4e1644eaa3609fbc91c4093f89801468b7f2",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\forward_scanner_v4_smoke_1790696252.db",
+      "sha256": "b566451f3e6f913d4a4f3fe4528563429ba1b15e2e2181e2fe7f8d6ffaeeeeb9",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\historical_market.db",
+      "sha256": "001e79d2e4250722168bea63d8dd802820804ee42944aec18a97e2c418d88c03",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\replay_20260921.db",
+      "sha256": "22e6204d84279921c3b648724ada29b84f6d61ab1826e173409dbfb4d8f00e8f",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\research_market_v1.db",
+      "sha256": "ea217854758134dafc96dcf56ee86a474d1832f1eb35c65f547815d3842a1633",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\research_market_v1_smoke.db",
+      "sha256": "d55e00d98ef5dabd73915225a6d2124d8c1147f66ec43a0de79707b8fec47517",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\research_market_validation_v1.db",
+      "sha256": "741e03592849630dbe7b7a2bb82ae9b31587afee66f4f351c9e8e0ed652a8248",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_dashboard_v50\\analysis.db",
+      "sha256": "0a7475dfefc24cade15d5e0e4b2e3a5e4da02fc452d72c1a1749d02f5c27f08c",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\console_2ea5dea262de41a786e346935d868935\\control.db",
+      "sha256": "5d3213b31ea7c8c9734f73863e2efd6acd26719f0c535e7a36f86ff8da499bea",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\console_6822d370c52446b1a96b6bda7d5da9eb\\bithumb.db",
+      "sha256": "c26708f3e07e8776ac90806967d27a9d2925068d707c5d0c958aca7dd7ccfc7e",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\console_6822d370c52446b1a96b6bda7d5da9eb\\control.db",
+      "sha256": "822b759585d45596dd3ca27f7ee2eb9d2b1b63552be3ac36d75260167be3b3be",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\console_6822d370c52446b1a96b6bda7d5da9eb\\upbit.db",
+      "sha256": "9ee5d51d85bc493945db694c89f09db90a51042c4f217dbd69b459a34cd5215d",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\bithumb.db",
+      "sha256": "001942a70729cb883584a47656bf0d4871e5a639291a5150446e1e4c0208e021",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\control.db",
+      "sha256": "fe35370371b05b3aa717df6a87cdf29ead01f71c3d87f76b2078cb2e15ffc075",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\console_90f9746fbdc64460a831f90c60154c7f\\upbit.db",
+      "sha256": "a33bf1b4f9836ec21df15926b1d629a085383ed802440cf6ac0073236682a8f2",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261024\\bithumb.db",
+      "sha256": "c0bcaf00c131ce7dd90db9932d46bada81b07f8d4823d43c728e05ddbcfcc4b3",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261024\\control.db",
+      "sha256": "82447d17232df7f3ee539ec0faba5c98e1aec8e7885735a90b4be18415ddf1cb",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261024\\upbit.db",
+      "sha256": "b142307ee13897f777a6221db78425e7737674c832491b0d18012179e4149450",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261025_v49\\bithumb.db",
+      "sha256": "36ba432e5cc6e15e179f1b31d81464b66c23938dc02c99d4abb2d654ee31f8f2",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261025_v49\\control.db",
+      "sha256": "6f2a1d69e5f92ada52ab4049c3cc60b0bc1b8067312c5e93f660c587d65201bb",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261025_v49\\upbit.db",
+      "sha256": "eeb95d08c0feb2a28c95296e8d5d18d337923d5e0107d7fc715cdb7613e66f37",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261025_v49\\before_resume\\bithumb.db",
+      "sha256": "f894a92b6527b586630806e272231b8b43c8ec24e3f1651f2a51cb0ca56cced5",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v43_live\\episode_20261025_v49\\before_resume\\upbit.db",
+      "sha256": "34c04f6e1b043985a71650f38ec770230df4265008a1e8dd6be8209e9584eaf7",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.bootstrap-backup.db",
+      "sha256": "49669dd566633ad09aa85fa69dd8735e7bf28c78444dc5fdab75aac16ed411df",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v42_live\\episode_20261024_supported\\bithumb.db",
+      "sha256": "73c2da39f7cfa576c8e5dfd463029cb6762dd5368e218077c7791445b767bf3c",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v42_live\\episode_20261024_supported\\upbit.bootstrap-backup.db",
+      "sha256": "128fab87b44ee5ad25b483ea651cc919d808741c699fee5cc623b4f4948fdee7",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\scanner_v42_live\\episode_20261024_supported\\upbit.db",
+      "sha256": "d7344fb719a71ca4636e2ced029d13af0235ece3b603287d3b2cc7a0baff784c",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\backups\\forward_scanner_v4_wal_20261008_000701\\forward_scanner_v4.db",
+      "sha256": "376c66056b10a012bc917246a29972138106a1cef1c10e13463efc920c54d451",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\backups\\forward_scanner_v4_wal_repair_20261008_001220_1791385940825089300\\forward_scanner_v4.db",
+      "sha256": "376c66056b10a012bc917246a29972138106a1cef1c10e13463efc920c54d451",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\backups\\v42_preflight_20261024\\legacy.db",
+      "sha256": "524179fa75e3b38a879ee9961da76d688d09701f55b401bec102d9fce3a2eb56",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\backups\\v42_preflight_20261024\\original_v4.db",
+      "sha256": "a72fe31a51861824bd8148965b130319dc14cfdb741dacc120ff7ba102f6cece",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\backups\\v43_pre_resume_20261024\\bithumb.db",
+      "sha256": "b46619e3b019b155369d29144477647a70c942bac9e173bd3662287502207225",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    },
+    {
+      "path": "data\\backups\\v43_pre_resume_20261024\\upbit.db",
+      "sha256": "7a5dfc23702b109d5453104b9938af0ce5dbcd798b9aac8858fe12efa7dbcf6c",
+      "bytes_unchanged": true,
+      "integrity": "ok"
+    }
+  ],
+  "archive_signals": 163,
+  "requested_215_rows_present": false,
+  "original_archive_sha256": "376c66056b10a012bc917246a29972138106a1cef1c10e13463efc920c54d451",
+  "archive_bytes_unchanged": true,
+  "manager_alive": false,
+  "supervisor_alive": false,
+  "scanner_status": "STOPPED",
+  "save_status": "SAVED / WAL checkpoint and normal close confirmed",
+  "web_listener_8765": false,
+  "unrelated_processes": [
+    {
+      "pid": 23656,
+      "alive": true
+    },
+    {
+      "pid": 23680,
+      "alive": true
+    },
+    {
+      "pid": 23728,
+      "alive": true
+    }
+  ],
+  "research_core_changed": false,
+  "untested": [
+    "browser_click_and_visual",
+    "full_market_warmup_and_detection_completion",
+    "native_rest_vs_all_ws_bars",
+    "natural_live_signal_and_30_60m_outcome",
+    "final_operational_patches_live_rerun",
+    "new_listing_without_dataset_restart",
+    "v52_resume",
+    "24h_unattended"
+  ]
+}

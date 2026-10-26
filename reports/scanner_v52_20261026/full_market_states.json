@@ -1,0 +1,7089 @@
+{
+  "UPBIT": {
+    "KRW-GEOD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-WAXP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.1529298,
+      "last_exchange": 1793017762.223,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CARV": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.0900054,
+      "last_exchange": 1793017762.716,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-LSK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.4704087,
+      "last_exchange": 1793017779.169,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-0G": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017765.709973,
+      "last_exchange": 1793017765.406,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-WIF": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017693.8639777,
+      "last_exchange": 1793017693.463,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-TRAC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017768.3034277,
+      "last_exchange": 1793017768.033,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BORA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PUNDIX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017746.8537357,
+      "last_exchange": 1793017695.622,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PROS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017755.3651667,
+      "last_exchange": 1793017739.414,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-USD1": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PROM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017730.223125,
+      "last_exchange": 1793017688.725,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BAT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-HUNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-PENGU": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017705.3621964,
+      "last_exchange": 1793017675.599,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-FIL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BEAM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.7100663,
+      "last_exchange": 1793017777.519,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-META2": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017773.0412083,
+      "last_exchange": 1793017772.918,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DOOD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.0295293,
+      "last_exchange": 1793017776.729,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-WAVES": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-USDC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017760.1425037,
+      "last_exchange": 1793017759.884,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MOVE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017742.4710412,
+      "last_exchange": 1793017695.842,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TREE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.7527292,
+      "last_exchange": 1793017778.685,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-USDE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-USDG": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-WET": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1114922,
+      "last_exchange": 1793017663.841,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-USDT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2632732,
+      "last_exchange": 1793017781.129,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-USDS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-2Z": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0698607,
+      "last_exchange": 1793017667.184,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BOUNTY": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2601192,
+      "last_exchange": 1793017777.421,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-KAITO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0984437,
+      "last_exchange": 1793017668.203,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-LPT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-FOLD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017721.501634,
+      "last_exchange": 1793017697.328,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ETHFI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.530315,
+      "last_exchange": 1793017780.438,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-DKA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ANKR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ALGO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.5016863,
+      "last_exchange": 1793017720.402,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SHIB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017770.1332762,
+      "last_exchange": 1793017770.006,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-QUID": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017724.774284,
+      "last_exchange": 1793017724.576,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-UNI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.0325043,
+      "last_exchange": 1793017776.896,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BIO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-WLFI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1125412,
+      "last_exchange": 1793017676.68,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-UP2": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2633,
+      "last_exchange": 1793017780.964,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-TOKAMAK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SKY": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CYBER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0991971,
+      "last_exchange": 1793017678.347,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SKR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-DOGE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.8802366,
+      "last_exchange": 1793017760.241,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-WLD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.483731,
+      "last_exchange": 1793017777.949,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PEPE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017725.5010574,
+      "last_exchange": 1793017692.937,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-HBAR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017753.830924,
+      "last_exchange": 1793017753.746,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-KMNO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BCH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017767.9290435,
+      "last_exchange": 1793017767.717,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-NEWT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017740.27297,
+      "last_exchange": 1793017740.146,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SEI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017729.1542249,
+      "last_exchange": 1793017712.523,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-JPYC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-JST": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AAVE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017687.7121274,
+      "last_exchange": 1793017687.646,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-JTO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017693.5234084,
+      "last_exchange": 1793017693.378,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-JUP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017715.5020318,
+      "last_exchange": 1793017715.252,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BFC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017769.780469,
+      "last_exchange": 1793017744.094,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-VVV": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.1227856,
+      "last_exchange": 1793017773.976,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017768.7096949,
+      "last_exchange": 1793017768.577,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PIEVERSE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017719.6719987,
+      "last_exchange": 1793017719.483,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ALT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2601397,
+      "last_exchange": 1793017780.963,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-B3": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-LAYER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.5017593,
+      "last_exchange": 1793017774.123,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TRX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017773.402442,
+      "last_exchange": 1793017773.301,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-POWR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-EUL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017702.6996338,
+      "last_exchange": 1793017702.291,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ATOM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017687.3615682,
+      "last_exchange": 1793017687.234,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ARKM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.451916,
+      "last_exchange": 1793017688.156,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CRV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CRO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-NXPC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1051004,
+      "last_exchange": 1793017621.692,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-A": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017767.5698154,
+      "last_exchange": 1793017767.292,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-TRUMP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017767.9344819,
+      "last_exchange": 1793017762.336,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-F": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-G": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017708.621395,
+      "last_exchange": 1793017708.32,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CELO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AERO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0701182,
+      "last_exchange": 1793017652.468,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CTC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017773.0399997,
+      "last_exchange": 1793017772.766,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ANIME": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.4290016,
+      "last_exchange": 1793017774.099,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-APT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.810501,
+      "last_exchange": 1793017752.411,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-MOCA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-API3": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AHT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017689.1509254,
+      "last_exchange": 1793017629.851,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-EGLD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.4811964,
+      "last_exchange": 1793017779.389,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BLEND": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017749.7735345,
+      "last_exchange": 1793017749.635,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ERA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.5303376,
+      "last_exchange": 1793017780.32,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-NCT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017776.3406992,
+      "last_exchange": 1793017760.923,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-FF": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017687.3615928,
+      "last_exchange": 1793017687.123,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.8890622,
+      "last_exchange": 1793017779.45,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CASHCAT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017695.0207407,
+      "last_exchange": 1793017694.73,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017758.3420985,
+      "last_exchange": 1793017758.147,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PLUME": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ESP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017747.9699867,
+      "last_exchange": 1793017747.615,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.1095219,
+      "last_exchange": 1793017703.627,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-NEO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.881493,
+      "last_exchange": 1793017774.141,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ETC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.8895724,
+      "last_exchange": 1793017761.603,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-IOTA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0945587,
+      "last_exchange": 1793017668.756,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-IOST": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AKT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017752.742346,
+      "last_exchange": 1793017693.051,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-COW": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-VIRTUAL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.111367,
+      "last_exchange": 1793017664.222,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RLUSD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ETH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.7190883,
+      "last_exchange": 1793017767.764,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-IQ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-NEAR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.5315883,
+      "last_exchange": 1793017780.287,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-PRL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017771.6233268,
+      "last_exchange": 1793017771.321,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AGLD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.789793,
+      "last_exchange": 1793017688.681,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ID": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017753.1274629,
+      "last_exchange": 1793017693.22,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-IO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-IN": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.5309453,
+      "last_exchange": 1793017780.407,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MANTRA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017770.8609204,
+      "last_exchange": 1793017770.586,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-WAL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017712.9537888,
+      "last_exchange": 1793017712.606,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PENDLE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BLUR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017769.7805016,
+      "last_exchange": 1793017730.624,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PYUSD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AWE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-THETA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AXL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017741.0503354,
+      "last_exchange": 1793017740.555,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-HP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SAND": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017743.2132766,
+      "last_exchange": 1793017686.35,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-WCT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-YGG": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017702.3146696,
+      "last_exchange": 1793017691.633,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AXS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.830113,
+      "last_exchange": 1793017716.316,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ARDR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017751.6697545,
+      "last_exchange": 1793017751.45,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-POD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.7709038,
+      "last_exchange": 1793017765.634,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ME": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TRUST": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017706.8028712,
+      "last_exchange": 1793017686.01,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SONIC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ARB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017772.6999214,
+      "last_exchange": 1793017772.439,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-RSR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-POL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1087441,
+      "last_exchange": 1793017637.788,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CVC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017735.9302955,
+      "last_exchange": 1793017677.127,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-T": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2840574,
+      "last_exchange": 1793017726.748,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ARX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-W": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017713.3431952,
+      "last_exchange": 1793017685.303,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ARK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.5205393,
+      "last_exchange": 1793017742.222,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AVNT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017760.92412,
+      "last_exchange": 1793017760.579,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-O": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.1322181,
+      "last_exchange": 1793017738.819,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-LA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017760.171392,
+      "last_exchange": 1793017700.654,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-HYPER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.1308823,
+      "last_exchange": 1793017778.969,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ATH": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-LIT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-NMR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017743.2221174,
+      "last_exchange": 1793017742.818,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TAIKO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.7226102,
+      "last_exchange": 1793017777.347,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AVAX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2990422,
+      "last_exchange": 1793017781.257,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-XAUT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017699.3733945,
+      "last_exchange": 1793017698.954,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CPOOL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017776.3504198,
+      "last_exchange": 1793017719.236,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CAP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.898994,
+      "last_exchange": 1793017779.169,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-IMX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017693.542284,
+      "last_exchange": 1793017693.452,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-INJ": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017771.9918816,
+      "last_exchange": 1793017771.688,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MVL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.8206556,
+      "last_exchange": 1793017728.702,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-HIVE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017714.802204,
+      "last_exchange": 1793017687.249,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CBK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PUFFER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017759.0831437,
+      "last_exchange": 1793017758.851,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-XLM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017712.5941443,
+      "last_exchange": 1793017675.008,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-OP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1061442,
+      "last_exchange": 1793017642.103,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SAFE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GLM": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SUPER": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-LINEA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DATA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017766.1208274,
+      "last_exchange": 1793017765.979,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-KERNEL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017768.3409636,
+      "last_exchange": 1793017727.906,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-POKT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017737.0910552,
+      "last_exchange": 1793017736.736,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AXIS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2991626,
+      "last_exchange": 1793017777.618,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SENT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZKC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.5155733,
+      "last_exchange": 1793017681.351,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-KNC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017716.6713595,
+      "last_exchange": 1793017716.44,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ZKP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1127863,
+      "last_exchange": 1793017670.354,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AUCTION": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017709.0002973,
+      "last_exchange": 1793017683.676,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ORDER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.3010454,
+      "last_exchange": 1793017778.69,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-FCT2": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-MTL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017729.1715074,
+      "last_exchange": 1793017683.748,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-VET": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017721.5033388,
+      "last_exchange": 1793017721.329,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PONS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1087735,
+      "last_exchange": 1793017629.704,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TAO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017690.644182,
+      "last_exchange": 1793017690.228,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-QTUM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017699.383908,
+      "last_exchange": 1793017695.943,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-LINK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017754.255158,
+      "last_exchange": 1793017750.968,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-XRP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.4930193,
+      "last_exchange": 1793017779.252,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CHZ": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017772.3696785,
+      "last_exchange": 1793017714.923,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ASTR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.0507598,
+      "last_exchange": 1793017776.848,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ZK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.4930043,
+      "last_exchange": 1793017779.144,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ENA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.3596087,
+      "last_exchange": 1793017781.327,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-MANA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017705.3920815,
+      "last_exchange": 1793017705.231,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-OPEN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-PYTH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017769.453674,
+      "last_exchange": 1793017769.307,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MPLX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017722.60202,
+      "last_exchange": 1793017675.64,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ENS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017735.2295444,
+      "last_exchange": 1793017677.068,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-GRT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017707.9213893,
+      "last_exchange": 1793017707.873,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-PUMP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017743.96307,
+      "last_exchange": 1793017686.52,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-XTZ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CKB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-GTC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017753.1624854,
+      "last_exchange": 1793017693.685,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-KAVA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TOSHI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017770.8831844,
+      "last_exchange": 1793017770.55,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BARD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017747.9899387,
+      "last_exchange": 1793017688.462,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ZRO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017758.7171938,
+      "last_exchange": 1793017758.603,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RAY": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017765.3835282,
+      "last_exchange": 1793017756.974,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ONDO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017776.4407358,
+      "last_exchange": 1793017773.349,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ZRX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GMT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TFUEL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017715.5434194,
+      "last_exchange": 1793017687.1,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CFG": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.08864,
+      "last_exchange": 1793017679.766,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AZTEC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017708.2904046,
+      "last_exchange": 1793017669.863,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CFX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017725.890432,
+      "last_exchange": 1793017725.825,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-XPL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017725.5231736,
+      "last_exchange": 1793017693.446,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZAMA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MASK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017746.171291,
+      "last_exchange": 1793017693.696,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-EURC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-COMP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0990188,
+      "last_exchange": 1793017672.686,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ZETA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RED": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-TIA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ADA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017754.2507071,
+      "last_exchange": 1793017713.051,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ELF": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SOON": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.2926626,
+      "last_exchange": 1793017780.969,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-STEEM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.8325121,
+      "last_exchange": 1793017779.718,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ELSA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017722.240371,
+      "last_exchange": 1793017663.668,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SPK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SOPH": {
+      "state": "EXCLUDED",
+      "reason": "OFFICIAL_MARKET_STATE_PREDELISTING",
+      "last_received": 1793017681.074133,
+      "last_exchange": 1793017679.797,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SPX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017718.9332166,
+      "last_exchange": 1793017693.394,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MED": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.7810528,
+      "last_exchange": 1793017746.49,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-1INCH": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-KAT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.4914336,
+      "last_exchange": 1793017779.166,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MEW": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ORBS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-RENDER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.474939,
+      "last_exchange": 1793017718.167,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ORCA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017775.6206484,
+      "last_exchange": 1793017775.46,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BERA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.1896513,
+      "last_exchange": 1793017780.087,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SIGN": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017687.0259192,
+      "last_exchange": 1793017686.65,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-DOS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.4387672,
+      "last_exchange": 1793017781.401,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SLX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017696.455663,
+      "last_exchange": 1793017696.191,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-VANA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017771.6431923,
+      "last_exchange": 1793017771.294,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-DOT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-EDGE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017753.5096748,
+      "last_exchange": 1793017753.263,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-MET2": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017760.1919127,
+      "last_exchange": 1793017739.063,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MBL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-FLUID": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017712.9920895,
+      "last_exchange": 1793017712.567,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BIGTIME": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SOL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.91408,
+      "last_exchange": 1793017762.936,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-QKC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017722.2541418,
+      "last_exchange": 1793017686.57,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BMT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.9189465,
+      "last_exchange": 1793017780.544,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-DRV": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017771.6396286,
+      "last_exchange": 1793017770.588,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-META": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-IRYS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.9206014,
+      "last_exchange": 1793017780.072,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SAHARA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017692.4447916,
+      "last_exchange": 1793017647.336,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MLK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-VTHO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-KITE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0985508,
+      "last_exchange": 1793017663.562,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MINA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.1010053,
+      "last_exchange": 1793017665.569,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MMT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.2006912,
+      "last_exchange": 1793017779.977,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CHIP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.8286493,
+      "last_exchange": 1793017779.646,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ZORA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017769.473537,
+      "last_exchange": 1793017725.746,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-XCN": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.093193,
+      "last_exchange": 1793017749.803,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GAS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017775.2818596,
+      "last_exchange": 1793017735.124,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MEGA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.9305537,
+      "last_exchange": 1793017757.929,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MOC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MOODENG": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017733.8319767,
+      "last_exchange": 1793017733.476,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-XEC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.7540245,
+      "last_exchange": 1793017775.65,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MON": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.4810014,
+      "last_exchange": 1793017733.887,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MORPHO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ZIL": {
+      "state": "EXCLUDED",
+      "reason": "OFFICIAL_MARKET_STATE_PREDELISTING",
+      "last_received": 1793017681.0972736,
+      "last_exchange": 1793017625.208,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GAME2": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017730.2822144,
+      "last_exchange": 1793017670.405,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-STX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017682.2547271,
+      "last_exchange": 1793017663.438,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-FLOCK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017776.7218122,
+      "last_exchange": 1793017776.391,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BSB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PROVE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017700.8231132,
+      "last_exchange": 1793017700.417,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BSV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SUI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017764.2936938,
+      "last_exchange": 1793017715.015,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SYRUP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BTC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.3297462,
+      "last_exchange": 1793017780.887,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BABY": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.3297102,
+      "last_exchange": 1793017765.937,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-HOLO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017732.7911875,
+      "last_exchange": 1793017732.566,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MIRA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017751.3307729,
+      "last_exchange": 1793017730.144,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SUN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZBT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ONG": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017758.3721604,
+      "last_exchange": 1793017758.323,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BTT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017765.7697792,
+      "last_exchange": 1793017728.022,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ENSO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.838784,
+      "last_exchange": 1793017771.809,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BIRB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.339034,
+      "last_exchange": 1793017780.857,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ONT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.8821254,
+      "last_exchange": 1793017763.612,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SOMI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GRVT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017760.5906258,
+      "last_exchange": 1793017760.174,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-KAIA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DEEP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-HOME": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017775.631276,
+      "last_exchange": 1793017775.483,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-STRAX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017702.3829486,
+      "last_exchange": 1793017702.204,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ICP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-OPG": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017763.4910865,
+      "last_exchange": 1793017756.831,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BREV": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.879814,
+      "last_exchange": 1793017681.752,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-POLYX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.1120772,
+      "last_exchange": 1793017777.718,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    }
+  },
+  "BITHUMB": {
+    "KRW-BTC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.4216475,
+      "last_exchange": 1793017780.211,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ETH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017772.7230036,
+      "last_exchange": 1793017772.543,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ETC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.434183,
+      "last_exchange": 1793017688.236,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-XRP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.7849197,
+      "last_exchange": 1793017777.556,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-BCH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017775.6542673,
+      "last_exchange": 1793017775.455,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-QTUM": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-A": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-TRX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ELF": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-KNC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GLM": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ZIL": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": false,
+      "shard": 4
+    },
+    "KRW-WAXP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017758.6771579,
+      "last_exchange": 1793017758.418,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-POWR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.4742155,
+      "last_exchange": 1793017666.91,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-STEEM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017740.231739,
+      "last_exchange": 1793017740.023,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ZRX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-SNT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017704.871271,
+      "last_exchange": 1793017704.677,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ADA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.083667,
+      "last_exchange": 1793017666.595,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BAT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-THETA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017692.0395577,
+      "last_exchange": 1793017691.768,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-CVC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017716.7316601,
+      "last_exchange": 1793017716.531,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-WAVES": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017708.7557275,
+      "last_exchange": 1793017708.573,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-LINK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017693.8479333,
+      "last_exchange": 1793017693.545,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ENJ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-VET": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-MTL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-IOST": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AMO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BSV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ORBS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-TFUEL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ANKR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CRO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CHR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MBL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-FCT2": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MEV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-COS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-EL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017689.0064385,
+      "last_exchange": 1793017688.847,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-HIVE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-XPR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017768.6382377,
+      "last_exchange": 1793017768.44,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-EGG": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BORA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017742.1321967,
+      "last_exchange": 1793017741.984,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ARPA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CTC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017735.4988987,
+      "last_exchange": 1793017735.298,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CKB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0690055,
+      "last_exchange": 1793017649.099,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-UNI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-YFI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017755.7910001,
+      "last_exchange": 1793017755.562,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-UMA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017718.5009332,
+      "last_exchange": 1793017718.265,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AAVE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017683.1408987,
+      "last_exchange": 1793017682.928,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-COMP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-RSR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-NMR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RLC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017732.4436157,
+      "last_exchange": 1793017732.24,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-UOS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017756.6290932,
+      "last_exchange": 1793017756.403,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-SAND": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.521592,
+      "last_exchange": 1793017688.259,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-AWE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017687.3280065,
+      "last_exchange": 1793017687.122,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BEL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-OBSR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ADP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-GHX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CBK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MVC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.3985236,
+      "last_exchange": 1793017671.846,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GRT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BIOT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-MAPO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CTSI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MANA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.403298,
+      "last_exchange": 1793017674.801,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-LPT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017753.113435,
+      "last_exchange": 1793017752.827,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SUSHI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-PUNDIX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CELR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.4320734,
+      "last_exchange": 1793017681.246,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BFC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017710.0056064,
+      "last_exchange": 1793017709.831,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ALICE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-OGN": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017725.9614818,
+      "last_exchange": 1793017725.761,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-COTI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017689.0106254,
+      "last_exchange": 1793017688.813,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CAKE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-XVS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-SWAP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-CHZ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AXS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.7041426,
+      "last_exchange": 1793017688.533,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-DAO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SIX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-USDS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-SHIB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.9550068,
+      "last_exchange": 1793017777.733,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-POL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-WOO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ACH": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-XLM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017715.125675,
+      "last_exchange": 1793017714.934,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ONT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-META": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-KAIA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017703.5856671,
+      "last_exchange": 1793017703.326,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ONG": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ALGO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0933669,
+      "last_exchange": 1793017665.341,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-JST": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-XTZ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-MLK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.4499538,
+      "last_exchange": 1793017778.253,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-DOT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ATOM": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-TEMCO": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": false,
+      "shard": 4
+    },
+    "KRW-DOGE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017694.2096782,
+      "last_exchange": 1793017694.073,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-KSM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017773.7174745,
+      "last_exchange": 1793017773.505,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CTK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BNB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017698.3496819,
+      "last_exchange": 1793017698.155,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-NFT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SUN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-XEC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017703.2328188,
+      "last_exchange": 1793017703.025,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-SOL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017727.3281446,
+      "last_exchange": 1793017727.133,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-EGLD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MASK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-C98": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-MED": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-1INCH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017702.0221214,
+      "last_exchange": 1793017701.823,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CRV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BOBA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-DYDX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MINA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.4003248,
+      "last_exchange": 1793017622.834,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-JOE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ENS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BTT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-REQ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CSPR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AVAX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.5573924,
+      "last_exchange": 1793017681.368,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-TDROP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.8899283,
+      "last_exchange": 1793017623.074,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-HBAR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017759.6384554,
+      "last_exchange": 1793017759.422,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-FANC": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": 1793017681.0691698,
+      "last_exchange": 1793017680.366,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MAY": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-REI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-T": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-MBX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GMT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TAVA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-D": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": 1793017681.0693448,
+      "last_exchange": 1793017667.925,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-APE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-WNCG": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017745.9791346,
+      "last_exchange": 1793017745.745,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-XCN": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017701.5908723,
+      "last_exchange": 1793017701.391,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AZIT": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": false,
+      "shard": 0
+    },
+    "KRW-FLR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0906436,
+      "last_exchange": 1793017631.313,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SFP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-STAT": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CRTS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-LM": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GRND": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-APT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BLUR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-HOOK": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-LWP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-OP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ROA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017775.3392413,
+      "last_exchange": 1793017775.135,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-GMX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-STX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-XPLA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AHT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ARB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017761.8769112,
+      "last_exchange": 1793017761.669,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-INJ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-HFT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RPL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-IMX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CFX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.070096,
+      "last_exchange": 1793017663.149,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ACS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-FRAX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CELO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-LDO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-S": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.8552377,
+      "last_exchange": 1793017780.653,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-FET": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SUI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017751.9606419,
+      "last_exchange": 1793017751.749,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-NCT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.3985322,
+      "last_exchange": 1793017677.754,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-FLOKI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ID": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017731.7637599,
+      "last_exchange": 1793017731.653,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RENDER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017718.1264977,
+      "last_exchange": 1793017717.852,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-OSMO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017732.8538513,
+      "last_exchange": 1793017732.656,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-FIL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0828705,
+      "last_exchange": 1793017663.377,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ILV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MAV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AUDIO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AGI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0795782,
+      "last_exchange": 1793017638.1,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ASTR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017732.8025236,
+      "last_exchange": 1793017732.663,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-WLD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.0197504,
+      "last_exchange": 1793017778.817,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-FLUX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AGLD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017724.466676,
+      "last_exchange": 1793017724.268,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-EDU": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SEI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-WAXL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-MOC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PEPE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.4742603,
+      "last_exchange": 1793017660.141,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CYBER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0935094,
+      "last_exchange": 1793017678.451,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ARKM": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PYR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017731.1828434,
+      "last_exchange": 1793017731.036,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-IOTX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017747.0610309,
+      "last_exchange": 1793017746.841,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PENDLE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017736.7182825,
+      "last_exchange": 1793017736.526,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-BICO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0834634,
+      "last_exchange": 1793017648.707,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-API3": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-MNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GTC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.9666708,
+      "last_exchange": 1793017780.78,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-METIS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-TIA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017706.607298,
+      "last_exchange": 1793017706.392,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ICP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017684.8524578,
+      "last_exchange": 1793017684.569,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-NEO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.39863,
+      "last_exchange": 1793017679.425,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GAS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BIGTIME": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ZETA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.8915613,
+      "last_exchange": 1793017669.955,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ARK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-YGG": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.8893378,
+      "last_exchange": 1793017678.435,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-HUNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-KAVA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MAGIC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AUCTION": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017735.9231331,
+      "last_exchange": 1793017735.707,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-USDT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.9129617,
+      "last_exchange": 1793017779.729,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-USDC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.136568,
+      "last_exchange": 1793017777.965,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-RAD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-LSK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017775.4355469,
+      "last_exchange": 1793017775.327,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ACE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SKL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017694.4031281,
+      "last_exchange": 1793017694.174,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-IQ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PYTH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017722.4524074,
+      "last_exchange": 1793017722.248,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-MANTA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-AKT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017736.322303,
+      "last_exchange": 1793017736.119,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BEAM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017766.1660266,
+      "last_exchange": 1793017765.964,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PHA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-JTO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.4004428,
+      "last_exchange": 1793017666.59,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-JUP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017703.1004257,
+      "last_exchange": 1793017702.924,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-STRK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-SC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-TRAC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-BONK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-TOKAMAK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AIOZ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ZK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ONDO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017773.806321,
+      "last_exchange": 1793017773.604,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ALT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017767.5704525,
+      "last_exchange": 1793017767.367,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-TAO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017734.8248727,
+      "last_exchange": 1793017734.628,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-NEAR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.975738,
+      "last_exchange": 1793017774.811,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RON": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-STRAX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-XAI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-W": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.891533,
+      "last_exchange": 1793017678.869,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-POLYX": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017753.9336717,
+      "last_exchange": 1793017753.707,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CORE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-POKT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-REZ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ENA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017748.8205602,
+      "last_exchange": 1793017748.607,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MOCA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ETHFI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0906763,
+      "last_exchange": 1793017669.658,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MEW": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZRO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017770.4920812,
+      "last_exchange": 1793017770.284,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-IO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-TAIKO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-BRETT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ATH": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017762.6591582,
+      "last_exchange": 1793017762.446,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PCI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-AVAIL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.079653,
+      "last_exchange": 1793017629.081,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-GRAM": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-G": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.09347,
+      "last_exchange": 1793017667.901,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-LISTA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.4002159,
+      "last_exchange": 1793017663.421,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PEAQ": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-EIGEN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CFG": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.090624,
+      "last_exchange": 1793017647.779,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-VERONA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ORDER": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-MERL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.3985002,
+      "last_exchange": 1793017642.96,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SCR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-SWELL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.8919394,
+      "last_exchange": 1793017627.912,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-SKY": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-PONKE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-MVL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CARV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-PUFFER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017760.7250633,
+      "last_exchange": 1793017760.617,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-TURBO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017703.5573802,
+      "last_exchange": 1793017703.421,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-RAY": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017693.5779893,
+      "last_exchange": 1793017693.31,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-SAFE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-VIRTUAL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017693.90501,
+      "last_exchange": 1793017693.446,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-MOVE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-F": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DEEP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MORPHO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.0184722,
+      "last_exchange": 1793017687.407,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MOODENG": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-DBR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-NIL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017765.8917627,
+      "last_exchange": 1793017765.654,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ME": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-INIT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.4021513,
+      "last_exchange": 1793017671.531,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZRC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-IOTA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.019159,
+      "last_exchange": 1793017687.6,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PENGU": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017687.979039,
+      "last_exchange": 1793017687.684,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ACX": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": false,
+      "shard": 0
+    },
+    "KRW-AERO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-THE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AMP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-VANA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.1619244,
+      "last_exchange": 1793017773.946,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-XYO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-A8": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017705.1621492,
+      "last_exchange": 1793017704.978,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SONIC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-WIF": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-CPOOL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DATA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017716.421481,
+      "last_exchange": 1793017716.219,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DKA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SOLV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-BLUE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-QKC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-HP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GAME2": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ERA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.3394992,
+      "last_exchange": 1793017777.157,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ARDR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BOUNTY": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SHELL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-BERA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017684.3361292,
+      "last_exchange": 1793017684.092,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BIO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.9884844,
+      "last_exchange": 1793017778.804,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-PLUME": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-OBT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-TRUMP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.1097236,
+      "last_exchange": 1793017687.332,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-KERNEL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.0191064,
+      "last_exchange": 1793017687.491,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-COOKIE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017737.7615936,
+      "last_exchange": 1793017737.547,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-GNO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-VTHO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ANIME": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017762.970947,
+      "last_exchange": 1793017762.79,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-RED": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-LAYER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017688.8869977,
+      "last_exchange": 1793017688.574,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-GPS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-WCT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-FLOCK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.067542,
+      "last_exchange": 1793017664.518,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-KAITO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BMT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.080927,
+      "last_exchange": 1793017666.316,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-C": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.9196277,
+      "last_exchange": 1793017779.714,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SOON": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.711218,
+      "last_exchange": 1793017779.531,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-PAXG": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-XAUT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AVL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017717.9224072,
+      "last_exchange": 1793017717.823,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-B3": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.09324,
+      "last_exchange": 1793017624.708,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-COW": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017702.1739056,
+      "last_exchange": 1793017701.975,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-WAL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-BABY": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017766.1660807,
+      "last_exchange": 1793017765.949,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-XTER": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-NXPC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-0G": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0809956,
+      "last_exchange": 1793017669.943,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-GRASS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017687.358487,
+      "last_exchange": 1793017687.147,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ORCA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-BR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017740.3420203,
+      "last_exchange": 1793017740.153,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-KMNO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PUMPBTC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-EPT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-HAEDAL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PARTI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-SXT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-PROMPT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-SIGN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-BTR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017739.2173884,
+      "last_exchange": 1793017739.019,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SAHARA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.6697521,
+      "last_exchange": 1793017774.458,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-HEMI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017757.459229,
+      "last_exchange": 1793017757.356,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-HOME": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017775.8083887,
+      "last_exchange": 1793017775.605,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-LA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SOPH": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": 1793017681.4736989,
+      "last_exchange": 1793017674.416,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-HYPER": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.402721,
+      "last_exchange": 1793017636.174,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-PROVE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CUDIS": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-FORT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017772.8688245,
+      "last_exchange": 1793017772.655,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TOSHI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-HUMA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017755.6024833,
+      "last_exchange": 1793017755.341,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-HNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SPK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-USD1": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-BOB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SYRUP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017713.6509337,
+      "last_exchange": 1793017713.447,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-NEWT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017740.1650112,
+      "last_exchange": 1793017739.921,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ALLO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-DOOD": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.7155468,
+      "last_exchange": 1793017777.529,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TREE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017752.6847646,
+      "last_exchange": 1793017752.374,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-EUL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AVNT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0927649,
+      "last_exchange": 1793017633.302,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-OPEN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-PUMP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-IRYS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017757.3530047,
+      "last_exchange": 1793017757.136,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-DEXE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.340128,
+      "last_exchange": 1793017781.117,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-BARD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-TOWNS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017752.4439564,
+      "last_exchange": 1793017752.238,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-MIRA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.398999,
+      "last_exchange": 1793017677.483,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CAMP": {
+      "state": "EXCLUDED",
+      "reason": "UNPARSEABLE_OFFICIAL_DELISTING_DATE",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": false,
+      "shard": 0
+    },
+    "KRW-XAN": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.8898757,
+      "last_exchange": 1793017649.383,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-THQ": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017697.0659785,
+      "last_exchange": 1793017696.819,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-POPCAT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017753.2639377,
+      "last_exchange": 1793017753.007,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-WLFI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017745.9697268,
+      "last_exchange": 1793017745.764,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-2Z": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017728.378736,
+      "last_exchange": 1793017728.169,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-LINEA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SAPIEN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-HOLO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MPLX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZKC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ASTER": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-XPL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.8889573,
+      "last_exchange": 1793017634.321,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-FF": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017703.4102778,
+      "last_exchange": 1793017703.291,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SOMI": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-MON": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017685.330135,
+      "last_exchange": 1793017685.042,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-FLUID": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SUPER": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-IN": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.9711902,
+      "last_exchange": 1793017780.735,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-EDEN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-RECALL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-USDE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ENSO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-YB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-STABLE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ZBT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017739.7493982,
+      "last_exchange": 1793017739.56,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ZORA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-SENT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-MMT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-MET": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-KITE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-US": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017758.2421603,
+      "last_exchange": 1793017758.068,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-TRUST": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-ESP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-PIEVERSE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CHECK": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CC": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017702.6354449,
+      "last_exchange": 1793017702.421,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CYS": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DOS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017746.1628242,
+      "last_exchange": 1793017745.97,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-EDGE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SPACE": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017744.84527,
+      "last_exchange": 1793017744.639,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-WET": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-BREV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-BILL": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0926385,
+      "last_exchange": 1793017649.094,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-KAT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017771.5172122,
+      "last_exchange": 1793017771.308,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZKP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017769.1887968,
+      "last_exchange": 1793017768.972,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-META2": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ZAMA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.964019,
+      "last_exchange": 1793017780.757,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-GWEI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017772.7418709,
+      "last_exchange": 1793017772.53,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-SKR": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-UP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-LIT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-Q": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017726.790154,
+      "last_exchange": 1793017726.538,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ELSA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.5001898,
+      "last_exchange": 1793017777.305,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BIRB": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017767.073328,
+      "last_exchange": 1793017766.825,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-UB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-AZTEC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-SLX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-NEX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-ROBO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017702.5782177,
+      "last_exchange": 1793017702.388,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-BLEND": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-USELESS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017773.7014072,
+      "last_exchange": 1793017773.514,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-MANTRA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-CTR": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017781.351887,
+      "last_exchange": 1793017781.167,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-MEGA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017703.1002996,
+      "last_exchange": 1793017702.905,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-VVV": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017727.2053857,
+      "last_exchange": 1793017726.967,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-BASED": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.092898,
+      "last_exchange": 1793017641.597,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AI": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0930486,
+      "last_exchange": 1793017680.026,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-GEOD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-CHIP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.028291,
+      "last_exchange": 1793017776.908,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-BSB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ICNT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-EDGEX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-PRL": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-PROS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017685.561903,
+      "last_exchange": 1793017685.345,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-OPG": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-AVA": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017777.2029486,
+      "last_exchange": 1793017777.016,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-NEXO": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-RLUSD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-AEON": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017691.9545846,
+      "last_exchange": 1793017691.768,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-ZEST": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-GRVT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-SPX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-EURC": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-RE": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-HPP": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-DRV": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-ARX": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CAP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017774.0537925,
+      "last_exchange": 1793017773.855,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-QUID": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-KGEN": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-O": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017745.8000836,
+      "last_exchange": 1793017745.594,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 2
+    },
+    "KRW-BANK": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017780.4325051,
+      "last_exchange": 1793017780.232,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-AIA": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-CP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.8381422,
+      "last_exchange": 1793017779.647,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-TRB": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-USDG": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-PYBOBO": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017779.9672203,
+      "last_exchange": 1793017779.758,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-PROM": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017778.0997152,
+      "last_exchange": 1793017777.87,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-ACU": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017740.172833,
+      "last_exchange": 1793017740.074,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    },
+    "KRW-FOLD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-DEBIT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017727.0721438,
+      "last_exchange": 1793017726.89,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-XDP": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.8888736,
+      "last_exchange": 1793017680.257,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 4
+    },
+    "KRW-PYUSD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-PONS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017762.804246,
+      "last_exchange": 1793017762.592,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CASHCAT": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017681.0906954,
+      "last_exchange": 1793017674.241,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-POD": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 3
+    },
+    "KRW-CT": {
+      "state": "SUBSCRIBED",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": null,
+      "last_exchange": null,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 1
+    },
+    "KRW-AXIS": {
+      "state": "ACTIVE",
+      "reason": "PUBLIC_KRW_LISTED",
+      "last_received": 1793017776.4963417,
+      "last_exchange": 1793017776.308,
+      "subscribed": true,
+      "confirmed": true,
+      "shard": 0
+    }
+  }
+}

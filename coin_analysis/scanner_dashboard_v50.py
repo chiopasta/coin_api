@@ -156,13 +156,17 @@ class View:
             active_root = Path(state['root']) if state.get('root') else None
             # Explicit public fields only: no process identities, environment, keys or paths.
             public = {k: state.get(k) for k in ('status', 'phase', 'started_at', 'elapsed_monotonic_seconds',
-                      'clock', 'db_saved', 'signals', 'size', 'collected', 'last_signal','market_scope')}
+                      'clock', 'db_saved', 'signals', 'size', 'collected', 'last_signal','market_scope','websocket')}
             public['live_collecting'] = state.get('status')=='RUNNING' and state.get('phase')=='OBSERVING'
             public['markets'] = state.get('markets') if public['live_collecting'] else 0
             public['venue_pairs'] = state.get('venue_pairs') if public['live_collecting'] else 0
             public['reason'] = state['reason'] if 'CLOCK' in (state.get('reason') or '') and re.fullmatch(r'CLOCK_[A-Z0-9_]+',state['reason']) else (
                 'SCANNER_BLOCKED; see status_coin_api.bat' if state.get('status')=='BLOCKED' else None)
             public['connections'] = self.connections(active_root, public['live_collecting'])
+            if state.get('websocket'):
+                ws=state['websocket']
+                public['connections']={e:dict(status=v['status'] if ws.get('fresh') else 'DISCONNECTED',at=v.get('last_received'))
+                                       for e,v in ws.get('exchanges',{}).items()}
             rows = []; total = 0; today_live = 0
             today = datetime.now(control.KST).replace(hour=0,minute=0,second=0,microsecond=0).timestamp()
             sources = catalog()

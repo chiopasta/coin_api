@@ -24,14 +24,30 @@ function renderStatus(data){
   value('pairs',s.live_collecting?`${number(s.venue_pairs)} 거래소·종목 쌍 · BTC 기준 포함`:'활성 LIVE 없음 · 보관 종목 수와 구분');
   const scope=s.market_scope,total=scope?.total,focus=scope?.focus;
   value('configured-scope',scope?`설정 ${number(scope.configured_unique)}종목 / ${number(scope.configured_venue_pairs)}쌍 · 고정 관측`:'상세 범위는 웹 서버 갱신 후 확인');
+  if(scope?.mode==='ALL_KRW_WEBSOCKET')value('configured-scope','전체 KRW · 실제 카탈로그 및 수신 상태 확인 중');
   value('total-markets',total?.unique==null?'UNKNOWN':number(total.unique));
   value('total-by-exchange',total?.unique==null?'거래소 시장목록 근거 없음':`UPBIT ${number(total.by_exchange.UPBIT)} · BITHUMB ${number(total.by_exchange.BITHUMB)} · 합계 ${number(total.venue_pairs)}쌍`);
   value('total-market-time',total?.at?`${date(total.at)} KST${total.status==='STALE'?' · 오래된 조회값':''}`:'명시적 시장목록 확인 후 표시');
   value('focus-markets',focus?.unique==null?'UNKNOWN':number(focus.unique));
   value('focus-pairs',focus?.venue_pairs==null?'평가 추적 근거 없음':`${number(focus.venue_pairs)} 거래소·종목 쌍 · 평가 대기 신호 기준`);
+  const ws=s.websocket;const venues=Object.values(ws?.exchanges||{});
+  $('ws-panel').hidden=!venues.length;
+  if(venues.length){
+    const sum=k=>venues.reduce((n,v)=>n+(v[k]||0),0);const live=ws.fresh;
+    value('configured-scope',`전체 KRW 등록 ${number(sum('registered'))}쌍 · WebSocket`);
+    value('ws-subscriptions',`${number(sum('registered'))} / ${live?number(sum('subscription_sent')):'0'} / ${live?number(sum('subscription_confirmed')):'0'}`);
+    value('markets',live?number(sum('active')):'0');value('pairs','최근 60초 유효 데이터 수신 거래소·종목 쌍');
+    value('ws-active',live?`${number(sum('active'))} / ${number(sum('stale'))} / ${number(sum('blocked'))}`:'0 / 과거 수집 상태');
+    const last=Math.max(...venues.map(v=>v.last_received||0));
+    value('ws-last',`최근 정상 수신 ${last?date(last):'UNKNOWN'} KST`);
+    value('ws-evaluated',`${number(sum('evaluated'))} / ${number(sum('complete_30m'))}`);
+    value('ws-requests',`누적 HTTP ${number(ws.requests)} · ${live?'현재':'마지막 저장'} 5분 격자 평가`);
+    value('total-by-exchange',Object.entries(ws.exchanges).map(([e,v])=>`${e} 적격 ${number(v.eligible)} / 목록 ${number(v.listed)}`).join(' · '));
+    value('scope-note','전체 공개 KRW 목록을 구독합니다. 정지·종료 상태가 확인되면 제외합니다. 구독 요청, 실제 수신, 결측을 포함한 평가 시도, 30분 완전 자료는 각각 다릅니다.');
+  }
   value('today-signals',data.errors.length?'UNKNOWN':number(data.today_live_signals));
   const connections=$('connections');connections.replaceChildren();
-  Object.entries(s.connections||{}).forEach(([name,c])=>{const r=node('small');r.append(node('span',name),node('span',c.status,c.status==='CONNECTED'?'positive':c.status==='ERROR'?'warning':'muted'));r.title=`최근 API 응답 ${date(c.at)} KST`;connections.append(r);});
+  Object.entries(s.connections||{}).forEach(([name,c])=>{const r=node('small');r.append(node('span',name),node('span',c.status,c.status==='CONNECTED'?'positive':c.status==='ERROR'?'warning':'muted'));r.title=`최근 ${ws?'WebSocket 수신':'API 응답'} ${date(c.at)} KST`;connections.append(r);});
   const clock=s.clock||'UNKNOWN';value('clock-status',clock.startsWith('PASS')?'PASS':clock.startsWith('FAIL')?'FAIL':'UNKNOWN',clock.startsWith('PASS')?'positive':clock.startsWith('FAIL')?'warning':'muted');
   value('clock-detail',clock.startsWith('PASS')?clock.includes('cross-check')?'직접 NTP 교차 검증 통과 · Windows 루트 품질 경고 유지':clock.replace('PASS ',''):clock.startsWith('FAIL')?'마지막 시계 검사 실패 · 시작 시 재검증':clock.includes('stale')?'과거 PASS 만료 · 시작 시 재검증':'검증 근거 없음 · 시작 시 전체 검증');
   value('storage',`DB ${s.db_saved||'UNKNOWN'} · ${s.size===null||s.size===undefined?'크기 UNKNOWN':(s.size/1048576).toFixed(2)+' MiB'} · 수집 ${date(s.collected)}`);
@@ -109,7 +125,7 @@ function chart(r){
 async function refresh(){
   if(busy)return;busy=true;
   try{latest=await get(`/api/snapshot?scope=${encodeURIComponent($('scope').value)}`);renderStatus(latest);if(isAnalysis){analysisReport=await get(`/api/analysis?group=${$('analysis-group').value}&offset=${offset}`);renderAnalysis();}renderRows();if(selected)await loadDetail();await refreshControl();}
-  catch(e){value('web-state','웹 서버 연결 끊김','warning');value('scanner-status','UNKNOWN','muted');value('scanner-phase','서버 응답 없음 · 마지막 표시는 과거 자료입니다.');value('markets','UNKNOWN','muted');value('today-signals','UNKNOWN','muted');value('clock-status','UNKNOWN','muted');$('connections').replaceChildren(node('small','UPBIT / BITHUMB · UNKNOWN'));$('api-error').hidden=false;value('api-error',`${e.message} · 서버 상태를 확인하세요. 아래 신호 목록은 마지막 조회 결과입니다.`);}
+  catch(e){value('web-state','웹 서버 연결 끊김','warning');value('scanner-status','UNKNOWN','muted');value('scanner-phase','서버 응답 없음 · 마지막 표시는 과거 자료입니다.');value('markets','UNKNOWN','muted');for(const id of ['ws-subscriptions','ws-active','ws-evaluated'])value(id,'UNKNOWN','muted');value('today-signals','UNKNOWN','muted');value('clock-status','UNKNOWN','muted');$('connections').replaceChildren(node('small','UPBIT / BITHUMB · UNKNOWN'));$('api-error').hidden=false;value('api-error',`${e.message} · 서버 상태를 확인하세요. 아래 신호 목록은 마지막 조회 결과입니다.`);}
   finally{busy=false;}
 }
 function renderAnalysis(){

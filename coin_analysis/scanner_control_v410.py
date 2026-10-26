@@ -207,6 +207,24 @@ def snapshot(state=None):
     except (OSError,sqlite3.DatabaseError) as exc:result.update(signals=None,db_read_error=str(exc))
     if result.get('signals')==0:result['warnings'].append('No signals yet; zero is a normal observation result')
     result['market_scope']=market_scope.describe(result,observer.MARKETS,root)
+    if state.get('engine')=='5.2_WS':
+        result['market_scope'].update(mode='ALL_KRW_WEBSOCKET',configured_unique=None,configured_venue_pairs=None)
+    if (root/'ws_status.json').is_file():
+        try:
+            ws=read_json(root/'ws_status.json')
+            fresh=active and state.get('phase')=='OBSERVING' and 0<=time.time()-ws['at']<=10
+            ws['fresh']=fresh
+            result['websocket']=ws
+            result['market_scope']['mode']='ALL_KRW_WEBSOCKET'
+            cfg=read_json(root/'config.json')
+            venues=cfg.get('venue_markets',{})
+            result['market_scope'].update(configured_unique=len(set().union(*map(set,venues.values()))),
+                configured_venue_pairs=sum(map(len,venues.values())))
+            result['market_scope']['scan']=dict(unique=None,
+                venue_pairs=sum(v['active'] for v in ws['exchanges'].values()) if fresh else 0,
+                signal_pairs=None)
+        except (OSError,ValueError,KeyError,TypeError):
+            result['websocket']=dict(fresh=False,error='WS_STATUS_UNAVAILABLE')
     return result
 
 
@@ -231,6 +249,15 @@ def render(value):
         ('Warning','; '.join(value.get('warnings',[])) or 'SUPERVISED ONLY; 24h NOT_READY'),
         ('Safety cap',f"{value['seconds']}s / {value['max_requests']} HTTP" if 'seconds' in value else 'UNKNOWN'),
         ('Stop','stop_coin_api.bat')]
+    ws=value.get('websocket',{});venues=ws.get('exchanges',{})
+    if venues:
+        rows=[('Registered' if key=='Markets' else key,text) for key,text in rows]
+        total=lambda key:sum(v.get(key,0) for v in venues.values())
+        rows.extend([('WS eligible',' / '.join(f"{e} {v['eligible']}" for e,v in venues.items())),
+            ('WS requested',total('subscription_sent')),('WS confirmed',total('subscription_confirmed') if ws.get('fresh') else '0 (stopped/stale)'),
+            ('WS active',total('active') if ws.get('fresh') else '0 (stopped/stale)'),
+            ('WS evaluated',f"{total('evaluated')} / complete30m {total('complete_30m')} (last saved grid)"),
+            ('WS status',' / '.join(f"{e} {v['status']}" for e,v in venues.items()) if ws.get('fresh') else 'DISCONNECTED / historical receipt')])
     print('\n'+'='*60)
     for key,text in rows:print(f'{key:<13}: {text}')
     print('='*60,flush=True)
@@ -294,7 +321,7 @@ def start(seconds,max_requests,request_id=None):
         if root.exists():raise RuntimeError('A new isolated dataset is required')
         folder=CONTROL/'launches'/token;folder.mkdir(parents=True,exist_ok=False)
         began=time.monotonic()
-        state=dict(launch_id=token,root=str(root),status='RUNNING',phase='PRECHECK',started_at=time.time(),
+        state=dict(launch_id=token,root=str(root),engine='5.2_WS',status='RUNNING',phase='PRECHECK',started_at=time.time(),
             manager=identity(os.getpid()),child=None,seconds=seconds,max_requests=max_requests,started_monotonic=began,
             elapsed_monotonic_seconds=0.,db_saved='UNKNOWN',clock_evidence=None,reason=None)
         persist(state);write_metadata(CONTROL/'current.json',dict(launch_id=token))
@@ -317,7 +344,7 @@ def start(seconds,max_requests,request_id=None):
                 state.update(status='STOPPED',phase='TERMINAL',reason='CANCELLED_BEFORE_LIVE');return 0
             env=dict(os.environ);env.pop('PYTHONHOME',None);env.pop('PYTHONPATH',None)
             env.update(PYTHONUTF8='1',PYTHONIOENCODING='utf-8',PYTHONNOUSERSITE='1')
-            child=subprocess.Popen([sys.executable,'-m','coin_analysis.forward_scanner_v43','--execute-live',
+            child=subprocess.Popen([sys.executable,'-m','coin_analysis.forward_scanner_v52','--execute-live',
                 '--runtime-dir',str(root),'--seconds',str(seconds),'--max-requests',str(max_requests)],
                 cwd=PROJECT_ROOT,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,creationflags=0x08000000)
             state.update(child=identity(child.pid),phase='STARTING',db_saved='UNKNOWN / final close not yet confirmed');persist(state)

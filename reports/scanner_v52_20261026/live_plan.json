@@ -1,0 +1,29 @@
+{
+  "created_at": 1793017478.895042,
+  "small": {
+    "markets": [
+      "KRW-BTC",
+      "KRW-ETH"
+    ],
+    "exchanges": [
+      "UPBIT",
+      "BITHUMB"
+    ],
+    "seconds": 90,
+    "max_requests": 30,
+    "max_shards": 2,
+    "max_connection_attempts": 6
+  },
+  "full": {
+    "markets": "ALL_CURRENT_PUBLIC_KRW_OFFICIAL_STATUS_FILTER",
+    "seconds": 150,
+    "max_requests": 50,
+    "max_shard_size": 100,
+    "max_connection_attempts_per_shard": 3
+  },
+  "max_exchange_http": 80,
+  "max_ntp_attempts": 48,
+  "max_live_launches": 2,
+  "clock_gate": "UNCHANGED; BLOCKED => NO EXCHANGE CONNECTION",
+  "no_system_changes": true
+}
