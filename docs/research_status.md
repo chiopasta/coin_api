@@ -1,5 +1,12 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-26 감시5개·전체KRW범위 점검
+
+- [조사·표시 수정·예산](scanner_market_scope_20261026.md). 현재5개는BTC+알트4개의고정관측범위(거래소별5·10쌍/신호8쌍)이며집중선정수가아니다. V4.2문서/검증에명시된범위로누락된max_markets가아니다. 현재BAT CLI/웹은같은V4.3, 구형V15는전체KRW trade WebSocket·preload50제한으로경로/정책이다르다.
+- 실제목록2HTTP만조회: 업비트298·빗썸489·합계787쌍/고유493종목. 주문가능/정지필드는미제공이라공개지원목록수로표시한다. 현재스캔·전체목록/시각·PENDING후속평가종목을분리하고CLI/웹같은snapshot을쓴다. 다음신규worker는기존2개목록응답을추가HTTP없이기록한다. 기존탐지/결측/시계/16000HTTP/86400초불변이다.
+- 전체REST매분24시간계획값1134856요청·round간격하한196.5초로상한초과다. 준비후완전round18회/일정도라전체화하지않았다. WS확정분봉+제한REST복구의검증방안/추적8쌍시13096요청예시를보고했으며새WS/장기실행은없다.
+- **170개중169통과·구형Python미설치1skip**, [테스트](../reports/scanner_market_scope_20261026/test_result.json). 사용자활성관측3개프로세스/launch/예산/종료표식보호·idle웹만교체,실제API/CLI/독립SQL/렌더5/493/후속0일치. 원본215신호·기존정적DB16개·연구결과보존([검사](../reports/scanner_market_scope_20261026/completion_checks.json)). 활성runtime/캐시는자연갱신으로별도대조한다. Windows Computer Use URL확인차단으로실브라우저외관/모바일은미검증. 기존사용자Scanner/웹은계속실행중이며이번작업이새로시작한scanner는0이다.
+
 ## 2026-10-26 SCANNER_CONTROL_FAILED 실제 재현·상태 파일 읽기 수정
 
 - [시간순 조사·원인·수정·검증](scanner_start_diagnosis_20261026.md). 사용자 직전 실행은 NTP3단계PASS, 시작22.65초후 수동Stop이수집기시계검사중접수됐다. STOPPED/CANCELLED_BEFORE_COLLECTION만으로자동종료버그로판정하지않는다. 과거웹예외는미기록이라내부원인확정불가다.

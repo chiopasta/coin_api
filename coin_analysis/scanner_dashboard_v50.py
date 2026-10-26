@@ -156,7 +156,7 @@ class View:
             active_root = Path(state['root']) if state.get('root') else None
             # Explicit public fields only: no process identities, environment, keys or paths.
             public = {k: state.get(k) for k in ('status', 'phase', 'started_at', 'elapsed_monotonic_seconds',
-                      'clock', 'db_saved', 'signals', 'size', 'collected', 'last_signal')}
+                      'clock', 'db_saved', 'signals', 'size', 'collected', 'last_signal','market_scope')}
             public['live_collecting'] = state.get('status')=='RUNNING' and state.get('phase')=='OBSERVING'
             public['markets'] = state.get('markets') if public['live_collecting'] else 0
             public['venue_pairs'] = state.get('venue_pairs') if public['live_collecting'] else 0

@@ -129,7 +129,7 @@ class Runtime(unittest.TestCase):
             sleeps.append(1)
             if recover and len(sleeps)==2:raise v.Stop('STOP_REQUESTED')
         with patch.object(v,'RUNTIME_ROOT',self.root),patch.object(v.v42,'RUNTIME_ROOT',self.root/'locks'),\
-             patch.object(v.signal,'signal'),patch.object(v.Budget,'request',return_value=([dict(market=m) for m in v.MARKETS],{})),\
+             patch.object(v.signal,'signal'),patch.object(v.Budget,'request',return_value=([dict(market=m) for m in v.MARKETS]+[dict(market='KRW-EXTRA')],{})),\
              patch.object(v.scanner,'cycle',side_effect=fake_cycle),patch.object(v.Budget,'sleep',side_effect=fake_sleep):
             code=v.worker(episode,'run')
         return code,json.loads((episode/'runs/run.summary.json').read_text()),len(calls)
@@ -138,6 +138,11 @@ class Runtime(unittest.TestCase):
         code,summary,calls=self.exercise_worker_errors(True)
         self.assertEqual(code,0);self.assertEqual(summary['completed_rounds'],2);self.assertEqual(calls,4)
         self.assertEqual(summary['collection_errors'],{'UPBIT':[],'BITHUMB':[]})
+        receipt=json.loads((self.root/'worker/market_scope.json').read_text(encoding='utf-8'))
+        self.assertTrue(all(row['count']==6 for row in receipt['exchanges'].values()))
+        cfg=json.loads((self.root/'worker/config.json').read_text(encoding='utf-8'))
+        self.assertEqual(cfg['markets'],v.MARKETS)
+        self.assertNotIn('KRW-EXTRA',cfg['markets'])
 
     def test_exhausted_network_recovery_opens_circuit_after_five_rounds(self):
         code,summary,calls=self.exercise_worker_errors(False)

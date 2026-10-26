@@ -1,0 +1,531 @@
+{
+  "at": 1792993967.3468935,
+  "baseline_files": 429,
+  "byte_identical": 427,
+  "changed": [
+    "docs/research_status.md",
+    "docs/scanner_v50_dashboard.md"
+  ],
+  "missing": [],
+  "unexpected_changes": [],
+  "static_dbs": {
+    "data/altcoin_market.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "minute_candles": 4221927,
+        "download_runs": 278
+      },
+      "counts_after": {
+        "minute_candles": 4221927,
+        "download_runs": 278
+      },
+      "quick_check": "ok"
+    },
+    "data/forward_scanner_v4.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 460997,
+        "scanner_state": 51,
+        "collection_jobs": 1,
+        "collection_pages": 112836,
+        "signals": 215,
+        "signal_features": 215,
+        "signal_outcomes": 430,
+        "source_policy": 1,
+        "scanner_sessions": 6,
+        "scanner_cycles": 2002,
+        "source_migrations": 1
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 460997,
+        "scanner_state": 51,
+        "collection_jobs": 1,
+        "collection_pages": 112836,
+        "signals": 215,
+        "signal_features": 215,
+        "signal_outcomes": 430,
+        "source_policy": 1,
+        "scanner_sessions": 6,
+        "scanner_cycles": 2002,
+        "source_migrations": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/historical_market.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "minute_candles": 139786,
+        "download_runs": 11
+      },
+      "counts_after": {
+        "minute_candles": 139786,
+        "download_runs": 11
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v16.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_after": {
+        "events": 0,
+        "observations": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v16_smoke.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_after": {
+        "events": 0,
+        "observations": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_1aa3e50245cf48d8bb6b55ce481b052b/bithumb.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1261,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1261,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_1aa3e50245cf48d8bb6b55ce481b052b/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_1aa3e50245cf48d8bb6b55ce481b052b/upbit.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1485,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1485,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_640341845e17424f802aa924de48a22a/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 0,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 0,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_6b7bd97524ef46059472adc7d8693537/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 0,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 0,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_779b4a9454e84b1caf83988c9f6dec18/bithumb.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1279,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1279,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_779b4a9454e84b1caf83988c9f6dec18/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_779b4a9454e84b1caf83988c9f6dec18/upbit.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1473,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1473,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_b8666e6c39c846a4a78a9714ed2c2d36/bithumb.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1269,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1269,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_b8666e6c39c846a4a78a9714ed2c2d36/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_b8666e6c39c846a4a78a9714ed2c2d36/upbit.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1463,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1463,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    }
+  },
+  "protected_user_processes": {
+    "launch_same": true,
+    "manager_same": true,
+    "supervisor_same": true,
+    "manager_alive": true,
+    "supervisor_alive": true,
+    "worker_alive": true,
+    "phase": "OBSERVING",
+    "status": "RUNNING",
+    "runtime_stop": false,
+    "control_stop": false,
+    "seconds": 86400,
+    "max_requests": 16000,
+    "config_frozen_valid": true,
+    "config_mtime_predates_task": true,
+    "web_status": "RUNNING"
+  },
+  "current_scope": {
+    "mode": "FIXED_OBSERVATION_COHORT",
+    "configured_unique": 5,
+    "configured_venue_pairs": 10,
+    "scan": {
+      "unique": 5,
+      "venue_pairs": 10,
+      "signal_pairs": 8
+    },
+    "total": {
+      "status": "FRESH",
+      "unique": 493,
+      "venue_pairs": 787,
+      "by_exchange": {
+        "UPBIT": 298,
+        "BITHUMB": 489
+      },
+      "at": 1792993139.1822963,
+      "basis": "EXCHANGE_LISTED_KRW; ORDER_AVAILABILITY_NOT_EXPOSED"
+    },
+    "focus": {
+      "unique": 0,
+      "venue_pairs": 0,
+      "basis": "SAVED_PENDING_FOLLOWUP_HORIZONS; NOT_A_RANKED_SUBSET"
+    }
+  },
+  "naturally_changing_paths": "User active runtime, active launch metadata, web log/current and analysis cache are naturally changing; no stop, DB refresh or restart by this task",
+  "actual_task_exchange_http": 2,
+  "task_candle_requests": 0,
+  "task_ntp_calls": 0,
+  "task_scanner_starts": 0,
+  "task_scanner_stops": 0,
+  "source_sha256": {
+    "coin_analysis/scanner_market_scope.py": "d2f6ba7d63cbd0860538eed82fea34624c7a93cdf7bdd9f52e71a7350dd052f6",
+    "coin_analysis/scanner_control_v410.py": "aaab2fe27758acb9c205c7d51baf9908cc1a93c85c6a4c319fc56e4351846c50",
+    "coin_analysis/scanner_dashboard_v50.py": "9002970de661196942c6d42f9b30de1a6d117b2e397e992273a4d14d26f66441",
+    "coin_analysis/forward_scanner_v43.py": "81a9da36db9c78449b9c7688861972b5848bf355799c4a5b855b383658cf469d",
+    "coin_analysis/dashboard_assets/index.html": "781bbc0953b44d95a7a9876d972eceefb040b2d6798ea1340cfddbf75d45c1e3",
+    "coin_analysis/dashboard_assets/app.js": "580262d4daabc5b9af599cab74e7c166ffae293276d723f0e84af68222060b45",
+    "coin_analysis/dashboard_assets/style.css": "a2351e804aee64f4270a89b981c709bc897d2e02092d4d6610b4411c62ab1fa1",
+    "tests/test_scanner_market_scope.py": "1785fb045178540cb5a2522644dbe067a9ca424d1dee9b6a7b54cb5b48533072",
+    "tests/test_forward_scanner_v43.py": "7a924bc14f9bf9021f0c95dc13d7b7d9a80b0990625b1afbd439f7702eb3354c"
+  },
+  "authorised_idle_web_reloads": 1,
+  "exclusion_notes": "Active runtime/cache continue normal operation; web current/log also changed by the authorised web-only replacement. No source DB or frozen result was written by this task."
+}

@@ -1,0 +1,103 @@
+{
+  "before_launch": "bbcfa4270c7b4ed5a0588e4251344d4a",
+  "manager": {
+    "pid": 12384,
+    "birth": 134374651023911224
+  },
+  "supervisor": {
+    "pid": 14848,
+    "birth": 134374651084838654
+  },
+  "worker": {
+    "pid": 6284,
+    "birth": 134374651141663305
+  },
+  "web_before": {
+    "pid": 12544,
+    "birth": 134374647208878557
+  },
+  "limits": {
+    "seconds": 86400,
+    "max_requests": 16000
+  },
+  "before_at": 1792993629.6083531,
+  "before_markers": {
+    "runtime_stop": false,
+    "control_stop": false
+  },
+  "scanner_start_calls": 0,
+  "scanner_stop_calls": 0,
+  "web_after": {
+    "pid": 504,
+    "birth": 134374672303319233
+  },
+  "scope": {
+    "mode": "FIXED_OBSERVATION_COHORT",
+    "configured_unique": 5,
+    "configured_venue_pairs": 10,
+    "scan": {
+      "unique": 5,
+      "venue_pairs": 10,
+      "signal_pairs": 8
+    },
+    "total": {
+      "status": "FRESH",
+      "unique": 493,
+      "venue_pairs": 787,
+      "by_exchange": {
+        "UPBIT": 298,
+        "BITHUMB": 489
+      },
+      "at": 1792993139.1822963,
+      "basis": "EXCHANGE_LISTED_KRW; ORDER_AVAILABILITY_NOT_EXPOSED"
+    },
+    "focus": {
+      "unique": 0,
+      "venue_pairs": 0,
+      "basis": "SAVED_PENDING_FOLLOWUP_HORIZONS; NOT_A_RANKED_SUBSET"
+    }
+  },
+  "cli_scope": {
+    "mode": "FIXED_OBSERVATION_COHORT",
+    "configured_unique": 5,
+    "configured_venue_pairs": 10,
+    "scan": {
+      "unique": 5,
+      "venue_pairs": 10,
+      "signal_pairs": 8
+    },
+    "total": {
+      "status": "FRESH",
+      "unique": 493,
+      "venue_pairs": 787,
+      "by_exchange": {
+        "UPBIT": 298,
+        "BITHUMB": 489
+      },
+      "at": 1792993139.1822963,
+      "basis": "EXCHANGE_LISTED_KRW; ORDER_AVAILABILITY_NOT_EXPOSED"
+    },
+    "focus": {
+      "unique": 0,
+      "venue_pairs": 0,
+      "basis": "SAVED_PENDING_FOLLOWUP_HORIZONS; NOT_A_RANKED_SUBSET"
+    }
+  },
+  "independent_db_counts": {
+    "UPBIT": {
+      "markets": 5,
+      "followup": 0
+    },
+    "BITHUMB": {
+      "markets": 5,
+      "followup": 0
+    }
+  },
+  "after_at": 1792993632.6672027,
+  "scanner_phase": "OBSERVING",
+  "all_three_collector_identities_preserved": true,
+  "scanner_stop_markers_created": false,
+  "web_kept_running": true,
+  "html_three_scope_fields": true,
+  "independent_venue_pairs": 10
+}

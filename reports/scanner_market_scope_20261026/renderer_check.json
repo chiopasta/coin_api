@@ -1,0 +1,15 @@
+{
+  "real_snapshot_counts": {
+    "scan": 5,
+    "listed_unique": 493,
+    "upbit": 298,
+    "bithumb": 489,
+    "pairs": 787,
+    "followup": 0
+  },
+  "missing_counts": "UNKNOWN",
+  "stale_receipt_marked": true,
+  "menus": 2,
+  "renderer": "PASS",
+  "browser_visual": "NOT_VERIFIED_COMPUTER_USE_URL_CONFIDENCE_BLOCK"
+}

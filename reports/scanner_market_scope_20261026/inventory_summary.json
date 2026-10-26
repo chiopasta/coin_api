@@ -1,0 +1,26 @@
+{
+  "mode": "FIXED_OBSERVATION_COHORT",
+  "configured_unique": 5,
+  "configured_venue_pairs": 10,
+  "scan": {
+    "unique": 0,
+    "venue_pairs": 0,
+    "signal_pairs": 0
+  },
+  "total": {
+    "status": "FRESH",
+    "unique": 493,
+    "venue_pairs": 787,
+    "by_exchange": {
+      "UPBIT": 298,
+      "BITHUMB": 489
+    },
+    "at": 1792993139.1822963,
+    "basis": "EXCHANGE_LISTED_KRW; ORDER_AVAILABILITY_NOT_EXPOSED"
+  },
+  "focus": {
+    "unique": 0,
+    "venue_pairs": 0,
+    "basis": "SAVED_PENDING_FOLLOWUP_HORIZONS; NOT_A_RANKED_SUBSET"
+  }
+}

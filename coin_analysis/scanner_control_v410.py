@@ -25,6 +25,7 @@ import uuid
 
 from . import forward_scanner_v43 as observer
 from .paths import PROJECT_ROOT,DATA_DIR
+from . import scanner_market_scope as market_scope
 
 CONTROL=DATA_DIR/'scanner_console_v410'
 MAX_CONTROL_BYTES=32*1024*1024
@@ -157,7 +158,7 @@ def recent_clock(root,fallback):
 
 
 def db_snapshot(root):
-    totals=[];latest=[];collected=[];errors=[];exchanges=[];scopes=[];size=0
+    totals=[];latest=[];collected=[];errors=[];exchanges=[];scopes=[];focus=[];size=0
     for exchange in observer.v42.HOSTS:
         path=root/(exchange.lower()+'.db')
         size+=sum(p.stat().st_size for p in (path,Path(str(path)+'-wal'),Path(str(path)+'-shm')) if p.exists())
@@ -170,17 +171,23 @@ def db_snapshot(root):
             collected.append(db.execute('SELECT MAX(r.first_received_at) FROM candle_receipts r JOIN minute_candles c USING(market,ts)').fetchone()[0])
             errors.extend(f'{exchange} {m}: {e}' for m,e in db.execute('SELECT market,last_error FROM scanner_state WHERE last_error IS NOT NULL'))
             scopes.append({r[0] for r in db.execute('SELECT market FROM scanner_state')})
+            available={r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+            focus.append({r[0] for r in db.execute("SELECT DISTINCT s.market FROM signals s JOIN live_horizons h USING(signal_id) WHERE h.status='PENDING'")} if 'live_horizons' in available else None)
             exchanges.append(exchange)
     return dict(signals=sum(totals) if len(totals)==2 else None,last_signal=max((t for t in latest if t is not None),default=None),
         collected=max((t for t in collected if t is not None),default=None),exchanges=exchanges,size=size if exchanges else None,
         errors=errors,markets=len(set().union(*scopes)) if len(scopes)==2 else None,
         venue_pairs=sum(len(s) for s in scopes) if len(scopes)==2 else None,
-        signal_pairs=sum(len(s-{'KRW-BTC'}) for s in scopes) if len(scopes)==2 else None)
+        signal_pairs=sum(len(s-{'KRW-BTC'}) for s in scopes) if len(scopes)==2 else None,
+        focus_markets=len(set().union(*focus)) if len(focus)==2 and all(s is not None for s in focus) else None,
+        focus_pairs=sum(len(s) for s in focus) if len(focus)==2 and all(s is not None for s in focus) else None)
 
 
 def snapshot(state=None):
     state=current() if state is None else state
-    if state is None:return dict(status='STOPPED',phase='NO_MANAGED_RUN',clock='UNKNOWN',db_saved='UNKNOWN',signals=None)
+    if state is None:
+        value=dict(status='STOPPED',phase='NO_MANAGED_RUN',clock='UNKNOWN',db_saved='UNKNOWN',signals=None)
+        return dict(value,market_scope=market_scope.describe(value,observer.MARKETS))
     root=owned_root(state);result=dict(state)
     active=alive(state.get('manager')) or alive(state.get('child'))
     if active and state['phase']!='TERMINAL':result['status']='BLOCKED' if state['status']=='BLOCKED' else 'RUNNING'
@@ -199,6 +206,7 @@ def snapshot(state=None):
     try:result.update(db_snapshot(root))
     except (OSError,sqlite3.DatabaseError) as exc:result.update(signals=None,db_read_error=str(exc))
     if result.get('signals')==0:result['warnings'].append('No signals yet; zero is a normal observation result')
+    result['market_scope']=market_scope.describe(result,observer.MARKETS,root)
     return result
 
 
@@ -208,9 +216,12 @@ def stamp(value):
 
 def render(value):
     unknown=lambda key:'UNKNOWN' if value.get(key) is None else value[key]
+    scope=value.get('market_scope',{});total=scope.get('total',{});focus=scope.get('focus',{})
     rows=[('Status',value['status']),('Phase',value.get('phase','UNKNOWN')),('Mode','OBSERVATION ONLY'),
         ('Exchanges',' / '.join(value.get('exchanges',[])) or 'UNKNOWN'),
         ('Markets',f"{value['markets']} unique / {value['venue_pairs']} venue pairs ({value['signal_pairs']} signal pairs)" if value.get('markets') is not None else 'UNKNOWN'),
+        ('KRW listed',f"{total.get('unique')} unique / {total.get('venue_pairs')} venue pairs ({total.get('status')})" if total.get('unique') is not None else 'UNKNOWN / no market-list receipt'),
+        ('Follow-up',f"{focus.get('unique')} markets / {focus.get('venue_pairs')} pairs; saved PENDING horizons" if focus.get('unique') is not None else 'UNKNOWN'),
         ('Clock',value.get('clock','UNKNOWN')),('Signals',unknown('signals')),
         ('Started',stamp(value.get('started_at'))),('Duration',f"{value['elapsed_monotonic_seconds']:.1f}s" if value.get('elapsed_monotonic_seconds') is not None else 'UNKNOWN'),
         ('Last signal',stamp(value.get('last_signal'))),('Collected',stamp(value.get('collected'))),

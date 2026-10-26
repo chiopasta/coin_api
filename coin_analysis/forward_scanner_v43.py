@@ -20,6 +20,7 @@ import uuid
 from . import forward_scanner_v42 as v42
 from . import scanner_clock_v45 as clock_guard
 from . import scanner_observation_v45 as price_overlay
+from . import scanner_market_scope as market_scope
 
 scanner, ops, candles = v42.scanner, v42.ops, v42.candles
 OBSERVER_REVISION = '4.9'  # Dataset's frozen 4.3/V4 config remains unchanged.
@@ -250,10 +251,13 @@ def worker(root, run_id):
             # Avoid unbounded historical catchup after long OS downtime.
             verified=dbs[exchange].execute('SELECT MIN(verified_until) FROM scanner_state').fetchone()[0]
             if run['resume'] and time.time()-verified>MAX_BACKLOG:raise Stop('RESUME_BACKLOG_OVER_6H')
+        market_receipts={}
         for exchange in v42.HOSTS:
             listed,_=budget.request(exchange,'/v1/market/all',{})
             missing=set(MARKETS)-{r['market'] for r in listed if isinstance(r,dict) and 'market' in r}
             if missing:raise Stop(f'UNSUPPORTED_MARKETS:{exchange}:{sorted(missing)}')
+            market_receipts[exchange]=market_scope.receipt(listed,time.time())
+        write_json(root/'market_scope.json',market_scope.inventory(market_receipts))
         clients={e:scanner.collector.Client(transport=lambda path,params,e=e:budget.request(e,path,params),sleep=budget.sleep) for e in dbs}
         consecutive_errors=0
         while True:

@@ -1,0 +1,12 @@
+{
+  "UPBIT": {
+    "legacy_count": 298,
+    "canonical_count": 298,
+    "same_set": true
+  },
+  "BITHUMB": {
+    "legacy_count": 489,
+    "canonical_count": 489,
+    "same_set": true
+  }
+}

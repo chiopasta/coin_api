@@ -22,6 +22,13 @@ function renderStatus(data){
   value('scanner-phase',s.live_collecting?'OBSERVING · 실제 수집 중':s.status==='RUNNING'?`${s.phase||'PRECHECK'} · 수집 준비 중`:`${s.phase||'UNKNOWN'} · LIVE 수집 중 아님`);
   value('markets',s.markets===null?'UNKNOWN':number(s.markets));
   value('pairs',s.live_collecting?`${number(s.venue_pairs)} 거래소·종목 쌍 · BTC 기준 포함`:'활성 LIVE 없음 · 보관 종목 수와 구분');
+  const scope=s.market_scope,total=scope?.total,focus=scope?.focus;
+  value('configured-scope',scope?`설정 ${number(scope.configured_unique)}종목 / ${number(scope.configured_venue_pairs)}쌍 · 고정 관측`:'상세 범위는 웹 서버 갱신 후 확인');
+  value('total-markets',total?.unique==null?'UNKNOWN':number(total.unique));
+  value('total-by-exchange',total?.unique==null?'거래소 시장목록 근거 없음':`UPBIT ${number(total.by_exchange.UPBIT)} · BITHUMB ${number(total.by_exchange.BITHUMB)} · 합계 ${number(total.venue_pairs)}쌍`);
+  value('total-market-time',total?.at?`${date(total.at)} KST${total.status==='STALE'?' · 오래된 조회값':''}`:'명시적 시장목록 확인 후 표시');
+  value('focus-markets',focus?.unique==null?'UNKNOWN':number(focus.unique));
+  value('focus-pairs',focus?.venue_pairs==null?'평가 추적 근거 없음':`${number(focus.venue_pairs)} 거래소·종목 쌍 · 평가 대기 신호 기준`);
   value('today-signals',data.errors.length?'UNKNOWN':number(data.today_live_signals));
   const connections=$('connections');connections.replaceChildren();
   Object.entries(s.connections||{}).forEach(([name,c])=>{const r=node('small');r.append(node('span',name),node('span',c.status,c.status==='CONNECTED'?'positive':c.status==='ERROR'?'warning':'muted'));r.title=`최근 API 응답 ${date(c.at)} KST`;connections.append(r);});

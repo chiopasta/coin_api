@@ -1,0 +1,13 @@
+{
+  "venue_pairs": 787,
+  "http_cap": 16000,
+  "market_checks": 2,
+  "dense_warmup_requests": 1574,
+  "one_minute_24h_requests": 1134856,
+  "minimum_round_seconds": 196.5,
+  "full_rounds_after_warmup": 18,
+  "ideal_24h_interval_seconds": 4714.14309484193,
+  "focus_pairs_one_minute_after_full_warmup": 10,
+  "sustainable_pair_ceiling_at_one_minute": 11,
+  "assumptions": "Dense 1m candles; warmup added conservatively; no retries, I/O, CPU or safety reserves; actual throughput may be lower"
+}
