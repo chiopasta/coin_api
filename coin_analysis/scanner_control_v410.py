@@ -6,6 +6,7 @@ recycled PIDs from being treated as owned processes. No automatic relaunch.
 import argparse
 from contextlib import closing
 import ctypes
+import errno
 from ctypes import wintypes
 from datetime import datetime,timezone,timedelta
 import json
@@ -32,11 +33,29 @@ KST=timezone(timedelta(hours=9))
 
 
 def read_json(path):
+    """Read fresh metadata, tolerating a brief Windows replace/share collision.
+
+    Never reuse an older state. Size/JSON errors and persistent access failures
+    still raise; only Windows access/sharing failures retry for at most 0.5s.
+    """
     path=Path(path)
-    if path.stat().st_size>128*1024:raise ValueError('Metadata size limit')
-    with path.open('r',encoding='utf8') as stream:body=stream.read(128*1024+1)
-    if len(body)>128*1024:raise ValueError('Metadata size limit')
-    return json.loads(body)
+    began=time.monotonic();until=began+.5;retries=0
+    while True:
+        try:
+            if path.stat().st_size>128*1024:raise ValueError('Metadata size limit')
+            with path.open('r',encoding='utf8') as stream:body=stream.read(128*1024+1)
+            if len(body)>128*1024:raise ValueError('Metadata size limit')
+            value=json.loads(body)
+            if retries:
+                logging.getLogger('scanner_dashboard').info(json.dumps(dict(at=time.time(),event='METADATA_READ_RECOVERED',
+                    metadata_kind='STATE' if path.name=='state.json' else 'CURRENT' if path.name=='current.json' else 'OTHER',
+                    retries=retries,elapsed_seconds=time.monotonic()-began)))
+            return value
+        except PermissionError as exc:
+            winerror=getattr(exc,'winerror',None)
+            transient=winerror in (5,32,33) or winerror is None and exc.errno==errno.EACCES
+            if os.name!='nt' or not transient or time.monotonic()>=until:raise
+            retries+=1;time.sleep(.01)
 
 
 def write_metadata(path,value):
@@ -121,7 +140,8 @@ def clock_view(evidence,now):
     age=now-evidence.get('completed_at',now+1)
     if evidence.get('status')!='VERIFIED':return 'FAIL: '+evidence.get('reason','UNKNOWN')
     if not 0<=age<=observer.clock_guard.RECHECK_SECONDS+15:return 'UNKNOWN (last PASS is stale)'
-    return f'PASS (check age {age:.1f}s; periodic recheck 600s)'
+    basis='; fresh direct NTP cross-check; Windows root quality warning' if evidence.get('root_crosscheck',{}).get('status')=='VERIFIED' else ''
+    return f'PASS (check age {age:.1f}s; periodic recheck 600s{basis})'
 
 
 def recent_clock(root,fallback):

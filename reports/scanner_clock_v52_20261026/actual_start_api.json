@@ -1,0 +1,33 @@
+{
+  "exchange_http_cap": 0,
+  "ntp_cap_this_start": 8,
+  "seconds_cap_if_not_cancelled": 60,
+  "collection_cancelled_during_precheck": true,
+  "start_api": 202,
+  "phase_before_stop": "PRECHECK",
+  "stop_api": 202,
+  "after_stop": {
+    "action": "stop",
+    "state": "FAILED",
+    "message": "시계 안전 검증 실패 (CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE). 필수 두 제공자의 NTP 측정을 완료하지 못했습니다.",
+    "busy": false,
+    "starting": false,
+    "stopping": false,
+    "seconds": 60,
+    "max_requests": 26,
+    "process_alive": false,
+    "scanner": {
+      "status": "BLOCKED",
+      "phase": "TERMINAL",
+      "clock": "FAIL: CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE",
+      "db_saved": "UNKNOWN"
+    }
+  },
+  "clock_status": "BLOCKED",
+  "clock_reason": "CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE",
+  "manager_reason": "CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE",
+  "ntp_attempts": 7,
+  "observation_db_created": false,
+  "worker_created": false,
+  "exchange_http": 0
+}

@@ -1,0 +1,9 @@
+{
+  "tests": 157,
+  "passed": 156,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    "(<tests.test_scanner_control_v410.BatEntry testMethod=test_real_old_python_is_rejected_before_entry>, 'Old Python not installed on this host')"
+  ]
+}

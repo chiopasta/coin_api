@@ -1,0 +1,136 @@
+{
+  "reproduced": {
+    "start_http": 202,
+    "outcome": {
+      "action": "start",
+      "operation_id": "fbb6269cf9d8e1d69f8d445b",
+      "state": "FAILED",
+      "message": "\uc2dc\uc791\u00b7\uc885\ub8cc\ub97c \ud655\uc778\ud558\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4 (SCANNER_CONTROL_FAILED). status_coin_api.bat\uc5d0\uc11c \uc6d0\uc778\uc744 \ud655\uc778\ud558\uc138\uc694.",
+      "busy": false,
+      "starting": false,
+      "stopping": false,
+      "seconds": 120,
+      "max_requests": 40,
+      "process_alive": false,
+      "scanner": {
+        "status": "STOPPED",
+        "phase": "TERMINAL",
+        "clock": "PASS (check age 2.6s; periodic recheck 600s)",
+        "db_saved": "UNKNOWN / no observation DB was created"
+      }
+    },
+    "exception": [
+      {
+        "at": 1792990370.1830895,
+        "event": "SCANNER_START_EXCEPTION",
+        "request_id": "7cd3c5465fbc436285a989c5c6403e66",
+        "phase": "STARTING",
+        "elapsed_seconds": 27.230669399999897,
+        "cancellation_source": "START_FAILURE",
+        "error_type": "PermissionError",
+        "errno": 13,
+        "winerror": null,
+        "code": null,
+        "frames": [
+          {
+            "file": "coin_analysis/scanner_desktop_v50.py",
+            "line": 150,
+            "function": "start_scanner"
+          },
+          {
+            "file": "coin_analysis/scanner_control_v410.py",
+            "line": 102,
+            "function": "current"
+          },
+          {
+            "file": "coin_analysis/scanner_control_v410.py",
+            "line": 37,
+            "function": "read_json"
+          }
+        ]
+      }
+    ],
+    "later_explicit_stop": 1792990373.5932035,
+    "actual_http": 0
+  },
+  "fixed": {
+    "start_http": 202,
+    "started": {
+      "action": "start",
+      "operation_id": "b48f1925dfd5e1c92bb37fc1",
+      "state": "SUCCEEDED",
+      "message": "\uc2a4\uce90\ub108 \uc218\uc9d1 \uc2dc\uc791\uc744 \ud655\uc778\ud588\uc2b5\ub2c8\ub2e4.",
+      "busy": false,
+      "starting": false,
+      "stopping": false,
+      "seconds": 120,
+      "max_requests": 40,
+      "process_alive": true,
+      "scanner": {
+        "status": "RUNNING",
+        "phase": "OBSERVING",
+        "clock": "PASS (check age 8.8s; periodic recheck 600s)",
+        "db_saved": "UNKNOWN / final close not yet confirmed"
+      }
+    },
+    "read_recoveries": [
+      {
+        "at": 1792990516.1834543,
+        "event": "METADATA_READ_RECOVERED",
+        "metadata_kind": "STATE",
+        "retries": 1,
+        "elapsed_seconds": 0.0409285000005184
+      },
+      {
+        "at": 1792990529.7932708,
+        "event": "METADATA_READ_RECOVERED",
+        "metadata_kind": "STATE",
+        "retries": 1,
+        "elapsed_seconds": 0.5783448000001954
+      },
+      {
+        "at": 1792990531.7015076,
+        "event": "METADATA_READ_RECOVERED",
+        "metadata_kind": "STATE",
+        "retries": 2,
+        "elapsed_seconds": 0.24653159999979835
+      }
+    ],
+    "committed_candles": {
+      "UPBIT": 1485,
+      "BITHUMB": 1261
+    },
+    "connection": {
+      "UPBIT": {
+        "status": "CONNECTED",
+        "at": 1792990529.5451345
+      },
+      "BITHUMB": {
+        "status": "CONNECTED",
+        "at": 1792990532.518534
+      }
+    },
+    "stopped": {
+      "action": "stop",
+      "operation_id": "1d836b808e2050778b591815",
+      "state": "SUCCEEDED",
+      "message": "\uc2a4\uce90\ub108 \uc815\uc0c1 \uc885\ub8cc\ub97c \ud655\uc778\ud588\uc2b5\ub2c8\ub2e4. \uc6f9 \ub300\uc2dc\ubcf4\ub4dc\ub294 \uacc4\uc18d \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+      "busy": false,
+      "starting": false,
+      "stopping": false,
+      "seconds": 120,
+      "max_requests": 40,
+      "process_alive": false,
+      "scanner": {
+        "status": "STOPPED",
+        "phase": "TERMINAL",
+        "clock": "PASS (check age 13.9s; periodic recheck 600s)",
+        "db_saved": "SAVED / WAL checkpoint and normal close confirmed"
+      }
+    },
+    "worker_seconds": 21.024079299999357,
+    "actual_http": 19,
+    "snapshot_requests": 8,
+    "poll_errors": []
+  }
+}

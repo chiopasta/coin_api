@@ -1,0 +1,40 @@
+{
+  "baseline_files": 313,
+  "byte_unchanged": 309,
+  "intended_document_or_management_changes": [
+    "data/scanner_console_v410/current.json",
+    "data/scanner_dashboard_v50/scanner_pending.json",
+    "docs/research_status.md",
+    "docs/scanner_v50_dashboard.md"
+  ],
+  "all_existing_db_and_research_files_preserved": true,
+  "source_signal_count": 215,
+  "source_db_sha256": "528ff08a037364839114369dc2af1385f3a89f61795352fcd544f7bd27d1c78e",
+  "db_quick_check": {
+    "data\\altcoin_market.db": "ok",
+    "data\\forward_scanner_v4.db": "ok",
+    "data\\historical_market.db": "ok",
+    "data\\scanner_v16.db": "ok",
+    "data\\scanner_v16_smoke.db": "ok",
+    "data\\scanner_dashboard_v50\\analysis.db": "ok"
+  },
+  "tested_sources_match": true,
+  "tests": 151,
+  "passed": 150,
+  "skipped": 1,
+  "frozen_detection_label_and_ntp_transport_unchanged": true,
+  "manager_alive": false,
+  "worker_alive": false,
+  "worker_created": false,
+  "observation_db_created": false,
+  "exchange_http": 0,
+  "actual_ntp_attempts": 14,
+  "actual_ntp_measured": 11,
+  "actual_ntp_timeouts": 3,
+  "current_clock_gate": "CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE",
+  "loopback_8765_listeners": 0,
+  "actual_successful_live_start": "UNVERIFIED / required NTP sample missing",
+  "no_orders": true,
+  "no_clock_service_registry_changes": true,
+  "no_windows_shutdown": true
+}

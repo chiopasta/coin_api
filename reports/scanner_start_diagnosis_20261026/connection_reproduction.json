@@ -1,0 +1,31 @@
+{
+  "source_launch": "b8666e6c39c846a4a78a9714ed2c2d36",
+  "stored_http_statuses": [
+    200
+  ],
+  "stored_event_statuses": [
+    "HTTP_END"
+  ],
+  "display_before": {
+    "UPBIT": {
+      "status": "ERROR",
+      "at": 1792985479.430848
+    },
+    "BITHUMB": {
+      "status": "ERROR",
+      "at": 1792985482.2549703
+    }
+  },
+  "expected_display": "CONNECTED when HTTP_END with details_json.http_status=200 is fresh",
+  "test": "Read-only archived DB, simulated display freshness only; OS time unchanged",
+  "display_after": {
+    "UPBIT": {
+      "status": "CONNECTED",
+      "at": 1792985479.430848
+    },
+    "BITHUMB": {
+      "status": "CONNECTED",
+      "at": 1792985482.2549703
+    }
+  }
+}

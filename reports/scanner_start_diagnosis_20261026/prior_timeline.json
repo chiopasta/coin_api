@@ -1,0 +1,76 @@
+{
+  "launch_id": "640341845e17424f802aa924de48a22a",
+  "events": [
+    {
+      "at": 1792989675.0013285,
+      "kst": "2026-10-26T13:41:15.001328+09:00",
+      "event": "MANAGER_PRECHECK_STARTED"
+    },
+    {
+      "at": 1792989683.3913825,
+      "kst": "2026-10-26T13:41:23.391382+09:00",
+      "event": "MANAGER_CLOCK_VERIFIED"
+    },
+    {
+      "at": 1792989692.1340475,
+      "kst": "2026-10-26T13:41:32.134048+09:00",
+      "event": "SUPERVISOR_CLOCK_VERIFIED"
+    },
+    {
+      "at": 1792989692.1482081,
+      "kst": "2026-10-26T13:41:32.148208+09:00",
+      "event": "RUN_BOUNDS_CREATED"
+    },
+    {
+      "at": 1792989693.1329665,
+      "kst": "2026-10-26T13:41:33.132967+09:00",
+      "event": "WORKER_STARTED"
+    },
+    {
+      "at": 1792989693.1424167,
+      "kst": "2026-10-26T13:41:33.142417+09:00",
+      "event": "WORKER_CLOCK_STARTED"
+    },
+    {
+      "at": 1792989697.6206675,
+      "kst": "2026-10-26T13:41:37.620667+09:00",
+      "event": "CANCEL_MARKER_PRESENT"
+    },
+    {
+      "at": 1792989697.6562047,
+      "kst": "2026-10-26T13:41:37.656205+09:00",
+      "event": "STOP_REQUESTED_MARKER"
+    },
+    {
+      "at": 1792989700.9962602,
+      "kst": "2026-10-26T13:41:40.996260+09:00",
+      "event": "WORKER_CLOCK_VERIFIED"
+    },
+    {
+      "at": 1792989701.004092,
+      "kst": "2026-10-26T13:41:41.004092+09:00",
+      "event": "WORKER_ENDED",
+      "reason": "STOP_REQUESTED",
+      "requests": 0,
+      "close_errors": {}
+    },
+    {
+      "at": 1792989701.0755575,
+      "kst": "2026-10-26T13:41:41.075557+09:00",
+      "event": "WORKER_REAPED",
+      "forced_kill": false,
+      "returncode": 0
+    }
+  ],
+  "start_api_status": "NOT_RECORDED",
+  "web_exception_type": "NOT_RECORDED",
+  "start_timeout_evidence": false,
+  "stop_at_seconds": 22.654876232147217,
+  "readiness_timeout_seconds": 75,
+  "supervisor_created": true,
+  "worker_created": true,
+  "exchange_requests": 0,
+  "observation_dbs_created": false,
+  "manual_stop_context": "User states Stop was explicit; markers alone do not identify actor",
+  "conclusion": "Stopped during third clock check before collection, no abnormal child exit. Earlier SCANNER_CONTROL_FAILED cause not retained."
+}

@@ -1,0 +1,24 @@
+{"at": 1792990342.8667374, "event": "CONTROL_REQUEST", "action": "start", "operation_id": "fbb6269cf9d8e1d69f8d445b", "source": "WEB_API"}
+{"at": 1792990342.8994598, "event": "CONTROL_HTTP_RESPONSE", "action": "start", "http_status": 202}
+{"at": 1792990342.921857, "event": "SCANNER_MANAGER_CREATED", "request_id": "7cd3c5465fbc436285a989c5c6403e66", "pid": 15844}
+{"at": 1792990343.8184745, "event": "SCANNER_START_PHASE", "request_id": "7cd3c5465fbc436285a989c5c6403e66", "launch_id": "6b7bd97524ef46059472adc7d8693537", "phase": "PRECHECK", "elapsed_seconds": 0.9119819999996253}
+{"at": 1792990351.966725, "event": "SCANNER_START_PHASE", "request_id": "7cd3c5465fbc436285a989c5c6403e66", "launch_id": "6b7bd97524ef46059472adc7d8693537", "phase": "STARTING", "elapsed_seconds": 9.06015429999934}
+{"at": 1792990370.1830895, "event": "SCANNER_START_EXCEPTION", "request_id": "7cd3c5465fbc436285a989c5c6403e66", "phase": "STARTING", "elapsed_seconds": 27.230669399999897, "cancellation_source": "START_FAILURE", "error_type": "PermissionError", "errno": 13, "winerror": null, "code": null, "frames": [{"file": "coin_analysis/scanner_desktop_v50.py", "line": 150, "function": "start_scanner"}, {"file": "coin_analysis/scanner_control_v410.py", "line": 102, "function": "current"}, {"file": "coin_analysis/scanner_control_v410.py", "line": 37, "function": "read_json"}]}
+{"at": 1792990372.6209505, "event": "CONTROL_EXCEPTION", "action": "start", "operation_id": "fbb6269cf9d8e1d69f8d445b", "stage": "START_HELPER", "error_type": "PermissionError", "errno": 13, "winerror": null, "code": null, "frames": [{"file": "coin_analysis/scanner_dashboard_v50.py", "line": 440, "function": "run"}, {"file": "coin_analysis/scanner_desktop_v50.py", "line": 150, "function": "start_scanner"}, {"file": "coin_analysis/scanner_control_v410.py", "line": 102, "function": "current"}, {"file": "coin_analysis/scanner_control_v410.py", "line": 37, "function": "read_json"}]}
+{"at": 1792990373.7797704, "event": "CONTROL_REQUEST", "action": "stop", "operation_id": "3170acec31fd653a8c954af6", "source": "WEB_API"}
+{"at": 1792990373.8921869, "event": "CONTROL_HTTP_RESPONSE", "action": "stop", "http_status": 202}
+{"at": 1792990374.4947166, "event": "CONTROL_FINISHED", "action": "stop", "operation_id": "3170acec31fd653a8c954af6", "outcome": "SUCCEEDED", "scanner_status": "STOPPED", "phase": "TERMINAL"}
+{"at": 1792990496.022212, "event": "CONTROL_REQUEST", "action": "start", "operation_id": "b48f1925dfd5e1c92bb37fc1", "source": "WEB_API"}
+{"at": 1792990496.0679278, "event": "CONTROL_HTTP_RESPONSE", "action": "start", "http_status": 202}
+{"at": 1792990496.0934744, "event": "SCANNER_MANAGER_CREATED", "request_id": "19e4efed1a54468092efeba00f9d2bf5", "pid": 10896}
+{"at": 1792990500.6142273, "event": "SCANNER_START_PHASE", "request_id": "19e4efed1a54468092efeba00f9d2bf5", "launch_id": "1aa3e50245cf48d8bb6b55ce481b052b", "phase": "PRECHECK", "elapsed_seconds": 4.538902199999939}
+{"at": 1792990506.494542, "event": "SCANNER_START_PHASE", "request_id": "19e4efed1a54468092efeba00f9d2bf5", "launch_id": "1aa3e50245cf48d8bb6b55ce481b052b", "phase": "STARTING", "elapsed_seconds": 10.419165400000566}
+{"at": 1792990516.1834543, "event": "METADATA_READ_RECOVERED", "metadata_kind": "STATE", "retries": 1, "elapsed_seconds": 0.0409285000005184}
+{"at": 1792990529.7932708, "event": "METADATA_READ_RECOVERED", "metadata_kind": "STATE", "retries": 1, "elapsed_seconds": 0.5783448000001954}
+{"at": 1792990531.7015076, "event": "METADATA_READ_RECOVERED", "metadata_kind": "STATE", "retries": 2, "elapsed_seconds": 0.24653159999979835}
+{"at": 1792990533.3780708, "event": "SCANNER_START_PHASE", "request_id": "19e4efed1a54468092efeba00f9d2bf5", "launch_id": "1aa3e50245cf48d8bb6b55ce481b052b", "phase": "OBSERVING", "elapsed_seconds": 37.302429699999266}
+{"at": 1792990533.5512784, "event": "CONTROL_FINISHED", "action": "start", "operation_id": "b48f1925dfd5e1c92bb37fc1", "outcome": "SUCCEEDED", "scanner_status": "RUNNING", "phase": "OBSERVING"}
+{"at": 1792990534.2175987, "event": "CONTROL_HTTP_REJECTED", "http_status": 409, "error_type": "RuntimeError", "errno": null, "winerror": null, "code": null, "frames": [{"file": "coin_analysis/scanner_dashboard_v50.py", "line": 338, "function": "do_POST"}, {"file": "coin_analysis/scanner_dashboard_v50.py", "line": 429, "function": "request"}]}
+{"at": 1792990537.4960432, "event": "CONTROL_REQUEST", "action": "stop", "operation_id": "1d836b808e2050778b591815", "source": "WEB_API"}
+{"at": 1792990537.5277653, "event": "CONTROL_HTTP_RESPONSE", "action": "stop", "http_status": 202}
+{"at": 1792990538.8397195, "event": "CONTROL_FINISHED", "action": "stop", "operation_id": "1d836b808e2050778b591815", "outcome": "SUCCEEDED", "scanner_status": "STOPPED", "phase": "TERMINAL"}

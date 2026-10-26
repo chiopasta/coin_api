@@ -1,5 +1,6 @@
 """Read-only Windows clock admission. Never starts a service or sets the clock."""
 import os
+from pathlib import Path
 import ctypes
 import json
 import subprocess
@@ -15,6 +16,7 @@ RECHECK_SECONDS = 600
 MAX_WALL_DRIFT_SECONDS = 1.0
 MAX_CHECK_GAP_SECONDS = 10.0
 SUSPEND_DIFFERENCE_SECONDS = .5
+PROJECT_ROOT=Path(__file__).resolve().parents[1]
 
 
 def decode_output(raw):
@@ -35,17 +37,23 @@ def awake_seconds():
 
 
 def verify_clock():
-    """V4.9: bounded timeout retries, unchanged root/accuracy/freshness limits.
+    """Bounded fresh NTP plus Windows synchronization health.
 
     Admission STILL requires Windows status plus two-provider evidence inside
     the existing tolerance INCLUDING uncertainty. No time correction or offset
-    compensation. Subprocess timeout also bounds DNS. NTP is unauthenticated.
+    compensation. A Windows dispersion-only warning can be cross-checked using
+    six fresh direct samples and distinct peers; its raw warning is retained.
+    Subprocess timeout also bounds DNS. NTP is unauthenticated.
     """
     began=time.monotonic()
     result = dict(at=time.time(),status='BLOCKED',reason='CLOCK_SYNC_UNVERIFIED',
-                  references=list(ntp.HOSTS),max_samples=6,max_attempts=ntp.MAX_ATTEMPTS,max_seconds=15,clock_policy='V49_PACED_RETRY_FRESH_NTP',
+                  references=list(ntp.HOSTS),max_samples=6,max_attempts=ntp.MAX_ATTEMPTS,max_seconds=15,clock_policy='V52_WINDOWS_SYNC_DIRECT_NTP_CROSSCHECK',
                   max_offset_seconds=MAX_OFFSET_SECONDS,max_spread_seconds=MAX_SPREAD_SECONDS,
-                  clock_changed=False,commands=[])
+                  clock_changed=False,commands=[],
+                  execution=dict(python_version='.'.join(map(str,sys.version_info[:3])),
+                      isolated=bool(sys.flags.isolated),cwd_is_project=Path.cwd().resolve()==PROJECT_ROOT,
+                      ntp_cwd_is_project=True,ntp_python_environment_ignored=True),
+                  provider_summary=ntp.provider_summary(None))
     if os.name!='nt':
         return result
     service_ok=False;blockers=[]
@@ -62,13 +70,14 @@ def verify_clock():
         result['service_error']=repr(exc)
     if not service_ok:blockers.append('CLOCK_WINDOWS_TIME_SERVICE_UNVERIFIED')
     try:
-        command=[sys.executable,'-m','coin_analysis.scanner_ntp_v49']
+        command=[sys.executable,'-E','-s','-m','coin_analysis.scanner_ntp_v49']
         remaining=min(ntp.MAX_PROCESS_SECONDS,15-(time.monotonic()-began))
         if remaining<=0:raise ValueError('Clock verification time budget exhausted')
-        completed=subprocess.run(command,capture_output=True,timeout=remaining,creationflags=0x08000000)
+        completed=subprocess.run(command,capture_output=True,timeout=remaining,creationflags=0x08000000,cwd=PROJECT_ROOT)
         if completed.returncode:raise ValueError('NTP probe child failed: '+decode_output(completed.stderr))
         measurement=json.loads(completed.stdout)
         result['measurement']=measurement
+        result['provider_summary']=ntp.provider_summary(measurement)
         assessment=ntp.assess(measurement,MAX_OFFSET_SECONDS,MAX_SPREAD_SECONDS)
         result['external_assessment']=assessment
         result['measurement_freshness']=admission.measurement_freshness(measurement,time.time())
@@ -83,9 +92,17 @@ def verify_clock():
     if result['wall_monotonic_difference_seconds']>MAX_WALL_DRIFT_SECONDS:
         blockers.append('CLOCK_WALL_MONOTONIC_DIVERGENCE')
     if result['elapsed_monotonic_seconds']>15:blockers.append('CLOCK_VERIFICATION_TIME_BUDGET')
+    if 'CLOCK_WINDOWS_ROOT_UNCERTAINTY' in blockers:
+        crosscheck=admission.crosscheck_windows_root(result['windows_status'],result.get('measurement'),
+            result['completed_at'],result['elapsed_monotonic_seconds'],MAX_OFFSET_SECONDS,MAX_SPREAD_SECONDS)
+        result['root_crosscheck']=crosscheck
+        if crosscheck['status']=='VERIFIED':
+            blockers.remove('CLOCK_WINDOWS_ROOT_UNCERTAINTY')
+            result['warnings']=['CLOCK_WINDOWS_ROOT_UNCERTAINTY']
+        elif crosscheck['reason'] not in blockers:blockers.append(crosscheck['reason'])
     result['blockers']=blockers
     if blockers:return dict(result,reason=blockers[-1])
-    return dict(result,status='VERIFIED',reason=assessment['reason'])
+    return dict(result,status='VERIFIED',reason=result.get('root_crosscheck',assessment)['reason'])
 
 
 def resume_continuity(db, now):

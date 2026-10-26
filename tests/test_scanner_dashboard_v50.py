@@ -107,7 +107,7 @@ class DataView(unittest.TestCase):
         for status,phase in [('BLOCKED','TERMINAL'),('RUNNING','PRECHECK')]:
             self.state.update(status=status,phase=phase,reason='CLOCK_BAD')
             s=d.View().snapshot()['scanner'];self.assertEqual(s['markets'],0)
-            self.assertFalse(s['live_collecting']);self.assertEqual(s['reason'],'CLOCK_VERIFICATION_FAILED')
+            self.assertFalse(s['live_collecting']);self.assertEqual(s['reason'],'CLOCK_BAD')
 
     def test_unknown_file_or_sql_identifier_cannot_enter_query(self):
         v=d.View()
@@ -133,9 +133,9 @@ class DataView(unittest.TestCase):
     def test_connections_depend_on_latest_http_and_freshness(self):
         root=self.base/'ledger';root.mkdir()
         with closing(sqlite3.connect(root/'control.db')) as db, db:
-            db.execute('CREATE TABLE http_attempts(seq INTEGER,exchange TEXT,status TEXT,ended_at REAL)')
-            db.execute("INSERT INTO http_attempts VALUES(1,'UPBIT','200',?)",(time.time(),))
-            db.execute("INSERT INTO http_attempts VALUES(2,'BITHUMB','503',?)",(time.time(),))
+            db.execute('CREATE TABLE http_attempts(seq INTEGER,exchange TEXT,status TEXT,ended_at REAL,details_json TEXT)')
+            db.execute("INSERT INTO http_attempts VALUES(1,'UPBIT','HTTP_END',?,?)",(time.time(),json.dumps(dict(http_status=200))))
+            db.execute("INSERT INTO http_attempts VALUES(2,'BITHUMB','HTTP_END',?,?)",(time.time(),json.dumps(dict(http_status=503))))
         s=d.View.connections(root,True)
         self.assertEqual(s['UPBIT']['status'],'CONNECTED');self.assertEqual(s['BITHUMB']['status'],'ERROR')
         with patch.object(d.time,'time',return_value=time.time()+151):

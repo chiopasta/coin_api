@@ -1,0 +1,616 @@
+{
+  "at": 1792980653.080595,
+  "status": "BLOCKED",
+  "reason": "CLOCK_WINDOWS_ROOT_UNCERTAINTY",
+  "references": [
+    "time.windows.com",
+    "time.cloudflare.com"
+  ],
+  "max_samples": 6,
+  "max_attempts": 8,
+  "max_seconds": 15,
+  "clock_policy": "V49_PACED_RETRY_FRESH_NTP",
+  "max_offset_seconds": 1.0,
+  "max_spread_seconds": 0.5,
+  "clock_changed": false,
+  "commands": [
+    {
+      "argv": [
+        "w32tm",
+        "/query",
+        "/status",
+        "/verbose"
+      ],
+      "returncode": 0,
+      "output": "윤초 조정: 0(경고 없음)\n계층: 2(보조 참조 - (S)NTP로 동기화됨)\n정밀도: -23(틱당 119.209ns)\n루트 지연: 0.0390476s\n루트 분산: 7.7619620s\n참조 ID: 0xD8EF2300(원본 IP:  216.239.35.0)\n마지막으로 동기화한 시간: 2026-10-26 오전 10:56:45\n원본: time.google.com,0x8 \n폴링 간격: 10(1024s)\n\n단계 오프셋: 0.0016762s\n클록 속도: 0.0156250s\n상태 시스템: 1 (저장됨)\n시간 원본 플래그: 0 (없음)\n서버 역할: 0 (없음)\n마지막 동기화 오류: 0 (명령이 성공적으로 완료되었습니다.)\n마지막으로 동기화한 후 지난 시간: 847.6016751s\n\n"
+    }
+  ],
+  "windows_status": {
+    "status": "BLOCKED",
+    "reason": "CLOCK_WINDOWS_ROOT_UNCERTAINTY",
+    "leap": 0,
+    "stratum": 2,
+    "last_sync_error": 0,
+    "root_delay_seconds": 0.0390476,
+    "root_dispersion_seconds": 7.761962,
+    "root_distance_seconds": 7.7814858,
+    "sync_age_seconds": 847.6016751,
+    "source": "time.google.com,0x8",
+    "last_sync_display": "2026-10-26 오전 10:56:45",
+    "max_sync_age_seconds": 3600,
+    "root_distance_limit_seconds": 1.0
+  },
+  "measurement": {
+    "at": 1792980658.1091716,
+    "hosts": [
+      "time.windows.com",
+      "time.cloudflare.com"
+    ],
+    "samples_per_host": 3,
+    "rows": [
+      {
+        "host": "time.windows.com",
+        "started_at": 1792980653.5506742,
+        "attempt_started_monotonic": 4747.0615382,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.023720800000774034,
+        "resolved_ipv4": [
+          "52.231.114.183"
+        ],
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "local_port": 60097,
+        "local_sent_at": 1792980653.5751913,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89352d933fc000",
+        "response_hex": "1c0400e90000000400000293564d5450ee893528bad9eb99ee89352d933fc000ee89352d9702d8f8ee89352d9702e811",
+        "receive_elapsed_seconds": 0.006838600000264705,
+        "offset_seconds": 0.011281251907348633,
+        "uncertainty_seconds": 0.01355597058284527,
+        "error_interval_seconds": [
+          -0.002274718675496638,
+          0.024837222490193905
+        ],
+        "delay_seconds": 0.006829261779785156,
+        "elapsed_monotonic_seconds": 0.006838600000264705,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.0100555419921875,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 8.384546163142659e-06,
+        "stratum": 4,
+        "reference_at": 1792980648.7298877,
+        "server_received_at": 1792980653.5898871,
+        "server_transmitted_at": 1792980653.589888,
+        "local_received_at": 1792980653.5820215,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980653.5822783,
+        "attempt_elapsed_seconds": 0.03160900000057154,
+        "slot_id": 0,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792980654.0830789,
+        "attempt_started_monotonic": 4747.5939427,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.0014431999998123501,
+        "resolved_ipv4": [
+          "162.159.200.1",
+          "162.159.200.123"
+        ],
+        "peer": [
+          "162.159.200.123",
+          123
+        ],
+        "local_port": 60098,
+        "local_sent_at": 1792980654.0849247,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89352e15bda000",
+        "response_hex": "240300e600002293000000410a0b085eee8934f532350ffdee89352e15bda000ee89352e19efeff1ee89352e19f2ce04",
+        "receive_elapsed_seconds": 0.004676199999266828,
+        "offset_seconds": 0.014079570770263672,
+        "uncertainty_seconds": 0.07088557747977373,
+        "error_interval_seconds": [
+          -0.056806006709510054,
+          0.0849651482500374
+        ],
+        "delay_seconds": 0.004626274108886719,
+        "elapsed_monotonic_seconds": 0.004676199999266828,
+        "root_delay_seconds": 0.1350555419921875,
+        "root_dispersion_seconds": 0.0009918212890625,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 6.056871825421695e-06,
+        "stratum": 3,
+        "reference_at": 1792980597.1961222,
+        "server_received_at": 1792980654.1013174,
+        "server_transmitted_at": 1792980654.1013613,
+        "local_received_at": 1792980654.0895948,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980654.0898607,
+        "attempt_elapsed_seconds": 0.006786899999497109,
+        "slot_id": 1,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792980655.583159,
+        "attempt_started_monotonic": 4749.0940233,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.0011414000000513624,
+        "resolved_ipv4": [
+          "52.231.114.183"
+        ],
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "local_port": 60099,
+        "local_sent_at": 1792980655.5846448,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89352f95ab4800",
+        "response_hex": "1c0400e90000000400000294564d5450ee893528bd107090ee89352f95ab4800ee89352f99395a94ee89352f99396d09",
+        "receive_elapsed_seconds": 0.005776199999672826,
+        "offset_seconds": 0.01100146770477295,
+        "uncertainty_seconds": 0.013038237826210912,
+        "error_interval_seconds": [
+          -0.0020367701214379624,
+          0.024039705530983863
+        ],
+        "delay_seconds": 0.005770444869995117,
+        "elapsed_monotonic_seconds": 0.005776199999672826,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.01007080078125,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 4.801455361302942e-06,
+        "stratum": 4,
+        "reference_at": 1792980648.738532,
+        "server_received_at": 1792980655.5985315,
+        "server_transmitted_at": 1792980655.5985324,
+        "local_received_at": 1792980655.5904162,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980655.5906646,
+        "attempt_elapsed_seconds": 0.0075096999999004765,
+        "slot_id": 2,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792980656.0908847,
+        "attempt_started_monotonic": 4749.6017485,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.001096299999517214,
+        "resolved_ipv4": [
+          "162.159.200.1",
+          "162.159.200.123"
+        ],
+        "peer": [
+          "162.159.200.123",
+          123
+        ],
+        "local_port": 60100,
+        "local_sent_at": 1792980656.0923018,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89353017a11800",
+        "response_hex": "240300e600002293000000410a0b085eee8934f532350ffdee89353017a11800ee8935301c5f1413ee8935301c6288a4",
+        "receive_elapsed_seconds": 0.006812499999796273,
+        "offset_seconds": 0.015146136283874512,
+        "uncertainty_seconds": 0.07194839782789839,
+        "error_interval_seconds": [
+          -0.056802261544023874,
+          0.0870945341117729
+        ],
+        "delay_seconds": 0.0067555904388427734,
+        "elapsed_monotonic_seconds": 0.006812499999796273,
+        "root_delay_seconds": 0.1350555419921875,
+        "root_dispersion_seconds": 0.0009918212890625,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 4.219054972054437e-06,
+        "stratum": 3,
+        "reference_at": 1792980597.1961222,
+        "server_received_at": 1792980656.1108258,
+        "server_transmitted_at": 1792980656.1108785,
+        "local_received_at": 1792980656.0991101,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980656.0993,
+        "attempt_elapsed_seconds": 0.008419199999480043,
+        "slot_id": 3,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792980657.5909417,
+        "attempt_started_monotonic": 4751.1018058,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.001130399999965448,
+        "resolved_ipv4": [
+          "52.231.114.183"
+        ],
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "local_port": 60101,
+        "local_sent_at": 1792980657.5924094,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89353197a82000",
+        "response_hex": "1c0400e90000000400000296564d5450ee893528bb35daadee89353197a82000ee8935319b35d09cee8935319b35e163",
+        "receive_elapsed_seconds": 0.005111399999805144,
+        "offset_seconds": 0.011327385902404785,
+        "uncertainty_seconds": 0.012736072485156706,
+        "error_interval_seconds": [
+          -0.0014086865827519206,
+          0.024063458387561493
+        ],
+        "delay_seconds": 0.005106210708618164,
+        "elapsed_monotonic_seconds": 0.005111399999805144,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.010101318359375,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 4.235616870573722e-06,
+        "stratum": 4,
+        "reference_at": 1792980648.7312906,
+        "server_received_at": 1792980657.6062899,
+        "server_transmitted_at": 1792980657.6062908,
+        "local_received_at": 1792980657.5975165,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980657.5976734,
+        "attempt_elapsed_seconds": 0.006734599999617785,
+        "slot_id": 4,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792980658.099814,
+        "attempt_started_monotonic": 4751.6106772,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.0011731999993571662,
+        "resolved_ipv4": [
+          "162.159.200.1",
+          "162.159.200.123"
+        ],
+        "peer": [
+          "162.159.200.123",
+          123
+        ],
+        "local_port": 60102,
+        "local_sent_at": 1792980658.101288,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89353219ee0000",
+        "response_hex": "240300e600002297000000330a99080bee8934f086968698ee89353219ee0000ee8935321e76dbb9ee8935321e7a16a2",
+        "receive_elapsed_seconds": 0.00769399999990128,
+        "offset_seconds": 0.0138930082321167,
+        "uncertainty_seconds": 0.07220786375512742,
+        "error_interval_seconds": [
+          -0.05831485552301072,
+          0.08610087198724412
+        ],
+        "delay_seconds": 0.00764012336730957,
+        "elapsed_monotonic_seconds": 0.00769399999990128,
+        "root_delay_seconds": 0.1351165771484375,
+        "root_dispersion_seconds": 0.0007781982421875,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 4.523986717686057e-06,
+        "stratum": 3,
+        "reference_at": 1792980592.5257344,
+        "server_received_at": 1792980658.1190012,
+        "server_transmitted_at": 1792980658.1190505,
+        "local_received_at": 1792980658.1089776,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980658.1091526,
+        "attempt_elapsed_seconds": 0.009342299999843817,
+        "slot_id": 5,
+        "attempt_number": 1
+      }
+    ],
+    "attempts": [
+      {
+        "host": "time.windows.com",
+        "started_at": 1792980653.5506742,
+        "attempt_started_monotonic": 4747.0615382,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.023720800000774034,
+        "resolved_ipv4": [
+          "52.231.114.183"
+        ],
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "local_port": 60097,
+        "local_sent_at": 1792980653.5751913,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89352d933fc000",
+        "response_hex": "1c0400e90000000400000293564d5450ee893528bad9eb99ee89352d933fc000ee89352d9702d8f8ee89352d9702e811",
+        "receive_elapsed_seconds": 0.006838600000264705,
+        "offset_seconds": 0.011281251907348633,
+        "uncertainty_seconds": 0.01355597058284527,
+        "error_interval_seconds": [
+          -0.002274718675496638,
+          0.024837222490193905
+        ],
+        "delay_seconds": 0.006829261779785156,
+        "elapsed_monotonic_seconds": 0.006838600000264705,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.0100555419921875,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 8.384546163142659e-06,
+        "stratum": 4,
+        "reference_at": 1792980648.7298877,
+        "server_received_at": 1792980653.5898871,
+        "server_transmitted_at": 1792980653.589888,
+        "local_received_at": 1792980653.5820215,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980653.5822783,
+        "attempt_elapsed_seconds": 0.03160900000057154,
+        "slot_id": 0,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792980654.0830789,
+        "attempt_started_monotonic": 4747.5939427,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.0014431999998123501,
+        "resolved_ipv4": [
+          "162.159.200.1",
+          "162.159.200.123"
+        ],
+        "peer": [
+          "162.159.200.123",
+          123
+        ],
+        "local_port": 60098,
+        "local_sent_at": 1792980654.0849247,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89352e15bda000",
+        "response_hex": "240300e600002293000000410a0b085eee8934f532350ffdee89352e15bda000ee89352e19efeff1ee89352e19f2ce04",
+        "receive_elapsed_seconds": 0.004676199999266828,
+        "offset_seconds": 0.014079570770263672,
+        "uncertainty_seconds": 0.07088557747977373,
+        "error_interval_seconds": [
+          -0.056806006709510054,
+          0.0849651482500374
+        ],
+        "delay_seconds": 0.004626274108886719,
+        "elapsed_monotonic_seconds": 0.004676199999266828,
+        "root_delay_seconds": 0.1350555419921875,
+        "root_dispersion_seconds": 0.0009918212890625,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 6.056871825421695e-06,
+        "stratum": 3,
+        "reference_at": 1792980597.1961222,
+        "server_received_at": 1792980654.1013174,
+        "server_transmitted_at": 1792980654.1013613,
+        "local_received_at": 1792980654.0895948,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980654.0898607,
+        "attempt_elapsed_seconds": 0.006786899999497109,
+        "slot_id": 1,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792980655.583159,
+        "attempt_started_monotonic": 4749.0940233,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.0011414000000513624,
+        "resolved_ipv4": [
+          "52.231.114.183"
+        ],
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "local_port": 60099,
+        "local_sent_at": 1792980655.5846448,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89352f95ab4800",
+        "response_hex": "1c0400e90000000400000294564d5450ee893528bd107090ee89352f95ab4800ee89352f99395a94ee89352f99396d09",
+        "receive_elapsed_seconds": 0.005776199999672826,
+        "offset_seconds": 0.01100146770477295,
+        "uncertainty_seconds": 0.013038237826210912,
+        "error_interval_seconds": [
+          -0.0020367701214379624,
+          0.024039705530983863
+        ],
+        "delay_seconds": 0.005770444869995117,
+        "elapsed_monotonic_seconds": 0.005776199999672826,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.01007080078125,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 4.801455361302942e-06,
+        "stratum": 4,
+        "reference_at": 1792980648.738532,
+        "server_received_at": 1792980655.5985315,
+        "server_transmitted_at": 1792980655.5985324,
+        "local_received_at": 1792980655.5904162,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980655.5906646,
+        "attempt_elapsed_seconds": 0.0075096999999004765,
+        "slot_id": 2,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792980656.0908847,
+        "attempt_started_monotonic": 4749.6017485,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.001096299999517214,
+        "resolved_ipv4": [
+          "162.159.200.1",
+          "162.159.200.123"
+        ],
+        "peer": [
+          "162.159.200.123",
+          123
+        ],
+        "local_port": 60100,
+        "local_sent_at": 1792980656.0923018,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89353017a11800",
+        "response_hex": "240300e600002293000000410a0b085eee8934f532350ffdee89353017a11800ee8935301c5f1413ee8935301c6288a4",
+        "receive_elapsed_seconds": 0.006812499999796273,
+        "offset_seconds": 0.015146136283874512,
+        "uncertainty_seconds": 0.07194839782789839,
+        "error_interval_seconds": [
+          -0.056802261544023874,
+          0.0870945341117729
+        ],
+        "delay_seconds": 0.0067555904388427734,
+        "elapsed_monotonic_seconds": 0.006812499999796273,
+        "root_delay_seconds": 0.1350555419921875,
+        "root_dispersion_seconds": 0.0009918212890625,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 4.219054972054437e-06,
+        "stratum": 3,
+        "reference_at": 1792980597.1961222,
+        "server_received_at": 1792980656.1108258,
+        "server_transmitted_at": 1792980656.1108785,
+        "local_received_at": 1792980656.0991101,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980656.0993,
+        "attempt_elapsed_seconds": 0.008419199999480043,
+        "slot_id": 3,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.windows.com",
+        "started_at": 1792980657.5909417,
+        "attempt_started_monotonic": 4751.1018058,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.001130399999965448,
+        "resolved_ipv4": [
+          "52.231.114.183"
+        ],
+        "peer": [
+          "52.231.114.183",
+          123
+        ],
+        "local_port": 60101,
+        "local_sent_at": 1792980657.5924094,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89353197a82000",
+        "response_hex": "1c0400e90000000400000296564d5450ee893528bb35daadee89353197a82000ee8935319b35d09cee8935319b35e163",
+        "receive_elapsed_seconds": 0.005111399999805144,
+        "offset_seconds": 0.011327385902404785,
+        "uncertainty_seconds": 0.012736072485156706,
+        "error_interval_seconds": [
+          -0.0014086865827519206,
+          0.024063458387561493
+        ],
+        "delay_seconds": 0.005106210708618164,
+        "elapsed_monotonic_seconds": 0.005111399999805144,
+        "root_delay_seconds": 6.103515625e-05,
+        "root_dispersion_seconds": 0.010101318359375,
+        "server_precision_seconds": 1.1920928955078125e-07,
+        "local_sampling_difference_seconds": 4.235616870573722e-06,
+        "stratum": 4,
+        "reference_at": 1792980648.7312906,
+        "server_received_at": 1792980657.6062899,
+        "server_transmitted_at": 1792980657.6062908,
+        "local_received_at": 1792980657.5975165,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980657.5976734,
+        "attempt_elapsed_seconds": 0.006734599999617785,
+        "slot_id": 4,
+        "attempt_number": 1
+      },
+      {
+        "host": "time.cloudflare.com",
+        "started_at": 1792980658.099814,
+        "attempt_started_monotonic": 4751.6106772,
+        "timeout_seconds": 1.2,
+        "phase": "COMPLETE",
+        "dns_seconds": 0.0011731999993571662,
+        "resolved_ipv4": [
+          "162.159.200.1",
+          "162.159.200.123"
+        ],
+        "peer": [
+          "162.159.200.123",
+          123
+        ],
+        "local_port": 60102,
+        "local_sent_at": 1792980658.101288,
+        "request_hex": "23000000000000000000000000000000000000000000000000000000000000000000000000000000ee89353219ee0000",
+        "response_hex": "240300e600002297000000330a99080bee8934f086968698ee89353219ee0000ee8935321e76dbb9ee8935321e7a16a2",
+        "receive_elapsed_seconds": 0.00769399999990128,
+        "offset_seconds": 0.0138930082321167,
+        "uncertainty_seconds": 0.07220786375512742,
+        "error_interval_seconds": [
+          -0.05831485552301072,
+          0.08610087198724412
+        ],
+        "delay_seconds": 0.00764012336730957,
+        "elapsed_monotonic_seconds": 0.00769399999990128,
+        "root_delay_seconds": 0.1351165771484375,
+        "root_dispersion_seconds": 0.0007781982421875,
+        "server_precision_seconds": 1.4901161193847656e-08,
+        "local_sampling_difference_seconds": 4.523986717686057e-06,
+        "stratum": 3,
+        "reference_at": 1792980592.5257344,
+        "server_received_at": 1792980658.1190012,
+        "server_transmitted_at": 1792980658.1190505,
+        "local_received_at": 1792980658.1089776,
+        "positive_offset_means": "Reference is ahead of local wall clock",
+        "status": "MEASURED",
+        "retryable": false,
+        "completed_at": 1792980658.1091526,
+        "attempt_elapsed_seconds": 0.009342299999843817,
+        "slot_id": 5,
+        "attempt_number": 1
+      }
+    ],
+    "max_packets": 8,
+    "required_samples": 6,
+    "probe_policy": "V49_PACED_RECEIVE_TIMEOUT_RETRY",
+    "host_interval_seconds": 2.0,
+    "global_interval_seconds": 0.5,
+    "backoff_seconds": 2.0,
+    "internal_seconds": 10.5,
+    "abort_reason": null,
+    "elapsed_monotonic_seconds": 4.558706499999971,
+    "authenticated": false,
+    "clock_modified": false
+  },
+  "external_assessment": {
+    "status": "VERIFIED",
+    "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY"
+  },
+  "measurement_freshness": {
+    "status": "VERIFIED",
+    "reason": "FRESH_DIRECT_NTP_SAMPLES",
+    "max_age_seconds": 15,
+    "oldest_sample_age_seconds": 4.561244964599609
+  },
+  "completed_at": 1792980658.1364675,
+  "elapsed_monotonic_seconds": 5.0558772000003955,
+  "wall_monotonic_difference_seconds": 4.7596622607670724e-06,
+  "blockers": [
+    "CLOCK_WINDOWS_ROOT_UNCERTAINTY"
+  ]
+}

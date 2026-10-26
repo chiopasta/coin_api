@@ -1,5 +1,31 @@
 # 프로젝트 상태 — 새 작업의 첫 읽기 문서
 
+## 2026-10-26 SCANNER_CONTROL_FAILED 실제 재현·상태 파일 읽기 수정
+
+- [시간순 조사·원인·수정·검증](scanner_start_diagnosis_20261026.md). 사용자 직전 실행은 NTP3단계PASS, 시작22.65초후 수동Stop이수집기시계검사중접수됐다. STOPPED/CANCELLED_BEFORE_COLLECTION만으로자동종료버그로판정하지않는다. 과거웹예외는미기록이라내부원인확정불가다.
+- 진단추가후 **실제API202→STARTING에서같은SCANNER_CONTROL_FAILED재현**. 시작확인기의관리상태JSON `Path.open`이PermissionError(errno13/winerror없음)로실패해27.23초에fail-safe취소됐다.75초timeout/NTP/거래소/worker crash가아니다. 해당Windows읽기오류만0.5초재시도예산으로복구하고지속오류·JSON/크기제한은차단한다. 원시예외/토큰없이요청·단계·예외·Stop을기록한다. 실제HTTP_END/상세200을ERROR로표시하던연결상태불일치도수정했다.
+- 수정후같은API에서읽기충돌3회복구, **OBSERVING·양쪽CONNECTED·2746봉저장→STOPPED/SAVED PASS**. worker21.02초·19HTTP모두200·신호0,종료후웹200,소유프로세스/listener종료. 실제시작총2회(재현1/수정후1),NTP40/48·HTTP19/80. 시계/전송/수집엔진해시는이전과동일하다.
+- **164개중163통과·구형Python미설치1skip**,기존DB13개해시/전테이블건수·원본215신호·연구결과·사용자실행로그보존. [테스트](../reports/scanner_start_diagnosis_20261026/test_result.json), [보존](../reports/scanner_start_diagnosis_20261026/completion_checks.json). 기존4개문서/관리pointer외데이터·이전보고서변경없음. 장기/절전·공유주체상세추적·실브라우저외관은미검증,24시간무인NOT_READY다.
+
+## 2026-10-26 V5.2 실제 스캐너 시작 경로 최종 검증
+
+- [조사·변경·실제 검증](scanner_start_final_20261026.md). 단독/웹은 같은 시계 정책이며 웹은 관리·감독·수집의 새 gate3회다. 캐시/정확도 기준 차이가 아니라 Windows NTP 수신timeout을 확인했다. NTP child cwd/환경 고정, 제공자별 허용 필드 진단,1.5초 수신 대기·표본당최대2/전체2재시도·8요청/전체15초 상한, readiness75초를 적용했다. 필수6표본·1초 정확도/불확실성·0.5초 spread·신선도·Windows 안전 조건은 유지한다.
+- 실제 시작API **2회 OBSERVING → STOPPED/SAVED PASS**. worker13.48/15.86초·각19 HTTP·신호0, 정상reap/forced0/close_errors없음. 중복409·외부Origin403·종료후웹200·실제PASS/오류해제 상태를 확인했다. 단독1회는Windows1/3표본으로안전BLOCKED였다. 전체NTP45/56·HTTP38/80, 기존10거래소/종목쌍을늘리지않았다.
+- **157개 중156통과·구형Python미설치1skip**, 오류0. 원본215신호·기존DB6개해시/전테이블건수·연구결과보존, 작업manager/worker/listener종료. [테스트](../reports/scanner_start_v53_20261026/test_result.json), [보존](../reports/scanner_start_v53_20261026/completion_checks.json). 새자료는격리관측DB/보고서에추가했다. NTP응답누락은재발가능하며장시간·자연신호후속성과·실브라우저외관은미검증, **24시간무인NOT_READY**다.
+
+## 2026-10-26 V5.2 Windows 루트 분산·직접 NTP 교차 검증
+
+- [원인·변경·검증](scanner_clock_v52_cross_validation_20261026.md). 기록된 루트 거리7.7814858초의 독립 필수 조건 때문에 직접 측정이 정상이더라도 차단되던 경우를 재현했다. 초/밀리초·고정소수점 변환 오류는 없었다. Windows 동기화 건강 상태·신선도·네트워크 원본이 정상이고, 새 직접 두 제공자6표본·서로 다른 응답IP·각 오차+불확실성≤1초·spread≤0.5초·오차 구간 중첩·15초 신선도를 모두 만족하면 루트 분산 경고를 보존한 채 교차 검증한다. 지연 자체 초과·동기화 실패·오래된 자료·필수 NTP 누락은 계속 차단한다. 검사 우선순위에서 오래된 동기화가 큰 루트 분산에 가려지지 않게 했다.
+- 과거 기록의 직접 측정 bound0.0871초는 당시 시각 재현에만 사용하며 현재 admission으로 재사용하지 않는다. 실제 현재 검사1회는 Windows 루트 거리0.3403초·NTP 오차약21~31ms로PASS(7시도/6유효/1timeout). 현재 Windows 원본은Google이며 이 작업은 시각·서비스·원본·레지스트리를 변경하지 않았다.
+- 실제 시작API202 후 PRECHECK에서 종료API202를 요청했다. 이 검사에서는 Windows NTP1표본이 재시도 후에도 없어 **CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE / BLOCKED**(7시도/5유효/2timeout). manager종료·worker/관측DB/거래소HTTP0을 확인했다. 실제 NTP총14/사전상한24. 실제 정상LIVE시작은 미검증이며 좋은 결과가 나올 때까지 재시도하지 않았다.
+- 회귀 **151개 중150통과·1구형Python미설치skip**, 실패/오류0. 실제 오류 코드·원인 메시지·마지막 검사 문구·교차 검증PASS 경고 및 오류 해제를 API/JS렌더로 확인했다. 실제 브라우저 시각QA·장시간·재부팅은 미검증이다. 원본DB·신호·연구 결과와 탐지/label/결측 정책은 보존한다. [테스트](../reports/scanner_clock_v52_20261026/test_result.json), [보존 검사](../reports/scanner_clock_v52_20261026/completion_checks.json). 24시간 무인운영은 계속NOT_READY다.
+- 최종 기준313파일 중309개바이트동일·의도한문서2개/관리pointer2개만변경. 기존DB·연구결과해시동일, 원본신호215·DB6개quick_check=ok, manager/worker0·8765listener0을확인했다. 현재BLOCKED는NTP응답누락이력이며실행중Scanner는없다.
+
+## 2026-10-26 웹 없는 스캐너 실행 BAT
+
+- 루트 `start_scanner_only.bat` 추가. 더블클릭하면 기존 Python 선택 도우미의 `_scanner` 진입점으로 관측 엔진만 실행한다. 웹 서버·브라우저를 열지 않으며 기존 NTP·잠금·STOP·저장 로직을 재사용한다. 기본 최대600초/180 HTTP, 종료는 Ctrl+C 또는 기존 `stop_coin_api.bat`다. 기존 종료 BAT는 열려 있는 이 프로젝트 웹도 함께 종료한다.
+- 실제 BAT `--check`, 스캐너 전용 디스패치, CMD/PowerShell의 한글·공백·구두점 경로 전달을 오프라인 검증했다. 기존 BAT 관련3개 검사 중2통과·1구형Python미설치skip. 점검 전후 data 파일 크기·수정 시각 동일. 실제 LIVE/NTP/API 호출은 하지 않았으며 새 BAT의 실제 수집·물리 더블클릭은 미검증이다. 탐지 규칙·DB·기존 웹 BAT 변경 없음.
+
 ## 2026-10-26 V5.1 웹 운영 버튼·급등 신호 분석실
 
 - [사용 안내](scanner_v50_dashboard.md), [검증 보고서](scanner_v51_validation_20261026.md). 실시간 감시와 급등 신호 분석의 **두 페이지 구현**. BAT 기본은 웹만 열고 웹 버튼으로 기존 관측 엔진을 시작·정상 종료한다. 웹 종료 버튼은 대시보드를 유지한다. loopback·Origin/Host/Fetch-Metadata·수명별 토큰으로 제어를 보호한다. 지연 시작 취소·중복 차단·PID 생성 시각 확인·기존 STOP/저장 검증을 재사용한다.

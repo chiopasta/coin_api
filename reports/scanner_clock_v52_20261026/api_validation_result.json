@@ -1,0 +1,16 @@
+{
+  "status": "PASS / actual communication-failure rejection verified",
+  "start_api": 202,
+  "stop_request_api": 202,
+  "actual_collection_started": false,
+  "actual_successful_start_unverified": true,
+  "ntp_attempts": 7,
+  "ntp_timeouts": 2,
+  "dashboard_blocker": "CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE",
+  "dashboard_message": "시계 안전 검증 실패 (CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE). 필수 두 제공자의 NTP 측정을 완료하지 못했습니다.",
+  "manager_alive": false,
+  "worker_created": false,
+  "observation_db_created": false,
+  "exchange_http": 0,
+  "explanation": "PRECHECK cancellation requested; NTP failed first. FAILED describes the clock gate, while owned process exit and absence of collection are separately confirmed."
+}

@@ -1,0 +1,315 @@
+{
+  "bounds": {
+    "seconds": 120,
+    "http": 40,
+    "ntp": 24
+  },
+  "events": [
+    {
+      "at": 1792990342.9167843,
+      "phase": "TERMINAL",
+      "state": "WORKING"
+    },
+    {
+      "at": 1792990343.9900599,
+      "phase": "PRECHECK",
+      "state": "WORKING"
+    },
+    {
+      "at": 1792990352.327921,
+      "phase": "STARTING",
+      "state": "WORKING"
+    },
+    {
+      "at": 1792990371.1427522,
+      "phase": "STOPPING",
+      "state": "WORKING"
+    },
+    {
+      "at": 1792990373.585967,
+      "phase": "TERMINAL",
+      "state": "FAILED"
+    },
+    {
+      "at": 1792990374.3161879,
+      "phase": "TERMINAL",
+      "state": "WORKING"
+    }
+  ],
+  "snapshots": [
+    {
+      "at": 1792990343.2510676,
+      "http": 200,
+      "scanner": {
+        "status": "STOPPED",
+        "phase": "TERMINAL",
+        "started_at": 1792989675.0013285,
+        "elapsed_monotonic_seconds": 26.458801400000084,
+        "clock": "UNKNOWN (last PASS is stale)",
+        "db_saved": "UNKNOWN / no observation DB was created",
+        "signals": null,
+        "size": null,
+        "collected": null,
+        "last_signal": null,
+        "live_collecting": false,
+        "markets": 0,
+        "venue_pairs": 0,
+        "reason": null,
+        "connections": {
+          "UPBIT": {
+            "status": "DISCONNECTED",
+            "at": null
+          },
+          "BITHUMB": {
+            "status": "DISCONNECTED",
+            "at": null
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "at": 1792990349.311221,
+      "http": 200,
+      "scanner": {
+        "status": "RUNNING",
+        "phase": "PRECHECK",
+        "started_at": 1792990343.704877,
+        "elapsed_monotonic_seconds": 4.714563700001236,
+        "clock": "UNKNOWN",
+        "db_saved": "UNKNOWN",
+        "signals": null,
+        "size": null,
+        "collected": null,
+        "last_signal": null,
+        "live_collecting": false,
+        "markets": 0,
+        "venue_pairs": 0,
+        "reason": null,
+        "connections": {
+          "UPBIT": {
+            "status": "DISCONNECTED",
+            "at": null
+          },
+          "BITHUMB": {
+            "status": "DISCONNECTED",
+            "at": null
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "at": 1792990354.5671659,
+      "http": 200,
+      "scanner": {
+        "status": "RUNNING",
+        "phase": "STARTING",
+        "started_at": 1792990343.704877,
+        "elapsed_monotonic_seconds": 10.625434300000052,
+        "clock": "PASS (check age 2.5s; periodic recheck 600s)",
+        "db_saved": "UNKNOWN / final close not yet confirmed",
+        "signals": null,
+        "size": null,
+        "collected": null,
+        "last_signal": null,
+        "live_collecting": false,
+        "markets": 0,
+        "venue_pairs": 0,
+        "reason": null,
+        "connections": {
+          "UPBIT": {
+            "status": "DISCONNECTED",
+            "at": null
+          },
+          "BITHUMB": {
+            "status": "DISCONNECTED",
+            "at": null
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "at": 1792990360.6540325,
+      "http": 200,
+      "scanner": {
+        "status": "RUNNING",
+        "phase": "STARTING",
+        "started_at": 1792990343.704877,
+        "elapsed_monotonic_seconds": 16.01801879999948,
+        "clock": "PASS (check age 7.9s; periodic recheck 600s)",
+        "db_saved": "UNKNOWN / final close not yet confirmed",
+        "signals": null,
+        "size": null,
+        "collected": null,
+        "last_signal": null,
+        "live_collecting": false,
+        "markets": 0,
+        "venue_pairs": 0,
+        "reason": null,
+        "connections": {
+          "UPBIT": {
+            "status": "DISCONNECTED",
+            "at": null
+          },
+          "BITHUMB": {
+            "status": "DISCONNECTED",
+            "at": null
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "at": 1792990366.1585598,
+      "http": 200,
+      "scanner": {
+        "status": "RUNNING",
+        "phase": "STARTING",
+        "started_at": 1792990343.704877,
+        "elapsed_monotonic_seconds": 21.96761090000109,
+        "clock": "PASS (check age 13.9s; periodic recheck 600s)",
+        "db_saved": "UNKNOWN / final close not yet confirmed",
+        "signals": null,
+        "size": null,
+        "collected": null,
+        "last_signal": null,
+        "live_collecting": false,
+        "markets": 0,
+        "venue_pairs": 0,
+        "reason": null,
+        "connections": {
+          "UPBIT": {
+            "status": "DISCONNECTED",
+            "at": null
+          },
+          "BITHUMB": {
+            "status": "DISCONNECTED",
+            "at": null
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "at": 1792990373.1157176,
+      "http": 200,
+      "scanner": {
+        "status": "RUNNING",
+        "phase": "STOPPING",
+        "started_at": 1792990343.704877,
+        "elapsed_monotonic_seconds": 27.589133299999958,
+        "clock": "PASS (check age 0.3s; periodic recheck 600s)",
+        "db_saved": "UNKNOWN / final close not yet confirmed",
+        "signals": null,
+        "size": null,
+        "collected": null,
+        "last_signal": null,
+        "live_collecting": false,
+        "markets": 0,
+        "venue_pairs": 0,
+        "reason": null,
+        "connections": {
+          "UPBIT": {
+            "status": "DISCONNECTED",
+            "at": null
+          },
+          "BITHUMB": {
+            "status": "DISCONNECTED",
+            "at": null
+          }
+        }
+      },
+      "errors": []
+    }
+  ],
+  "poll_errors": [],
+  "start_http": 202,
+  "started": {
+    "action": "start",
+    "operation_id": "fbb6269cf9d8e1d69f8d445b",
+    "state": "FAILED",
+    "message": "\uc2dc\uc791\u00b7\uc885\ub8cc\ub97c \ud655\uc778\ud558\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4 (SCANNER_CONTROL_FAILED). status_coin_api.bat\uc5d0\uc11c \uc6d0\uc778\uc744 \ud655\uc778\ud558\uc138\uc694.",
+    "busy": false,
+    "starting": false,
+    "stopping": false,
+    "seconds": 120,
+    "max_requests": 40,
+    "process_alive": false,
+    "scanner": {
+      "status": "STOPPED",
+      "phase": "TERMINAL",
+      "clock": "PASS (check age 2.6s; periodic recheck 600s)",
+      "db_saved": "UNKNOWN / no observation DB was created"
+    }
+  },
+  "launch_id": "6b7bd97524ef46059472adc7d8693537",
+  "stop_requested_at": 1792990373.5932035,
+  "stop_http": 202,
+  "stopped": {
+    "action": "stop",
+    "operation_id": "3170acec31fd653a8c954af6",
+    "state": "SUCCEEDED",
+    "message": "\uc2a4\uce90\ub108 \uc815\uc0c1 \uc885\ub8cc\ub97c \ud655\uc778\ud588\uc2b5\ub2c8\ub2e4. \uc6f9 \ub300\uc2dc\ubcf4\ub4dc\ub294 \uacc4\uc18d \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+    "busy": false,
+    "starting": false,
+    "stopping": false,
+    "seconds": 120,
+    "max_requests": 40,
+    "process_alive": false,
+    "scanner": {
+      "status": "STOPPED",
+      "phase": "TERMINAL",
+      "clock": "PASS (check age 4.4s; periodic recheck 600s)",
+      "db_saved": "UNKNOWN / no observation DB was created"
+    }
+  },
+  "manager_alive": false,
+  "supervisor_alive": false,
+  "final": {
+    "status": "STOPPED",
+    "phase": "TERMINAL",
+    "reason": "CANCELLED_BEFORE_COLLECTION",
+    "db_saved": "UNKNOWN / no observation DB was created",
+    "signals": null,
+    "clock": "PASS (check age 4.5s; periodic recheck 600s)"
+  },
+  "summary": [
+    {
+      "run_id": "1749f4cbaf734612b9f2bf360ef5ea9a",
+      "status": "STOPPED",
+      "reason": "STOP_REQUESTED",
+      "started_at": 1792990361.5382764,
+      "ended_at": 1792990370.9677978,
+      "completed_rounds": 0,
+      "observer_revision": "4.9",
+      "price_policy": "V45_PRICE_ONLY_300S_FROM_MINUTE_START",
+      "elapsed_monotonic_seconds": 9.429437199998574,
+      "clock_fault": false,
+      "requests": 0,
+      "peak_rss_bytes": 0,
+      "max_cpu_percent": 0.0,
+      "per_exchange": {},
+      "collection_errors": {},
+      "close_errors": {},
+      "no_orders": true,
+      "performance_verdict": "INSUFFICIENT_DATA"
+    }
+  ],
+  "exit": [
+    {
+      "at": 1792990371.249798,
+      "run_id": "1749f4cbaf734612b9f2bf360ef5ea9a",
+      "worker_reaped": true,
+      "worker_returncode": 0,
+      "forced_kill": false,
+      "automatic_restart": false
+    }
+  ],
+  "actual_http": 0,
+  "web_after_stop": 200,
+  "validation": "REPRODUCED_CONTROL_FAILURE",
+  "listener_closed": true,
+  "failure_category": "START_CONFIRMATION_METADATA_READ"
+}

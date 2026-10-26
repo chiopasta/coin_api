@@ -17,6 +17,7 @@ import socket
 import sqlite3
 import threading
 import time
+import traceback
 from urllib.parse import parse_qs, urlsplit
 
 from . import scanner_control_v410 as control
@@ -159,7 +160,7 @@ class View:
             public['live_collecting'] = state.get('status')=='RUNNING' and state.get('phase')=='OBSERVING'
             public['markets'] = state.get('markets') if public['live_collecting'] else 0
             public['venue_pairs'] = state.get('venue_pairs') if public['live_collecting'] else 0
-            public['reason'] = 'CLOCK_VERIFICATION_FAILED' if 'CLOCK' in (state.get('reason') or '') else (
+            public['reason'] = state['reason'] if 'CLOCK' in (state.get('reason') or '') and re.fullmatch(r'CLOCK_[A-Z0-9_]+',state['reason']) else (
                 'SCANNER_BLOCKED; see status_coin_api.bat' if state.get('status')=='BLOCKED' else None)
             public['connections'] = self.connections(active_root, public['live_collecting'])
             rows = []; total = 0; today_live = 0
@@ -195,11 +196,15 @@ class View:
         try:
             with readonly(root/'control.db') as db:
                 for e in result:
-                    r = db.execute('SELECT status,ended_at FROM http_attempts WHERE exchange=? AND ended_at IS NOT NULL ORDER BY seq DESC LIMIT 1',(e,)).fetchone()
+                    r = db.execute('SELECT status,ended_at,details_json FROM http_attempts WHERE exchange=? AND ended_at IS NOT NULL ORDER BY seq DESC LIMIT 1',(e,)).fetchone()
                     if r:
                         fresh = 0 <= time.time()-r['ended_at'] <= 150
-                        result[e] = dict(status=('CONNECTED' if r['status']=='200' and fresh else
-                                                 'ERROR' if r['status']!='200' else 'STALE') if collecting else 'DISCONNECTED',
+                        try: http_status=json.loads(r['details_json'] or '{}').get('http_status')
+                        except (ValueError,AttributeError):http_status=None
+                        healthy=r['status']=='HTTP_END' and http_status==200
+                        failed=r['status']=='HTTP_ERROR' or r['status']=='HTTP_END' and isinstance(http_status,int) and http_status!=200
+                        result[e] = dict(status=('CONNECTED' if healthy and fresh else
+                                                 'STALE' if healthy else 'ERROR' if failed else 'UNKNOWN') if collecting else 'DISCONNECTED',
                                          at=r['ended_at'])
         except (OSError,sqlite3.DatabaseError):
             for e in result: result[e]['status']='UNKNOWN'
@@ -230,9 +235,9 @@ class Server(ThreadingHTTPServer):
         from .scanner_analysis_v51 import Analysis
         self.view = view or View()
         self.analysis = Analysis()
-        self.operations = Operations(seconds,max_requests)
-        self.csrf = secrets.token_urlsafe(32)
         self.logger = logger or logging.getLogger('scanner_dashboard')
+        self.operations = Operations(seconds,max_requests,self.logger)
+        self.csrf = secrets.token_urlsafe(32)
         self.slots = threading.BoundedSemaphore(8)
         super().__init__(address, Handler)
 
@@ -329,11 +334,15 @@ class Handler(BaseHTTPRequestHandler):
         if self.rfile.read(2)!=b'{}':
             self.respond(400,dict(error='Control options cannot be changed'));return
         try:
-            self.server.operations.request(parsed.path.rsplit('/',1)[-1])
+            action=parsed.path.rsplit('/',1)[-1]
+            self.server.operations.request(action)
             self.respond(202,self.server.operations.status())
+            control_event(self.server.logger,'CONTROL_HTTP_RESPONSE',action=action,http_status=202)
         except RuntimeError as exc:
+            control_event(self.server.logger,'CONTROL_HTTP_REJECTED',http_status=409,**exception_details(exc))
             self.respond(409,dict(error=str(exc)))
-        except Exception:
+        except Exception as exc:
+            control_event(self.server.logger,'CONTROL_HTTP_ERROR',stage='POST_RESPONSE',**exception_details(exc))
             self.respond(503,dict(error='로컬 프로세스 상태 확인 실패. 상태 BAT를 확인하세요.'))
 
     def unsupported(self): self.respond(405,dict(error='Unsupported method'))
@@ -344,6 +353,16 @@ def control_message(reason):
     reason=reason or ''
     code=re.match(r'[A-Z][A-Z0-9_]+',reason)
     code=code.group(0) if code else 'SCANNER_CONTROL_FAILED'
+    descriptions={
+        'CLOCK_WINDOWS_ROOT_UNCERTAINTY':'Windows 시간 품질의 불확실성이 크고 직접 NTP 교차 검증도 완료되지 않았습니다.',
+        'CLOCK_WINDOWS_SYNC_STALE':'Windows의 마지막 정상 동기화가 오래됐습니다.',
+        'CLOCK_WINDOWS_UNSYNCHRONIZED':'Windows가 미동기화·윤초 경고·동기화 오류를 보고했습니다.',
+        'CLOCK_WINDOWS_TIME_SERVICE_UNVERIFIED':'Windows 시간 서비스 상태를 확인할 수 없습니다.',
+        'CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE':'필수 두 제공자의 NTP 측정을 완료하지 못했습니다.',
+        'CLOCK_REFERENCE_INDEPENDENCE_UNVERIFIED':'두 NTP 제공자의 독립된 응답 주소를 확인하지 못했습니다.',
+        'CLOCK_REFERENCE_OFFSET_OR_UNCERTAINTY':'직접 NTP 오차와 측정 불확실성의 합이 1초를 초과했습니다.',
+        'CLOCK_REFERENCE_STALE':'직접 NTP 측정이 오래되어 다시 검증해야 합니다.'}
+    if code in descriptions:return f'시계 안전 검증 실패 ({code}). {descriptions[code]}'
     if 'CLOCK' in code:
         return f'시계 안전 검증 실패 ({code}). Windows 시간 동기화와 NTP 연결을 확인하세요.'
     if 'DUPLICATE' in code or 'Another scanner' in reason:
@@ -351,10 +370,28 @@ def control_message(reason):
     return f'시작·종료를 확인하지 못했습니다 ({code}). status_coin_api.bat에서 원인을 확인하세요.'
 
 
+def control_event(logger,event,**fields):
+    """Structured local lifecycle evidence; never log headers or request bodies."""
+    logger.info(json.dumps(dict(at=time.time(),event=event,**fields),ensure_ascii=True))
+
+
+def exception_details(exc):
+    """Allowlist error identity and project stack locations, excluding messages."""
+    frames=[]
+    for frame in traceback.extract_tb(exc.__traceback__)[-8:]:
+        path=Path(frame.filename).resolve()
+        if path.is_relative_to(control.PROJECT_ROOT):
+            frames.append(dict(file=path.relative_to(control.PROJECT_ROOT).as_posix(),line=frame.lineno,function=frame.name))
+    code=str(exc)
+    return dict(error_type=type(exc).__name__,errno=getattr(exc,'errno',None),winerror=getattr(exc,'winerror',None),
+                code=code if re.fullmatch(r'[A-Z][A-Z0-9_]{2,80}',code) else None,frames=frames)
+
+
 class Operations:
     """Only explicit local POSTs launch; status and analysis never start LIVE."""
-    def __init__(self, seconds, max_requests):
+    def __init__(self, seconds, max_requests, logger=None):
         self.seconds,self.max_requests=seconds,max_requests
+        self.logger=logger or logging.getLogger('scanner_dashboard')
         self.lock=threading.Lock()
         self.active=set()
         self.generation=0
@@ -375,7 +412,8 @@ class Operations:
             if (s['status']=='BLOCKED' and s.get('reason') and not result['busy'] and
                     not (result['action']=='stop' and result['state']=='SUCCEEDED')):
                 result.update(state='FAILED',message=control_message(s['reason']))
-        except Exception:
+        except Exception as exc:
+            control_event(self.logger,'CONTROL_STATUS_ERROR',stage='STATUS_READ',**exception_details(exc))
             result.update(process_alive=None,state='FAILED',message='프로세스 상태 확인 실패. 상태 BAT를 확인하세요.')
         return result
 
@@ -392,7 +430,9 @@ class Operations:
             if action=='start':self.cancel_start.clear()
             else:self.cancel_start.set()
             self.active.add(action);self.generation+=1;generation=self.generation
-            self.result=dict(action=action,state='WORKING',message='시계 검증 및 실제 수집 시작 확인 중…' if action=='start' else '저장 완료와 정상 종료 확인 중…')
+            operation_id=secrets.token_hex(12)
+            self.result=dict(action=action,operation_id=operation_id,state='WORKING',message='시계 검증 및 실제 수집 시작 확인 중…' if action=='start' else '저장 완료와 정상 종료 확인 중…')
+        control_event(self.logger,'CONTROL_REQUEST',action=action,operation_id=operation_id,source='WEB_API')
 
         def run():
             from . import scanner_desktop_v50 as desktop
@@ -410,9 +450,13 @@ class Operations:
                 message=('스캐너 수집 시작을 확인했습니다.' if action=='start' else
                          '실행 중인 스캐너가 없습니다. 웹 대시보드는 계속 사용할 수 있습니다.' if result.get('reason')=='NO_RUNNING_SCANNER' else
                          '스캐너 정상 종료를 확인했습니다. 웹 대시보드는 계속 사용할 수 있습니다.') if success else control_message(result.get('reason'))
-                outcome=dict(action=action,state='SUCCEEDED' if success else 'FAILED',message=message)
+                outcome=dict(action=action,operation_id=operation_id,state='SUCCEEDED' if success else 'FAILED',message=message)
+                control_event(self.logger,'CONTROL_FINISHED',action=action,operation_id=operation_id,
+                              outcome=outcome['state'],scanner_status=result['status'],phase=result.get('phase'))
             except Exception as exc:
-                outcome=dict(action=action,state='FAILED',message=control_message(str(exc)))
+                control_event(self.logger,'CONTROL_EXCEPTION',action=action,operation_id=operation_id,
+                              stage='START_HELPER' if action=='start' else 'STOP_HELPER',**exception_details(exc))
+                outcome=dict(action=action,operation_id=operation_id,state='FAILED',message=control_message(str(exc)))
             with self.lock:
                 self.active.discard(action)
                 if generation==self.generation:self.result=outcome

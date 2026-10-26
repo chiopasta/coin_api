@@ -21,7 +21,7 @@ class RetryPolicy(unittest.TestCase):
         timer=FakeTime();calls=[];failures=set(failures or [])
         def sample(host,deadline):
             index=len(calls);calls.append((host,timer.value))
-            timer.value+=1.2 if index in failures else duration
+            timer.value+=n.TIMEOUT_SECONDS if index in failures else duration
             if index in failures:return dict(host=host,status='UNAVAILABLE',retryable=True,error='timed out')
             if invalid:return dict(host=host,status='INVALID',retryable=False,error='ORIGIN_MISMATCH')
             return dict(host=host,status='MEASURED',retryable=False,offset_seconds=offset,
@@ -49,13 +49,28 @@ class RetryPolicy(unittest.TestCase):
         self.assertEqual(sum(a['status']=='MEASURED' for a in r['attempts']),6)
         retried=[a for a in r['attempts'] if a['slot_id']==0]
         self.assertEqual([a['attempt_number'] for a in retried],[1,2])
-        self.assertGreaterEqual(calls[2][1],3.2)
+        self.assertGreaterEqual(calls[2][1],n.TIMEOUT_SECONDS+n.BACKOFF_SECONDS)
 
     def test_permanent_loss_never_passes_and_never_exceeds_eight_packets(self):
         r,calls=self.run_probe(set(range(8)))
         self.assertEqual(n.assess(r)['status'],'BLOCKED')
-        self.assertLessEqual(len(calls),8);self.assertLessEqual(r['elapsed_monotonic_seconds'],10.5)
-        self.assertTrue(all(a['attempt_number']<=2 for a in r['attempts']))
+        self.assertLessEqual(len(calls),8);self.assertLessEqual(r['elapsed_monotonic_seconds'],n.INTERNAL_SECONDS)
+        self.assertTrue(all(a['attempt_number']<=3 for a in r['attempts']))
+        self.assertLessEqual(sum(a['attempt_number']>1 for a in r['attempts']),2)
+
+    def test_two_receive_losses_of_same_slot_can_recover_within_global_cap(self):
+        r,calls=self.run_probe({0,2})
+        self.assertEqual(n.assess(r)['status'],'VERIFIED')
+        self.assertEqual(len(calls),8)
+        self.assertEqual([a['attempt_number'] for a in r['attempts'] if a['slot_id']==0],[1,2,3])
+        self.assertLessEqual(r['elapsed_monotonic_seconds'],n.INTERNAL_SECONDS)
+
+    def test_partial_provider_outage_blocks_and_diagnostics_count_every_failure(self):
+        r,calls=self.run_probe({0,2,4,6})
+        self.assertEqual(n.assess(r)['status'],'BLOCKED')
+        summary=n.provider_summary(r)
+        self.assertEqual(summary[0]['result'],'REQUIRED_SAMPLES_MISSING')
+        self.assertEqual(sum(s['attempts'] for s in summary),len(calls))
 
     def test_invalid_reply_is_terminal_and_not_retried(self):
         r,calls=self.run_probe(invalid=True)
@@ -72,10 +87,18 @@ class RetryPolicy(unittest.TestCase):
         r,calls=self.run_probe(duration=2.)
         self.assertEqual(n.assess(r)['status'],'BLOCKED')
         self.assertEqual(r['abort_reason'],'INTERNAL_TIME_BUDGET')
-        self.assertLessEqual(len(calls),5)
+        self.assertLessEqual(len(calls),6)
 
 
 class AttemptEvidence(unittest.TestCase):
+    def test_summary_never_copies_raw_errors_peers_packets_or_unknown_names(self):
+        r=dict(rows=[],attempts=[dict(host=n.HOSTS[0],status='UNAVAILABLE',phase='DNS',
+            error_type='gaierror',error='secret credential',peer=['private',123],request_hex='secret'),
+            dict(host=n.HOSTS[0],status='INVALID',phase='secret',error_type='secret')])
+        summary=n.provider_summary(r);encoded=json.dumps(summary)
+        self.assertNotIn('secret',encoded);self.assertNotIn('private',encoded)
+        self.assertEqual(summary[0]['failure_counts'],{'DNS_gaierror':1,'UNKNOWN_UNKNOWN':1})
+
     def test_receive_timeout_records_peer_port_request_phase_and_elapsed(self):
         sock=MagicMock();sock.__enter__.return_value=sock
         sock.getpeername.return_value=('192.0.2.1',123);sock.getsockname.return_value=('192.0.2.2',51000)

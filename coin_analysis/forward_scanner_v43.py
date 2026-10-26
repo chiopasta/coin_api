@@ -321,6 +321,9 @@ def run(root, seconds, resume=False, max_requests=MAX_REQUESTS):
     # Same global locks as v4.2; duplicate launch cannot create/alter dataset.
     with scanner.exclusive(v42.RUNTIME_ROOT/'supervisor'):
         evidence=clock_guard.verify_clock()
+        print(json.dumps(dict(event='CLOCK_CHECK',stage='SUPERVISOR',status=evidence['status'],
+            reason=evidence['reason'],provider_summary=evidence.get('provider_summary',[]),
+            execution=evidence.get('execution',{}))),flush=True)
         if evidence['status']!='VERIFIED':raise Stop(evidence['reason'])
         if clock_guard.awake_seconds() is None:raise Stop('CLOCK_SUSPEND_MONITOR_UNAVAILABLE')
         if resume:

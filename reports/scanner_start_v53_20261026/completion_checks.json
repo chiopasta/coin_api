@@ -1,0 +1,452 @@
+{
+  "baseline_files": 329,
+  "byte_identical": 325,
+  "changed": [
+    "data/scanner_console_v410/current.json",
+    "data/scanner_dashboard_v50/scanner_pending.json",
+    "docs/research_status.md",
+    "docs/scanner_v50_dashboard.md"
+  ],
+  "missing": [],
+  "unexpected_changes": [],
+  "original_dbs": {
+    "data/altcoin_market.db": {
+      "counts_before": {
+        "minute_candles": 4221927,
+        "download_runs": 278
+      },
+      "counts_after": {
+        "minute_candles": 4221927,
+        "download_runs": 278
+      },
+      "counts_equal": true,
+      "quick_check": "ok",
+      "hash_equal": true
+    },
+    "data/forward_scanner_v4.db": {
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 460997,
+        "scanner_state": 51,
+        "collection_jobs": 1,
+        "collection_pages": 112836,
+        "signals": 215,
+        "signal_features": 215,
+        "signal_outcomes": 430,
+        "source_policy": 1,
+        "scanner_sessions": 6,
+        "scanner_cycles": 2002,
+        "source_migrations": 1
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 460997,
+        "scanner_state": 51,
+        "collection_jobs": 1,
+        "collection_pages": 112836,
+        "signals": 215,
+        "signal_features": 215,
+        "signal_outcomes": 430,
+        "source_policy": 1,
+        "scanner_sessions": 6,
+        "scanner_cycles": 2002,
+        "source_migrations": 1
+      },
+      "counts_equal": true,
+      "quick_check": "ok",
+      "hash_equal": true
+    },
+    "data/historical_market.db": {
+      "counts_before": {
+        "minute_candles": 139786,
+        "download_runs": 11
+      },
+      "counts_after": {
+        "minute_candles": 139786,
+        "download_runs": 11
+      },
+      "counts_equal": true,
+      "quick_check": "ok",
+      "hash_equal": true
+    },
+    "data/scanner_v16.db": {
+      "counts_before": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_after": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_equal": true,
+      "quick_check": "ok",
+      "hash_equal": true
+    },
+    "data/scanner_v16_smoke.db": {
+      "counts_before": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_after": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_equal": true,
+      "quick_check": "ok",
+      "hash_equal": true
+    },
+    "data/scanner_dashboard_v50/analysis.db": {
+      "counts_before": {
+        "evaluations": 215
+      },
+      "counts_after": {
+        "evaluations": 215
+      },
+      "counts_equal": true,
+      "quick_check": "ok",
+      "hash_equal": true
+    }
+  },
+  "runs": [
+    {
+      "name": "start1",
+      "validation": "PASS",
+      "gates": {
+        "manager": {
+          "status": "VERIFIED",
+          "attempts": 7,
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 4,
+              "successful_attempts": 3,
+              "failed_attempts": 1,
+              "failure_counts": {
+                "RECEIVE_TimeoutError": 1
+              },
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "execution": {
+            "python_version": "3.14.7",
+            "isolated": true,
+            "cwd_is_project": true,
+            "ntp_cwd_is_project": true,
+            "ntp_python_environment_ignored": true
+          }
+        },
+        "worker": {
+          "status": "VERIFIED",
+          "attempts": 6,
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "execution": {
+            "python_version": "3.14.7",
+            "isolated": false,
+            "cwd_is_project": true,
+            "ntp_cwd_is_project": true,
+            "ntp_python_environment_ignored": true
+          }
+        },
+        "supervisor": [
+          {
+            "event": "CLOCK_CHECK",
+            "stage": "SUPERVISOR",
+            "status": "VERIFIED",
+            "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+            "provider_summary": [
+              {
+                "provider": "time.windows.com",
+                "required_samples": 3,
+                "valid_samples": 3,
+                "attempts": 3,
+                "successful_attempts": 3,
+                "failed_attempts": 0,
+                "failure_counts": {},
+                "result": "COMPLETE"
+              },
+              {
+                "provider": "time.cloudflare.com",
+                "required_samples": 3,
+                "valid_samples": 3,
+                "attempts": 3,
+                "successful_attempts": 3,
+                "failed_attempts": 0,
+                "failure_counts": {},
+                "result": "COMPLETE"
+              }
+            ],
+            "execution": {
+              "python_version": "3.14.7",
+              "isolated": false,
+              "cwd_is_project": true,
+              "ntp_cwd_is_project": true,
+              "ntp_python_environment_ignored": true
+            }
+          }
+        ]
+      },
+      "requests": 19,
+      "worker_seconds": 13.478798799998913,
+      "manager_alive": false,
+      "supervisor_alive": false,
+      "listener_closed": true,
+      "exit": [
+        {
+          "at": 1792985368.0194325,
+          "run_id": "0aba1f71ac3a4bec834255cd330b3762",
+          "worker_reaped": true,
+          "worker_returncode": 0,
+          "forced_kill": false,
+          "automatic_restart": false
+        }
+      ],
+      "dbs": {
+        "bithumb.db": {
+          "quick_check": "ok",
+          "signals": 0,
+          "minute_candles": 1279
+        },
+        "control.db": {
+          "quick_check": "ok",
+          "request_statuses": [
+            [
+              "HTTP_END",
+              19
+            ]
+          ],
+          "endpoints": [
+            [
+              "/v1/candles/minutes/1",
+              17
+            ],
+            [
+              "/v1/market/all",
+              2
+            ]
+          ],
+          "http_statuses": [
+            [
+              200,
+              19
+            ]
+          ]
+        },
+        "upbit.db": {
+          "quick_check": "ok",
+          "signals": 0,
+          "minute_candles": 1473
+        }
+      }
+    },
+    {
+      "name": "start2",
+      "validation": "PASS",
+      "gates": {
+        "manager": {
+          "status": "VERIFIED",
+          "attempts": 6,
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "execution": {
+            "python_version": "3.14.7",
+            "isolated": true,
+            "cwd_is_project": true,
+            "ntp_cwd_is_project": true,
+            "ntp_python_environment_ignored": true
+          }
+        },
+        "worker": {
+          "status": "VERIFIED",
+          "attempts": 7,
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 4,
+              "successful_attempts": 3,
+              "failed_attempts": 1,
+              "failure_counts": {
+                "RECEIVE_TimeoutError": 1
+              },
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "execution": {
+            "python_version": "3.14.7",
+            "isolated": false,
+            "cwd_is_project": true,
+            "ntp_cwd_is_project": true,
+            "ntp_python_environment_ignored": true
+          }
+        },
+        "supervisor": [
+          {
+            "event": "CLOCK_CHECK",
+            "stage": "SUPERVISOR",
+            "status": "VERIFIED",
+            "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+            "provider_summary": [
+              {
+                "provider": "time.windows.com",
+                "required_samples": 3,
+                "valid_samples": 3,
+                "attempts": 3,
+                "successful_attempts": 3,
+                "failed_attempts": 0,
+                "failure_counts": {},
+                "result": "COMPLETE"
+              },
+              {
+                "provider": "time.cloudflare.com",
+                "required_samples": 3,
+                "valid_samples": 3,
+                "attempts": 3,
+                "successful_attempts": 3,
+                "failed_attempts": 0,
+                "failure_counts": {},
+                "result": "COMPLETE"
+              }
+            ],
+            "execution": {
+              "python_version": "3.14.7",
+              "isolated": false,
+              "cwd_is_project": true,
+              "ntp_cwd_is_project": true,
+              "ntp_python_environment_ignored": true
+            }
+          }
+        ]
+      },
+      "requests": 19,
+      "worker_seconds": 15.864993900000627,
+      "manager_alive": false,
+      "supervisor_alive": false,
+      "listener_closed": true,
+      "exit": [
+        {
+          "at": 1792985483.669679,
+          "run_id": "42935258bce24801988c4c3560ae1f86",
+          "worker_reaped": true,
+          "worker_returncode": 0,
+          "forced_kill": false,
+          "automatic_restart": false
+        }
+      ],
+      "dbs": {
+        "bithumb.db": {
+          "quick_check": "ok",
+          "signals": 0,
+          "minute_candles": 1269
+        },
+        "control.db": {
+          "quick_check": "ok",
+          "request_statuses": [
+            [
+              "HTTP_END",
+              19
+            ]
+          ],
+          "endpoints": [
+            [
+              "/v1/candles/minutes/1",
+              17
+            ],
+            [
+              "/v1/market/all",
+              2
+            ]
+          ],
+          "http_statuses": [
+            [
+              200,
+              19
+            ]
+          ]
+        },
+        "upbit.db": {
+          "quick_check": "ok",
+          "signals": 0,
+          "minute_candles": 1463
+        }
+      }
+    }
+  ],
+  "actual_ntp_attempts": 45,
+  "ntp_cap": 56,
+  "actual_http_requests": 38,
+  "http_cap": 80,
+  "web_status": "STOPPED",
+  "source_sha256": {
+    "coin_analysis/scanner_clock_v45.py": "98c1b01fba4a0d8144784a0e285493c6c12a6e8a0ffde64a002cc172c8dea447",
+    "coin_analysis/scanner_ntp_v49.py": "2c6e065d99e93895fbd55275b189ca8dcdc0cbf9253194a9f57787ac45d3917d",
+    "coin_analysis/scanner_desktop_v50.py": "09135d3dd82e990761007073ff8c4a542159af30020132dec0f12b4704bf48d9",
+    "coin_analysis/forward_scanner_v43.py": "a6593007effd0386bb3ccd8817066fa090d838819b9696084e3ef9daba3f6654",
+    "tests/test_scanner_clock_v46.py": "5de8121a5f9a2c9336174c54fcea69af185b2414209d2f2e294b0072a46113dd",
+    "tests/test_scanner_ntp_v49.py": "baa5737288352d73c2dda9b0ecc097ae4b18922a52b84f00c56b6b6b630944f2",
+    "tests/test_scanner_start_v53.py": "d1eac8cb11c8fc110fc0e38ceecb5f16d087e95e0f6ce2f1811906c163a807eb"
+  }
+}

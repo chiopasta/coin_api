@@ -5,6 +5,7 @@ exchanges. No automatic relaunch, process kill, system setting, or engine change
 """
 import argparse
 import json
+import logging
 import os
 from pathlib import Path
 import re
@@ -21,6 +22,9 @@ from . import scanner_dashboard_v50 as dashboard
 
 WEB = control.DATA_DIR/'scanner_dashboard_v50'
 ENTRY = control.PROJECT_ROOT/'scripts'/'coin_api_entry.py'
+# Three independent, fresh clock gates (15s each), followed by first-round
+# readiness. A slow admission is cancelled through the existing scoped STOP.
+SCANNER_START_WAIT_SECONDS=75
 
 
 def web_state():
@@ -135,14 +139,24 @@ def start_scanner(seconds,max_requests,cancellation_event=None):
             raise RuntimeError('DUPLICATE_MANAGED_SCANNER')
         request_id=uuid.uuid4().hex
         cancellation=control.CONTROL/('CANCEL_'+request_id)
+        logger=logging.getLogger('scanner_dashboard')
+        began=time.monotonic();last_phase=None;cancel_logged=False
         manager=spawn(['_scanner','--seconds',str(seconds),'--max-requests',str(max_requests),'--request-id',request_id])
-        until=time.monotonic()+35
+        dashboard.control_event(logger,'SCANNER_MANAGER_CREATED',request_id=request_id,pid=manager.pid)
+        until=time.monotonic()+SCANNER_START_WAIT_SECONDS
         try:
             control.write_metadata(WEB/'scanner_pending.json',dict(request_id=request_id,process=control.identity(manager.pid)))
             while time.monotonic()<until:
                 state=control.current()
                 fresh=state and (not old or state['launch_id']!=old['launch_id'])
+                if fresh and state.get('phase')!=last_phase:
+                    last_phase=state.get('phase')
+                    dashboard.control_event(logger,'SCANNER_START_PHASE',request_id=request_id,launch_id=state['launch_id'],
+                        phase=last_phase,elapsed_seconds=time.monotonic()-began)
                 if cancellation_event and cancellation_event.is_set():
+                    if not cancel_logged:
+                        dashboard.control_event(logger,'SCANNER_START_CANCEL',request_id=request_id,source='STOP_API_OR_WEB_CLOSE')
+                        cancel_logged=True
                     cancellation.parent.mkdir(parents=True,exist_ok=True)
                     cancellation.touch(exist_ok=True)
                     if fresh:control.stop()
@@ -157,8 +171,10 @@ def start_scanner(seconds,max_requests,cancellation_event=None):
                     raise RuntimeError('SCANNER_PROCESS_START_FAILED')
                 time.sleep(.1)
             raise RuntimeError('SCANNER_START_TIMEOUT')
-        except BaseException:
+        except BaseException as exc:
             # A failed/time-limited admission must not become a delayed LIVE.
+            dashboard.control_event(logger,'SCANNER_START_EXCEPTION',request_id=request_id,phase=last_phase,
+                elapsed_seconds=time.monotonic()-began,cancellation_source='START_FAILURE',**dashboard.exception_details(exc))
             cancellation.parent.mkdir(parents=True,exist_ok=True)
             cancellation.touch(exist_ok=True)
             state=control.current()

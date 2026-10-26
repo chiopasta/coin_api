@@ -1,0 +1,622 @@
+{
+  "baseline_files": 389,
+  "byte_identical": 385,
+  "changed": [
+    "data/scanner_console_v410/current.json",
+    "data/scanner_dashboard_v50/scanner_pending.json",
+    "docs/research_status.md",
+    "docs/scanner_v50_dashboard.md"
+  ],
+  "missing": [],
+  "unexpected_changes": [],
+  "original_dbs": {
+    "data/altcoin_market.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "minute_candles": 4221927,
+        "download_runs": 278
+      },
+      "counts_after": {
+        "minute_candles": 4221927,
+        "download_runs": 278
+      },
+      "quick_check": "ok"
+    },
+    "data/forward_scanner_v4.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 460997,
+        "scanner_state": 51,
+        "collection_jobs": 1,
+        "collection_pages": 112836,
+        "signals": 215,
+        "signal_features": 215,
+        "signal_outcomes": 430,
+        "source_policy": 1,
+        "scanner_sessions": 6,
+        "scanner_cycles": 2002,
+        "source_migrations": 1
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 460997,
+        "scanner_state": 51,
+        "collection_jobs": 1,
+        "collection_pages": 112836,
+        "signals": 215,
+        "signal_features": 215,
+        "signal_outcomes": 430,
+        "source_policy": 1,
+        "scanner_sessions": 6,
+        "scanner_cycles": 2002,
+        "source_migrations": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/historical_market.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "minute_candles": 139786,
+        "download_runs": 11
+      },
+      "counts_after": {
+        "minute_candles": 139786,
+        "download_runs": 11
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v16.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_after": {
+        "events": 0,
+        "observations": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v16_smoke.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "events": 0,
+        "observations": 0
+      },
+      "counts_after": {
+        "events": 0,
+        "observations": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_dashboard_v50/analysis.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "evaluations": 215
+      },
+      "counts_after": {
+        "evaluations": 215
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_640341845e17424f802aa924de48a22a/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 0,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 0,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_779b4a9454e84b1caf83988c9f6dec18/bithumb.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1279,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1279,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_779b4a9454e84b1caf83988c9f6dec18/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_779b4a9454e84b1caf83988c9f6dec18/upbit.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1473,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1473,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_b8666e6c39c846a4a78a9714ed2c2d36/bithumb.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1269,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1269,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 8,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1600,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_b8666e6c39c846a4a78a9714ed2c2d36/control.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "counts_after": {
+        "http_attempts": 19,
+        "runs": 1
+      },
+      "quick_check": "ok"
+    },
+    "data/scanner_v43_live/console_b8666e6c39c846a4a78a9714ed2c2d36/upbit.db": {
+      "hash_equal": true,
+      "counts_equal": true,
+      "counts_before": {
+        "scanner_config": 1,
+        "minute_candles": 1463,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "counts_after": {
+        "scanner_config": 1,
+        "minute_candles": 1463,
+        "scanner_state": 5,
+        "collection_jobs": 0,
+        "collection_pages": 9,
+        "signals": 0,
+        "signal_features": 0,
+        "signal_outcomes": 0,
+        "source_policy": 1,
+        "scanner_sessions": 1,
+        "scanner_cycles": 1,
+        "source_migrations": 0,
+        "scanner_runtime_events": 2,
+        "scanner_late_candles": 0,
+        "live_signal_details": 0,
+        "live_horizons": 0,
+        "candle_receipts": 1800,
+        "coverage_windows": 0,
+        "signal_context": 0,
+        "no_trade_evidence_v45": 0,
+        "price_horizons_v45": 0
+      },
+      "quick_check": "ok"
+    }
+  },
+  "runs": [
+    {
+      "name": "start1",
+      "validation": "REPRODUCED_CONTROL_FAILURE",
+      "clock_gates": [
+        {
+          "status": "VERIFIED",
+          "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 4,
+              "successful_attempts": 3,
+              "failed_attempts": 1,
+              "failure_counts": {
+                "RECEIVE_TimeoutError": 1
+              },
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "ntp_attempts": 7
+        },
+        {
+          "status": "VERIFIED",
+          "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "ntp_attempts": 6
+        },
+        {
+          "status": "VERIFIED",
+          "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 4,
+              "successful_attempts": 3,
+              "failed_attempts": 1,
+              "failure_counts": {
+                "RECEIVE_TimeoutError": 1
+              },
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "ntp_attempts": 7
+        }
+      ],
+      "actual_http": 0,
+      "manager_alive": false,
+      "supervisor_alive": false,
+      "listener_closed": true,
+      "dbs": {
+        "control.db": {
+          "quick_check": "ok",
+          "http_attempts": 0,
+          "http_statuses": [],
+          "endpoints": []
+        }
+      },
+      "exit": [
+        {
+          "at": 1792990371.249798,
+          "run_id": "1749f4cbaf734612b9f2bf360ef5ea9a",
+          "worker_reaped": true,
+          "worker_returncode": 0,
+          "forced_kill": false,
+          "automatic_restart": false
+        }
+      ]
+    },
+    {
+      "name": "start2",
+      "validation": "PASS",
+      "clock_gates": [
+        {
+          "status": "VERIFIED",
+          "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "ntp_attempts": 6
+        },
+        {
+          "status": "VERIFIED",
+          "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 4,
+              "successful_attempts": 3,
+              "failed_attempts": 1,
+              "failure_counts": {
+                "RECEIVE_TimeoutError": 1
+              },
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "ntp_attempts": 7
+        },
+        {
+          "status": "VERIFIED",
+          "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+          "providers": [
+            {
+              "provider": "time.windows.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 4,
+              "successful_attempts": 3,
+              "failed_attempts": 1,
+              "failure_counts": {
+                "RECEIVE_TimeoutError": 1
+              },
+              "result": "COMPLETE"
+            },
+            {
+              "provider": "time.cloudflare.com",
+              "required_samples": 3,
+              "valid_samples": 3,
+              "attempts": 3,
+              "successful_attempts": 3,
+              "failed_attempts": 0,
+              "failure_counts": {},
+              "result": "COMPLETE"
+            }
+          ],
+          "ntp_attempts": 7
+        }
+      ],
+      "actual_http": 19,
+      "manager_alive": false,
+      "supervisor_alive": false,
+      "listener_closed": true,
+      "dbs": {
+        "bithumb.db": {
+          "quick_check": "ok",
+          "signals": 0,
+          "minute_candles": 1261
+        },
+        "control.db": {
+          "quick_check": "ok",
+          "http_attempts": 19,
+          "http_statuses": [
+            [
+              200,
+              19
+            ]
+          ],
+          "endpoints": [
+            [
+              "/v1/candles/minutes/1",
+              17
+            ],
+            [
+              "/v1/market/all",
+              2
+            ]
+          ]
+        },
+        "upbit.db": {
+          "quick_check": "ok",
+          "signals": 0,
+          "minute_candles": 1485
+        }
+      },
+      "exit": [
+        {
+          "at": 1792990538.119849,
+          "run_id": "03fbc3d6355043db982db843d30623da",
+          "worker_reaped": true,
+          "worker_returncode": 0,
+          "forced_kill": false,
+          "automatic_restart": false
+        }
+      ]
+    }
+  ],
+  "actual_ntp_attempts": 40,
+  "ntp_cap": 48,
+  "actual_http": 19,
+  "http_cap": 80,
+  "unchanged_clock_transport_and_engine": {
+    "coin_analysis/scanner_clock_v45.py": true,
+    "coin_analysis/scanner_ntp_v49.py": true,
+    "coin_analysis/forward_scanner_v43.py": true
+  },
+  "web_status": "STOPPED",
+  "source_sha256": {
+    "coin_analysis/scanner_control_v410.py": "fb8b68665e6d6a9ae7d957858fcba6dc0646a962a0d7d2c81da214c2ff4cf8a0",
+    "coin_analysis/scanner_desktop_v50.py": "182748a4cc259c46c98425eb0176e48121e7f1e986ab8c0c15d23c464b54468a",
+    "coin_analysis/scanner_dashboard_v50.py": "a61073f1f679bacc4b9ec17656bab18809561463e5b7f156cfacb4cbfb3a1d2b",
+    "tests/test_scanner_dashboard_v50.py": "83fa4029bee15f13cbd54b677d5348e4f9495db889a6c6cd00f62522a170e18a",
+    "tests/test_scanner_start_diagnosis.py": "e51e071917511c0c3e989b55bbf8eca0c225436a471f2725e0dacd78c47306ff"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "recorded_reason": "CLOCK_WINDOWS_ROOT_UNCERTAINTY",
+  "reparsed_windows": {
+    "status": "BLOCKED",
+    "reason": "CLOCK_WINDOWS_ROOT_UNCERTAINTY",
+    "leap": 0,
+    "stratum": 2,
+    "last_sync_error": 0,
+    "root_delay_seconds": 0.0390476,
+    "root_dispersion_seconds": 7.761962,
+    "root_distance_seconds": 7.7814858,
+    "sync_age_seconds": 847.6016751,
+    "source": "time.google.com,0x8",
+    "last_sync_display": "2026-10-26 오전 10:56:45",
+    "max_sync_age_seconds": 3600,
+    "root_distance_limit_seconds": 1.0,
+    "sync_status": "VERIFIED"
+  },
+  "crosscheck_at_original_time": {
+    "status": "VERIFIED",
+    "reason": "WINDOWS_SYNC_CROSSCHECKED_WITH_FRESH_NTP",
+    "windows_root_distance_seconds": 7.7814858,
+    "accuracy_basis": "SIX_FRESH_SAMPLES_TWO_DISTINCT_PROVIDERS_WITH_UNCERTAINTY",
+    "max_abs_offset_plus_uncertainty_seconds": 0.0870945341117729,
+    "accuracy_limit_seconds": 1.0,
+    "warning": "CLOCK_WINDOWS_ROOT_UNCERTAINTY"
+  },
+  "admissible_now": false,
+  "note": "Historical replay only; past samples are not usable for a new launch"
+}

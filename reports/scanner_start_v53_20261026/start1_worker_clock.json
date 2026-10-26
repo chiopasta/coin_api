@@ -1,0 +1,170 @@
+{
+  "at": 1792985354.4885967,
+  "completed_at": 1792985359.4137118,
+  "status": "VERIFIED",
+  "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY",
+  "blockers": [],
+  "warnings": null,
+  "clock_policy": "V52_WINDOWS_SYNC_DIRECT_NTP_CROSSCHECK",
+  "elapsed_monotonic_seconds": 4.925086999999621,
+  "wall_monotonic_difference_seconds": 2.8108490369049832e-05,
+  "execution": {
+    "python_version": "3.14.7",
+    "isolated": false,
+    "cwd_is_project": true,
+    "ntp_cwd_is_project": true,
+    "ntp_python_environment_ignored": true
+  },
+  "provider_summary": [
+    {
+      "provider": "time.windows.com",
+      "required_samples": 3,
+      "valid_samples": 3,
+      "attempts": 3,
+      "successful_attempts": 3,
+      "failed_attempts": 0,
+      "failure_counts": {},
+      "result": "COMPLETE"
+    },
+    {
+      "provider": "time.cloudflare.com",
+      "required_samples": 3,
+      "valid_samples": 3,
+      "attempts": 3,
+      "successful_attempts": 3,
+      "failed_attempts": 0,
+      "failure_counts": {},
+      "result": "COMPLETE"
+    }
+  ],
+  "external_assessment": {
+    "status": "VERIFIED",
+    "reason": "TWO_PROVIDER_NTP_WITH_UNCERTAINTY"
+  },
+  "measurement_freshness": {
+    "status": "VERIFIED",
+    "reason": "FRESH_DIRECT_NTP_SAMPLES",
+    "max_age_seconds": 15,
+    "oldest_sample_age_seconds": 4.587446689605713
+  },
+  "root_crosscheck": null,
+  "windows_status": {
+    "status": "VERIFIED",
+    "reason": "WINDOWS_SYNC_ROOT_DISTANCE_AND_AGE",
+    "leap": 0,
+    "stratum": 2,
+    "last_sync_error": 0,
+    "root_delay_seconds": 0.0686811,
+    "root_dispersion_seconds": 0.0558828,
+    "root_distance_seconds": 0.09022335000000001,
+    "sync_age_seconds": 428.746579,
+    "last_sync_display": "2026-10-26 \uc624\ud6c4 12:22:05",
+    "max_sync_age_seconds": 3600,
+    "root_distance_limit_seconds": 1.0,
+    "sync_status": "VERIFIED"
+  },
+  "measurement": {
+    "probe_policy": "V53_BOUNDED_RECEIVE_TIMEOUT_RETRY",
+    "max_packets": 8,
+    "required_samples": 6,
+    "timeout_seconds": 1.5,
+    "internal_seconds": 12.75,
+    "elapsed_monotonic_seconds": 4.582673900000373,
+    "abort_reason": null,
+    "host_interval_seconds": 2.0,
+    "global_interval_seconds": 0.5,
+    "backoff_seconds": 2.0,
+    "attempts": [
+      {
+        "host": "time.windows.com",
+        "slot_id": 0,
+        "attempt_number": 1,
+        "status": "MEASURED",
+        "phase": "COMPLETE",
+        "retryable": false,
+        "local_sent_at": 1792985354.8262317,
+        "local_received_at": 1792985354.83547,
+        "offset_seconds": 0.03190410137176514,
+        "uncertainty_seconds": 0.014712361181980464,
+        "attempt_elapsed_seconds": 0.02991649999967194,
+        "receive_elapsed_seconds": 0.00924490000033984,
+        "dns_seconds": 0.01968269999997574
+      },
+      {
+        "host": "time.cloudflare.com",
+        "slot_id": 1,
+        "attempt_number": 1,
+        "status": "MEASURED",
+        "phase": "COMPLETE",
+        "retryable": false,
+        "local_sent_at": 1792985355.337656,
+        "local_received_at": 1792985355.3649602,
+        "offset_seconds": 0.03696417808532715,
+        "uncertainty_seconds": 0.08198465555290366,
+        "attempt_elapsed_seconds": 0.028868700001112302,
+        "receive_elapsed_seconds": 0.027308299999276642,
+        "dns_seconds": 0.001008400000500842
+      },
+      {
+        "host": "time.windows.com",
+        "slot_id": 2,
+        "attempt_number": 1,
+        "status": "MEASURED",
+        "phase": "COMPLETE",
+        "retryable": false,
+        "local_sent_at": 1792985356.8502963,
+        "local_received_at": 1792985356.8580449,
+        "offset_seconds": 0.03299868106842041,
+        "uncertainty_seconds": 0.013995598401041002,
+        "attempt_elapsed_seconds": 0.02230520000011893,
+        "receive_elapsed_seconds": 0.007752800000162097,
+        "dns_seconds": 0.014062500000363798
+      },
+      {
+        "host": "time.cloudflare.com",
+        "slot_id": 3,
+        "attempt_number": 1,
+        "status": "MEASURED",
+        "phase": "COMPLETE",
+        "retryable": false,
+        "local_sent_at": 1792985357.3669798,
+        "local_received_at": 1792985357.3760571,
+        "offset_seconds": 0.03368043899536133,
+        "uncertainty_seconds": 0.07303772190755606,
+        "attempt_elapsed_seconds": 0.010524900000746129,
+        "receive_elapsed_seconds": 0.009081399999558926,
+        "dns_seconds": 0.0010070000007544877
+      },
+      {
+        "host": "time.windows.com",
+        "slot_id": 4,
+        "attempt_number": 1,
+        "status": "MEASURED",
+        "phase": "COMPLETE",
+        "retryable": false,
+        "local_sent_at": 1792985358.8598444,
+        "local_received_at": 1792985358.8672602,
+        "offset_seconds": 0.03332698345184326,
+        "uncertainty_seconds": 0.013860232147297006,
+        "attempt_elapsed_seconds": 0.008962899999460205,
+        "receive_elapsed_seconds": 0.00742050000008021,
+        "dns_seconds": 0.0010575999986031093
+      },
+      {
+        "host": "time.cloudflare.com",
+        "slot_id": 5,
+        "attempt_number": 1,
+        "status": "MEASURED",
+        "phase": "COMPLETE",
+        "retryable": false,
+        "local_sent_at": 1792985359.3779671,
+        "local_received_at": 1792985359.388252,
+        "offset_seconds": 0.03421676158905029,
+        "uncertainty_seconds": 0.07461875093906908,
+        "attempt_elapsed_seconds": 0.011915300001419382,
+        "receive_elapsed_seconds": 0.01028990000122576,
+        "dns_seconds": 0.0011074000012740726
+      }
+    ]
+  }
+}

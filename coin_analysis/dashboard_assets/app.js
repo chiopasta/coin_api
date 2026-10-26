@@ -26,9 +26,9 @@ function renderStatus(data){
   const connections=$('connections');connections.replaceChildren();
   Object.entries(s.connections||{}).forEach(([name,c])=>{const r=node('small');r.append(node('span',name),node('span',c.status,c.status==='CONNECTED'?'positive':c.status==='ERROR'?'warning':'muted'));r.title=`최근 API 응답 ${date(c.at)} KST`;connections.append(r);});
   const clock=s.clock||'UNKNOWN';value('clock-status',clock.startsWith('PASS')?'PASS':clock.startsWith('FAIL')?'FAIL':'UNKNOWN',clock.startsWith('PASS')?'positive':clock.startsWith('FAIL')?'warning':'muted');
-  value('clock-detail',clock.startsWith('PASS')?clock.replace('PASS ',''):clock.startsWith('FAIL')?'시계 검증 실패 · LIVE 차단':clock.includes('stale')?'과거 PASS 만료 · 시작 시 재검증':'검증 근거 없음 · 시작 시 전체 검증');
+  value('clock-detail',clock.startsWith('PASS')?clock.includes('cross-check')?'직접 NTP 교차 검증 통과 · Windows 루트 품질 경고 유지':clock.replace('PASS ',''):clock.startsWith('FAIL')?'마지막 시계 검사 실패 · 시작 시 재검증':clock.includes('stale')?'과거 PASS 만료 · 시작 시 재검증':'검증 근거 없음 · 시작 시 전체 검증');
   value('storage',`DB ${s.db_saved||'UNKNOWN'} · ${s.size===null||s.size===undefined?'크기 UNKNOWN':(s.size/1048576).toFixed(2)+' MiB'} · 수집 ${date(s.collected)}`);
-  const messages=[...data.errors];if(s.reason)messages.push(`${s.reason} · status_coin_api.bat에서 원인을 확인하세요.`);
+  const messages=[...data.errors];if(s.reason)messages.push(`최근 시작·운영 결과: ${s.reason} · 다시 시작하면 시계를 새로 검증합니다.`);
   $('api-error').hidden=!messages.length;$('api-error').textContent=messages.join(' / ');
 }
 function renderRows(){

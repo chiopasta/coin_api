@@ -1,0 +1,30 @@
+{
+  "tests_run": 151,
+  "passed": 150,
+  "skipped": 1,
+  "errors": 0,
+  "failures": 0,
+  "successful": true,
+  "modules": [
+    "tests.test_scanner_clock_v52",
+    "tests.test_scanner_clock_v47",
+    "tests.test_scanner_clock_v46",
+    "tests.test_scanner_observation_v45",
+    "tests.test_scanner_ntp_v49",
+    "tests.test_scanner_root_v48",
+    "tests.test_scanner_control_v410",
+    "tests.test_scanner_dashboard_v50",
+    "tests.test_scanner_analysis_v51",
+    "tests.test_forward_scanner_v43"
+  ],
+  "source_sha256": {
+    "coin_analysis/scanner_clock_v45.py": "ebd0d67ab6337d11d5f7e82a4158667735283c48d13aea34da3f8f5c59b12b71",
+    "coin_analysis/scanner_clock_v47.py": "d0d26e259a980f45ec0047376508115984ea0578acbbf28a96fdb66873041712",
+    "coin_analysis/scanner_control_v410.py": "ac59f4d5480d09b8ee3897936e1938f07c404ac94a9322e998722931e060ece6",
+    "coin_analysis/scanner_dashboard_v50.py": "e610b1fbb3344115a162a03b253ac2b4d97bafbca4dbb79e7bf6e581c0745a0b",
+    "coin_analysis/dashboard_assets/app.js": "7bad25ae8693e43bf034b7e00443d9ece501b7e21145054f758ebf7646f5ba19",
+    "tests/test_scanner_clock_v52.py": "e9a57356b9306ac4408f4954b4e1d1bbbfc430819ce807bebc89cd246442f74a",
+    "tests/test_scanner_clock_v47.py": "0b2af9e782305fd40f9e7959606c994acfd2ccbf162da7220a342d8268f4c865",
+    "tests/test_scanner_dashboard_v50.py": "505b6e9ea1dbfe2c2ecc20d090128570fcae328f611fb11c516424db47b4d9ca"
+  }
+}

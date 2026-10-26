@@ -96,7 +96,8 @@ class Admission(unittest.TestCase):
     def test_child_dns_or_process_timeout_is_bounded_and_cannot_admit(self):
         with patch.object(c.os,'name','nt'),patch.object(c.subprocess,'run',side_effect=[self.result('ok'),subprocess.TimeoutExpired('probe',12)]) as run:
             self.assertEqual(c.verify_clock()['reason'],'CLOCK_REFERENCE_MEASUREMENT_UNAVAILABLE')
-        self.assertEqual(run.call_args.kwargs['timeout'],12)
+        self.assertGreater(run.call_args.kwargs['timeout'],0)
+        self.assertLessEqual(run.call_args.kwargs['timeout'],13.25)
 
     def test_localized_service_output_decodes_and_success_needs_actual_evidence(self):
         self.assertEqual(c.decode_output('서비스가 시작되지 않았습니다'.encode('cp949')),'서비스가 시작되지 않았습니다')

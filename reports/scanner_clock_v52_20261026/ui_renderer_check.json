@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "exact clock blocker",
+    "last-result wording",
+    "crosschecked PASS with retained warning",
+    "old error cleared"
+  ],
+  "browser_visual_test": false
+}

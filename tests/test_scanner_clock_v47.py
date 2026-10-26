@@ -48,6 +48,11 @@ class WindowsRoot(unittest.TestCase):
             self.assertEqual(a.windows_status(text)['reason'],'CLOCK_WINDOWS_UNSYNCHRONIZED')
         self.assertEqual(a.windows_status(WINDOWS_OK.replace('120.0s','3600.001s'))['reason'],'CLOCK_WINDOWS_SYNC_STALE')
 
+    def test_stale_sync_cannot_hide_behind_large_root_dispersion(self):
+        row=a.windows_status(WINDOWS_OK.replace('0.010s','7.767s').replace('120.0s','3600.001s'))
+        self.assertEqual(row['reason'],'CLOCK_WINDOWS_SYNC_STALE')
+        self.assertNotIn('sync_status',row)
+
 
 class Freshness(unittest.TestCase):
     def test_fresh_and_stale_direct_samples(self):
@@ -70,11 +75,16 @@ class CombinedAdmission(unittest.TestCase):
         with patch.object(c.os,'name','nt'),patch.object(c.subprocess,'run',side_effect=[self.completed(text),self.completed(json.dumps(measurement))]):
             return c.verify_clock()
 
-    def test_external_accuracy_pass_does_not_override_large_windows_uncertainty(self):
-        row=self.check(WINDOWS_OK.replace('0.010s','7.7630189s'),fresh(time.time()))
+    def test_large_windows_dispersion_requires_fresh_direct_distinct_peer_crosscheck(self):
+        measurement=fresh(time.time())
+        for r in measurement['rows']:r['peer']=['192.0.2.1' if r['host']==c.ntp.HOSTS[0] else '192.0.2.2',123]
+        row=self.check(WINDOWS_OK.replace('0.010s','7.7630189s'),measurement)
         self.assertEqual(row['external_assessment']['status'],'VERIFIED')
-        self.assertEqual(row['status'],'BLOCKED')
-        self.assertEqual(row['reason'],'CLOCK_WINDOWS_ROOT_UNCERTAINTY')
+        self.assertEqual(row['status'],'VERIFIED')
+        self.assertEqual(row['reason'],'WINDOWS_SYNC_CROSSCHECKED_WITH_FRESH_NTP')
+        self.assertEqual(row['windows_status']['status'],'BLOCKED')
+        self.assertEqual(row['warnings'],['CLOCK_WINDOWS_ROOT_UNCERTAINTY'])
+        self.assertLess(row['root_crosscheck']['max_abs_offset_plus_uncertainty_seconds'],1.)
 
     def test_old_reference_blocks_even_healthy_windows_and_small_offset(self):
         row=self.check(WINDOWS_OK,fresh(time.time()-16))
